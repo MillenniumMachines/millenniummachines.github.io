@@ -1,6 +1,9 @@
-site_name: Millennium Machines
-repo_url: https://github.com/MillenniumMachines/Milo-v1.5
-edit_uri: edit/main/docs/
+site_name: !ENV [SITE_NAME, 'Millennium Machines']
+site_url: !ENV [SITE_URL, 'https://millenniummachines.github.io/docs']
+site_description: !ENV [SITE_DESCRIPTION, 'Documentation for Millennium Machines']
+repo_url: https://github.com/MillenniumMachines/millenniummachines.github.io
+edit_uri: !ENV [EDIT_URL, 'edit/main/docs/']
+
 nav:
   - Home: index.md
   - Sourcing Guide: bom/sourcing_guide.md
@@ -21,8 +24,15 @@ nav:
       - Assembly and Wiring: electronics_manual/chapters/assemble_electronics.md
       - Pre-Flight Checks: electronics_manual/chapters/pre_flight_checks.md
 
+extra:
+  SITE_INTRO: !ENV [SITE_INTRO, 'Welcome to Millennium Machines!']
+
 extra_css:
   - stylesheets/extra.css
+
+plugins:
+  - search
+  - macros
 
 theme:
   name: material

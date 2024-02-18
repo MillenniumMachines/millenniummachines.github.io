@@ -1,6 +1,6 @@
-# Millennium Machines Milo V1.5 Documentation
+# Millennium Machines Documentation
 
-Here you can find guides on how to source, print and build your own **Millennium Machines Milo V1.5**.
+{{ SITE_INTRO }}
 
 ## Guides
 
@@ -9,7 +9,3 @@ Here you can find guides on how to source, print and build your own **Millennium
 - [Frequently Asked Questions](./faq.md)
 - [Assembly Manual](./assembly_manual/index.md)
 - [Electronics Manual](./electronics_manual/index.md)
-
----
-
-![](img/Milo-V1.5-Large.png)

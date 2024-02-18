@@ -5,28 +5,72 @@ on:
       - '*'
     branches:
       - main
-      - mkdocs
+      - dev
     workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Check-out Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - uses: actions/setup-python@v4
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v3
+      - name: Set Cache ID
+        run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - name: Load cache dependencies
+        uses: actions/cache@v3
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force
+
+      - name: Install docs requirements
+        run: pip install mkdocs-macros-plugin mkdocs-material ghp-import
+
+      # Build the production docs
+      - name: Build production docs
+        run: |
+          mkdocs build
+          ghp-import site -np -x docs
+        if: github.ref == 'refs/heads/main'
+        env:
+          SITE_NAME: "Millennium Machines"
+          SITE_URL: "https://millenniummachines.github.io/docs"
+          EDIT_URL: "edit/main/docs"
+          SITE_INTRO: |
+            Welcome to the Millennium Machines documentation site. Here you can find guides on how to source,
+            build, and maintain your own **Millennium Machine**!
+
+      # Build the development docs
+      - name: Build development docs
+        run: |
+          mkdocs build
+          ghp-import site -np -x docs-dev
+        if: github.ref == 'refs/heads/dev'
+        env:
+          SITE_NAME: "Millennium Machines (Dev)"
+          SITE_URL: "https://millenniummachines.github.io/docs-dev"
+          EDIT_URL: "edit/dev/docs"
+          SITE_DESCRIPTION: "Documentation Preview for Millennium Machines"
+          SITE_INTRO: |
+            !!! warning "THIS IS THE DOCS DEVELOPMENT SITE"
+            Welcome to the Millennium Machines development documentation site.
+            This site is used to preview changes to the documentation before they are published to the `main` branch.
+            You may find incomplete or incorrect information here, so please refer to the [production documentation](https://millenniummachines.github.io/docs) for the most accurate information.
