@@ -1,6 +1,4 @@
-# Frequently Asked Questions
-
-## Milo V1.5
+# Milo V1.5 - Frequently Asked Questions
 
 ### What is the work area?
 
