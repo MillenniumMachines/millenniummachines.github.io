@@ -178,7 +178,7 @@ Insert the M3 and M5 heat-set inserts in the Z Axis Anti-Backlash Nut.
 
 ---
 
-Fasten the Brass lead-screw nuts on either side of the Z Axis Anti Backlash Nut using M3x8mm SHCS. Remember to apply medium-strength thread-lock!
+Fasten the Brass lead-screw nuts on either side of the Z Axis Anti Backlash Nut using M3x8mm SHCS. Remember to apply medium-strength threadlock here, sparingly!
 
 <!-- This image is reused from the y axis assembly on purpose -->
 ![Fasten the Brass lead-screw nuts on either side of the Z Axis Anti Backlash Nut using M3x8mm SHCS](../img/y_axis_assembly/y_axis_step_6.png){: .shadow}
@@ -191,7 +191,7 @@ Insert the lead-screw into the anti-backlash nut and set the preload using the s
 
 ---
 
-Place a locking collar onto the bottom of the lead-screw, and lock it in place. Remember to apply medium-strength thread-lock to the grub-screws!
+Place a locking collar onto the bottom of the lead-screw, and lock it in place. Remember to apply medium-strength threadlock to the grub-screws!
 
 ![](../img/z_axis_assembly/y_axis_step_59.png){: .shadow}
 
@@ -292,7 +292,7 @@ Fasten the GT2 40T Pulley onto the top of the lead-screw.
 
 With the Pulley attached above the bearings, you can now loosen off the locking collar below the bearings. Push it upwards until it contacts the lower bearing and lock it in place.
 
-Remember to apply medium-strength thread-lock to all the grub-screws!
+Remember to apply medium-strength threadlock to the grub-screws!
 
 ![](../img/z_axis_assembly/y_axis_step_68.png){: .shadow}
 

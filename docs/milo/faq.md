@@ -74,7 +74,9 @@ These parts can be extracted directly from the [CAD files](https://github.com/Mi
 
 Common ball-screw sizes just don't fit in the 4080 C-Beam that we use for the X,Y and Z axis mounts. We've looked high and low for a larger C-Beam that will fit them but can't find any. There are smaller 8 to 10mm ball-screws that do fit but they're expensive and will probably double the cost of the machine.
 
-There are user mods to convert the machine to ball-screws but this is pretty involved and involves grinding the ball-screw nuts to fit into the extrusion channels. Needless to say this isn't appropriate for a first Milo build :sweat_smile:
+There are user mods to convert the machine to ball-screws but this is pretty involved, requiring grinding the ball-screw nuts to fit into the extrusion channels.
+
+Needless to say this isn't appropriate for a first Milo build :sweat_smile:
 
 ---
 
@@ -104,6 +106,20 @@ You should buy a VFD that matches the power requirement of your spindle. If you 
 There's a lot to learn about end mills, but if you're looking to work with Aluminium then the Dreanique Millennium Mill Starter Set is a great choice - you can find links to buy it in the [BOM](./bom/sourcing_guide.md#kits).
 
 If you're new to milling then you probably want to buy two sets :sweat_smile:
+
+---
+
+### What threadlocker should I use, and how much?
+
+Your best bet is to look for `Loctite 243` (liquid), `Loctite 248` (stick-form) or equivalent, which are medium strength threadlockers and usually blue in colour.
+
+Medium-strength threadlockers will usually have a break-loose torque of between 10 and 25 Nm, which is achievable with an allen key in most situations.
+
+Do not use permanent or semi-permanent threadlockers, or red colour threadlockers unless it is specifically marked as medium strength.
+
+When using threadlock, you must remember that the chemicals in many threadlocking compounds are not plastic-safe, and can cause stress-cracking of 3D printed thermoplastics on contact. You should use threadlock conservatively, to minimise the chances of pushing extra threadlock out of the thread and onto any 3D printed parts.
+
+Remember, **A DAB IS FINE**. You're not trying to glue the thread forever, just tacking it in one spot so it can't rotate free under vibration.
 
 ---
 
