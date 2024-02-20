@@ -10,3 +10,10 @@
 - [Frequently Asked Questions](./milo/faq.md)
 - [Assembly Manual](./milo/assembly_manual/index.md)
 - [Electronics Manual](./milo/electronics_manual/index.md)
+
+#### Long John Toolsetter - Contact Toolsetter
+Comming Soon!
+
+#### Casa Enclosure - Enclosure for Milo
+Comming Soon!
+
