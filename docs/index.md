@@ -12,8 +12,7 @@
 - [Electronics Manual](./milo/electronics_manual/index.md)
 
 #### Long John Toolsetter - Contact Toolsetter
-Comming Soon!
+Comming Soon! For now please use the PDF manual.
 
 #### Casa Enclosure - Enclosure for Milo
-Comming Soon!
-
+Comming Soon! For now please use the PDF manual.
