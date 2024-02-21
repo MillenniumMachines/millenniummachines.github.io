@@ -15,6 +15,9 @@ Currently there are no approved kits available.
 | Electronics   | HartK sexbolt PCB        |                    | 1   |
 | Cables        | JST Connector 2 Position | JST-XH             | 1   |
 
+!!! info annotate "Return Spring"
+    The Long John Toolsetter can be fitted with a compression spring to help the contact return. You may choose to fit this however it isnt required. Any suitably sized low force compression spring should be suitable.
+
 # Printing Guide
 
 The toolsetter part has a sacrificial floors to allow unsupported features to be printed successfully and overhangs that will become more difficult to print with thicker layers. These floors are designed to work at a layer height of **0.2mm**, so they may not be sliced correctly if your layer height is not 0.2mm.
