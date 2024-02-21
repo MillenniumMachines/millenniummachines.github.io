@@ -1,7 +1,7 @@
 # Sourcing Guide
 
 ## Kits
-Currently there are no approved kits available.
+Currently there are no approved kits available. Fear not - the toolsetter uses easily obtainable parts and you can find a full list of them below!
 
 ## Individual Parts
 
