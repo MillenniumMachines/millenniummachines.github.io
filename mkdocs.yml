@@ -1,7 +1,7 @@
 site_name: !ENV [SITE_NAME, 'Millennium Machines']
 site_url: !ENV [SITE_URL, 'https://millenniummachines.github.io/docs']
 site_description: !ENV [SITE_DESCRIPTION, 'Documentation for Millennium Machines']
-repo_url: https://github.com/MillenniumMachines/millenniummachines.github.io
+repo_url: https://github.com/MillenniumMachines/Milo-v1.5
 edit_uri: !ENV [EDIT_URL, 'edit/main/docs/']
 
 nav:
