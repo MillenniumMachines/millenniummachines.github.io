@@ -109,11 +109,11 @@ If you're new to milling then you probably want to buy two sets :sweat_smile:
 
 ---
 
-### What thread-lock should I use, and how much?
+### What threadlocker should I use, and how much?
 
-Your best bet is to look for `Loctite 243` (liquid), `Loctite 248` (stick-form) or equivalent, which are medium strength thread-lockers and usually blue in colour.
+Your best bet is to look for `Loctite 243` (liquid), `Loctite 248` (stick-form) or equivalent, which are medium strength threadlockers and usually blue in colour.
 
-Medium-strength thread-lockers will usually have a break-loose torque of between 10 and 25 Nm, which is achievable with an allen key in most situations.
+Medium-strength threadlockers will usually have a break-loose torque of between 10 and 25 Nm, which is achievable with an allen key in most situations.
 
 Do not use permanent or semi-permanent thread-lock, or red colour thread-lock unless it is specifically marked as medium strength.
 
