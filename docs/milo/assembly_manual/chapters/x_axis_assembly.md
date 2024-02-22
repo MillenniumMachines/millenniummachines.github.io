@@ -182,7 +182,24 @@ To avoid the endstop getting damaged during the rest of the assembly, its a good
 
 ## Handwheels (Optional)
 
+!!! info annotate "Components Required (Per handwheel)"
+    ```
+    1 x M5x25mm SHCS
+    1 x M5 Heat-set Insert
+    2 x M3 Heat-set Insert
+    1 x Handwheel (1)
+    1 x Handwheel Handle (2)
+
+1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#x-axis-assembly)!
+2. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#x-axis-assembly)!
+
+Insert the M3 heat-set inserts into the handwheel. These inserts are used to hold the wheel onto the lead screw.
+
 ![](../img/x_axis_assembly/x_axis_handwheel_1.png){: .shadow}
+
+---
+
+Insert the M5 heat-set insert into the handwheel. Attach the handwheel handle using an M5x25 SHCS bolt.
 
 ![](../img/x_axis_assembly/x_axis_handwheel_2.png){: .shadow}
 
