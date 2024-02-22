@@ -190,6 +190,7 @@ To avoid the endstop getting damaged during the rest of the assembly, its a good
     2 x M3 Heat-set Insert
     1 x Handwheel (1)
     1 x Handwheel Handle (2)
+    ```
 
 1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#x-axis-assembly)!
 2. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#x-axis-assembly)!
