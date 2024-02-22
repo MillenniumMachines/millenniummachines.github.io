@@ -180,4 +180,12 @@ To avoid the endstop getting damaged during the rest of the assembly, its a good
 
 ---
 
+## Handwheels (Optional)
+
+![](../img/x_axis_assembly/x_axis_handwheel_1.png){: .shadow}
+
+![](../img/x_axis_assembly/x_axis_handwheel_2.png){: .shadow}
+
+---
+
 [Next Chapter: Z Axis Assembly](./z_axis_assembly.md)
