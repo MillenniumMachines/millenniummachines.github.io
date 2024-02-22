@@ -185,6 +185,7 @@ To avoid the endstop getting damaged during the rest of the assembly, its a good
 !!! info annotate "Components Required (Per handwheel)"
     ```
     1 x M5x25mm SHCS
+    2 x M3x10 SHCS
     1 x M5 Heat-set Insert
     2 x M3 Heat-set Insert
     1 x Handwheel (1)
@@ -202,6 +203,12 @@ Insert the M3 heat-set inserts into the handwheel. These inserts are used to hol
 Insert the M5 heat-set insert into the handwheel. Attach the handwheel handle using an M5x25 SHCS bolt.
 
 ![](../img/x_axis_assembly/x_axis_handwheel_2.png){: .shadow}
+
+---
+
+Place the handle onto the X and Y axis and secure using two M3x10 SHCS or two M3 grub screws
+
+![](../img/x_axis_assembly/x_axis_handwheel_3.png){: .shadow}
 
 ---
 
