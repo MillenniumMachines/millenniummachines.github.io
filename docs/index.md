@@ -12,10 +12,10 @@
 - [Electronics Manual](./milo/electronics_manual/index.md)
 
 #### Casa Enclosure - Enclosure for Milo
-Docs comming Soon! For now please use the PDF manual.
+Docs coming Soon! For now please use the PDF manual.
 
 #### Fixated - Fixture plate for Milo
-Docs comming Soon! For now please use the PDF manual.
+Docs coming Soon! For now please use the PDF manual.
 
 ### Long John Toolsetter - Contact Toolsetter for CNC Machines
 - [Sourcing and Print Guide](./long-john/bom/sourcing_and_print_guide.md)
