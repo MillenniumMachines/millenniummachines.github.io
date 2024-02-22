@@ -210,6 +210,9 @@ Place the handle onto the X and Y axis and secure using two M3x10 SHCS or two M3
 
 ![](../img/x_axis_assembly/x_axis_handwheel_3.png){: .shadow}
 
+!!! tip
+    Repeat these handwheel steps for the Y axis handwheel!
+
 ---
 
 [Next Chapter: Z Axis Assembly](./z_axis_assembly.md)
