@@ -1,7 +1,8 @@
 # Sourcing Guide
 
 ## Kits
-Currently there are no approved kits available. Fear not - the toolsetter uses easily obtainable parts and you can find a full list of them below!
+
+Currently there are no approved kits available, but fear not - the toolsetter uses easily obtainable parts and you can find a full list of them below!
 
 ## Individual Parts
 
@@ -16,11 +17,11 @@ Currently there are no approved kits available. Fear not - the toolsetter uses e
 | Cables        | JST Connector 2 Position | JST-XH             | 1   |
 
 !!! info annotate "Return Spring"
-    The Long John Toolsetter can be fitted with a compression spring to help the contact return. You may choose to fit this however it isnt required. Any suitably sized low force compression spring should be suitable.
+    The Long John Toolsetter can be fitted with a compression spring to help the contact return. You may choose to fit this, however it isn't required. Any appropriately sized low force compression spring should be suitable.
 
 # Printing Guide
 
-The toolsetter part has a sacrificial floors to allow unsupported features to be printed successfully and overhangs that will become more difficult to print with thicker layers. These floors are designed to work at a layer height of **0.2mm**, so they may not be sliced correctly if your layer height is not 0.2mm.
+The toolsetter part has a sacrificial floor to allow unsupported features to be printed successfully, and overhangs that will become more difficult to print with thicker layers. These floors are designed to work at a layer height of **0.2mm**, so they may not be sliced correctly if your layer height is not 0.2mm.
 
 **Unless you're willing to experiment and almost certainly waste filament, stick with 0.2mm layers.**
 
@@ -31,4 +32,4 @@ Given a 0.4mm nozzle, 100% perimeter line width, 0.2mm layers and a minimum wall
 ## The Long John Toolsetter
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** |
 |----------|------------|-------------------------|--------------|--------:|----------------------|
-| [Housing    ](https://github.com/MillenniumMachines/Long-John-Toolsetter/blob/main/stls/Housing.stl)               | 40%  | 1.6mm  | ABS/ASA | 4 | :material-close: No |
+| [Housing](https://github.com/MillenniumMachines/Long-John-Toolsetter/blob/main/stls/Housing.stl)               | 40%  | 1.6mm  | ABS/ASA | 4 | :material-close: No |

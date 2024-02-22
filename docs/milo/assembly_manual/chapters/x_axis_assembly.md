@@ -207,7 +207,7 @@ Insert the M5 heat-set insert into the handwheel. Attach the handwheel handle us
 
 ---
 
-Place the handle onto the X and Y axis and secure using two M3x10 SHCS or two M3 grub screws
+Place the handle onto the X and Y axis and secure using two M3x10 SHCS or two M3 grub screws.
 
 ![](../img/x_axis_assembly/x_axis_handwheel_3.png){: .shadow}
 
