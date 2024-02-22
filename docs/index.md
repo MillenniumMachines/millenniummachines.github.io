@@ -20,4 +20,4 @@ Docs comming Soon! For now please use the PDF manual.
 ### Long John Toolsetter - Contact Toolsetter for CNC Machines
 - [Sourcing and Print Guide](./long-john/bom/sourcing_and_print_guide.md)
 - [Assembly Manual](./long-john/assembly_manual/assembly_manual.md)
-- [Electronics Manual](./long-john/electronics_manual/electronics_manual.md)
+- [Electronics Manual](./long-john/assembly_manual/electronics_manual.md)
