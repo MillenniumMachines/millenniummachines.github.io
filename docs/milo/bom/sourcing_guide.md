@@ -51,7 +51,7 @@
 | M3 Heat-set insert                   |                             | 33      | [CNC Kitchen](https://www.cnckitchen.com/shop#!/Gewindeeinsatz-threaded-insert-M3-Standard-100-Stk-pcs/p/431146823/category=0)   | [Mouser](https://www.mouser.co.uk/ProductDetail/153-IUTB-M3-343)                    |
 | M2.5 Heat-set insert                 |                             | 6       | [CNC Kitchen](https://www.cnckitchen.com/shop#!/Gewindeeinsatz-threaded-insert-M2-5-Standard-100-Stk-pcs/p/431146818/category=0) |                                                                                     |
 | M5 Nyloc Hexnut                      | ISO 10511 / DIN 985         | 8       | [ACCU](https://www.accu.co.uk/hexagon-nylon-locking-nuts/7947-HNN-M5-A2)                                                         |                                                                                     |
-| M3x6 self tapping screw for plastics |                             | 8       | [ACCU](https://www.accu.co.uk/plastite-45-pozi-pan-head-screws/24139-SPP45-3-6-A2)                                               |                                                                                     |
+| M3x6 Self-tapping screw for plastics |                             | 8       | [ACCU](https://www.accu.co.uk/plastite-45-pozi-pan-head-screws/24139-SPP45-3-6-A2)                                               |                                                                                     |
 | M3x10 Grub Screw                     | ISO 4026 / DIN 913          | 4       | [ACCU](https://www.accu.co.uk/cone-point-set-screws/4732-SSO-M3-10-A2)                                                           |                                                                                     |
 | M5 Spring T-Nut                      |                             | 90      | [Amazon](https://amzn.to/384J5cQ)                                                                                                |                                                                                     |
 | M3 Spring T-Nut                      |                             | 36      | [Amazon](https://amzn.to/3Pt8VIj)                                                                                                |                                                                                     |
@@ -83,7 +83,7 @@
 | Omron SS-5GL micro switch                                                     | 3       | [Digikey](https://www.digikey.co.uk/en/products/detail/omron-electronics-inc-emc-div/SS-5GL/272367)                              |                                                                |                                                         |                                               |
 | Mean Well LRS-350-24 PSU                                                      | 1       | [Digikey](https://www.digikey.co.uk/en/products/detail/mean-well-usa-inc/LRS-350-24/7705034)                                     | [Amazon](https://amzn.to/39Bei7V)                              | [Aliexpress](https://s.click.aliexpress.com/e/_ASp8Z9)  |                                               |
 | IEC320 C14 Inlet - Push-fit - w/ Rocker Switch & Fuse                         | 1       | [Digikey](https://www.digikey.co.uk/en/products/detail/adam-tech/IEC-GS-1-100/9831135?s=N4IgTCBcDaIJIFEDCBaA4gZRQRhwBjxAF0BfIA)  |                                                                |                                                         |                                               |
-| 40x40 24V axial fan                                                           | 2       | [Amazon](https://www.amazon.co.uk/dp/B0757RPCN9)                                                                                 |                                                                |                                                         |                                               |
+| 40x40 24V Axial fan                                                           | 2       | [Amazon](https://www.amazon.co.uk/dp/B0757RPCN9)                                                                                 |                                                                |                                                         |                                               |
 | Micro SD card                                                                 | 1       | [Amazon](https://amzn.to/39yaWCr)                                                                                                |                                                                |                                                         |                                               |
 | Mellow Fly E3 / Mellow Fly CDY V3.0 / BTT E3 RRF                              | 1       | [Fly CDY](https://s.click.aliexpress.com/e/_A7DZ7H)                                                                              | [Fly E3](https://s.click.aliexpress.com/e/_9IDXvD)             | [BTT E3 RRF](https://s.click.aliexpress.com/e/_DEk2KCr) |                                               |
 | 22mm E-stop switch actuator                                                   | 1       | [Amazon](https://amzn.to/3wtxQnz)                                                                                                |                                                                |                                                         |                                               |
@@ -95,7 +95,7 @@
 |:---------------------------------------------------|--------:|-------------------------------------------------------------------------------------------------|
 | XY gantry plate                                    | 1       | [Fabreeko](https://www.fabreeko.com/products/millenium-minimill-xy-and-z-aluminum-plates)       |
 | Z gantry plate                                     | 1       | [Fabreeko](https://www.fabreeko.com/products/millenium-minimill-xy-and-z-aluminum-plates)       |
-| 200mm GT2 closed loop belt                         | 1       | [Aliexpress](https://s.click.aliexpress.com/e/_ASjMnD)                                          |
+| 200mm GT2 Closed-loop belt                         | 1       | [Aliexpress](https://s.click.aliexpress.com/e/_ASjMnD)                                          |
 | MGN15 Rail 350mm                                   | 2       | [CNA (Don't mix/match suppliers)](https://www.aliexpress.com/item/32804486221.html)             |
 | MGN15 Rail 250mm                                   | 2       |                                                                                                 |
 | MGN15 Rail 500mm                                   | 2       |                                                                                                 |
@@ -108,7 +108,7 @@
 | 608 2Z Shielded deep groove ball bearing           | 8       | [Aliexpress](https://s.click.aliexpress.com/e/_9fU0np)                                          |
 | F608 2Z Shielded deep groove ball bearing          | 4       | [Aliexpress](https://s.click.aliexpress.com/e/_AZj33d)                                          |
 | Spider or Rigid coupler 8mm to 6.35mm (1/4 inch)   | 2       | [Aliexpress](https://s.click.aliexpress.com/e/_AFwDq7)                                          |
-| 8mm Bore locking collar                            | 6       | [ACCU](https://www.accu.co.uk/adjusting-rings/396715-HAR-8-A2)                                  |
+| 8mm Bore locking-collar                            | 6       | [ACCU](https://www.accu.co.uk/adjusting-rings/396715-HAR-8-A2)                                  |
 
 ### Cabling
 
@@ -135,15 +135,15 @@
 
 ## Notes
 
-#### TPU Filament
+### TPU Filament
 
 It's only used for the machine feet. Maybe you can source suitable replacement parts.
 
-#### Drivers
+### Drivers
 
 Use drivers that are suitable for your motor needs. Make sure to match your motor phase current to your driver max RMS current.
 
-#### XY and Z Gantry Plate
+### XY and Z Gantry Plate
 
 !!! warning
     These parts can be printed, but are a critical, load-bearing part of the machine.
@@ -156,15 +156,16 @@ Use drivers that are suitable for your motor needs. Make sure to match your moto
 
 <!-- TODO provide a statement from the design team -->
 
-#### Wiring
+### Wiring
+
 !!! warning
     Please consult your local guidelines for regulation wire size.
 
-#### Ferrule Cable Terminations
+### Ferrule Cable Terminations
 
 Size and use where appropriate.
 
-#### Epoxy Resin & Granite Sand
+### Epoxy Resin & Granite Sand
 
 A mix of epoxy resin and granite sand can be used to fill the ballast box of your machine. This is optional, but can help to dampen excessive vibration.
 <!-- TODO check with the design team -->

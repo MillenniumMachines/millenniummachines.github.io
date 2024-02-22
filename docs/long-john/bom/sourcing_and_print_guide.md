@@ -11,9 +11,9 @@ Currently there are no approved kits available, but fear not - the toolsetter us
 | Printed parts | Housing                  |                    | 1   |
 | Hardware      | 5x7x8 Sleeve Bearing     |                    | 2   |
 | Hardware      | M4x6 SHCS                | ISO 4762 / DIN 912 | 1   |
-| Hardware      | M2x10 self tapping screw |                    | 4   |
-| Hardware      | M5x20 sex-bolt           |                    | 1   |
-| Electronics   | HartK sexbolt PCB        |                    | 1   |
+| Hardware      | M2x10 Self-tapping screw |                    | 4   |
+| Hardware      | M5x20 Sex-bolt           |                    | 1   |
+| Electronics   | HartK Sex-bolt PCB       |                    | 1   |
 | Cables        | JST Connector 2 Position | JST-XH             | 1   |
 
 !!! info annotate "Return Spring"
