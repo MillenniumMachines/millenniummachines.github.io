@@ -21,7 +21,7 @@ Docs coming soon! For now, please use the PDF manual.
 
 Docs coming soon! For now, please use the PDF manual.
 
-### Long John Toolsetter - Contact Toolsetter for CNC Machines
+### [Long John Toolsetter - Contact Toolsetter for CNC Machines](./long-john/index.md)
 
 - [Github Page](https://github.com/MillenniumMachines/Long-John-Toolsetter)
 - [Sourcing and Print Guide](./long-john/bom/sourcing_and_print_guide.md)
