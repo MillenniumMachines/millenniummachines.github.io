@@ -19,7 +19,7 @@ After this has been done, face `C` will now be oriented towards you. When instal
 ---
 
 !!! warning "BE SAFE, LOCK IT!"
-    These machines vibrate an immense amount when in use, and fasteners are bound to back out. Don't be afraid to add a little bit of medium-strength (generally, blue) thread-lock to all your screws to avoid this problem.
+    These machines vibrate an immense amount when in use, and fasteners are bound to back out. Don't be afraid to add a little bit of medium-strength (generally, blue) threadlock to all your screws to avoid this problem.
 
 !!! warning "Protect your rail carriages"
     Rail carriages should always have a rail or [dummy rail](https://github.com/MillenniumMachines/Milo-v1.5/tree/main//STL%20Files/Tools/Dummy%20Rail.stl) installed in them to avoid damaging them. If your rails didn't come with dummy rails, then print the ones we provided for you in the print list.
@@ -132,7 +132,7 @@ Fasten the X-Axis Anti-Backlash Nut to the top of the XY plate using M5x16mm BHC
     Install the greased lead-screw temporarily into the block and begin to tighten the loose nut, taking care to apply the same number of turns to each of the screws.
 
     The ideal preload will allow for the lead-screw to still spin by hand but should have a moderate amount of resistance to it.
-    Once complete make sure each bolt has thread-lock applied, and uninstall the lead-screw - your preload is now set. To avoid any headaches, do this before final installation.
+    Once complete make sure each bolt has threadlock applied, and uninstall the lead-screw - your preload is now set. To avoid any headaches, do this before final installation.
 
 [^1]: Yes, technically this is a "zero backlash" nut and not an "anti-backlash nut" - but the common term for it is anti-backlash and that's what most people know it as.
 
@@ -183,7 +183,7 @@ Fasten the Y-Axis Motor Mount to the 470mm C-Beam using M5x12mm BHCS.
 Fasten the Y-Axis bearing block to the other end of the 470mm C-Beam using M5x12BHCS
 
 !!! tip
-    The Y-Axis Bearing Block is used as a stopper to install the rails - it will be removed later, so there is no need to thread-lock it at this point.
+    The Y-Axis Bearing Block is used as a stopper to install the rails - it will be removed later, so there is no need to threadlock it at this point.
 
 ![fasten the Y-Axis bearing block to the other end of the 470mm C-Beam aluminium profile using M5x12mm BHCS](../img/y_axis_assembly/y_axis_step_14.png){: .shadow}
 
@@ -242,7 +242,7 @@ Carefully, slide the XY Gantry Plate assembly onto the rails.
     1 x NEMA23 Motor
     1 x 8 to 6.35mm Rigid Coupler
     ```
-Install the Y-Axis Bearing Block for the final time using M5x12mm BHCS. Be sure to use medium-strength thread-lock here.
+Install the Y-Axis Bearing Block for the final time using M5x12mm BHCS. Be sure to use medium-strength threadlock here.
 
 ![fasten the Y-Axis bearing block to the other end of the 470mm C-Beam aluminium profile using M5x12mm BHCS](../img/y_axis_assembly/y_axis_step_18.png){: .shadow}
 
@@ -253,7 +253,7 @@ Using an 8 to 6.35mm rigid coupler, attach the 550mm lead-screw to the NEMA23 mo
 ![couple the NEMA23 motor to the 550mm lead-screw using a 8 to 6.35mm rigid coupler](../img/y_axis_assembly/y_axis_step_11.png){: .shadow}
 
 !!! warning
-    Remember to apply medium-strength thread-lock to the coupler grub-screws. There's nothing worse than trying to diagnose a stationary axis and noticing that your motor is spinning but nothing else is!
+    Remember to apply medium-strength threadlock to the coupler grub-screws. There's nothing worse than trying to diagnose a stationary axis and noticing that your motor is spinning but nothing else is!
 
 ---
 
@@ -288,7 +288,7 @@ Add the last locking collar on the operator side of the bearing block.
 Using your fingers, press each locking collar towards each other - driving them into the face of each bearing with moderate to high pressure. Tighten the operator side collar first before tightening the internal side collar. This will ensure that the screw remains in the same position during use.
 
 !!! note
-    Add some medium-strength thread-lock to the set-screw.
+    Add some medium-strength threadlock to the set-screw.
 
 ![](../img/y_axis_assembly/y_axis_step_23.png){: .shadow}
 

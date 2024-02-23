@@ -131,7 +131,7 @@ Install all but the bottom 4 M5x12mm BHCS.
 ![](../img/fmj_assembly/fmj_step_4.png){: .shadow}
 
 !!! warning "BE SAFE, LOCK IT!"
-    These machines vibrate an immense amount when in use, and fasteners are bound to back out. Don't be afraid to add a little bit of medium-strength thread-lock to all your screws to avoid this problem.
+    These machines vibrate an immense amount when in use, and fasteners are bound to back out. Don't be afraid to add a little bit of medium-strength threadlock to all your screws to avoid this problem.
 
 !!! hint
     If using spring T-nuts for assembly, having a thin, long and semi-flexible tool to help guide the nuts into place is a godsend!
