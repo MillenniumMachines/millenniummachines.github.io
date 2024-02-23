@@ -210,7 +210,7 @@ Fasten the MGN15 rails to the Y-Axis, screwing M3x10mm SHCS into every second ho
 
     Use the MGN15 guides to position the first rail in the center of the extrusion prior to fastening the screws. Use a DTI running along the edge of the extrusion to fine adjust it into alignment with the extrusion.
 
-    With the first rail aligned fit the second rail using the MGN15 guides and use a DTI to clock it in to the first rail. Make sure to check both horizontal alignment and vertical alignment and shim if required. 
+    With the first rail aligned, fit the second rail using the MGN15 guides and use a DTI to clock it in to the first rail. Make sure to check both horizontal alignment and vertical alignment and shim if required. 
 
 ---
 
