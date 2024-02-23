@@ -6,29 +6,23 @@ edit_uri: !ENV [EDIT_URL, 'edit/main/docs/']
 
 nav:
   - Home: index.md
-  - "Milo - Desktop CNC Mill":
-    - Sourcing Guide: milo/bom/sourcing_guide.md
-    - Printing Guide: milo/printing/print_guide.md
-    - Frequently Asked Questions: milo/faq.md
-    - Assembly Manual:
-        - Acknowledgements: milo/assembly_manual/chapters/acknowledgements.md
-        - Introduction: milo/assembly_manual/chapters/introduction.md
-        - Hardware Reference: milo/assembly_manual/chapters/hardware_reference.md
-        - Y-Axis Assembly: milo/assembly_manual/chapters/y_axis_assembly.md
-        - X-Axis Assembly: milo/assembly_manual/chapters/x_axis_assembly.md
-        - Z-Axis Assembly: milo/assembly_manual/chapters/z_axis_assembly.md
-        - FMJ Assembly: milo/assembly_manual/chapters/fmj_assembly.md
-        - Table Assembly: milo/assembly_manual/chapters/table_assembly.md
-    - Electronics Manual:
-        - Introduction: milo/electronics_manual/chapters/introduction.md
-        - Install RRF: milo/electronics_manual/chapters/install_rrf.md
-        - Assembly and Wiring: milo/electronics_manual/chapters/assemble_electronics.md
-        - Pre-Flight Checks: milo/electronics_manual/chapters/pre_flight_checks.md
-
-  - "Long John Toolsetter":
-    - Sourcing and Print Guild: long-john/bom/sourcing_and_print_guide.md
-    - Assembly Manual: long-john/assembly_manual/assembly_manual.md
-    - Electronics Manual: long-john/assembly_manual/electronics_manual.md
+  - Sourcing Guide: bom/sourcing_guide.md
+  - Printing Guide: printing/print_guide.md
+  - Frequently Asked Questions: faq.md
+  - Assembly Manual:
+      - Acknowledgements: assembly_manual/chapters/acknowledgements.md
+      - Introduction: assembly_manual/chapters/introduction.md
+      - Hardware Reference: assembly_manual/chapters/hardware_reference.md
+      - Y-Axis Assembly: assembly_manual/chapters/y_axis_assembly.md
+      - X-Axis Assembly: assembly_manual/chapters/x_axis_assembly.md
+      - Z-Axis Assembly: assembly_manual/chapters/z_axis_assembly.md
+      - FMJ Assembly: assembly_manual/chapters/fmj_assembly.md
+      - Table Assembly: assembly_manual/chapters/table_assembly.md
+  - Electronics Manual:
+      - Introduction: electronics_manual/chapters/introduction.md
+      - Install RRF: electronics_manual/chapters/install_rrf.md
+      - Assembly and Wiring: electronics_manual/chapters/assemble_electronics.md
+      - Pre-Flight Checks: electronics_manual/chapters/pre_flight_checks.md
 
 extra:
   SITE_INTRO: !ENV [SITE_INTRO, 'Welcome to Millennium Machines!']
