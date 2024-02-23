@@ -21,7 +21,7 @@
 1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#x-axis-assembly)!
 2. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#x-axis-assembly)!
 
-Fasten the MGN15 rails to the extrusion by screwing M3x10mm SHCS into spring T-nuts inside the profile.
+Fasten the MGN15 500mm rails to the extrusion by screwing M3x10mm SHCS into spring T-nuts inside the profile.
 
 ![fasten the MGN15 500mm Rails to the 500mm extrusion screwing M3x10mm SHCS into the spring t-nuts inside the profil](../img/x_axis_assembly/y_axis_step_27.png){: .shadow}
 
