@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://millenniummachines.github.io/docs-dev/long-john/</loc>
+         <lastmod>2024-02-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://millenniummachines.github.io/docs-dev/long-john/assembly_manual/assembly_manual/</loc>
          <lastmod>2024-02-23</lastmod>
          <changefreq>daily</changefreq>
