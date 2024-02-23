@@ -105,7 +105,7 @@ Slide the table into the carriages on the XY Gantry Plate from the left-hand sid
 
 Couple the NEMA23 motor to the lead-screw using an 8 to 6.35mm rigid coupler.
 
-Remember to use medium-strength thread-lock on the grub-screws in the couplers!
+Remember to use medium-strength threadlock on the grub-screws in the couplers!
 
 <!-- This image is reused from the y axis assembly on purpose -->
 ![couple the NEMA23 motor to the 550mm lead-screw using a 8 to 6.35mm rigid coupler](../img/y_axis_assembly/y_axis_step_11.png){: .shadow}
@@ -141,7 +141,7 @@ Fasten the X-Axis Bearing Block to the table assembly using M5x12mm BHCS. Loosel
 Using your fingers, press each locking collar towards each other - driving them into the face of each bearing with moderate to high pressure. Tighten the inner collar first before tightening the external side collar. This will ensure that the screw remains in the same position during use.
 
 !!! note
-    Add some medium-strength thread-lock to the grub-screws.
+    Add some medium-strength threadlock to the grub-screws.
 
 ![](../img/x_axis_assembly/y_axis_step_38_2.png){: .shadow}
 
@@ -177,6 +177,42 @@ You may wish to install the rest of the cable chain now to complete the X-Axis, 
 To avoid the endstop getting damaged during the rest of the assembly, its a good idea not to install it at this point, but rather install it later with the rest of the wiring.
 
 ![](../img/x_axis_assembly/y_axis_step_41.png){: .shadow}
+
+---
+
+## Handwheels (Optional)
+
+!!! info annotate "Components Required (Per handwheel)"
+    ```
+    1 x M5x25mm SHCS
+    2 x M3x10 SHCS
+    1 x M5 Heat-set Insert
+    2 x M3 Heat-set Insert
+    1 x Handwheel (1)
+    1 x Handwheel Handle (2)
+    ```
+
+1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#x-axis-assembly)!
+2. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#x-axis-assembly)!
+
+Insert the M3 heat-set inserts into the handwheel. These inserts are used to hold the wheel onto the lead screw.
+
+![](../img/x_axis_assembly/x_axis_handwheel_1.png){: .shadow}
+
+---
+
+Insert the M5 heat-set insert into the handwheel. Attach the handwheel handle using an M5x25 SHCS bolt.
+
+![](../img/x_axis_assembly/x_axis_handwheel_2.png){: .shadow}
+
+---
+
+Place the handle onto the X and Y axis and secure using two M3x10 SHCS or two M3 grub screws.
+
+![](../img/x_axis_assembly/x_axis_handwheel_3.png){: .shadow}
+
+!!! tip
+    Repeat these handwheel steps for the Y axis handwheel!
 
 ---
 
