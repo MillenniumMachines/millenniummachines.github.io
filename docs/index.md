@@ -4,7 +4,7 @@
 
 ## Guides
 
-### Milo - Desktop CNC Mill
+### [Milo - Desktop CNC Mill](./milo/index.md)
 
 - [Github Page](https://github.com/MillenniumMachines/Milo-v1.5)
 - [Sourcing Guide](./milo/bom/sourcing_guide.md)
