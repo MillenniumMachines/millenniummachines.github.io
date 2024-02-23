@@ -25,6 +25,9 @@ Fasten the MGN15 500mm rails to the extrusion by screwing M3x10mm SHCS into spri
 
 ![fasten the MGN15 500mm Rails to the 500mm extrusion screwing M3x10mm SHCS into the spring t-nuts inside the profil](../img/x_axis_assembly/y_axis_step_27.png){: .shadow}
 
+!!! tip annotate "Aligning the Rails"
+    Repeat the alignment procedure described for the Y axis to ensure your rails are aligned to each other and the extrusion. 
+
 ---
 
 Insert a 608ZZ bearing in the hole in the outer face of the X-Axis Bearing Block, then a F608ZZ bearing on either side. The flanged bearings must sit flush inside the bearing block on both sides.

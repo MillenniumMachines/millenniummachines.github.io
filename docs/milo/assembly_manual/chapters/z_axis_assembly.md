@@ -218,12 +218,13 @@ Place a locking collar onto the bottom of the lead-screw, and lock it in place. 
 
 Install the MGN15 250mm rails with only the lower carriages installed onto the `C` extrusion using M3x10mm SHCS. Make sure the end-most and centre-most bolt holes in each rail are used.
 
-Use printed [rail alignment guides](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Tools/Rail%20Alignment%20Guide.stl) to make sure the rails are aligned.
-
 ![](../img/z_axis_assembly/y_axis_step_60_1.png){: .shadow}
 
 !!! tip
     You can use the rail alignment guides to stop the lower carriages from falling off the vertical rail!
+
+!!! tip annotate "Aligning the Rails"
+    Repeat the alignment procedure described for the Y axis to ensure your rails are aligned to each other and the extrusion. 
 
 ---
 
