@@ -115,7 +115,7 @@ Your best bet is to look for `Loctite 243` (liquid), `Loctite 248` (stick-form) 
 
 Medium-strength threadlockers will usually have a break-loose torque of between 10 and 25 Nm, which is achievable with an allen key in most situations.
 
-Do not use permanent or semi-permanent thread-lock, or red colour thread-lock unless it is specifically marked as medium strength.
+Do not use permanent or semi-permanent threadlockers, or red colour threadlockers unless it is specifically marked as medium strength.
 
 When using thread-lock, you must remember that the chemicals in many thread-locking compounds are not plastic-safe, and can cause stress-cracking of 3D printed thermoplastics on contact. You should use thread-lock conservatively, to minimise the chances of pushing extra thread-lock out of the thread and onto any 3D printed parts.
 
