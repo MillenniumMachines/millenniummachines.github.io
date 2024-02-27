@@ -11,7 +11,6 @@
 - [Printing Guide](./milo/printing/print_guide.md)
 - [Frequently Asked Questions](./milo/faq.md)
 - [Assembly Manual](./milo/manual/index.md)
-- [Electronics Manual](./milo/electronics_manual/index.md)
 
 #### Casa Enclosure - Enclosure for Milo
 

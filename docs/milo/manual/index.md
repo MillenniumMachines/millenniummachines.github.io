@@ -14,3 +14,6 @@ Chapters:
 - [Z Axis Assembly](chapters/60_z_axis_assembly.md)
 - [FMJ Assembly (optional)](chapters/70_fmj_assembly.md)
 - [Table Assembly](chapters/80_table_assembly.md)
+- [Install RRF](milo/manual/chapters/90_install_rrf.md)
+- [Assemble Electronics](milo/manual/chapters/100_assemble_electronics.md)
+- [Pre-Flight Checks](milo/manual/chapters/110_pre_flight_checks.md)
