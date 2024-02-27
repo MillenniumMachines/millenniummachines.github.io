@@ -3,7 +3,7 @@
 ![Assembled electronics area](../img/assemble_electronics/electronics_assembly.png){: .shadow}
 
 !!! info annotate "Are you building an LDO kit?"
-    LDO have wirtten a fanstic supplimentary guide for the wiring included with their kit which includes pre-cut, pre-crimped, and pre-soldered cables! If youre building an LDO kit check out their guide [here!](https://www.ldomotion.com/#/guide/Milo-CNC-V15-Wiring-Guide)
+    LDO have written a fantastic supplementary guide for the wiring included with their kit which includes pre-cut, pre-crimped, and pre-soldered cables! If you're building an LDO kit check out their guide [here!](https://www.ldomotion.com/#/guide/Milo-CNC-V15-Wiring-Guide)
 
 ---
 
@@ -113,7 +113,7 @@ Wire the AC Inlet, PSU, E-stop and VFD according to the diagram below.
 
 ### VFD / Spindle Wiring
 
-There are a large number of VFD and spindle options available. This section of the manual provides general guidence only. You should refer to your specific VFD manual for its setup. 
+There are a large number of VFD and spindle options available. This section of the manual provides general guidance only. You should refer to your specific VFD manual for its setup. 
 
 ![VFD Wiring diagram](../img/assemble_electronics/assemble_electronics_step_9_5.jpg){: .shadow}
 
@@ -174,7 +174,7 @@ You may also require a relay to send an enable signal to your VFD. If you wish t
     For safety reasons it is always a good idea to wire your endstops in a normally closed configuration. This allows your machine to detect breaks in any of your cabling rather than you manually detecting a failed endstop circuit when the table tries to move off the end of an axis!
 
 !!! info annotate "VFD Wiring"
-    There are a large number of VFD and spindle options available. This wiring diagram provides general guidence only. You should refer to your specific VFD manual for its setup.
+    There are a large number of VFD and spindle options available. This wiring diagram provides general guidance only. You should refer to your specific VFD manual for its setup.
 
     ![VFD Wiring diagram](../img/assemble_electronics/assemble_electronics_step_12_5.jpg)
 
