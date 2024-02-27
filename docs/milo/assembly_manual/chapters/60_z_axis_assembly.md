@@ -29,7 +29,7 @@ Extrusions `A` and `B` are the main Z-column extrusions.
 *[FMJ]: Full Metal Jacket
 
 !!! tip "Full Metal Jacket Installation"
-    If you have Full Metal Jacket plates instead of the 3D printed column joining plates, please refer to the [FMJ Assembly](./fmj_assembly.md) guide. Once complete, you can return to the [Lower Bearing Block](#lower-bearing-block) section and continue your Z-Axis assembly.
+    If you have Full Metal Jacket plates instead of the 3D printed column joining plates, please refer to the [FMJ Assembly](./70_fmj_assembly.md) guide. Once complete, you can return to the [Lower Bearing Block](#lower-bearing-block) section and continue your Z-Axis assembly.
 
 ---
 
@@ -529,4 +529,4 @@ Clip the drag chain body into place.
 
 ---
 
-[Next Chapter: Table Assembly](./table_assembly.md)
+[Next Chapter: Table Assembly](./80_table_assembly.md)

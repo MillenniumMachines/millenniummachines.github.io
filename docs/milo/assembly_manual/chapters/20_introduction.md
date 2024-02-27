@@ -126,4 +126,4 @@ Well, why not join our community here on:
 
 ---
 
-[Next Chapter: Hardware reference](./hardware_reference.md)
+[Next Chapter: Hardware reference](./30_hardware_reference.md)

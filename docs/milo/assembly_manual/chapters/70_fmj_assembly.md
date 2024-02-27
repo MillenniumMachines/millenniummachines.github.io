@@ -6,7 +6,7 @@
     The Full Metal Jacket is an optional reinforcement for the Z-Axis that improves its' rigidity and strength significantly. If you're looking to cut metals, then you should think about installing the FMJ from the get-go.
 
 !!! tip annotate "Standard Assembly"
-    The following information applies _only_ if you are building your Milo with FMJ plates. If you do not have FMJ plates and are using 3D printed column joining plates, please follow [Installing the Column Plates](./z_axis_assembly.md#installing-the-column-plates) instead.
+    The following information applies _only_ if you are building your Milo with FMJ plates. If you do not have FMJ plates and are using 3D printed column joining plates, please follow [Installing the Column Plates](./60_z_axis_assembly.md#installing-the-column-plates) instead.
 
 *[FMJ]: Full Metal Jacket
 
@@ -153,4 +153,4 @@ Turn your half-assembled column over and repeat with the other FMJ plate. Take c
 ![](../img/fmj_assembly/fmj_step_5.png){: .shadow}
 
 
-[Next Chapter: Z-Axis Lower Bearing block](./z_axis_assembly.md#lower-bearing-block)
+[Next Chapter: Z-Axis Lower Bearing block](./60_z_axis_assembly.md#lower-bearing-block)

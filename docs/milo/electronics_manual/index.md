@@ -4,7 +4,7 @@ Wired in a shed somewhere... probably.
 
 Chapters:
 
-- [Introduction](chapters/introduction.md)
+- [Introduction](chapters/10_introduction.md)
 - [Install RRF](chapters/install_rrf.md)
 - [Assembly and Wiring](chapters/assemble_electronics.md)
 - [Pre-Flight Checks](chapters/pre_flight_checks.md)

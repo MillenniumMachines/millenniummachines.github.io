@@ -359,4 +359,4 @@ You may wish to install the rest of the cable chain now to complete the Y-Axis -
 
 ---
 
-[Next Chapter: X-Axis Assembly](./x_axis_assembly.md)
+[Next Chapter: X-Axis Assembly](./50_x_axis_assembly.md)

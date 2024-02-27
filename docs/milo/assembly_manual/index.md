@@ -6,11 +6,11 @@ Made in a shed somewhere... probably.
 
 Chapters:
 
-- [Introduction](chapters/introduction.md)
-- [Acknowledgements](chapters/acknowledgements.md)
-- [Hardware Reference](chapters/hardware_reference.md)
-- [Y-Axis Assembly](chapters/y_axis_assembly.md)
-- [X Axis Assembly](chapters/x_axis_assembly.md)
-- [Z Axis Assembly](chapters/z_axis_assembly.md)
-- [FMJ Assembly (optional)](chapters/fmj_assembly.md)
-- [Table Assembly](chapters/table_assembly.md)
+- [Introduction](chapters/10_introduction.md)
+- [Acknowledgements](chapters/20_acknowledgements.md)
+- [Hardware Reference](chapters/30_hardware_reference.md)
+- [Y-Axis Assembly](chapters/40_y_axis_assembly.md)
+- [X Axis Assembly](chapters/50_x_axis_assembly.md)
+- [Z Axis Assembly](chapters/60_z_axis_assembly.md)
+- [FMJ Assembly (optional)](chapters/70_fmj_assembly.md)
+- [Table Assembly](chapters/80_table_assembly.md)
