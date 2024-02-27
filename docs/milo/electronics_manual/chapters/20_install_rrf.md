@@ -137,4 +137,4 @@ It is now safe to perform the physical install of your board into your mainboard
 
 ---
 
-[Next Chapter: Assemble Electronics](./assemble_electronics.md)
+[Next Chapter: Assemble Electronics](./30_assemble_electronics.md)
