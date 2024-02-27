@@ -19,11 +19,6 @@ nav:
         - Z-Axis Assembly: milo/manual/chapters/60_z_axis_assembly.md
         - FMJ Assembly: milo/manual/chapters/70_fmj_assembly.md
         - Table Assembly: milo/manual/chapters/80_table_assembly.md
-    - Electronics Manual:
-        - Introduction: milo/electronics_manual/chapters/10_introduction.md
-        - Install RRF: milo/electronics_manual/chapters/20_install_rrf.md
-        - Assembly and Wiring: milo/electronics_manual/chapters/30_assemble_electronics.md
-        - Pre-Flight Checks: milo/electronics_manual/chapters/40_pre_flight_checks.md
 
   - "Long John Toolsetter":
     - Sourcing and Print Guild: long-john/bom/sourcing_and_print_guide.md
