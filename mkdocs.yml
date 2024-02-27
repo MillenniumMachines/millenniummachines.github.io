@@ -18,15 +18,15 @@ nav:
         - X-Axis Assembly: milo/manual/chapters/50_x_axis_assembly.md
         - Z-Axis Assembly: milo/manual/chapters/60_z_axis_assembly.md
         - FMJ Assembly: milo/manual/chapters/70_fmj_assembly.md
-        - Install RRF: milo/electronics_manual/chapters/20_install_rrf.md
-        - Assembly and Wiring: milo/electronics_manual/chapters/30_assemble_electronics.md
-        - Table Assembly: milo/manual/chapters/80_table_assembly.md
-        - Pre-Flight Checks: milo/electronics_manual/chapters/40_pre_flight_checks.md
+        - Install RRF: milo/manual/chapters/80_install_rrf.md
+        - Assembly and Wiring: milo/manual/chapters/90_assemble_electronics.md
+        - Table Assembly: milo/manual/chapters/100_table_assembly.md
+        - Pre-Flight Checks: milo/manual/chapters/110_pre_flight_checks.md
 
   - "Long John Toolsetter":
     - Sourcing and Print Guild: long-john/bom/sourcing_and_print_guide.md
     - Assembly Manual: long-john/manual/assembly_manual.md
-    - Electronics Manual: long-john/manual/electronics_manual.md
+    - Electronics Manual: long-john/manual/manual.md
 
 extra:
   SITE_INTRO: !ENV [SITE_INTRO, 'Welcome to Millennium Machines!']
