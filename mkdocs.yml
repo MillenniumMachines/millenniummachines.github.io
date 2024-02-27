@@ -44,7 +44,7 @@ theme:
     text: Roboto
   logo: img/millennium-machines-icon.png
   icon:
-    logo: img/millennium-machines-icon.png
+    logo: fontawesome/solid/industry
     annotation: material/wrench-outline
   favicon: img/millennium-machines-icon.png
   palette:
