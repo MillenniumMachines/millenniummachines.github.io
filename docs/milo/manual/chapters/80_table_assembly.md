@@ -71,4 +71,4 @@ If you want to raise your table, now is the time to install your TPU feet using 
 
 ---
 
-[Next Chapter: Table Assembly](./90_install_rrf.md)
+[Next Chapter: Install RRF](./90_install_rrf.md)
