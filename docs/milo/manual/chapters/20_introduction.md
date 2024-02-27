@@ -18,6 +18,33 @@ A machine that can easily electrocute you, cut you or set fire to your whole nei
 Most importantly from everyone at the Millennium Machines design team,
 Have fun building your very first Milo!
 
+---
+
+## What To Expect
+
+This manual and associated firmware is for the Milo V1.5 with a Mellow Fly CDYv3 control board installed in the internal electronics enclosure found in the machine base.
+
+This manual will not cover external enclosures or the electronics compartment found in the Millennium Machines Casa enclosure - but where possible, it can still be used as a guideline for those other setups.
+
+The firmware used in this manual will only consist of the basic 3-axis functions of the machine.
+
+Touch probes, additional relays, toolsetters and other related add ons will not be part of this base firmware and therefore will not be present in this manual.
+
+## RepRapFirmware
+
+RRF is typically considered a 3D printing firmware, but in the last few years has begun to see more and more CNC features implemented.
+
+RRF boards tend to operate over WiFi or Ethernet and do not stream gcode over the air, but rather load it onto the board before starting a machining operation. Keep this in mind when finding a place to store Milo, as you will need some form of connection to the control board to allow working with the machine itself.
+
+RRF is extremely control board agnostic, so for the most part firmwares can be shared between different control boards with only a few pin definitions needing to be changed.
+
+Pins in RRF act a little differently from firmwares like Klipper and Marlin, as almost all pins are given a pin number (ex PC_7)
+and a pin name (ex Xmin). It is generally the pin name that will be referenced in the firmware and not the pin number, meaning that Xmin on one control board will also be Xmin on others. Keep this in mind if you want to use a different control board from the one found in this manual.
+
+It is still a good idea to cross reference these pins before changing any settings in firmware, and most control boards will come with a table similar to the one found [here](https://teamgloomy.github.io/fly_cdyv3_pins.html) - use this table in combination with a pinout diagram of your board to ensure everything will work as expected.
+
+*[RRF]: RepRapFirmware
+
 ## Bill of Materials
 
 Provided [here](../../bom/sourcing_guide.md) is the bill of materials. Whilst we recommend that you try to stick to this list as much as possible, you're an adult (hopefully) and this is your machine. If there is a substitution that you think would lead to a better machine then feel free! If there is a feature you don't feel is necessary then don't buy the parts for it.
@@ -38,42 +65,6 @@ You can then decide how you want to control your spindle - the simplest types ar
 The Millennium Machines team has provided a printing list with settings for you as a guideline for printing the parts necessary for the build. This list can be found [here](../../printing/print_guide.md).
 
 Remember, these settings are only a guideline, and are open to your own interpretations - but we do highly recommend following them to achieve the best mechanical properties for each individual part.
-
-## File Naming
-
-With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colors? Have no fear, we've got your back - each file is labelled.
-
-### Primary Color
-
-Example: `Handwheel Body x2.stl`
-These files have no prefix in their filename so are safe to print in your primary color.
-
-### Accent Color
-
-Example: `[a] Table Bolt Down Bracket A x2.stl`
-These files are prefixed with `[a]` and are intended to be printed in your chosen accent color.
-
-### Quantity Required
-
-Example: `Handwheel Body x2.stl`
-If any file ends with `x#`, that is telling you the quantity of that part required to build the machine.
-
-### Part Versions
-
-Example: `Skirt Front A xxxxxx.stl`
-
-Note the descriptor at the end of the file name - while there are many types of Skirt Front "A" files, they all vary in their design and some are even mirrors of others so as to mount devices on either side.
-
-!!! tip
-    Some printed parts have multiple versions in order to cater for different machine setups - be aware that not all versions need to be printed to build your machine.
-
-    ![skirt variants picture](../img/skirt_variant.png){: .shadow}
-
-    Choose the parts you need based on your build requirements.
-
-## Drilling Out Holes
-
-To make some features printable without support, some features are printed with a sacrificial floor. These parts will need to be drilled and or cut out before use.
 
 ## T-Nuts Application
 
