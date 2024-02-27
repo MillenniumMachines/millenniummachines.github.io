@@ -79,4 +79,4 @@ Fix the table to the Y axis of the mill using 3 corner brackets placed equispace
 
 ---
 !!! success ":fontawesome-solid-champagne-glasses: Congratulations!"
-    You're to move onto the [Pre-Flight Checks!](./110_pre_flight_checks.md) to get started!
+    Your mill is complete! You're ready to move onto the [Pre-Flight Checks!](./110_pre_flight_checks.md) to get started!
