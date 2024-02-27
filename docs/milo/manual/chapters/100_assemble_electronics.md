@@ -204,4 +204,12 @@ Install the cover onto the electronics enclosure using M5x8mm BHCS, plugging the
 
 ---
 
-[Next Chapter: Table Assembly](./100_table_assembly.md)
+Fix the table to the Y axis of the mill using 3 corner brackets placed equispaced along both sides.
+
+![](../img/table_assembly/table_assembly_attach_to_mill.jpg){: .shadow}
+
+![](../img/table_assembly/table_assembly_attachment_bracket_locations.jpg){: .shadow}
+
+---
+!!! success ":fontawesome-solid-champagne-glasses: Congratulations!"
+    Your mill is complete! You're ready to move onto the [Pre-Flight Checks!](./110_pre_flight_checks.md) to get started!

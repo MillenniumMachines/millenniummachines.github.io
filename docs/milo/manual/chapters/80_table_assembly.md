@@ -71,12 +71,4 @@ If you want to raise your table, now is the time to install your TPU feet using 
 
 ---
 
-Fix the table to the Y axis of the mill using 3 corner brackets placed equispaced along both sides.
-
-![](../img/table_assembly/table_assembly_attach_to_mill.jpg){: .shadow}
-
-![](../img/table_assembly/table_assembly_attachment_bracket_locations.jpg){: .shadow}
-
----
-!!! success ":fontawesome-solid-champagne-glasses: Congratulations!"
-    Your mill is complete! You're ready to move onto the [Pre-Flight Checks!](./110_pre_flight_checks.md) to get started!
+[Next Chapter: Table Assembly](./90_install_rrf.md)
