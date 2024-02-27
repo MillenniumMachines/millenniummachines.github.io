@@ -649,24 +649,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-to-expect" class="md-nav__link">
-    <span class="md-ellipsis">
-      What To Expect
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reprapfirmware" class="md-nav__link">
-    <span class="md-ellipsis">
-      RepRapFirmware
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#parts-list-and-printing-guidelines" class="md-nav__link">
     <span class="md-ellipsis">
       Parts List and Printing Guidelines
@@ -674,16 +656,6 @@
   </a>
   
     <nav class="md-nav" aria-label="Parts List and Printing Guidelines">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-naming" class="md-nav__link">
-    <span class="md-ellipsis">
-      File Naming
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="File Naming">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -710,11 +682,6 @@
       Quantity Required
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -969,24 +936,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-to-expect" class="md-nav__link">
-    <span class="md-ellipsis">
-      What To Expect
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reprapfirmware" class="md-nav__link">
-    <span class="md-ellipsis">
-      RepRapFirmware
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#parts-list-and-printing-guidelines" class="md-nav__link">
     <span class="md-ellipsis">
       Parts List and Printing Guidelines
@@ -994,16 +943,6 @@
   </a>
   
     <nav class="md-nav" aria-label="Parts List and Printing Guidelines">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-naming" class="md-nav__link">
-    <span class="md-ellipsis">
-      File Naming
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="File Naming">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1030,11 +969,6 @@
       Quantity Required
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1106,25 +1040,10 @@ A machine that can easily electrocute you, cut you or set fire to your whole nei
 </div>
 <p>Most importantly from everyone at the Millennium Machines team, have fun wiring your very first Milo!</p>
 <hr />
-<h2 id="what-to-expect">What To Expect</h2>
-<p>This manual and associated firmware is for the Milo V1.5 with a Mellow Fly CDYv3 control board installed in the internal electronics enclosure found in the machine base.</p>
-<p>This manual will not cover external enclosures or the electronics compartment found in the Millennium Machines Casa enclosure - but where possible, it can still be used as a guideline for those other setups.</p>
-<p>The firmware used in this manual will only consist of the basic 3-axis functions of the machine.</p>
-<p>Touch probes, additional relays, toolsetters and other related add ons will not be part of this base firmware and therefore will not be present in this manual.</p>
-<hr />
-<h2 id="reprapfirmware">RepRapFirmware</h2>
-<p><abbr title="RepRapFirmware">RRF</abbr> is typically considered a 3D printing firmware, but in the last few years has begun to see more and more CNC features implemented.</p>
-<p><abbr title="RepRapFirmware">RRF</abbr> boards tend to operate over WiFi or Ethernet and do not stream gcode over the air, but rather load it onto the board before starting a machining operation. Keep this in mind when finding a place to store Milo, as you will need some form of connection to the control board to allow working with the machine itself.</p>
-<p><abbr title="RepRapFirmware">RRF</abbr> is extremely control board agnostic, so for the most part firmwares can be shared between different control boards with only a few pin definitions needing to be changed.</p>
-<p>Pins in <abbr title="RepRapFirmware">RRF</abbr> act a little differently from firmwares like Klipper and Marlin, as almost all pins are given a pin number (ex PC_7)
-and a pin name (ex Xmin). It is generally the pin name that will be referenced in the firmware and not the pin number, meaning that Xmin on one control board will also be Xmin on others. Keep this in mind if you want to use a different control board from the one found in this manual.</p>
-<p>It is still a good idea to cross reference these pins before changing any settings in firmware, and most control boards will come with a table similar to the one found <a href="https://teamgloomy.github.io/fly_cdyv3_pins.html">here</a> - use this table in combination with a pinout diagram of your board to ensure everything will work as expected.</p>
 <hr />
 <h2 id="parts-list-and-printing-guidelines">Parts List and Printing Guidelines</h2>
 <p>The Millennium Machines team has provided a printing list with settings for you as a guideline for printing the parts necessary for the build. This list can be found <a href="../../../printing/print_guide/#electronics-table">here</a>.</p>
 <p>Remember, these settings are only a guideline, and are open to your own interpretations - but we do highly recommend following them to achieve the best mechanical properties for each individual part.</p>
-<h3 id="file-naming">File Naming</h3>
-<p>With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colors? Have no fear, we've got your back - each file is labelled.</p>
 <h4 id="primary-color">Primary Color</h4>
 <p>Example: <code>Handwheel Body x2.stl</code>
 These files have no prefix in their filename so are safe to print in your primary color.</p>
@@ -1152,7 +1071,7 @@ Well, why not join our community here on:</p>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> <strong>GitHub</strong> <a href="https://github.com/MillenniumMachines">https://github.com/MillenniumMachines</a></li>
 </ul>
 <hr />
-<p><a href="../20_install_rrf/">Next Chapter: Installing <abbr title="RepRapFirmware">RRF</abbr></a></p>
+<p><a href="../20_install_rrf/">Next Chapter: Installing RRF</a></p>
 
 
 
