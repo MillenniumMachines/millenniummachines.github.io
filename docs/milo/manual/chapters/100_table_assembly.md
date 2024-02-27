@@ -79,5 +79,4 @@ Fix the table to the Y axis of the mill using 3 corner brackets placed equispace
 
 ---
 !!! success ":fontawesome-solid-champagne-glasses: Congratulations!"
-    You're to move onto your electronics and cabling! Head over to
-    the [Electronics Manual](../../electronics_manual/index.md) to get started!
+    You're to move onto the [Pre-Flight Checks!](./110_pre_flight_checks.md) to get started!

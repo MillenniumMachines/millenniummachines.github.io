@@ -204,4 +204,4 @@ Install the cover onto the electronics enclosure using M5x8mm BHCS, plugging the
 
 ---
 
-[Next Chapter: Pre-Flight Checks](./40_pre_flight_checks.md)
+[Next Chapter: Table Assembly](./100_table_assembly.md)

@@ -529,4 +529,4 @@ Clip the drag chain body into place.
 
 ---
 
-[Next Chapter: Table Assembly](./80_table_assembly.md)
+[Next Chapter: Install RRF](./80_install_rrf.md)
