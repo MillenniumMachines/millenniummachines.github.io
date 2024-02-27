@@ -11,19 +11,19 @@ nav:
     - Printing Guide: milo/printing/print_guide.md
     - Frequently Asked Questions: milo/faq.md
     - Assembly Manual:
-        - Acknowledgements: milo/assembly_manual/chapters/acknowledgements.md
-        - Introduction: milo/assembly_manual/chapters/introduction.md
-        - Hardware Reference: milo/assembly_manual/chapters/hardware_reference.md
-        - Y-Axis Assembly: milo/assembly_manual/chapters/y_axis_assembly.md
-        - X-Axis Assembly: milo/assembly_manual/chapters/x_axis_assembly.md
-        - Z-Axis Assembly: milo/assembly_manual/chapters/z_axis_assembly.md
-        - FMJ Assembly: milo/assembly_manual/chapters/fmj_assembly.md
-        - Table Assembly: milo/assembly_manual/chapters/table_assembly.md
+        - Acknowledgements: milo/assembly_manual/chapters/10_acknowledgements.md
+        - Introduction: milo/assembly_manual/chapters/20_introduction.md
+        - Hardware Reference: milo/assembly_manual/chapters/30_hardware_reference.md
+        - Y-Axis Assembly: milo/assembly_manual/chapters/40_y_axis_assembly.md
+        - X-Axis Assembly: milo/assembly_manual/chapters/50_x_axis_assembly.md
+        - Z-Axis Assembly: milo/assembly_manual/chapters/60_z_axis_assembly.md
+        - FMJ Assembly: milo/assembly_manual/chapters/70_fmj_assembly.md
+        - Table Assembly: milo/assembly_manual/chapters/80_table_assembly.md
     - Electronics Manual:
-        - Introduction: milo/electronics_manual/chapters/introduction.md
-        - Install RRF: milo/electronics_manual/chapters/install_rrf.md
-        - Assembly and Wiring: milo/electronics_manual/chapters/assemble_electronics.md
-        - Pre-Flight Checks: milo/electronics_manual/chapters/pre_flight_checks.md
+        - Introduction: milo/electronics_manual/chapters/10_introduction.md
+        - Install RRF: milo/electronics_manual/chapters/20_install_rrf.md
+        - Assembly and Wiring: milo/electronics_manual/chapters/30_assemble_electronics.md
+        - Pre-Flight Checks: milo/electronics_manual/chapters/40_pre_flight_checks.md
 
   - "Long John Toolsetter":
     - Sourcing and Print Guild: long-john/bom/sourcing_and_print_guide.md
