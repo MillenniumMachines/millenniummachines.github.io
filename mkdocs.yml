@@ -43,7 +43,7 @@ theme:
   font:
     text: Roboto
   icon:
-    logo: fontawesome/solid/industry
+    logo: img/millennium-machines-icon.png
     annotation: material/wrench-outline
   favicon: img/millennium-machines-icon.png
   palette:
