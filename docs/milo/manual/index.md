@@ -6,8 +6,8 @@ Made in a shed somewhere... probably.
 
 Chapters:
 
-- [Introduction](chapters/10_introduction.md)
-- [Acknowledgements](chapters/20_acknowledgements.md)
+- [Acknowledgements](chapters/10_acknowledgements.md)
+- [Introduction](chapters/20_introduction.md)
 - [Hardware Reference](chapters/30_hardware_reference.md)
 - [Y-Axis Assembly](chapters/40_y_axis_assembly.md)
 - [X Axis Assembly](chapters/50_x_axis_assembly.md)
