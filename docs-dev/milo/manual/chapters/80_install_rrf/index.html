@@ -994,28 +994,28 @@ please follow <a href="https://www.youtube.com/watch?v=TAT532vIVzU&amp;t=335s">t
 <p>There are however, 2 crucial settings that need to be selected - the board (General tab) and motor drivers (Motors tab).</p>
 <p>For a standard build, select the <code>Fly-CDYv3</code> option under the Board dropdown menu on the General tab.</p>
 <p>For each of the X, Y and Z drivers on the standard build, select the <code>TMC2209</code> option under the Driver dropdown menu for each axis in the Motors tab.</p>
-<p><img alt="" class="shadow" src="../img/install_rrf/install_rrf_step_0.png" /></p>
+<p><img alt="" class="shadow" src="../../img/install_rrf/install_rrf_step_0.png" /></p>
 <hr />
 <p>Leave all other settings untouched and skip straight to the FINISH tab at the end of the configurator. Once you click finish a box will pop up with all your generated config files.</p>
 <p>To continue, click "Download configuration bundle as ZIP file".</p>
-<p><img alt="" class="shadow" src="../img/install_rrf/install_rrf_step_1.png" /></p>
+<p><img alt="" class="shadow" src="../../img/install_rrf/install_rrf_step_1.png" /></p>
 <hr />
 <p>Once this file is finished downloading, unzip its contents and copy the "sys" folder inside straight onto your SD card.</p>
 <hr />
 <h2 id="check-your-work">Check Your Work</h2>
 <p>Prior to starting your board for the first time, double check to make sure your SD card looks like the example seen here.</p>
-<p><img alt="" class="shadow" src="../img/install_rrf/install_rrf_step_2.png" /></p>
+<p><img alt="" class="shadow" src="../../img/install_rrf/install_rrf_step_2.png" /></p>
 <hr />
 <h2 id="initial-flash">Initial Flash</h2>
 <p>At this point, eject your SD card from your computer and mount it into your controller board.</p>
 <p>Power your board either via USB or via your PSU and let the board work for a couple of minutes.</p>
 <p>Turn the power off and put your SD card back into your computer. You will know this step worked if the <code>firmware.bin</code> file has changed into a <code>FLY.CUR</code> file as pictured below. Once confirmed, return your SD card to the board.</p>
-<p><img alt="" class="shadow" src="../img/install_rrf/install_rrf_step_3.png" /></p>
+<p><img alt="" class="shadow" src="../../img/install_rrf/install_rrf_step_3.png" /></p>
 <hr />
 <h2 id="flash-your-wifi-chip">Flash your WiFi Chip</h2>
 <p>If you are using the Mellow FLY CDY V3, then add 2 jumpers as shown below.</p>
 <p>You may need to take similar or different steps depending on your board. You will need to refer to the documentation for your particular board to identify the steps required.</p>
-<p><img alt="" src="../img/install_rrf/install_rrf_step_4.png" /></p>
+<p><img alt="" src="../../img/install_rrf/install_rrf_step_4.png" /></p>
 <hr />
 <p>Once the jumpers are in place, power up the board using 12-24v and connect to the USB port on the board.</p>
 <p>Connect to the board using a program such as <code>PuTTY</code>. Change the com port to match the <code>Fly-CDYv3</code> - baudrate doesn't matter.</p>
@@ -1034,10 +1034,10 @@ please follow <a href="https://www.youtube.com/watch?v=TAT532vIVzU&amp;t=335s">t
 <p>With your board still powered on, copy the IP address you noted in the last step into your web browser.</p>
 <p>Once it loads you should now be face to face with the Duet Web Controller (DWC) interface.</p>
 <p>In the left-hand menu navigate to the tab marked "System".</p>
-<p><img alt="" class="shadow" src="../img/install_rrf/install_rrf_step_5.png" /></p>
+<p><img alt="" class="shadow" src="../../img/install_rrf/install_rrf_step_5.png" /></p>
 <hr />
 <p>Once in the system tab click on “UPLOAD SYSTEM FILES” and upload all of the files found in <a href="https://github.com/MillenniumMachines/Milo-v1.5/tree/main/Firmware%20and%20Post%20Processors/Example%20Firmware%20configs/Firmware%20V1.0/2.%20Example%20config%20(upload%20contents%20to%20DWC)">"2.Example Config"</a> to DWC.</p>
-<p><img alt="" class="shadow" src="../img/install_rrf/install_rrf_step_6.png" /></p>
+<p><img alt="" class="shadow" src="../../img/install_rrf/install_rrf_step_6.png" /></p>
 <hr />
 <p>At this point, the basic firmware setup is complete and all that remains are some firmware checks which will be covered later on in the manual.</p>
 <div class="admonition warning">
