@@ -42,6 +42,7 @@ theme:
   name: material
   font:
     text: Roboto
+  logo: img/millennium-machines-icon.png
   icon:
     logo: img/millennium-machines-icon.png
     annotation: material/wrench-outline
