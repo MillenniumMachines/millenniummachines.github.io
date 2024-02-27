@@ -28,7 +28,7 @@ Note the descriptor at the end of the file name - while there are many types of 
 !!! tip
     Some printed parts have multiple versions in order to cater for different machine setups - be aware that not all versions need to be printed to build your machine.
 
-    ![skirt variants picture](../img/skirt_variant.png){: .shadow}
+    ![skirt variants picture](./skirt_variant.png){: .shadow}
 
     Choose the parts you need based on your build requirements.
 
