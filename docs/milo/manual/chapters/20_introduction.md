@@ -85,7 +85,7 @@ You must make sure that your carriages are appropriately greased before running 
 
 ---
 
-## Pre-flight Training
+## Pre-Build Training
 
 Before you head out on your journey to create skynet, it's probably a good idea that you learn a few things. Luckily the Millennium Machines team have put together a curated list of videos to teach you all you need to know - sit back, relax and enjoy.
 
@@ -111,7 +111,7 @@ Maybe you just want someone to chat with?
 Well, why not join our community here on:
 
 - :fontawesome-brands-discord: **Discord** [https://discord.gg/ya4UUj7ax2](https://discord.gg/ya4UUj7ax2)
-- :fontawesome-brands-reddit: **Reddit** [/r/MilleniumMachines/](https://www.reddit.com/r/MilleniumMachines/)
+- :fontawesome-brands-reddit: **Reddit** [/r/MillenniumMachines/](https://www.reddit.com/r/MilleniumMachines/)
 - :fontawesome-brands-youtube: **YouTube** [Millennium Machine Works Official](https://www.youtube.com/channel/UCfdxXilZd76Dp8RfLxUJ_Gw)
 - :fontawesome-brands-github: **GitHub** [https://github.com/MillenniumMachines](https://github.com/MillenniumMachines)
 
