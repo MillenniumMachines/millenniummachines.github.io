@@ -18,9 +18,9 @@ nav:
         - X-Axis Assembly: milo/manual/chapters/50_x_axis_assembly.md
         - Z-Axis Assembly: milo/manual/chapters/60_z_axis_assembly.md
         - FMJ Assembly: milo/manual/chapters/70_fmj_assembly.md
-        - Install RRF: milo/manual/chapters/80_install_rrf.md
+        - Table Assembly: milo/manual/chapters/80_table_assembly.md
+        - Install RRF: milo/manual/chapters/90_install_rrf.md
         - Assemble Electronics: milo/manual/chapters/100_assemble_electronics.md
-        - Table Assembly: milo/manual/chapters/100_table_assembly.md
         - Pre-Flight Checks: milo/manual/chapters/110_pre_flight_checks.md
 
   - "Long John Toolsetter":
