@@ -459,6 +459,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-to-expect" class="md-nav__link">
+    <span class="md-ellipsis">
+      What To Expect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reprapfirmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      RepRapFirmware
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bill-of-materials" class="md-nav__link">
     <span class="md-ellipsis">
       Bill of Materials
@@ -480,66 +498,6 @@
   <a href="#parts-list-and-printing-guidelines" class="md-nav__link">
     <span class="md-ellipsis">
       Parts List and Printing Guidelines
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#file-naming" class="md-nav__link">
-    <span class="md-ellipsis">
-      File Naming
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="File Naming">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#primary-color" class="md-nav__link">
-    <span class="md-ellipsis">
-      Primary Color
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#accent-color" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accent Color
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quantity-required" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quantity Required
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#part-versions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Part Versions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drilling-out-holes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Drilling Out Holes
     </span>
   </a>
   
@@ -990,6 +948,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-to-expect" class="md-nav__link">
+    <span class="md-ellipsis">
+      What To Expect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reprapfirmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      RepRapFirmware
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bill-of-materials" class="md-nav__link">
     <span class="md-ellipsis">
       Bill of Materials
@@ -1011,66 +987,6 @@
   <a href="#parts-list-and-printing-guidelines" class="md-nav__link">
     <span class="md-ellipsis">
       Parts List and Printing Guidelines
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#file-naming" class="md-nav__link">
-    <span class="md-ellipsis">
-      File Naming
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="File Naming">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#primary-color" class="md-nav__link">
-    <span class="md-ellipsis">
-      Primary Color
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#accent-color" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accent Color
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quantity-required" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quantity Required
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#part-versions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Part Versions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drilling-out-holes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Drilling Out Holes
     </span>
   </a>
   
@@ -1148,6 +1064,19 @@ A machine that can easily electrocute you, cut you or set fire to your whole nei
 </div>
 <p>Most importantly from everyone at the Millennium Machines design team,
 Have fun building your very first Milo!</p>
+<hr />
+<h2 id="what-to-expect">What To Expect</h2>
+<p>This manual and associated firmware is for the Milo V1.5 with a Mellow Fly CDYv3 control board installed in the internal electronics enclosure found in the machine base.</p>
+<p>This manual will not cover external enclosures or the electronics compartment found in the Millennium Machines Casa enclosure - but where possible, it can still be used as a guideline for those other setups.</p>
+<p>The firmware used in this manual will only consist of the basic 3-axis functions of the machine.</p>
+<p>Touch probes, additional relays, toolsetters and other related add ons will not be part of this base firmware and therefore will not be present in this manual.</p>
+<h2 id="reprapfirmware">RepRapFirmware</h2>
+<p><abbr title="RepRapFirmware">RRF</abbr> is typically considered a 3D printing firmware, but in the last few years has begun to see more and more CNC features implemented.</p>
+<p><abbr title="RepRapFirmware">RRF</abbr> boards tend to operate over WiFi or Ethernet and do not stream gcode over the air, but rather load it onto the board before starting a machining operation. Keep this in mind when finding a place to store Milo, as you will need some form of connection to the control board to allow working with the machine itself.</p>
+<p><abbr title="RepRapFirmware">RRF</abbr> is extremely control board agnostic, so for the most part firmwares can be shared between different control boards with only a few pin definitions needing to be changed.</p>
+<p>Pins in <abbr title="RepRapFirmware">RRF</abbr> act a little differently from firmwares like Klipper and Marlin, as almost all pins are given a pin number (ex PC_7)
+and a pin name (ex Xmin). It is generally the pin name that will be referenced in the firmware and not the pin number, meaning that Xmin on one control board will also be Xmin on others. Keep this in mind if you want to use a different control board from the one found in this manual.</p>
+<p>It is still a good idea to cross reference these pins before changing any settings in firmware, and most control boards will come with a table similar to the one found <a href="https://teamgloomy.github.io/fly_cdyv3_pins.html">here</a> - use this table in combination with a pinout diagram of your board to ensure everything will work as expected.</p>
 <h2 id="bill-of-materials">Bill of Materials</h2>
 <p>Provided <a href="../../../bom/sourcing_guide/">here</a> is the bill of materials. Whilst we recommend that you try to stick to this list as much as possible, you're an adult (hopefully) and this is your machine. If there is a substitution that you think would lead to a better machine then feel free! If there is a feature you don't feel is necessary then don't buy the parts for it.</p>
 <p>Furthermore, there are options in the guide that are up to you to decide on, such as drivers, motors and even control boards. Do your research and find what you need to make your build work for you.</p>
@@ -1161,28 +1090,6 @@ Have fun building your very first Milo!</p>
 <h2 id="parts-list-and-printing-guidelines">Parts List and Printing Guidelines</h2>
 <p>The Millennium Machines team has provided a printing list with settings for you as a guideline for printing the parts necessary for the build. This list can be found <a href="../../../printing/print_guide/">here</a>.</p>
 <p>Remember, these settings are only a guideline, and are open to your own interpretations - but we do highly recommend following them to achieve the best mechanical properties for each individual part.</p>
-<h2 id="file-naming">File Naming</h2>
-<p>With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colors? Have no fear, we've got your back - each file is labelled.</p>
-<h3 id="primary-color">Primary Color</h3>
-<p>Example: <code>Handwheel Body x2.stl</code>
-These files have no prefix in their filename so are safe to print in your primary color.</p>
-<h3 id="accent-color">Accent Color</h3>
-<p>Example: <code>[a] Table Bolt Down Bracket A x2.stl</code>
-These files are prefixed with <code>[a]</code> and are intended to be printed in your chosen accent color.</p>
-<h3 id="quantity-required">Quantity Required</h3>
-<p>Example: <code>Handwheel Body x2.stl</code>
-If any file ends with <code>x#</code>, that is telling you the quantity of that part required to build the machine.</p>
-<h3 id="part-versions">Part Versions</h3>
-<p>Example: <code>Skirt Front A xxxxxx.stl</code></p>
-<p>Note the descriptor at the end of the file name - while there are many types of Skirt Front "A" files, they all vary in their design and some are even mirrors of others so as to mount devices on either side.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Some printed parts have multiple versions in order to cater for different machine setups - be aware that not all versions need to be printed to build your machine.</p>
-<p><img alt="skirt variants picture" class="shadow" src="../../img/skirt_variant.png" /></p>
-<p>Choose the parts you need based on your build requirements.</p>
-</div>
-<h2 id="drilling-out-holes">Drilling Out Holes</h2>
-<p>To make some features printable without support, some features are printed with a sacrificial floor. These parts will need to be drilled and or cut out before use.</p>
 <h2 id="t-nuts-application">T-Nuts Application</h2>
 <p>This machine requires an immense amount of T-nuts. In the interest of simplifying this manual, we have chosen to omit the installation of T-nuts. Wherever a part interfaces with an extrusion in a way that looks like it requires a T-nut, then it should be considered a part that requires a T-nut.</p>
 <h2 id="linear-rail-carriages">Linear Rail Carriages</h2>
