@@ -12,7 +12,7 @@ To the [Voron Design](https://www.vorondesign.com/) team: Voron has also been a 
 
 <img width="50" align="left" src="https://raw.githubusercontent.com/MillenniumMachines/millenniummachines.github.io/dev/docs/milo/manual/img/fabreeko_logo.png">
 
-And finally, to [Fabreeko](https://www.fabreeko.com/). Early on Fabreeko had our back with support and donations so that we could afford to buy parts - and they helped us guarantee that we could provide a machine that lived up to everyone's expectations. For that we are eternally grateful. Thank you all.
+To [Fabreeko](https://www.fabreeko.com/) who had our back with support and donations so that we could afford to buy parts. They helped us guarantee that we could provide a machine that lived up to everyone's expectations. For that we are eternally grateful. Thank you all.
 
 ---
 
