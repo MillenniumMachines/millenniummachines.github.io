@@ -23,7 +23,7 @@
 
 Fasten the MGN15 500mm rails to the extrusion by screwing M3x10mm SHCS into spring T-nuts inside the profile.
 
-![fasten the MGN15 500mm Rails to the 500mm extrusion screwing M3x10mm SHCS into the spring t-nuts inside the profil](../img/x_axis_assembly/y_axis_step_27.png){: .shadow}
+![fasten the MGN15 500mm Rails to the 500mm extrusion screwing M3x10mm SHCS into the spring t-nuts inside the profile](../img/x_axis_assembly/y_axis_step_27.png){: .shadow}
 
 !!! tip annotate "Aligning the Rails"
     Repeat the alignment procedure described for the Y axis to ensure your rails are aligned to each other and the extrusion. 
@@ -183,7 +183,7 @@ To avoid the endstop getting damaged during the rest of the assembly, its a good
 
 ---
 
-## Handwheels (Optional)
+## Handwheel (Optional)
 
 !!! info annotate "Components Required (Per handwheel)"
     ```
