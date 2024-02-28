@@ -1,7 +1,4 @@
 # Millennium Machines Milo V1.5 Assembly Manual
-
-![](https://github.com/MillenniumMachines/Milo-v1.5/assets/7659338/d0d1d9b8-de4d-40d1-b2df-69ea5fe7d555){: style="width:300px"}
-
 Made in a shed somewhere... probably.
 
 Chapters:
