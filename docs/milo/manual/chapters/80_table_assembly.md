@@ -4,6 +4,8 @@
 
 ---
 
+## Main Table Assembly
+
 !!! info annotate "Components Required"
     ```
     20 x M5x12mm BHCS
@@ -64,6 +66,8 @@ Use M5x12mm BHCS to attach the table bolt-down brackets to each corner of the el
 ![](../img/table_assembly/y_axis_step_91.png){: .shadow}
 
 ---
+
+## TPU Feet
 
 If you want to raise your table, now is the time to install your TPU feet using M5x30mm BHCS!
 
