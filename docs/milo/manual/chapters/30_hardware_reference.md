@@ -133,7 +133,7 @@ Used to drive the Z-Axis lead-screw from the 20-tooth pulley above.
 
 ## Brass Lead-screw Nut
 
-![Brass lead-screw nut](../img/hardware/brass_leadscrew_nut.png){: .shadow}
+![Brass lead-screw nut](../img/hardware/brass_leadscrew_nut.png){: .shadow  style="height:75px"}
 
 Used to translate rotational motion of a lead-screw into linear motion of an axis.
 
