@@ -130,12 +130,10 @@ Take one of your FMJ plates and line up the bottom edge of the FMJ shoulder with
 
 Bolt the FMJ plate to the extrusion using the M5x10 BHCS.
 
+![](../img/fmj_assembly/fmj_step_4.png){: .shadow}
+
 !!! tip
     The bottom 4 holes will remain without a bolt at this stage.
-
-Install all but the bottom 4 M5x10mm BHCS.
-
-![](../img/fmj_assembly/fmj_step_4.png){: .shadow}
 
 !!! warning "BE SAFE, LOCK IT!"
     These machines vibrate an immense amount when in use, and fasteners are bound to back out. Don't be afraid to add a little bit of medium-strength threadlock to all your screws to avoid this problem.
