@@ -127,6 +127,12 @@ Take one of your FMJ plates and line up the bottom edge of the FMJ shoulder with
 ![](../img/fmj_assembly/fmj_step_3.png){: .shadow}
 
 ---
+
+Bolt the FMJ plate to the extrusion using the M5x10 BHCS.
+
+!!! tip
+    The bottom 4 holes will remain without a bolt at this stage.
+
 Install all but the bottom 4 M5x10mm BHCS.
 
 ![](../img/fmj_assembly/fmj_step_4.png){: .shadow}
