@@ -127,7 +127,7 @@ Take one of your FMJ plates and line up the bottom edge of the FMJ shoulder with
 ![](../img/fmj_assembly/fmj_step_3.png){: .shadow}
 
 ---
-Install all but the bottom 4 M5x12mm BHCS.
+Install all but the bottom 4 M5x10mm BHCS.
 
 ![](../img/fmj_assembly/fmj_step_4.png){: .shadow}
 
