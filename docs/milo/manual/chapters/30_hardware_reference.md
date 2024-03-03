@@ -83,7 +83,8 @@ Steel or aluminium loops with a grub-screw in the side used to limit the free tr
 
 ## Self-tapping Screw
 
-![Self Tapping screw wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/self_tapping_screw.png){: .shadow}
+<!-- ![Self Tapping screw wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/self_tapping_screw.png){: .shadow} -->
+<img width="100" align="left" src="https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/brass_leadscrew_nut.png">
 
 Fastener with a pronounced thread profile that is bolted directly into plastic.
 
@@ -91,7 +92,8 @@ Fastener with a pronounced thread profile that is bolted directly into plastic.
 
 ## Washer
 
-![Washer wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/washer.png){: .shadow}
+<!-- ![Washer wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/washer.png){: .shadow} -->
+<img width="100" align="left" src="https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/brass_leadscrew_nut.png">
 
 Usually stamped from sheet metal, this type of spacer distributes load over a larger area. Only used in M5 size.
 
@@ -99,7 +101,8 @@ Usually stamped from sheet metal, this type of spacer distributes load over a la
 
 ## Set-screw
 
-![Set Screw wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/grub_screw.png){: .shadow}
+<!-- ![Set Screw wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/grub_screw.png){: .shadow} -->
+<img width="100" align="left" src="https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/brass_leadscrew_nut.png">
 
 Small, headless fastener with an internal drive. Used in pulleys and other gears. Also called a grub-screw.
 
@@ -109,7 +112,8 @@ ISO 4026
 
 ## Spring T-nut
 
-![Spring T-nut wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/spring_nut.png){: .shadow}
+<!-- ![Spring T-nut wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/spring_nut.png){: .shadow} -->
+<img width="100" align="left" src="https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/brass_leadscrew_nut.png">
 
 Nut that can be inserted into the slot of an aluminium profile. Used in both M3 and M5 variants throughout this guide.
 
@@ -117,7 +121,8 @@ Nut that can be inserted into the slot of an aluminium profile. Used in both M3 
 
 ## 20-Tooth GT2 Pulley
 
-![20-tooth GT2 pulley wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/20_tooth.png){: .shadow}
+<!-- ![20-tooth GT2 pulley wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/20_tooth.png){: .shadow} -->
+<img width="100" align="left" src="https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/brass_leadscrew_nut.png">
 
 Attached to the Z-Axis motor.
 
@@ -125,7 +130,9 @@ Attached to the Z-Axis motor.
 
 ## 40-Tooth GT2 Pulley
 
-![40-tooth GT2 pulley wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/40_tooth.png){: .shadow}
+<!-- ![40-tooth GT2 pulley wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/40_tooth.png){: .shadow} -->
+<img width="100" align="left" src="https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/brass_leadscrew_nut.png">
+
 
 Used to drive the Z-Axis lead-screw from the 20-tooth pulley above.
 
@@ -136,5 +143,7 @@ Used to drive the Z-Axis lead-screw from the 20-tooth pulley above.
 <img width="100" align="left" src="https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/brass_leadscrew_nut.png">
 
 Used to translate rotational motion of a lead-screw into linear motion of an axis.
+
+---
 
 [Next Chapter: Y-Axis Assembly](./40_y_axis_assembly.md)
