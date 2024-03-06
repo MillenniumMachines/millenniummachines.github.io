@@ -137,6 +137,9 @@ Screw the mainboard onto the mount using M3x10mm self-tapping screws.
 
 ![Mainboard Mount with self-tappers](../img/assemble_electronics/assemble_electronics_step_10.png){: .shadow}
 
+!!! tip
+    Make sure your SD card is installed before installing the board!
+
 ---
 
 Mount the mainboard to the side extrusions of the electronics table using M5x10mm BHCS.
