@@ -11,11 +11,9 @@
 
 !!! info annotate "Components Required"
     ```
-    7 x M5x8mm BHCS
+    3 x M5x8mm BHCS
     4 x M5x10mm BHCS
     4 x M4x10mm BHCS
-    2 x Angled Corner Connector, 2020
-    1 x Openbuilds 2020 Extrusion - 200mm
     2 x PSU Mounting Bracket A (1)
     2 x PSU Mounting Bracket B (2)
     1 x Cable Channel (3)
@@ -25,10 +23,6 @@
 2. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#electronics-table)!
 3. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#electronics-table)!
 4. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#electronics-table)!
-
-Install the enclosure support extrusion brace using M5x8mm BHCS.
-
-![Add enclosure support brace](../img/assemble_electronics/assemble_electronics_step_0.png){: .shadow}
 
 ---
 
