@@ -109,7 +109,7 @@ Place extrusion `C` on the front of extrusion `D`, again with the channel (and r
 
 !!! info annotate "Components Required"
     ```
-    32 x M5x10mm BHCS
+    68 x M5x10mm BHCS
     2 x FMJ Plate (1)
     ```
 1. :material-factory: See [FMJ Sourcing](#fmj-sourcing) above.
