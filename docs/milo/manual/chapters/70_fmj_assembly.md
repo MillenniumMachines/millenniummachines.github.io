@@ -44,6 +44,9 @@ This section of the build contains a number of C-beams that are close together. 
     ```
 ![](../img/z_axis_assembly/y_axis_step_42.png){: .shadow}
 
+!!! tip
+    The lengths shown are for a standard 60mm clearance build. A 120mm clearance build will have A & B be +60mm in length.
+
 ---
 
 Extrusions `A` and `B` are the main Z-column extrusions.
