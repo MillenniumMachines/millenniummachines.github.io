@@ -15,10 +15,11 @@ This section of the build contains a number of C-beams that are close together. 
     C: Openbuilds 4080x250mm C-Beam
     D: Openbuilds 4080x120mm C-Beam
     ```
-![](../img/z_axis_assembly/y_axis_step_42.png){: .shadow}
 
 !!! tip
     The lengths shown are for a standard 60mm clearance build. A 120mm clearance build will have A & B be +60mm in length.
+
+![](../img/z_axis_assembly/y_axis_step_42.png){: .shadow}
 
 ---
 
