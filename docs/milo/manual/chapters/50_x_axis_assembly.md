@@ -21,9 +21,12 @@
 1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#x-axis-assembly)!
 2. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#x-axis-assembly)!
 
-Fasten the MGN15 rails to the extrusion by screwing M3x10mm SHCS into spring T-nuts inside the profile.
+Fasten the MGN15 500mm rails to the extrusion by screwing M3x10mm SHCS into spring T-nuts inside the profile.
 
-![fasten the MGN15 500mm Rails to the 500mm extrusion screwing M3x10mm SHCS into the spring t-nuts inside the profil](../img/x_axis_assembly/y_axis_step_27.png){: .shadow}
+![fasten the MGN15 500mm Rails to the 500mm extrusion screwing M3x10mm SHCS into the spring t-nuts inside the profile](../img/x_axis_assembly/y_axis_step_27.png){: .shadow}
+
+!!! tip annotate "Aligning the Rails"
+    Repeat the alignment procedure described for the Y axis to ensure your rails are aligned to each other and the extrusion. 
 
 ---
 
@@ -180,7 +183,7 @@ To avoid the endstop getting damaged during the rest of the assembly, its a good
 
 ---
 
-## Handwheels (Optional)
+## Handwheel (Optional)
 
 !!! info annotate "Components Required (Per handwheel)"
     ```
@@ -216,4 +219,4 @@ Place the handle onto the X and Y axis and secure using two M3x10 SHCS or two M3
 
 ---
 
-[Next Chapter: Z Axis Assembly](./z_axis_assembly.md)
+[Next Chapter: Z Axis Assembly](./60_z_axis_assembly.md)

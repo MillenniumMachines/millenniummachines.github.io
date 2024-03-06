@@ -200,15 +200,17 @@ Fasten the Y-Axis bearing block to the other end of the 470mm C-Beam using M5x12
 
 Fasten the MGN15 rails to the Y-Axis, screwing M3x10mm SHCS into every second hole in the rail.
 
-![fasten the MGN15 350mm Rails to the 470mm extrusion screwing M3x10mm SHCS into the spring t-nuts inside the profil](../img/y_axis_assembly/y_axis_step_15.png){: .shadow}
+![fasten the MGN15 350mm Rails to the 470mm extrusion screwing M3x10mm SHCS into the spring t-nuts inside the profile](../img/y_axis_assembly/y_axis_step_15.png){: .shadow}
 
 !!! note "T-Nut Installation"
     Spring T-Nuts are used here to mount the rails but are not shown, install these prior to screwing the bolts in.
 
-!!! tip "Rail Centering Guide"
-    ![amongus](../img/hardware/rail_alignment_tool.png){: .shadow}
+!!! tip "Aligning the rails"
+    ![](../img/hardware/rail_alignment_tool.png){: .shadow}
 
-    Use the MGN15 guides to position the rail in the center of the extrusion prior to fastening the screws.
+    Use the MGN15 guides to position the first rail in the center of the extrusion prior to fastening the screws. Use a DTI running along the edge of the extrusion to fine adjust it into alignment with the extrusion.
+
+    With the first rail aligned, fit the second rail using the MGN15 guides and use a DTI to clock it in to the first rail. Make sure to check both horizontal alignment and vertical alignment and shim if required. 
 
 ---
 
@@ -357,4 +359,4 @@ You may wish to install the rest of the cable chain now to complete the Y-Axis -
 
 ---
 
-[Next Chapter: X-Axis Assembly](./x_axis_assembly.md)
+[Next Chapter: X-Axis Assembly](./50_x_axis_assembly.md)

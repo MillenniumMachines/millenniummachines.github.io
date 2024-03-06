@@ -7,7 +7,7 @@
     make this easier for you, we have gone ahead and populated the majority of these files already - all
     you need to do is follow the very simple steps below to get your firmware installed on your board.
 
-    If you don't wish to install the premade firmware and would rather create your own from scratch, then
+    If you don't wish to install the pre-made firmware and would rather create your own from scratch, then
     please follow [this tutorial](https://www.youtube.com/watch?v=TAT532vIVzU&t=335s).
 
 
@@ -137,4 +137,4 @@ It is now safe to perform the physical install of your board into your mainboard
 
 ---
 
-[Next Chapter: Assemble Electronics](./assemble_electronics.md)
+[Next Chapter: Assemble Electronics](./100_assemble_electronics.md)

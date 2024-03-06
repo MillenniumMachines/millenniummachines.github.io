@@ -15,6 +15,10 @@ This section of the build contains a number of C-beams that are close together. 
     C: Openbuilds 4080x250mm C-Beam
     D: Openbuilds 4080x120mm C-Beam
     ```
+
+!!! tip
+    The lengths shown are for a standard 60mm clearance build. A 120mm clearance build will have A & B be +60mm in length.
+
 ![](../img/z_axis_assembly/y_axis_step_42.png){: .shadow}
 
 ---
@@ -29,7 +33,7 @@ Extrusions `A` and `B` are the main Z-column extrusions.
 *[FMJ]: Full Metal Jacket
 
 !!! tip "Full Metal Jacket Installation"
-    If you have Full Metal Jacket plates instead of the 3D printed column joining plates, please refer to the [FMJ Assembly](./fmj_assembly.md) guide. Once complete, you can return to the [Lower Bearing Block](#lower-bearing-block) section and continue your Z-Axis assembly.
+    If you have Full Metal Jacket plates instead of the 3D printed column joining plates, please refer to the [FMJ Assembly](./70_fmj_assembly.md) guide. Once complete, you can return to the [Lower Bearing Block](#lower-bearing-block) section and continue your Z-Axis assembly.
 
 ---
 
@@ -216,14 +220,15 @@ Place a locking collar onto the bottom of the lead-screw, and lock it in place. 
 !!! note
     If you followed the FMJ installation steps, your rails are already installed. Proceed to fitting the lead-screw!
 
-Install the Z rails with only the lower carriages installed onto the `C` extrusion using M3x10mm SHCS. Make sure the end-most and centre-most bolt holes in each rail are used.
-
-Use printed [rail alignment guides](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Tools/Rail%20Alignment%20Guide.stl) to make sure the rails are aligned.
+Install the MGN15 250mm rails with only the lower carriages installed onto the `C` extrusion using M3x10mm SHCS. Make sure the end-most and centre-most bolt holes in each rail are used.
 
 ![](../img/z_axis_assembly/y_axis_step_60_1.png){: .shadow}
 
 !!! tip
     You can use the rail alignment guides to stop the lower carriages from falling off the vertical rail!
+
+!!! tip annotate "Aligning the Rails"
+    Repeat the alignment procedure described for the Y axis to ensure your rails are aligned to each other and the extrusion. 
 
 ---
 
@@ -528,4 +533,4 @@ Clip the drag chain body into place.
 
 ---
 
-[Next Chapter: Table Assembly](./table_assembly.md)
+[Next Chapter: Table Assembly](./80_table_assembly.md)

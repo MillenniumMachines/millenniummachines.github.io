@@ -4,6 +4,8 @@
 
 ---
 
+## Main Table Assembly
+
 !!! info annotate "Components Required"
     ```
     20 x M5x12mm BHCS
@@ -65,19 +67,26 @@ Use M5x12mm BHCS to attach the table bolt-down brackets to each corner of the el
 
 ---
 
+## Brace The Table
+
+!!! info annotate "Components Required"
+    ```
+    3 x M5x8mm BHCS
+    2 x Angled Corner Connector, 2020
+    1 x Openbuilds 2020 Extrusion - 200mm
+
+Install the enclosure support extrusion brace using M5x8mm BHCS.
+
+![Add enclosure support brace](../img/assemble_electronics/assemble_electronics_step_0.png){: .shadow}
+
+---
+
+## TPU Feet
+
 If you want to raise your table, now is the time to install your TPU feet using M5x30mm BHCS!
 
 ![](../img/table_assembly/table_foot_assy.jpg){: .shadow}
 
 ---
 
-Fix the table to the Y axis of the mill using 3 corner brackets placed equispaced along both sides.
-
-![](../img/table_assembly/table_assembly_attach_to_mill.jpg){: .shadow}
-
-![](../img/table_assembly/table_assembly_attachment_bracket_locations.jpg){: .shadow}
-
----
-!!! success ":fontawesome-solid-champagne-glasses: Congratulations!"
-    You're to move onto your electronics and cabling! Head over to
-    the [Electronics Manual](../../electronics_manual/index.md) to get started!
+[Next Chapter: Install RRF](./90_install_rrf.md)

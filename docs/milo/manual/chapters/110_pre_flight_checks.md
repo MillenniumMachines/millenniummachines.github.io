@@ -64,4 +64,4 @@ A good quality lithium grease (e.g. EP2) is recommended for this job.
 
 !!! success ":fontawesome-solid-champagne-glasses: Congratulations!"
     With all of your pre-flight checks completed, you're ready to use your machine.
-    Record a video of your first cut and submit it on our [Discord](https://discord.gg/ya4UUj7ax2) to receive your serial!
+    Record a video of your first cut and submit it on our [Discord](https://discord.gg/ya4UUj7ax2) to receive your serial number!

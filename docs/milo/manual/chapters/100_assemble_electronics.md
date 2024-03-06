@@ -3,7 +3,7 @@
 ![Assembled electronics area](../img/assemble_electronics/electronics_assembly.png){: .shadow}
 
 !!! info annotate "Are you building an LDO kit?"
-    LDO have wirtten a fanstic supplimentary guide for the wiring included with their kit which includes pre-cut, pre-crimped, and pre-soldered cables! If youre building an LDO kit check out their guide [here!](https://www.ldomotion.com/#/guide/Milo-CNC-V15-Wiring-Guide)
+    LDO have written a fantastic supplementary guide for the wiring included with their kit which includes pre-cut, pre-crimped, and pre-soldered cables! If you're building an LDO kit check out their guide [here!](https://www.ldomotion.com/#/guide/Milo-CNC-V15-Wiring-Guide)
 
 ---
 
@@ -11,11 +11,9 @@
 
 !!! info annotate "Components Required"
     ```
-    7 x M5x8mm BHCS
+    3 x M5x8mm BHCS
     4 x M5x10mm BHCS
     4 x M4x10mm BHCS
-    2 x Angled Corner Connector, 2020
-    1 x Openbuilds 2020 Extrusion - 200mm
     2 x PSU Mounting Bracket A (1)
     2 x PSU Mounting Bracket B (2)
     1 x Cable Channel (3)
@@ -25,10 +23,6 @@
 2. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#electronics-table)!
 3. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#electronics-table)!
 4. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#electronics-table)!
-
-Install the enclosure support extrusion brace using M5x8mm BHCS.
-
-![Add enclosure support brace](../img/assemble_electronics/assemble_electronics_step_0.png){: .shadow}
 
 ---
 
@@ -113,7 +107,7 @@ Wire the AC Inlet, PSU, E-stop and VFD according to the diagram below.
 
 ### VFD / Spindle Wiring
 
-There are a large number of VFD and spindle options available. This section of the manual provides general guidence only. You should refer to your specific VFD manual for its setup. 
+There are a large number of VFD and spindle options available. This section of the manual provides general guidance only. You should refer to your specific VFD manual for its setup. 
 
 ![VFD Wiring diagram](../img/assemble_electronics/assemble_electronics_step_9_5.jpg){: .shadow}
 
@@ -142,6 +136,9 @@ There are a large number of VFD and spindle options available. This section of t
 Screw the mainboard onto the mount using M3x10mm self-tapping screws.
 
 ![Mainboard Mount with self-tappers](../img/assemble_electronics/assemble_electronics_step_10.png){: .shadow}
+
+!!! tip
+    Make sure your SD card is installed before installing the board!
 
 ---
 
@@ -174,7 +171,7 @@ You may also require a relay to send an enable signal to your VFD. If you wish t
     For safety reasons it is always a good idea to wire your endstops in a normally closed configuration. This allows your machine to detect breaks in any of your cabling rather than you manually detecting a failed endstop circuit when the table tries to move off the end of an axis!
 
 !!! info annotate "VFD Wiring"
-    There are a large number of VFD and spindle options available. This wiring diagram provides general guidence only. You should refer to your specific VFD manual for its setup.
+    There are a large number of VFD and spindle options available. This wiring diagram provides general guidance only. You should refer to your specific VFD manual for its setup.
 
     ![VFD Wiring diagram](../img/assemble_electronics/assemble_electronics_step_12_5.jpg)
 
@@ -204,4 +201,12 @@ Install the cover onto the electronics enclosure using M5x8mm BHCS, plugging the
 
 ---
 
-[Next Chapter: Pre-Flight Checks](./pre_flight_checks.md)
+Fix the table to the Y axis of the mill using 3 corner brackets placed equispaced along both sides.
+
+![](../img/table_assembly/table_assembly_attach_to_mill.jpg){: .shadow}
+
+![](../img/table_assembly/table_assembly_attachment_bracket_locations.jpg){: .shadow}
+
+---
+!!! success ":fontawesome-solid-champagne-glasses: Congratulations!"
+    Your mill is complete! You're ready to move onto the [Pre-Flight Checks!](./110_pre_flight_checks.md) to get started!

@@ -6,7 +6,7 @@
     The Full Metal Jacket is an optional reinforcement for the Z-Axis that improves its' rigidity and strength significantly. If you're looking to cut metals, then you should think about installing the FMJ from the get-go.
 
 !!! tip annotate "Standard Assembly"
-    The following information applies _only_ if you are building your Milo with FMJ plates. If you do not have FMJ plates and are using 3D printed column joining plates, please follow [Installing the Column Plates](./z_axis_assembly.md#installing-the-column-plates) instead.
+    The following information applies _only_ if you are building your Milo with FMJ plates. If you do not have FMJ plates and are using 3D printed column joining plates, please follow [Installing the Column Plates](./60_z_axis_assembly.md#installing-the-column-plates) instead.
 
 *[FMJ]: Full Metal Jacket
 
@@ -42,6 +42,10 @@ This section of the build contains a number of C-beams that are close together. 
     C: Openbuilds 4080x250mm C-Beam
     D: Openbuilds 4080x120mm C-Beam
     ```
+
+!!! tip
+    The lengths shown are for a standard 60mm clearance build. A 120mm clearance build will have A & B be +60mm in length.
+
 ![](../img/z_axis_assembly/y_axis_step_42.png){: .shadow}
 
 ---
@@ -64,12 +68,13 @@ Install the Z rails with only the lower carriages installed onto the `C` extrusi
 
 Make sure the end-most and centre-most bolt holes in each rail are used.
 
-Use printed [rail alignment guides](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Tools/Rail%20Alignment%20Guide.stl) to make sure the rails are aligned.
-
 ![](../img/fmj_assembly/fmj_step_0.png){: .shadow}
 
 !!! tip
     You can use the rail alignment guides to stop the lower carriages from falling off the vertical rail!
+
+!!! tip annotate "Aligning the Rails"
+    Repeat the alignment procedure described for the Y axis to ensure your rails are aligned to each other and the extrusion. 
 
 ## Column Assembly
 
@@ -108,7 +113,7 @@ Place extrusion `C` on the front of extrusion `D`, again with the channel (and r
 
 !!! info annotate "Components Required"
     ```
-    32 x M5x10mm BHCS
+    68 x M5x10mm BHCS
     2 x FMJ Plate (1)
     ```
 1. :material-factory: See [FMJ Sourcing](#fmj-sourcing) above.
@@ -126,9 +131,13 @@ Take one of your FMJ plates and line up the bottom edge of the FMJ shoulder with
 ![](../img/fmj_assembly/fmj_step_3.png){: .shadow}
 
 ---
-Install all but the bottom 4 M5x12mm BHCS.
+
+Bolt the FMJ plate to the extrusion using the M5x10 BHCS.
 
 ![](../img/fmj_assembly/fmj_step_4.png){: .shadow}
+
+!!! tip
+    The bottom 4 holes will remain without a bolt at this stage.
 
 !!! warning "BE SAFE, LOCK IT!"
     These machines vibrate an immense amount when in use, and fasteners are bound to back out. Don't be afraid to add a little bit of medium-strength threadlock to all your screws to avoid this problem.
@@ -152,4 +161,4 @@ Turn your half-assembled column over and repeat with the other FMJ plate. Take c
 ![](../img/fmj_assembly/fmj_step_5.png){: .shadow}
 
 
-[Next Chapter: Z-Axis Lower Bearing block](./z_axis_assembly.md#lower-bearing-block)
+[Next Chapter: Z-Axis Lower Bearing block](./60_z_axis_assembly.md#lower-bearing-block)
