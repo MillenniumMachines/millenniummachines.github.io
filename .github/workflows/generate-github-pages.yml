@@ -1,11 +1,11 @@
 name: Generate GitHub Pages
 on:
   push:
+    # Do not run on tags
     tags-ignore:
       - '*'
     branches:
-      - main
-      - dev
+      - '**'
     workflow_dispatch:
 
 concurrency:
@@ -16,23 +16,27 @@ permissions:
   contents: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+    env:
+      ROOT_DIR: docs
+    outputs:
+      site_url: ${{ steps.build.outputs.site_url }}
+      root_dir: ${{ steps.build.outputs.root_dir }}
     steps:
       - name: Check-out Repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: 3.x
+
       - name: Set Cache ID
         run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+
       - name: Load cache dependencies
         uses: actions/cache@v3
         with:
@@ -41,36 +45,77 @@ jobs:
           restore-keys: |
             mkdocs-material-
 
-      - name: Install docs requirements
-        run: pip install mkdocs-macros-plugin mkdocs-material ghp-import
+      - name: Install docs build requirements
+        run: pip install mkdocs-macros-plugin mkdocs-material
 
-      # Build the production docs
-      - name: Build production docs
-        run: |
-          mkdocs build
-          ghp-import site -np -x docs
-        if: github.ref == 'refs/heads/main'
+      - name: Set development variables
+        if: github.ref != 'refs/heads/main'
         env:
-          SITE_NAME: "Millennium Machines"
-          SITE_URL: "https://millenniummachines.github.io/docs"
-          EDIT_URL: "edit/main/docs"
+          SITE_NAME: "Millennium Machines (Branch: ${{ github.ref_name }})"
+          SITE_URL: "https://millenniummachines.github.io/docs-${{ github.ref_name }}"
+          EDIT_URL: "edit/${{ github.ref_name }}/docs"
+          SITE_DESCRIPTION: "Documentation Preview for Millennium Machines - Branch: ${{ github.ref_name }}"
           SITE_INTRO: |
-            Welcome to the Millennium Machines documentation site. Here you can find guides on how to source,
-            build, and maintain your own **Millennium Machine**!
+            !!! warning "THIS IS THE DOCS DEVELOPMENT SITE - Branch: ${{ github.ref_name }}"
 
-      # Build the development docs
-      - name: Build development docs
-        run: |
-          mkdocs build
-          ghp-import site -np -x docs-dev
-        if: github.ref == 'refs/heads/dev'
-        env:
-          SITE_NAME: "Millennium Machines (Dev)"
-          SITE_URL: "https://millenniummachines.github.io/docs-dev"
-          EDIT_URL: "edit/dev/docs"
-          SITE_DESCRIPTION: "Documentation Preview for Millennium Machines"
-          SITE_INTRO: |
-            !!! warning "THIS IS THE DOCS DEVELOPMENT SITE"
-            Welcome to the Millennium Machines development documentation site.
+            Welcome to the Millennium Machines _development documentation_ site.
             This site is used to preview changes to the documentation before they are published to the `main` branch.
             You may find incomplete or incorrect information here, so please refer to the [production documentation](https://millenniummachines.github.io/docs) for the most accurate information.
+
+          ROOT_DIR: "docs-${{ github.ref_name }}"
+        run: |
+          echo "ROOT_DIR=${ROOT_DIR}" >> $GITHUB_ENV
+
+          echo "SITE_NAME=${SITE_NAME}" >> $GITHUB_ENV
+          echo "SITE_URL=${SITE_URL}" >> $GITHUB_ENV
+          echo "EDIT_URL=${EDIT_URL}" >> $GITHUB_ENV
+          echo "SITE_DESCRIPTION=${SITE_DESCRIPTION}" >> $GITHUB_ENV
+
+          echo "SITE_INTRO<<EOSMARKER" >> $GITHUB_ENV
+          echo "${SITE_INTRO}" >> $GITHUB_ENV
+          echo "EOSMARKER" >> $GITHUB_ENV
+
+
+      - name: Build docs
+        id: build
+        run: |
+          mkdocs build
+          echo "site_url=${SITE_URL}" >> $GITHUB_OUTPUT
+          echo "root_dir=${ROOT_DIR}" >> $GITHUB_OUTPUT
+
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: site
+          retention-days: 7
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.ref != 'refs/heads/main' && github.ref_name || 'production' }}
+      url: ${{ needs.build.outputs.site_url }}
+    steps:
+      - name: Check-out Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Install docs deploy requirements
+        run: pip install ghp-import
+
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site
+
+      - name: Deploy ${{ github.ref_name }} docs
+        run: |
+          ghp-import site -np -x ${{needs.build.outputs.root_dir}}
