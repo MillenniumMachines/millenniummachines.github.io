@@ -104,16 +104,7 @@ Before you head out on your journey to create skynet, it's probably a good idea 
 
 ## CONTACT US
 
-Building Milo can be confusing, but we're here to help.
-Do you have a question?
-Do you wanna show off your build?
-Maybe you just want someone to chat with?
-Well, why not join our community here on:
-
-- :fontawesome-brands-discord: **Discord** [https://discord.gg/ya4UUj7ax2](https://discord.gg/ya4UUj7ax2)
-- :fontawesome-brands-reddit: **Reddit** [/r/MillenniumMachines/](https://www.reddit.com/r/MilleniumMachines/)
-- :fontawesome-brands-youtube: **YouTube** [Millennium Machine Works Official](https://www.youtube.com/channel/UCfdxXilZd76Dp8RfLxUJ_Gw)
-- :fontawesome-brands-github: **GitHub** [https://github.com/MillenniumMachines](https://github.com/MillenniumMachines)
+Building Milo can be confusing, but we're here to help. Please join our community using the links on the [Contact Us](../../../contact-us.md) page to ask for assistance, or if you want to share a modification, chat with other Milo owners or simply show off your build!
 
 ---
 

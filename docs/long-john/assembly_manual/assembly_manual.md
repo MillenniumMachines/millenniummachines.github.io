@@ -5,7 +5,7 @@
 !!! info annotate "Threadlocker"
     These machines vibrate an immense amount when in use and fasteners are bound to back out. Don’t be afraid to add a little bit of medium-strength threadlocker to your central screw to avoid this problem. Threadlocker should **not** be used on the self tapping screws as the chemicals in threadlocker may damage the ABS and cause it to weaken.
 
-![](./assembly_image_1.png){: .shadow}
+![Long-John Toolsetter assembly image](./img/assembly_image_1.png){: .shadow}
 
 ## Electronics Assembly
 
@@ -14,4 +14,4 @@
 
 Plug the toolsetter into the `Z_MAX` endstop connector. Note that your wire colours may be different to those shown in the images.
 
-![](./toolsetter wiring.png){: .shadow}
+![Long-John Toolsetter wiring diagram](./img/toolsetter_wiring.png){: .shadow}
