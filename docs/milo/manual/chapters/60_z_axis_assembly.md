@@ -439,14 +439,14 @@ Attach the Y-Axis Motor Mount to the Z-Axis using M5x12mm BHCS.
     ```
      4 x M5x100mm BHCS
      4 x M5 Washer
-     2 x M3 Heat-set Insert
+     2 x M5 Heat-set Insert
      1 x Spindle Mount Part A (1)
      1 x Spindle Mount Part B (2)
     ```
 1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#spindle-mount)!
 2. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#spindle-mount)!
 
-Install M3 Heat-set inserts into Spindle Mount Part B.
+Install M5 Heat-set inserts into Spindle Mount Part B.
 
 ![](../img/z_axis_assembly/y_axis_step_78.png){: .shadow}
 
