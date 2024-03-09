@@ -35,6 +35,7 @@ After this has been done, face `C` will now be oriented towards you. When instal
     12 x M3x5mm SHCS
      8 x MGN15 Rail Carriages
      5 x M5 Heat-set Insert
+     5 x M3 Heat-set Insert
      4 x M3x20mm SHCS
      4 x M3 Washer
      1 x XY Gantry Plate (1)
