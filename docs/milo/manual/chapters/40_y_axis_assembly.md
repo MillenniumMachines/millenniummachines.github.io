@@ -193,7 +193,7 @@ Fasten the Y-Axis bearing block to the other end of the 470mm C-Beam using M5x12
 
 !!! info annotate "Components Required"
     ```
-    10 x M3x10mm BHCS
+    10 x M3x10mm SHCS
     10 x M3 Spring T-Nut
      2 x MGN15 Linear Rails, 350mm
     ```

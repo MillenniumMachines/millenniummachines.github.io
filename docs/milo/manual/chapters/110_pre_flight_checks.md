@@ -28,8 +28,7 @@ Ensure that all you homing routines in `homeall.g`, `homex.g`, `homey.g` and `ho
 You must ensure that when you move your axes X amount of millimeters it actually moves X amount of
 millimeters.
 
-<!-- TODO: Find relevant guide -->
-If you do not know how to do this you can follow this [guide](https://google.co.uk).
+If you do not know how to do this you can follow this [guide](https://teachingtechyt.github.io/calibration.html#xyzsteps).
 
 ---
 
