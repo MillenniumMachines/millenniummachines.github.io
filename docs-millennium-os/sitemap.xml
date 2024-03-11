@@ -26,6 +26,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://millenniummachines.github.io/docs-millennium-os/millennium-os/</loc>
+         <lastmod>2024-03-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://millenniummachines.github.io/docs-millennium-os/millennium-os/manual/installation/</loc>
+         <lastmod>2024-03-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://millenniummachines.github.io/docs-millennium-os/millennium-os/manual/usage/</loc>
+         <lastmod>2024-03-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://millenniummachines.github.io/docs-millennium-os/milo/</loc>
          <lastmod>2024-03-11</lastmod>
          <changefreq>daily</changefreq>
