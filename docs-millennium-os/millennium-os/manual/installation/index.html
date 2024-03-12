@@ -898,6 +898,66 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#fusion360-machine-definition-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fusion360 Machine Definition Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fusion360 Machine Definition Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-nc-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating an NC Program
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing-the-post-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing the post-processor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-the-machine-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import the machine definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-post-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the post-processor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1065,6 +1125,66 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#fusion360-machine-definition-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fusion360 Machine Definition Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fusion360 Machine Definition Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-nc-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating an NC Program
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing-the-post-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing the post-processor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-the-machine-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import the machine definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-post-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the post-processor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1143,18 +1263,46 @@ MillenniumOS will not load properly until the machine is restarted.</p>
 </div>
 <hr />
 <h2 id="post-processor-installation">Post-Processor Installation</h2>
-<p>After configuring MillenniumOS, the final step is to install the post-processor into your chosen CAD/CAM software so it can produce the right gcode for MillenniumOS.</p>
+<p>After configuring MillenniumOS, the final step is to install the post-processor and optionally (unless you want to use operation properties), a machine definition into your chosen CAD/CAM software so it can produce the right gcode for MillenniumOS.</p>
 <p>Currently, only Fusion360 is supported with a <code>.cps</code> post-processor. This may work in other Autodesk products but usage outside of Fusion360 is completely untested and out of scope for this documentation.</p>
 <h3 id="fusion360-post-processor-installation">Fusion360 Post-Processor Installation</h3>
 <p>Download the <code>millennium-os-&lt;version&gt;-post-f360.cps</code> file from the release matching your installed MillenniumOS version.</p>
 <p><img alt="Example MillenniumOS release" class="shadow-dark" src="../img/mos_install_step_0.png" /></p>
 <hr />
+<h3 id="fusion360-machine-definition-installation">Fusion360 Machine Definition Installation</h3>
+<p>You should generally also install Fusion360 machine definition as this allows you to configure the post-processor on a per-operation basis for certain settings. These are released alongside the post-processor and <abbr title="RepRapFirmware">RRF</abbr> Zip file.</p>
+<p>You will need to download the file that matches your machine specification - currently these are generated for the following specifications:</p>
+<ul>
+<li>
+<p>Standard: <code>milo-v1.5-std-v...mch</code></p>
+<ul>
+<li>X=0 to 335mm</li>
+<li>Y=0 to 208mm</li>
+<li>Z=0 to -60mm</li>
+</ul>
+</li>
+<li>
+<p>Extended Z: <code>milo-v1.5-120mm-z-v...mch</code></p>
+<ul>
+<li>X=0 to 335mm</li>
+<li>Y=0 to 208mm</li>
+<li>Z=0 to -120mm</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the image in the <a href="#post-processor-installation">Post-Processor Installation</a> section for how these appear on each release.</p>
+</div>
+<hr />
+<h4 id="creating-an-nc-program">Creating an NC Program</h4>
 <p>Switch to the <strong>"MANUFACTURE"</strong> workbench in Fusion360.</p>
 <p><img alt="Location of the MANUFACTURE workbench in F360" class="shadow" src="../img/mos_install_step_5.png" /></p>
 <hr />
 <p>Under the <strong>"Milling"</strong> tab in the top bar, click the <strong>"NC Program"</strong> icon (the one with a G at the top of a document).</p>
 <p><img alt="Location of the NC Program button in F360" class="shadow" src="../img/mos_install_step_6.png" /></p>
 <hr />
+<h4 id="importing-the-post-processor">Importing the post-processor</h4>
 <p>Click the <strong>"Folder"</strong> icon to the right of Post (<strong>"Select post from the library"</strong>).</p>
 <p><img alt="Location of the folder icon in F360" class="shadow" src="../img/mos_install_step_7.png" /></p>
 <hr />
@@ -1167,10 +1315,32 @@ MillenniumOS will not load properly until the machine is restarted.</p>
 <p>Make sure the newly created "MillenniumOS" post entry is selected in the Post Library and click Select in the bottom right of the window.</p>
 <p><img alt="Select the post-processor entry in the Post Library in F360" class="shadow" src="../img/mos_install_step_10.png" /></p>
 <hr />
-<p>Configure the post-processor in the <strong>"Post properties"</strong> section of the <strong>"NC Program"</strong> window to your liking. The default settings should work fine unless you have more advanced needs.</p>
-<p><img alt="Configuring the post-processor in the Post properties section of F360" class="shadow" src="../img/mos_install_step_11.png" /></p>
+<p>You may now click "OK" on the "NC Program" window to return to the main view.</p>
+<h4 id="creating-a-setup">Creating a Setup</h4>
+<p>To install the machine definition, we must first create a <strong>"Setup"</strong>. Click on the <strong>"Setup"</strong> icon under the <strong>"Milling"</strong> tab in the top bar.</p>
+<p><img alt="Create a setup in F360" class="shadow" src="../img/mos_install_step_11.png" /></p>
 <hr />
-<p>You're now ready to create a setup, add some toolpaths and then run the post to generate MillenniumOS flavoured output gcode. These steps are not MillenniumOS specific, and are therefore outside of the scope of this documentation.</p>
+<p>Click <strong>"Select"</strong> on the <strong>"Setup"</strong> tab under the <strong>"Machine"</strong> heading:</p>
+<p><img alt="Select a machine" class="shadow" src="../img/mos_install_step_12.png" /></p>
+<hr />
+<h4 id="import-the-machine-definition">Import the machine definition</h4>
+<p>Click on the <strong>"Import"</strong> button to open the machine definition selection dialog:</p>
+<p><img alt="Import a machine" class="shadow" src="../img/mos_install_step_13.png" /></p>
+<hr />
+<p>Click <strong>"Select from my computer"</strong> in the bottom left hand corner of the selection window, and then pick the <code>.mch</code> file you downloaded previously.</p>
+<p><img alt="Select from my computer" class="shadow" src="../img/mos_install_step_14.png" /></p>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The machine file and post-processor are configured and named specifically so that they reference each other. You should load the machine definition after the post-processor, allowing it to find the post-processor file. When successfully linked, you should see a <code>Post</code> line under the machine definition indicating that the Machine and post-processor are linked.</p>
+</div>
+<p><img alt="Machine and Post linked" class="shadow" src="../img/mos_install_step_15.png" /></p>
+<hr />
+<h4 id="configure-the-post-processor">Configure the post-processor</h4>
+<p>Configure the post-processor in the <strong>"Post properties"</strong> section of the <strong>"NC Program"</strong> window to your liking. The default settings should work fine unless you have more advanced needs.</p>
+<p><img alt="Configuring the post-processor in the Post properties section of F360" class="shadow" src="../img/mos_install_step_16.png" /></p>
+<hr />
+<p>You're now ready to add some toolpaths and then run the post to generate MillenniumOS flavoured output gcode. These steps are not MillenniumOS specific, and are therefore outside of the scope of this documentation.</p>
 <p>If you would like to understand how MillenniumOS works in practice and how best to use it, please proceed to the next chapter.</p>
 <p><a href="../usage/">Next Chapter: Using MillenniumOS</a></p>
 
