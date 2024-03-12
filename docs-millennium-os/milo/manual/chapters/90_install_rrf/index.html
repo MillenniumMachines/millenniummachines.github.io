@@ -921,6 +921,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contact-us/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1053,16 +1073,16 @@ please follow <a href="https://www.youtube.com/watch?v=TAT532vIVzU&amp;t=335s">t
 <p>The release zip files are named based on the machine hardware specification the configuration was designed for, so if you have a kit with a particular mainboard, click to download the zip file which is named based on the kit manufacturer and mainboard that you have.</p>
 <p>If you have a kit that does <em>not</em> conform to any known specification, please open an issue.</p>
 <p>The releases with <code>mos</code> in the zip file name contain the latest compatible release of MillenniumOS.</p>
-<p><img alt="View of GitHub Releases page for RRF Config" src="../../img/install_rrf/install_rrf_step_0.png" /></p>
+<p><img alt="View of GitHub Releases page for RRF Config" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_0.png" /></p>
 <h2 id="extract-configuration-release">Extract Configuration Release</h2>
 <p>Once you have the <abbr title="RepRapFirmware">RRF</abbr> configuration release downloaded, you need to extract it to the root of your formatted SD card.</p>
 <p>Make sure the tool you use to extract the files does not create a subdirectory based on the name of the Zip file. The layout of your SD card should look like the following image:</p>
-<p><img alt="View of SD Card Layout after extracting RRF Config" src="../../img/install_rrf/install_rrf_step_1.png" /></p>
+<p><img alt="View of SD Card Layout after extracting RRF Config" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_1.png" /></p>
 <hr />
 <h2 id="board-specific-setup">Board specific setup</h2>
 <p>Some boards require jumpers to be set to allow mainboard or WiFi updates to be applied. You should check if this applies to you by reading your mainboard documentation.</p>
 <p>For example - if you are using the Mellow FLY CDYv3, then you need to add 2 jumpers as shown below to enable on-board WiFi updates.</p>
-<p><img alt="View of Fly CDYv3 jumpers required for WiFi flashing" src="../../img/install_rrf/install_rrf_step_2.png" /></p>
+<p><img alt="View of Fly CDYv3 jumpers required for WiFi flashing" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_2.png" /></p>
 <hr />
 <h2 id="initial-setup">Initial Setup</h2>
 <p>At this point, eject the SD card from your computer and insert it into your mainboard.</p>
@@ -1084,7 +1104,7 @@ Password: millenniummachines
 <p>Some browsers may try to force you to connect to <code>https://</code> by default - you may need to specify the full URL, <code>http://192.168.40.1</code> to override this behaviour.</p>
 </div>
 <p>Once connected to Duet Web Control, you should see a screen similar to this. This is the interface that you will use to control your new CNC Mill!</p>
-<p><img alt="View of RRFs Duet Web Control interface" src="../../img/install_rrf/install_rrf_step_3.png" /></p>
+<p><img alt="View of RRFs Duet Web Control interface" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_3.png" /></p>
 <hr />
 <h2 id="configure-your-wifi-network">Configure your WiFi network</h2>
 <p>If you want to connect your Milo to an existing WiFi network rather than using the inbuilt Access Point, you can use the Web Interface to change the machine configuration.</p>
@@ -1092,7 +1112,7 @@ Password: millenniummachines
 <div class="highlight"><pre><span></span><code><span class="nb">M587 </span>S&quot;your WiFi SSID&quot; P&quot;your WiFi password&quot;
 </code></pre></div>
 <p>You should see a <em>green</em> highlighted line indicating that the command was successful:</p>
-<p><img alt="View of DWC Console window indicating successful WiFi network configuration" src="../../img/install_rrf/install_rrf_step_4.png" /></p>
+<p><img alt="View of DWC Console window indicating successful WiFi network configuration" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_4.png" /></p>
 <hr />
 <p>You now need to tell <abbr title="RepRapFirmware">RRF</abbr> to connect as a WiFi client rather than starting its own Access Point. To do this, browse to the "Files -&gt; System" tab, and click on <code>network.g</code> to edit the file.</p>
 <p>Edit the line that says <code>M552 S2</code> so that it says <code>M552 S1</code> instead. Click Save in the top right hand corner, and then run <code>M999</code> via the console, or power cycle the mainboard to trigger a restart.</p>
