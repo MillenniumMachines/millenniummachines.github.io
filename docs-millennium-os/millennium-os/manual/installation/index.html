@@ -1221,7 +1221,7 @@
 <h2 id="rrf-installation"><abbr title="RepRapFirmware">RRF</abbr> Installation</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you installed one of our <a href="https://github.com/MillenniumMachines/RRF-Configs/releases"><abbr title="RepRapFirmware">RRF</abbr> Configurations</a> that contains MillenniumOS, then you may not need to follow this guide. If you start <abbr title="RepRapFirmware">RRF</abbr> and a MillenniumOS configuration wizard appears, then MillenniumOS is already installed and just needs to be <a href="#configuration">configured</a>!.</p>
+<p>If you installed one of our <a href="https://github.com/MillenniumMachines/RRF-Configs/releases"><abbr title="RepRapFirmware">RRF</abbr> Configurations</a> that contains MillenniumOS, then you may not need to follow everything in this guide. If you start <abbr title="RepRapFirmware">RRF</abbr> and a MillenniumOS configuration wizard appears, then MillenniumOS is already installed and just needs to be <a href="#configuration">configured</a>!.</p>
 </div>
 <h3 id="download-millenniumos-release">Download MillenniumOS Release</h3>
 <p>MillenniumOS releases can be found on the <a href="https://github.com/MillenniumMachines/MillenniumOS/releases">MillenniumOS Releases</a> page. Select the <code>mos-release-vX.X.X...zip</code> file to download the latest release.</p>
@@ -1231,7 +1231,7 @@
 <p>Once the Zip file has been downloaded, you can simply upload it to <abbr title="Duet Web Control">DWC</abbr> using the <strong>"Files -&gt; System"</strong> tab. Click <strong>"Upload System Files"</strong> (at the top right of the list of files), select the Zip file you downloaded previously (<code>mos-release-vX.X.X...zip</code>) and click OK.</p>
 <p><img alt="File selection process for uploading to DWC" class="shadow-dark" src="../img/mos_install_step_1.png" /></p>
 <hr />
-<p>Each of the files from the Zip will be uploaded individually. You can see the list of files being uploaded and there will be a notification when the whole Zip file has been uploaded. Once the upload is complete, click close.</p>
+<p>Each of the files from the Zip will be uploaded individually. You can see the list of files being uploaded and there will be a notification when the whole Zip file has been uploaded. Once the upload is complete, click *<em>"Close""</em>.</p>
 <p><img alt="Uploaded file list in DWC" class="shadow-dark" src="../img/mos_install_step_2.png" /></p>
 <hr />
 <h3 id="load-millenniumos-on-startup">Load MillenniumOS on startup</h3>
@@ -1273,23 +1273,14 @@ MillenniumOS will not load properly until the machine is restarted.</p>
 <p>You should generally also install Fusion360 machine definition as this allows you to configure the post-processor on a per-operation basis for certain settings. These are released alongside the post-processor and <abbr title="RepRapFirmware">RRF</abbr> Zip file.</p>
 <p>You will need to download the file that matches your machine specification - currently these are generated for the following specifications:</p>
 <ul>
-<li>
-<p>Standard: <code>milo-v1.5-std-v...mch</code></p>
-<ul>
-<li>X=0 to 335mm</li>
-<li>Y=0 to 208mm</li>
-<li>Z=0 to -60mm</li>
-</ul>
-</li>
-<li>
-<p>Extended Z: <code>milo-v1.5-120mm-z-v...mch</code></p>
-<ul>
+<li>Standard: <code>milo-v1.5-std-v...mch</code><ul>
 <li>X=0 to 335mm</li>
 <li>Y=0 to 208mm</li>
 <li>Z=0 to -120mm</li>
 </ul>
 </li>
 </ul>
+<p>This can be used with a machine of the standard working area, with either a 60mm or 120mm clearance. This includes the LDO kit.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Refer to the image in the <a href="#post-processor-installation">Post-Processor Installation</a> section for how these appear on each release.</p>

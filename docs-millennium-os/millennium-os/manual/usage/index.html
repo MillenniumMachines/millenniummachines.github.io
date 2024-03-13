@@ -1309,7 +1309,7 @@
     10(Move above corner X,Y)
     A1 --&gt; 2 --&gt; 3 --&gt; A2 --&gt; 6 --&gt; A3 --&gt; 9 --&gt; 10</code></pre>
 <h3 id="circular-bore">Circular Bore</h3>
-<p>Circular bore sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X and Y axes to the center of a circular bore (hole) in a work-piece. This is usually used to zero off a hole in a partly-machined workpiece, or off a similar feature in a fixture plate.</p>
+<p>Circular bore sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X and Y axes to the center of a circular bore (hole) in a work-piece. This is usually used to zero off a hole in a partly-machined work-piece, or off a similar feature in a fixture plate.</p>
 <pre class="mermaid"><code>flowchart TB
     1(Move down to probe depth)
     subgraph P1[Probe 1]
@@ -1440,7 +1440,7 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The datum tool and optional touch probe you would have chosen during the Configuration Wizard are created and managed by MillenniumOS on each boot. This is important because we need to track the radius and deflection of the touch probe or datum tool for accurate probing results.</p>
-<p>These probe tools exist as a single entry in the tool table, depending on if the touch probe feature is enabled or not. Please do <em>not</em> delete this probe tool, or overwrite its' index with another tool.</p>
+<p>These probe tools exist as a single entry in the tool table, depending on if the touch probe feature is enabled or not. Please do <em>not</em> delete this probe tool, or overwrite its index with another tool.</p>
 <p>Probe tools should always exist in the last index of the <abbr title="RepRapFirmware">RRF</abbr> tool table which is usually ID 49.</p>
 </div>
 <p>At the start of every gcode file, the used tools will be outputted.</p>
@@ -1481,7 +1481,7 @@
         15{Is touch probe feature enabled?}
         16(Probe reference surface)
         17(Probe tool length)
-        18(Warn operator tool change is complete)
+        18(Continue)
         13 --&gt; 14
         14 --&gt;|Yes| 15
         14 --&gt;|No| 17
@@ -1506,6 +1506,9 @@
 <h2 id="variable-spindle-speed-control">Variable Spindle Speed Control</h2>
 <p>This feature is enabled by default, and will adjust the spindle speed up and down within a small range to avoid resonance building up between the work-piece and tool. Disabling this is likely to have a negative impact on machining quality, but the settings can be tweaked through the post-processor properties and it can also be turned on and off and configured for each operation.</p>
 <p>When <abbr title="Variable Spindle Speed Control">VSSC</abbr> is active, you may be able to hear the spindle speeding up and slowing down on a regular interval. This is intended.</p>
+<p>When <abbr title="Variable Spindle Speed Control">VSSC</abbr> is enabled, it has a <code>Period</code> (<code>P...</code>) and a <code>Variance</code> (<code>V...</code>).</p>
+<p><abbr title="Variable Spindle Speed Control">VSSC</abbr> adjusts the spindle speed around the target RPM in a wave, where the peak of the wave is half the Variance above the target RPM and the trough of the wave is half the Variance below the target RPM.</p>
+<p>The Period is the length of one full wavelength, so a change in speed from the target RPM up to the peak RPM, down to the trough RPM and back to the target RPM will take <code>P...</code> milliseconds.</p>
 
 
 
