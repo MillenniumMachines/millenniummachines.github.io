@@ -24,5 +24,5 @@ Docs coming soon! For now, please use the PDF manual.
 
 - [Github Page](https://github.com/MillenniumMachines/Long-John-Toolsetter)
 - [Sourcing and Print Guide](./long-john/bom/sourcing_and_print_guide.md)
-- [Assembly Manual](./long-john/manual/assembly_manual.md)
-- [Electronics Manual](./long-john/manual/electronics_manual.md)
+- [Assembly Manual](./long-john/assembly_manual/assembly_manual.md)
+- [Electronics Manual](./long-john/assembly_manual/electronics_manual.md)
