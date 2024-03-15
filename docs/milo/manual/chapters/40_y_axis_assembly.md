@@ -331,13 +331,13 @@ Fasten one end-link of the drag chain to the Y-Axis Drag Chain Mount using M3x6m
 !!! note "Drag chain orientation"
     Drag chains have 2 different sides - a fixed side and a free side. For this setup, the free side is connected to the rear drag chain mount shown on the last image. The fixed side attaches itself under the XY Drag Chain Transition which is bolted to the back of the XY Gantry Plate.
 
-![fasten one end link of the dragchain to the Y-Axis Drag Chain Mount using 3 M3x6mm FHCS](../img/y_axis_assembly/y_axis_step_26_1.png){: .shadow}
+![fasten one end link of the drag chain to the Y-Axis Drag Chain Mount using 3 M3x6mm FHCS](../img/y_axis_assembly/y_axis_step_26_1.png){: .shadow}
 
 ---
 
 Fasten the other end link to the XY Drag Chain Transition using M3x6mm FHCS.
 
-![fasten the other end link of the dragchain to the XY-Axis Drag Chain Transition using 2 M3x6mm FHCS](../img/y_axis_assembly/y_axis_step_26_2.png){: .shadow}
+![fasten the other end link of the drag chain to the XY-Axis Drag Chain Transition using 2 M3x6mm FHCS](../img/y_axis_assembly/y_axis_step_26_2.png){: .shadow}
 
 !!! tip
     It's a good time to mention that the little cutouts that you may have noticed scattered around the build are for your zip ties. Use these to secure your cables where necessary.

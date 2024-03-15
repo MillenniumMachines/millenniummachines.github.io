@@ -127,7 +127,6 @@ Attached to the Z-Axis motor.
 
 ![40-tooth GT2 pulley wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/40_tooth.png){: .shadow}
 
-
 Used to drive the Z-Axis lead-screw from the 20-tooth pulley above.
 
 ---

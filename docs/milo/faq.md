@@ -4,7 +4,7 @@
 
 The standard (and recommended) work envelope is 340mm in X, 160mm in Y, and 60mm in Z.
 
-The X and Z axis dimensions are customisable but we don't recommend anything more than 450-500mm in X and 80mm in Z with printed parts, and 120mm in Z with the Full Metal Jacket.
+The X and Z axis dimensions are customizable but we don't recommend anything more than 450-500mm in X and 80mm in Z with printed parts, and 120mm in Z with the Full Metal Jacket.
 
 !!! warning
     If you want to extend your clearance in Z (the effective Z height), you will need to order longer C-Beam extrusions for the main column. This information is available in the [Sourcing Guide](./bom/sourcing_guide.md#frame).
@@ -92,7 +92,7 @@ If in any doubt, just follow the recommendations in the sourcing guide - build a
 
 ### What Spindle / VFD should I use?
 
-Most existing serialed builds are using round, 65 or 80mm, 1.5-2.2kW water-cooled spindles as outlined in the [BOM](./bom/sourcing_guide.md#electronics). These are the easiest spindles to source and fit.
+Most existing serialized builds are using round, 65 or 80mm, 1.5-2.2kW water-cooled spindles as outlined in the [BOM](./bom/sourcing_guide.md#electronics). These are the easiest spindles to source and fit.
 
 You should buy a VFD that matches the power requirement of your spindle. If you would like to control your spindle automatically via gcode, then you will need to find a VFD that has at least one digital input (enable signal) and one 0-10v analogue input (spindle RPM control).
 

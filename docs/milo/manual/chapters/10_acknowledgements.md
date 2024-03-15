@@ -1,10 +1,10 @@
 # Acknowledgements
 
-Whilst the work that has been put into this project by the Millennium Machines team is immense, we can't take all the credit for the project as a whole. We had a lot of help along the way, and would like to take a moment to recognise a few of the entities that helped us make all of this a reality.
+Whilst the work that has been put into this project by the Millennium Machines team is immense, we can't take all the credit for the project as a whole. We had a lot of help along the way, and would like to take a moment to recognize a few of the entities that helped us make all of this a reality.
 
 <img width="50" align="left" src="https://raw.githubusercontent.com/MillenniumMachines/millenniummachines.github.io/dev/docs/milo/manual/img/openbuilds.png">
 
-To the team at [OpenBuilds](https://openbuilds.com/): As many of you may know, we originally began this journey as a mod for the OpenBuilds MiniMill, and whilst we've moved beyond being simply a mod, it would be remiss of us to not recognise the work that went into that project.
+To the team at [OpenBuilds](https://openbuilds.com/): As many of you may know, we originally began this journey as a mod for the OpenBuilds MiniMill, and whilst we've moved beyond being simply a mod, it would be remiss of us to not recognize the work that went into that project.
 
 <img width="50" align="left" src="https://raw.githubusercontent.com/MillenniumMachines/millenniummachines.github.io/dev/docs/milo/manual/img/voron_logo.png">
 
