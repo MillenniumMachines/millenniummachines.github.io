@@ -1,0 +1,53 @@
+# Printing Guide
+
+## File Naming
+
+With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colors? Have no fear, we've got your back - each file is labelled.
+
+## Primary Color
+
+<!-- Add casa examples -->
+Example: `Handwheel Body x2.stl` 
+These files have no prefix in their filename so are safe to print in your primary color.
+
+## Accent Color
+
+Example: `[a] Table Bolt Down Bracket A x2.stl`
+These files are prefixed with `[a]` and are intended to be printed in your chosen accent color.
+
+## Quantity Required
+
+Example: `Handwheel Body x2.stl`
+If any file ends with `x#`, that is telling you the quantity of that part required to build the machine.
+
+## Part Versions
+
+Example: `Skirt Front A xxxxxx.stl`
+
+Note the descriptor at the end of the file name - while there are many types of Skirt Front "A" files, they all vary in their design and some are even mirrors of others so as to mount devices on either side.
+
+!!! tip
+    Some printed parts have multiple versions in order to cater for different machine setups - be aware that not all versions need to be printed to build your machine.
+
+    ![skirt variants picture](./skirt_variant.png){: .shadow}
+
+    Choose the parts you need based on your build requirements.
+
+## Drilling Out Holes
+
+To make some features printable without support, some features are printed with a sacrificial floor. These parts will need to be drilled and or cut out before use.
+
+!!! note "Layer Height and Line Width"
+    Some parts have sacrificial floors to allow unsupported features to be printed successfully. These floors are designed to work at a layer height of **0.2mm**, so they may not be sliced correctly if your layer height is not 0.2mm.
+
+    There are also some parts containing overhangs that will become more difficult to print with thicker layers due to the overhang angle.
+
+    **Unless you're willing to experiment and almost certainly waste filament, stick with 0.2mm layers.**
+
+    We provide a **Minimum Wall Thickness** for every printable part, which is the minimum **total** thickness of your perimeter lines and top and bottom solid layers. This depends on the size of your nozzle and line width settings in your slicer so must be calculated.
+
+    Given a 0.4mm nozzle, 100% perimeter line width, 0.2mm layers and a minimum wall thickness of 2.4mm, you would set your slicer to generate a _minimum_ of 6 perimeters and 12 top / bottom layers.
+
+## Parts organised by sub here
+
+## Accessories
