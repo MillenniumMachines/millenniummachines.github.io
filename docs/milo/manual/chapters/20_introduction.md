@@ -36,9 +36,9 @@ RRF is typically considered a 3D printing firmware, but in the last few years ha
 
 RRF boards tend to operate over WiFi or Ethernet and do not stream gcode over the air, but rather load it onto the board before starting a machining operation. Keep this in mind when finding a place to store Milo, as you will need some form of connection to the control board to allow working with the machine itself.
 
-RRF is extremely control board agnostic, so for the most part firmwares can be shared between different control boards with only a few pin definitions needing to be changed.
+RRF is extremely control board agnostic, so for the most part firmware can be shared between different control boards with only a few pin definitions needing to be changed.
 
-Pins in RRF act a little differently from firmwares like Klipper and Marlin, as almost all pins are given a pin number (ex PC_7)
+Pins in RRF act a little differently from Klipper and Marlin, as almost all pins are given a pin number (ex PC_7)
 and a pin name (ex Xmin). It is generally the pin name that will be referenced in the firmware and not the pin number, meaning that Xmin on one control board will also be Xmin on others. Keep this in mind if you want to use a different control board from the one found in this manual.
 
 It is still a good idea to cross reference these pins before changing any settings in firmware, and most control boards will come with a table similar to the one found [here](https://teamgloomy.github.io/fly_cdyv3_pins.html) - use this table in combination with a pinout diagram of your board to ensure everything will work as expected.
