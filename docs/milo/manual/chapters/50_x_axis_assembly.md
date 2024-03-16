@@ -125,6 +125,12 @@ Fasten the motor to the X-Axis Motor Mount using M5x20mm SHCS.
 
 ![fasten the motor to the X-Axis motor mount using M5x20mm SHCS](../img/x_axis_assembly/y_axis_step_36.png){: .shadow}
 
+!!! tip
+    Consider the cable exit orientation of the motor. We recommend having the cables exit downwards to help protect them.
+
+!!! tip
+    Now is a great time to adjust you anti-backlash nut as they are easily accessible before putting the X-axis bearing block on.
+
 ---
 
 Install a locking collar onto the lead-screw, leaving it loose.
