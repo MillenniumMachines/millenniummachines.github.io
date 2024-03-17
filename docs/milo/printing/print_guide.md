@@ -119,6 +119,9 @@ To make some features printable without support, some features are printed with 
 | [Front Skirt B                   ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Electronics%20Table/Skirt%20Front%20B%20Solid%20x1.stl)                                     | 40%  | 1.6mm | ABS/ASA | ? | :material-close: No | (there are many variants of the front skirt - pick one that suits your build best) |
 | [TPU Feet                       ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Electronics%20Table/TPU%20Feet%20x4.stl)                                                     | 60%  | 2mm   | TPU     | ? | :material-close: No | |
 
+!!! tip
+    The "TPU feet" and "Table Bolt Down Brackets" are not required if building a Casa enclosure for the mill. Instead use the parts from the Casa print guide.
+
 ## Accessories
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** |
 |----------|------------|-------------------------|--------------|--------:|----------------------|
