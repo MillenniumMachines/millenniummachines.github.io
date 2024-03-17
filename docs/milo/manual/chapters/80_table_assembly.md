@@ -55,6 +55,13 @@ Make sure they sit flush with the front and back of the skirts.
 ![](../img/table_assembly/y_axis_step_90.png){: .shadow}
 
 ---
+
+## Table Feet
+
+!!!! tip
+    These feet are not required if building a Casa enclosure for you Milo. Instead follow the directions within the Casa instructions.
+
+
 Install an M5 Heat-set insert into each table bolt-down bracket.
 
 ![](../img/table_assembly/y_axis_step_90.1.png){: .shadow}
