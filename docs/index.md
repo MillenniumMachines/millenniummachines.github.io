@@ -12,7 +12,7 @@
 - [Frequently Asked Questions](./milo/faq.md)
 - [Assembly Manual](./milo/manual/index.md)
 
-#### [Casa Enclosure](./casa/index.md) - Enclosure for Milo
+#### [Casa](./casa/index.md) - Enclosure for Milo
 
 - [Github Page](https://github.com/MillenniumMachines/Casa-enclosure)
 - [Sourcing Guide](./casa/bom/sourcing_guide.md)
