@@ -307,7 +307,7 @@ Remember to apply medium-strength threadlock to the grub-screws!
 
 !!! info "Components Required"
     ```
-    4 x M5x20mm BHCS
+    4 x M5x20mm SHCS
     4 x M5 Nyloc Nut
     4 x M5 Washer
     1 x NEMA23 Motor
@@ -325,7 +325,7 @@ When installing the Z motor, attach your belt loosely around your lead-screw pul
 
 ---
 
-Attach the motor using M5x20mm BHCS with M5 washers and Nyloc nuts on the upper surface of the Z motor mounting plate.
+Attach the motor using M5x20mm SHCS with M5 washers and Nyloc nuts on the upper surface of the Z motor mounting plate.
 
 ![](../img/z_axis_assembly/y_axis_step_71.png){: .shadow}
 
