@@ -14,7 +14,11 @@
 
 #### Casa Enclosure - Enclosure for Milo
 
-Docs coming soon! For now, please use the PDF manual.
+- [Github Page](https://github.com/MillenniumMachines/Casa-enclosure)
+- [Sourcing Guide](./casa/bom/sourcing_guide.md)
+- [Printing Guide](./casa/bom/printing_guide.md)
+- [Frequently Asked Questions](./casa/faq.md)
+- [Assembly Manual](./casa/manual/index.md)
 
 #### Fixated - Fixture plate for Milo
 
