@@ -23,7 +23,7 @@ nav:
         - Assemble Electronics: milo/manual/chapters/100_assemble_electronics.md
         - Pre-Flight Checks: milo/manual/chapters/110_pre_flight_checks.md
 
-  - "Casa":
+  - "Casa - Desktop CNC Enclosure":
     - Sourcing Guide: casa/bom/sourcing_guide.md
     - Printing Guide: casa/bom/printing_guide.md
     - Frequently Asked Questions: casa/faq.md
