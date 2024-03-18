@@ -1,5 +1,25 @@
 # Printing Guide
 
+## Print Profiles
+
+Casa uses 3 different print profiles. Each profile is designed around a 0.4 mm nozzle and 0.2 mm layer height.
+
+!!! note "Layer Height and Line Width"
+    
+    **Unless you're willing to experiment and almost certainly waste filament, stick with 0.2mm layers.**
+
+    Some parts contain overhangs that will become more difficult to print with thicker layers due to the overhang angle.
+
+    We provide a **Minimum Wall Thickness** for every printable par based on a 0.4 mm nozzle. If you are planning ot use a different size of nozzle you must recalculate the required wall counts.
+
+| Profile Name       | Structural   | Semi Structural   | Aesthetic    |
+|:-------------------|:-------------|:------------------|:-------------|
+| Profile Code       | S            | SS                | A            |
+| Infill Density [%] | 45           | 25                | 20           |
+| Wall count         | 6            | 4                 | 3            |
+| Top/bottom layers  | 6            | 5                 | 5            |
+| Nozzle size [mm]   | 0.4          | 0.4               | 0.4          |
+
 ## File Naming
 
 With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colors? Have no fear, we've got your back - each file is labelled.
