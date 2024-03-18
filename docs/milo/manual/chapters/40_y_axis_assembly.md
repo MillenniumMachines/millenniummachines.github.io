@@ -331,7 +331,7 @@ Fasten one end-link of the drag chain to the Y-Axis Drag Chain Mount using M3x6m
 !!! note "Drag chain orientation"
     Drag chains have 2 different sides - a fixed side and a free side. For this setup, the free side is connected to the rear drag chain mount shown on the last image. The fixed side attaches itself under the XY Drag Chain Transition which is bolted to the back of the XY Gantry Plate.
 
-![fasten one end link of the dragc hain to the Y-Axis Drag Chain Mount using 3 M3x6mm FHCS](../img/y_axis_assembly/y_axis_step_26_1.png){: .shadow}
+![fasten one end link of the drag chain to the Y-Axis Drag Chain Mount using 3 M3x6mm FHCS](../img/y_axis_assembly/y_axis_step_26_1.png){: .shadow}
 
 ---
 
