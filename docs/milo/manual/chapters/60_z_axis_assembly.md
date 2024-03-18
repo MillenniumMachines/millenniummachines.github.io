@@ -307,7 +307,7 @@ Remember to apply medium-strength threadlock to the grub-screws!
 
 !!! info "Components Required"
     ```
-    4 x M5x20mm BHCS
+    4 x M5x20mm SHCS
     4 x M5 Nyloc Nut
     4 x M5 Washer
     1 x NEMA23 Motor
@@ -325,7 +325,7 @@ When installing the Z motor, attach your belt loosely around your lead-screw pul
 
 ---
 
-Attach the motor using M5x20mm BHCS with M5 washers and Nyloc nuts on the upper surface of the Z motor mounting plate.
+Attach the motor using M5x20mm SHCS with M5 washers and Nyloc nuts on the upper surface of the Z motor mounting plate.
 
 ![](../img/z_axis_assembly/y_axis_step_71.png){: .shadow}
 
@@ -392,7 +392,7 @@ Install the Z Drag-Chain mount and Cable Redirect Hook using M5x12mm BHCS.
 
 !!! info annotate "Components Required"
     ```
-    18 x M5x12mm BHCS
+    18 x M5x10mm BHCS
      1 x Assembled Y-Axis
      1 x Assembled Z Axis
      1 x Joining Plate A        (1)
@@ -401,7 +401,7 @@ Install the Z Drag-Chain mount and Cable Redirect Hook using M5x12mm BHCS.
 1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#main-column)!
 2. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#main-column)!
 
-Attach the assembled Y- and Z-Axes to each other using M5x12mm BHCS through the joining plates.
+Attach the assembled Y- and Z-Axes to each other using M5x10mm BHCS through the joining plates.
 
 ![](../img/z_axis_assembly/y_axis_step_76.png){: .shadow}
 
