@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../img/millennium-machines-icon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.10ba22f1.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -736,6 +736,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#print-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Print Profiles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#file-naming" class="md-nav__link">
     <span class="md-ellipsis">
       File Naming
@@ -1079,6 +1088,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#print-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Print Profiles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#file-naming" class="md-nav__link">
     <span class="md-ellipsis">
       File Naming
@@ -1213,6 +1231,56 @@
 
 
 <h1 id="printing-guide">Printing Guide</h1>
+<h2 id="print-profiles">Print Profiles</h2>
+<p>Casa uses 3 different print profiles. Each profile is designed around a 0.4 mm nozzle and 0.2 mm layer height.</p>
+<div class="admonition note">
+<p class="admonition-title">Layer Height and Line Width</p>
+<p><strong>Unless you're willing to experiment and almost certainly waste filament, stick with 0.2mm layers.</strong></p>
+<p>Some parts contain overhangs that will become more difficult to print with thicker layers due to the overhang angle.</p>
+<p>We provide a <strong>Minimum Wall Thickness</strong> for every printable par based on a 0.4 mm nozzle. If you are planning ot use a different size of nozzle you must recalculate the required wall counts.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Profile Name</th>
+<th style="text-align: left;">Structural</th>
+<th style="text-align: left;">Semi Structural</th>
+<th style="text-align: left;">Aesthetic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Profile Code</td>
+<td style="text-align: left;">S</td>
+<td style="text-align: left;">SS</td>
+<td style="text-align: left;">A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Infill Density [%]</td>
+<td style="text-align: left;">45</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">20</td>
+</tr>
+<tr>
+<td style="text-align: left;">Wall count</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">3</td>
+</tr>
+<tr>
+<td style="text-align: left;">Top/bottom layers</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nozzle size [mm]</td>
+<td style="text-align: left;">0.4</td>
+<td style="text-align: left;">0.4</td>
+<td style="text-align: left;">0.4</td>
+</tr>
+</tbody>
+</table>
 <h2 id="file-naming">File Naming</h2>
 <p>With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colors? Have no fear, we've got your back - each file is labelled.</p>
 <h3 id="primary-color">Primary Color</h3>
@@ -1637,7 +1705,7 @@ If any file ends with <code>x#</code>, that is telling you the quantity of that 
     <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.action.edit", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
     
   </body>
