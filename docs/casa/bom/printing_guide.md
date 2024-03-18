@@ -24,7 +24,7 @@ Casa uses 3 different print profiles. Each profile is designed around a 0.4 mm n
 
 With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colors? Have no fear, we've got your back - each file is labelled.
 
-### Primary Color
+### Color
 
 All Casa parts are designed to be printed in a single primary colour. Don't let this stop you from mixing and matching colours to make you own colour scheme though!
 
@@ -106,6 +106,3 @@ If any file ends with `x#`, that is telling you the quantity of that part requir
 |:----------------------------|:---------------|-----------:|:-------------|
 | UHP/LMF-350-DIN-Mount-Right | SS             |          1 | ABS/ASA/PETG |
 | UHP/LMF-350-DIN-Mount-Left  | SS             |          1 | ABS/ASA/PETG |
-
-
-## Accessories
