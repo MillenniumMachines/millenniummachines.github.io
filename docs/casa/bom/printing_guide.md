@@ -6,11 +6,9 @@ Casa uses 3 different print profiles. Each profile is designed around a 0.4 mm n
 
 !!! note "Layer Height and Line Width"
     
-    **Unless you're willing to experiment and almost certainly waste filament, stick with 0.2mm layers.**
+    **Unless you're willing to experiment and almost certainly waste filament, stick with 0.2mm layers.** Some parts contain overhangs that will become more difficult to print with thicker layers due to the overhang angle.
 
-    Some parts contain overhangs that will become more difficult to print with thicker layers due to the overhang angle.
-
-    We provide a **Minimum Wall Thickness** for every printable par based on a 0.4 mm nozzle. If you are planning ot use a different size of nozzle you must recalculate the required wall counts.
+    We provide a **Minimum Wall Thickness** for every printable par based on a 0.4 mm nozzle. If you are planning to use a different size of nozzle you must recalculate the required wall counts.
 
 | Profile Name       | Structural   | Semi Structural   | Aesthetic    |
 |:-------------------|:-------------|:------------------|:-------------|
