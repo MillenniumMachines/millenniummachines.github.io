@@ -1,4 +1,5 @@
 # [View the Docs by Clicking here!](https://millenniummachines.github.io/docs)
+
 [![Generate GitHub Pages](https://github.com/MillenniumMachines/millenniummachines.github.io/actions/workflows/generate-github-pages.yml/badge.svg?branch=main)](https://github.com/MillenniumMachines/millenniummachines.github.io/actions/workflows/generate-github-pages.yml)
 
 # Millennium Machines Documentation

@@ -29,5 +29,5 @@ Docs coming soon! For now, please use the PDF manual.
 ### [MillenniumOS - An "Operations System" for CNC Machines](./millennium-os/index.md)
 
 - [Github Page](https://github.com/MillenniumMachines/MillenniumOS)
-- [Installation](./manual/installation.md)
-- [Usage](./manual/usage.md)
+- [Installation](./millennium-os/manual/installation.md)
+- [Usage](./millennium-os/manual/usage.md)
