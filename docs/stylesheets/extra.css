@@ -12,6 +12,14 @@
     /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2) inset, 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset;*/
 }
 
+.mermaid { display: flex !important; justify-content: center }
+
+.shadow-dark {
+    height: auto;
+    width: auto;
+    box-shadow: 0 0 5px 5px #1e1e1e;
+}
+
 .md-typeset__table {
    min-width: 100%;
 }
