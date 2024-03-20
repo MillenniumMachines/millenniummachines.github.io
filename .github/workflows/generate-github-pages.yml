@@ -26,8 +26,6 @@ jobs:
     steps:
       - name: Check-out Repo
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -93,6 +91,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.repository }}
+      cancel-in-progress: false
     environment:
       name: ${{ github.ref != 'refs/heads/main' && github.ref_name || 'production' }}
       url: ${{ needs.build.outputs.site_url }}
