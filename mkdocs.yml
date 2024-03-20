@@ -27,6 +27,10 @@ nav:
     - Sourcing and Print Guild: long-john/bom/sourcing_and_print_guide.md
     - Assembly Manual: long-john/manual/assembly_manual.md
     - Electronics Manual: long-john/manual/manual.md
+  - MillenniumOS:
+    - Installation: millennium-os/manual/installation.md
+    - Usage: millennium-os/manual/usage.md
+  - "Contact Us": contact-us.md
 
 extra:
   SITE_INTRO: !ENV
@@ -68,7 +72,11 @@ markdown_extensions:
   - md_in_html
   - admonition
   - footnotes
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.details
   - pymdownx.snippets
   - pymdownx.emoji:

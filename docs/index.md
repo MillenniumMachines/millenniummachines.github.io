@@ -25,3 +25,9 @@ Docs coming soon! For now, please use the PDF manual.
 - [Github Page](https://github.com/MillenniumMachines/Long-John-Toolsetter)
 - [Sourcing and Print Guide](./long-john/bom/sourcing_and_print_guide.md)
 - [Assembly Manual](./long-john/assembly_manual/assembly_manual.md)
+
+### [MillenniumOS - An "Operations System" for CNC Machines](./millennium-os/index.md)
+
+- [Github Page](https://github.com/MillenniumMachines/MillenniumOS)
+- [Installation](./manual/installation.md)
+- [Usage](./manual/usage.md)

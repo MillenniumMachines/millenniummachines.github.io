@@ -4,15 +4,16 @@
     For those of you who are less software inclined, don't panic! We've done most of the work for you.
 
     RRF requires you to populate an SD card with a specific file structure and files to go with it. To
-    make this easier for you, we have gone ahead and populated the majority of these files already - all
-    you need to do is follow the very simple steps below to get your firmware installed on your board.
-
+    make this easier for you, we have gone ahead and built RRF configuration releases for common hardware specifications that include mainboard and WiFi card firmware, as well as a known-good configuration for your machine.
     If you don't wish to install the pre-made firmware and would rather create your own from scratch, then
     please follow [this tutorial](https://www.youtube.com/watch?v=TAT532vIVzU&t=335s).
 
-
 *[RRF]: RepRapFirmware
 
+!!! note "Public Beta"
+    The RRF configurations for the reference design and LDO kit are released as a public beta. As outlined in the repository, we take no responsibility or liability for any loss or damage caused to you or others by your use of this software, which is provided as-is.
+
+    That said, this software has been used internally and tested by a small group of external users and has proven to be, in our testing at least, reliable and properly configured.
 
 ## Prepare your SD Card
 
@@ -24,114 +25,105 @@ The SD card should also be class 4 or higher.
 
 ---
 
-## Copy and Paste
+## Download a Configuration Release
 
-In the Milo v1.5 repository you will find a [Firmware Config](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/Firmware%20and%20Post%20Processors/Example%20Firmware%20configs/Firmware%20V1.0) folder containing multiple other folders named with a number to denote the order of events and a descriptor to tell you what needs to be done with these files.
+First, you'll need to download a zip release for the hardware configuration of your choice from the [RRF-Configs](https://github.com/MillenniumMachines/RRF-Configs/releases) repository. These releases bundle the latest version of RepRapFirmware for your mainboard, the latest WiFi firmware, a known-good configuration and (optionally, available soon) [MillenniumOS](https://github.com/MillenniumMachines/MillenniumOS).
 
-Starting with the file marked with `1.File structure`, copy and paste its contents onto your SD card (copy only the folder contents and not the folder itself).
+MillenniumOS is an "operations system" for RRF that includes a Fusion 360 post-processor and custom g-code dialect to enable easy work-piece probing, tool changes, tool setting and various other quality-of-life / safety features. If you are new to machining, starting with MillenniumOS should help you focus on creating your tool paths and making your first cuts, without focusing too much on the intricacies of edge finding, tool offset calculations and other things.
 
----
+The release zip files are named based on the machine hardware specification the configuration was designed for, so if you have a kit with a particular mainboard, click to download the zip file which is named based on the kit manufacturer and mainboard that you have.
 
-## Create `/sys` Files
+If you have a kit that does _not_ conform to any known specification, please open an issue.
 
-At this point we will have to use this [online tool](https://teamgloomy.github.io/Configurator) to configure your `/sys` folder files.
+The releases with `mos` in the zip file name contain the latest compatible release of MillenniumOS.
 
-For the most part, the settings you choose won't affect anything as we'll be making changes later on down the line.
+![View of GitHub Releases page for RRF Config](../img/install_rrf/install_rrf_step_0.png){: .shadow-dark}
 
-There are however, 2 crucial settings that need to be selected - the board (General tab) and motor drivers (Motors tab).
+## Extract Configuration Release
 
-For a standard build, select the `Fly-CDYv3` option under the Board dropdown menu on the General tab.
+Once you have the RRF configuration release downloaded, you need to extract it to the root of your formatted SD card.
 
-For each of the X, Y and Z drivers on the standard build, select the `TMC2209` option under the Driver dropdown menu for each axis in the Motors tab.
+Make sure the tool you use to extract the files does not create a subdirectory based on the name of the Zip file. The layout of your SD card should look like the following image:
 
-![](../img/install_rrf/install_rrf_step_0.png){: .shadow}
-
----
-
-Leave all other settings untouched and skip straight to the FINISH tab at the end of the configurator. Once you click finish a box will pop up with all your generated config files.
-
-To continue, click "Download configuration bundle as ZIP file".
-
-![](../img/install_rrf/install_rrf_step_1.png){: .shadow}
+![View of SD Card Layout after extracting RRF Config](../img/install_rrf/install_rrf_step_1.png){: .shadow-dark}
 
 ---
 
-Once this file is finished downloading, unzip its contents and copy the "sys" folder inside straight onto your SD card.
+## Board specific setup
+
+Some boards require jumpers to be set to allow mainboard or WiFi updates to be applied. You should check if this applies to you by reading your mainboard documentation.
+
+For example - if you are using the Mellow FLY CDYv3, then you need to add 2 jumpers as shown below to enable on-board WiFi updates.
+
+![View of Fly CDYv3 jumpers required for WiFi flashing](../img/install_rrf/install_rrf_step_2.png){: .shadow-dark}
 
 ---
 
-## Check Your Work
+## Initial Setup
 
-Prior to starting your board for the first time, double check to make sure your SD card looks like the example seen here.
+At this point, eject the SD card from your computer and insert it into your mainboard.
 
-![](../img/install_rrf/install_rrf_step_2.png){: .shadow}
+Power your board either via USB or via PSU and wait. The board will install a new version of RRF, automatically update the WiFi module and then start a WiFi Access Point called `Milo`. The password for this is `millenniummachines`.
 
----
+!!! note "Please be patient"
+    Installing RRF, updating the WiFi module and starting a WiFi AP can take some time. After powering the board on for the first time with the SD card installed, you should leave the board for 5-10 minutes to work. If the `Milo` access point appears then this is a safe indication that the initial update and configuration process is complete, and you are ready to use the machine.
 
-## Initial Flash
-
-At this point, eject your SD card from your computer and mount it into your controller board.
-
-Power your board either via USB or via your PSU and let the board work for a couple of minutes.
-
-Turn the power off and put your SD card back into your computer. You will know this step worked if the `firmware.bin` file has changed into a `FLY.CUR` file as pictured below. Once confirmed, return your SD card to the board.
-
-![](../img/install_rrf/install_rrf_step_3.png){: .shadow}
+    If the WiFi AP does _not_ appear after 10 minutes, take the SD card back out of the board, plug it back into your computer and check if the `firmware.bin` file in the root of the SD card has been renamed to `FLY.CUR`. If it has _not_, then this indicates the board was not updated properly. Please use our discord or other channels for support.
 
 ---
 
-## Flash your WiFi Chip
+## Accessing Duet Web Control
 
-If you are using the Mellow FLY CDY V3, then add 2 jumpers as shown below.
+Once the `Milo` WiFi Access Point is visible, you can connect to it with the following details:
 
-You may need to take similar or different steps depending on your board. You will need to refer to the documentation for your particular board to identify the steps required.
+```
+SSID:     Milo
+Password: millenniummachines
+```
 
-![](../img/install_rrf/install_rrf_step_4.png)
+Once connected, open a browser and go to [http://192.168.40.1](http://192.168.40.1) - note this is `http` and _not_ `https`.
 
----
+!!! warning
+    Some browsers may try to force you to connect to `https://` by default - you may need to specify the full URL, `http://192.168.40.1` to override this behaviour.
 
-Once the jumpers are in place, power up the board using 12-24v and connect to the USB port on the board.
+Once connected to Duet Web Control, you should see a screen similar to this. This is the interface that you will use to control your new CNC Mill!
 
-Connect to the board using a program such as `PuTTY`. Change the com port to match the `Fly-CDYv3` - baudrate doesn't matter.
-
-Once connected type `M552 S0` (put WiFi chip into idle mode) into the terminal followed by `M997 S1` (flash WiFi chip) and wait for the wifi firmware to finish uploading.
-
-You can use `M122` to check the status of the WiFi device, which is visible at the bottom of the command output.
-
-!!!note
-    If you’re struggling to get a readable output from `PUTTY`, follow this [link](https://teamgloomy.github.io/putty.html) to set it up to work with RRF.
+![View of RRFs Duet Web Control interface](../img/install_rrf/install_rrf_step_3.png){: .shadow-dark}
 
 ---
 
-## Set Up your WiFi
+## Configure your WiFi network
 
-Whilst still in `PuTTY`, type `M552 S0` again,followed by `M587 S"your SSID" P"your password"`. Once this reports the details have been saved, finish off by typing `M552 S1` which will activate the WiFi.
+If you want to connect your Milo to an existing WiFi network rather than using the inbuilt Access Point, you can use the Web Interface to change the machine configuration.
 
-Do not close `PuTTY` at this point. After some time it should return an IP address for example `192.168.x.xx``. Note this IP address down and then exit `PuTTY`.
+The first step is to tell RRF about your wireless network. Click on the "Console" tab on the left hand side, and type the following into the `Send code...` box, then press ENTER:
 
----
+```gcode
+M587 S"your WiFi SSID" P"your WiFi password"
+```
 
-## Upload Configuration Files
-With your board still powered on, copy the IP address you noted in the last step into your web browser.
+You should see a _green_ highlighted line indicating that the command was successful:
 
-Once it loads you should now be face to face with the Duet Web Controller (DWC) interface.
-
-In the left-hand menu navigate to the tab marked "System".
-
-![](../img/install_rrf/install_rrf_step_5.png){: .shadow}
+![View of DWC Console window indicating successful WiFi network configuration](../img/install_rrf/install_rrf_step_4.png){: .shadow-dark}
 
 ---
 
-Once in the system tab click on “UPLOAD SYSTEM FILES” and upload all of the files found in ["2.Example Config"](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/Firmware%20and%20Post%20Processors/Example%20Firmware%20configs/Firmware%20V1.0/2.%20Example%20config%20(upload%20contents%20to%20DWC)) to DWC.
+You now need to tell RRF to connect as a WiFi client rather than starting its own Access Point. To do this, browse to the "Files -> System" tab, and click on `network.g` to edit the file.
 
-![](../img/install_rrf/install_rrf_step_6.png){: .shadow}
+Edit the line that says `M552 S2` so that it says `M552 S1` instead. Click Save in the top right hand corner, and then run `M999` via the console, or power cycle the mainboard to trigger a restart.
+
+Once the board has restarted, it should attempt to connect to your WiFi network.
+
+You may have to use your router interface to identify the address that the Milo has been given on your network - this is outside of the scope of this guide.
+
+You can also [connect to the mainboard over USB](https://teamgloomy.github.io/putty.html) using Putty or another terminal emulator depending on your operating system - watching the output of the terminal when the machine connects to the WiFi network will show the IP address that has been assigned.
 
 ---
 
 At this point, the basic firmware setup is complete and all that remains are some firmware checks which will be covered later on in the manual.
 
 !!! warning
-    The firmware configuration available above is setup specifically for the `Fly-CDYv3`. You will need to modify this configuration if using a different mainboard. You may have to change endstop and spindle pin definitions at the very least.
+    We only provide bundled firmware configurations for specific machine setups. If your machine is self-built, you will have to modify one of these configurations to match the mainboard, wiring and setup of your machine. Alternatively, you can use the [TeamGloomy Configurator](https://teamgloomy.github.io/Configurator) - but remember that this is aimed at 3D printer configurations so will need a number of changes to work effectively on Milo.
 
 It is now safe to perform the physical install of your board into your mainboard mount.
 
