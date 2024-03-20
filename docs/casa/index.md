@@ -5,4 +5,4 @@ Mi casa es su casa
 - [Sourcing Guide](./bom/sourcing_guide.md)
 - [Printing Guide](./bom/printing_guide.md)
 - [Frequently Asked Questions](./faq.md)
-- [Assembly Manual](./manual/index.md)
+<!-- - [Assembly Manual](./manual/index.md) -->

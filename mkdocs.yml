@@ -27,8 +27,8 @@ nav:
     - Sourcing Guide: casa/bom/sourcing_guide.md
     - Printing Guide: casa/bom/printing_guide.md
     - Frequently Asked Questions: casa/faq.md
-    - Assembly Manual:
-      - Introduction: casa/manual/chapters/10_introduction.md
+    # - Assembly Manual:
+    #   - Introduction: casa/manual/chapters/10_introduction.md
 
   - "Long John Toolsetter":
     - Sourcing and Print Guild: long-john/bom/sourcing_and_print_guide.md

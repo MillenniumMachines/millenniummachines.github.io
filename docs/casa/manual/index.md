@@ -1,5 +1,7 @@
 # Casa Assembly Manual
 
-Chapters:
+Manual Coming soon!
 
-- [Introduction](./chapters/10_introduction.md)
+<!-- Chapters:
+
+- [Introduction](./chapters/10_introduction.md) -->
