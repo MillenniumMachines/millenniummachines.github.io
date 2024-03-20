@@ -60,7 +60,7 @@ To make some features printable without support, some features are printed with 
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** |
 |----------|------------|-------------------------|--------------|--------:|----------------------|
 | [Y-Axis Motor Mount             ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Y%20Axis%20STLs/Y%20Axis%20Motor%20Mount%20x1.stl)                           | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
-| [Y-Axis Bearing Block           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Y%20Axis%20STLs/Y%20Axis%20Bearing%20Block%20x1.stl)                         | 40%  | 1.6mm | ABS/ASA | 1 | :material-check: Yes |
+| [Y-Axis Bearing Block           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Y%20Axis%20STLs/Y%20Axis%20Bearing%20Block%20x1.stl)                         | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
 | [Y-Axis Anti Backlash Nut       ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Y%20Axis%20STLs/Y%20Axis%20Anti%20Backlash%20Nut%20x1.stl)                   | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
 
 ## Z-Axis Assembly
