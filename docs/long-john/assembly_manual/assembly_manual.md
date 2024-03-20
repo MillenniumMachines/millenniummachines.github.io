@@ -1,4 +1,4 @@
-# Long John Manual
+# Long John Assembly Manual
 
 ## Mechanical Assembly
 
