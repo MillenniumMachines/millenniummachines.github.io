@@ -1384,13 +1384,13 @@
 <p>With this mode selected, the post-processor will identify all work offsets used in the Setup, and trigger a probing cycle for each of them at the start of the gcode.</p>
 <p>This is useful where you want to make multiple identical parts - you can select the <strong>"Multiple <abbr title="Work Co-ordinate System">WCS</abbr> Offsets"</strong> tick-box on the <strong>"Setup"</strong>, and indicate how many parts to process - Fusion360 will repeat the operations in each <abbr title="Work Co-ordinate System">WCS</abbr> that is probed at the start of the file.</p>
 <h3 id="low-memory-mode">Low-memory Mode</h3>
-<p>MillenniumOS running on <abbr title="RepRapFirmware">RRF</abbr> is quite memory intensive - the chips that <abbr title="RepRapFirmware">RRF</abbr> is designed to run with are relatively low powered, and have a small amount of onboard memory that is used for variable storage. With some chips (in particular the STM32F407), we are right at the limits of what is possible based on the complexity of MillenniumOS.</p>
+<p>MillenniumOS running on <abbr title="RepRapFirmware">RRF</abbr> is quite memory intensive - the mainboards that <abbr title="RepRapFirmware">RRF</abbr> is designed to run with are relatively low powered, and have a small amount of onboard memory that is used for variable storage.</p>
+<p>With some chips (in particular the STM32F407, used on the Fly CDYv3 which comes with the LDO kit), we are right at the limits of what is possible based on the complexity of MillenniumOS.</p>
 <p>If you are running a job file and the mainboard reboots unexpectedly, you should run <code>M122</code> and check under the <code>=== Platform ===</code> header - if the <code>Last software reset</code> reason is <code>OutOfMemory</code>, then this indicates that your mainboard chip did not have enough free memory to make an allocation for something during the processing of the file. This is usually an arc move, where an allocation is made to calculate the movements for the arc.</p>
 <p>If you see these errors often, then you can enable <code>Low Memory Mode</code> in the post-processor, if available, and this will help to reduce memory usage during file processing by turning any arc moves into linear moves so that <abbr title="RepRapFirmware">RRF</abbr> does not have to process these internally.</p>
 <div class="highlight"><pre><span></span><code>Last reset 00:02:25 ago, cause: software
-Last software reset at 2024-03-22 16:55, reason: User, Gcodes spinning, available RAM 13468, slot 0
-Software reset code 0x0003 HFSR 0x00000000 CFSR 0x00000000 ICSR 0x00400000 BFAR 0xe000ed38 SP 0x00000000 Task MAIN Freestk 0 n/a
-Error status: 0x00
+Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, available RAM 13468, slot 0
+...
 </code></pre></div>
 <h2 id="probing">Probing</h2>
 <p>Unless you have a paid Fusion360 license, there is no way to tell (or for Fusion360 to <em>know</em>) how to probe a work-piece. Different probing operations should be used based on the shape and rotation of the stock, and the operation in question. For this reason, you will be <em>prompted in <abbr title="RepRapFirmware">RRF</abbr></em> to select a probe cycle type when a probe cycle is requested.</p>
