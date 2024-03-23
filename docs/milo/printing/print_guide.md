@@ -60,7 +60,7 @@ To make some features printable without support, some features are printed with 
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** |
 |----------|------------|-------------------------|--------------|--------:|----------------------|
 | [Y-Axis Motor Mount             ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Y%20Axis%20STLs/Y%20Axis%20Motor%20Mount%20x1.stl)                           | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
-| [Y-Axis Bearing Block           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Y%20Axis%20STLs/Y%20Axis%20Bearing%20Block%20x1.stl)                         | 40%  | 1.6mm | ABS/ASA | 1 | :material-check: Yes |
+| [Y-Axis Bearing Block           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Y%20Axis%20STLs/Y%20Axis%20Bearing%20Block%20x1.stl)                         | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
 | [Y-Axis Anti Backlash Nut       ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Y%20Axis%20STLs/Y%20Axis%20Anti%20Backlash%20Nut%20x1.stl)                   | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
 
 ## Z-Axis Assembly
@@ -120,7 +120,7 @@ To make some features printable without support, some features are printed with 
 | [TPU Feet                       ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Electronics%20Table/TPU%20Feet%20x4.stl)                                                     | 60%  | 2mm   | TPU     | ? | :material-close: No | |
 
 !!! tip
-    The "TPU feet" and "Table Bolt Down Brackets" are not required if building a Casa enclosure for the mill. Instead use the parts from the Casa print guide.
+    The "TPU feet" are not required if building a Casa enclosure for the mill. Instead use the parts from the Casa print guide.
 
 ## Accessories
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** |
