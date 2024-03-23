@@ -73,6 +73,8 @@ When prompted to provide information or perform an action, please read the infor
 
 If you cancel the wizard, or receive an error, you can re-run the wizard using `G8000`. Once the wizard is complete your machine will reboot to reload the new settings, at which point MillenniumOS is ready for use.
 
+You may re-run the wizard at any time to reconfigure one or more features. If you click the 'Update' button when asked if you want to reset the configuration, then you can pick which sections of the configuration you would like to reconfigure, and all other sections of the existing configuration will be left as-is.
+
 !!! note
     MillenniumOS now supports resuming the wizard if it was not completed. Settings are saved to an intermediate file which is loaded when the wizard is started, and you will be prompted to continue where you left off, or restart.
 
