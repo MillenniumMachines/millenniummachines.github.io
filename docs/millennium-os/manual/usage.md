@@ -101,7 +101,9 @@ This is useful where you want to make multiple identical parts - you can select 
 
 ### Low-memory Mode
 
-MillenniumOS running on RRF is quite memory intensive - the chips that RRF is designed to run with are relatively low powered, and have a small amount of onboard memory that is used for variable storage. With some chips (in particular the STM32F407), we are right at the limits of what is possible based on the complexity of MillenniumOS.
+MillenniumOS running on RRF is quite memory intensive - the mainboards that RRF is designed to run with are relatively low powered, and have a small amount of onboard memory that is used for variable storage.
+
+With some chips (in particular the STM32F407, used on the Fly CDYv3 which comes with the LDO kit), we are right at the limits of what is possible based on the complexity of MillenniumOS.
 
 If you are running a job file and the mainboard reboots unexpectedly, you should run `M122` and check under the `=== Platform ===` header - if the `Last software reset` reason is `OutOfMemory`, then this indicates that your mainboard chip did not have enough free memory to make an allocation for something during the processing of the file. This is usually an arc move, where an allocation is made to calculate the movements for the arc.
 
@@ -109,9 +111,8 @@ If you see these errors often, then you can enable `Low Memory Mode` in the post
 
 ```
 Last reset 00:02:25 ago, cause: software
-Last software reset at 2024-03-22 16:55, reason: User, Gcodes spinning, available RAM 13468, slot 0
-Software reset code 0x0003 HFSR 0x00000000 CFSR 0x00000000 ICSR 0x00400000 BFAR 0xe000ed38 SP 0x00000000 Task MAIN Freestk 0 n/a
-Error status: 0x00
+Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, available RAM 13468, slot 0
+...
 ```
 
 ## Probing
