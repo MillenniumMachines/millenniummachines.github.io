@@ -1,8 +1,8 @@
 ---
-name: 'Bug Report: Milo Docs'
-about: Create a report to help us improve the Milo documentation
+name: 'Bug report: Casa Docs'
+about: Create a report to help us improve the Casa documentation
 title: ''
-labels: Milo
+labels: Casa
 assignees: ''
 
 ---
