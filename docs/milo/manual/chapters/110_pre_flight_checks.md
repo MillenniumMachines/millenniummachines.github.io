@@ -56,6 +56,9 @@ If you are using a fixture of some kind, tram your spindle with reference to tha
 
 First, ensure your VFD is set up correctly according to its manual.
 
+!!! tip
+    If you want to test your spindle make sure you have removed the collet and collet nut or fitted a suitable tool / dowel pin and torqued the nut. 
+
 Then make sure to set your max spindle speed in `config.g`. Under the spindle section of your config find
 the line beginning with `M950` and change the value found after `L` to your maximum spindle speed e.g. `L24000`.
 
