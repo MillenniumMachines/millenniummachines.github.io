@@ -127,9 +127,11 @@ You may have to use your router interface to identify the address that the Milo 
 You can also [connect to the mainboard over USB](https://teamgloomy.github.io/putty.html) using Putty or another terminal emulator depending on your operating system - watching the output of the terminal when the machine connects to the WiFi network will show the IP address that has been assigned.
 
 !!! warning
-    When installing a new release of the RRF configuration as an _upgrade_, your `network.g` file will not be overwritten. _However_ - the WiFi module will be updated, which wipes all network details from the module itself.
+    When installing a new release of the RRF configuration as an _upgrade_, your `network.g` file will not be overwritten. _However_ - the WiFi module will be updated, which may wipe all network details from the module itself.
 
-    To avoid this making the machine unrecoverable (at least without connecting to USB), RRF will always reboot in Access Point mode after any update cycle. You must then re-enter the network details, entering the `M587` command in [Configure your WiFi network](#configure-your-wifi-network) before rebooting.
+    To avoid this making the machine unrecoverable (at least without connecting to USB), RRF will always reboot in Access Point mode after any update cycle. You can then re-enter the network details if necessary, using the `M587` command in [Configure your WiFi network](#configure-your-wifi-network) before rebooting.
+
+    Additionally, if you are prompted by DWC to Install the updates, you can safely click No - these will be installed when you reboot and clicking Yes will just make the process take longer.
 
 ---
 
