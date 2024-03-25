@@ -108,15 +108,28 @@ You should see a _green_ highlighted line indicating that the command was succes
 
 ---
 
-You now need to tell RRF to connect as a WiFi client rather than starting its own Access Point. To do this, browse to the "Files -> System" tab, and click on `network.g` to edit the file.
+You now need to tell RRF to connect as a WiFi client rather than starting its own Access Point.
 
-Edit the line that says `M552 S2` so that it says `M552 S1` instead. Click Save in the top right hand corner, and then run `M999` via the console, or power cycle the mainboard to trigger a restart.
+We package a `network.g.example` file which configures RRF as a WiFi client, and can be used to set any user-specific settings that should not be overwritten when updating. The file needs to be renamed to `network.g` for it to load.
 
-Once the board has restarted, it should attempt to connect to your WiFi network.
+To rename it, browse to the "Files -> System" tab, right click on `network.g.example`, then click "Rename", and enter `network.g`:
 
-You may have to use your router interface to identify the address that the Milo has been given on your network - this is outside of the scope of this guide.
+![Renaming the network.g.example file to network.g](../img/install_rrf/install_rrf_step_5.png){: .shadow-dark}
+
+---
+
+You may need to further configure any network-specific settings in this file, but this is outside the scope of this guide - please refer to the [Duet3D Gcode Documentation](https://docs.duet3d.com/User_manual/Reference/Gcodes) for this - specifically codes `M553`, `M554` and `M586`.
+
+After editing the file to your liking, you can restart the mainboard. Once restarted, it should attempt to connect to your WiFi network.
+
+You may have to use your router interface to identify the address that the Milo has been given on your network ifd this was not configured statically - this is outside of the scope of this guide.
 
 You can also [connect to the mainboard over USB](https://teamgloomy.github.io/putty.html) using Putty or another terminal emulator depending on your operating system - watching the output of the terminal when the machine connects to the WiFi network will show the IP address that has been assigned.
+
+!!! warning
+    When installing a new release of the RRF configuration as an _upgrade_, your `network.g` file will not be overwritten. _However_ - the WiFi module will be updated, which wipes all network details from the module itself.
+
+    To avoid this making the machine unrecoverable (at least without connecting to USB), RRF will always reboot in Access Point mode after any update cycle. You must then re-enter the network details, entering the `M587` command in [Configure your WiFi network](#configure-your-wifi-network) before rebooting.
 
 ---
 
