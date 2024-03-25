@@ -130,6 +130,12 @@ When a probe cycle is triggered, you will see the following dialog box, which al
 
 Vise corner is selected by default, as it is likely to be the most-used probing cycle type. With a single probe cycle, it sets a WCS origin in X, Y and Z axes to the top surface of an outside corner of a part.
 
+!!! note
+    When using Quick mode (`Q1`), Vise Corner cannot calculate the squareness or rotation of the workpiece, so it will not be possible to compensate for a misaligned part.
+
+    The corner of the part is assumed to be at the exact intersection of 2 lines drawn perpendicular to each axis through the probe points. If your workpiece is not square with the axes, or the corner itself is not square, then the calculated location will be inaccurate.
+
+
 ```mermaid
 flowchart TB
     subgraph A1[Probe Z]
@@ -138,19 +144,29 @@ flowchart TB
     2(Move outside X surface)
     3(Move down to probe depth)
     subgraph A2[Probe X]
-        4(Probe at clearance dist from corner)
-        5(Probe at length minus clearance dist from corner)
-        4 --> 5
+        direction TB
+        4(Probe at clearance distance from corner)
+        5{Full Mode?}
+        6(Probe at length minus clearance distance from corner)
+        7(Continue)
+        4 --> 5 -->|Yes| 6
+        6 --> 7
+        5 -->|No| 7
     end
-    6(Move outside Y surface)
+    8(Move outside Y surface)
     subgraph A3[Probe Y]
-        7(Probe at clearance dist from corner)
-        8(Probe at width minus clearance dist)
-        7 --> 8
+        direction TB
+        9(Probe at clearance distance from corner)
+        10{Full Mode?}
+        11(Probe at width minus clearance distance from corner)
+        12(Continue)
+        9 --> 10 -->|Yes| 11
+        11 --> 12
+        10 -->|No| 12
     end
-    9(Move up to starting height)
-    10(Move above corner X,Y)
-    A1 --> 2 --> 3 --> A2 --> 6 --> A3 --> 9 --> 10
+    13(Move up to starting height)
+    14(Move above corner X,Y)
+    A1 --> 2 --> 3 --> A2 --> 8 --> A3 --> 13 --> 14
 ```
 
 ### Circular Bore
@@ -272,22 +288,40 @@ flowchart TB
 
 Outside corner sets a WCS origin in X and Y axes to the corner of a rectangular work-piece. It is already used by the vise-corner probe cycle, so should only be used in isolation when you need to zero the Z axis somewhere other than the top surface of the work-piece.
 
+!!! note
+    When using Quick mode (`Q1`), Outside Corner cannot calculate the squareness or rotation of the workpiece, so it will not be possible to compensate for a misaligned part.
+
+    The corner of the part is assumed to be at the exact intersection of 2 lines drawn perpendicular to each axis through the probe points. If your workpiece is not square with the axes, or the corner itself is not square, then the calculated location will be inaccurate.
+
+<!-- This is essentially a copy-paste from Vise Corner with the Z probe removed -->
 ```mermaid
 flowchart TB
-    1(Move outside X surface)
-    2(Move down to probe depth)
+    2(Move outside X surface)
+    3(Move down to probe depth)
     subgraph A2[Probe X]
-        3(Probe inwards from corner by clearance dist) -->
-        4(Probe inwards from corner by surface length - clearance dist)
+        direction TB
+        4(Probe at clearance distance from corner)
+        5{Full Mode?}
+        6(Probe at length minus clearance distance from corner)
+        7(Continue)
+        4 --> 5 -->|Yes| 6
+        6 --> 7
+        5 -->|No| 7
     end
-    6(Move outside Y surface)
+    8(Move outside Y surface)
     subgraph A3[Probe Y]
-        7(Probe inwards from corner by clearance dist) -->
-        8(Probe inwards from corner by surface length - clearance dist)
+        direction TB
+        9(Probe at clearance distance from corner)
+        10{Full Mode?}
+        11(Probe at width minus clearance distance from corner)
+        12(Continue)
+        9 --> 10 -->|Yes| 11
+        11 --> 12
+        10 -->|No| 12
     end
-    9(Move up to starting height)
-    10(Move to corner X,Y)
-    1 --> 2 --> A2 --> 6 --> A3 --> 9 --> 10
+    13(Move up to starting height)
+    14(Move above corner X,Y)
+    2 --> 3 --> A2 --> 8 --> A3 --> 13 --> 14
 ```
 
 ### Single Surface
@@ -295,7 +329,7 @@ flowchart TB
 Single surface can either be used 3 times to probe X, Y and Z axes individually as single points, or to "top up" with a Z probe after using one of the X,Y probe cycles above.
 
 ```mermaid
-flowchart LR
+flowchart TB
     1(Move outside or above surface)
     2{Z Probe?}
     3(Move down to probing depth)
