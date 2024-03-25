@@ -1214,8 +1214,9 @@ Password: millenniummachines
 <p>You can also <a href="https://teamgloomy.github.io/putty.html">connect to the mainboard over USB</a> using Putty or another terminal emulator depending on your operating system - watching the output of the terminal when the machine connects to the WiFi network will show the IP address that has been assigned.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>When installing a new release of the <abbr title="RepRapFirmware">RRF</abbr> configuration as an <em>upgrade</em>, your <code>network.g</code> file will not be overwritten. <em>However</em> - the WiFi module will be updated, which wipes all network details from the module itself.</p>
-<p>To avoid this making the machine unrecoverable (at least without connecting to USB), <abbr title="RepRapFirmware">RRF</abbr> will always reboot in Access Point mode after any update cycle. You must then re-enter the network details, entering the <code>M587</code> command in <a href="#configure-your-wifi-network">Configure your WiFi network</a> before rebooting.</p>
+<p>When installing a new release of the <abbr title="RepRapFirmware">RRF</abbr> configuration as an <em>upgrade</em>, your <code>network.g</code> file will not be overwritten. <em>However</em> - the WiFi module will be updated, which may wipe all network details from the module itself.</p>
+<p>To avoid this making the machine unrecoverable (at least without connecting to USB), <abbr title="RepRapFirmware">RRF</abbr> will always reboot in Access Point mode after any update cycle. You can then re-enter the network details if necessary, using the <code>M587</code> command in <a href="#configure-your-wifi-network">Configure your WiFi network</a> before rebooting.</p>
+<p>Additionally, if you are prompted by DWC to Install the updates, you can safely click No - these will be installed when you reboot and clicking Yes will just make the process take longer.</p>
 </div>
 <hr />
 <p>At this point, the basic firmware setup is complete and all that remains are some firmware checks which will be covered later on in the manual.</p>
