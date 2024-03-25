@@ -5,7 +5,6 @@
 
     We hope to release MillenniumOS soon but we must also bear in mind that this software will be used by machining novices, so it needs to be safe from the first click.
 
-
 ## What and Why?
 
 MillenniumOS is an addon for RRF **3.5+** which implements some high-level functionality around work-piece probing, tool changes and tool setting that aim to make Millennium Machines the simplest route for novice machinists to make their first cuts confidently and safely.
@@ -43,7 +42,12 @@ Each of the files from the Zip will be uploaded individually. You can see the li
 
 ### Load MillenniumOS on startup
 
-MillenniumOS needs to be loaded on every bootup of your mainboard. To achieve this, we need to add or uncomment a configuration line in your `config.g` file. Navigate to the **"Files -> System"** tab, and click on the `config.g` file to edit it.
+!!! tip
+    If you are using a supported [RRF Configuration](#rrf-installation) then you can skip to [Configuration](#configuration) as MillenniumOS will be loaded automatically. All you have to do is reboot after uploading the Zip file.
+
+MillenniumOS needs to be loaded on every bootup of your mainboard.
+
+To achieve this, we need to add or uncomment a configuration line in your `config.g` file. Navigate to the **"Files -> System"** tab, and click on the `config.g` file to edit it.
 
 Scroll to the bottom, and make sure that the last line in the file looks exactly like this:
 
