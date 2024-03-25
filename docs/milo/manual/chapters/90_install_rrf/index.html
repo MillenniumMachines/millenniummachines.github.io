@@ -1203,11 +1203,20 @@ Password: millenniummachines
 <p>You should see a <em>green</em> highlighted line indicating that the command was successful:</p>
 <p><img alt="View of DWC Console window indicating successful WiFi network configuration" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_4.png" /></p>
 <hr />
-<p>You now need to tell <abbr title="RepRapFirmware">RRF</abbr> to connect as a WiFi client rather than starting its own Access Point. To do this, browse to the "Files -&gt; System" tab, and click on <code>network.g</code> to edit the file.</p>
-<p>Edit the line that says <code>M552 S2</code> so that it says <code>M552 S1</code> instead. Click Save in the top right hand corner, and then run <code>M999</code> via the console, or power cycle the mainboard to trigger a restart.</p>
-<p>Once the board has restarted, it should attempt to connect to your WiFi network.</p>
-<p>You may have to use your router interface to identify the address that the Milo has been given on your network - this is outside of the scope of this guide.</p>
+<p>You now need to tell <abbr title="RepRapFirmware">RRF</abbr> to connect as a WiFi client rather than starting its own Access Point.</p>
+<p>We package a <code>network.g.example</code> file which configures <abbr title="RepRapFirmware">RRF</abbr> as a WiFi client, and can be used to set any user-specific settings that should not be overwritten when updating. The file needs to be renamed to <code>network.g</code> for it to load.</p>
+<p>To rename it, browse to the "Files -&gt; System" tab, right click on <code>network.g.example</code>, then click "Rename", and enter <code>network.g</code>:</p>
+<p><img alt="Renaming the network.g.example file to network.g" class="shadow-dark" src="../img/install_rrf/install_rrf_step_5.png" /></p>
+<hr />
+<p>You may need to further configure any network-specific settings in this file, but this is outside the scope of this guide - please refer to the <a href="https://docs.duet3d.com/User_manual/Reference/Gcodes">Duet3D Gcode Documentation</a> for this - specifically codes <code>M553</code>, <code>M554</code> and <code>M586</code>.</p>
+<p>After editing the file to your liking, you can restart the mainboard. Once restarted, it should attempt to connect to your WiFi network.</p>
+<p>You may have to use your router interface to identify the address that the Milo has been given on your network ifd this was not configured statically - this is outside of the scope of this guide.</p>
 <p>You can also <a href="https://teamgloomy.github.io/putty.html">connect to the mainboard over USB</a> using Putty or another terminal emulator depending on your operating system - watching the output of the terminal when the machine connects to the WiFi network will show the IP address that has been assigned.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When installing a new release of the <abbr title="RepRapFirmware">RRF</abbr> configuration as an <em>upgrade</em>, your <code>network.g</code> file will not be overwritten. <em>However</em> - the WiFi module will be updated, which wipes all network details from the module itself.</p>
+<p>To avoid this making the machine unrecoverable (at least without connecting to USB), <abbr title="RepRapFirmware">RRF</abbr> will always reboot in Access Point mode after any update cycle. You must then re-enter the network details, entering the <code>M587</code> command in <a href="#configure-your-wifi-network">Configure your WiFi network</a> before rebooting.</p>
+</div>
 <hr />
 <p>At this point, the basic firmware setup is complete and all that remains are some firmware checks which will be covered later on in the manual.</p>
 <div class="admonition warning">
