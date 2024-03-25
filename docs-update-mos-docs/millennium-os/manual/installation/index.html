@@ -1372,7 +1372,12 @@
 <p><img alt="Uploaded file list in DWC" class="shadow-dark" src="../img/mos_install_step_2.png" /></p>
 <hr />
 <h3 id="load-millenniumos-on-startup">Load MillenniumOS on startup</h3>
-<p>MillenniumOS needs to be loaded on every bootup of your mainboard. To achieve this, we need to add or uncomment a configuration line in your <code>config.g</code> file. Navigate to the <strong>"Files -&gt; System"</strong> tab, and click on the <code>config.g</code> file to edit it.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you are using a supported <a href="#rrf-installation"><abbr title="RepRapFirmware">RRF</abbr> Configuration</a> then you can skip to the <a href="#configuration">Configuration</a> as MillenniumOS will be loaded automatically. All you have to do is reboot after uploading the Zip file.</p>
+</div>
+<p>MillenniumOS needs to be loaded on every bootup of your mainboard.</p>
+<p>To achieve this, we need to add or uncomment a configuration line in your <code>config.g</code> file. Navigate to the <strong>"Files -&gt; System"</strong> tab, and click on the <code>config.g</code> file to edit it.</p>
 <p>Scroll to the bottom, and make sure that the last line in the file looks exactly like this:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">M98 </span>P&quot;mos.g&quot;
 </code></pre></div>
