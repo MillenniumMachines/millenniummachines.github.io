@@ -69,15 +69,31 @@ After restarting, you will be prompted to configure MillenniumOS. This configura
 
 ---
 
-When prompted to provide information or perform an action, please read the information *carefully* - the configuration wizard will trigger movement of the machine where necessary, but you will *always* be warned before this happens.
+#### Configuration Wizard
 
-If you cancel the wizard, or receive an error, you can re-run the wizard using `G8000`. Once the wizard is complete your machine will reboot to reload the new settings, at which point MillenniumOS is ready for use.
+When prompted to provide information or perform an action, please read the information *carefully* - the configuration wizard will trigger movement of the machine where necessary, but you will *always* be warned before this happens.
 
 !!! note
     If you experience any connection issues during the wizard, you can usually reload your browser tab to trigger the next dialog.
 
+If you cancel the wizard, or receive an error, you can re-run the wizard using `G8000`. Once the wizard is complete your machine will reboot to reload the new settings, at which point MillenniumOS is ready for use.
+
+!!! note
+    MillenniumOS now supports resuming the wizard if it was not completed. Settings are saved to an intermediate file which is loaded when the wizard is started, and you will be prompted to continue where you left off, or restart.
+
+You may re-run the wizard at any time to reconfigure one or more features. If you click the 'Update' button when asked if you want to reset the configuration, then you can pick which sections of the configuration you would like to reconfigure, and all other sections of the existing configuration will be left as-is.
+
 !!! warning
     If you receive any syntax errors or other errors during the configuration process, please report these on the [MillenniumOS](https://github.com/MillenniumMachines/MillenniumOS) repository as an issue or ask for assistance on our Discord.
+
+#### User Variables
+
+When the configuration wizard is complete, it writes the settings to the `mos-user-vars.g` file. This file can be edited by hand but remember, it will be overwritten the next time the configuration wizard is run, so your settings will be lost if you choose to `Reset` these during the wizard.
+
+If you are comfortable editing the configuration file by hand then this can be used for small changes, but you must remember to reload MillenniumOS after editing (use the `Misc/Reload` macro or run `M9999`).
+
+!!! warning
+    Editing the `mos-user-vars.g` file directly is unsupported as it is easy to trigger a syntax error. Only use this method if you are familiar with the RRF meta gcode language and are able to debug syntax issues yourself.
 
 ---
 

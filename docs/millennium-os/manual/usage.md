@@ -99,11 +99,27 @@ With this mode selected, the post-processor will identify all work offsets used 
 
 This is useful where you want to make multiple identical parts - you can select the **"Multiple WCS Offsets"** tick-box on the **"Setup"**, and indicate how many parts to process - Fusion360 will repeat the operations in each WCS that is probed at the start of the file.
 
+### Low-memory Mode
+
+MillenniumOS running on RRF is quite memory intensive - the mainboards that RRF is designed to run with are relatively low powered, and have a small amount of onboard memory that is used for variable storage.
+
+With some chips (in particular the STM32F407, used on the Fly CDYv3 which comes with the LDO kit), we are right at the limits of what is possible based on the complexity of MillenniumOS.
+
+If you are running a job file and the mainboard reboots unexpectedly, you should run `M122` and check under the `=== Platform ===` header - if the `Last software reset` reason is `OutOfMemory`, then this indicates that your mainboard chip did not have enough free memory to make an allocation for something during the processing of the file. This is usually an arc move, where an allocation is made to calculate the movements for the arc.
+
+If you see these errors often, then you can enable `Low Memory Mode` in the post-processor, if available, and this will help to reduce memory usage during file processing by turning any arc moves into linear moves so that RRF does not have to process these internally.
+
+```
+Last reset 00:02:25 ago, cause: software
+Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, available RAM 13468, slot 0
+...
+```
+
 ## Probing
 
-Unless you have a paid Fusion360 license, there is no way to tell (or for Fusion360 to _know_) how to probe a work-piece. Different probing operations should be used based on the shape and rotation of the stock, and the operation in question. For this reason, you will be _prompted in RRF_ to select a probe cycle type when a probe cycle is requested.
+Unless you have a paid Fusion360 license, there is no way to tell (or for Fusion360 to *know*) how to probe a work-piece. Different probing operations should be used based on the shape and rotation of the stock, and the operation in question. For this reason, you will be *prompted in RRF* to select a probe cycle type when a probe cycle is requested.
 
-If you have a paid Fusion360 license, you can switch **"WCS Origin Probing Mode"** in the **"Post properties"** to **"None (Expert  Mode)"** and then configure the relevant probing cycle under the **"Inspection"** tab of the **"MANUFACTURE"** workbench. Please note this is **currently untested**.
+If you have a paid Fusion360 license, you can switch **"WCS Origin Probing Mode"** in the **"Post properties"** to **"None (Expert  Mode)"** and then configure the relevant probing cycle under the **"Inspection"** tab of the **"MANUFACTURE"** workbench. Please note this is **currently untested**. You can also use this mode if you want to perform your probing manually, before running the gcode file. You can use the Macro menu to run the relevant MillenniumOS probing cycle and zero the WCS that will be used, and then run the file from the Jobs section of DWC.
 
 When a probe cycle is triggered, you will see the following dialog box, which allows you to select the probing cycle that you would like to use to zero the WCS in question.
 
