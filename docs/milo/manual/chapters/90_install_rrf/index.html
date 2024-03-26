@@ -963,7 +963,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../millennium-os/manual/installation/" class="md-nav__link">
+      <a href="../../../../millennium-os/manual/chapters/10_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../millennium-os/manual/chapters/20_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -984,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../millennium-os/manual/usage/" class="md-nav__link">
+      <a href="../../../../millennium-os/manual/chapters/30_usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1216,7 +1237,7 @@ Password: millenniummachines
 <p class="admonition-title">Warning</p>
 <p>When installing a new release of the <abbr title="RepRapFirmware">RRF</abbr> configuration as an <em>upgrade</em>, your <code>network.g</code> file will not be overwritten. <em>However</em> - the WiFi module will be updated, which may wipe all network details from the module itself.</p>
 <p>To avoid this making the machine unrecoverable (at least without connecting to USB), <abbr title="RepRapFirmware">RRF</abbr> will always reboot in Access Point mode after any update cycle. You can then re-enter the network details if necessary, using the <code>M587</code> command in <a href="#configure-your-wifi-network">Configure your WiFi network</a> before rebooting.</p>
-<p>Additionally, if you are prompted by DWC to Install the updates, you can safely click No - these will be installed when you reboot and clicking Yes will just make the process take longer.</p>
+<p>When you are prompted by DWC to Install the updates, you should click Yes - but be aware, this will involve flashing your WiFi module twice - once when you click Yes, and once when the board reboots after it is updated. This is unfortunate, but necessary, because we need the flash-on-reboot to enable hands-free configuration when extracting the Zip file to a fresh SD card and inserting it into an unconfigured board.</p>
 </div>
 <hr />
 <p>At this point, the basic firmware setup is complete and all that remains are some firmware checks which will be covered later on in the manual.</p>
