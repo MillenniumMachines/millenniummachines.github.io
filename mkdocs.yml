@@ -34,8 +34,9 @@ nav:
     - Sourcing and Print Guild: long-john/bom/sourcing_and_print_guide.md
     - Assembly Manual: long-john/assembly_manual/assembly_manual.md
   - MillenniumOS:
-    - Installation: millennium-os/manual/installation.md
-    - Usage: millennium-os/manual/usage.md
+    - Introduction: millennium-os/manual/chapters/10_introduction.md
+    - Installation: millennium-os/manual/chapters/20_installation.md
+    - Usage: millennium-os/manual/chapters/30_usage.md
   - "Contact Us": contact-us.md
 
 extra:

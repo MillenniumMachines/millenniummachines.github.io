@@ -8,7 +8,7 @@ That said, there are a number of different probing methods, and the post-process
 
 The MillenniumOS post-processor is relatively simple - rather than outputting any particularly complex gcode sequences to perform tool changes or probing cycles, it relies on the knowledge that the firmware (RRF, and therefore MillenniumOS macros running on top of it) are best-placed to implement these in a safe manner. The gcode is designed to be simple to read and well commented, so for those of us of a less-trusting nature, it should be easy enough to open in a text editor and understand what it will command your mill to do.
 
-![Image showing Post-Process tab of a Fusion360 Setup](./img/mos_usage_step_0.png){: .shadow-dark }
+![Image showing Post-Process tab of a Fusion360 Setup](../img/mos_usage_step_0.png){: .shadow-dark }
 
 ---
 
@@ -20,7 +20,7 @@ A value of `0` in this field corresponds to `G54`, or the *first* WCS. We do not
 
 The **"WCS offset"** setting can be used in a number of ways.
 
-![Post-Process tab of a Fusion360 Setup](./img/mos_usage_step_1.png){: .shadow }
+![Post-Process tab of a Fusion360 Setup](../img/mos_usage_step_1.png){: .shadow }
 
 ---
 
@@ -51,7 +51,7 @@ flowchart TB
 
 The post-processor defaults to this method of output - this is the **"On Change"** value of the **"WCS Origin Probing Mode"** setting under the **"Probing and inspection"** tab of the **"Post properties"**.
 
-![MillenniumOS WCS origin probing mode selection](./img/mos_usage_step_2.png){: .shadow }
+![MillenniumOS WCS origin probing mode selection](../img/mos_usage_step_2.png){: .shadow }
 
 With this mode selected, the post-processor will request a work-piece probing cycle for the WCS in question just prior to switching into it.
 
@@ -93,7 +93,7 @@ flowchart TB
 
 This flow corresponds to the **"At Start"** value of the **"WCS Origin Probing Mode"** setting under the **"Probing and inspection"** tab of the **"Post properties"**.
 
-![MillenniumOS WCS origin probing mode selection](./img/mos_usage_step_3.png){: .shadow }
+![MillenniumOS WCS origin probing mode selection](../img/mos_usage_step_3.png){: .shadow }
 
 With this mode selected, the post-processor will identify all work offsets used in the Setup, and trigger a probing cycle for each of them at the start of the gcode.
 
@@ -123,7 +123,7 @@ If you have a paid Fusion360 license, you can switch **"WCS Origin Probing Mode"
 
 When a probe cycle is triggered, you will see the following dialog box, which allows you to select the probing cycle that you would like to use to zero the WCS in question.
 
-![MillenniumOS probe cycle selection dialog box](./img/mos_usage_step_5.png){: .shadow-dark }
+![MillenniumOS probe cycle selection dialog box](../img/mos_usage_step_5.png){: .shadow-dark }
 
 
 ### Vise Corner
@@ -131,9 +131,9 @@ When a probe cycle is triggered, you will see the following dialog box, which al
 Vise corner is selected by default, as it is likely to be the most-used probing cycle type. With a single probe cycle, it sets a WCS origin in X, Y and Z axes to the top surface of an outside corner of a part.
 
 !!! note
-    When using Quick mode (`Q1`), Vise Corner cannot calculate the squareness or rotation of the workpiece, so it will not be possible to compensate for a misaligned part.
+    When using Quick mode (`Q1`), Vise Corner cannot calculate the squareness or rotation of the work-piece, so it will not be possible to compensate for a misaligned part.
 
-    The corner of the part is assumed to be at the exact intersection of 2 lines drawn perpendicular to each axis through the probe points. If your workpiece is not square with the axes, or the corner itself is not square, then the calculated location will be inaccurate.
+    The corner of the part is assumed to be at the exact intersection of 2 lines drawn perpendicular to each axis through the probe points. If your work-piece is not square with the axes, or the corner itself is not square, then the calculated location will be inaccurate.
 
 
 ```mermaid
@@ -289,9 +289,9 @@ flowchart TB
 Outside corner sets a WCS origin in X and Y axes to the corner of a rectangular work-piece. It is already used by the vise-corner probe cycle, so should only be used in isolation when you need to zero the Z axis somewhere other than the top surface of the work-piece.
 
 !!! note
-    When using Quick mode (`Q1`), Outside Corner cannot calculate the squareness or rotation of the workpiece, so it will not be possible to compensate for a misaligned part.
+    When using Quick mode (`Q1`), Outside Corner cannot calculate the squareness or rotation of the work-piece, so it will not be possible to compensate for a misaligned part.
 
-    The corner of the part is assumed to be at the exact intersection of 2 lines drawn perpendicular to each axis through the probe points. If your workpiece is not square with the axes, or the corner itself is not square, then the calculated location will be inaccurate.
+    The corner of the part is assumed to be at the exact intersection of 2 lines drawn perpendicular to each axis through the probe points. If your work-piece is not square with the axes, or the corner itself is not square, then the calculated location will be inaccurate.
 
 <!-- This is essentially a copy-paste from Vise Corner with the Z probe removed -->
 ```mermaid
