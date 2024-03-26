@@ -131,7 +131,7 @@ You can also [connect to the mainboard over USB](https://teamgloomy.github.io/pu
 
     To avoid this making the machine unrecoverable (at least without connecting to USB), RRF will always reboot in Access Point mode after any update cycle. You can then re-enter the network details if necessary, using the `M587` command in [Configure your WiFi network](#configure-your-wifi-network) before rebooting.
 
-    Additionally, if you are prompted by DWC to Install the updates, you can safely click No - these will be installed when you reboot and clicking Yes will just make the process take longer.
+    When you are prompted by DWC to Install the updates, you should click Yes - but be aware, this will involve flashing your WiFi module twice - once when you click Yes, and once when the board reboots after it is updated. This is unfortunate, but necessary, because we need the flash-on-reboot to enable hands-free configuration when extracting the Zip file to a fresh SD card and inserting it into an unconfigured board.
 
 ---
 
