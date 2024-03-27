@@ -72,8 +72,7 @@ After restarting, you will be prompted to configure MillenniumOS. This configura
 
 When prompted to provide information or perform an action, please read the information *carefully* - the configuration wizard will trigger movement of the machine where necessary, but you will *always* be warned before this happens.
 
-!!! note
-    If you experience any connection issues during the wizard, you can usually reload your browser tab to trigger the next dialog.
+If you experience any connection issues during the wizard, you can usually reload your browser tab to trigger the next dialog.
 
 If you cancel the wizard, or receive an error, you can re-run the wizard using `G8000`. Once the wizard is complete your machine will reboot to reload the new settings, at which point MillenniumOS is ready for use.
 
@@ -82,8 +81,21 @@ If you cancel the wizard, or receive an error, you can re-run the wizard using `
 
 You may re-run the wizard at any time to reconfigure one or more features. If you click the 'Update' button when asked if you want to reset the configuration, then you can pick which sections of the configuration you would like to reconfigure, and all other sections of the existing configuration will be left as-is.
 
+!!! tip
+    Even if you have a Touch Probe and a Toolsetter, the Wizard will ask you to take some manual measurements using a Datum tool. This is necessary to enable tool offset compensation when using the Toolsetter and the Touch Probe together.
+
+    In short - we cannot probe the length of the Touch Probe with the Toolsetter (or the other way round for that matter), because the Touch Probe and Toolsetter require different activation pressures - one will always activate before the other, and this will never be accurate enough to correctly offset different length tools.
+
+    The manual measurement calculates a distance between a surface we _can_ probe (using the Touch Probe at the start of every job) and the activation point of the Toolsetter, using a tool whose length does not change between the measurements.
+
+    This gives us a relative distance which can be used to calculate the expected activation point of the Toolsetter - when changing tools, the tool _offset_ is the difference between the expected activation point and the actual point the Toolsetter was activated at.
+
+    If you'd like to understand more of how this works, the macro files themselves are quite well commented and easy to read - look at `G8000`, `G37`, `tpre.g` and `tpost.g`.
+
 !!! warning
     If you receive any syntax errors or other errors during the configuration process, please report these on the [MillenniumOS](https://github.com/MillenniumMachines/MillenniumOS) repository as an issue or ask for assistance on our Discord.
+
+---
 
 #### User Variables
 
