@@ -228,7 +228,7 @@ Install the MGN15 250mm rails with only the lower carriages installed onto the `
     You can use the rail alignment guides to stop the lower carriages from falling off the vertical rail!
 
 !!! tip annotate "Aligning the Rails"
-    Repeat the alignment procedure described for the Y axis to ensure your rails are aligned to each other and the extrusion. 
+    Repeat the alignment procedure described for the Y axis to ensure your rails are aligned to each other and the extrusion.
 
 ---
 
@@ -371,8 +371,8 @@ And at the top using M5x12mm BHCS.
     1 x Z Drag-Chain Mount   (1)
     1 x Z Cable Redirect Hook (2)
     ```
-1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#cable-chain-mounts)!
-2. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#cable-chain-mounts)!
+1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#drag-chain-mounts)!
+2. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#drag-chain-mounts)!
 
 Install the M3 heat-set inserts into the Z Drag-Chain Mount.
 
@@ -507,7 +507,7 @@ If you wish at this point, you can glue in your Millennium Machines Logo.
      1 x Z Drag-Chain Mount B (1)
      1 x Drag Chain
     ```
-1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#cable-chain-mounts)!
+1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#drag-chain-mounts)!
 
 Install the M3 Heat-set inserts into the Z Drag-Chain Mount B.
 

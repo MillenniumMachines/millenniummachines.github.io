@@ -74,7 +74,6 @@ This machine requires an immense amount of T-nuts. In the interest of simplifyin
 
 Linear rail carriages use small ball-bearings to glide smoothly along the profile in the rail. If any of your carriages feel 'gritty' when moving, you should remove the carriages from the rail and give them a good clean with contact cleaner, brake cleaner or another similar non-corrosive degreaser.
 
-
 You must make sure that your carriages are appropriately greased before running your machine. Liberal application of EP2 grease to the carriages will do the trick.
 
 !!! warning
@@ -96,7 +95,7 @@ Before you head out on your journey to create skynet, it's probably a good idea 
 - [How to get started with RepRap firmware on a Fly board](https://www.youtube.com/watch?v=TAT532vIVzU)
 - [CNC basics](https://youtu.be/YBGqknN3gGs?si=ds4zdG03RDS3XUv7)
 - [Electronics connectors and how to use them](https://www.youtube.com/watch?v=y6G_MhQFv3k)
-- [Cable chains and how not to use them](https://www.youtube.com/watch?v=_HiuY015rOY)
+- [Drag chains and how not to use them](https://www.youtube.com/watch?v=_HiuY015rOY)
 </div>
 1. Cold bluing stainless steel, while technically possible, is performed primarily for aesthetic reasons. The cold bluing process does not significantly change its corrosion resistance or any other inherent physical property.
 

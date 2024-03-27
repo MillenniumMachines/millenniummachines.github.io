@@ -51,7 +51,6 @@ Before you head out on your journey to create skynet, it's probably a good idea 
 <div class="annotate" markdown>
 - [How to use heat set inserts](https://www.youtube.com/watch?v=cyof7fYFcuQ&list=PL7zrGeKp_8CTDOmpwZr5JnCSJqEghFh9j&index=32)
 - [Electronics connectors and how to use them](https://www.youtube.com/watch?v=y6G_MhQFv3k)
-- [Cable chains and how not to use them](https://www.youtube.com/watch?v=_HiuY015rOY)
 </div>
 
 ---
