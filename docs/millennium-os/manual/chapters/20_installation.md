@@ -247,6 +247,10 @@ You can find this directory by going to **Macro -> Macros** from the menu bar, a
 
 Once the file is placed there, it will be selectable as the Processor under every *Job* instance from the *Path* workbench.
 
+!!! note
+    The FreeCAD post-processor is designed to work with the [Realthunder branch](https://github.com/realthunder/FreeCAD) (otherwise known as the Link branch) of FreeCAD. It may or may not work with stock FreeCAD, depending on which Python version is bundled (the post-processor needs at least 3.10).
+
+    You should think about switching to the Realthunder branch of FreeCAD if you haven't already - it is more stable with complex designs thanks to attempting to fix the [Topological Naming Problem](https://github.com/realthunder/FreeCAD_assembly3/wiki/Topological-Naming).
 ---
 
 You're now ready to add some toolpaths and then run the post to generate MillenniumOS flavoured output gcode. These steps are not MillenniumOS specific, and are therefore outside of the scope of this documentation.
