@@ -76,12 +76,17 @@ If you experience any connection issues during the wizard, you can usually reloa
 
 If you cancel the wizard, or receive an error, you can re-run the wizard using `G8000`. Once the wizard is complete your machine will reboot to reload the new settings, at which point MillenniumOS is ready for use.
 
-!!! note
+!!! note "Resuming the Wizard"
     MillenniumOS now supports resuming the wizard if it was not completed. Settings are saved to an intermediate file which is loaded when the wizard is started, and you will be prompted to continue where you left off, or restart.
 
-You may re-run the wizard at any time to reconfigure one or more features. If you click the 'Update' button when asked if you want to reset the configuration, then you can pick which sections of the configuration you would like to reconfigure, and all other sections of the existing configuration will be left as-is.
+You may re-run the wizard at any time to reconfigure one or more features. If you click the **"Update"** button when asked if you want to reset the configuration, then you can pick which sections of the configuration you would like to reconfigure, and all other sections of the existing configuration will be left as-is.
 
-!!! tip
+!!! tip "Touch Probe Deflection"
+    If you're using the standard Aliexpress "3D Edge Finder" probes that cost under $100 then it is relatively normal to record a deflection of around 0.2-0.4mm in either axis, even if your backlash is minimised and your machine is properly trammed.
+
+    The deflection on these probes tends to be pretty consistent so the compensation will usually make these accurate enough for our purposes, but you can re-run the Touch Probe configuration via the Configuration Wizard if you would like to re-calculate the values after making changes to your machine.
+
+!!! tip "Manual Measurements"
     Even if you have a Touch Probe and a Toolsetter, the Wizard will ask you to take some manual measurements using a Datum tool. This is necessary to enable tool offset compensation when using the Toolsetter and the Touch Probe together.
 
     In short - we cannot probe the length of the Touch Probe with the Toolsetter (or the other way round for that matter), because the Touch Probe and Toolsetter require different activation pressures - one will always activate before the other, and this will never be accurate enough to correctly offset different length tools.
