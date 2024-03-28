@@ -1604,8 +1604,8 @@ Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, a
 <p>This means that your CAD/CAM program becomes the single source of truth for your tool list, and it can vary based on the job being run.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The datum tool and optional touch probe you would have chosen during the Configuration Wizard are created and managed by MillenniumOS on each boot. This is important because we need to track the radius and deflection of the touch probe or datum tool for accurate probing results.</p>
-<p>These probe tools exist as a single entry in the tool table, depending on if the touch probe feature is enabled or not. Please do <em>not</em> delete this probe tool, or overwrite its index with another tool.</p>
+<p>The Datum tool and optional Touch Probe you would have chosen during the Configuration Wizard are created and managed by MillenniumOS on each boot. This is important because we need to track the radius and deflection of the Touch Probe or Datum tool for accurate probing results.</p>
+<p>These probe tools exist as a single entry in the tool table, depending on if the Touch Probe feature is enabled or not. Please do <em>not</em> delete this probe tool, or overwrite its index with another tool.</p>
 <p>Probe tools should always exist in the last index of the <abbr title="RepRapFirmware">RRF</abbr> tool table which is usually ID 49.</p>
 </div>
 <p>At the start of every gcode file, the used tools will be outputted.</p>
@@ -1625,7 +1625,7 @@ Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, a
         direction TB
         6(Park and stop spindle)
         7{Is next tool a probe?}
-        8{Is touch probe feature enabled?}
+        8{Is Touch Probe feature enabled?}
         9(Prompt insertion of touch probe)
         10(Wait for operator activation of touch probe)
         11(Prompt insertion of tool with description)
@@ -1643,26 +1643,34 @@ Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, a
         direction TB
         13(Park and stop spindle)
         14{Is current tool a probe?}
-        15{Is touch probe feature enabled?}
-        16(Probe reference surface)
-        17(Probe tool length)
-        18(Continue)
+        15{Is Touch Probe feature enabled?}
+        16{Is Toolsetter feature enabled?}
+        17(Probe reference surface)
+        18(Probe tool length)
+        19{Is Toolsetter feature enabled?}
+        20(Re-Probe Z origin in current WCS)
+        21(Continue)
         13 --&gt; 14
         14 --&gt;|Yes| 15
-        14 --&gt;|No| 17
-        15 --&gt;|Yes| 16
-        15 --&gt;|No| 17
-        16 --&gt; 18
-        17 --&gt; 18
+        14 --&gt;|No| 16
+        15 --&gt;|Yes| 17
+        15 --&gt;|No| 19
+        16 --&gt;|Yes| 18
+        16 --&gt;|No| 20
+        19 --&gt;|Yes| 18
+        19 --&gt;|No| 21
+        17 --&gt; 21
+        18 --&gt; 21
+        20 --&gt; 21
     end
 
-    19([Continue next operation])
+    21([Continue next operation])
 
     1 --&gt;|Yes| T1
     1 --&gt;|No| T2
     T1 --&gt; T2
     T2 --&gt; T3
-    T3 --&gt; 19</code></pre>
+    T3 --&gt; 20</code></pre>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Any errors that occur during the tool change will abort the entire job that the tool change ran in. This is important, because a failed tool change leaves the machine in an inconsistent state and further machining could cause damage to your tool, work-piece, yourself or your machine.</p>
