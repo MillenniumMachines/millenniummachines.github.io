@@ -20,7 +20,6 @@ ISO 10642
 
 ---
 
-
 ## Socket Head Cap Bolt (SHCS)
 
 ![Socket head cap bolt wireframe](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/shcs.png){: .shadow}
@@ -133,7 +132,7 @@ Used to drive the Z-Axis lead-screw from the 20-tooth pulley above.
 
 ## Brass Lead-screw Nut
 
-![](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/brass_leadscrew_nut.png){: .shadow}
+![iBrass Lead-screw Nut](https://millenniummachines.github.io/docs-dev/milo/manual/img/hardware/brass_leadscrew_nut.png){: .shadow}
 
 Used to translate rotational motion of a lead-screw into linear motion of an axis.
 

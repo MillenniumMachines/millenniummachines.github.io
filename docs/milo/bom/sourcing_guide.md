@@ -114,7 +114,7 @@
 
 | **Component**                                      | **Standard**                | **QTY** | **Recommended**                                    |
 |:---------------------------------------------------|-----------------------------|--------:|----------------------------------------------------|
-| 10mmx11mm Cable Chain - Openable (1m)              |                             | 3       | [FYSETC](https://s.click.aliexpress.com/e/_AkGI1l) |
+| 10mmx11mm Cable / Drag Chain - Openable (1m)       |                             | 3       | [FYSETC](https://s.click.aliexpress.com/e/_AkGI1l) |
 | Nylon Cable Ties (less than 5mm wide)              |                             | 100     | [Amazon](https://amzn.to/3NmmzLt)                  |
 | 18AWG\* (min) Mains wiring (neutral, line, ground) |                             | 1       |                                                    |
 | 20AWG Silicone or PTFE Cable (25ft total)          |                             | 1       |                                                    |
