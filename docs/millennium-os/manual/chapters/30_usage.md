@@ -349,9 +349,9 @@ As with probing, you will have already experienced a guided tool-change using Mi
 This means that your CAD/CAM program becomes the single source of truth for your tool list, and it can vary based on the job being run.
 
 !!! warning
-    The datum tool and optional touch probe you would have chosen during the Configuration Wizard are created and managed by MillenniumOS on each boot. This is important because we need to track the radius and deflection of the touch probe or datum tool for accurate probing results.
+    The Datum tool and optional Touch Probe you would have chosen during the Configuration Wizard are created and managed by MillenniumOS on each boot. This is important because we need to track the radius and deflection of the Touch Probe or Datum tool for accurate probing results.
 
-    These probe tools exist as a single entry in the tool table, depending on if the touch probe feature is enabled or not. Please do *not* delete this probe tool, or overwrite its index with another tool.
+    These probe tools exist as a single entry in the tool table, depending on if the Touch Probe feature is enabled or not. Please do *not* delete this probe tool, or overwrite its index with another tool.
 
     Probe tools should always exist in the last index of the RRF tool table which is usually ID 49.
 
@@ -375,7 +375,7 @@ flowchart TB
         direction TB
         6(Park and stop spindle)
         7{Is next tool a probe?}
-        8{Is touch probe feature enabled?}
+        8{Is Touch Probe feature enabled?}
         9(Prompt insertion of touch probe)
         10(Wait for operator activation of touch probe)
         11(Prompt insertion of tool with description)
@@ -393,26 +393,34 @@ flowchart TB
         direction TB
         13(Park and stop spindle)
         14{Is current tool a probe?}
-        15{Is touch probe feature enabled?}
-        16(Probe reference surface)
-        17(Probe tool length)
-        18(Continue)
+        15{Is Touch Probe feature enabled?}
+        16{Is Toolsetter feature enabled?}
+        17(Probe reference surface)
+        18(Probe tool length)
+        19{Is Toolsetter feature enabled?}
+        20(Re-Probe Z origin in current WCS)
+        21(Continue)
         13 --> 14
         14 -->|Yes| 15
-        14 -->|No| 17
-        15 -->|Yes| 16
-        15 -->|No| 17
-        16 --> 18
-        17 --> 18
+        14 -->|No| 16
+        15 -->|Yes| 17
+        15 -->|No| 19
+        16 -->|Yes| 18
+        16 -->|No| 20
+        19 -->|Yes| 18
+        19 -->|No| 21
+        17 --> 21
+        18 --> 21
+        20 --> 21
     end
 
-    19([Continue next operation])
+    21([Continue next operation])
 
     1 -->|Yes| T1
     1 -->|No| T2
     T1 --> T2
     T2 --> T3
-    T3 --> 19
+    T3 --> 20
 ```
 
 !!! warning
