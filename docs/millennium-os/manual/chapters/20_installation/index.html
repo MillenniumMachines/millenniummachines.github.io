@@ -1479,11 +1479,22 @@ MillenniumOS will not load properly until the machine is restarted.</p>
 <hr />
 <h4 id="configuration-wizard">Configuration Wizard</h4>
 <p>When prompted to provide information or perform an action, please read the information <em>carefully</em> - the configuration wizard will trigger movement of the machine where necessary, but you will <em>always</em> be warned before this happens.</p>
-<p>If you experience any connection issues during the wizard, you can usually reload your browser tab to trigger the next dialog.</p>
 <p>If you cancel the wizard, or receive an error, you can re-run the wizard using <code>G8000</code>. Once the wizard is complete your machine will reboot to reload the new settings, at which point MillenniumOS is ready for use.</p>
 <div class="admonition note">
 <p class="admonition-title">Resuming the Wizard</p>
 <p>MillenniumOS now supports resuming the wizard if it was not completed. Settings are saved to an intermediate file which is loaded when the wizard is started, and you will be prompted to continue where you left off, or restart.</p>
+</div>
+<p>If you experience any connection issues during the wizard, you can usually reload your browser tab to trigger the next dialog.</p>
+<div class="admonition tip">
+<p class="admonition-title">Datum Tools</p>
+<p>You will be asked to select a Datum Tool during the wizard process, which is used to take various manual measurements.</p>
+<p>This tool needs to be able to activate your Toolsetter, if you have one, and a reference surface (usually the machine table near where the Toolsetter is mounted) if you also have a Touch Probe.</p>
+<p>It is generally easier to check this before starting the configuration wizard, as it might involve moving your spindle down in the mount to reach both of these items with a short tool.</p>
+<p>If you realise this during the configuration wizard process, don't worry - you can resume where you left off once fixing the issue.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you experience any connection issues during the wizard, you can usually reload your browser tab to trigger the next dialog.</p>
 </div>
 <p>You may re-run the wizard at any time to reconfigure one or more features. If you click the <strong>"Update"</strong> button when asked if you want to reset the configuration, then you can pick which sections of the configuration you would like to reconfigure, and all other sections of the existing configuration will be left as-is.</p>
 <div class="admonition tip">
