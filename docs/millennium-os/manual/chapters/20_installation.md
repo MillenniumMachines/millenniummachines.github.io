@@ -72,12 +72,24 @@ After restarting, you will be prompted to configure MillenniumOS. This configura
 
 When prompted to provide information or perform an action, please read the information *carefully* - the configuration wizard will trigger movement of the machine where necessary, but you will *always* be warned before this happens.
 
-If you experience any connection issues during the wizard, you can usually reload your browser tab to trigger the next dialog.
-
 If you cancel the wizard, or receive an error, you can re-run the wizard using `G8000`. Once the wizard is complete your machine will reboot to reload the new settings, at which point MillenniumOS is ready for use.
 
 !!! note "Resuming the Wizard"
     MillenniumOS now supports resuming the wizard if it was not completed. Settings are saved to an intermediate file which is loaded when the wizard is started, and you will be prompted to continue where you left off, or restart.
+
+If you experience any connection issues during the wizard, you can usually reload your browser tab to trigger the next dialog.
+
+!!! tip "Datum Tools"
+    You will be asked to select a Datum Tool during the wizard process, which is used to take various manual measurements.
+
+    This tool needs to be able to activate your Toolsetter, if you have one, and a reference surface (usually the machine table near where the Toolsetter is mounted) if you also have a Touch Probe.
+
+    It is generally easier to check this before starting the configuration wizard, as it might involve moving your spindle down in the mount to reach both of these items with a short tool.
+
+    If you realise this during the configuration wizard process, don't worry - you can resume where you left off once fixing the issue.
+
+!!! note
+    If you experience any connection issues during the wizard, you can usually reload your browser tab to trigger the next dialog.
 
 You may re-run the wizard at any time to reconfigure one or more features. If you click the **"Update"** button when asked if you want to reset the configuration, then you can pick which sections of the configuration you would like to reconfigure, and all other sections of the existing configuration will be left as-is.
 
