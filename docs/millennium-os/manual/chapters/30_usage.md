@@ -6,7 +6,7 @@ That said, there are a number of different probing methods, and the post-process
 
 ## Post-Processor
 
-The MillenniumOS post-processor is relatively simple - rather than outputting any particularly complex gcode sequences to perform tool changes or probing cycles, it relies on the knowledge that the firmware (RRF, and therefore MillenniumOS macros running on top of it) are best-placed to implement these in a safe manner. The gcode is designed to be simple to read and well commented, so for those of us of a less-trusting nature, it should be easy enough to open in a text editor and understand what it will command your mill to do.
+The MillenniumOS post-processors are relatively simple - rather than outputting any particularly complex gcode sequences to perform tool changes or probing cycles, they rely on the knowledge that the firmware (RRF, and therefore MillenniumOS macros running on top of it) are best-placed to implement these in a safe manner. The gcode is designed to be simple to read and well commented, so for those of us of a less-trusting nature, it should be easy enough to open in a text editor and understand what it will command your mill to do.
 
 ![Image showing Post-Process tab of a Fusion360 Setup](../img/mos_usage_step_0.png){: .shadow-dark }
 
@@ -114,6 +114,60 @@ Last reset 00:02:25 ago, cause: software
 Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, available RAM 13468, slot 0
 ...
 ```
+
+### FreeCAD
+
+The FreeCAD post-processor supports most of the functionality of the Fusion360 post-processor except low-memory mode (as it already linearises arc moves), and per-operation support for changing post-processor options (which is a limitation of FreeCAD and can be worked around by using multiple Path Jobs).
+
+One of the big advantages of using FreeCAD is not having any limitations on the number of tools that can be used in a single exported file, and no modification of your rapid speeds like in Fusion360.
+
+The FreeCAD post-processor can be configured in the Job using the following command-line options, but defaults to the same settings as the Fusion360 post-processor.
+
+```shell
+usage: MillenniumOS v0.2.1-rc1-dirty [-h] [--show-editor | --no-show-editor]
+                                     [--output-machine | --no-output-machine]
+                                     [--output-tools | --no-output-tools]
+                                     [--output-version | --no-output-version]
+                                     [--home-before-start | --no-home-before-start]
+                                     [--probe-at-start | --probe-on-change | --no-probe]
+                                     [--vssc-period VSSC_PERIOD]
+                                     [--vssc-variance VSSC_VARIANCE]
+                                     [--vssc | --no-vssc]
+
+MillenniumOS v0.2.1-rc1-dirty Post Processor for FreeCAD
+
+options:
+  -h, --help            show this help message and exit
+  --show-editor, --no-show-editor
+                        Show Gcode in FreeCAD Editor before saving to file.
+  --output-machine, --no-output-machine
+                        Output machine settings header.
+  --output-tools, --no-output-tools
+                        Output tool details. Disabling this will make tool
+                        changes much harder!
+  --output-version, --no-output-version
+                        Output version details header.
+  --home-before-start, --no-home-before-start
+                        When enabled, machine will home in X, Y and Z
+                        directions prior to executing any operations.
+  --probe-at-start      When enabled, MillenniumOS will probe a work-piece in
+                        each used WCS prior to executing any operations.
+  --probe-on-change     When enabled, MillenniumOS will probe a work-piece
+                        just prior to switching into each used WCS.
+  --no-probe
+  --vssc-period VSSC_PERIOD
+                        Period over which RPM is varied up and down when VSSC
+                        is enabled, in milliseconds.
+  --vssc-variance VSSC_VARIANCE
+                        Variance around target RPM to vary Spindle speed when
+                        VSSC is enabled, in RPM.
+  --vssc, --no-vssc     When enabled, spindle speed is varied between an upper
+                        and lower limit surrounding the requested RPM which
+                        helps to avoid harmonic resonance between tool and
+                        work piece.
+```
+
+---
 
 ## Probing
 
