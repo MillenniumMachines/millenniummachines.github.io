@@ -117,14 +117,17 @@ Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, a
 
 ## Probing
 
-Unless you have a paid Fusion360 license, there is no way to tell (or for Fusion360 to *know*) how to probe a work-piece. Different probing operations should be used based on the shape and rotation of the stock, and the operation in question. For this reason, you will be *prompted in RRF* to select a probe cycle type when a probe cycle is requested.
+One of the fundamental parts of setting up your job is identifying the origin point of the work co-ordinate system that your job will run in. How this is done depends on the shape of your stock, the design of the item you are planning to machine, and the order of the operations that will be executed on it.
 
-If you have a paid Fusion360 license, you can switch **"WCS Origin Probing Mode"** in the **"Post properties"** to **"None (Expert  Mode)"** and then configure the relevant probing cycle under the **"Inspection"** tab of the **"MANUFACTURE"** workbench. Please note this is **currently untested**. You can also use this mode if you want to perform your probing manually, before running the gcode file. You can use the Macro menu to run the relevant MillenniumOS probing cycle and zero the WCS that will be used, and then run the file from the Jobs section of DWC.
+This is not a decision that MillenniumOS can make for you automatically, but it can help you by automating the process of probing the origin of the WCS based on information you give it.
+
+During the execution of a job, and with default post-processor settings, you will be asked just prior to switching into each WCS to probe the origin of that WCS if it is not already set. MillenniumOS will give you a choice of probing cycles to choose from, which are described below. You can pick one or more of these options in sequence to probe the origin of your work-piece in all 3 axes.
+
+For advanced usage, you can switch the **"WCS Origin Probing Mode"** to **"None"**, and this will not automatically trigger a probing cycle of each WCS, either at the beginning of the job or just prior to switching into the WCS. You will need to either set the WCS origin manually or Use the features of your CAM or post-processor to inject probing cycle calls where necessary.
 
 When a probe cycle is triggered, you will see the following dialog box, which allows you to select the probing cycle that you would like to use to zero the WCS in question.
 
 ![MillenniumOS probe cycle selection dialog box](../img/mos_usage_step_5.png){: .shadow-dark }
-
 
 ### Vise Corner
 
