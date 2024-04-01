@@ -1435,47 +1435,59 @@ Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, a
 <p>The FreeCAD post-processor supports most of the functionality of the Fusion360 post-processor except low-memory mode (as FreeCAD itself already linearises arc moves), and per-operation support for changing post-processor options (which is a limitation of FreeCAD and can be worked around by using multiple Path Jobs).</p>
 <p>One of the big advantages of using FreeCAD is not having any limitations on the number of tools that can be used in a single exported file, and no modification of your rapid speeds like in Fusion360.</p>
 <p>The FreeCAD post-processor can be configured in the Job using the following command-line options, but defaults to the same settings as the Fusion360 post-processor.</p>
-<div class="highlight"><pre><span></span><code>usage:<span class="w"> </span>MillenniumOS<span class="w"> </span>v0.2.1-rc1-dirty<span class="w"> </span><span class="o">[</span>-h<span class="o">]</span><span class="w"> </span><span class="o">[</span>--show-editor<span class="w"> </span><span class="p">|</span><span class="w"> </span>--no-show-editor<span class="o">]</span>
-<span class="w">                                     </span><span class="o">[</span>--output-machine<span class="w"> </span><span class="p">|</span><span class="w"> </span>--no-output-machine<span class="o">]</span>
-<span class="w">                                     </span><span class="o">[</span>--output-tools<span class="w"> </span><span class="p">|</span><span class="w"> </span>--no-output-tools<span class="o">]</span>
-<span class="w">                                     </span><span class="o">[</span>--output-version<span class="w"> </span><span class="p">|</span><span class="w"> </span>--no-output-version<span class="o">]</span>
-<span class="w">                                     </span><span class="o">[</span>--home-before-start<span class="w"> </span><span class="p">|</span><span class="w"> </span>--no-home-before-start<span class="o">]</span>
-<span class="w">                                     </span><span class="o">[</span>--probe-at-start<span class="w"> </span><span class="p">|</span><span class="w"> </span>--probe-on-change<span class="w"> </span><span class="p">|</span><span class="w"> </span>--no-probe<span class="o">]</span>
-<span class="w">                                     </span><span class="o">[</span>--vssc-period<span class="w"> </span>VSSC_PERIOD<span class="o">]</span>
-<span class="w">                                     </span><span class="o">[</span>--vssc-variance<span class="w"> </span>VSSC_VARIANCE<span class="o">]</span>
-<span class="w">                                     </span><span class="o">[</span>--vssc<span class="w"> </span><span class="p">|</span><span class="w"> </span>--no-vssc<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><span class="go">usage: MillenniumOS v0.2.1-rc2 [-h] [--show-editor | --no-show-editor]</span>
+<span class="go">                               [--output-job-setup | --no-output-job-setup]</span>
+<span class="go">                               [--output-machine | --no-output-machine]</span>
+<span class="go">                               [--output-version | --no-output-version]</span>
+<span class="go">                               [--output-tools | --no-output-tools]</span>
+<span class="go">                               [--home-before-start | --no-home-before-start]</span>
+<span class="go">                               [--probe-at-start | --probe-on-change | --no-probe]</span>
+<span class="go">                               [--vssc-period VSSC_PERIOD]</span>
+<span class="go">                               [--vssc-variance VSSC_VARIANCE]</span>
+<span class="go">                               [--vssc | --no-vssc]</span>
 
-MillenniumOS<span class="w"> </span>v0.2.1-rc1-dirty<span class="w"> </span>Post<span class="w"> </span>Processor<span class="w"> </span><span class="k">for</span><span class="w"> </span>FreeCAD
+<span class="go">MillenniumOS v0.2.1-rc2 Post Processor for FreeCAD</span>
 
-options:
-<span class="w">  </span>-h,<span class="w"> </span>--help<span class="w">            </span>show<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
-<span class="w">  </span>--show-editor,<span class="w"> </span>--no-show-editor
-<span class="w">                        </span>Show<span class="w"> </span>Gcode<span class="w"> </span><span class="k">in</span><span class="w"> </span>FreeCAD<span class="w"> </span>Editor<span class="w"> </span>before<span class="w"> </span>saving<span class="w"> </span>to<span class="w"> </span>file.
-<span class="w">  </span>--output-machine,<span class="w"> </span>--no-output-machine
-<span class="w">                        </span>Output<span class="w"> </span>machine<span class="w"> </span>settings<span class="w"> </span>header.
-<span class="w">  </span>--output-tools,<span class="w"> </span>--no-output-tools
-<span class="w">                        </span>Output<span class="w"> </span>tool<span class="w"> </span>details.<span class="w"> </span>Disabling<span class="w"> </span>this<span class="w"> </span>will<span class="w"> </span>make<span class="w"> </span>tool
-<span class="w">                        </span>changes<span class="w"> </span>much<span class="w"> </span>harder!
-<span class="w">  </span>--output-version,<span class="w"> </span>--no-output-version
-<span class="w">                        </span>Output<span class="w"> </span>version<span class="w"> </span>details<span class="w"> </span>header.
-<span class="w">  </span>--home-before-start,<span class="w"> </span>--no-home-before-start
-<span class="w">                        </span>When<span class="w"> </span>enabled,<span class="w"> </span>machine<span class="w"> </span>will<span class="w"> </span>home<span class="w"> </span><span class="k">in</span><span class="w"> </span>X,<span class="w"> </span>Y<span class="w"> </span>and<span class="w"> </span>Z
-<span class="w">                        </span>directions<span class="w"> </span>prior<span class="w"> </span>to<span class="w"> </span>executing<span class="w"> </span>any<span class="w"> </span>operations.
-<span class="w">  </span>--probe-at-start<span class="w">      </span>When<span class="w"> </span>enabled,<span class="w"> </span>MillenniumOS<span class="w"> </span>will<span class="w"> </span>probe<span class="w"> </span>a<span class="w"> </span>work-piece<span class="w"> </span><span class="k">in</span>
-<span class="w">                        </span>each<span class="w"> </span>used<span class="w"> </span>WCS<span class="w"> </span>prior<span class="w"> </span>to<span class="w"> </span>executing<span class="w"> </span>any<span class="w"> </span>operations.
-<span class="w">  </span>--probe-on-change<span class="w">     </span>When<span class="w"> </span>enabled,<span class="w"> </span>MillenniumOS<span class="w"> </span>will<span class="w"> </span>probe<span class="w"> </span>a<span class="w"> </span>work-piece
-<span class="w">                        </span>just<span class="w"> </span>prior<span class="w"> </span>to<span class="w"> </span>switching<span class="w"> </span>into<span class="w"> </span>each<span class="w"> </span>used<span class="w"> </span>WCS.
-<span class="w">  </span>--no-probe
-<span class="w">  </span>--vssc-period<span class="w"> </span>VSSC_PERIOD
-<span class="w">                        </span>Period<span class="w"> </span>over<span class="w"> </span>which<span class="w"> </span>RPM<span class="w"> </span>is<span class="w"> </span>varied<span class="w"> </span>up<span class="w"> </span>and<span class="w"> </span>down<span class="w"> </span>when<span class="w"> </span>VSSC
-<span class="w">                        </span>is<span class="w"> </span>enabled,<span class="w"> </span><span class="k">in</span><span class="w"> </span>milliseconds.
-<span class="w">  </span>--vssc-variance<span class="w"> </span>VSSC_VARIANCE
-<span class="w">                        </span>Variance<span class="w"> </span>around<span class="w"> </span>target<span class="w"> </span>RPM<span class="w"> </span>to<span class="w"> </span>vary<span class="w"> </span>Spindle<span class="w"> </span>speed<span class="w"> </span>when
-<span class="w">                        </span>VSSC<span class="w"> </span>is<span class="w"> </span>enabled,<span class="w"> </span><span class="k">in</span><span class="w"> </span>RPM.
-<span class="w">  </span>--vssc,<span class="w"> </span>--no-vssc<span class="w">     </span>When<span class="w"> </span>enabled,<span class="w"> </span>spindle<span class="w"> </span>speed<span class="w"> </span>is<span class="w"> </span>varied<span class="w"> </span>between<span class="w"> </span>an<span class="w"> </span>upper
-<span class="w">                        </span>and<span class="w"> </span>lower<span class="w"> </span>limit<span class="w"> </span>surrounding<span class="w"> </span>the<span class="w"> </span>requested<span class="w"> </span>RPM<span class="w"> </span>which
-<span class="w">                        </span>helps<span class="w"> </span>to<span class="w"> </span>avoid<span class="w"> </span>harmonic<span class="w"> </span>resonance<span class="w"> </span>between<span class="w"> </span>tool<span class="w"> </span>and
-<span class="w">                        </span>work<span class="w"> </span>piece.
+<span class="go">options:</span>
+<span class="go">  -h, --help            show this help message and exit</span>
+<span class="go">  --show-editor, --no-show-editor</span>
+<span class="go">                        Show gcode in FreeCAD Editor before saving to file.</span>
+<span class="go">  --output-job-setup, --no-output-job-setup</span>
+<span class="go">                        When enabled, the post-processor will output</span>
+<span class="go">                        supplemental commands to make sure the machine is</span>
+<span class="go">                        properly configured before starting a job. These</span>
+<span class="go">                        commands include homing the machine, probing and</span>
+<span class="go">                        zeroing any used WCSs. Individual supplemental</span>
+<span class="go">                        commands can be enabled, disabled and configured</span>
+<span class="go">                        separately but disabling this allows advanced</span>
+<span class="go">                        operators to setup the machine for the job using their</span>
+<span class="go">                        own workflow, while still outputting known-good</span>
+<span class="go">                        operation gcode from this post.</span>
+<span class="go">  --output-machine, --no-output-machine</span>
+<span class="go">                        Output machine settings header.</span>
+<span class="go">  --output-version, --no-output-version</span>
+<span class="go">                        Output version details header.</span>
+<span class="go">  --output-tools, --no-output-tools</span>
+<span class="go">                        Output tool details. Disabling this will make tool</span>
+<span class="go">                        changes much harder!</span>
+<span class="go">  --home-before-start, --no-home-before-start</span>
+<span class="go">                        When enabled, machine will home in X, Y and Z</span>
+<span class="go">                        directions prior to executing any operations.</span>
+<span class="go">  --probe-at-start      When enabled, MillenniumOS will probe a work-piece in</span>
+<span class="go">                        each used WCS prior to executing any operations.</span>
+<span class="go">  --probe-on-change     When enabled, MillenniumOS will probe a work-piece</span>
+<span class="go">                        just prior to switching into each used WCS.</span>
+<span class="go">  --no-probe</span>
+<span class="go">  --vssc-period VSSC_PERIOD</span>
+<span class="go">                        Period over which RPM is varied up and down when VSSC</span>
+<span class="go">                        is enabled, in milliseconds.</span>
+<span class="go">  --vssc-variance VSSC_VARIANCE</span>
+<span class="go">                        Variance around target RPM to vary Spindle speed when</span>
+<span class="go">                        VSSC is enabled, in RPM.</span>
+<span class="go">  --vssc, --no-vssc     When enabled, spindle speed is varied between an upper</span>
+<span class="go">                        and lower limit surrounding the requested RPM which</span>
+<span class="go">                        helps to avoid harmonic resonance between tool and</span>
+<span class="go">                        work piece.</span>
 </code></pre></div>
 <hr />
 <h2 id="probing">Probing</h2>
