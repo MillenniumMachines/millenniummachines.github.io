@@ -2,7 +2,7 @@
 
 ## What and Why?
 
-The "OS" stands for "Operations System" rather than "Operat*ing* System" - because MillenniumOS is an addon that implements a system of high-level CNC operations on top of RRF **3.5+**.
+The "OS" stands for "Operations System" rather than "Operat*ing* System" - because MillenniumOS is an addon that implements a system of high-level CNC operations on top of [RRF](https://www.reprapfirmware.org/) **3.5+**.
 
 The aim of MillenniumOS is to build on the usability and configurability of RRF, adding functionality required for efficient and repeatable machining that you would otherwise have to write yourself if using vanilla RRF.
 
