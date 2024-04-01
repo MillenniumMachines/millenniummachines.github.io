@@ -123,30 +123,42 @@ One of the big advantages of using FreeCAD is not having any limitations on the 
 
 The FreeCAD post-processor can be configured in the Job using the following command-line options, but defaults to the same settings as the Fusion360 post-processor.
 
-```shell
-usage: MillenniumOS v0.2.1-rc1-dirty [-h] [--show-editor | --no-show-editor]
-                                     [--output-machine | --no-output-machine]
-                                     [--output-tools | --no-output-tools]
-                                     [--output-version | --no-output-version]
-                                     [--home-before-start | --no-home-before-start]
-                                     [--probe-at-start | --probe-on-change | --no-probe]
-                                     [--vssc-period VSSC_PERIOD]
-                                     [--vssc-variance VSSC_VARIANCE]
-                                     [--vssc | --no-vssc]
+```output
+usage: MillenniumOS v0.2.1-rc2 [-h] [--show-editor | --no-show-editor]
+                               [--output-job-setup | --no-output-job-setup]
+                               [--output-machine | --no-output-machine]
+                               [--output-version | --no-output-version]
+                               [--output-tools | --no-output-tools]
+                               [--home-before-start | --no-home-before-start]
+                               [--probe-at-start | --probe-on-change | --no-probe]
+                               [--vssc-period VSSC_PERIOD]
+                               [--vssc-variance VSSC_VARIANCE]
+                               [--vssc | --no-vssc]
 
-MillenniumOS v0.2.1-rc1-dirty Post Processor for FreeCAD
+MillenniumOS v0.2.1-rc2 Post Processor for FreeCAD
 
 options:
   -h, --help            show this help message and exit
   --show-editor, --no-show-editor
-                        Show Gcode in FreeCAD Editor before saving to file.
+                        Show gcode in FreeCAD Editor before saving to file.
+  --output-job-setup, --no-output-job-setup
+                        When enabled, the post-processor will output
+                        supplemental commands to make sure the machine is
+                        properly configured before starting a job. These
+                        commands include homing the machine, probing and
+                        zeroing any used WCSs. Individual supplemental
+                        commands can be enabled, disabled and configured
+                        separately but disabling this allows advanced
+                        operators to setup the machine for the job using their
+                        own workflow, while still outputting known-good
+                        operation gcode from this post.
   --output-machine, --no-output-machine
                         Output machine settings header.
+  --output-version, --no-output-version
+                        Output version details header.
   --output-tools, --no-output-tools
                         Output tool details. Disabling this will make tool
                         changes much harder!
-  --output-version, --no-output-version
-                        Output version details header.
   --home-before-start, --no-home-before-start
                         When enabled, machine will home in X, Y and Z
                         directions prior to executing any operations.
