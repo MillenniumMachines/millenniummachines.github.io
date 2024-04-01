@@ -6,7 +6,7 @@ The "OS" stands for "Operations System" rather than "Operat*ing* System" - becau
 
 The aim of MillenniumOS is to build on the usability and configurability of RRF, adding functionality required for efficient and repeatable machining that you would otherwise have to write yourself if using vanilla RRF.
 
-We hope that MillenniumOS makes Millennium Machines the simplest route for novice machinists to make their first cuts confidently and safely - that said, MillenniumOS *is not specific to our machines* - it should be possible to use MillenniumOS out-of-the-box on any 3-axis CNC machine with a single spindle that runs RRF **3.5+**!
+We hope that MillenniumOS makes Millennium Machines the simplest route for novice machinists to make their first cuts confidently and safely - that said, MillenniumOS *is not entirely specific to our machines* - it should be possible to use MillenniumOS out-of-the-box on any 3-axis, moving-table CNC machine with a single spindle that runs RRF **3.5+**, as long as the axis minima and maxima are in the same directions.
 
 MillenniumOS is multiple things:
 
@@ -21,7 +21,7 @@ MillenniumOS implements operations to enable:
 * Guided tool changes using tool descriptions, and tool length probing.
 * Work-piece probing and work offset changes.
 * Displaying output from your CAM package as dialogs in RRF.
-* Configuration via a Wizard Process.
+* Configuration via a Wizard process.
 * Safe spindle control.
 * Safe parking, pausing and resuming.
 * Protected moves when used with a Touch Probe.

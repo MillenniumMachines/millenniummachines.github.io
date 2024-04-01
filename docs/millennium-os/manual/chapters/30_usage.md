@@ -117,7 +117,7 @@ Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, a
 
 ### FreeCAD
 
-The FreeCAD post-processor supports most of the functionality of the Fusion360 post-processor except low-memory mode (as it already linearises arc moves), and per-operation support for changing post-processor options (which is a limitation of FreeCAD and can be worked around by using multiple Path Jobs).
+The FreeCAD post-processor supports most of the functionality of the Fusion360 post-processor except low-memory mode (as FreeCAD itself already linearises arc moves), and per-operation support for changing post-processor options (which is a limitation of FreeCAD and can be worked around by using multiple Path Jobs).
 
 One of the big advantages of using FreeCAD is not having any limitations on the number of tools that can be used in a single exported file, and no modification of your rapid speeds like in Fusion360.
 
@@ -182,6 +182,12 @@ For advanced usage, you can switch the **"WCS Origin Probing Mode"** to **"None"
 When a probe cycle is triggered, you will see the following dialog box, which allows you to select the probing cycle that you would like to use to zero the WCS in question.
 
 ![MillenniumOS probe cycle selection dialog box](../img/mos_usage_step_5.png){: .shadow-dark }
+
+<!--
+    NOTE: Headings in this section at depth 3 create anchors that are linked to by
+    dialogs in MillenniumOS on RRF itself. DO NOT CHANGE THESE HEADINGS UNLESS THE
+    LINKS IN THE SOURCE HAVE BEEN UPDATED FIRST!
+-->
 
 ### Vise Corner
 
