@@ -505,15 +505,13 @@ flowchart TB
 
 ## Variable Spindle Speed Control
 
-This feature is enabled by default, and will adjust the spindle speed up and down within a small range to avoid resonance building up between the work-piece and tool. Disabling this is likely to have a negative impact on machining quality, but the settings can be tweaked through the post-processor properties and it can also be turned on and off and configured for each operation.
+This feature is enabled by default, and will adjust the spindle speed up and down within a small range to avoid resonance building up between the work-piece and tool. Disabling this is likely to have a negative impact on machining quality, but the settings can be tweaked through the post-processor properties and it can also be turned on and off and configured for each operation when using the Fusion360 post-processor.
 
 When VSSC is active, you may be able to hear the spindle speeding up and slowing down on a regular interval. This is intended.
 
-When VSSC is enabled, it has a `Period` (`P...`) and a `Variance` (`V...`).
+VSSC has a `Period` (`P...`) and a `Variance` (`V...`) - the spindle speed is adjusted around the target RPM in a wave, where the peak of the wave is half the Variance above the target RPM and the trough of the wave is half the Variance below the target RPM.
 
-VSSC adjusts the spindle speed around the target RPM in a wave, where the peak of the wave is half the Variance above the target RPM and the trough of the wave is half the Variance below the target RPM.
-
-The Period is the length of one full wavelength, so a change in speed from the target RPM up to the peak RPM, down to the trough RPM and back to the target RPM will take `P...` milliseconds.
+The Period is the length of one full wavelength, or in other words, a change in speed from the target RPM up to the peak RPM, down to the trough RPM and back to the target RPM will take `P...` milliseconds.
 
 *[WCS]: Work Co-ordinate System
 *[RRF]: RepRapFirmware

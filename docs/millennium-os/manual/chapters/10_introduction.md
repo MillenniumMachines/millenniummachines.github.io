@@ -42,7 +42,7 @@ MillenniumOS uses the concept of features to enable and disable functionality. T
 
 Some of these features, like the Toolsetter and Touch Probe, require hardware support.
 
-If you don't have the hardware for one more of these features, MillenniumOS will fall back to guided, but manual processes which will allow you to achieve the same thing.
+If you don't have the hardware for one or more of these features, MillenniumOS will fall back to guided, but manual processes which will allow you to achieve the same thing.
 
 This allows us to use the same gcode dialect for machines which have any combination of feature support.
 
@@ -64,7 +64,7 @@ This will save some time if your code contains multiple operations with tool cha
 
 You will be guided through an automated work-piece probing system, which is very similar to the manual probing system but will use your touch probe for the actual probing moves. This will speed up the probing process *considerably*.
 
-You will still have to re-probe the work-piece manually after every tool change as we have no way to calculate the relative length of the tools.
+You will still have to re-probe the Z-height of the work-piece manually after every tool change as we have no way to calculate the relative length of the tools.
 
 ### Both Touch Probe and Toolsetter Enabled
 
