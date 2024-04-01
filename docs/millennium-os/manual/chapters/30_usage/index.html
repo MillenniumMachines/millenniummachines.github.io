@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../img/millennium-machines-icon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.16">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bcfcd587.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -997,6 +997,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#freecad" class="md-nav__link">
+    <span class="md-ellipsis">
+      FreeCAD
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1212,6 +1221,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#freecad" class="md-nav__link">
+    <span class="md-ellipsis">
+      FreeCAD
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1340,7 +1358,7 @@
 <p>At this point, you might have already gained a feeling for how MillenniumOS is designed to work - the Configuration Wizard that starts up after installation <em>uses</em> MillenniumOS tool-change and probing procedures to gather the necessary settings, information and measurements to effectively probe work pieces.</p>
 <p>That said, there are a number of different probing methods, and the post-processor is not used during the configuration process so it is important to explain how the post-processor and MillenniumOS on <abbr title="RepRapFirmware">RRF</abbr> interact.</p>
 <h2 id="post-processor">Post-Processor</h2>
-<p>The MillenniumOS post-processor is relatively simple - rather than outputting any particularly complex gcode sequences to perform tool changes or probing cycles, it relies on the knowledge that the firmware (<abbr title="RepRapFirmware">RRF</abbr>, and therefore MillenniumOS macros running on top of it) are best-placed to implement these in a safe manner. The gcode is designed to be simple to read and well commented, so for those of us of a less-trusting nature, it should be easy enough to open in a text editor and understand what it will command your mill to do.</p>
+<p>The MillenniumOS post-processors are relatively simple - rather than outputting any particularly complex gcode sequences to perform tool changes or probing cycles, they rely on the knowledge that the firmware (<abbr title="RepRapFirmware">RRF</abbr>, and therefore MillenniumOS macros running on top of it) are best-placed to implement these in a safe manner. The gcode is designed to be simple to read and well commented, so for those of us of a less-trusting nature, it should be easy enough to open in a text editor and understand what it will command your mill to do.</p>
 <p><img alt="Image showing Post-Process tab of a Fusion360 Setup" class="shadow-dark" src="../../img/mos_usage_step_0.png" /></p>
 <hr />
 <h3 id="wcs-offsets-work-co-ordinate-systems"><abbr title="Work Co-ordinate System">WCS</abbr> Offsets / Work Co-ordinate Systems</h3>
@@ -1413,11 +1431,78 @@
 Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, available RAM 13468, slot 0
 ...
 </code></pre></div>
+<h3 id="freecad">FreeCAD</h3>
+<p>The FreeCAD post-processor supports most of the functionality of the Fusion360 post-processor except low-memory mode (as FreeCAD itself already linearises arc moves), and per-operation support for changing post-processor options (which is a limitation of FreeCAD and can be worked around by using multiple Path Jobs).</p>
+<p>One of the big advantages of using FreeCAD is not having any limitations on the number of tools that can be used in a single exported file, and no modification of your rapid speeds like in Fusion360.</p>
+<p>The FreeCAD post-processor can be configured in the Job using the following command-line options, but defaults to the same settings as the Fusion360 post-processor.</p>
+<div class="highlight"><pre><span></span><code><span class="go">usage: MillenniumOS v0.2.1-rc2 [-h] [--show-editor | --no-show-editor]</span>
+<span class="go">                               [--output-job-setup | --no-output-job-setup]</span>
+<span class="go">                               [--output-machine | --no-output-machine]</span>
+<span class="go">                               [--output-version | --no-output-version]</span>
+<span class="go">                               [--output-tools | --no-output-tools]</span>
+<span class="go">                               [--home-before-start | --no-home-before-start]</span>
+<span class="go">                               [--probe-at-start | --probe-on-change | --no-probe]</span>
+<span class="go">                               [--vssc-period VSSC_PERIOD]</span>
+<span class="go">                               [--vssc-variance VSSC_VARIANCE]</span>
+<span class="go">                               [--vssc | --no-vssc]</span>
+
+<span class="go">MillenniumOS v0.2.1-rc2 Post Processor for FreeCAD</span>
+
+<span class="go">options:</span>
+<span class="go">  -h, --help            show this help message and exit</span>
+<span class="go">  --show-editor, --no-show-editor</span>
+<span class="go">                        Show gcode in FreeCAD Editor before saving to file.</span>
+<span class="go">  --output-job-setup, --no-output-job-setup</span>
+<span class="go">                        When enabled, the post-processor will output</span>
+<span class="go">                        supplemental commands to make sure the machine is</span>
+<span class="go">                        properly configured before starting a job. These</span>
+<span class="go">                        commands include homing the machine, probing and</span>
+<span class="go">                        zeroing any used WCSs. Individual supplemental</span>
+<span class="go">                        commands can be enabled, disabled and configured</span>
+<span class="go">                        separately but disabling this allows advanced</span>
+<span class="go">                        operators to setup the machine for the job using their</span>
+<span class="go">                        own workflow, while still outputting known-good</span>
+<span class="go">                        operation gcode from this post.</span>
+<span class="go">  --output-machine, --no-output-machine</span>
+<span class="go">                        Output machine settings header.</span>
+<span class="go">  --output-version, --no-output-version</span>
+<span class="go">                        Output version details header.</span>
+<span class="go">  --output-tools, --no-output-tools</span>
+<span class="go">                        Output tool details. Disabling this will make tool</span>
+<span class="go">                        changes much harder!</span>
+<span class="go">  --home-before-start, --no-home-before-start</span>
+<span class="go">                        When enabled, machine will home in X, Y and Z</span>
+<span class="go">                        directions prior to executing any operations.</span>
+<span class="go">  --probe-at-start      When enabled, MillenniumOS will probe a work-piece in</span>
+<span class="go">                        each used WCS prior to executing any operations.</span>
+<span class="go">  --probe-on-change     When enabled, MillenniumOS will probe a work-piece</span>
+<span class="go">                        just prior to switching into each used WCS.</span>
+<span class="go">  --no-probe</span>
+<span class="go">  --vssc-period VSSC_PERIOD</span>
+<span class="go">                        Period over which RPM is varied up and down when VSSC</span>
+<span class="go">                        is enabled, in milliseconds.</span>
+<span class="go">  --vssc-variance VSSC_VARIANCE</span>
+<span class="go">                        Variance around target RPM to vary Spindle speed when</span>
+<span class="go">                        VSSC is enabled, in RPM.</span>
+<span class="go">  --vssc, --no-vssc     When enabled, spindle speed is varied between an upper</span>
+<span class="go">                        and lower limit surrounding the requested RPM which</span>
+<span class="go">                        helps to avoid harmonic resonance between tool and</span>
+<span class="go">                        work piece.</span>
+</code></pre></div>
+<hr />
 <h2 id="probing">Probing</h2>
-<p>Unless you have a paid Fusion360 license, there is no way to tell (or for Fusion360 to <em>know</em>) how to probe a work-piece. Different probing operations should be used based on the shape and rotation of the stock, and the operation in question. For this reason, you will be <em>prompted in <abbr title="RepRapFirmware">RRF</abbr></em> to select a probe cycle type when a probe cycle is requested.</p>
-<p>If you have a paid Fusion360 license, you can switch <strong>"<abbr title="Work Co-ordinate System">WCS</abbr> Origin Probing Mode"</strong> in the <strong>"Post properties"</strong> to <strong>"None (Expert  Mode)"</strong> and then configure the relevant probing cycle under the <strong>"Inspection"</strong> tab of the <strong>"MANUFACTURE"</strong> workbench. Please note this is <strong>currently untested</strong>. You can also use this mode if you want to perform your probing manually, before running the gcode file. You can use the Macro menu to run the relevant MillenniumOS probing cycle and zero the <abbr title="Work Co-ordinate System">WCS</abbr> that will be used, and then run the file from the Jobs section of <abbr title="Duet Web Control">DWC</abbr>.</p>
+<p>One of the fundamental parts of setting up your job is identifying the origin point of the work co-ordinate system that your job will run in. How this is done depends on the shape of your stock, the design of the item you are planning to machine, and the order of the operations that will be executed on it.</p>
+<p>This is not a decision that MillenniumOS can make for you automatically, but it can help you by automating the process of probing the origin of the <abbr title="Work Co-ordinate System">WCS</abbr> based on information you give it.</p>
+<p>During the execution of a job, and with default post-processor settings, you will be asked just prior to switching into each <abbr title="Work Co-ordinate System">WCS</abbr> to probe the origin of that <abbr title="Work Co-ordinate System">WCS</abbr> if it is not already set. MillenniumOS will give you a choice of probing cycles to choose from, which are described below. You can pick one or more of these options in sequence to probe the origin of your work-piece in all 3 axes.</p>
+<p>For advanced usage, you can switch the <strong>"<abbr title="Work Co-ordinate System">WCS</abbr> Origin Probing Mode"</strong> to <strong>"None"</strong>, and this will not automatically trigger a probing cycle of each <abbr title="Work Co-ordinate System">WCS</abbr>, either at the beginning of the job or just prior to switching into the <abbr title="Work Co-ordinate System">WCS</abbr>. You will need to either set the <abbr title="Work Co-ordinate System">WCS</abbr> origin manually or Use the features of your CAM or post-processor to inject probing cycle calls where necessary.</p>
 <p>When a probe cycle is triggered, you will see the following dialog box, which allows you to select the probing cycle that you would like to use to zero the <abbr title="Work Co-ordinate System">WCS</abbr> in question.</p>
 <p><img alt="MillenniumOS probe cycle selection dialog box" class="shadow-dark" src="../../img/mos_usage_step_5.png" /></p>
+<!--
+    NOTE: Headings in this section at depth 3 create anchors that are linked to by
+    dialogs in MillenniumOS on RRF itself. DO NOT CHANGE THESE HEADINGS UNLESS THE
+    LINKS IN THE SOURCE HAVE BEEN UPDATED FIRST!
+-->
+
 <h3 id="vise-corner">Vise Corner</h3>
 <p>Vise corner is selected by default, as it is likely to be the most-used probing cycle type. With a single probe cycle, it sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X, Y and Z axes to the top surface of an outside corner of a part.</p>
 <div class="admonition note">
