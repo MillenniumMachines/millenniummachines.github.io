@@ -1219,7 +1219,7 @@
 <li><strong>Spindle Feedback</strong> - not implemented yet</li>
 </ul>
 <p>Some of these features, like the Toolsetter and Touch Probe, require hardware support.</p>
-<p>If you don't have the hardware for one more of these features, MillenniumOS will fall back to guided, but manual processes which will allow you to achieve the same thing.</p>
+<p>If you don't have the hardware for one or more of these features, MillenniumOS will fall back to guided, but manual processes which will allow you to achieve the same thing.</p>
 <p>This allows us to use the same gcode dialect for machines which have any combination of feature support.</p>
 <p>This may be hard to visualise, so here are some examples:</p>
 <h3 id="toolsetter-and-touch-probe-disabled">Toolsetter and Touch Probe Disabled</h3>
@@ -1230,7 +1230,7 @@
 <p>This will save some time if your code contains multiple operations with tool changes.</p>
 <h3 id="only-touch-probe-enabled">Only Touch Probe Enabled</h3>
 <p>You will be guided through an automated work-piece probing system, which is very similar to the manual probing system but will use your touch probe for the actual probing moves. This will speed up the probing process <em>considerably</em>.</p>
-<p>You will still have to re-probe the work-piece manually after every tool change as we have no way to calculate the relative length of the tools.</p>
+<p>You will still have to re-probe the Z-height of the work-piece manually after every tool change as we have no way to calculate the relative length of the tools.</p>
 <h3 id="both-touch-probe-and-toolsetter-enabled">Both Touch Probe and Toolsetter Enabled</h3>
 <p>You will have the best of both worlds - there will no longer be any need for manual probing routines, and aside from the manual steps you take to position the touch probe at the start of a probing procedure, and changing the tools themselves, everything else will be automated.</p>
 <p>This will save you the most amount of time and is the most accurate way of using MillenniumOS.</p>

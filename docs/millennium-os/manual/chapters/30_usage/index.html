@@ -1762,11 +1762,10 @@ Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, a
 <p>Machining is not like 3D printing in one very important aspect - stopping a job does not automatically make your work-piece unrecoverable. It is better to abort for safety purposes and allow you, the operator, to re-run the job or tool change again.</p>
 </div>
 <h2 id="variable-spindle-speed-control">Variable Spindle Speed Control</h2>
-<p>This feature is enabled by default, and will adjust the spindle speed up and down within a small range to avoid resonance building up between the work-piece and tool. Disabling this is likely to have a negative impact on machining quality, but the settings can be tweaked through the post-processor properties and it can also be turned on and off and configured for each operation.</p>
+<p>This feature is enabled by default, and will adjust the spindle speed up and down within a small range to avoid resonance building up between the work-piece and tool. Disabling this is likely to have a negative impact on machining quality, but the settings can be tweaked through the post-processor properties and it can also be turned on and off and configured for each operation when using the Fusion360 post-processor.</p>
 <p>When <abbr title="Variable Spindle Speed Control">VSSC</abbr> is active, you may be able to hear the spindle speeding up and slowing down on a regular interval. This is intended.</p>
-<p>When <abbr title="Variable Spindle Speed Control">VSSC</abbr> is enabled, it has a <code>Period</code> (<code>P...</code>) and a <code>Variance</code> (<code>V...</code>).</p>
-<p><abbr title="Variable Spindle Speed Control">VSSC</abbr> adjusts the spindle speed around the target RPM in a wave, where the peak of the wave is half the Variance above the target RPM and the trough of the wave is half the Variance below the target RPM.</p>
-<p>The Period is the length of one full wavelength, so a change in speed from the target RPM up to the peak RPM, down to the trough RPM and back to the target RPM will take <code>P...</code> milliseconds.</p>
+<p><abbr title="Variable Spindle Speed Control">VSSC</abbr> has a <code>Period</code> (<code>P...</code>) and a <code>Variance</code> (<code>V...</code>) - the spindle speed is adjusted around the target RPM in a wave, where the peak of the wave is half the Variance above the target RPM and the trough of the wave is half the Variance below the target RPM.</p>
+<p>The Period is the length of one full wavelength, or in other words, a change in speed from the target RPM up to the peak RPM, down to the trough RPM and back to the target RPM will take <code>P...</code> milliseconds.</p>
 
 
 
