@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../img/millennium-machines-icon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.16">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bcfcd587.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1432,7 +1432,7 @@ Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, a
 ...
 </code></pre></div>
 <h3 id="freecad">FreeCAD</h3>
-<p>The FreeCAD post-processor supports most of the functionality of the Fusion360 post-processor except low-memory mode (as it already linearises arc moves), and per-operation support for changing post-processor options (which is a limitation of FreeCAD and can be worked around by using multiple Path Jobs).</p>
+<p>The FreeCAD post-processor supports most of the functionality of the Fusion360 post-processor except low-memory mode (as FreeCAD itself already linearises arc moves), and per-operation support for changing post-processor options (which is a limitation of FreeCAD and can be worked around by using multiple Path Jobs).</p>
 <p>One of the big advantages of using FreeCAD is not having any limitations on the number of tools that can be used in a single exported file, and no modification of your rapid speeds like in Fusion360.</p>
 <p>The FreeCAD post-processor can be configured in the Job using the following command-line options, but defaults to the same settings as the Fusion360 post-processor.</p>
 <div class="highlight"><pre><span></span><code>usage:<span class="w"> </span>MillenniumOS<span class="w"> </span>v0.2.1-rc1-dirty<span class="w"> </span><span class="o">[</span>-h<span class="o">]</span><span class="w"> </span><span class="o">[</span>--show-editor<span class="w"> </span><span class="p">|</span><span class="w"> </span>--no-show-editor<span class="o">]</span>
@@ -1485,6 +1485,12 @@ options:
 <p>For advanced usage, you can switch the <strong>"<abbr title="Work Co-ordinate System">WCS</abbr> Origin Probing Mode"</strong> to <strong>"None"</strong>, and this will not automatically trigger a probing cycle of each <abbr title="Work Co-ordinate System">WCS</abbr>, either at the beginning of the job or just prior to switching into the <abbr title="Work Co-ordinate System">WCS</abbr>. You will need to either set the <abbr title="Work Co-ordinate System">WCS</abbr> origin manually or Use the features of your CAM or post-processor to inject probing cycle calls where necessary.</p>
 <p>When a probe cycle is triggered, you will see the following dialog box, which allows you to select the probing cycle that you would like to use to zero the <abbr title="Work Co-ordinate System">WCS</abbr> in question.</p>
 <p><img alt="MillenniumOS probe cycle selection dialog box" class="shadow-dark" src="../../img/mos_usage_step_5.png" /></p>
+<!--
+    NOTE: Headings in this section at depth 3 create anchors that are linked to by
+    dialogs in MillenniumOS on RRF itself. DO NOT CHANGE THESE HEADINGS UNLESS THE
+    LINKS IN THE SOURCE HAVE BEEN UPDATED FIRST!
+-->
+
 <h3 id="vise-corner">Vise Corner</h3>
 <p>Vise corner is selected by default, as it is likely to be the most-used probing cycle type. With a single probe cycle, it sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X, Y and Z axes to the top surface of an outside corner of a part.</p>
 <div class="admonition note">
