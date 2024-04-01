@@ -1,10 +1,7 @@
 # Installing MillenniumOS
 
-!!! warning "Unreleased Software"
-    MillenniumOS is currently not released publicly. We are managing the release with a small number of people who have built their machines both from the reference design and from the LDO kit, and are helping to test.
-
-    We hope to release MillenniumOS soon but we must also bear in mind that this software will be used by machining novices, so it needs to be safe from the first click.
-
+!!! warning "Beta Software"
+    MillenniumOS is currently in early public release. It has been tested by early LDO kit owners as well as those who have self-sourced their Milos, and members of the Millennium Machines development team. Please expect bugs and keep a hand near your emergency stop until you are happy that you understand how the system works.
 
 MillenniumOS for RRF is distributed as a **single Zip file** that contains everything needed to understand and support our custom functionality and gcode dialect.
 
