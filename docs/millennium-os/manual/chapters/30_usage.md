@@ -6,7 +6,7 @@ That said, there are a number of different probing methods, and the post-process
 
 ## Post-Processor
 
-The MillenniumOS post-processor is relatively simple - rather than outputting any particularly complex gcode sequences to perform tool changes or probing cycles, it relies on the knowledge that the firmware (RRF, and therefore MillenniumOS macros running on top of it) are best-placed to implement these in a safe manner. The gcode is designed to be simple to read and well commented, so for those of us of a less-trusting nature, it should be easy enough to open in a text editor and understand what it will command your mill to do.
+The MillenniumOS post-processors are relatively simple - rather than outputting any particularly complex gcode sequences to perform tool changes or probing cycles, they rely on the knowledge that the firmware (RRF, and therefore MillenniumOS macros running on top of it) are best-placed to implement these in a safe manner. The gcode is designed to be simple to read and well commented, so for those of us of a less-trusting nature, it should be easy enough to open in a text editor and understand what it will command your mill to do.
 
 ![Image showing Post-Process tab of a Fusion360 Setup](../img/mos_usage_step_0.png){: .shadow-dark }
 
@@ -115,16 +115,91 @@ Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, a
 ...
 ```
 
+### FreeCAD
+
+The FreeCAD post-processor supports most of the functionality of the Fusion360 post-processor except low-memory mode (as FreeCAD itself already linearises arc moves), and per-operation support for changing post-processor options (which is a limitation of FreeCAD and can be worked around by using multiple Path Jobs).
+
+One of the big advantages of using FreeCAD is not having any limitations on the number of tools that can be used in a single exported file, and no modification of your rapid speeds like in Fusion360.
+
+The FreeCAD post-processor can be configured in the Job using the following command-line options, but defaults to the same settings as the Fusion360 post-processor.
+
+```output
+usage: MillenniumOS v0.2.1-rc2 [-h] [--show-editor | --no-show-editor]
+                               [--output-job-setup | --no-output-job-setup]
+                               [--output-machine | --no-output-machine]
+                               [--output-version | --no-output-version]
+                               [--output-tools | --no-output-tools]
+                               [--home-before-start | --no-home-before-start]
+                               [--probe-at-start | --probe-on-change | --no-probe]
+                               [--vssc-period VSSC_PERIOD]
+                               [--vssc-variance VSSC_VARIANCE]
+                               [--vssc | --no-vssc]
+
+MillenniumOS v0.2.1-rc2 Post Processor for FreeCAD
+
+options:
+  -h, --help            show this help message and exit
+  --show-editor, --no-show-editor
+                        Show gcode in FreeCAD Editor before saving to file.
+  --output-job-setup, --no-output-job-setup
+                        When enabled, the post-processor will output
+                        supplemental commands to make sure the machine is
+                        properly configured before starting a job. These
+                        commands include homing the machine, probing and
+                        zeroing any used WCSs. Individual supplemental
+                        commands can be enabled, disabled and configured
+                        separately but disabling this allows advanced
+                        operators to setup the machine for the job using their
+                        own workflow, while still outputting known-good
+                        operation gcode from this post.
+  --output-machine, --no-output-machine
+                        Output machine settings header.
+  --output-version, --no-output-version
+                        Output version details header.
+  --output-tools, --no-output-tools
+                        Output tool details. Disabling this will make tool
+                        changes much harder!
+  --home-before-start, --no-home-before-start
+                        When enabled, machine will home in X, Y and Z
+                        directions prior to executing any operations.
+  --probe-at-start      When enabled, MillenniumOS will probe a work-piece in
+                        each used WCS prior to executing any operations.
+  --probe-on-change     When enabled, MillenniumOS will probe a work-piece
+                        just prior to switching into each used WCS.
+  --no-probe
+  --vssc-period VSSC_PERIOD
+                        Period over which RPM is varied up and down when VSSC
+                        is enabled, in milliseconds.
+  --vssc-variance VSSC_VARIANCE
+                        Variance around target RPM to vary Spindle speed when
+                        VSSC is enabled, in RPM.
+  --vssc, --no-vssc     When enabled, spindle speed is varied between an upper
+                        and lower limit surrounding the requested RPM which
+                        helps to avoid harmonic resonance between tool and
+                        work piece.
+```
+
+---
+
 ## Probing
 
-Unless you have a paid Fusion360 license, there is no way to tell (or for Fusion360 to *know*) how to probe a work-piece. Different probing operations should be used based on the shape and rotation of the stock, and the operation in question. For this reason, you will be *prompted in RRF* to select a probe cycle type when a probe cycle is requested.
+One of the fundamental parts of setting up your job is identifying the origin point of the work co-ordinate system that your job will run in. How this is done depends on the shape of your stock, the design of the item you are planning to machine, and the order of the operations that will be executed on it.
 
-If you have a paid Fusion360 license, you can switch **"WCS Origin Probing Mode"** in the **"Post properties"** to **"None (Expert  Mode)"** and then configure the relevant probing cycle under the **"Inspection"** tab of the **"MANUFACTURE"** workbench. Please note this is **currently untested**. You can also use this mode if you want to perform your probing manually, before running the gcode file. You can use the Macro menu to run the relevant MillenniumOS probing cycle and zero the WCS that will be used, and then run the file from the Jobs section of DWC.
+This is not a decision that MillenniumOS can make for you automatically, but it can help you by automating the process of probing the origin of the WCS based on information you give it.
+
+During the execution of a job, and with default post-processor settings, you will be asked just prior to switching into each WCS to probe the origin of that WCS if it is not already set. MillenniumOS will give you a choice of probing cycles to choose from, which are described below. You can pick one or more of these options in sequence to probe the origin of your work-piece in all 3 axes.
+
+For advanced usage, you can switch the **"WCS Origin Probing Mode"** to **"None"**, and this will not automatically trigger a probing cycle of each WCS, either at the beginning of the job or just prior to switching into the WCS. You will need to either set the WCS origin manually or Use the features of your CAM or post-processor to inject probing cycle calls where necessary.
 
 When a probe cycle is triggered, you will see the following dialog box, which allows you to select the probing cycle that you would like to use to zero the WCS in question.
 
 ![MillenniumOS probe cycle selection dialog box](../img/mos_usage_step_5.png){: .shadow-dark }
 
+<!--
+    NOTE: Headings in this section at depth 3 create anchors that are linked to by
+    dialogs in MillenniumOS on RRF itself. DO NOT CHANGE THESE HEADINGS UNLESS THE
+    LINKS IN THE SOURCE HAVE BEEN UPDATED FIRST!
+-->
 
 ### Vise Corner
 
