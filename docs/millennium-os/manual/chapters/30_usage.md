@@ -246,7 +246,14 @@ flowchart TB
 
 ### Circular Bore
 
-Circular bore sets a WCS origin in X and Y axes to the center of a circular bore (hole) in a work-piece. This is usually used to zero off a hole in a partly-machined work-piece, or off a similar feature in a fixture plate.
+Circular bore finds the X and Y co-ordinates of the centre of a circular bore (hole) in a work-piece by moving downwards into the bore from an operator-chosen approximate centre-point, then probing outwards in 3 directions to the approximate radius of the bore, plus an overtravel amount. You will be asked to enter the following information:
+
+* **Bore Diameter** - Approximate diameter of the bore, used to calculate target probe points.
+* **Overtravel** - Added to the bore diameter, accounting for any innaccuracy in the operator-chosen centre-point of the bore. If the probe is not activated after travelling `radius + overtravel` from the operator-chosen centre-point of the bore then the probe cycle will return an error.
+* **Approximate Centre-Point** - You will be prompted to jog the probe or datum tool over the approximate centre-point of the bore.
+* **Probe Depth** - The depth from the operator-chosen centre-point to descend to, before moving outwards to detect the bore circumference.
+
+Circular bore sets a WCS origin in X and Y axes to the centre of the bore. This is usually used to zero off a hole in a partly-machined work-piece, or off a similar feature in a fixture plate.
 
 ```mermaid
 flowchart TB
@@ -262,7 +269,7 @@ flowchart TB
     subgraph P3[Probe 3]
         6(Probe outwards to bore radius at 240 degrees)
     end
-    7(Move to bore center X,Y) -->
+    7(Move to bore centre X,Y) -->
     8(Move up to starting height)
 
     1 --> P1 --> P2 --> P3 --> 7
@@ -270,7 +277,17 @@ flowchart TB
 
 ### Circular Boss
 
-Circular boss sets a WCS origin in X and Y axes to the center of a circular boss (protruding feature) in a work-piece. This can be used to zero to the center of a circular work-piece, or a previously-machined circular feature that protrudes from the work-piece surface.
+Circular boss finds the X and Y co-ordinates of the centre of a circular boss (protruding feature) on a work-piece by moving outside the expected diameter of the boss by the clearance distance, then descending to a probing depth from the current Z position and probing back towards the approximate centre of the boss until the probe is triggered.
+
+It then backs off, lifts up above the top surface of the boss and repeats this cycle in another 2 locations around the boss to generate a centre point. You will be asked to enter the following information:
+
+* **Boss Diameter** - Approximate diameter of the boss, used to calculate start and target probe points.
+* **Clearance** - Added to the boss radius, this is how far the probe cycle will move outside of the expected surface of the boss before probing back towards the surface.
+* **Overtravel** - Subtracted from the boss radius, accounting for any innaccuracy in the operator-chosen centre-point of the boss. If the probe is not activated after travelling `clearance + overtravel` towards the operator-chosen centre-point of the boss from the starting location, then the probe cycle will return an error.
+* **Approximate Centre-Point** - You will be prompted to jog the probe or datum tool over the approximate centre-point of the boss.
+* **Probe Depth** - The depth from the operator-chosen centre-point to descend to, after moving outwards to each boss probe location, before probing back towards the centre-point.
+
+Circular boss sets a WCS origin in X and Y axes to the centre of the boss. This can be used to zero to the centre of a circular work-piece, or a previously-machined circular feature that protrudes from the work-piece surface.
 
 ```mermaid
 flowchart TB
@@ -292,14 +309,14 @@ flowchart TB
         11(Probe inwards to boss radius at 240 degrees)
     end
     12(Move up to starting height) -->
-    13(Move to boss center X,Y)
+    13(Move to boss centre X,Y)
 
     P1 --> 4 --> P2 --> 8 --> P3 --> 12
 ```
 
 ### Rectangle Pocket
 
-Rectangle pocket sets a WCS origin in X and Y axes to the center of a rectangular pocket (subtractive feature) in a work-piece. This is likely to be a previously machined feature. This can be used on pockets that have corner radiuses in X and Y, as long as the clearance distance is higher than the corner radius (so the probe is only triggering against 'flat' surfaces).
+Rectangle pocket sets a WCS origin in X and Y axes to the centre of a rectangular pocket (subtractive feature) in a work-piece. This is likely to be a previously machined feature. This can be used on pockets that have corner radiuses in X and Y, as long as the clearance distance is higher than the corner radius (so the probe is only triggering against 'flat' surfaces).
 
 ```mermaid
 flowchart TB
@@ -316,7 +333,7 @@ flowchart TB
         8(Probe inwards of back left corner) -->
         9(Probe inwards of back right corner)
     end
-    10(Move to rectangle pocket center X,Y) -->
+    10(Move to rectangle pocket centre X,Y) -->
     11(Move up to starting height)
 
     1 --> A1 --> A2 --> 10
@@ -324,7 +341,7 @@ flowchart TB
 
 ### Rectangle Block
 
-Rectangle block sets a WCS origin in X and Y axes to the center of a rectangular block (protruding feature or a rectangular work-piece itself). This probing cycle is additionally useful for measurement, as it can be used to calibrate touch probes or accurately measure the dimensions of a work-piece.
+Rectangle block sets a WCS origin in X and Y axes to the centre of a rectangular block (protruding feature or a rectangular work-piece itself). This probing cycle is additionally useful for measurement, as it can be used to calibrate touch probes or accurately measure the dimensions of a work-piece.
 
 ```mermaid
 flowchart TB
@@ -353,7 +370,7 @@ flowchart TB
         16(Probe inwards of rear right corner) -->
         17(Move up to starting height)
     end
-    18(Move to rectangle block center X,Y)
+    18(Move to rectangle block centre X,Y)
 
     2 --> A1 --> 6
     7 --> A2 --> 10 --> A3 --> 14 --> A4 --> 18

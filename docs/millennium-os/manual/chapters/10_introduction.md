@@ -6,7 +6,10 @@ The "OS" stands for "Operations System" rather than "Operat*ing* System" - becau
 
 The aim of MillenniumOS is to build on the usability and configurability of RRF, adding functionality required for efficient and repeatable machining that you would otherwise have to write yourself if using vanilla RRF.
 
-We hope that MillenniumOS makes Millennium Machines the simplest route for novice machinists to make their first cuts confidently and safely - that said, MillenniumOS *is not entirely specific to our machines* - it should be possible to use MillenniumOS out-of-the-box on any 3-axis, moving-table CNC machine with a single spindle that runs RRF **3.5+**, as long as the axis minima and maxima are in the same directions.
+We hope that MillenniumOS makes Millennium Machines the simplest route for novice machinists to make their first cuts confidently and safely - that said, MillenniumOS *is not specific to our machines* - it should be possible to use MillenniumOS out-of-the-box on any 3-axis, moving-table CNC machine with a single spindle that runs RRF **3.5+**, as long as the axis minima and maxima are in the same directions
+
+!!! tip
+    On machines that do not match the design or layout above, it should still be possible to use MillenniumOS with minimal changes - but corner and surface names may be in the wrong order, since these are specific to the directions of the axes on the machine. These can be changed with minimal impact.
 
 MillenniumOS is multiple things:
 
