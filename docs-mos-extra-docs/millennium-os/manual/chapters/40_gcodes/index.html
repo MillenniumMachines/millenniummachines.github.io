@@ -1345,6 +1345,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g6512-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6512 - PROBE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g65121-automated-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6512.1 - AUTOMATED PROBE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g65122-manual-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6512.2 - MANUAL PROBE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1938,6 +1980,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g6512-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6512 - PROBE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g65121-automated-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6512.1 - AUTOMATED PROBE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g65122-manual-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6512.2 - MANUAL PROBE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2262,6 +2346,30 @@ Using the provided width, height, clearance and starting location, we probe inwa
 <p>With <code>Q0</code> (the default), you must also pass <code>H</code> and <code>I</code> - which specify the approximate X and Y dimensions of the block in millimeters.</p>
 <p>In both modes, you can specify <code>O</code>, the overtravel distance, and <code>T</code>, the clearance distance.</p>
 <p><code>R0</code> suppresses reporting of the probe results, and <code>W</code> represents the WCS offset to set the origin on, if passed.</p>
+<h3 id="base">Base</h3>
+<h4 id="g6512-probe"><code>G6512</code> - PROBE</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">G6512 </span>Lnnn [Inn] [Xnnn] [Ynnn] [Znnn] [Jnnn] [Knnn]
+</code></pre></div>
+<p><code>G6512</code> is the underlying probing macro called by the higher-level probing cycle macros. It must be passed a target position in at least one axis (<code>X</code>, <code>Y</code> and <code>Z</code>), and a start position in at least the <code>Z</code> axes (<code>L</code>). It may also be passed a start position in <code>X</code> or <code>Y</code> axes. The unspecified axes for both start and target positions will default to the current machine co-ordinates.</p>
+<p>If <code>I</code> is not specified, the macro will trigger a guided manual probing cycle similar to the RRF jogging window, but only able to move towards or away from the target position. When complete, <code>G6512</code> will update the probe position in the <code>mosPCX</code>, <code>mosPCY</code> and <code>mosPCZ</code> global variables, adjusting for tool radius and deflection.</p>
+<h4 id="g65121-automated-probe"><code>G6512.1</code> - AUTOMATED PROBE</h4>
+<div class="highlight"><pre><span></span><code>G6512.1 Inn [Xnnn] [Ynnn] [Znnn] [Rnn]
+</code></pre></div>
+<p>Probe a single point using an installed and connected touch probe. Target co-ordinates are specified using <code>X</code>, <code>Y</code> and <code>Z</code> and <code>R</code> can be used to override the number of retries rather than using the default value for the probe.</p>
+<p>Probe position will be reported in the <code>mosPCX</code>, <code>mosPCY</code> and <code>mosPCZ</code> global variables, with no compensation for tool radius or deflection. Probe variance will be stored in the <code>mosPVX</code>, <code>mosPVY</code> and <code>mosPVZ</code> variables.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DO NOT</strong> call this macro directly - use <code>G6512</code>.</p>
+</div>
+<h4 id="g65122-manual-probe"><code>G6512.2</code> - MANUAL PROBE</h4>
+<div class="highlight"><pre><span></span><code>G6512.1 [Xnnn] [Ynnn] [Znnn]
+</code></pre></div>
+<p>Probe a single point using a manual jogging process. Target co-ordinates are specified using <code>X</code>, <code>Y</code> and <code>Z</code>.</p>
+<p>Probe position will be reported in the <code>mosPCX</code>, <code>mosPCY</code> and <code>mosPCZ</code> global variables, with no compensation for tool radius or deflection. Probe variance will be zero.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DO NOT</strong> call this macro directly - use <code>G6512</code>.</p>
+</div>
 <hr />
 <h2 id="tool-management">Tool Management</h2>
 <h3 id="m4000-define-tool"><code>M4000</code> - DEFINE TOOL</h3>
