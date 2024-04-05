@@ -8,7 +8,7 @@
 ### `G27` - PARK
 
 ```gcode
-G27 [Z0|Z1]
+G27 [Zn]
 ```
 
 Used to park the spindle in a safe location, by default it will move the spindle to the top of the Z axis, trigger an `M5.9` (stop spindle and wait for spin-down), and then move the table to the centre of the X axis and at the front (towards the operator) of the Y axis.
@@ -98,8 +98,16 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 
 ##### `G6500.1` - BORE - EXECUTE
 
+```gcode
+G6500.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Onnn] [R0]
+```
+
 Calculates the center of a bore and its radius, by running 3 probes outwards from the chosen starting position towards the edge of the bore. The overtravel is added to the radius of the bore and this sets the distance moved from the
 center point in each of the 3 directions before the probe cycle will error if it does not trigger.
+
+Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `H` specifies the approximate diameter of the bore, `O` specifies the overtravel distance and when specified, `R0` suppresses reporting of the probe results.
+
+`W` represents the WCS offset to set the origin on, if passed.
 
 #### `G6501` - BOSS
 
@@ -114,7 +122,16 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 
 ##### `G6501.1` - BOSS - EXECUTE
 
+```gcode
+G6501.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Tnnn] [Onnn] [R0]
+```
+
 Calculates the center of a boss and its' radius, by running 3 probes inwards towards the operator-chosen center of the bore. The overtravel is subtracted from the radius of the boss to identify the target location of each probe, and the clearance is added to the radius of the boss to identify the starting locations.
+
+Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `H` specifies the approximate diameter of the bore, `O` specifies the overtravel distance, `T` the clearance distance, and when specified, `R0` suppresses reporting of the probe results.
+
+`W` represents the WCS offset to set the origin on, if passed.
+
 
 #### `G6502` - RECTANGLE POCKET
 
@@ -128,8 +145,16 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 
 ##### `G6502.1` - RECTANGLE POCKET - EXECUTE
 
+```gcode
+G6502.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
+```
+
 Calculates the center of a rectangle pocket, its surface angles, rotation angle (in relation to the X axis) and its dimensions based on 8 different probes.
 Using the provided width, height, clearance and starting location, we probe outwards from inside the expected edges of each surface by the clearance distance. We probe each surface twice to get a surface angle, and validate that the pocket itself is both rectangular and how far it is rotated from the X axis.
+
+Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `H` and `I` specify the approximate X and Y dimensions of the pocket, `O` specifies the overtravel distance, `T` the clearance distance, and when specified, `R0` suppresses reporting of the probe results.
+
+`W` represents the WCS offset to set the origin on, if passed.
 
 #### `G6503` - RECTANGLE BLOCK
 
@@ -143,8 +168,17 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 
 ##### `G6503.1` - RECTANGLE BLOCK - EXECUTE
 
+```gcode
+G6503.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
+```
+
 Calculates the center of a rectangle block, its surface angles, rotation angle (in relation to the X axis) and its dimensions based on 8 different probes.
 Using the provided width, height, clearance and starting location, we probe inwards from the expected edges of each surface by the clearance distance. We probe each surface twice to get a surface angle, and validate that the block itself is both rectangular and how far it is rotated from the X axis.
+
+Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `H` and `I` specify the approximate X and Y dimensions of the block, `O` specifies the overtravel distance, `T` the clearance distance, and when specified, `R0` suppresses reporting of the probe results.
+
+`W` represents the WCS offset to set the origin on, if passed.
+
 
 #### `G6504` - WEB X
 
@@ -174,7 +208,21 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 
 ##### `G6508.1` - OUTSIDE CORNER - EXECUTE
 
+```gcode
+G6508.1 [Wnn] Jnnn Knnn Lnnn Nn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
+```
+
 Calculates the corner position of a square corner on a workpiece in X and Y, as well as calculating the rotation angle and corner angle of the item. Using the provided width, height, clearance, overtravel and starting location, we move outwards along each surface forming the corner, probing at 2 locations on each surface to find their angles, and then calculate where these surfaces intersect at the relevant corner.
+
+Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `N` indicates the corner number to probe, where the Front Left corner is `0` and the number increases anti-clockwise, with the Back Left corner at `3`.
+
+`Q` identifies the mode - with `Q1`, quick mode is enabled, and no `H` or `I` parameter needs to be passed. Only a single probe point will be taken on each surface of the corner.
+
+With `Q0` (the default), you must also pass `H` and `I` - which specify the approximate X and Y dimensions of the block in millimeters.
+
+In both modes, you can specify `O`, the overtravel distance, and `T`, the clearance distance.
+
+`R0` suppresses reporting of the probe results, and `W` represents the WCS offset to set the origin on, if passed.
 
 #### `G6509` - INSIDE CORNER
 
@@ -194,7 +242,15 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 
 ##### `G6510.1` - SINGLE SURFACE - EXECUTE
 
+```gcode
+G6510.1 [Wnn] Jnnn Knnn Lnnn Hn Innn [Onnn]
+```
+
 Calculates the X, Y or Z co-ordinate of a surface using the provided starting location, surface number, probing distance and depth.
+
+Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `H` specifies the axis to probe on, starting at 0 for Left, 1 for Right, 2 for Front, 3 for Back, and 4 for Top. `I` specifies the distance to probe towards the surface, and `O` specifies the overtravel distance. `R0` suppresses reporting of the probe results.
+
+`W` represents the WCS offset to set the origin on, if passed.
 
 #### `G6511` - PROBE REFERENCE SURFACE
 
@@ -214,7 +270,23 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 
 ##### `G6520.1` - VISE CORNER - EXECUTE
 
+```gcode
+G6520.1 [Wnn] Jnnn Knnn Lnnn Nn Pnnn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
+```
+
 Executes a Vise Corner probe using the parameters gathered by the operator. Runs a Z probe first, then each corner probe after and sets the WCS origin of all 3 axes at once.
+
+Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `N` indicates the corner number to probe, where the Front Left corner is `0` and the number increases anti-clockwise, with the Back Left corner at `3`.
+
+`P` indicates the depth to probe the corner surfaces at relative to the probed top surface.
+
+`Q` identifies the mode - with `Q1`, quick mode is enabled, and no `H` or `I` parameter needs to be passed. Only a single probe point will be taken on each surface of the corner.
+
+With `Q0` (the default), you must also pass `H` and `I` - which specify the approximate X and Y dimensions of the block in millimeters.
+
+In both modes, you can specify `O`, the overtravel distance, and `T`, the clearance distance.
+
+`R0` suppresses reporting of the probe results, and `W` represents the WCS offset to set the origin on, if passed.
 
 ---
 
