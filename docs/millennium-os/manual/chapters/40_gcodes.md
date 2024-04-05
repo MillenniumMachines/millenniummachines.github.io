@@ -288,6 +288,45 @@ In both modes, you can specify `O`, the overtravel distance, and `T`, the cleara
 
 `R0` suppresses reporting of the probe results, and `W` represents the WCS offset to set the origin on, if passed.
 
+### Base
+
+#### `G6512` - PROBE
+
+```gcode
+G6512 Lnnn [Inn] [Xnnn] [Ynnn] [Znnn] [Jnnn] [Knnn]
+```
+
+`G6512` is the underlying probing macro called by the higher-level probing cycle macros. It must be passed a target position in at least one axis (`X`, `Y` and `Z`), and a start position in at least the `Z` axes (`L`). It may also be passed a start position in `X` or `Y` axes. The unspecified axes for both start and target positions will default to the current machine co-ordinates.
+
+If `I` is not specified, the macro will trigger a guided manual probing cycle similar to the RRF jogging window, but only able to move towards or away from the target position. When complete, `G6512` will update the probe position in the `mosPCX`, `mosPCY` and `mosPCZ` global variables, adjusting for tool radius and deflection.
+
+#### `G6512.1` - AUTOMATED PROBE
+
+```gcode
+G6512.1 Inn [Xnnn] [Ynnn] [Znnn] [Rnn]
+```
+
+Probe a single point using an installed and connected touch probe. Target co-ordinates are specified using `X`, `Y` and `Z` and `R` can be used to override the number of retries rather than using the default value for the probe.
+
+Probe position will be reported in the `mosPCX`, `mosPCY` and `mosPCZ` global variables, with no compensation for tool radius or deflection. Probe variance will be stored in the `mosPVX`, `mosPVY` and `mosPVZ` variables.
+
+!!! warning
+    **DO NOT** call this macro directly - use `G6512`.
+
+#### `G6512.2` - MANUAL PROBE
+
+```gcode
+G6512.1 [Xnnn] [Ynnn] [Znnn]
+```
+
+Probe a single point using a manual jogging process. Target co-ordinates are specified using `X`, `Y` and `Z`.
+
+Probe position will be reported in the `mosPCX`, `mosPCY` and `mosPCZ` global variables, with no compensation for tool radius or deflection. Probe variance will be zero.
+
+
+!!! warning
+    **DO NOT** call this macro directly - use `G6512`.
+
 ---
 
 ## Tool Management
