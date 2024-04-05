@@ -1123,9 +1123,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#g5011-boss-execute" class="md-nav__link">
+  <a href="#g65011-boss-execute" class="md-nav__link">
     <span class="md-ellipsis">
-      G501.1 - BOSS - EXECUTE
+      G6501.1 - BOSS - EXECUTE
     </span>
   </a>
   
@@ -1716,9 +1716,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#g5011-boss-execute" class="md-nav__link">
+  <a href="#g65011-boss-execute" class="md-nav__link">
     <span class="md-ellipsis">
-      G501.1 - BOSS - EXECUTE
+      G6501.1 - BOSS - EXECUTE
     </span>
   </a>
   
@@ -2120,7 +2120,7 @@
 </div>
 <h2 id="misc">Misc</h2>
 <h3 id="g27-park"><code>G27</code> - PARK</h3>
-<div class="highlight"><pre><span></span><code><span class="nb">G27 </span>[Z0|Z1]
+<div class="highlight"><pre><span></span><code><span class="nb">G27 </span>[Zn]
 </code></pre></div>
 <p>Used to park the spindle in a safe location, by default it will move the spindle to the top of the Z axis, trigger an <code>M5.9</code> (stop spindle and wait for spin-down), and then move the table to the centre of the X axis and at the front (towards the operator) of the Y axis.</p>
 <p>If called with the <code>Z1</code> argument, it will only raise and stop the spindle - the table location will not be changed.</p>
@@ -2156,30 +2156,58 @@
 <h4 id="g6600-probe-workpiece"><code>G6600</code> - PROBE WORKPIECE</h4>
 <div class="highlight"><pre><span></span><code><span class="nb">G6600 </span>[Wnn]
 </code></pre></div>
-<p>Called by the post-processor to indicate that workpiece should be probed to set WCS origin, if specified with the <code>W</code> parameter then this will be the WCS offset that will be zeroed, rather than asking the operator.</p>
+<p>Called by the post-processor to indicate that workpiece should be probed to set WCS origin, if the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed, rather than asking the operator.</p>
 <p>If the post knows what <em>type</em> of workpiece probe should be executed, it can call the specific probing operation directly (e.g. <code>G6500</code>, <code>G6501</code> etc) and then set the WCS using <code>G10</code>. Calling <code>G6600</code> will prompt the operator to select a probing methodology based on their knowledge of the work piece.</p>
 <h3 id="two-axis">Two Axis</h3>
 <h4 id="g6500-bore"><code>G6500</code> - BORE</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">G6500 </span>[Wnn]
+</code></pre></div>
 <p>Guided bore probe, prompts the user for approximate diameter, overtravel, approximate center position and probe depth.
 Executes <code>G6500.1</code> with the relevant parameters to run the actual probe.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65001-bore-execute"><code>G6500.1</code> - BORE - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code>G6500.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Onnn] [R0]
+</code></pre></div>
 <p>Calculates the center of a bore and its radius, by running 3 probes outwards from the chosen starting position towards the edge of the bore. The overtravel is added to the radius of the bore and this sets the distance moved from the
 center point in each of the 3 directions before the probe cycle will error if it does not trigger.</p>
+<p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>H</code> specifies the approximate diameter of the bore, <code>O</code> specifies the overtravel distance and when specified, <code>R0</code> suppresses reporting of the probe results.</p>
+<p><code>W</code> represents the WCS offset to set the origin on, if passed.</p>
 <h4 id="g6501-boss"><code>G6501</code> - BOSS</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">G6501 </span>[Wnn]
+</code></pre></div>
 <p>Guided boss probe, prompts the user for approximate diameter, clearance, overtravel, approximate center position and probe depth.
 Executes <code>G6501.1</code> with the relevant parameters to run the actual probe.</p>
-<h5 id="g5011-boss-execute"><code>G501.1</code> - BOSS - EXECUTE</h5>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
+<h5 id="g65011-boss-execute"><code>G6501.1</code> - BOSS - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code>G6501.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Tnnn] [Onnn] [R0]
+</code></pre></div>
 <p>Calculates the center of a boss and its' radius, by running 3 probes inwards towards the operator-chosen center of the bore. The overtravel is subtracted from the radius of the boss to identify the target location of each probe, and the clearance is added to the radius of the boss to identify the starting locations.</p>
+<p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>H</code> specifies the approximate diameter of the bore, <code>O</code> specifies the overtravel distance, <code>T</code> the clearance distance, and when specified, <code>R0</code> suppresses reporting of the probe results.</p>
+<p><code>W</code> represents the WCS offset to set the origin on, if passed.</p>
 <h4 id="g6502-rectangle-pocket"><code>G6502</code> - RECTANGLE POCKET</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">G6502 </span>[Wnn]
+</code></pre></div>
 <p>Guided rectangle pocket probe, prompts the user for an approximate width (X), length (Y), overtravel and clearance, an approximate center position and probe depth. Executes <code>G6502.1</code> with the relevant parameters to run the actual probe.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65021-rectangle-pocket-execute"><code>G6502.1</code> - RECTANGLE POCKET - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code>G6502.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
+</code></pre></div>
 <p>Calculates the center of a rectangle pocket, its surface angles, rotation angle (in relation to the X axis) and its dimensions based on 8 different probes.
 Using the provided width, height, clearance and starting location, we probe outwards from inside the expected edges of each surface by the clearance distance. We probe each surface twice to get a surface angle, and validate that the pocket itself is both rectangular and how far it is rotated from the X axis.</p>
+<p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>H</code> and <code>I</code> specify the approximate X and Y dimensions of the pocket, <code>O</code> specifies the overtravel distance, <code>T</code> the clearance distance, and when specified, <code>R0</code> suppresses reporting of the probe results.</p>
+<p><code>W</code> represents the WCS offset to set the origin on, if passed.</p>
 <h4 id="g6503-rectangle-block"><code>G6503</code> - RECTANGLE BLOCK</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">G6503 </span>[Wnn]
+</code></pre></div>
 <p>Guided rectangle block probe, prompts the user for an approximate width (X), length (Y), overtravel and clearance, an approximate center position and probe depth. Executes <code>G6503.1</code> with the relevant parameters to run the actual probe.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65031-rectangle-block-execute"><code>G6503.1</code> - RECTANGLE BLOCK - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code>G6503.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
+</code></pre></div>
 <p>Calculates the center of a rectangle block, its surface angles, rotation angle (in relation to the X axis) and its dimensions based on 8 different probes.
 Using the provided width, height, clearance and starting location, we probe inwards from the expected edges of each surface by the clearance distance. We probe each surface twice to get a surface angle, and validate that the block itself is both rectangular and how far it is rotated from the X axis.</p>
+<p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>H</code> and <code>I</code> specify the approximate X and Y dimensions of the block, <code>O</code> specifies the overtravel distance, <code>T</code> the clearance distance, and when specified, <code>R0</code> suppresses reporting of the probe results.</p>
+<p><code>W</code> represents the WCS offset to set the origin on, if passed.</p>
 <h4 id="g6504-web-x"><code>G6504</code> - WEB X</h4>
 <p>Not implemented.</p>
 <h4 id="g6505-pocket-x"><code>G6505</code> - POCKET X</h4>
@@ -2189,48 +2217,93 @@ Using the provided width, height, clearance and starting location, we probe inwa
 <h4 id="g6507-pocket-y"><code>G6507</code> - POCKET Y</h4>
 <p>Not implemented.</p>
 <h4 id="g6508-outside-corner"><code>G6508</code> - OUTSIDE CORNER</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">G6508 </span>[Wnn]
+</code></pre></div>
 <p>Guided outside corner probe, prompts the user for an approximate width (X) and length (Y) of the 2 surfaces that make up the corner, a clearance and overtravel distance, a probing depth, a starting location and the corner that we want to probe (front left, back right etc). Executes <code>G6508.1</code> with the relevant parameters to run the actual probe.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65081-outside-corner-execute"><code>G6508.1</code> - OUTSIDE CORNER - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code>G6508.1 [Wnn] Jnnn Knnn Lnnn Nn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
+</code></pre></div>
 <p>Calculates the corner position of a square corner on a workpiece in X and Y, as well as calculating the rotation angle and corner angle of the item. Using the provided width, height, clearance, overtravel and starting location, we move outwards along each surface forming the corner, probing at 2 locations on each surface to find their angles, and then calculate where these surfaces intersect at the relevant corner.</p>
+<p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>N</code> indicates the corner number to probe, where the Front Left corner is <code>0</code> and the number increases anti-clockwise, with the Back Left corner at <code>3</code>.</p>
+<p><code>Q</code> identifies the mode - with <code>Q1</code>, quick mode is enabled, and no <code>H</code> or <code>I</code> parameter needs to be passed. Only a single probe point will be taken on each surface of the corner.</p>
+<p>With <code>Q0</code> (the default), you must also pass <code>H</code> and <code>I</code> - which specify the approximate X and Y dimensions of the block in millimeters.</p>
+<p>In both modes, you can specify <code>O</code>, the overtravel distance, and <code>T</code>, the clearance distance.</p>
+<p><code>R0</code> suppresses reporting of the probe results, and <code>W</code> represents the WCS offset to set the origin on, if passed.</p>
 <h4 id="g6509-inside-corner"><code>G6509</code> - INSIDE CORNER</h4>
 <p>Not implemented.</p>
 <h3 id="single-axis">Single Axis</h3>
 <h4 id="g6510-single-surface"><code>G6510</code> - SINGLE SURFACE</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">G6510 </span>[Wnn]
+</code></pre></div>
 <p>Guided single surface probe, which prompts the user for a starting location, overtravel distance, which surface to probe, a maximum probing distance and for X and Y surfaces, a probing depth below the starting location. Can be used to probe the Z height of a workpiece, or a single surface on X or Y if the operator knows these are aligned with the machine axes. This macro only probes a single point so cannot calculate surface angles.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65101-single-surface-execute"><code>G6510.1</code> - SINGLE SURFACE - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code>G6510.1 [Wnn] Jnnn Knnn Lnnn Hn Innn [Onnn]
+</code></pre></div>
 <p>Calculates the X, Y or Z co-ordinate of a surface using the provided starting location, surface number, probing distance and depth.</p>
+<p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>H</code> specifies the axis to probe on, starting at 0 for Left, 1 for Right, 2 for Front, 3 for Back, and 4 for Top. <code>I</code> specifies the distance to probe towards the surface, and <code>O</code> specifies the overtravel distance. <code>R0</code> suppresses reporting of the probe results.</p>
+<p><code>W</code> represents the WCS offset to set the origin on, if passed.</p>
 <h4 id="g6511-probe-reference-surface"><code>G6511</code> - PROBE REFERENCE SURFACE</h4>
 <p>Probes the touch probe reference surface in Z, and sets the touch probe activation point. Will be called automatically when changing to the touch probe with the feature enabled.</p>
 <h3 id="three-axis">Three Axis</h3>
 <h4 id="g6520-vise-corner"><code>G6520</code> - VISE CORNER</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">G6520 </span>[Wnn]
+</code></pre></div>
 <p>Guided probing macro that combines OUTSIDE CORNER and SINGLE SURFACE (Z) macros to zero all 3 axes of a WCS in a single probing operation. This macro prompts the user for the required parameters for the OUTSIDE CORNER macro, as well as a starting location. It calls the macros in sequence, probing the Z surface first before moving outwards and probing each X and Y surface that forms the corner.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65201-vise-corner-execute"><code>G6520.1</code> - VISE CORNER - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code>G6520.1 [Wnn] Jnnn Knnn Lnnn Nn Pnnn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
+</code></pre></div>
 <p>Executes a Vise Corner probe using the parameters gathered by the operator. Runs a Z probe first, then each corner probe after and sets the WCS origin of all 3 axes at once.</p>
+<p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>N</code> indicates the corner number to probe, where the Front Left corner is <code>0</code> and the number increases anti-clockwise, with the Back Left corner at <code>3</code>.</p>
+<p><code>P</code> indicates the depth to probe the corner surfaces at relative to the probed top surface.</p>
+<p><code>Q</code> identifies the mode - with <code>Q1</code>, quick mode is enabled, and no <code>H</code> or <code>I</code> parameter needs to be passed. Only a single probe point will be taken on each surface of the corner.</p>
+<p>With <code>Q0</code> (the default), you must also pass <code>H</code> and <code>I</code> - which specify the approximate X and Y dimensions of the block in millimeters.</p>
+<p>In both modes, you can specify <code>O</code>, the overtravel distance, and <code>T</code>, the clearance distance.</p>
+<p><code>R0</code> suppresses reporting of the probe results, and <code>W</code> represents the WCS offset to set the origin on, if passed.</p>
 <hr />
 <h2 id="tool-management">Tool Management</h2>
 <h3 id="m4000-define-tool"><code>M4000</code> - DEFINE TOOL</h3>
-<p>We need to store additional details about tools that RRF is not currently able to accommodate natively - this includes tool radius and deflection values (for probes). <code>M4000</code> stores these custom values in a global vector that allows us to use them, while configuring RRF with the relevant tool details using <code>M563</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">M4000 </span>Pnn Rnn S&quot;...&quot; [Xnn] [Ynn]
+</code></pre></div>
+<p>We need to store additional details about tools that RRF is not currently able to accommodate natively - this includes tool radius (<code>R</code>) and deflection values for probes (<code>X</code> and <code>Y</code>). Tool index is set using <code>P</code> and description is set using <code>S".."</code>. M4000<code>stores these custom values that allows us to use them, while configuring RRF with the relevant tool details using</code>M563`.</p>
 <h3 id="m4001-forget-tool"><code>M4001</code> - FORGET TOOL</h3>
-<p>Resets our custom tool table and RRF's tool table at the given index.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">M4001 </span>Pnn
+</code></pre></div>
+<p>Remove the tool at index <code>Pnn</code>.</p>
 <h3 id="tn-execute-tool-change"><code>T&lt;N&gt;</code> - EXECUTE TOOL CHANGE</h3>
+<div class="highlight"><pre><span></span><code>Tnn
+</code></pre></div>
 <p>This macro is built in to RRF, using the <code>t{free,pre,post}.g</code> files. If the target tool number is specified, then these files are executed in order. The operator is prompted to change to the correct tool and if this tool is a probe tool, will be asked to verify that the tool is connected by triggering it manually before proceeding.</p>
 <hr />
 <h2 id="spindle-control">Spindle Control</h2>
 <h3 id="spindle-start-stop">Spindle Start / Stop</h3>
 <h4 id="m39-start-spindle-and-wait"><code>M3.9</code> - START SPINDLE AND WAIT</h4>
+<div class="highlight"><pre><span></span><code>M3.9 [Snnnnn] [Pnn] [Dnnn]
+</code></pre></div>
 <p>This macro calls RRF's underlying <code>M3</code> command to start the spindle, but waits after starting the spindle for it to accelerate based on a previously recorded acceleration value. This value will be reduced based on the rpm-change of the spindle so if it is only accelerating to 50% of its maximum speed then <code>M3.9</code> will only wait 50% of the recorded wait value.</p>
+<p>Parameters <code>S</code> and <code>P</code> are passed to the underlying <code>M3</code> command if specified, and parameter <code>D</code>, specified in seconds, will override the wait time that would've otherwise been calculated.</p>
 <p>Additionally, if expert mode is disabled, then this macro will pop up an operator confirmation / warning box when the spindle is going to accelerate from 0 rpm.</p>
 <h4 id="m59-stop-spindle-and-wait"><code>M5.9</code> - STOP SPINDLE AND WAIT</h4>
-<p>Like the <code>M3.9</code> macro above, this macro calls the underlying <code>M5</code> macro and if any spindles were activated, waits for them to stop. As above, the deceleration value will be reduced based on the rpm-change of the spindle.</p>
+<div class="highlight"><pre><span></span><code>M5.9 [Dnnn]
+</code></pre></div>
+<p>Like the <code>M3.9</code> macro above, this macro calls the underlying <code>M5</code> macro and if any spindles were activated, waits for them to stop. As above, the deceleration value will be reduced based on the rpm-change of the spindle. Specifying the <code>D</code> parameter will override the delay time.</p>
 <h3 id="variable-spindle-speed-control">Variable Spindle Speed Control</h3>
 <p>Variable Spindle Speed Control (VSSC) constantly adjusts the speed of the spindle up and down over a set range to avoid resonance between the tool and the workpiece building up at constant RPMs. It can provide a quality boost in situations where resonances would otherwise occur.</p>
 <h4 id="m7000-enable-vssc"><code>M7000</code> - ENABLE VSSC</h4>
-<p>Enable Variable Spindle Speed Control.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">M7000 </span>Pnn Vnn
+</code></pre></div>
+<p>Enable Variable Spindle Speed Control. The <code>P</code> and <code>V</code> parameters must be specified, and these control the period (in milliseconds) and variance (in RPM) of the VSSC function.</p>
 <h4 id="m7001-disable-vssc"><code>M7001</code> - DISABLE VSSC</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">M7001</span>
+</code></pre></div>
 <p>Disable Variable Spindle Speed Control</p>
 <hr />
 <h2 id="debugging">Debugging</h2>
 <h3 id="m7600-output-all-known-variables"><code>M7600</code> - OUTPUT ALL KNOWN VARIABLES</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">M7600 </span>[D1]
+</code></pre></div>
 <p>Sometimes it is necessary to debug MillenniumOS or RRF, and this macro allows outputting the macro variables that MillenniumOS uses in a manner that can be attached to tickets or discord messages to aid debugging. Call it with the <code>D1</code> parameter to enable additional RRF object model output that can help to debug the odder issues.</p>
 
 
