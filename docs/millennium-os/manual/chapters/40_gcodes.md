@@ -79,7 +79,7 @@ Iterates through all configured probes every `D` milliseconds (default 100) chec
 G6600 [Wnn]
 ```
 
-Called by the post-processor to indicate that workpiece should be probed to set WCS origin, if specified with the `W` parameter then this will be the WCS offset that will be zeroed, rather than asking the operator.
+Called by the post-processor to indicate that workpiece should be probed to set WCS origin, if the `W` parameter is set then this will be the WCS offset that will be zeroed, rather than asking the operator.
 
 If the post knows what _type_ of workpiece probe should be executed, it can call the specific probing operation directly (e.g. `G6500`, `G6501` etc) and then set the WCS using `G10`. Calling `G6600` will prompt the operator to select a probing methodology based on their knowledge of the work piece.
 
@@ -87,8 +87,14 @@ If the post knows what _type_ of workpiece probe should be executed, it can call
 
 #### `G6500` - BORE
 
+```gcode
+G6500 [Wnn]
+```
+
 Guided bore probe, prompts the user for approximate diameter, overtravel, approximate center position and probe depth.
 Executes `G6500.1` with the relevant parameters to run the actual probe.
+
+If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
 ##### `G6500.1` - BORE - EXECUTE
 
@@ -97,16 +103,28 @@ center point in each of the 3 directions before the probe cycle will error if it
 
 #### `G6501` - BOSS
 
+```gcode
+G6501 [Wnn]
+```
+
 Guided boss probe, prompts the user for approximate diameter, clearance, overtravel, approximate center position and probe depth.
 Executes `G6501.1` with the relevant parameters to run the actual probe.
 
-##### `G501.1` - BOSS - EXECUTE
+If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
+
+##### `G6501.1` - BOSS - EXECUTE
 
 Calculates the center of a boss and its' radius, by running 3 probes inwards towards the operator-chosen center of the bore. The overtravel is subtracted from the radius of the boss to identify the target location of each probe, and the clearance is added to the radius of the boss to identify the starting locations.
 
 #### `G6502` - RECTANGLE POCKET
 
+```gcode
+G6502 [Wnn]
+```
+
 Guided rectangle pocket probe, prompts the user for an approximate width (X), length (Y), overtravel and clearance, an approximate center position and probe depth. Executes `G6502.1` with the relevant parameters to run the actual probe.
+
+If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
 ##### `G6502.1` - RECTANGLE POCKET - EXECUTE
 
@@ -115,7 +133,13 @@ Using the provided width, height, clearance and starting location, we probe outw
 
 #### `G6503` - RECTANGLE BLOCK
 
+```gcode
+G6503 [Wnn]
+```
+
 Guided rectangle block probe, prompts the user for an approximate width (X), length (Y), overtravel and clearance, an approximate center position and probe depth. Executes `G6503.1` with the relevant parameters to run the actual probe.
+
+If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
 ##### `G6503.1` - RECTANGLE BLOCK - EXECUTE
 
@@ -140,7 +164,13 @@ Not implemented.
 
 #### `G6508` - OUTSIDE CORNER
 
+```gcode
+G6508 [Wnn]
+```
+
 Guided outside corner probe, prompts the user for an approximate width (X) and length (Y) of the 2 surfaces that make up the corner, a clearance and overtravel distance, a probing depth, a starting location and the corner that we want to probe (front left, back right etc). Executes `G6508.1` with the relevant parameters to run the actual probe.
+
+If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
 ##### `G6508.1` - OUTSIDE CORNER - EXECUTE
 
@@ -154,7 +184,13 @@ Not implemented.
 
 #### `G6510` - SINGLE SURFACE
 
+```gcode
+G6510 [Wnn]
+```
+
 Guided single surface probe, which prompts the user for a starting location, overtravel distance, which surface to probe, a maximum probing distance and for X and Y surfaces, a probing depth below the starting location. Can be used to probe the Z height of a workpiece, or a single surface on X or Y if the operator knows these are aligned with the machine axes. This macro only probes a single point so cannot calculate surface angles.
+
+If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
 ##### `G6510.1` - SINGLE SURFACE - EXECUTE
 
@@ -168,7 +204,13 @@ Probes the touch probe reference surface in Z, and sets the touch probe activati
 
 #### `G6520` - VISE CORNER
 
+```gcode
+G6520 [Wnn]
+```
+
 Guided probing macro that combines OUTSIDE CORNER and SINGLE SURFACE (Z) macros to zero all 3 axes of a WCS in a single probing operation. This macro prompts the user for the required parameters for the OUTSIDE CORNER macro, as well as a starting location. It calls the macros in sequence, probing the Z surface first before moving outwards and probing each X and Y surface that forms the corner.
+
+If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
 ##### `G6520.1` - VISE CORNER - EXECUTE
 
@@ -180,13 +222,25 @@ Executes a Vise Corner probe using the parameters gathered by the operator. Runs
 
 ### `M4000` - DEFINE TOOL
 
-We need to store additional details about tools that RRF is not currently able to accommodate natively - this includes tool radius and deflection values (for probes). `M4000` stores these custom values in a global vector that allows us to use them, while configuring RRF with the relevant tool details using `M563`.
+```gcode
+M4000 Pnn Rnn S"..." [Xnn] [Ynn]
+```
+
+We need to store additional details about tools that RRF is not currently able to accommodate natively - this includes tool radius (`R`) and deflection values for probes (`X` and `Y`). Tool index is set using `P` and description is set using `S".."`. M4000` stores these custom values that allows us to use them, while configuring RRF with the relevant tool details using `M563`.
 
 ### `M4001` - FORGET TOOL
 
-Resets our custom tool table and RRF's tool table at the given index.
+```gcode
+M4001 Pnn
+```
+
+Remove the tool at index `Pnn`.
 
 ### `T<N>` - EXECUTE TOOL CHANGE
+
+```gcode
+Tnn
+```
 
 This macro is built in to RRF, using the `t{free,pre,post}.g` files. If the target tool number is specified, then these files are executed in order. The operator is prompted to change to the correct tool and if this tool is a probe tool, will be asked to verify that the tool is connected by triggering it manually before proceeding.
 
@@ -198,13 +252,23 @@ This macro is built in to RRF, using the `t{free,pre,post}.g` files. If the targ
 
 #### `M3.9` - START SPINDLE AND WAIT
 
+```gcode
+M3.9 [Snnnnn] [Pnn] [Dnnn]
+```
+
 This macro calls RRF's underlying `M3` command to start the spindle, but waits after starting the spindle for it to accelerate based on a previously recorded acceleration value. This value will be reduced based on the rpm-change of the spindle so if it is only accelerating to 50% of its maximum speed then `M3.9` will only wait 50% of the recorded wait value.
+
+Parameters `S` and `P` are passed to the underlying `M3` command if specified, and parameter `D`, specified in seconds, will override the wait time that would've otherwise been calculated.
 
 Additionally, if expert mode is disabled, then this macro will pop up an operator confirmation / warning box when the spindle is going to accelerate from 0 rpm.
 
 #### `M5.9` - STOP SPINDLE AND WAIT
 
-Like the `M3.9` macro above, this macro calls the underlying `M5` macro and if any spindles were activated, waits for them to stop. As above, the deceleration value will be reduced based on the rpm-change of the spindle.
+```gcode
+M5.9 [Dnnn]
+```
+
+Like the `M3.9` macro above, this macro calls the underlying `M5` macro and if any spindles were activated, waits for them to stop. As above, the deceleration value will be reduced based on the rpm-change of the spindle. Specifying the `D` parameter will override the delay time.
 
 ### Variable Spindle Speed Control
 
@@ -212,9 +276,17 @@ Variable Spindle Speed Control (VSSC) constantly adjusts the speed of the spindl
 
 #### `M7000` - ENABLE VSSC
 
-Enable Variable Spindle Speed Control.
+```gcode
+M7000 Pnn Vnn
+```
+
+Enable Variable Spindle Speed Control. The `P` and `V` parameters must be specified, and these control the period (in milliseconds) and variance (in RPM) of the VSSC function.
 
 #### `M7001` - DISABLE VSSC
+
+```gcode
+M7001
+```
 
 Disable Variable Spindle Speed Control
 
@@ -223,5 +295,9 @@ Disable Variable Spindle Speed Control
 ## Debugging
 
 ### `M7600` - OUTPUT ALL KNOWN VARIABLES
+
+```gcode
+M7600 [D1]
+```
 
 Sometimes it is necessary to debug MillenniumOS or RRF, and this macro allows outputting the macro variables that MillenniumOS uses in a manner that can be attached to tickets or discord messages to aid debugging. Call it with the `D1` parameter to enable additional RRF object model output that can help to debug the odder issues.
