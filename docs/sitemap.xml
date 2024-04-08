@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://millenniummachines.github.io/docs/millennium-os/manual/chapters/40_gcodes/</loc>
+         <lastmod>2024-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://millenniummachines.github.io/docs/milo/</loc>
          <lastmod>2024-04-08</lastmod>
          <changefreq>daily</changefreq>
