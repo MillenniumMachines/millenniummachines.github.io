@@ -26,7 +26,7 @@ Once the Zip file has been downloaded, you can simply upload it to DWC using the
 
 ---
 
-Each of the files from the Zip will be uploaded individually. You can see the list of files being uploaded and there will be a notification when the whole Zip file has been uploaded. Once the upload is complete, click **"Close""*.
+Each of the files from the Zip will be uploaded individually. You can see the list of files being uploaded and there will be a notification when the whole Zip file has been uploaded. Once the upload is complete, click **"Close"**.
 
 ![Uploaded file list in DWC](../img/mos_install_step_2.png){: .shadow-dark }
 
@@ -262,9 +262,9 @@ You can find this directory by going to **Macro -> Macros** from the menu bar, a
 Once the file is placed there, it will be selectable as the Processor under every *Job* instance from the *Path* workbench.
 
 !!! note
-    The FreeCAD post-processor is designed to work with the [Realthunder branch](https://github.com/realthunder/FreeCAD) (otherwise known as the Link branch) of FreeCAD. It may or may not work with stock FreeCAD, depending on which Python version is bundled (the post-processor needs at least 3.10).
+    The FreeCAD post-processor is designed to work with the [Realthunder branch](https://github.com/realthunder/FreeCAD) (otherwise known as the Link branch) of FreeCAD. It may or may not work with stock FreeCAD, depending on which Python version is bundled (the post-processor needs at least 3.11).
 
-    You should think about switching to the Realthunder branch of FreeCAD if you haven't already - it is more stable with complex designs thanks to attempting to fix the [Topological Naming Problem](https://github.com/realthunder/FreeCAD_assembly3/wiki/Topological-Naming).
+    You should consider switching to the Realthunder branch of FreeCAD if you haven't already - it is more stable with complex designs thanks to attempting to fix the [Topological Naming Problem](https://github.com/realthunder/FreeCAD_assembly3/wiki/Topological-Naming).
 ---
 
 You're now ready to add some toolpaths and then run the post to generate MillenniumOS flavoured output gcode. These steps are not MillenniumOS specific, and are therefore outside of the scope of this documentation.
