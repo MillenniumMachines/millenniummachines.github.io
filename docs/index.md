@@ -36,3 +36,4 @@ Docs coming soon! For now, please use the PDF manual.
 - [Introduction](./millennium-os/manual/chapters/10_introduction.md)
 - [Installation](./millennium-os/manual/chapters/20_installation.md)
 - [Usage](./millennium-os/manual/chapters/30_usage.md)
+- [G-Codes](./millennium-os/manual/chapters/40_gcodes.md)

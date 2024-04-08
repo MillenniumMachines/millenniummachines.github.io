@@ -8,3 +8,4 @@ MillenniumOS provides post-processors for common CAD/CAM packages (currently Fus
 - [Introduction](./manual/chapters/10_introduction.md)
 - [Installation](./manual/chapters/20_installation.md)
 - [Usage](./manual/chapters/30_usage.md)
+- [G-Codes](./manual/chapters/40_gcodes.md)

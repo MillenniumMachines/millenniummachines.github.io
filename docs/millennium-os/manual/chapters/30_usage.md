@@ -109,11 +109,19 @@ If you are running a job file and the mainboard reboots unexpectedly, you should
 
 If you see these errors often, then you can enable `Low Memory Mode` in the post-processor, if available, and this will help to reduce memory usage during file processing by turning any arc moves into linear moves so that RRF does not have to process these internally.
 
-```
+```output
 Last reset 00:02:25 ago, cause: software
 Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, available RAM 13468, slot 0
 ...
 ```
+
+### Combining Multiple Operations
+
+One of the most painful Fusion360 limitations when you don't have a subscription is not being able to export a single file that uses multiple tools.
+
+You can get around this by exporting each set of operations using the same tool individually, and then combine them after using a text editor or similar. To make this process easier, you should turn off **"Output job setup commands"** for all but the first exported file, which will skip any homing or probing cycles that would occur at the start of each file.
+
+Probing will still be triggered before switching into a new WCS, and the tools will still be outputted before they are needed, but the machine will not re-home or run any probing cycles at the start of each new set of operations.
 
 ### FreeCAD
 
@@ -191,9 +199,18 @@ During the execution of a job, and with default post-processor settings, you wil
 
 For advanced usage, you can switch the **"WCS Origin Probing Mode"** to **"None"**, and this will not automatically trigger a probing cycle of each WCS, either at the beginning of the job or just prior to switching into the WCS. You will need to either set the WCS origin manually or Use the features of your CAM or post-processor to inject probing cycle calls where necessary.
 
-When a probe cycle is triggered, you will see the following dialog box, which allows you to select the probing cycle that you would like to use to zero the WCS in question.
+When a probe cycle is triggered by the post-processor, you will see the following dialog box, which allows you to select the probing cycle that you would like to use to zero the WCS in question.
 
 ![MillenniumOS probe cycle selection dialog box](../img/mos_usage_step_5.png){: .shadow-dark }
+
+---
+
+!!! note
+    You can also run individual probe cycles directly from the **"Macros"** menu of DWC when a job is not running. These macros do **NOT** set the origin of a WCS - this is only done by the `G6600` macro, which can be run manually using the **"Probe Workpiece"** entry in the **"Macros"** list.
+
+    If you want to set the origin of a WCS, use the **"Probe Workpiece"** macro and select the cycle you want to use from there.
+
+    When you run the probing cycle macros directly, the information that these generate is saved to global variables that can be used by custom code, or to manually set the origin. These details can be viewed by running `M7600` in the console. The variable names are shortened to save memory so you will need to refer to their descriptions in `mos-vars.g` to understand what information these variables contain.
 
 <!--
     NOTE: Headings in this section at depth 3 create anchors that are linked to by
@@ -246,7 +263,16 @@ flowchart TB
 
 ### Circular Bore
 
-Circular bore sets a WCS origin in X and Y axes to the center of a circular bore (hole) in a work-piece. This is usually used to zero off a hole in a partly-machined work-piece, or off a similar feature in a fixture plate.
+Circular bore finds the X and Y co-ordinates of the centre of a circular bore (hole) in a work-piece by moving downwards into the bore from an operator-chosen approximate centre-point, then probing outwards in 3 directions to the approximate radius of the bore, plus an overtravel amount. After all of the points have been probed, the probe will move to the calculated centre of the bore and back up to the starting position in Z.
+
+You will be asked to enter the following information:
+
+* **Bore Diameter** - Approximate diameter of the bore, used to calculate target probe points.
+* **Overtravel** - Added to the bore diameter, accounting for any innaccuracy in the operator-chosen centre-point of the bore. If the probe is not activated after travelling `radius + overtravel` from the operator-chosen centre-point of the bore then the probe cycle will return an error.
+* **Approximate Centre-Point** - You will be prompted to jog the probe or datum tool over the approximate centre-point of the bore.
+* **Probe Depth** - The depth from the operator-chosen centre-point to descend to, before moving outwards to detect the bore circumference.
+
+Circular bore sets a WCS origin in X and Y axes to the centre of the bore. This is usually used to zero off a hole in a partly-machined work-piece, or off a similar feature in a fixture plate.
 
 ```mermaid
 flowchart TB
@@ -262,7 +288,7 @@ flowchart TB
     subgraph P3[Probe 3]
         6(Probe outwards to bore radius at 240 degrees)
     end
-    7(Move to bore center X,Y) -->
+    7(Move to bore centre X,Y) -->
     8(Move up to starting height)
 
     1 --> P1 --> P2 --> P3 --> 7
@@ -270,7 +296,19 @@ flowchart TB
 
 ### Circular Boss
 
-Circular boss sets a WCS origin in X and Y axes to the center of a circular boss (protruding feature) in a work-piece. This can be used to zero to the center of a circular work-piece, or a previously-machined circular feature that protrudes from the work-piece surface.
+Circular boss finds the X and Y co-ordinates of the centre of a circular boss (protruding feature) on a work-piece by moving outside the expected diameter of the boss by the clearance distance, then descending to a probing depth from the current Z position and probing back towards the approximate centre of the boss until the probe is triggered.
+
+It then backs off, lifts up above the top surface of the boss and repeats this cycle in another 2 locations around the boss to generate a centre point. The probe will then be moved back to the starting Z position and over the centre-point of the boss.
+
+You will be asked to enter the following information:
+
+* **Boss Diameter** - Approximate diameter of the boss, used to calculate start and target probe points.
+* **Clearance** - Added to the boss radius, this is how far the probe cycle will move outside of the expected surface of the boss before probing back towards the surface.
+* **Overtravel** - Subtracted from the boss radius, accounting for any innaccuracy in the operator-chosen centre-point of the boss. If the probe is not activated after travelling `clearance + overtravel` towards the operator-chosen centre-point of the boss from the starting location, then the probe cycle will return an error.
+* **Approximate Centre-Point** - You will be prompted to jog the probe or datum tool over the approximate centre-point of the boss.
+* **Probe Depth** - The depth from the operator-chosen centre-point to descend to, after moving outwards to each boss probe location, before probing back towards the centre-point.
+
+Circular boss sets a WCS origin in X and Y axes to the centre of the boss. This can be used to zero to the centre of a circular work-piece, or a previously-machined circular feature that protrudes from the work-piece surface.
 
 ```mermaid
 flowchart TB
@@ -292,14 +330,25 @@ flowchart TB
         11(Probe inwards to boss radius at 240 degrees)
     end
     12(Move up to starting height) -->
-    13(Move to boss center X,Y)
+    13(Move to boss centre X,Y)
 
     P1 --> 4 --> P2 --> 8 --> P3 --> 12
 ```
 
 ### Rectangle Pocket
 
-Rectangle pocket sets a WCS origin in X and Y axes to the center of a rectangular pocket (subtractive feature) in a work-piece. This is likely to be a previously machined feature. This can be used on pockets that have corner radiuses in X and Y, as long as the clearance distance is higher than the corner radius (so the probe is only triggering against 'flat' surfaces).
+Rectangle Pocket finds the X and Y co-ordinates of the centre of a rectangular pocket (recessed feature) on a workpiece by descending into the pocket from an operator-chosen approximate centre-point, and then probing twice along each internal surface of the pocket, at the clearance distance inwards and inside of each expected corner.
+
+You will be asked to enter the following information:
+
+* **Width of Pocket** - The approximate width of the pocket, measured along the X axis. The surfaces along the X axis would be facing directly towards or away from you if you were standing at the front of the machine.
+* **Length of Pocket** - The approximate length of the pocket, measured along the Y axis. The surfaces along the Y axis would be to the left and right of you, if you were standing at the front of the machine.
+* **Clearance** - The distance inwards from each corner and inside of each surface that will be used to calculate our starting points to probe. For example, when probing near the front left corner, our starting point would be the approximate location of the corner in X and Y (based on the operator-chosen approximate centre-point of the pocket, width and length) plus the clearance distance, in each (i.e. moving away, inwards, from the expected corner position).
+* **Overtravel** - The distance 'past' each expected surface to set the probe target location, which accounts for any inaccuracy in the operator-chosen centre-point of the pocket, or rotation of the pocket itself.
+* **Approximate Centre-Point** - You will be prompted to jog the probe or datum tool over the approximate centre-point of the pocket.
+* **Probe Depth** - The depth from the operator-chosen centre-point to descend to, before probing the inner surfaces of the pocket.
+
+Rectangle pocket sets a WCS origin in X and Y axes to the centre of the pocket, which is likely to be a previously machined feature. This can be used on pockets that have corner radiuses in X and Y, as long as the clearance distance is higher than the corner radius (so the probe is only triggering against 'flat' surfaces).
 
 ```mermaid
 flowchart TB
@@ -316,7 +365,7 @@ flowchart TB
         8(Probe inwards of back left corner) -->
         9(Probe inwards of back right corner)
     end
-    10(Move to rectangle pocket center X,Y) -->
+    10(Move to rectangle pocket centre X,Y) -->
     11(Move up to starting height)
 
     1 --> A1 --> A2 --> 10
@@ -324,7 +373,20 @@ flowchart TB
 
 ### Rectangle Block
 
-Rectangle block sets a WCS origin in X and Y axes to the center of a rectangular block (protruding feature or a rectangular work-piece itself). This probing cycle is additionally useful for measurement, as it can be used to calibrate touch probes or accurately measure the dimensions of a work-piece.
+Rectangle Block finds the X and Y co-ordinates of the centre of a rectangular block (the work-piece itself, or a rectangular protruding feature) by moving outside of the block from an operator-chosen approximate centre-point, descending to a probing depth and then probing twice along each surface of the block, at the clearance distance inwards and outside of each expected corner.
+
+The probe will be lifted back to the starting Z height after the first X surface has been probed, allowing it to move across the block to the second surface. The probe will stay at the probe height to move across to the first Y surface, and then will return to the starting Z height to move to the second Y surface. After the probing cycle is complete, the probe will be lifted back to the starting Z height and moved above the centre of the block.
+
+You will be asked to enter the following information:
+
+* **Width of Block** - The approximate width of the block, measured along the X axis. The surfaces along the X axis would be facing directly towards or away from you if you were standing at the front of the machine.
+* **Length of Block** - The approximate length of the block, measured along the Y axis. The surfaces along the Y axis would be to the left and right of you, if you were standing at the front of the machine.
+* **Clearance** - The distance inwards from each corner and outside of each surface that will be used to calculate our starting points to probe. For example, when probing near the front left corner on the X axis, our starting point would be the approximate location of the corner in X and Y (based on the operator-chosen approximate centre-point of the block, width and length) plus the clearance distance in Y, and minus the clearance distance in X (i.e. outside the surface and inwards from the expected corner position).
+* **Overtravel** - The distance 'past' each expected surface to set the probe target location, which accounts for any inaccuracy in the operator-chosen centre-point of the block, or rotation of the block itself.
+* **Approximate Centre-Point** - You will be prompted to jog the probe or datum tool over the approximate centre-point of the block.
+* **Probe Depth** - The depth from the operator-chosen centre-point to descend to, before probing the inner surfaces of the block.
+
+Rectangle block sets a WCS origin in X and Y axes to the centre of the block (protruding feature or a rectangular work-piece itself). This probing cycle is additionally useful for measurement, as it can be used to calibrate touch probes or accurately measure the dimensions of a work-piece, as well as identifying its rotation from the machine axes.
 
 ```mermaid
 flowchart TB
@@ -353,7 +415,7 @@ flowchart TB
         16(Probe inwards of rear right corner) -->
         17(Move up to starting height)
     end
-    18(Move to rectangle block center X,Y)
+    18(Move to rectangle block centre X,Y)
 
     2 --> A1 --> 6
     7 --> A2 --> 10 --> A3 --> 14 --> A4 --> 18
@@ -361,12 +423,35 @@ flowchart TB
 
 ### Outside Corner
 
+Outside corner finds the X and Y co-ordinates of the corner of a rectangular work-piece by probing along the 2 edges that form the corner.
+
+It has 2 modes - **Quick** or `Q1`, which takes a single probe point on each surface, or **Full** (`Q0` or unset) which takes 2 probe points along each surface forming the corner.
+
+**Quick** mode is useful when you know the work-piece is square and properly aligned with the axes of the machine. The corner location is identified by the X co-ordinate when probing on the X surface, and the Y co-ordinate when probing on the Y surface.
+
+**Full** mode is useful when you are unsure that the work-piece is square or properly aligned with the axes of the machine. The corner location is identified by taking 2 measurements along each surface, drawing a line through the points on each axis and then calculating where those lines cross. This allows us to calculate the angle of the corner, and if it is square we can also calculate the rotation of the work-piece in relation to the machine axes.
+
+!!! tip
+    Calculating the rotation of the work-piece gives us the information required to compensate for this rotation using RRF's `G68` code. This is not currently implemented but is planned for a later release of MillenniumOS.
+
+    The rotation value will be printed to the console after running this probe cycle, and can be viewed using the `M7600` command before running another probe cycle.
+
+For **Full** mode, you will be asked to enter the following information:
+
+* **Length of X Corner Surface** - The approximate length of the surface, measured along the X axis. The surface along the X axis would be facing directly towards or away from you if you were standing at the front of the machine.
+* **Length of Y Corner Surface** - The approximate length of the surface, measured along the Y axis. The surface along the Y axis would be to the left and right of you, if you were standing at the front of the machine.
+
+For both modes, you will be asked to enter the following information:
+
+* **Clearance** - The distance inwards from the corner and outside of each surface that will be used to calculate our starting points to probe. For example, when probing near the front left corner on the X axis, our starting point would be the approximate location of the corner in X and Y (based on the operator-chosen approximate starting-point above the corner) plus the clearance distance in Y, and minus the clearance distance in X (i.e. outside the surface and inwards from the expected corner position).
+* **Overtravel** - The distance 'past' each expected surface to set the probe target location, which accounts for any inaccuracy in the operator-chosen centre-point of the block, or rotation of the block itself.
+* **Approximate Starting Point** - You will be prompted to jog the probe or datum tool over the corner.
+* **Corner to Probe** - The corner that the probe is currently over, allowing us to calculate the correct directions to move in.
+* **Probe Depth** - The depth from the operator-chosen starting point to descend to, before probing the surfaces that form the corner.
+
+After probing both surfaces, the probe will be moved back up to the starting Z height and then over the corner.
+
 Outside corner sets a WCS origin in X and Y axes to the corner of a rectangular work-piece. It is already used by the vise-corner probe cycle, so should only be used in isolation when you need to zero the Z axis somewhere other than the top surface of the work-piece.
-
-!!! note
-    When using Quick mode (`Q1`), Outside Corner cannot calculate the squareness or rotation of the work-piece, so it will not be possible to compensate for a misaligned part.
-
-    The corner of the part is assumed to be at the exact intersection of 2 lines drawn perpendicular to each axis through the probe points. If your work-piece is not square with the axes, or the corner itself is not square, then the calculated location will be inaccurate.
 
 <!-- This is essentially a copy-paste from Vise Corner with the Z probe removed -->
 ```mermaid
