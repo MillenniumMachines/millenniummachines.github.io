@@ -31,4 +31,4 @@
 
 ![](../img/10_s12.png)
 
-[Next Chapter: Sliding Door Assembly](./30_sliding_door_assembly)
+[Next Chapter: Sliding Door Assembly](./30_sliding_door_assembly.md)
