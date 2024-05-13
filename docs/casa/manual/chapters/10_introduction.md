@@ -16,13 +16,13 @@ A machine that can easily electrocute you, cut you or set fire to your whole nei
     After all, you are special to us and we don't want you to get hurt.
 
 Most importantly from everyone at the Millennium Machines design team,
-Have fun building your very first Milo!
+Have fun building your very first Casa!
 
 ---
 
 ## What To Expect
 
-This manual and associated firmware is for the Casa R2 built to the standard BOM.
+This manual and associated firmware is for the Casa R2 built to the standard BOM. This covers this kit supplied by LDO.
 
 <!-- More needed here -->
 
@@ -34,22 +34,19 @@ Furthermore, there are options in the guide that are up to you to decide on, suc
 
 ## Parts List and Printing Guidelines
 
-The Millennium Machines team has provided a printing list with settings for you as a guideline for printing the parts necessary for the build. This list can be found [here](../../bom/printing_guide.md).
+The Millennium Machines team has provided a printing list with settings for you as a guideline for printing the parts necessary for the build. This list can be found [here](../../bom/printing_guide.md.md).
 
 Remember, these settings are only a guideline, and are open to your own interpretations - but we do highly recommend following them to achieve the best mechanical properties for each individual part.
 
-<!-- Worth adding loctite info here -->
-
 ## T-Nuts Application
 
-This machine requires an immense amount of T-nuts. In the interest of simplifying this manual, we have chosen to omit the installation of T-nuts. Wherever a part interfaces with an extrusion in a way that looks like it requires a T-nut, then it should be considered a part that requires a T-nut.
+This machine makes use of T-nuts and blind joints. In the interest of simplifying this manual, we have chosen to omit the installation of T-nuts and button head bolts. Wherever a part interfaces with an extrusion in a way that looks like it requires a T-nut or a bolt for a blind joint, then it should be considered a part that requires a T-nut / bolt.
 
 ## Pre-Build Training
 
 Before you head out on your journey to create skynet, it's probably a good idea that you learn a few things. Luckily the Millennium Machines team have put together a curated list of videos to teach you all you need to know - sit back, relax and enjoy.
 
 <div class="annotate" markdown>
-- [How to use heat set inserts](https://www.youtube.com/watch?v=cyof7fYFcuQ&list=PL7zrGeKp_8CTDOmpwZr5JnCSJqEghFh9j&index=32)
 - [Electronics connectors and how to use them](https://www.youtube.com/watch?v=y6G_MhQFv3k)
 - [Cable chains and how not to use them](https://www.youtube.com/watch?v=_HiuY015rOY)
 </div>
