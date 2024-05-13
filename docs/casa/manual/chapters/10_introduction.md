@@ -71,5 +71,5 @@ Well, why not join our community here on:
 
 ---
 
-[Next Chapter: Hardware reference]()
+[Next Chapter: Outer Frame Assembly](./20_outer_frame_assembly.md)
 <!-- Next chapter link needed -->
