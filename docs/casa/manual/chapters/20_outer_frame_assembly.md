@@ -2,11 +2,11 @@
 
 ![](../img/10_1.png)
 
-!!! tip "A Tale of Two ~~Cities~~ Halves"
-    The main frame assembly of Casa is built from 2020 V slot extrusion in two halves. Each half is joined together by a backbone of 2040 extrusion making the enclosure easy to dissemble for moving. The panels, sliding door, electronics, and basement will attach to this main frame. Throughout this stage remember to check for squareness and adjust accordingly.
+!!! tip "A Tale of Two Halves"
+    The outer frame assembly of Casa is built from 2020 V slot extrusion in two halves. Each half is joined together by a backbone of 2040 extrusion making the enclosure easy to dissemble for moving. The panels, sliding door, electronics, and basement will attach to this main frame. Throughout this stage remember to check for squareness and adjust accordingly.
 
 !!! tip "Extrusion Lengths"
-    The outer frame assembly uses 8 different extrusions labeled A - H. Some extrusions are the same length but features different cross drill patterns so make sure to pay attention and select the correct extrusion. Cross drills are found on extrusions A, C, D, and H only.
+    The outer frame assembly uses 8 different extrusions labeled A - H. Some extrusions are the same length but features different cross drill patterns so make sure to pay attention and select the correct extrusion. Cross drills are found on extrusions A, C, D, and H only. If you are cross drilling your own extrusion you may find the cross drill guides useful.
 
     <!-- We really need a way of defining the extrusions here -->
 
@@ -15,7 +15,7 @@
 
     The frame of Casa is assembled using blind joints. These are simple and cheap joints that provide excellent strength through metal-to-metal contact. Blind joints require cross drilling the extrusion to allow access to tighten down a button head bolt and also require manual alignment. Make sure that joints are aligned and square when tightening.
 
-    All blind joints are secured using an M5 x 10 BHCS screw.
+    **All blind joints are secured using an M5 x 10 BHCS screw.** In the interest of simplifying this manual, we have chosen to omit the button head bolts. Wherever a part interfaces with an extrusion in a way that looks like it requires a bolt for a blind joint, then it should be considered a part that requires a bolt.
 
 ---
 
