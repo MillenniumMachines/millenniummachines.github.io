@@ -9,9 +9,123 @@
 
 ---
 
-<!-- Instruction here -->
+## Cable Management and DIN Rails
 
-<!-- VHB tape  -->
+!!! info annotate "Components Required"
+    ```
+        ??
+    ```
+[](../img/40_EL_s1.png)
+
+---
+
+!!! info annotate "Components Required"
+    ```
+        ??
+    ```
+[](../img/40_EL_s2.png)
+
+---
+
+!!! info annotate "Components Required"
+    ```
+        ??
+    ```
+[](../img/40_EL_s3.png)
+
+---
+
+!!! info annotate "Components Required"
+    ```
+        ??
+    ```
+[](../img/40_EL_s4.png)
+
+---
+
+!!! info annotate "Components Required"
+    ```
+        ??
+    ```
+[](../img/40_EL_s5.png)
+
+---
+
+## Passthrough and Base Board
+
+
+!!! info annotate "Components Required"
+    ```
+        ??
+    ```
+[](../img/40_PT_s1.png)
+
+---
+
+!!! info annotate "Components Required"
+    ```
+        ??
+    ```
+[](../img/40_PT_s2.png)
+
+---
+
+!!! info annotate "Components Required"
+    ```
+        ??
+    ```
+[](../img/40_PT_s3.png)
+
+---
+
+## Front and Rear IO Panels
+
+!!! info annotate "Components Required"
+    ```
+        2 x Extrusion I
+        1 x Extrusion J
+        2 x M5 x 10 BHCS
+    ```
+[](../img/40_IO_s1.png)
+
+---
+
+!!! info annotate "Components Required"
+    ```
+        1 x Rear Inlet Cover
+        1 x M3 x 3 Heatset Insert
+    ```
+[](../img/40_IO_s2.png)
+
+---
+
+!!! info annotate "Components Required"
+    ```
+        1 x IEC Power Inlet
+        1 x 120 mm Fan
+        3 x M3 x 30 BHCS
+    ```
+[](../img/40_IO_s3.png)
+
+---
+
+!!! info annotate "Components Required"
+    ```
+        ??
+    ```
+[](../img/40_IO_s4.png)
+
+---
+
+!!! info annotate "Components Required"
+    ```
+        ??
+    ```
+[](../img/40_IO_s5.png)
+
+---
+
+
 
 ---
 
