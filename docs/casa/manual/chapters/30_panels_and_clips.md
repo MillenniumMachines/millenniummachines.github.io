@@ -44,7 +44,10 @@ Begin by fitting the static panels to the machine. The panels fit over the extru
 
 ---
 
-Attach the door to the enclosure. To do this you will need to [pivot](https://imgur.com/pivot-Zei0mk9) the door into place such that the doornuts are located and then "close" it before attaching the hinges to the frame. 
+Attach the door to the enclosure. To do this you will need to [pivot](https://imgur.com/pivot-Zei0mk9) the door into place such that the doornuts are located and then "close" it before attaching the hinges to the frame.
+
 ![](../img/30_s2.png)
+
+---
 
 [Next Chapter: Electronics](./40_electronics.md)
