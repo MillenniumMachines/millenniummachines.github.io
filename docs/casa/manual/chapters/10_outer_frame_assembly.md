@@ -130,4 +130,4 @@ Assemble the machine supports to the bottom of the enclosure. Leave the screws l
 
 ---
 
-[Next Chapter: Sliding Door Assembly](./30_sliding_door_assembly.md)
+[Next Chapter: Sliding Door Assembly](./20_sliding_door_assembly.md)

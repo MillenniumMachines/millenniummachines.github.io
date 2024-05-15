@@ -28,12 +28,12 @@ nav:
     - Printing Guide: casa/bom/printing_guide.md
     - Frequently Asked Questions: casa/faq.md
     - Assembly Manual:
-      - Introduction: casa/manual/chapters/10_introduction.md
-      - Outer Frame Assembly: casa/manual/chapters/20_outer_frame_assembly.md
-      - Sliding Door Assembly: casa/manual/chapters/30_sliding_door_assembly.md
-      - Panels and Clips: casa/manual/chapters/40_panels_and_clips.md
-      - Electronics Bay: casa/manual/chapters/50_electronics.md
-      - Basement: casa/manual/chapters/60_basement.md
+      - Introduction: casa/manual/chapters/00_introduction.md
+      - Outer Frame Assembly: casa/manual/chapters/10_outer_frame_assembly.md
+      - Sliding Door Assembly: casa/manual/chapters/20_sliding_door_assembly.md
+      - Panels and Clips: casa/manual/chapters/30_panels_and_clips.md
+      - Electronics Bay: casa/manual/chapters/40_electronics.md
+      - Basement: casa/manual/chapters/50_basement.md
 
   - "Long John Toolsetter":
     - Sourcing and Print Guild: long-john/bom/sourcing_and_print_guide.md

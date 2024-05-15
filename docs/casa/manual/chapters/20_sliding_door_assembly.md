@@ -88,4 +88,4 @@ Bolt the doornut to the left end of the door.
 
 ---
 
-[Next Chapter: Panels and Clips](./40_panels_and_clips.md)
+[Next Chapter: Panels and Clips](./30_panels_and_clips.md)
