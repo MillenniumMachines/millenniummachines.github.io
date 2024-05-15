@@ -58,6 +58,7 @@ If any file ends with `x#`, that is telling you the quantity of that part requir
 | DIN-Rail-Enclosure-Mount-A  | SS             |          4 | ABS/ASA/PETG/PLA |
 | DIN-Rail-Enclosure-Mount-B  | SS             |          2 | ABS/ASA/PETG/PLA |
 | Extrusion-Handle            | A              |          2 | ABS/ASA/PETG/PLA |
+| Doornut Body                | SS             |          2 | ABS/ASA/PETG/PLA |
 
 ### Casa Basement Module
 | Part Name    | Part setting   |   Quantity | Material         |
