@@ -19,8 +19,11 @@
 
 ---
 
-1 x A
-3 x B
+!!! info annotate "Components Required"
+    ```
+        1 x Extrusion A
+        3 x Extrusion B
+    ```
 ![](../img/10_s1.png)
 
 ---
