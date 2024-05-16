@@ -13,7 +13,8 @@
 
 !!! info annotate "Components Required"
     ```
-        ??
+        3 x Wire duct 45 x 60
+        VFB Tape
     ```
 ![](../img/40_EL_s1.png)
 
@@ -21,7 +22,8 @@
 
 !!! info annotate "Components Required"
     ```
-        ??
+        2 x DIN Rail 800 mm
+        2 x DIN Rail Enclosure Mount B 
     ```
 ![](../img/40_EL_s2.png)
 
@@ -29,7 +31,7 @@
 
 !!! info annotate "Components Required"
     ```
-        ??
+        VFB Tape
     ```
 ![](../img/40_EL_s3.png)
 
@@ -37,7 +39,7 @@
 
 !!! info annotate "Components Required"
     ```
-        ??
+        4 x DIN Rail Enclosure Mount A
     ```
 ![](../img/40_EL_s4.png)
 
@@ -45,7 +47,7 @@
 
 !!! info annotate "Components Required"
     ```
-        ??
+        8 x M3 x 10 SHCS
     ```
 ![](../img/40_EL_s5.png)
 
@@ -53,10 +55,10 @@
 
 ## Passthrough and Base Board
 
-
 !!! info annotate "Components Required"
     ```
-        ??
+        4 x Passthrough Plug
+        2 x Electronics Bay Passthrough
     ```
 ![](../img/40_PT_s1.png)
 
@@ -64,7 +66,7 @@
 
 !!! info annotate "Components Required"
     ```
-        ??
+        1 x Panel 150 x 710
     ```
 ![](../img/40_PT_s2.png)
 
@@ -72,7 +74,7 @@
 
 !!! info annotate "Components Required"
     ```
-        ??
+        8 x M3 x 10 SHCS
     ```
 ![](../img/40_PT_s3.png)
 
@@ -82,9 +84,9 @@
 
 !!! info annotate "Components Required"
     ```
-        2 x Extrusion I
-        1 x Extrusion J
-        2 x M5 x 10 BHCS
+        1 x Front Switch Cover
+        1 x E-Stop Button
+        2 x Rocker Switch
     ```
 ![](../img/40_IO_s1.png)
 
@@ -111,7 +113,10 @@
 
 !!! info annotate "Components Required"
     ```
-        ??
+        1  x Front Switch Cover
+        1  x Front Mid Cover
+        1  x Front Inlet Cover
+        12 x M3 x 10 SHCS
     ```
 ![](../img/40_IO_s4.png)
 
@@ -119,13 +124,12 @@
 
 !!! info annotate "Components Required"
     ```
-        ??
+        1  x Rear Inlet Cover
+        1  x Rear Mid Cover
+        1  x Rear Lower Cover
+        12 x M3 x 10 SHCS 
     ```
 ![](../img/40_IO_s5.png)
-
----
-
-
 
 ---
 
