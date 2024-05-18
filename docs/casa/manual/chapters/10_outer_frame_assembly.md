@@ -34,6 +34,9 @@ The outer frame assembly uses 8 different extrusions labeled A - H. Some extrusi
     ```
 ![](../img/10_s2.png)
 
+!!! note "Orientation"
+    Note that this part is **not** symmetrical. The central cross beam sits closer to the bottom of the enclosure than to the top.
+
 ---
 
 !!! info annotate "Components Required"
@@ -65,6 +68,9 @@ Repeat step 1 & 2
         6 x M5 x 10 BHCS
     ```
 ![](../img/10_s5.png)
+
+!!! note "Orientation"
+    Note that this part is **not** symmetrical. The central cross beam sits closer to the bottom of the enclosure than to the top.
 
 ---
 
