@@ -76,8 +76,8 @@ Repeat step 1 & 2
 
 !!! info annotate "Components Required"
     ```
-        4 x Extrusion C
-        4 x M5 x 10 BHCS
+        2 x Extrusion C
+        2 x M5 x 10 BHCS
     ```
 ![](../img/10_s6.png)
 
@@ -85,7 +85,7 @@ Repeat step 1 & 2
 
 !!! info annotate "Components Required"
     ```
-        2 x Extrusion G
+        2 x Extrusion D
         2 x M5 x 10 BHCS
     ```
 ![](../img/10_s7.png)
@@ -94,17 +94,27 @@ Repeat step 1 & 2
 
 !!! info annotate "Components Required"
     ```
-        2 x Extrusion D
+        2 x Extrusion F
+        2 x Extrusion B
         6 x M5 x 10 BHCS
     ```
-![](../img/10_s8.png)
+![](../img/10_s8_1.png)
 
 ---
 
 !!! info annotate "Components Required"
     ```
-        3 x Extrusion B
-        6 x M5 x 10 BHCS
+        2 x Extrusion C
+        2 x M5 x 10 BHCS
+    ```
+![](../img/10_s8_2.png)
+
+---
+
+!!! info annotate "Components Required"
+    ```
+        2 x Extrusion B
+        4 x M5 x 10 BHCS
     ```
 ![](../img/10_s9.png)
 
