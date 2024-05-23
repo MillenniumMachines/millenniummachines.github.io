@@ -107,6 +107,21 @@ Fasten the Lead-screw nuts loosely on either side of the X-Axis Anti-Backlash Nu
 
 ![fasten the Brass lead-screw nuts on either side of the X-Axis Anti-Backlash Nut using M3x8mm SHCS](../img/y_axis_assembly/y_axis_step_8.png){: .shadow}
 
+
+!!! warning "Anti-Backlash Preload Tuning"
+    Each axis uses anti-backlash[^1] blocks in order to compensate for changes in screw direction during operation. They do this by driving 2 brass TR8x8 lead-screw nuts towards each other to engage both sides of the lead-screw threads.
+
+    In order for this to work the preload required to drive each nut needs to be tuned by hand. To tune the preload make sure the lead-screws are greased appropriately, then install the 2 brass TR8x8 lead-screw nuts within the anti backlash block.
+
+    Tighten the screws on one of the nuts so that it does not move, while leaving the other nut loose.
+
+    Install the greased lead-screw temporarily into the block and begin to tighten the loose nut, taking care to apply the same number of turns to each of the screws.
+
+    The ideal preload will allow for the lead-screw to still spin by hand but should have a moderate amount of resistance to it.
+    Once complete make sure each bolt has threadlock applied, and uninstall the lead-screw - your preload is now set. To avoid any headaches, do this before final installation.
+
+[^1]: Yes, technically this is a "zero backlash" nut and not an "anti-backlash nut" - but the common term for it is anti-backlash and that's what most people know it as.
+
 ---
 
 Fasten the Y-Axis Anti-Backlash Nut to the bottom of the XY plate using M5x16mm BHCS.
@@ -123,20 +138,6 @@ Fasten the Y-Axis Anti-Backlash Nut to the bottom of the XY plate using M5x16mm 
 Fasten the X-Axis Anti-Backlash Nut to the top of the XY plate using M5x16mm BHCS.
 
 ![fasten the X-Axis Anti-Backlash Nut to the top of the XY plate using M5x16mm BHCS](../img/y_axis_assembly/y_axis_step_10.png){: .shadow}
-
-!!! warning "Anti-Backlash Preload Tuning"
-    Each axis uses anti-backlash[^1] blocks in order to compensate for changes in screw direction during operation. They do this by driving 2 brass TR8x8 lead-screw nuts towards each other to engage both sides of the lead-screw threads.
-
-    In order for this to work the preload required to drive each nut needs to be tuned by hand. To tune the preload make sure the lead-screws are greased appropriately, then install the 2 brass TR8x8 lead-screw nuts within the anti backlash block.
-
-    Tighten the screws on one of the nuts so that it does not move, while leaving the other nut loose.
-
-    Install the greased lead-screw temporarily into the block and begin to tighten the loose nut, taking care to apply the same number of turns to each of the screws.
-
-    The ideal preload will allow for the lead-screw to still spin by hand but should have a moderate amount of resistance to it.
-    Once complete make sure each bolt has threadlock applied, and uninstall the lead-screw - your preload is now set. To avoid any headaches, do this before final installation.
-
-[^1]: Yes, technically this is a "zero backlash" nut and not an "anti-backlash nut" - but the common term for it is anti-backlash and that's what most people know it as.
 
 ---
 
