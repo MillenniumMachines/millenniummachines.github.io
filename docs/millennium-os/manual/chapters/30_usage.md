@@ -588,6 +588,26 @@ flowchart TB
 
     Machining is not like 3D printing in one very important aspect - stopping a job does not automatically make your work-piece unrecoverable. It is better to abort for safety purposes and allow you, the operator, to re-run the job or tool change again.
 
+### Radius Offset Probing
+
+With tools that have a radius smaller than the toolsetter surface, probing the length of the tool is simple - the tool is centered over the toolsetter surface and driven down until the switch activates. The surface will always be activated by the lowest point on the tool, returning an accurate reading.
+
+However - if you're trying to probe a tool that is larger than the toolsetter radius (for example an indexed face-mill), then this can be problematic as there are lots of tools where the center of the tool is *not* the lowest point (in some cases by over 5mm!).
+
+When switching to a tool whose radius is greater than the radius of the toolsetter surface, MillenniumOS will perform radius offset probing rather than a simple probe.
+
+Initially, it will probe the center of the tool once, to find a high point. It will then lift the tool by the dive height set on the toolsetter in RRF (`M558 H...`), and move the tool outwards from the center of the toolsetter by the radius of the tool.
+
+It then calculates how many points we need around the radius to gain 100% coverage, and probes those. If the probe is not activated at any point on the radius then no error is returned, and it moves on to the next probe point. It will never probe lower than needed to activate the toolsetter with the center of the tool.
+
+To gain an accurate reading, we choose the lowest probed point of the tool. Please see [an example of this process in action](https://www.youtube.com/watch?v=_mMsKqVborI).
+
+!!! warning
+    As you might have worked out above, your [configured probe dive height](https://docs.duet3d.com/User_manual/Reference/Gcodes#m558-set-z-probe-type) is important - if the recess in the center of your tool is more than the dive height from the lowest point, then the tool will not be raised far enough once the center has been probed and may impact your toolsetter. You should check this distance on the tools you use and make sure the dive height on your toolsetter is set high enough to lift the tool over the toolsetter when raising from the center of the tool.
+
+    In RRF configs supplied by the Millennium Machines team, this configuration will be in the `toolsetter.g` file and will need to be hand-edited from Duet Web Control.
+
+
 ## Variable Spindle Speed Control
 
 This feature is enabled by default, and will adjust the spindle speed up and down within a small range to avoid resonance building up between the work-piece and tool. Disabling this is likely to have a negative impact on machining quality, but the settings can be tweaked through the post-processor properties and it can also be turned on and off and configured for each operation when using the Fusion360 post-processor.
