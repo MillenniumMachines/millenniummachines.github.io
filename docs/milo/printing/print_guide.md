@@ -1,5 +1,8 @@
 # Printing Guide
 
+> :warning: If you have an LDO kit, checkout the [LDO docs](https://docs.ldomotors.com/en/milo/milov15) first, for compatibility reasons they provide a couple custom models to go with their kit.
+
+
 ## File Naming
 
 With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colors? Have no fear, we've got your back - each file is labelled.
