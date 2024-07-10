@@ -4,6 +4,11 @@
 
 The "OS" stands for "Operations System" rather than "Operat*ing* System" - because MillenniumOS is an addon that implements a system of high-level CNC operations on top of [RRF](https://www.reprapfirmware.org/) **3.5+**.
 
+!!! note
+    RRF is the firmware used as standard on all Millennium Machines. If you self-sourced using the reference bill of materials or you bought a kit from LDO, then you already have the hardware required to run RRF and MillenniumOS.
+
+    If you are self-sourcing and want to use a different mainboard, then make sure it has support for RepRapFirmware first otherwise you will not be able to run MillenniumOS either.
+
 The aim of MillenniumOS is to build on the usability and configurability of RRF, adding functionality required for efficient and repeatable machining that you would otherwise have to write yourself if using vanilla RRF.
 
 We hope that MillenniumOS makes Millennium Machines the simplest route for novice machinists to make their first cuts confidently and safely - that said, MillenniumOS *is not specific to our machines* - it should be possible to use MillenniumOS out-of-the-box on any 3-axis, moving-table CNC machine with a single spindle that runs RRF **3.5+**, as long as the axis minima and maxima are in the same directions
