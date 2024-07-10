@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../img/millennium-machines-icon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -154,7 +154,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -1311,6 +1311,15 @@
 <hr />
 <p>Fasten the Lead-screw nuts loosely on either side of the X-Axis Anti-Backlash Nut using M3x8mm SHCS.</p>
 <p><img alt="fasten the Brass lead-screw nuts on either side of the X-Axis Anti-Backlash Nut using M3x8mm SHCS" class="shadow" src="../../img/y_axis_assembly/y_axis_step_8.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Anti-Backlash Preload Tuning</p>
+<p>Each axis uses anti-backlash<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> blocks in order to compensate for changes in screw direction during operation. They do this by driving 2 brass TR8x8 lead-screw nuts towards each other to engage both sides of the lead-screw threads.</p>
+<p>In order for this to work the preload required to drive each nut needs to be tuned by hand. To tune the preload make sure the lead-screws are greased appropriately, then install the 2 brass TR8x8 lead-screw nuts within the anti backlash block.</p>
+<p>Tighten the screws on one of the nuts so that it does not move, while leaving the other nut loose.</p>
+<p>Install the greased lead-screw temporarily into the block and begin to tighten the loose nut, taking care to apply the same number of turns to each of the screws.</p>
+<p>The ideal preload will allow for the lead-screw to still spin by hand but should have a moderate amount of resistance to it.
+Once complete make sure each bolt has threadlock applied, and uninstall the lead-screw - your preload is now set. To avoid any headaches, do this before final installation.</p>
+</div>
 <hr />
 <p>Fasten the Y-Axis Anti-Backlash Nut to the bottom of the XY plate using M5x16mm BHCS.</p>
 <p><img alt="fasten the Y-Axis Anti-Backlash Nut to the bottom of the XY plate using M5x16mm BHCS" class="shadow" src="../../img/y_axis_assembly/y_axis_step_9.png" /></p>
@@ -1322,15 +1331,6 @@
 <hr />
 <p>Fasten the X-Axis Anti-Backlash Nut to the top of the XY plate using M5x16mm BHCS.</p>
 <p><img alt="fasten the X-Axis Anti-Backlash Nut to the top of the XY plate using M5x16mm BHCS" class="shadow" src="../../img/y_axis_assembly/y_axis_step_10.png" /></p>
-<div class="admonition warning">
-<p class="admonition-title">Anti-Backlash Preload Tuning</p>
-<p>Each axis uses anti-backlash<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> blocks in order to compensate for changes in screw direction during operation. They do this by driving 2 brass TR8x8 lead-screw nuts towards each other to engage both sides of the lead-screw threads.</p>
-<p>In order for this to work the preload required to drive each nut needs to be tuned by hand. To tune the preload make sure the lead-screws are greased appropriately, then install the 2 brass TR8x8 lead-screw nuts within the anti backlash block.</p>
-<p>Tighten the screws on one of the nuts so that it does not move, while leaving the other nut loose.</p>
-<p>Install the greased lead-screw temporarily into the block and begin to tighten the loose nut, taking care to apply the same number of turns to each of the screws.</p>
-<p>The ideal preload will allow for the lead-screw to still spin by hand but should have a moderate amount of resistance to it.
-Once complete make sure each bolt has threadlock applied, and uninstall the lead-screw - your preload is now set. To avoid any headaches, do this before final installation.</p>
-</div>
 <hr />
 <h2 id="y-axis-motor-mount-and-bearing-block">Y-Axis Motor Mount and Bearing Block</h2>
 <div class="admonition info annotate">
@@ -1550,7 +1550,7 @@ Once complete make sure each bolt has threadlock applied, and uninstall the lead
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.action.edit", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>
