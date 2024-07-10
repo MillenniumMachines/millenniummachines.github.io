@@ -1,6 +1,7 @@
 # Printing Guide
 
-> :warning: If you have an LDO kit, checkout the [LDO docs](https://docs.ldomotors.com/en/milo/milov15) first, for compatibility reasons they provide a couple custom models to go with their kit.
+!!! note
+    If you have an LDO kit, checkout the [LDO docs](https://docs.ldomotors.com/en/milo/milov15) first, for compatibility reasons they provide a couple custom models to go with their kit.
 
 
 ## File Naming
