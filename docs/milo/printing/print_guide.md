@@ -1,5 +1,9 @@
 # Printing Guide
 
+!!! note
+    If you have an LDO kit, checkout the [LDO docs](https://docs.ldomotors.com/en/milo/milov15) first, for compatibility reasons they provide a couple custom models to go with their kit.
+
+
 ## File Naming
 
 With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colors? Have no fear, we've got your back - each file is labelled.
@@ -67,7 +71,7 @@ To make some features printable without support, some features are printed with 
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** |
 |----------|------------|-------------------------|--------------|--------:|----------------------|
 | [Z Axis Motor Mount             ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Z%20Axis%20STLs/Z%20Motor%20Mount%20x1.stl)                                  | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
-| [Z Axis Bearing Block           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Z%20Axis%20STLs/%5Ba%5D%20Z%20Axis%20Bearing%20Block%20x1.stl)               | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
+| [Z Axis Bearing Block           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Z%20Axis%20STLs/%5Ba%5D%20Z%20Axis%20Bearing%20Block%20x1.stl)               | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: Yes |
 | [Z Axis Anti Backlash Nut       ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Z%20Axis%20STLs/Z%20Axis%20Anti%20Backlash%20Nut%20x1.stl)                   | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
 
 ## Main Column
