@@ -24,7 +24,7 @@ MillenniumOS is multiple things:
 
 ## Operations
 
-MillenniumOS implements operations to enable:
+MillenniumOS implements functionality to enable:
 
 * Guided tool changes using tool descriptions, and tool length probing.
 * Work-piece probing and work offset changes.
@@ -34,6 +34,11 @@ MillenniumOS implements operations to enable:
 * Safe parking, pausing and resuming.
 * Protected moves when used with a Touch Probe.
 
+## Workflow
+
+MillenniumOS is designed to bring more of a 3D-printer-like workflow to machining. When you run a print job, you generally don't do any setup work before hitting print (except turning the printer on). You hit print, and the gcode file runs through a set of steps to prepare the printer before starting the print.
+
+MillenniumOS takes the same approach with milling, albeit you will be asked to provide operator input at various points. When you run a MillenniumOS gcode file, you will be walked through setting up and probing the stock for your part, before the job proceeds to cutting moves. You *CAN* setup things like WCS origins before hitting go, and MillenniumOS will allow you to continue with existing origins and settings, but it is easier for new operators to simply run the processed gcode files to achieve their first cuts.
 
 ## Post-Processors
 
@@ -46,9 +51,9 @@ MillenniumOS uses the concept of features to enable and disable functionality. T
 * **Toolsetter** - disabled by default
 * **Touch Probe** - disabled by default
 * **Variable Spindle Speed Control** - enabled by default
-* **Spindle Feedback** - not implemented yet
+* **Spindle Feedback** - disabled by default
 
-Some of these features, like the Toolsetter and Touch Probe, require hardware support.
+Some of these features, like the Toolsetter, Touch Probe and Spindle Feedback, require hardware support.
 
 If you don't have the hardware for one or more of these features, MillenniumOS will fall back to guided, but manual processes which will allow you to achieve the same thing.
 
