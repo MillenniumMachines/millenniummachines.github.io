@@ -3,7 +3,7 @@
 ![Assembled electronics area](../img/assemble_electronics/electronics_assembly.png){: .shadow}
 
 !!! info annotate "Are you building an LDO kit?"
-    LDO have written a fantastic supplementary guide for the wiring included with their kit which includes pre-cut, pre-crimped, and pre-soldered cables! If you're building an LDO kit check out their guide [here!](https://www.ldomotion.com/#/guide/Milo-CNC-V15-Wiring-Guide)
+    LDO has written a fantastic supplementary guide for the wiring included with their kit which includes pre-cut, pre-crimped, and pre-soldered cables! If you're building an LDO kit check out their guide [here!](https://www.ldomotion.com/#/guide/Milo-CNC-V15-Wiring-Guide)
 
 ---
 
@@ -58,7 +58,7 @@ Install PSU into electronics area using M5x10mm BHCS.
     1 x 22mm Emergency Stop Actuator
     ```
 
-Push fit the AC inlet into the rear of the electronics table skirt.
+Push-fit the AC inlet into the rear of the electronics table skirt.
 
 ![Push-fit AC inlet into the rear of the electronics table skirt](../img/assemble_electronics/assemble_electronics_step_5.png){: .shadow}
 
@@ -66,14 +66,13 @@ Push fit the AC inlet into the rear of the electronics table skirt.
 
 ## E-Stop Disassembly
 
-To install your E-stop you must first disassemble it. Most E-stops split in two by spinning the button side
-whilst keeping the body in place. To reassemble it, perform the aforementioned steps backwards.
+To install your E-stop you must first disassemble it. Most E-stops split in two by spinning the button while keeping the body in place. To reassemble it, perform the aforementioned steps backward.
 
 ![Disassemble e-stop](../img/assemble_electronics/assemble_electronics_step_6.png){: .shadow}
 
 ---
 
-Install the E-Stop into the front of the electronics table skirt. If your E-Stop has a threaded locking collar, tighten this against the back of the skirt.
+Install the E-Stop into the front of the electronics table skirt. If your E-Stop has a threaded locking collar, tighten it against the back of the skirt.
 
 ![Install E-stop](../img/assemble_electronics/assemble_electronics_step_7.png){: .shadow}
 
@@ -85,11 +84,11 @@ Snap (or bolt) the E-Stop switch plate and switch(es) onto the back of the E-Sto
 ## AC Wiring
 
 !!! warning "Here Be Dragons"
-    Hopefully it does not need to be said, but this is the part of the build process where you need to be most thorough. You should never take shortcuts, guess or "wing it" when it comes to AC wiring.
+    Hopefully, it does not need to be said, but this is the part of the build process where you must be most thorough. Never take shortcuts, guess, or "wing it"; when it comes to AC wiring.
 
-    Getting any of this wrong, or with connections back to front, will at minimum cost you real money - and at maximum, a lot of pain or **actual death**.
+    Getting any of this wrong, or with connections back to front, will at minimum cost you real money - and maximum, a lot of pain or **actual death**.
 
-    Check, and re-check _everything_ with a multimeter. If you don't have, or don't know how to use a multimeter at this point, you owe it to yourself and everyone who loves you to go and buy one and learn how to use it before continuing.
+    Check, and re-check _everything_ with a multimeter. If you don't have or don't know how to use a multimeter at this point, you owe it to yourself and everyone who loves you to go and buy one and learn how to use it before continuing.
 
 !!! info annotate "Components Required"
     ```
@@ -99,26 +98,26 @@ Snap (or bolt) the E-Stop switch plate and switch(es) onto the back of the E-Sto
 If you plan to use a VFD to power your spindle, you can split the AC input going to the PSU to power your VFD as seen in the diagram below.
 
 !!!note
-    Consult local electrical regulations for information on cable termination, minimum cross-sectional-area, suitable fuse and breaker sizes, and refer to your VFD manual for their recommended installation method which may include input or output reactors or contactors.
+    Consult local electrical regulations for information on the cable termination, minimum cross-sectional area, suitable fuse, and breaker sizes, and refer to your VFD manual for their recommended installation method which may include input or output reactors or contactors.
 
-Wire the AC Inlet, PSU, E-stop and VFD according to the diagram below.
+Wire the AC Inlet, PSU, E-stop, and VFD according to the diagram below.
 
 ![AC Wiring diagram](../img/assemble_electronics/assemble_electronics_step_9.png){: .shadow}
 
 ### VFD / Spindle Wiring
 
-There are a large number of VFD and spindle options available. This section of the manual provides general guidance only. You should refer to your specific VFD manual for its setup. 
+There are a large number of VFD and spindle options available. This section of the manual provides general guidance only. Refer to your specific VFD manual for its setup. 
 
 ![VFD Wiring diagram](../img/assemble_electronics/assemble_electronics_step_9_5.jpg){: .shadow}
 
 !!!warning "VFD and Spindle Ground"
     You **MUST** make sure that your VFD and Spindle are properly grounded. Your VFD and Spindle are the only mains-powered items that you will come into contact with regularly during the operation of the machine, so these **MUST** have an operational ground connection **AT ALL TIMES**, and you **MUST** make sure that the socket you plug Milo into is properly grounded as well.
 
-    Using a multimeter in continuity testing mode, you **MUST** be able to detect a connection between the ground pin on your AC inlet socket, the ground connector on your VFD, and the casing of your spindle.
+ Using a multimeter in continuity testing mode, you **MUST** be able to detect a connection between the ground pin on your AC inlet socket, the ground connector on your VFD, and the casing of your spindle.
 
-    If your VFD is grounded but your spindle is not, you will need to [open the top casing of the spindle and connect the ground pin to the case of the spindle](https://wiki.printnc.info/en/electronics/vfd/config#grounding-shielding) - there are a number of spindles available where this connection is not made in the factory.
+ If your VFD is grounded but your spindle is not, you will need to [open the top casing of the spindle and connect the ground pin to the case of the spindle](https://wiki.printnc.info/en/electronics/vfd/config#grounding-shielding) - there are several spindles available where this connection is not made in the factory.
 
-    You should **ALWAYS** check this before operating the machine for the first time.
+ You should **ALWAYS** check this before operating the machine for the first time.
 
 ---
 
@@ -158,22 +157,22 @@ Mount the mainboard to the side extrusions of the electronics table using M5x10m
 
 Depending on how you want to control your spindle, you may need to add a few extra PCBs.
 
-The example below is for a VFD controlled spindle that accepts a 0-10V analog signal to control spindle speed.
+The example below is for a VFD-controlled spindle that accepts a 0-10V analog signal to control spindle speed.
 
 You may also require a relay to send an enable signal to your VFD. If you wish to control your spindle manually then you can safely ignore these extra components.
 
 ![DC Wiring diagram](../img/assemble_electronics/assemble_electronics_step_12.png){: .shadow}
 
 !!! note
-    There is no standard for motor wire colors - the motor wires shown in this example do no correlate with the rest of the legend.
+    There is no standard for motor wire colors - the motor wires shown in this example do not correlate with the rest of the legend.
 
 !!! warning
-    For safety reasons it is always a good idea to wire your endstops in a normally closed configuration. This allows your machine to detect breaks in any of your cabling rather than you manually detecting a failed endstop circuit when the table tries to move off the end of an axis!
+    For safety reasons, it is always a good idea to wire your endstops in a normally closed configuration. This allows your machine to detect breaks in any of your cabling rather than manually detecting a failed endstop circuit when the table tries to move off the end of an axis!
 
 !!! info annotate "VFD Wiring"
-    There are a large number of VFD and spindle options available. This wiring diagram provides general guidance only. You should refer to your specific VFD manual for its setup.
+    There are a large number of VFD and spindle options available. This wiring diagram provides general guidance only. Refer to your specific VFD manual for its setup.
 
-    ![VFD Wiring diagram](../img/assemble_electronics/assemble_electronics_step_12_5.jpg)
+ ![VFD Wiring diagram](../img/assemble_electronics/assemble_electronics_step_12_5.jpg)
 
 ---
 
@@ -201,7 +200,7 @@ Install the cover onto the electronics enclosure using M5x8mm BHCS, plugging the
 
 ---
 
-Fix the table to the Y axis of the mill using 3 corner brackets placed equispaced along both sides.
+Fix the table to the Y-Axis of the mill using 3 corner brackets placed equispaced along both sides.
 
 ![](../img/table_assembly/table_assembly_attach_to_mill.jpg){: .shadow}
 

@@ -6,7 +6,7 @@
 
 ## Identifying Extrusions
 
-This section of the build contains a number of C-beams that are close together. To help you identify which parts are which, lay out your extrusions like the diagram shown below. The next steps will then highlight which extrusions are used for each step.
+This section of the build contains several C-beams that are close together. To help you identify which parts are which, lay out your extrusions like the diagram below. The next steps will then highlight which extrusions are used for each step.
 
 !!! info "Components Required"
     ```
@@ -17,7 +17,7 @@ This section of the build contains a number of C-beams that are close together. 
     ```
 
 !!! tip
-    The lengths shown are for a standard 60mm clearance build. A 120mm clearance build will have A & B be +60mm in length.
+    The lengths shown are for a standard 60mm clearance build. A 120mm clearance build will have A & B be 60mm longer.
 
 ![](../img/z_axis_assembly/y_axis_step_42.png){: .shadow}
 
@@ -63,7 +63,7 @@ Install Joining Plate B and Joining Plate C on one side, using M5x12 BHCS to hol
 ---
 
 !!! tip
-    Make sure there is a `67mm` vertical spacing between the lower and upper column plates. The top of the thin part of the uppermost column plate should be flush with the top surface of the C-Beams.
+    Ensure a `67mm` vertical spacing between the lower and upper column plates. The top of the thin part of the uppermost column plate should be flush with the top surface of the C-Beams.
 
 ![](../img/z_axis_assembly/y_axis_step_47.png){: .shadow}
 
@@ -74,7 +74,7 @@ Select extrusion `D`.
 
 ---
 
-Place  extrusion `D` at the top of the column with the channel facing _outwards_.
+Place extrusion `D` at the top of the column with the channel facing _outwards_.
 
 ![](../img/z_axis_assembly/y_axis_step_48.png){: .shadow}
 
@@ -97,14 +97,14 @@ Place it on the front of extrusion `D`, again with the channel facing _outwards_
 ![](../img/z_axis_assembly/y_axis_step_50.png){: .shadow}
 
 !!! tip
-    The lower edge of extrusion `C` should be `18mm` above the lower edge of extrusion `D`, making room for the lower bearing block.
+    The lower edge of extrusion `C` should be `18mm` above the lower edge of `D`, making room for the lower bearing block.
 
 ---
 
 ![](../img/z_axis_assembly/y_axis_step_51.png){: .shadow}
 
 ---
-<!-- TODO do a composite image showing the zoom in -->
+<!-- TODO do a composite image showing the zoom-in -->
 
 Use M5x12 BHCS to hold the extrusion in place against the column.
 
@@ -176,31 +176,31 @@ The ballast box is designed to house a damping load such as sand or epoxy granit
     ```
 1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#z-axis-assembly)!
 
-Insert the M3 and M5 heat-set inserts in the Z Axis Anti-Backlash Nut.
-<!-- This image is reused from the y axis assembly on purpose -->
-![Insert the M3 and M5 heat-set inserts in the Z Axis Anti Backlash Nut](../img/y_axis_assembly/y_axis_step_5.png){: .shadow}
+Insert the M3 and M5 heat-set inserts in the Z-Axis Anti-Backlash Nut.
+<!-- This image is reused from the Y-Axis assembly on purpose -->
+![Insert the M3 and M5 heat-set inserts in the Z-Axis Anti Backlash Nut](../img/y_axis_assembly/y_axis_step_5.png){: .shadow}
 
 ---
 
-Fasten the Brass lead-screw nuts on either side of the Z Axis Anti Backlash Nut using M3x8mm SHCS. Remember to apply medium-strength threadlock here, sparingly!
+Fasten the Brass lead-screw nuts on either side of the Z-Axis Anti Backlash Nut using M3x8mm SHCS. Remember to apply medium-strength threadlock here, sparingly!
 
-<!-- This image is reused from the y axis assembly on purpose -->
-![Fasten the Brass lead-screw nuts on either side of the Z Axis Anti Backlash Nut using M3x8mm SHCS](../img/y_axis_assembly/y_axis_step_6.png){: .shadow}
+<!-- This image is reused from the Y-Axis assembly on purpose -->
+![Fasten the Brass lead-screw nuts on either side of the Z-Axis Anti Backlash Nut using M3x8mm SHCS](../img/y_axis_assembly/y_axis_step_6.png){: .shadow}
 
 ---
 
-Insert the lead-screw into the anti-backlash nut and set the preload using the same technique as the X and Y nuts.
+Insert the lead screw into the anti-backlash nut and set the preload using the same technique as the X and Y nuts.
 
 ![](../img/z_axis_assembly/y_axis_step_58.png){: .shadow}
 
 ---
 
-Place a locking collar onto the bottom of the lead-screw, and lock it in place. Remember to apply medium-strength threadlock to the grub-screws!
+Place a locking collar onto the bottom of the lead screw, and lock it in place. Remember to apply medium-strength threadlock to the grub screws!
 
 ![](../img/z_axis_assembly/y_axis_step_59.png){: .shadow}
 
 !!! tip
-    The locking collar should sit 13mm from the bottom of the lead-screw.
+    The locking collar should sit 13mm from the bottom of the lead screw.
 
 ---
 <!-- TODO do a composite showing the zoom -->
@@ -218,7 +218,7 @@ Place a locking collar onto the bottom of the lead-screw, and lock it in place. 
     ```
 
 !!! note
-    If you followed the FMJ installation steps, your rails are already installed. Proceed to fitting the lead-screw!
+ If you followed the FMJ installation steps, your rails are already installed. Proceed to fit the lead screw!
 
 Install the MGN15 250mm rails with only the lower carriages installed onto the `C` extrusion using M3x10mm SHCS. Make sure the end-most and centre-most bolt holes in each rail are used.
 
@@ -228,11 +228,11 @@ Install the MGN15 250mm rails with only the lower carriages installed onto the `
     You can use the rail alignment guides to stop the lower carriages from falling off the vertical rail!
 
 !!! tip annotate "Aligning the Rails"
-    Repeat the alignment procedure described for the Y axis to ensure your rails are aligned to each other and the extrusion.
+    Repeat the alignment procedure described for the Y-Axis to ensure your rails are aligned with each other and the extrusion.
 
 ---
 
-Place the lead-screw with the locking collar at the bottom into the bearing at the bottom of the Z-axis. The curved surface of the anti-backlash nut should face upwards.
+Place the lead screw with the locking collar at the bottom into the bearing at the bottom of the Z-axis. The curved surface of the anti-backlash nut should face upwards.
 
 ![](../img/z_axis_assembly/y_axis_step_61.png){: .shadow}
 
@@ -278,12 +278,12 @@ Insert the 608ZZ bearings into the Z-Axis motor mount, and insert M2.5 heat-set 
 
 ---
 
-Place a locking collar on the lead-screw.
+Place a locking collar on the lead screw.
 
 ![](../img/z_axis_assembly/y_axis_step_66.png){: .shadow}
 
 !!! tip
-    Tighten the collar slightly so that it stays in place. If you drop it at this point, it will be a pain to fish it out from behind the -Z-axis mounting plate!
+    Tighten the collar slightly so that it stays in place. If you drop it at this point, it will be a pain to fish it from behind the Z-axis mounting plate!
 
 ---
 
@@ -293,11 +293,11 @@ Install the Z-Axis motor mount onto the top of the C-beam using M5x12mm BHCS.
 
 ---
 
-Fasten the GT2 40T Pulley onto the top of the lead-screw.
+Fasten the GT2 40T Pulley onto the top of the lead screw.
 
 With the Pulley attached above the bearings, you can now loosen off the locking collar below the bearings. Push it upwards until it contacts the lower bearing and lock it in place.
 
-Remember to apply medium-strength threadlock to the grub-screws!
+Remember to apply medium-strength threadlock to the grub screws!
 
 ![](../img/z_axis_assembly/y_axis_step_68.png){: .shadow}
 
@@ -331,7 +331,7 @@ Attach the motor using M5x20mm SHCS with M5 washers and Nyloc nuts on the upper 
 
 !!! info
     Before tightening the fasteners fully, make sure the tension is set correctly.
-    To do this, pull the motor away from the column with one hand until the belt can be strummed like a guitar string and then tighten the fasteners in opposing corners first.
+    To do this, pull the motor away from the column with one hand until the belt can be strummed like a guitar string, and then tighten the fasteners in opposing corners first.
 
 ---
 ## Z-Axis Reinforcement Bracket
@@ -344,7 +344,7 @@ Attach the motor using M5x20mm SHCS with M5 washers and Nyloc nuts on the upper 
 1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md)!
 
 !!! note
-    If you have FMJ's on your Z-axis, these reinforcements are unnecessary.
+    If you have FMJs on your Z-axis, these reinforcements are unnecessary.
 
 Place the Z Reinforcement Brackets under the Z motor as shown below.
 
@@ -394,14 +394,14 @@ Install the Z Drag-Chain mount and Cable Redirect Hook using M5x12mm BHCS.
     ```
     18 x M5x10mm BHCS
      1 x Assembled Y-Axis
-     1 x Assembled Z Axis
+     1 x Assembled Z-Axis
      1 x Joining Plate A        (1)
      1 x Joining Plate A Mirror (2)
     ```
 1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#main-column)!
 2. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#main-column)!
 
-Attach the assembled Y- and Z-Axes to each other using M5x10mm BHCS through the joining plates.
+Attach the assembled Y and Z-Axes using M5x10mm BHCS through the joining plates.
 
 ![](../img/z_axis_assembly/y_axis_step_76.png){: .shadow}
 
@@ -416,10 +416,10 @@ Attach the assembled Y- and Z-Axes to each other using M5x10mm BHCS through the 
     ```
      8 x M5x12mm BHCS
      1 x Assembled Y-Axis
-     1 x Assembled Z Axis with FMJ
+     1 x Assembled Z-Axis with FMJ
     ```
 
-Attach the assembled Y- and Z-Axes to each other using M5x12mm BHCS through the bottom row of holes in the FMJ.
+Attach the assembled Y and Z-Axes using M5x12mm BHCS through the bottom row of holes in the FMJ.
 
 ![](../img/fmj_assembly/fmj_step_6.png){: .shadow}
 
@@ -452,7 +452,7 @@ Install M5 Heat-set inserts into Spindle Mount Part B.
 
 ---
 
-Pass the M5x100mm BHCS through the M5 washers and into Spindle Mount Part A and B.
+Pass the M5x100mm BHCS through the M5 washers into Spindle Mount Part A and B.
 
 ![](../img/z_axis_assembly/y_axis_step_79.png){: .shadow}
 
@@ -474,7 +474,7 @@ Bolt the M5x100mm BHCS through the Z-Axis Mounting Plate
 
 ---
 
-Attach M5 Nyloc nuts on the back side.
+Attach M5 Nyloc nuts on the backside.
 
 ![](../img/z_axis_assembly/y_axis_step_81.png){: .shadow}
 
@@ -492,7 +492,7 @@ Attach M5 Nyloc nuts on the back side.
     ```
 1. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#spindle-mount)!
 
-If you wish at this point, you can glue in your Millennium Machines Logo.
+If you wish, you can glue in your Millennium Machines Logo.
 
 ![](../img/z_axis_assembly/y_axis_step_83.png){: .shadow}
 

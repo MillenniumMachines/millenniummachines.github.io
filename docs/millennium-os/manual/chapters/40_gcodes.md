@@ -1,7 +1,7 @@
 # Millennium Machines GCode Flavour
 
 !!! warning
-    This document is a work in progress, and may lag behind changes made in MillenniumOS itself. To understand the latest available macros and how these should be called when using them directly, please refer to the code in the [GitHub Repository](https://github.com/MillenniumMachines/MillenniumOS).
+    This document is a work in progress and may lag behind changes made in MillenniumOS itself. To understand the latest available macros and how these should be called when using them directly, please refer to the code in the [GitHub Repository](https://github.com/MillenniumMachines/MillenniumOS).
 
 ## Misc
 
@@ -12,7 +12,7 @@
 G27 [Zn]
 ```
 
-Used to park the spindle in a safe location, by default it will move the spindle to the top of the Z axis, trigger an `M5.9` (stop spindle and wait for spin-down), and then move the table to the centre of the X axis and at the front (towards the operator) of the Y axis.
+Used to park the spindle in a safe location, by default it will move the spindle to the top of the Z-Axis, trigger an `M5.9` (stop the spindle and wait for spin-down), and then move the table to the centre of the X-Axis and at the front (towards the operator) of the Y-Axis.
 
 If called with the `Z1` argument, it will only raise and stop the spindle - the table location will not be changed.
 
@@ -25,7 +25,7 @@ Parking is used widely throughout probing and tool changing to move the spindle 
 G37
 ```
 
-When using multiple milling tools, we must compensate for length differences between the tools. G37 can be used to (re-)calculate the length of the current tool in relation to a reference surface or the previous tool.
+When using multiple milling tools, we must compensate for length differences between the tools. G37 can be used to (re-)calculate the length of the current tool about a reference surface or the previous tool.
 
 `G37` is used widely by CNC mills to probe tool lengths but is not implemented by RRF, so again we implement our own.
 
@@ -36,7 +36,7 @@ When using multiple milling tools, we must compensate for length differences bet
 G37.1
 ```
 
-When there is no toolsetter available, it is necessary to re-zero the Z origin after changing tools - because the new tool will never be installed with exactly the same length as the previous one.
+When there is no toolsetter available, it is necessary to re-zero the Z origin after changing tools - because the new tool will never be installed with the same length as the previous one.
 
 After a tool change, this command will be called automatically instead of `G37` if no toolsetter is available, and will walk the operator through manual re-zeroing of the Z origin.
 
@@ -49,13 +49,13 @@ This has some caveats, in that if you machine off the surface that is used as yo
 M3000 R"..." S"..."
 
 ; Example message
-M3000 R"Operator Action Required" S"Flip the part around the X axis and continue!"
+M3000 R"Operator Action Required" S"Flip the part around the X-Axis and continue!"
 ```
 
-Takes both `R` (title) and `S` (message) string parameters, and will display an RRF dialog box. If the machine is currently processing a file and not paused, the dialog box will contain Continue, Pause and Cancel options. If M3000 is called while the machine is not processing a file, only Continue and Cancel options will be shown. This can be used by post-processors to display messages to the operator.
+Takes both `R` (title) and `S` (message) string parameters, and will display an RRF dialog box. If the machine is currently processing a file and not paused, the dialog box will contain Continue, Pause, and Cancel options. If M3000 is called while the machine is not processing a file, only the Continue and Cancel options will be shown. This can be used by post-processors to display messages to the operator.
 
 !!! warning
-    This macro is currently unable to handle pauses and resumes correctly. What that means is that if you click the **Pause** button on a popup created by this macro and then resume, you will see the same popup again. You need to click continue to proceed with the job.
+    This macro is currently unable to handle pauses and resumes correctly. That means if you click the **Pause** button on a popup created by this macro, and then resume, you will see the same popup again. You need to click Continue to proceed with the job.
 
 ### `M4005` - CHECK MILLENNIUMOS VERSION
 
@@ -63,11 +63,11 @@ Takes both `R` (title) and `S` (message) string parameters, and will display an 
 ; Usage
 M4005 V"..."
 
-; Example, abort if loaded MillenniumOS version is not v0.3.0
+; Example, abort if the loaded MillenniumOS version is not v0.3.0
 M4005 V"..."
 ```
 
-The MillenniumOS post-processor and macros are tightly coupled across versions. This command aborts an active job if the version of MillenniumOS that is running in RRF does not match the version of the post-processor that generated the job.
+The MillenniumOS post-processor and macros are tightly coupled across versions. This command aborts an active job if the version of MillenniumOS running in RRF does not match the version of the post-processor that generated the job.
 
 ### `M5010` - RESET STORED WCS DETAILS
 
@@ -81,7 +81,7 @@ M5010 W0 R5
 
 Reset the stored details for a given WCS, or the current WCS if not specified.
 
-Different fields are used for different types of probing operations, and we want to reset these values before running a probing cycle - so if previous values existed but the probing cycle failed we would not end up using the previous valid values.
+Different fields are used for different types of probing operations, and we want to reset these values before running a probing cycle, so if previous values existed, but the probing cycle failed we would not end up using the formally valid values.
 
 `M5010` uses a bitmask-style integer field to select which WCS detail fields to reset for a particular WCS. These are:
 
@@ -106,7 +106,7 @@ M5011 [Wnn]
 M5011 W2
 ```
 
-Looks up stored rotation values from the given workplace number (or the current workplace number if not specified), and if a rotation value is given, will prompt the operator to apply it as a rotation compensation value using the inbuilt `G68` command.
+Look up stored rotation values from the given workplace number (or the current workplace number if not specified), and if a rotation value is given, it will prompt the operator to apply it as a rotation compensation value using the inbuilt `G68` command.
 
 ### `M6515` - CHECK CO-ORDINATES ARE WITHIN MACHINE LIMITS
 
@@ -115,7 +115,7 @@ Looks up stored rotation values from the given workplace number (or the current 
 M6515 [Xnnn] [Ynnn] [Znnn]
 ```
 
-Takes at least one of X, Y and Z co-ordinates and checks that they are within the axes limits of the machine, otherwise triggers an abort. This is used by other macros to make sure we do not try to move outside of machine limits.
+Provide at least one of X, Y, and Z coordinates to check that they are within the axes limits of the machine, and trigger an abort if they are outside the work envelope. This is used by other macros to make sure we do not try to move outside of machine limits.
 
 ### `G6550` - PROTECTED MOVE
 
@@ -124,7 +124,7 @@ Takes at least one of X, Y and Z co-ordinates and checks that they are within th
 G6550 [Innn|Inull] [Xnnn] [Ynnn] [Znnn]
 ```
 
-Takes at least one of X, Y and Z co-ordinates as the target location, and an optional probe ID (I). If the probe ID is given, it will attempt to move to the target location while watching the specified probe for activation due to collision. If a probe ID is not given, this move acts like a G1 move to the target, implementing an unprotected move at the manual probing speed. This macro is called by probing macros to try to avoid damaging any probe due to accidental collisions.
+Takes at least one of X, Y, and Z coordinates as the target location, and an optional probe ID (I). If the probe ID is given, it will attempt to move to the target location while watching the specified probe for activation due to collision. If a probe ID is not provided, this move acts like a G1 move to the target, implementing an unprotected move at the manual probing speed. This macro is called by probing macros to avoid damaging any probe due to accidental collisions.
 
 ### `M7601` - PRINT WORKPLACE DETAILS
 
@@ -133,7 +133,7 @@ Takes at least one of X, Y and Z co-ordinates as the target location, and an opt
 M7601 [Wnn]
 ```
 
-Outputs any stored probing details either for the current workplace, or the workplace given by offset `W`. It will only output probed values that are not null.
+Output any stored probing details for the current workplace or the workplace given by offset `W`. It will only output probed values that are not null.
 
 ### `G8000` - RUN CONFIGURATION WIZARD
 
@@ -142,7 +142,7 @@ Outputs any stored probing details either for the current workplace, or the work
 G8000
 ```
 
-Triggered when installing MillenniumOS for the first time, and can be called later to reconfigure MillenniumOS. Runs through a modal-driven configuration wizard prompting the user for all of the settings required to run MillenniumOS properly.
+Triggered when installing MillenniumOS for the first time, and can be called later to reconfigure MillenniumOS. It runs through a modal-driven configuration wizard prompting the user for all settings required to run MillenniumOS properly.
 
 ### `M8001` - DETECT PROBE BY STATUS CHANGE
 
@@ -171,7 +171,7 @@ Wait for the probe given by ID `K` to change state. This is used to detect the i
 ; Usage
 M8003
 
-; Save current state of GP input pins
+; Save the current state of GP input pins
 M8003
 
 ; Store list of changed pins in global.mosGPV
@@ -188,11 +188,11 @@ Stores a list of the general purpose input pins whose states have changed since 
 ```gcode
 M8004 Knn
 
-; Wait for general purpose input 0 to change state
+; Wait for general purpose input 0 to change the state
 M8004 K0
 ```
 
-Waits for a general purpose input pin to change state. The state that is changed to is unimportant, just that the state changes. This code is used by `M3.9` and `M5.9` when spindle feedback is enabled to wait until the VFD reports that it has reached the target speed.
+Waits for a general-purpose input pin to change state. The state that is changed is unimportant, just that the state changes. This code is used by `M3.9` and `M5.9` when spindle feedback is enabled to wait until the VFD reports that it has reached the target speed.
 
 ### `M9999` - RELOAD MILLENNIUMOS
 
@@ -216,9 +216,9 @@ Triggers a reload of MillenniumOS using `daemon.g`. This can be used when develo
 G6600 [Wnn]
 ```
 
-Called by the post-processor to indicate that workpiece should be probed to set WCS origin, if the `W` parameter is set then this will be the WCS offset that will be zeroed, rather than asking the operator.
+Called by the post-processor to indicate that the workpiece should be probed to set WCS origin, if the `W` parameter is set then this will be the WCS offset that will be zeroed, rather than asking the operator.
 
-If the post knows what _type_ of workpiece probe should be executed, it can call the specific probing operation directly (e.g. `G6500`, `G6501` etc) and then set the WCS using `G10`. Calling `G6600` will prompt the operator to select a probing methodology based on their knowledge of the work piece.
+If the post knows what _type_ of workpiece probe should be executed, it can call the specific probing operation directly (e.g. `G6500`, `G6501` etc) and then set the WCS using `G10`. Calling `G6600` will prompt the operator to select a probing methodology based on their knowledge of the workpiece.
 
 ### Two Axis
 
@@ -229,7 +229,7 @@ If the post knows what _type_ of workpiece probe should be executed, it can call
 G6500 [Wnn]
 ```
 
-Guided bore probe, prompts the user for approximate diameter, overtravel, approximate center position and probe depth.
+The guided Bore probe prompts the user for approximate diameter, overtravel, approximate center position, and probe depth.
 Executes `G6500.1` with the relevant parameters to run the actual probe.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
@@ -244,9 +244,9 @@ G6500.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Onnn] [R0]
 Calculates the center of a bore and its radius, by running 3 probes outwards from the chosen starting position towards the edge of the bore. The overtravel is added to the radius of the bore and this sets the distance moved from the
 center point in each of the 3 directions before the probe cycle will error if it does not trigger.
 
-Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `H` specifies the approximate diameter of the bore, `O` specifies the overtravel distance and when specified, `R0` suppresses reporting of the probe results.
+Parameters `J`, `K`, and `L` represent the starting point of the probe in the `X`, `Y`, and `Z` axes. `H` specifies the approximate diameter of the bore, `O` specifies the overtravel distance, and when specified, `R0` suppresses reporting of the probe results.
 
-`W` represents the WCS offset to set the origin on, if passed.
+`W` represents the WCS offset to set the origin on if passed.
 
 #### `G6501` - BOSS
 
@@ -255,7 +255,7 @@ Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y
 G6501 [Wnn]
 ```
 
-Guided boss probe, prompts the user for approximate diameter, clearance, overtravel, approximate center position and probe depth.
+The guided Boss probe prompts the user for approximate diameter, clearance, overtravel, approximate center position, and probe depth.
 Executes `G6501.1` with the relevant parameters to run the actual probe.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
@@ -267,11 +267,11 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 G6501.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Tnnn] [Onnn] [R0]
 ```
 
-Calculates the center of a boss and its' radius, by running 3 probes inwards towards the operator-chosen center of the bore. The overtravel is subtracted from the radius of the boss to identify the target location of each probe, and the clearance is added to the radius of the boss to identify the starting locations.
+Calculates the center of a boss and its radius, by running 3 probes inwards towards the operator-chosen center of the bore. The overtravel is subtracted from the radius of the boss to identify the target location of each probe, and the clearance is added to the radius of the boss to identify the starting locations.
 
-Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `H` specifies the approximate diameter of the bore, `O` specifies the overtravel distance, `T` the clearance distance, and when specified, `R0` suppresses reporting of the probe results.
+Parameters `J`, `K`, and `L` represent the starting point of the probe in the `X`, `Y`, and `Z` axes. `H` specifies the approximate diameter of the bore, `O` specifies the overtravel distance, `T` the clearance distance, and when specified, `R0` suppresses reporting of the probe results.
 
-`W` represents the WCS offset to set the origin on, if passed.
+`W` represents the WCS offset to set the origin on if passed.
 
 
 #### `G6502` - RECTANGLE POCKET
@@ -281,7 +281,7 @@ Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y
 G6502 [Wnn]
 ```
 
-Guided rectangle pocket probe, prompts the user for an approximate width (X), length (Y), overtravel and clearance, an approximate center position and probe depth. Executes `G6502.1` with the relevant parameters to run the actual probe.
+The guided Rectangle Pocket probe prompts the user for an approximate width (X), length (Y), overtravel and clearance, an approximate center position, and probe depth. Executes `G6502.1` with the relevant parameters to run the actual probe.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
@@ -292,12 +292,12 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 G6502.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
 ```
 
-Calculates the center of a rectangle pocket, its surface angles, rotation angle (in relation to the X axis) and its dimensions based on 8 different probes.
-Using the provided width, height, clearance and starting location, we probe outwards from inside the expected edges of each surface by the clearance distance. We probe each surface twice to get a surface angle, and validate that the pocket itself is both rectangular and how far it is rotated from the X axis.
+Calculates the center of a rectangle pocket, its surface angles, rotation angle (about the X-axis), and its dimensions based on 8 different probes.
+Using the provided width, height, clearance, and starting location, we probe outwards from inside the expected edges of each surface by the clearance distance. We probe each surface twice to get a surface angle and validate that the pocket itself is both rectangular and how far it is rotated from the X-axis.
 
-Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `H` and `I` specify the approximate X and Y dimensions of the pocket, `O` specifies the overtravel distance, `T` the clearance distance, and when specified, `R0` suppresses reporting of the probe results.
+Parameters `J`, `K`, and `L` represent the starting point of the probe in the `X`, `Y`, and `Z` axes. `H` and `I` specify the approximate X and Y dimensions of the pocket, `O` specifies the overtravel distance, `T` the clearance distance, and when specified, `R0` suppresses reporting of the probe results.
 
-`W` represents the WCS offset to set the origin on, if passed.
+`W` represents the WCS offset to set the origin on if passed.
 
 #### `G6503` - RECTANGLE BLOCK
 
@@ -306,7 +306,7 @@ Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y
 G6503 [Wnn]
 ```
 
-Guided rectangle block probe, prompts the user for an approximate width (X), length (Y), overtravel and clearance, an approximate center position and probe depth. Executes `G6503.1` with the relevant parameters to run the actual probe.
+The guided Rectangle Block probe prompts the user for an approximate width (X), length (Y), overtravel and clearance, approximate center position, and probe depth. Executes `G6503.1` with the relevant parameters to run the actual probe.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
@@ -317,12 +317,12 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 G6503.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
 ```
 
-Calculates the center of a rectangle block, its surface angles, rotation angle (in relation to the X axis) and its dimensions based on 8 different probes.
-Using the provided width, height, clearance and starting location, we probe inwards from the expected edges of each surface by the clearance distance. We probe each surface twice to get a surface angle, and validate that the block itself is both rectangular and how far it is rotated from the X axis.
+Calculates the center of a rectangle block, its surface angles, rotation angle (about the X-axis), and its dimensions based on 8 different probes.
+Using the provided width, height, clearance, and starting location, we probe inwards from the expected edges of each surface by the clearance distance. We probe each surface twice to get a surface angle and validate that the block itself is both rectangular and how far it is rotated from the X-axis.
 
-Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `H` and `I` specify the approximate X and Y dimensions of the block, `O` specifies the overtravel distance, `T` the clearance distance, and when specified, `R0` suppresses reporting of the probe results.
+Parameters `J`, `K`, and `L` represent the starting point of the probe in the `X`, `Y`, and `Z` axes. `H` and `I` specify the approximate X and Y dimensions of the block, `O` specifies the overtravel distance, `T` the clearance distance, and when specified, `R0` suppresses reporting of the probe results.
 
-`W` represents the WCS offset to set the origin on, if passed.
+`W` represents the WCS offset to set the origin on if passed.
 
 #### `G6504` - WEB X
 
@@ -347,7 +347,7 @@ Not implemented.
 G6508 [Wnn]
 ```
 
-Guided outside corner probe, prompts the user for an approximate width (X) and length (Y) of the 2 surfaces that make up the corner, a clearance and overtravel distance, a probing depth, a starting location and the corner that we want to probe (front left, back right etc). Executes `G6508.1` with the relevant parameters to run the actual probe.
+The guided Outside Corner probe prompts the user for an approximate width (X) and length (Y) of the 2 surfaces that make up the corner, a clearance and overtravel distance, a probing depth, a starting location, and the corner that we want to probe (front left, back right, etc). Executes `G6508.1` with the relevant parameters to run the actual probe.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
@@ -358,9 +358,9 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 G6508.1 [Wnn] Jnnn Knnn Lnnn Nn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
 ```
 
-Calculates the corner position of a square corner on a workpiece in X and Y, as well as calculating the rotation angle and corner angle of the item. Using the provided width, height, clearance, overtravel and starting location, we move outwards along each surface forming the corner, probing at 2 locations on each surface to find their angles, and then calculate where these surfaces intersect at the relevant corner.
+Calculates the corner position of a square corner on a workpiece in X and Y, as well as calculating the rotation angle and corner angle of the item. Using the provided width, height, clearance, overtravel, and starting location, we move outwards along each surface forming the corner, probing at 2 locations on each surface to find their angles, and then calculating where these surfaces intersect at the relevant corner.
 
-Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `N` indicates the corner number to probe, where the Front Left corner is `0` and the number increases anti-clockwise, with the Back Left corner at `3`.
+Parameters `J`, `K`, and `L` represent the starting point of the probe in the `X`, `Y`, and `Z` axes. `N` indicates the corner number to probe, where the Front Left corner is `0` and the number increases anti-clockwise, with the Back Left corner at `3`.
 
 `Q` identifies the mode - with `Q1`, quick mode is enabled, and no `H` or `I` parameter needs to be passed. Only a single probe point will be taken on each surface of the corner.
 
@@ -368,7 +368,7 @@ With `Q0` (the default), you must also pass `H` and `I` - which specify the appr
 
 In both modes, you can specify `O`, the overtravel distance, and `T`, the clearance distance.
 
-`R0` suppresses reporting of the probe results, and `W` represents the WCS offset to set the origin on, if passed.
+`R0` suppresses reporting of the probe results, and `W` represents the WCS offset to set the origin on if passed.
 
 #### `G6509` - INSIDE CORNER
 
@@ -383,7 +383,7 @@ Not implemented.
 G6510 [Wnn]
 ```
 
-Guided single surface probe, which prompts the user for a starting location, overtravel distance, which surface to probe, a maximum probing distance and for X and Y surfaces, a probing depth below the starting location. Can be used to probe the Z height of a workpiece, or a single surface on X or Y if the operator knows these are aligned with the machine axes. This macro only probes a single point so cannot calculate surface angles.
+The guided Single Surface probe prompts the user for a starting location, overtravel distance, which surface to probe, a maximum probing distance, and for X and Y surfaces, a probing depth below the starting location. It can probe the Z height of a workpiece, or a single surface on X or Y if the operator knows these are aligned with the machine axes. This macro only probes a single point so it cannot calculate surface angles.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
@@ -394,11 +394,11 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 G6510.1 [Wnn] Jnnn Knnn Lnnn Hn Innn [Onnn]
 ```
 
-Calculates the X, Y or Z co-ordinate of a surface using the provided starting location, surface number, probing distance and depth.
+Calculate the X, Y, or Z coordinates of a surface using the provided starting location, surface number, probing distance, and depth.
 
-Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `H` specifies the axis to probe on, starting at 0 for Left, 1 for Right, 2 for Front, 3 for Back, and 4 for Top. `I` specifies the distance to probe towards the surface, and `O` specifies the overtravel distance. `R0` suppresses reporting of the probe results.
+Parameters `J`, `K`, and `L` represent the starting point of the probe in the `X`, `Y`, and `Z` axes. `H` specifies the axis to probe on, starting at 0 for Left, 1 for Right, 2 for Front, 3 for Back, and 4 for Top. `I` specifies the distance to probe toward the surface, and `O` specifies the overtravel distance. `R0` suppresses the reporting of the probe results.
 
-`W` represents the WCS offset to set the origin on, if passed.
+`W` represents the WCS offset to set the origin on if passed.
 
 #### `G6511` - PROBE REFERENCE SURFACE
 
@@ -407,7 +407,7 @@ Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y
 G6511
 ```
 
-Probes the touch probe reference surface in Z, and sets the touch probe activation point. Will be called automatically when changing to the touch probe with the feature enabled.
+Probes the touch probe reference surface in Z, and sets the touch probe activation point. This will be called automatically when changing to the touch probe with the feature enabled.
 
 ### Three Axis
 
@@ -418,7 +418,7 @@ Probes the touch probe reference surface in Z, and sets the touch probe activati
 G6520 [Wnn]
 ```
 
-Guided probing macro that combines OUTSIDE CORNER and SINGLE SURFACE (Z) macros to zero all 3 axes of a WCS in a single probing operation. This macro prompts the user for the required parameters for the OUTSIDE CORNER macro, as well as a starting location. It calls the macros in sequence, probing the Z surface first before moving outwards and probing each X and Y surface that forms the corner.
+The guided Vice Corner probing macro combines OUTSIDE CORNER and SINGLE SURFACE (Z) macros to zero all 3 axes of a WCS in a single probing operation. This macro prompts the user for the required parameters for the OUTSIDE CORNER macro, as well as a starting location. It calls the macros in sequence, probing the Z surface first before moving outwards and probing each X and Y surface that forms the corner.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
@@ -429,11 +429,11 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 G6520.1 [Wnn] Jnnn Knnn Lnnn Nn Pnnn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
 ```
 
-Executes a Vise Corner probe using the parameters gathered by the operator. Runs a Z probe first, then each corner probe after and sets the WCS origin of all 3 axes at once.
+Executes a Vise Corner probe using the parameters gathered by the operator. Runs a Z probe first, then each corner probe after, and sets the WCS origin of all 3 axes at once.
 
-Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y` and `Z` axes. `N` indicates the corner number to probe, where the Front Left corner is `0` and the number increases anti-clockwise, with the Back Left corner at `3`.
+Parameters `J`, `K`, and `L` represent the starting point of the probe in the `X`, `Y`, and `Z` axes. `N` indicates the corner number to probe, where the Front Left corner is `0` and the number increases anti-clockwise, with the Back Left corner at `3`.
 
-`P` indicates the depth to probe the corner surfaces at relative to the probed top surface.
+`P` indicates the depth to probe the corner surfaces relative to the probed top surface.
 
 `Q` identifies the mode - with `Q1`, quick mode is enabled, and no `H` or `I` parameter needs to be passed. Only a single probe point will be taken on each surface of the corner.
 
@@ -441,7 +441,7 @@ With `Q0` (the default), you must also pass `H` and `I` - which specify the appr
 
 In both modes, you can specify `O`, the overtravel distance, and `T`, the clearance distance.
 
-`R0` suppresses reporting of the probe results, and `W` represents the WCS offset to set the origin on, if passed.
+`R0` suppresses reporting of the probe results, and `W` represents the WCS offset to set the origin on if passed.
 
 ### Base
 
@@ -452,9 +452,9 @@ In both modes, you can specify `O`, the overtravel distance, and `T`, the cleara
 G6512 Lnnn [Inn] [Xnnn] [Ynnn] [Znnn] [Jnnn] [Knnn]
 ```
 
-`G6512` is the underlying probing macro called by the higher-level probing cycle macros. It must be passed a target position in at least one axis (`X`, `Y` and `Z`), and a start position in at least the `Z` axes (`L`). It may also be passed a start position in `X` or `Y` axes. The unspecified axes for both start and target positions will default to the current machine co-ordinates.
+`G6512` is the underlying probing macro called by the higher-level probing cycle macros. It must be passed a target position in at least one axis (`X`, `Y`, and `Z`), and a start position in at least the `Z` axes (`L`). It may also be passed a start position in the `X` or `Y` axes. The unspecified axes for start and target positions will default to the current machine coordinates.
 
-If `I` is not specified, the macro will trigger a guided manual probing cycle similar to the RRF jogging window, but only able to move towards or away from the target position. When complete, `G6512` will update the probe position in the `mosPCX`, `mosPCY` and `mosPCZ` global variables, adjusting for tool radius and deflection.
+If `I` is not specified, the macro will trigger a guided manual probing cycle similar to the RRF jogging window, but only move towards or away from the target position. When complete, `G6512` will update the probe position in the `mosPCX`, `mosPCY`, and `mosPCZ` global variables, adjusting for tool radius and deflection.
 
 #### `G6512.1` - AUTOMATED PROBE
 
@@ -463,9 +463,9 @@ If `I` is not specified, the macro will trigger a guided manual probing cycle si
 G6512.1 Inn [Xnnn] [Ynnn] [Znnn] [Rnn]
 ```
 
-Probe a single point using an installed and connected touch probe. Target co-ordinates are specified using `X`, `Y` and `Z` and `R` can be used to override the number of retries rather than using the default value for the probe.
+Probe a single point using an installed and connected touch probe. Target coordinates are specified using `X`, `Y`, `Z`, and `R` and can be used to override the number of retries rather than using the default value for the probe.
 
-Probe position will be reported in the `mosPCX`, `mosPCY` and `mosPCZ` global variables, with no compensation for tool radius or deflection. Probe variance will be stored in the `mosPVX`, `mosPVY` and `mosPVZ` variables.
+Probe position will be reported in the `mosPCX`, `mosPCY`, and `mosPCZ` global variables without compensation for tool radius or deflection. Probe variance will be stored in the `mosPVX`, `mosPVY`, and `mosPVZ` variables.
 
 !!! warning
     **DO NOT** call this macro directly - use `G6512`.
@@ -477,9 +477,9 @@ Probe position will be reported in the `mosPCX`, `mosPCY` and `mosPCZ` global va
 G6512.1 [Xnnn] [Ynnn] [Znnn]
 ```
 
-Probe a single point using a manual jogging process. Target co-ordinates are specified using `X`, `Y` and `Z`.
+Probe a single point using a manual jogging process. Target coordinates are specified using `X`, `Y`, and `Z`.
 
-Probe position will be reported in the `mosPCX`, `mosPCY` and `mosPCZ` global variables, with no compensation for tool radius or deflection. Probe variance will be zero.
+Probe position will be reported in the `mosPCX`, `mosPCY`, and `mosPCZ` global variables without compensation for tool radius or deflection. The probe variance will be zero.
 
 !!! warning
     **DO NOT** call this macro directly - use `G6512`.
@@ -500,13 +500,13 @@ G73 [Fnnn] [Rnnn] [Qnnn] [Xnnn] [Ynnn] [Znnn]
 G73 F500 R-5 Q1 Z-10 X10 Y10
 ```
 
-Run a peck drilling with partial retract cycle. **WARNING**: - this may not clear enough chips. You are likely better off using a drill cycle that retracts fully.
+Run a peck drilling with a partial retract cycle. **WARNING**: - this may not clear enough chips. You are likely better off using a drill cycle that retracts fully.
 
-The cycle will first move to the `R` height at the current location, then to the `X` and `Y` location if given.
+The cycle will move to the `R` height at the current location, then to the `XY` location if given.
 
 It will then move downwards towards `Z` at the given feed rate (or the previously used rate) by the peck distance `Q`.
 
-It will then retract by the `Q` distance again, and then proceed downwards by `2xQ`, drilling a successively deeper hole with short retraction moves.
+It will then retract by the `Q` distance, then proceed downwards by `2xQ`, drilling a successively deeper hole with short retraction moves.
 
 After it has reached the target depth `Z` it will retract back to the given `R` height and return.
 
@@ -517,7 +517,7 @@ After it has reached the target depth `Z` it will retract back to the given `R` 
 G80
 ```
 
-Resets all variables stored about the current canned cycle. After the first call to a canned cycle macro containing drilling details, subsequent calls only need to contain the X and Y location of the holes. By calling `G80`, these stored details can be reset so that stored details _MUST_ be provided by the next canned drilling cycle call.
+Resets all variables stored about the current canned cycle. After the first call to a canned cycle macro containing drilling details, subsequent calls only need the XY location of the holes. By calling `G80`, these stored details can be reset so that stored details _MUST_ be provided by the next canned drilling cycle call.
 
 ### `G81` - DRILL CANNED CYCLE - FULL DEPTH
 
@@ -531,9 +531,9 @@ G80 [Fnnn] [Rnnn] [Xnnn] [Ynnn] [Znnn]
 G81 F500 R-5 Z-10 X10 Y10
 ```
 
-Run a full-depth drilling cycle with _NO_ retraction. **WARNING**: - unless you are drilling very shallow holes, use a drilling cycle with retraction.
+Run a full-depth drilling cycle with _NO_ retraction. **WARNING**: - unless drilling very shallow holes, use a drilling cycle with retraction.
 
-The cycle will first move to the `R` height at the current location, then to the `X` and `Y` location if given.
+The cycle will move to the `R` height at the current location, then to the `XY` location if given.
 
 It will then move downwards towards `Z` at the given feed rate (or the previously used rate), reaching the `Z` location in one move. It will then retract to the `R` height and return.
 
@@ -565,11 +565,11 @@ M4000 Pnn Rnn S"..." [Xnn] [Ynn]
 ; Define tool index 5 as a 30mm diameter Face Mill
 M4000 P5 R15.0 S"30mm Face Mill 3 flute"
 
-; Define tool index 49 as a probe with 1mm tip radius and deflection values for X and Y
+; Define tool index 49 as a probe with a 1mm tip radius and deflection values for X and Y
 M4000 P49 R1 S"Touch Probe" X0.05 Y0.01
 ```
 
-We need to store additional details about tools that RRF is not currently able to accommodate natively - this includes tool radius (`R`) and deflection values for probes (`X` and `Y`). Tool index is set using `P` and description is set using `S".."`. M4000` stores these custom values that allows us to use them, while configuring RRF with the relevant tool details using `M563`.
+We need to store additional details about tools that RRF is not currently able to accommodate natively - this includes tool radius (`R`) and deflection values for probes (`X` and `Y`). Tool index is set using `P` and description is set using `S".."`. M4000` stores these custom values that allow us to use them while configuring RRF with the relevant tool details using `M563`.
 
 ### `M4001` - FORGET TOOL
 
@@ -593,7 +593,7 @@ Tnn
 T41
 ```
 
-This macro is built in to RRF, using the `t{free,pre,post}.g` files. If the target tool number is specified, then these files are executed in order. The operator is prompted to change to the correct tool and if this tool is a probe tool, will be asked to verify that the tool is connected by triggering it manually before proceeding.
+This macro is built into RRF, using the `t{free,pre,post}.g` files. If the target tool number is specified, these files are executed in order. The operator is prompted to change to the correct tool and if this tool is a probe tool, will be asked to verify that the tool is connected by triggering it manually before proceeding.
 
 ---
 
@@ -615,7 +615,7 @@ Enables the GPIO output associated with air-blast, set by the operator during th
 M7
 ```
 
-Enables the GPIO output associated with unpressurized coolant, set by the operator during the configuration wizard. If air blast (`M7.1`) is not already enabled, then this will be enabled prior to activating the coolant output.
+Enables the GPIO output associated with unpressurized coolant, set by the operator during the configuration wizard. If air blast (`M7.1`) is not already enabled, then this will be enabled before activating the coolant output.
 
 ### `M8` - ENABLE FLOOD
 
@@ -624,7 +624,7 @@ Enables the GPIO output associated with unpressurized coolant, set by the operat
 M8
 ```
 
-For those mad enough to build flood coolant into a DIY CNC machine, `M8` enables pressurised flood coolant on the GPIO output associated by the operator during the configuration wizard.
+For those mad enough to build flood coolant into a DIY CNC machine, `M8` enables pressurized flood coolant on the GPIO output set by the operator during the configuration wizard.
 
 ### `M9` - CONTROL ALL COOLANTS
 
@@ -635,11 +635,11 @@ M9 [Rnn]
 ; Stop all coolants
 M9
 
-; Restore all coolants to their previously-saved states
+; Restore all coolants to their previously saved states
 M9 R1
 ```
 
-By default, this turns off any enabled coolant outputs. If called with the `R1` parameter, will restore coolant output states to those saved during the most recent pause. This macro is called during the resume process to re-enable coolant.
+By default, this turns off any enabled coolant outputs. If called with the `R1` parameter, it will restore coolant output states to those saved during the most recent pause. This macro is called during the resume process to re-enable coolant.
 
 ---
 
@@ -653,17 +653,17 @@ By default, this turns off any enabled coolant outputs. If called with the `R1` 
 ; Usage
 M3.9 [Snnnnn] [Pnn] [Dnnn]
 
-; Start spindle assigned to current tool at 8000 RPM
+; Start spindle assigned to the current tool at 8000 RPM
 M3.9 S8000
 ```
 
 Wrapping the inbuilt `M3` command, `M3.9` starts the spindle in the clockwise direction at a particular speed and waits for it to accelerate to the target speed.
 
-If spindle feedback is configured, this command waits for a general purpose input to change state before returning.
+If spindle feedback is configured, this command waits for a general-purpose input to change state before returning.
 
-If spindle feedback is not configured, a static delay is used to make sure the spindle is up to speed before returning. The static speed used for this is timed by the operator during the wizard process, and modified based on the percentage speed-change being requested. So if the RPM change is 50% of the maximum RPM of the spindle, then the delay will be 50% of the operator-recorded delay.
+If spindle feedback is not configured, a static delay is used to make sure the spindle is up to speed before returning. The static speed used for this is timed by the operator during the wizard process, and modified based on the percentage speed change being requested. So if the RPM change is 50% of the maximum RPM of the spindle, then the delay will be 50% of the operator-recorded delay.
 
-Additionally, if expert mode is disabled, then this macro will pop up an operator confirmation / warning box when the spindle is going to accelerate from 0 rpm.
+Additionally, if Expert Mode is disabled, then this macro will pop up an operator confirmation/warning box when the spindle is going to accelerate from 0 rpm.
 
 #### `M5.9` - STOP SPINDLE AND WAIT
 
@@ -676,7 +676,7 @@ Wrapping the inbuilt `M5` command, `M5.9` stops all spindles and waits for them 
 
 ### Variable Spindle Speed Control
 
-Variable Spindle Speed Control (VSSC) constantly adjusts the speed of the spindle up and down over a set range to avoid resonance between the tool and the workpiece building up at constant RPMs. It can provide a quality boost in situations where resonances would otherwise occur.
+Variable Spindle Speed Control (VSSC) constantly adjusts the rotational speed of the spindle up and down over a set range to avoid resonance between the tool and the workpiece building up at constant RPMs. It can provide a quality boost in situations where resonances would otherwise occur.
 
 #### `M7000` - ENABLE VSSC
 

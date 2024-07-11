@@ -4,7 +4,7 @@
 
 The standard (and recommended) work envelope is 340mm in X, 160mm in Y, and 60mm in Z.
 
-The X and Z axis dimensions are customisable but we don't recommend anything more than 450-500mm in X and 80mm in Z with printed parts, and 120mm in Z with the Full Metal Jacket.
+The X and Z-Axis dimensions are customizable but we don't recommend anything more than 450-500mm in X and 80mm in Z with printed parts, and 120mm in Z with the Full Metal Jacket.
 
 !!! warning
     If you want to extend your clearance in Z (the effective Z height), you will need to order longer C-Beam extrusions for the main column. This information is available in the [Sourcing Guide](./bom/sourcing_guide.md#frame).
@@ -12,7 +12,7 @@ The X and Z axis dimensions are customisable but we don't recommend anything mor
 !!! abstract
     Milo is a 'table slinger' - the spindle is stationary in X and Y, and the work table moves underneath it. The X and Y axes cannot move through the XY Gantry plate so the work area is limited by the dimensions of the gantry plate _as well as_ the length and width of the table.
 
-    It is important to note that the Y axis cannot be made any longer than it already is, because the size limitation on the Y axis is dictated by how far the spindle sits out towards the operator from the main column.
+    It is important to note that the Y-Axis cannot be made any longer than it already is, because the size limitation on the Y-Axis is dictated by how far the spindle sits out towards the operator from the main column.
 
     Extending the spindle outwards from the column any further than it already is would apply too much leverage against the column.
 
@@ -72,7 +72,7 @@ These parts can be extracted directly from the [CAD files](https://github.com/Mi
 
 ### Why no Ball-screws?
 
-Common ball-screw sizes just don't fit in the 4080 C-Beam that we use for the X,Y and Z axis mounts. We've looked high and low for a larger C-Beam that will fit them but can't find any. There are smaller 8 to 10mm ball-screws that do fit but they're expensive and will probably double the cost of the machine.
+Common ball-screw sizes just don't fit in the 4080 C-Beam that we use for the X,Y and Z-Axis mounts. We've looked high and low for a larger C-Beam that will fit them but can't find any. There are smaller 8 to 10mm ball-screws that do fit but they're expensive and will probably double the cost of the machine.
 
 There are user mods to convert the machine to ball-screws but this is pretty involved, requiring grinding the ball-screw nuts to fit into the extrusion channels.
 
@@ -117,7 +117,7 @@ Medium-strength threadlockers will usually have a break-loose torque of between 
 
 Do not use permanent or semi-permanent threadlockers, or red colour threadlockers unless it is specifically marked as medium strength.
 
-When using threadlock, you must remember that the chemicals in many threadlocking compounds are not plastic-safe, and can cause stress-cracking of 3D printed thermoplastics on contact. You should use threadlock conservatively, to minimise the chances of pushing extra threadlock out of the thread and onto any 3D printed parts.
+When using threadlock, you must remember that the chemicals in many threadlocking compounds are not plastic-safe, and can cause stress-cracking of 3D printed thermoplastics on contact. You should use threadlock conservatively, to minimize the chances of pushing extra threadlock out of the thread and onto any 3D printed parts.
 
 Remember, **A DAB IS FINE**. You're not trying to glue the thread forever, just tacking it in one spot so it can't rotate free under vibration.
 
