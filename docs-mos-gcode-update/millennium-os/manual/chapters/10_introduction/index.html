@@ -922,6 +922,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#post-processors" class="md-nav__link">
     <span class="md-ellipsis">
       Post-Processors
@@ -1125,6 +1134,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#post-processors" class="md-nav__link">
     <span class="md-ellipsis">
       Post-Processors
@@ -1228,7 +1246,7 @@
 <li>A set of post-processors, which output the gcode dialect from your CAM package, ready to be uploaded into <abbr title="RepRapFirmware">RRF</abbr>.</li>
 </ul>
 <h2 id="operations">Operations</h2>
-<p>MillenniumOS implements operations to enable:</p>
+<p>MillenniumOS implements functionality to enable:</p>
 <ul>
 <li>Guided tool changes using tool descriptions, and tool length probing.</li>
 <li>Work-piece probing and work offset changes.</li>
@@ -1238,6 +1256,9 @@
 <li>Safe parking, pausing and resuming.</li>
 <li>Protected moves when used with a Touch Probe.</li>
 </ul>
+<h2 id="workflow">Workflow</h2>
+<p>MillenniumOS is designed to bring more of a 3D-printer-like workflow to machining. When you run a print job, you generally don't do any setup work before hitting print (except turning the printer on). You hit print, and the gcode file runs through a set of steps to prepare the printer before starting the print.</p>
+<p>MillenniumOS takes the same approach with milling, albeit you will be asked to provide operator input at various points. When you run a MillenniumOS gcode file, you will be walked through setting up and probing the stock for your part, before the job proceeds to cutting moves. You <em>CAN</em> setup things like <abbr title="Work Co-ordinate System">WCS</abbr> origins before hitting go, and MillenniumOS will allow you to continue with existing origins and settings, but it is easier for new operators to simply run the processed gcode files to achieve their first cuts.</p>
 <h2 id="post-processors">Post-Processors</h2>
 <p>MillenniumOS provides post-processors for both <strong>Fusion360</strong> and <strong>FreeCAD</strong>. These post-processors are designed to make working with a Millennium Machine feel a bit more like using a 3D printer - that is, the generated gcode can walk the operator through work-piece probing, both manually and automatically, and tool changes.</p>
 <h2 id="features">Features</h2>
@@ -1246,9 +1267,9 @@
 <li><strong>Toolsetter</strong> - disabled by default</li>
 <li><strong>Touch Probe</strong> - disabled by default</li>
 <li><strong>Variable Spindle Speed Control</strong> - enabled by default</li>
-<li><strong>Spindle Feedback</strong> - not implemented yet</li>
+<li><strong>Spindle Feedback</strong> - disabled by default</li>
 </ul>
-<p>Some of these features, like the Toolsetter and Touch Probe, require hardware support.</p>
+<p>Some of these features, like the Toolsetter, Touch Probe and Spindle Feedback, require hardware support.</p>
 <p>If you don't have the hardware for one or more of these features, MillenniumOS will fall back to guided, but manual processes which will allow you to achieve the same thing.</p>
 <p>This allows us to use the same gcode dialect for machines which have any combination of feature support.</p>
 <p>This may be hard to visualise, so here are some examples:</p>
