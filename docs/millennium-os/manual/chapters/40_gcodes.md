@@ -225,6 +225,7 @@ If the post knows what _type_ of workpiece probe should be executed, it can call
 #### `G6500` - BORE
 
 ```gcode
+; Usage
 G6500 [Wnn]
 ```
 
@@ -236,6 +237,7 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 ##### `G6500.1` - BORE - EXECUTE
 
 ```gcode
+; Usage
 G6500.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Onnn] [R0]
 ```
 
@@ -249,6 +251,7 @@ Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y
 #### `G6501` - BOSS
 
 ```gcode
+; Usage
 G6501 [Wnn]
 ```
 
@@ -260,6 +263,7 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 ##### `G6501.1` - BOSS - EXECUTE
 
 ```gcode
+; Usage
 G6501.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Tnnn] [Onnn] [R0]
 ```
 
@@ -273,6 +277,7 @@ Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y
 #### `G6502` - RECTANGLE POCKET
 
 ```gcode
+; Usage
 G6502 [Wnn]
 ```
 
@@ -283,6 +288,7 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 ##### `G6502.1` - RECTANGLE POCKET - EXECUTE
 
 ```gcode
+; Usage
 G6502.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
 ```
 
@@ -296,6 +302,7 @@ Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y
 #### `G6503` - RECTANGLE BLOCK
 
 ```gcode
+; Usage
 G6503 [Wnn]
 ```
 
@@ -306,6 +313,7 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 ##### `G6503.1` - RECTANGLE BLOCK - EXECUTE
 
 ```gcode
+; Usage
 G6503.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
 ```
 
@@ -335,6 +343,7 @@ Not implemented.
 #### `G6508` - OUTSIDE CORNER
 
 ```gcode
+; Usage
 G6508 [Wnn]
 ```
 
@@ -345,6 +354,7 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 ##### `G6508.1` - OUTSIDE CORNER - EXECUTE
 
 ```gcode
+; Usage
 G6508.1 [Wnn] Jnnn Knnn Lnnn Nn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
 ```
 
@@ -369,6 +379,7 @@ Not implemented.
 #### `G6510` - SINGLE SURFACE
 
 ```gcode
+; Usage
 G6510 [Wnn]
 ```
 
@@ -379,6 +390,7 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 ##### `G6510.1` - SINGLE SURFACE - EXECUTE
 
 ```gcode
+; Usage
 G6510.1 [Wnn] Jnnn Knnn Lnnn Hn Innn [Onnn]
 ```
 
@@ -390,6 +402,11 @@ Parameters `J`, `K` and `L` represent the starting point of the probe in `X`, `Y
 
 #### `G6511` - PROBE REFERENCE SURFACE
 
+```gcode
+; Usage
+G6511
+```
+
 Probes the touch probe reference surface in Z, and sets the touch probe activation point. Will be called automatically when changing to the touch probe with the feature enabled.
 
 ### Three Axis
@@ -397,6 +414,7 @@ Probes the touch probe reference surface in Z, and sets the touch probe activati
 #### `G6520` - VISE CORNER
 
 ```gcode
+; Usage
 G6520 [Wnn]
 ```
 
@@ -407,6 +425,7 @@ If the `W` parameter is set then this will be the WCS offset that will be zeroed
 ##### `G6520.1` - VISE CORNER - EXECUTE
 
 ```gcode
+; Usage
 G6520.1 [Wnn] Jnnn Knnn Lnnn Nn Pnnn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
 ```
 
@@ -429,6 +448,7 @@ In both modes, you can specify `O`, the overtravel distance, and `T`, the cleara
 #### `G6512` - PROBE
 
 ```gcode
+; Usage
 G6512 Lnnn [Inn] [Xnnn] [Ynnn] [Znnn] [Jnnn] [Knnn]
 ```
 
@@ -439,6 +459,7 @@ If `I` is not specified, the macro will trigger a guided manual probing cycle si
 #### `G6512.1` - AUTOMATED PROBE
 
 ```gcode
+; Usage
 G6512.1 Inn [Xnnn] [Ynnn] [Znnn] [Rnn]
 ```
 
@@ -452,6 +473,7 @@ Probe position will be reported in the `mosPCX`, `mosPCY` and `mosPCZ` global va
 #### `G6512.2` - MANUAL PROBE
 
 ```gcode
+; Usage
 G6512.1 [Xnnn] [Ynnn] [Znnn]
 ```
 
