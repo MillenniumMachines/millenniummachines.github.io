@@ -83,7 +83,7 @@ Fasten the XY Drag-Chain Transition to the XY plate using M3x20mm SHCS and one M
      8 x M3 Heat-set Insert
      5 x M5 Heat-set Insert
      4 x Brass Lead-screw Nut
-     4 x M5x16mm BHCS
+     5 x M5x16mm BHCS
     ```
 Insert the M3 and M5 heat-set inserts into the Y-Axis Anti-Backlash Nut.
 
