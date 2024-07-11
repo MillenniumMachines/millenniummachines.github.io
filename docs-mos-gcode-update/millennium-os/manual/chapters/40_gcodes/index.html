@@ -2705,49 +2705,57 @@ G37.1
 <p>If the post knows what <em>type</em> of workpiece probe should be executed, it can call the specific probing operation directly (e.g. <code>G6500</code>, <code>G6501</code> etc) and then set the WCS using <code>G10</code>. Calling <code>G6600</code> will prompt the operator to select a probing methodology based on their knowledge of the work piece.</p>
 <h3 id="two-axis">Two Axis</h3>
 <h4 id="g6500-bore"><code>G6500</code> - BORE</h4>
-<div class="highlight"><pre><span></span><code><span class="nb">G6500 </span>[Wnn]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6500 </span>[Wnn]
 </code></pre></div>
 <p>Guided bore probe, prompts the user for approximate diameter, overtravel, approximate center position and probe depth.
 Executes <code>G6500.1</code> with the relevant parameters to run the actual probe.</p>
 <p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65001-bore-execute"><code>G6500.1</code> - BORE - EXECUTE</h5>
-<div class="highlight"><pre><span></span><code>G6500.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Onnn] [R0]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6500.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Onnn] [R0]
 </code></pre></div>
 <p>Calculates the center of a bore and its radius, by running 3 probes outwards from the chosen starting position towards the edge of the bore. The overtravel is added to the radius of the bore and this sets the distance moved from the
 center point in each of the 3 directions before the probe cycle will error if it does not trigger.</p>
 <p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>H</code> specifies the approximate diameter of the bore, <code>O</code> specifies the overtravel distance and when specified, <code>R0</code> suppresses reporting of the probe results.</p>
 <p><code>W</code> represents the WCS offset to set the origin on, if passed.</p>
 <h4 id="g6501-boss"><code>G6501</code> - BOSS</h4>
-<div class="highlight"><pre><span></span><code><span class="nb">G6501 </span>[Wnn]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6501 </span>[Wnn]
 </code></pre></div>
 <p>Guided boss probe, prompts the user for approximate diameter, clearance, overtravel, approximate center position and probe depth.
 Executes <code>G6501.1</code> with the relevant parameters to run the actual probe.</p>
 <p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65011-boss-execute"><code>G6501.1</code> - BOSS - EXECUTE</h5>
-<div class="highlight"><pre><span></span><code>G6501.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Tnnn] [Onnn] [R0]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6501.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Tnnn] [Onnn] [R0]
 </code></pre></div>
 <p>Calculates the center of a boss and its' radius, by running 3 probes inwards towards the operator-chosen center of the bore. The overtravel is subtracted from the radius of the boss to identify the target location of each probe, and the clearance is added to the radius of the boss to identify the starting locations.</p>
 <p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>H</code> specifies the approximate diameter of the bore, <code>O</code> specifies the overtravel distance, <code>T</code> the clearance distance, and when specified, <code>R0</code> suppresses reporting of the probe results.</p>
 <p><code>W</code> represents the WCS offset to set the origin on, if passed.</p>
 <h4 id="g6502-rectangle-pocket"><code>G6502</code> - RECTANGLE POCKET</h4>
-<div class="highlight"><pre><span></span><code><span class="nb">G6502 </span>[Wnn]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6502 </span>[Wnn]
 </code></pre></div>
 <p>Guided rectangle pocket probe, prompts the user for an approximate width (X), length (Y), overtravel and clearance, an approximate center position and probe depth. Executes <code>G6502.1</code> with the relevant parameters to run the actual probe.</p>
 <p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65021-rectangle-pocket-execute"><code>G6502.1</code> - RECTANGLE POCKET - EXECUTE</h5>
-<div class="highlight"><pre><span></span><code>G6502.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6502.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
 </code></pre></div>
 <p>Calculates the center of a rectangle pocket, its surface angles, rotation angle (in relation to the X axis) and its dimensions based on 8 different probes.
 Using the provided width, height, clearance and starting location, we probe outwards from inside the expected edges of each surface by the clearance distance. We probe each surface twice to get a surface angle, and validate that the pocket itself is both rectangular and how far it is rotated from the X axis.</p>
 <p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>H</code> and <code>I</code> specify the approximate X and Y dimensions of the pocket, <code>O</code> specifies the overtravel distance, <code>T</code> the clearance distance, and when specified, <code>R0</code> suppresses reporting of the probe results.</p>
 <p><code>W</code> represents the WCS offset to set the origin on, if passed.</p>
 <h4 id="g6503-rectangle-block"><code>G6503</code> - RECTANGLE BLOCK</h4>
-<div class="highlight"><pre><span></span><code><span class="nb">G6503 </span>[Wnn]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6503 </span>[Wnn]
 </code></pre></div>
 <p>Guided rectangle block probe, prompts the user for an approximate width (X), length (Y), overtravel and clearance, an approximate center position and probe depth. Executes <code>G6503.1</code> with the relevant parameters to run the actual probe.</p>
 <p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65031-rectangle-block-execute"><code>G6503.1</code> - RECTANGLE BLOCK - EXECUTE</h5>
-<div class="highlight"><pre><span></span><code>G6503.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6503.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
 </code></pre></div>
 <p>Calculates the center of a rectangle block, its surface angles, rotation angle (in relation to the X axis) and its dimensions based on 8 different probes.
 Using the provided width, height, clearance and starting location, we probe inwards from the expected edges of each surface by the clearance distance. We probe each surface twice to get a surface angle, and validate that the block itself is both rectangular and how far it is rotated from the X axis.</p>
@@ -2762,12 +2770,14 @@ Using the provided width, height, clearance and starting location, we probe inwa
 <h4 id="g6507-pocket-y"><code>G6507</code> - POCKET Y</h4>
 <p>Not implemented.</p>
 <h4 id="g6508-outside-corner"><code>G6508</code> - OUTSIDE CORNER</h4>
-<div class="highlight"><pre><span></span><code><span class="nb">G6508 </span>[Wnn]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6508 </span>[Wnn]
 </code></pre></div>
 <p>Guided outside corner probe, prompts the user for an approximate width (X) and length (Y) of the 2 surfaces that make up the corner, a clearance and overtravel distance, a probing depth, a starting location and the corner that we want to probe (front left, back right etc). Executes <code>G6508.1</code> with the relevant parameters to run the actual probe.</p>
 <p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65081-outside-corner-execute"><code>G6508.1</code> - OUTSIDE CORNER - EXECUTE</h5>
-<div class="highlight"><pre><span></span><code>G6508.1 [Wnn] Jnnn Knnn Lnnn Nn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6508.1 [Wnn] Jnnn Knnn Lnnn Nn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
 </code></pre></div>
 <p>Calculates the corner position of a square corner on a workpiece in X and Y, as well as calculating the rotation angle and corner angle of the item. Using the provided width, height, clearance, overtravel and starting location, we move outwards along each surface forming the corner, probing at 2 locations on each surface to find their angles, and then calculate where these surfaces intersect at the relevant corner.</p>
 <p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>N</code> indicates the corner number to probe, where the Front Left corner is <code>0</code> and the number increases anti-clockwise, with the Back Left corner at <code>3</code>.</p>
@@ -2779,26 +2789,33 @@ Using the provided width, height, clearance and starting location, we probe inwa
 <p>Not implemented.</p>
 <h3 id="single-axis">Single Axis</h3>
 <h4 id="g6510-single-surface"><code>G6510</code> - SINGLE SURFACE</h4>
-<div class="highlight"><pre><span></span><code><span class="nb">G6510 </span>[Wnn]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6510 </span>[Wnn]
 </code></pre></div>
 <p>Guided single surface probe, which prompts the user for a starting location, overtravel distance, which surface to probe, a maximum probing distance and for X and Y surfaces, a probing depth below the starting location. Can be used to probe the Z height of a workpiece, or a single surface on X or Y if the operator knows these are aligned with the machine axes. This macro only probes a single point so cannot calculate surface angles.</p>
 <p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65101-single-surface-execute"><code>G6510.1</code> - SINGLE SURFACE - EXECUTE</h5>
-<div class="highlight"><pre><span></span><code>G6510.1 [Wnn] Jnnn Knnn Lnnn Hn Innn [Onnn]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6510.1 [Wnn] Jnnn Knnn Lnnn Hn Innn [Onnn]
 </code></pre></div>
 <p>Calculates the X, Y or Z co-ordinate of a surface using the provided starting location, surface number, probing distance and depth.</p>
 <p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>H</code> specifies the axis to probe on, starting at 0 for Left, 1 for Right, 2 for Front, 3 for Back, and 4 for Top. <code>I</code> specifies the distance to probe towards the surface, and <code>O</code> specifies the overtravel distance. <code>R0</code> suppresses reporting of the probe results.</p>
 <p><code>W</code> represents the WCS offset to set the origin on, if passed.</p>
 <h4 id="g6511-probe-reference-surface"><code>G6511</code> - PROBE REFERENCE SURFACE</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6511</span>
+</code></pre></div>
 <p>Probes the touch probe reference surface in Z, and sets the touch probe activation point. Will be called automatically when changing to the touch probe with the feature enabled.</p>
 <h3 id="three-axis">Three Axis</h3>
 <h4 id="g6520-vise-corner"><code>G6520</code> - VISE CORNER</h4>
-<div class="highlight"><pre><span></span><code><span class="nb">G6520 </span>[Wnn]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6520 </span>[Wnn]
 </code></pre></div>
 <p>Guided probing macro that combines OUTSIDE CORNER and SINGLE SURFACE (Z) macros to zero all 3 axes of a WCS in a single probing operation. This macro prompts the user for the required parameters for the OUTSIDE CORNER macro, as well as a starting location. It calls the macros in sequence, probing the Z surface first before moving outwards and probing each X and Y surface that forms the corner.</p>
 <p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
 <h5 id="g65201-vise-corner-execute"><code>G6520.1</code> - VISE CORNER - EXECUTE</h5>
-<div class="highlight"><pre><span></span><code>G6520.1 [Wnn] Jnnn Knnn Lnnn Nn Pnnn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6520.1 [Wnn] Jnnn Knnn Lnnn Nn Pnnn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
 </code></pre></div>
 <p>Executes a Vise Corner probe using the parameters gathered by the operator. Runs a Z probe first, then each corner probe after and sets the WCS origin of all 3 axes at once.</p>
 <p>Parameters <code>J</code>, <code>K</code> and <code>L</code> represent the starting point of the probe in <code>X</code>, <code>Y</code> and <code>Z</code> axes. <code>N</code> indicates the corner number to probe, where the Front Left corner is <code>0</code> and the number increases anti-clockwise, with the Back Left corner at <code>3</code>.</p>
@@ -2809,12 +2826,14 @@ Using the provided width, height, clearance and starting location, we probe inwa
 <p><code>R0</code> suppresses reporting of the probe results, and <code>W</code> represents the WCS offset to set the origin on, if passed.</p>
 <h3 id="base">Base</h3>
 <h4 id="g6512-probe"><code>G6512</code> - PROBE</h4>
-<div class="highlight"><pre><span></span><code><span class="nb">G6512 </span>Lnnn [Inn] [Xnnn] [Ynnn] [Znnn] [Jnnn] [Knnn]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6512 </span>Lnnn [Inn] [Xnnn] [Ynnn] [Znnn] [Jnnn] [Knnn]
 </code></pre></div>
 <p><code>G6512</code> is the underlying probing macro called by the higher-level probing cycle macros. It must be passed a target position in at least one axis (<code>X</code>, <code>Y</code> and <code>Z</code>), and a start position in at least the <code>Z</code> axes (<code>L</code>). It may also be passed a start position in <code>X</code> or <code>Y</code> axes. The unspecified axes for both start and target positions will default to the current machine co-ordinates.</p>
 <p>If <code>I</code> is not specified, the macro will trigger a guided manual probing cycle similar to the RRF jogging window, but only able to move towards or away from the target position. When complete, <code>G6512</code> will update the probe position in the <code>mosPCX</code>, <code>mosPCY</code> and <code>mosPCZ</code> global variables, adjusting for tool radius and deflection.</p>
 <h4 id="g65121-automated-probe"><code>G6512.1</code> - AUTOMATED PROBE</h4>
-<div class="highlight"><pre><span></span><code>G6512.1 Inn [Xnnn] [Ynnn] [Znnn] [Rnn]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6512.1 Inn [Xnnn] [Ynnn] [Znnn] [Rnn]
 </code></pre></div>
 <p>Probe a single point using an installed and connected touch probe. Target co-ordinates are specified using <code>X</code>, <code>Y</code> and <code>Z</code> and <code>R</code> can be used to override the number of retries rather than using the default value for the probe.</p>
 <p>Probe position will be reported in the <code>mosPCX</code>, <code>mosPCY</code> and <code>mosPCZ</code> global variables, with no compensation for tool radius or deflection. Probe variance will be stored in the <code>mosPVX</code>, <code>mosPVY</code> and <code>mosPVZ</code> variables.</p>
@@ -2823,7 +2842,8 @@ Using the provided width, height, clearance and starting location, we probe inwa
 <p><strong>DO NOT</strong> call this macro directly - use <code>G6512</code>.</p>
 </div>
 <h4 id="g65122-manual-probe"><code>G6512.2</code> - MANUAL PROBE</h4>
-<div class="highlight"><pre><span></span><code>G6512.1 [Xnnn] [Ynnn] [Znnn]
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6512.1 [Xnnn] [Ynnn] [Znnn]
 </code></pre></div>
 <p>Probe a single point using a manual jogging process. Target co-ordinates are specified using <code>X</code>, <code>Y</code> and <code>Z</code>.</p>
 <p>Probe position will be reported in the <code>mosPCX</code>, <code>mosPCY</code> and <code>mosPCZ</code> global variables, with no compensation for tool radius or deflection. Probe variance will be zero.</p>
