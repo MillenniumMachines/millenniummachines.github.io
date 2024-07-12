@@ -47,7 +47,7 @@ It is still a good idea to cross-reference these pins before changing any settin
 
 ## Bill of Materials
 
-Provided [here](../../bom/sourcing_guide.md) is the bill of materials. We recommend you stick to this list as much as possible. You're an adult (hopefully), and this is your machine. If there is a substitution that you think would lead to a better machine, feel free! If there is a feature you don't feel is necessary, don't buy the parts for it.
+Provided [here](../../bom/sourcing_guide.md) is the bill of materials. You're an adult (hopefully), and this is your machine, but we recommend you stick to this list as much as possible. If there is a substitution that you think would lead to a better machine, feel free! If there is a feature you don't feel is necessary, don't buy the parts for it.
 
 Furthermore, there are options in the guide that are up to you to decide on, such as drivers, motors, and even control boards. Do your research and find what you need to make your build work for you.
 
