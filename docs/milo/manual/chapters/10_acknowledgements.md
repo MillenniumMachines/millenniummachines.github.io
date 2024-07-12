@@ -1,6 +1,6 @@
 # Acknowledgements
 
-While the work that has been put into this project by the Millennium Machines team is immense, we can't take all the credit for the project as a whole. We had a lot of help along the way and would like to take a moment to recognize a few entities that helped us make this project a reality.
+While the work that has been put into this project by the Millennium Machines team is immense, we can't take all the credit for the project as a whole. We had a lot of help along the way and would like to take a moment to recognise a few entities that helped us make this project a reality.
 
 <img width="50" align="left" src="../../img/openbuilds.png" alt="Openbuilds Logo" />
 

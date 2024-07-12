@@ -113,11 +113,11 @@ There are a large number of VFD and spindle options available. This section of t
 !!!warning "VFD and Spindle Ground"
     You **MUST** make sure that your VFD and Spindle are properly grounded. Your VFD and Spindle are the only mains-powered items that you will come into contact with regularly during the operation of the machine, so these **MUST** have an operational ground connection **AT ALL TIMES**, and you **MUST** make sure that the socket you plug Milo into is properly grounded as well.
 
- Using a multimeter in continuity testing mode, you **MUST** be able to detect a connection between the ground pin on your AC inlet socket, the ground connector on your VFD, and the casing of your spindle.
+    Using a multimeter in continuity testing mode, you **MUST** be able to detect a connection between the ground pin on your AC inlet socket, the ground connector on your VFD, and the casing of your spindle.
 
- If your VFD is grounded but your spindle is not, you will need to [open the top casing of the spindle and connect the ground pin to the case of the spindle](https://wiki.printnc.info/en/electronics/vfd/config#grounding-shielding) - there are several spindles available where this connection is not made in the factory.
+    If your VFD is grounded but your spindle is not, you will need to [open the top casing of the spindle and connect the ground pin to the case of the spindle](https://wiki.printnc.info/en/electronics/vfd/config#grounding-shielding) - there are several spindles available where this connection is not made in the factory.
 
- You should **ALWAYS** check this before operating the machine for the first time.
+    You should **ALWAYS** check this before operating the machine for the first time.
 
 ---
 

@@ -436,7 +436,7 @@ It has 2 modes - **Quick** or `Q1`, which takes a single probe point on each sur
 !!! tip
     Calculating the rotation of the workpiece gives us the information required to compensate for this rotation using RRF's `G68` code. This is not currently implemented but is planned for a later release of MillenniumOS.
 
-    The rotation value will be printed to the console after running this probe cycle and can be viewed using the `M7600` command.
+    The rotation value will be printed to the console after running this probe cycle and can be viewed using the `M7601` command.
 
 For **Full** mode, you will be asked to enter the following information:
 

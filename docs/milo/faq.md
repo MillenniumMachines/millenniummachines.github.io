@@ -4,7 +4,7 @@
 
 The standard (and recommended) work envelope is 340mm in X, 160mm in Y, and 60mm in Z.
 
-The X and Z-Axis dimensions are customizable but we don't recommend anything more than 450-500mm in X and 80mm in Z with printed parts, and 120mm in Z with the Full Metal Jacket.
+The X and Z-Axis dimensions are customisable but we don't recommend anything more than 450-500mm in X and 80mm in Z with printed parts, and 120mm in Z with the Full Metal Jacket.
 
 !!! warning
     If you want to extend your clearance in Z (the effective Z height), you will need to order longer C-Beam extrusions for the main column. This information is available in the [Sourcing Guide](./bom/sourcing_guide.md#frame).
