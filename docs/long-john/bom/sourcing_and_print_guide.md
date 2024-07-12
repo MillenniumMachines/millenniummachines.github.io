@@ -34,4 +34,4 @@ Given a 0.4mm nozzle, 100% perimeter line width, 0.2mm layers, and a minimum wal
 ## The Long John Toolsetter
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** |
 |----------|------------|-------------------------|--------------|--------:|----------------------|
-| [Housing](https://github.com/MillenniumMachines/Long-John-Toolsetter/blob/main/stls/Housing.stl)               | 40%  | 1.6mm  | ABS/ASA | 4 | :material-close: No |
+| [Housing](https://github.com/MillenniumMachines/Long-John-Toolsetter/blob/main/stls/Housing.stl)               | 40%  | 1.6mm  | ABS/ASA | 1 | :material-close: No |
