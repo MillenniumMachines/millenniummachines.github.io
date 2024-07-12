@@ -29,7 +29,7 @@
 6. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#electronics-table)!
 7. :material-printer-3d-nozzle-heat-outline: Print this part using the [recommended settings](../../printing/print_guide.md#electronics-table)!
 
-Lay the 3 x 2080 extrusions next to each other length-ways, and attach the Skirt Front A and Skirt Front B using M5x12mm BHCS.
+Lay the 3 x 2080 extrusions next to each other lengthways, and attach the Skirt Front A and Skirt Front B using M5x12mm BHCS.
 
 !!! tip
     This is easiest to do upside-down!
@@ -59,7 +59,7 @@ Make sure they sit flush with the front and back of the skirts.
 ## Table Feet
 
 !!!! tip
-    These feet are not required if building a Casa enclosure for you Milo. Instead follow the directions within the Casa instructions.
+    These feet are not required if building a Casa enclosure for your Milo. Instead, follow the directions within the Casa instructions.
 
 
 Install an M5 Heat-set insert into each table bolt-down bracket.

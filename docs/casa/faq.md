@@ -16,10 +16,10 @@ Casa has a bi-fold door design which reduces the space it uses and means you can
 800 mm wide
 390 mm tall
 
-The electronics bay is fitted with DIN rail mounts as standard bay can be reconfigured to suit many different electronics. 
+The electronics bay is fitted with DIN rail mounts, allowing it to be reconfigured to suit many different electronics.
 
 ## Can I use plywood / acrylic panels?
-Yes! You can use whatever panel material you like but make sure to consider the impact that changing the material may have on the enclosure. Wooden panels may rot with exposure to coolant, acrylic may shatter on impact, and different materials will have different sound damping properties. 
+Yes! You can use whatever panel material you like but consider the impact that changing the material may have on the enclosure. Wooden panels may rot with exposure to coolant, acrylic may shatter on impact, and different materials will have different sound-damping properties. 
 
 ## Are the panels impact resistant / is Casa a substitute for safety glasses?
 No. Casas panels are designed to contain light coolants, chips, and sound. Casa is not designed to protect you from flying tools, workpieces, etc.

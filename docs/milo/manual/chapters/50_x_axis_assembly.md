@@ -4,7 +4,7 @@
 
 ---
 
-## X-Axis Rails, Bearing Block and Motor Mount
+## X-Axis Rails, Bearing Block, and Motor Mount
 
 !!! info annotate "Components Required"
     ```
@@ -28,15 +28,15 @@ Fasten the MGN15 500mm rails to the extrusion by screwing M3x10mm SHCS into spri
 ![fasten the MGN15 500mm Rails to the 500mm extrusion screwing M3x10mm SHCS into the spring t-nuts inside the profile](../img/x_axis_assembly/y_axis_step_27.png){: .shadow}
 
 !!! tip annotate "Aligning the Rails"
-    Repeat the alignment procedure described for the Y axis to ensure your rails are aligned to each other and the extrusion.
+    Repeat the alignment procedure described for the Y-Axis to ensure your rails are aligned with each other and the extrusion.
 
 ---
 
-Insert a 608ZZ bearing in the hole in the outer face of the X-Axis Bearing Block, then a F608ZZ bearing on either side. The flanged bearings must sit flush inside the bearing block on both sides.
+Insert a 608ZZ bearing in the hole in the outer face of the X-Axis Bearing Block, then an F608ZZ bearing on either side. The flanged bearings must sit flush inside the bearing block on both sides.
 
 !!! tip
     The 'F' in F608ZZ stands for 'flanged'. The flange on the 2 outer bearings allows
-    them to be pushed into place flush within the bearing block.
+    them to be pushed into place flush with the bearing block.
 
     The flange provides axial force against the bearing block when the locking collars
     are tightened up.
@@ -45,7 +45,7 @@ Insert a 608ZZ bearing in the hole in the outer face of the X-Axis Bearing Block
 
 ---
 
-Insert the M2.5, M3 and M5 heat-set inserts into the X-Axis Motor Mount. M2.5 inserts are used for the endstop switch mount, M3 inserts for the drag-chain mount, and finally M5 inserts are used to mount the motor.
+Insert the M2.5, M3, and M5 heat-set inserts into the X-Axis Motor Mount. M2.5 inserts are used for the endstop switch mount, M3 inserts for the drag-chain mount, and M5 inserts to mount the motor.
 
 ![insert the M2.5, M3 and M5 heat-set inserts in the X-Axis motor mount](../img/x_axis_assembly/y_axis_step_29.png){: .shadow}
 
@@ -88,7 +88,7 @@ Fasten the X-Axis Table Supports to the 2040 extrusions using M5x8mm BHCS and sp
 ![fasten the X-Axis table support to the spring t-nut in 500mm 2040 extrusions using 18 M5x8mm BHCS](../img/x_axis_assembly/y_axis_step_33.png){: .shadow}
 
 !!! warning
-    Double-check the length of M5 bolts you're using. If your bolts are too long you will bottom out the bolt in the extrusion channel and it will not grip the table supports. If your bolts are too short you'll break the printed parts if you over-tighten them.
+    Double-check the length of the M5 bolts you're using. If your bolts are too long you will bottom out the bolt in the extrusion channel and it will not grip the table supports. If your bolts are too short you'll break the printed parts if you over-tighten them.
 
 ---
 
@@ -110,16 +110,16 @@ Slide the table into the carriages on the XY Gantry Plate from the left-hand sid
     1 x 8 to 6.35mm Rigid Coupler
     ```
 
-Couple the NEMA23 motor to the lead-screw using an 8 to 6.35mm rigid coupler.
+Couple the NEMA23 motor to the lead screw using an 8 to 6.35mm rigid coupler.
 
-Remember to use medium-strength threadlock on the grub-screws in the couplers!
+Remember to use medium-strength threadlock on the grub screws in the couplers!
 
-<!-- This image is reused from the y axis assembly on purpose -->
-![couple the NEMA23 motor to the 550mm lead-screw using a 8 to 6.35mm rigid coupler](../img/y_axis_assembly/y_axis_step_11.png){: .shadow}
+<!-- This image is reused from the y-axis assembly on purpose -->
+![couple the NEMA23 motor to the 550mm lead-screw using an 8 to 6.35mm rigid coupler](../img/y_axis_assembly/y_axis_step_11.png){: .shadow}
 
 ---
 
-Insert the lead-screw through the X-Axis Motor Mount, threading it through the X-Axis Bearing Block until it extends from the other end of the table.
+Insert the lead screw through the X-Axis Motor Mount, threading it through the X-Axis Bearing Block until it extends from the other end of the table.
 
 ![insert the lead-screw through the X-Axis motor mount](../img/x_axis_assembly/y_axis_step_35.png){: .shadow}
 
@@ -137,7 +137,7 @@ Fasten the motor to the X-Axis Motor Mount using M5x20mm SHCS.
 
 ---
 
-Install a locking collar onto the lead-screw, leaving it loose.
+Install a locking collar onto the lead screw, leaving it loose.
 
 ![install a locking collar onto the lead-screw](../img/x_axis_assembly/y_axis_step_38_2.png){: .shadow}
 
@@ -154,7 +154,7 @@ Fasten the X-Axis Bearing Block to the table assembly using M5x12mm BHCS. Loosel
 Using your fingers, press each locking collar towards each other - driving them into the face of each bearing with moderate to high pressure. Tighten the inner collar first before tightening the external side collar. This will ensure that the screw remains in the same position during use.
 
 !!! note
-    Add some medium-strength threadlock to the grub-screws.
+    Add some medium-strength threadlock to the grub screws.
 
 ![preload the locking collars by pressing them towards each other](../img/x_axis_assembly/y_axis_step_38_2.png){: .shadow}
 
@@ -179,7 +179,7 @@ Attach the drag chain ends to the XY Drag Chain Transition and X Motor Mount usi
 
 ## Drag Chain Installation Point (Optional)
 
-You may wish to install the rest of the drag chain now to complete the X-Axis, however it is often easier to thread your X-Axis motor and endstop cables through the loose chain before installing it - otherwise it can become quite a tight space to work in later.
+You may wish to install the rest of the drag chain to complete the X-Axis, however, it is often easier to thread your X-Axis motor and endstop cables through the loose chain before installing it - otherwise, it can become quite a tight space to work in later.
 
 ![optionally, install the drag chain in the ends](../img/x_axis_assembly/y_axis_step_40.png){: .shadow}
 
@@ -187,7 +187,7 @@ You may wish to install the rest of the drag chain now to complete the X-Axis, h
 
 ## X-Endstop
 
-To avoid the endstop getting damaged during the rest of the assembly, its a good idea not to install it at this point, but rather install it later with the rest of the wiring.
+To avoid the endstop getting damaged during the rest of the assembly, it's a good idea not to install it at this point but rather install it later with the rest of the wiring.
 
 ![optionally, install the x-axis endstop now](../img/x_axis_assembly/y_axis_step_41.png){: .shadow}
 
@@ -220,13 +220,13 @@ Insert the M5 heat-set insert into the handwheel. Attach the handwheel handle us
 
 ---
 
-Place the handle onto the X and Y axis Lead-screws and secure using two M3x10 SHCS or two M3 grub screws.
+Place the handle onto the X and Y-Axis Lead-screws and secure using two M3x10 SHCS or two M3 grub screws.
 
-![place the handle onto the X and Y axis lead-screws](../img/x_axis_assembly/x_axis_handwheel_3.png){: .shadow}
+![place the handle onto the X and Y-Axis lead-screws](../img/x_axis_assembly/x_axis_handwheel_3.png){: .shadow}
 
 !!! tip
-    Repeat these handwheel steps for the Y axis handwheel!
+    Repeat these handwheel steps for the Y-axis handwheel!
 
 ---
 
-[Next Chapter: Z Axis Assembly](./60_z_axis_assembly.md)
+[Next Chapter: Z-Axis Assembly](./60_z_axis_assembly.md)

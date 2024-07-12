@@ -54,11 +54,11 @@ To make some features printable without support, some features are printed with 
 ## X-Axis Assembly
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** |
 |----------|------------|-------------------------|--------------|--------:|----------------------|
-| [X Axis Table support (Ends)    ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Table%20Support%20Ends%20x4%20.stl)               | 40%  | 1.6mm  | ABS/ASA | 4 | :material-close: No |
-| [X Axis Table support (Centres) ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Table%20Support%20Centre%20x2%20.stl)             | 40%  | 1.6mm  | ABS/ASA | 2 | :material-close: No |
-| [X Axis Motor Mount             ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Motor%20Mount%20x1.stl)                           | 40%  | 1.6mm  | ABS/ASA | 1 | :material-close: No |
-| [X Axis Bearing Block           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Bearing%20Block%20x1.stl)                         | 40%  | 1.6mm  | ABS/ASA | 1 | :material-close: No |
-| [X Axis Anti Backlash Nut       ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Anti%20Backlash%20Nut%20x1.stl)                   | 40%  | 1.6mm  | ABS/ASA | 1 | :material-close: No |
+| [X-Axis Table support (Ends)    ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Table%20Support%20Ends%20x4%20.stl)               | 40%  | 1.6mm  | ABS/ASA | 4 | :material-close: No |
+| [X-Axis Table support (Centres) ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Table%20Support%20Centre%20x2%20.stl)             | 40%  | 1.6mm  | ABS/ASA | 2 | :material-close: No |
+| [X-Axis Motor Mount             ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Motor%20Mount%20x1.stl)                           | 40%  | 1.6mm  | ABS/ASA | 1 | :material-close: No |
+| [X-Axis Bearing Block           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Bearing%20Block%20x1.stl)                         | 40%  | 1.6mm  | ABS/ASA | 1 | :material-close: No |
+| [X-Axis Anti Backlash Nut       ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Anti%20Backlash%20Nut%20x1.stl)                   | 40%  | 1.6mm  | ABS/ASA | 1 | :material-close: No |
 
 ## Y-Axis Assembly
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** |
@@ -70,9 +70,9 @@ To make some features printable without support, some features are printed with 
 ## Z-Axis Assembly
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** |
 |----------|------------|-------------------------|--------------|--------:|----------------------|
-| [Z Axis Motor Mount             ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Z%20Axis%20STLs/Z%20Motor%20Mount%20x1.stl)                                  | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
-| [Z Axis Bearing Block           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Z%20Axis%20STLs/%5Ba%5D%20Z%20Axis%20Bearing%20Block%20x1.stl)               | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: Yes |
-| [Z Axis Anti Backlash Nut       ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Z%20Axis%20STLs/Z%20Axis%20Anti%20Backlash%20Nut%20x1.stl)                   | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
+| [Z-Axis Motor Mount             ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Z%20Axis%20STLs/Z%20Motor%20Mount%20x1.stl)                                  | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
+| [Z-Axis Bearing Block           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Z%20Axis%20STLs/%5Ba%5D%20Z%20Axis%20Bearing%20Block%20x1.stl)               | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: Yes |
+| [Z-Axis Anti Backlash Nut       ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Z%20Axis%20STLs/Z%20Axis%20Anti%20Backlash%20Nut%20x1.stl)                   | 40%  | 1.6mm | ABS/ASA | 1 | :material-close: No |
 
 ## Main Column
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** | **Note** |
@@ -105,7 +105,7 @@ To make some features printable without support, some features are printed with 
 | [Z Drag Chain Mount A           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Cable%20Chain%20Mounts/%5Ba%5D%20Z%20Drag%20Chain%20Mount%20A%20x1.stl)      | 40%  | 1.2mm   | ABS/ASA | 1 | :material-check: Yes |
 | [Z Drag Chain Mount B           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Cable%20Chain%20Mounts/%5Ba%5D%20Z%20Drag%20Chain%20Mount%20B%20x1.stl)      | 40%  | 1.2mm   | ABS/ASA | 1 | :material-check: Yes |
 | [Z Cable Redirect Hook          ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Cable%20Chain%20Mounts/%5Ba%5D%20Z%20Cable%20Redirect%20Hook%20x1.stl)       | 40%  | 1.2mm   | ABS/ASA | 1 | :material-check: Yes |
-| [Z Axis Drag Chain Backer      ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Cable%20Chain%20Mounts/%5Ba%7D%20Z%20Axis%20Cable%20Chain%20Backer%20x1.stl) | 40%  | 1.2mm   | ABS/ASA | 1 | :material-check: Yes |
+| [Z-Axis Drag Chain Backer      ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Cable%20Chain%20Mounts/%5Ba%7D%20Z%20Axis%20Cable%20Chain%20Backer%20x1.stl) | 40%  | 1.2mm   | ABS/ASA | 1 | :material-check: Yes |
 
 ## Electronics Table
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** | **Note** |
