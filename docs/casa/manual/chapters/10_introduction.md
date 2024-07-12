@@ -28,7 +28,7 @@ This manual and associated firmware is for the Casa R2 built to the standard BOM
 
 ## Bill of Materials
 
-Provided [here](../../bom/sourcing_guide.md) is the bill of materials. While we recommend that you try to stick to this list as much as possible, you're an adult (hopefully) and this is your machine. If there is a substitution that you think would lead to a better machine then feel free! If there is a feature you don't feel is necessary then don't buy the parts for it.
+Provided [here](../../bom/sourcing_guide.md) is the bill of materials. We recommend that you try to stick to this list as much as possible; you're an adult (hopefully), and this is your machine. If there is a substitution that you think would lead to a better machine, feel free! If there is a feature you don't feel is necessary, don't buy the parts for it.
 
 Furthermore, there are options in the guide that are up to you to decide on, such as drivers, motors, and even control boards. Do your research and find what you need to make your build work for you.
 

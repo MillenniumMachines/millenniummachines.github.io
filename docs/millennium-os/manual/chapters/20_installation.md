@@ -12,7 +12,7 @@ MillenniumOS for RRF is distributed as a **single Zip file** that contains every
 
 ### Download MillenniumOS Release
 
-MillenniumOS releases are on the [MillenniumOS Releases](https://github.com/MillenniumMachines/MillenniumOS/releases) page. Select the `mos-release-vX.X.X...zip` file to download the latest release.
+MillenniumOS releases are found on the [MillenniumOS Releases](https://github.com/MillenniumMachines/MillenniumOS/releases) page. Select the `mos-release-vX.X.X...zip` file to download the latest release.
 
 ![Image showing example MillenniumOS release](../img/mos_install_step_0.png){: .shadow-dark }
 
@@ -54,8 +54,8 @@ Once done, click the Save button in the top right.
 !!! warning
     As you have changed `config.g`, you may be prompted to **restart** or **reload** the RRF configuration. Pick the **restart** option.
 
- If you are not prompted, please type `M999` in the **"Control -> Console"** tab and hit enter to restart the mainboard.
- MillenniumOS will not load properly until the machine is restarted.
+    If you are not prompted, please type `M999` in the **"Control -> Console"** tab and hit enter to restart the mainboard.
+    MillenniumOS will not load properly until the machine is restarted.
 
 ### Configuration
 
@@ -79,26 +79,26 @@ If you experience connection issues during the wizard, you can typically reload 
 !!! tip "Datum Tools"
     You will be asked to select a Datum Tool during the wizard process, which is used to take various manual measurements.
 
- This tool needs to be able to activate your Toolsetter, if you have one, and a reference surface (usually the machine table near where the Toolsetter is mounted) if you also have a Touch Probe.
+    This tool needs to be able to activate your Toolsetter, if you have one, and a reference surface (usually the machine table near where the Toolsetter is mounted) if you also have a Touch Probe.
 
- It is generally easier to check this before starting the configuration wizard, as it might involve moving your spindle down in the mount to reach both of these items with a short tool.
+    It is generally easier to check this before starting the configuration wizard, as it might involve moving your spindle down in the mount to reach both of these items with a short tool.
 
- If you realize this during the configuration wizard process, don't worry - you can resume where you left off once fixing the issue.
+    If you realise this during the configuration wizard process, don't worry - you can resume where you left off once fixing the issue.
 
 !!! note
     If you experience connection issues during the wizard, you can reload your browser tab to trigger the next dialog.
 
-You may re-run the wizard anytime to reconfigure one or more features. If you click the **"Update"** button when asked if you want to reset the configuration, you can pick which parts of the configuration you would like to reconfigure. All other sections of the existing configuration will be left as-is.
+You may re-run the wizard anytime to reconfigure one or more features. If you click the **"Update"** button when asked if you want to reset the configuration, you can pick which parts of the configuration you would like to reconfigure. All other parts of the existing configuration will be left as-is.
 
 !!! tip "Touch Probe Deflection"
-    If you're using the standard Aliexpress "3D Edge Finder" probes that cost under $100 then it is relatively normal to record a deflection of around 0.2-0.4mm in either axis, even if your backlash is minimized and your machine is properly trammed.
+    If you're using the standard Aliexpress "3D Edge Finder" probes that cost under $100 then it is relatively normal to record a deflection of around 0.2-0.4mm in either axis, even if your backlash is minimised and your machine is properly trammed.
 
     The deflection on these probes tends to be pretty consistent so the compensation will usually make these accurate enough for our purposes, however, you can re-run the Touch Probe configuration via the Configuration Wizard if you would like to re-calculate the values after making changes to your machine.
 
 !!! tip "Manual Measurements"
     Even if you have a Touch Probe and a Toolsetter, the Wizard will ask you to take a few manual measurements using a Datum tool. This is necessary to enable tool offset compensation when using the Toolsetter and the Touch Probe together.
 
-    In short - we cannot probe the length of the Touch Probe with the Toolsetter (or the other way round for that matter), because the Touch Probe and Toolsetter require different activation pressures - one will always activate before the other, and this will never be accurate enough to correctly asses different length tools.
+    In short - we cannot probe the length of the Touch Probe with the Toolsetter (or the other way round, for that matter) because the Touch Probe and Toolsetter require different activation pressures - one will activate before the other, and this will never be accurate enough to measure different tool lengths and offsets.
 
     The manual measurement calculates the distance between a surface we _can_ probe (using the Touch Probe at the start of every job) and the activation point of the Toolsetter, using a tool whose length does not change between the measurements.
 

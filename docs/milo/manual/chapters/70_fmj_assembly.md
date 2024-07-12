@@ -21,7 +21,7 @@ FMJs can extend your Z clearance, the maximum work-piece and work-holding height
 
 If using the FMJ to extend your clearance, you will need to increase the length of the `A` and `B` extrusions (detailed in [Identifying Extrusions](#identifying-extrusions)) by the difference from the standard clearance. For 120mm clearance, you will need 320mm C-Beams (`120-60 + 260 = 320mm`).
 
-The designs are available in the [User Mods Repository](https://github.com/MillenniumMachines/UserMods/tree/main/Millennium-Milo-V1.5-MODS/Techmorphic/Techmorphic-FMJ-para-plates) - the Fusion360 file is parametric, so you will need to check/set your parameters for length and bolt hole sizes before exporting for cutting.
+The designs are available in the [User Mods Repository](https://github.com/MillenniumMachines/UserMods/tree/main/Millennium-Milo-V1.5-MODS/Techmorphic/Techmorphic-FMJ-para-plates) - the Fusion360 file is parametric, so you will need to check and set your parameters for length and bolt hole sizes before exporting for cutting.
 
 Services like SendCutSend in the US or Fractory in the EU can produce FMJs at a reasonable price, and they offer discounts for bulk runs.
 

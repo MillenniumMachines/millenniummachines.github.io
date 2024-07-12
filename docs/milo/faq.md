@@ -117,7 +117,7 @@ Medium-strength threadlockers will usually have a break-loose torque of between 
 
 Do not use permanent or semi-permanent threadlockers, or red colour threadlockers unless it is specifically marked as medium strength.
 
-When using threadlock, you must remember that the chemicals in many threadlocking compounds are not plastic-safe, and can cause stress-cracking of 3D printed thermoplastics on contact. You should use threadlock conservatively, to minimize the chances of pushing extra threadlock out of the thread and onto any 3D printed parts.
+When using threadlock, you must remember that the chemicals in many threadlocking compounds are not plastic-safe, and can cause stress-cracking of 3D printed thermoplastics on contact. You should use threadlock conservatively, to minimise the chances of pushing extra threadlock out of the thread and onto any 3D printed parts.
 
 Remember, **A DAB IS FINE**. You're not trying to glue the thread forever, just tacking it in one spot so it can't rotate free under vibration.
 

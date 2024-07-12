@@ -12,11 +12,13 @@ The MillenniumOS post-processors are relatively simple - rather than outputting 
 
 ---
 
-### WCS Offsets / Work Co-ordinate Systems
+### WCS Offsets / Work Coordinate Systems
 
-The **"WCS offset"** setting of the **"Setup"** selects the WCS that will be switched into before running the tool paths configured in the Setup.
+The **"WCS offset"** setting of the **"Setup"** selects the WCS used while running the tool paths configured in the Setup.
 
-A value of `0` in this field corresponds to `G54`, or the *first* WCS. We do not allow the output of gcode in machine coordinates so this field is zero-indexed. A value of 2 corresponds to `G56`, or the *third* WCS.
+A value of `0` or `1` in this field corresponds to `G54`, or the *first* WCS, as we do not allow the output of gcode in machine coordinates (`G53`).
+
+This follows industry standards so that offsets 2 and 3 correspond to `G55` and `G56` respectively.
 
 The **"WCS offset"** setting can be used in several ways.
 
@@ -43,9 +45,9 @@ flowchart TB
 ```
 
 !!! warning
- You can see here the "mismatch" between Fusion360 and RRF / DWC - **Work Offset 0** in Fusion360 corresponds to **WCS 1** in DWC (the offset is *from the first WCS* rather than from *G53, or Machine Co-ordinates*). This is because we do not allow code in machine coordinates to be outputted.
+    You can see here the "mismatch" between Fusion360 and RRF / DWC - **Work Offset 0** in Fusion360 corresponds to **WCS 1** in DWC (the offset is *from the first WCS* rather than from *G53, or Machine Co-ordinates*). This is because we do not allow code in machine coordinates to be outputted.
 
- You must remember this when setting your work offset value in Fusion360 or setting your WCS origins manually.
+    You must remember this when setting your work offset value in Fusion360 or setting your WCS origins manually.
 
 ---
 
@@ -125,7 +127,7 @@ Probing will still be triggered before switching into a new WCS, and the tools w
 
 ### FreeCAD
 
-The FreeCAD post-processor supports most of the functionality of the Fusion360 post-processor except low-memory mode (as FreeCAD itself already linearizes arc moves), and per-operation support for changing post-processor options (which is a limitation of FreeCAD and can be worked around by using multiple Path Jobs).
+The FreeCAD post-processor supports most of the functionality of the Fusion360 post-processor except low-memory mode (as FreeCAD itself already linearises arc moves), and per-operation support for changing post-processor options (which is a limitation of FreeCAD and can be worked around by using multiple Path Jobs).
 
 One of the big advantages of using FreeCAD is not having any limitations on the number of tools that can be used in a single exported file, and no modification of your rapid speeds like in Fusion360.
 
@@ -151,14 +153,14 @@ options:
                         Show gcode in FreeCAD Editor before saving to file.
   --output-job-setup, --no-output-job-setup
                         When enabled, the post-processor will output
-                        supplemental commands to ensure the machine is
+                        supplemental commands to make sure the machine is
                         properly configured before starting a job. These
-                        commands include homing the machine, probing, and
+                        commands include homing the machine, probing and
                         zeroing any used WCSs. Individual supplemental
-                        commands can be enabled, disabled, and configured
-                        separately, however, disabling this allows advanced
-                        operators to set up the machine for the job using their
-                        workflow, while still outputting known good
+                        commands can be enabled, disabled and configured
+                        separately but disabling this allows advanced
+                        operators to setup the machine for the job using their
+                        own workflow, while still outputting known-good
                         operation gcode from this post.
   --output-machine, --no-output-machine
                         Output machine settings header.
@@ -168,15 +170,15 @@ options:
                         Output tool details. Disabling this will make tool
                         changes much harder!
   --home-before-start, --no-home-before-start
-                        When enabled, the machine will home in X, Y, and Z
-                        directions before executing any operations.
-  --probe-at-start      When enabled, MillenniumOS will probe a workpiece in
-                        each used WCS before executing any operations.
-  --probe-on-change     When enabled, MillenniumOS will probe a workpiece
-                        just before switching to each used WCS.
+                        When enabled, machine will home in X, Y and Z
+                        directions prior to executing any operations.
+  --probe-at-start      When enabled, MillenniumOS will probe a work-piece in
+                        each used WCS prior to executing any operations.
+  --probe-on-change     When enabled, MillenniumOS will probe a work-piece
+                        just prior to switching into each used WCS.
   --no-probe
   --vssc-period VSSC_PERIOD
-                        The period, over which, RPM is varied up and down when VSSC
+                        Period over which RPM is varied up and down when VSSC
                         is enabled, in milliseconds.
   --vssc-variance VSSC_VARIANCE
                         Variance around target RPM to vary Spindle speed when
@@ -184,7 +186,7 @@ options:
   --vssc, --no-vssc     When enabled, spindle speed is varied between an upper
                         and lower limit surrounding the requested RPM which
                         helps to avoid harmonic resonance between tool and
-                        workpiece.
+                        work piece.
 ```
 
 ---
@@ -434,7 +436,7 @@ It has 2 modes - **Quick** or `Q1`, which takes a single probe point on each sur
 !!! tip
     Calculating the rotation of the workpiece gives us the information required to compensate for this rotation using RRF's `G68` code. This is not currently implemented but is planned for a later release of MillenniumOS.
 
-    The rotation value will be printed to the console after running this probe cycle and can be viewed using the `M7600` command before running another probe cycle.
+    The rotation value will be printed to the console after running this probe cycle and can be viewed using the `M7600` command.
 
 For **Full** mode, you will be asked to enter the following information:
 
@@ -500,7 +502,7 @@ flowchart TB
 ```
 
 !!! note
-    Single surface only probes at a single location. This means it is not possible to estimate the angle of a surface, for example, to check if a workpiece is rotated and not aligned with the X or Y-Axis. It should only be used against known flat surfaces or surfaces that are *going to be made flat* (with respect to the mounting of the workpiece against the table).
+    Single Surface only probes at a single location. This means it is not possible to estimate the angle of a surface, for example, to check if a workpiece is rotated and not aligned with the X or Y-Axis. It should only be used against known flat surfaces or surfaces that are *going to be made flat* (with respect to the mounting of the workpiece against the table).
 
 ## Tool Changes
 

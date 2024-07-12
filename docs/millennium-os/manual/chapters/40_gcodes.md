@@ -12,7 +12,7 @@
 G27 [Zn]
 ```
 
-Used to park the spindle in a safe location, by default it will move the spindle to the top of the Z-Axis, trigger an `M5.9` (stop the spindle and wait for spin-down), and then move the table to the centre of the X-Axis and at the front (towards the operator) of the Y-Axis.
+Used to park the spindle in a safe location, by default it will move the spindle to the top of the Z-Axis, trigger an `M5.9` (stop the spindle and wait for spin-down), and then move the table to the centre of the X-Axis and at the front of the Y-Axis (towards the operator).
 
 If called with the `Z1` argument, it will only raise and stop the spindle - the table location will not be changed.
 
@@ -25,7 +25,7 @@ Parking is used widely throughout probing and tool changing to move the spindle 
 G37
 ```
 
-When using multiple milling tools, we must compensate for length differences between the tools. G37 can be used to (re-)calculate the length of the current tool about a reference surface or the previous tool.
+When using multiple milling tools, we must compensate for length differences between the tools. G37 can be used to (re-)calculate the length of the current tool relative to a reference surface or the previous tool.
 
 `G37` is used widely by CNC mills to probe tool lengths but is not implemented by RRF, so again we implement our own.
 
@@ -36,9 +36,9 @@ When using multiple milling tools, we must compensate for length differences bet
 G37.1
 ```
 
-When there is no toolsetter available, it is necessary to re-zero the Z origin after changing tools - because the new tool will never be installed with the same length as the previous one.
+When there is no toolsetter available, it is necessary to re-zero the Z-Axis origin after changing tools - because the new tool will never be installed with the same length as the previous one.
 
-After a tool change, this command will be called automatically instead of `G37` if no toolsetter is available, and will walk the operator through manual re-zeroing of the Z origin.
+After a tool change, this command will be called automatically instead of `G37` if no toolsetter is available, and will walk the operator through manual re-zeroing of the Z-Axis origin.
 
 This has some caveats, in that if you machine off the surface that is used as your zero point then re-zeroing will be problematic - the operator must account for this in their CAM profile, to make sure that their Z origin makes sense.
 
@@ -81,7 +81,7 @@ M5010 W0 R5
 
 Reset the stored details for a given WCS, or the current WCS if not specified.
 
-Different fields are used for different types of probing operations, and we want to reset these values before running a probing cycle, so if previous values existed, but the probing cycle failed we would not end up using the formally valid values.
+Different fields are used for different types of probing operations, and we want to reset these values before running a probing cycle, so if previous values existed, but the probing cycle failed we would not end up using the previously valid values.
 
 `M5010` uses a bitmask-style integer field to select which WCS detail fields to reset for a particular WCS. These are:
 
@@ -106,7 +106,7 @@ M5011 [Wnn]
 M5011 W2
 ```
 
-Look up stored rotation values from the given workplace number (or the current workplace number if not specified), and if a rotation value is given, it will prompt the operator to apply it as a rotation compensation value using the inbuilt `G68` command.
+Look up stored rotation values from the given workplace number or the current workplace number if none is specified. If a value exists, the operator will prompted to apply rotation compensation using the inbuilt `G68` command.
 
 ### `M6515` - CHECK CO-ORDINATES ARE WITHIN MACHINE LIMITS
 
@@ -115,7 +115,7 @@ Look up stored rotation values from the given workplace number (or the current w
 M6515 [Xnnn] [Ynnn] [Znnn]
 ```
 
-Provide at least one of X, Y, and Z coordinates to check that they are within the axes limits of the machine, and trigger an abort if they are outside the work envelope. This is used by other macros to make sure we do not try to move outside of machine limits.
+Accepts at least one of X, Y, and Z coordinates to check that they are within the axes limits of the machine and will trigger an abort if they are outside the work envelope. This macro is also internally used to ensure we do not try to move outside the machine's limits.
 
 ### `G6550` - PROTECTED MOVE
 
@@ -142,7 +142,7 @@ Output any stored probing details for the current workplace or the workplace giv
 G8000
 ```
 
-Triggered when installing MillenniumOS for the first time, and can be called later to reconfigure MillenniumOS. It runs through a modal-driven configuration wizard prompting the user for all settings required to run MillenniumOS properly.
+Triggered when installing MillenniumOS for the first time, and can be called later to reconfigure MillenniumOS. This macro runs through a modal-driven configuration wizard that prompts the user for all settings required to run MillenniumOS properly.
 
 ### `M8001` - DETECT PROBE BY STATUS CHANGE
 
@@ -229,7 +229,7 @@ If the post knows what _type_ of workpiece probe should be executed, it can call
 G6500 [Wnn]
 ```
 
-The guided Bore probe prompts the user for approximate diameter, overtravel, approximate center position, and probe depth.
+The **Bore** probing macro prompts the user for approximate diameter, overtravel, approximate center position, and probe depth.
 Executes `G6500.1` with the relevant parameters to run the actual probe.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
@@ -255,7 +255,7 @@ Parameters `J`, `K`, and `L` represent the starting point of the probe in the `X
 G6501 [Wnn]
 ```
 
-The guided Boss probe prompts the user for approximate diameter, clearance, overtravel, approximate center position, and probe depth.
+The **Boss** probing macro prompts the user for approximate diameter, clearance, overtravel, approximate center position, and probe depth.
 Executes `G6501.1` with the relevant parameters to run the actual probe.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
@@ -281,7 +281,7 @@ Parameters `J`, `K`, and `L` represent the starting point of the probe in the `X
 G6502 [Wnn]
 ```
 
-The guided Rectangle Pocket probe prompts the user for an approximate width (X), length (Y), overtravel and clearance, an approximate center position, and probe depth. Executes `G6502.1` with the relevant parameters to run the actual probe.
+The **Rectangle Pocket** probing macro prompts the user for an approximate width (X), length (Y), overtravel and clearance, an approximate center position, and probe depth. Executes `G6502.1` with the relevant parameters to run the actual probe.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
@@ -306,7 +306,7 @@ Parameters `J`, `K`, and `L` represent the starting point of the probe in the `X
 G6503 [Wnn]
 ```
 
-The guided Rectangle Block probe prompts the user for an approximate width (X), length (Y), overtravel and clearance, approximate center position, and probe depth. Executes `G6503.1` with the relevant parameters to run the actual probe.
+The **Rectangle Block** probing macro prompts the user for an approximate width (X), length (Y), overtravel and clearance, approximate center position, and probe depth. Executes `G6503.1` with the relevant parameters to run the actual probe.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
@@ -347,7 +347,7 @@ Not implemented.
 G6508 [Wnn]
 ```
 
-The guided Outside Corner probe prompts the user for an approximate width (X) and length (Y) of the 2 surfaces that make up the corner, a clearance and overtravel distance, a probing depth, a starting location, and the corner that we want to probe (front left, back right, etc). Executes `G6508.1` with the relevant parameters to run the actual probe.
+The **Outside Corner** probing macro prompts the user for an approximate width (X) and length (Y) of the 2 surfaces that make up the corner, a clearance and overtravel distance, a probing depth, a starting location, and the corner that we want to probe (front left, back right, etc). Executes `G6508.1` with the relevant parameters to run the actual probe.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
@@ -383,7 +383,7 @@ Not implemented.
 G6510 [Wnn]
 ```
 
-The guided Single Surface probe prompts the user for a starting location, overtravel distance, which surface to probe, a maximum probing distance, and for X and Y surfaces, a probing depth below the starting location. It can probe the Z height of a workpiece, or a single surface on X or Y if the operator knows these are aligned with the machine axes. This macro only probes a single point so it cannot calculate surface angles.
+The **Single Surface** probing macro prompts the user for a starting location, overtravel distance, which surface to probe, a maximum probing distance, and for X and Y surfaces, a probing depth below the starting location. It can probe the Z height of a workpiece, or a single surface on X or Y if the operator knows these are aligned with the machine axes. This macro only probes a single point so it cannot calculate surface angles.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
@@ -418,7 +418,7 @@ Probes the touch probe reference surface in Z, and sets the touch probe activati
 G6520 [Wnn]
 ```
 
-The guided Vice Corner probing macro combines OUTSIDE CORNER and SINGLE SURFACE (Z) macros to zero all 3 axes of a WCS in a single probing operation. This macro prompts the user for the required parameters for the OUTSIDE CORNER macro, as well as a starting location. It calls the macros in sequence, probing the Z surface first before moving outwards and probing each X and Y surface that forms the corner.
+The **Vice Corner** probing macro combines **Outside Corner** and **Single Surface (Z)** macros to zero all 3 axes of a WCS in a single probing operation. This macro prompts the user for the required parameters for the **Outside Corner** macro, as well as a starting location. It calls the macros in sequence, probing the Z surface first before moving outwards and probing each X and Y surface that forms the corner.
 
 If the `W` parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.
 
@@ -500,7 +500,7 @@ G73 [Fnnn] [Rnnn] [Qnnn] [Xnnn] [Ynnn] [Znnn]
 G73 F500 R-5 Q1 Z-10 X10 Y10
 ```
 
-Run a peck drilling with a partial retract cycle. **WARNING**: - this may not clear enough chips. You are likely better off using a drill cycle that retracts fully.
+Runs a **Peck Drilling with Partial Retract** cycle. **WARNING**: - this may not clear enough chips. You are likely better off using a drill cycle that retracts fully.
 
 The cycle will move to the `R` height at the current location, then to the `XY` location if given.
 
@@ -531,7 +531,7 @@ G80 [Fnnn] [Rnnn] [Xnnn] [Ynnn] [Znnn]
 G81 F500 R-5 Z-10 X10 Y10
 ```
 
-Run a full-depth drilling cycle with _NO_ retraction. **WARNING**: - unless drilling very shallow holes, use a drilling cycle with retraction.
+Runs a **Full-Depth** drilling cycle with _NO_ retraction. **WARNING**: - unless drilling very shallow holes, use a drilling cycle with retraction.
 
 The cycle will move to the `R` height at the current location, then to the `XY` location if given.
 
@@ -606,7 +606,7 @@ This macro is built into RRF, using the `t{free,pre,post}.g` files. If the targe
 M7.1
 ```
 
-Enables the GPIO output associated with air-blast, set by the operator during the configuration wizard.
+Enables the general-purpose output associated with air-blast, set by the operator during the configuration wizard.
 
 ### `M7` - ENABLE MIST
 
@@ -615,7 +615,7 @@ Enables the GPIO output associated with air-blast, set by the operator during th
 M7
 ```
 
-Enables the GPIO output associated with unpressurized coolant, set by the operator during the configuration wizard. If air blast (`M7.1`) is not already enabled, then this will be enabled before activating the coolant output.
+Enables the general-purpose output associated with unpressurised coolant, set by the operator during the configuration wizard. If air blast (`M7.1`) is not already activated, it will be before activating the coolant output.
 
 ### `M8` - ENABLE FLOOD
 
@@ -624,7 +624,7 @@ Enables the GPIO output associated with unpressurized coolant, set by the operat
 M8
 ```
 
-For those mad enough to build flood coolant into a DIY CNC machine, `M8` enables pressurized flood coolant on the GPIO output set by the operator during the configuration wizard.
+For those mad enough to build flood coolant into a DIY CNC machine, `M8` enables pressurised flood coolant on the general-purpose output set by the operator during the configuration wizard.
 
 ### `M9` - CONTROL ALL COOLANTS
 

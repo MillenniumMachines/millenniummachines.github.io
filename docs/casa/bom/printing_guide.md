@@ -20,11 +20,11 @@ Casa uses 3 different print profiles. Each profile is designed around a 0.4 mm n
 
 ## File Naming
 
-With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colors. Have no fear, we've got your back - each file is labeled.
+With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colours. Have no fear, we've got your back - each file is labelled.
 
-### Color
+### Colour
 
-All Casa parts are designed to be printed in a single primary colour. Don't let this stop you from mixing and matching colours to make your colour scheme though!
+All Casa parts are designed to be printed in a single primary colour. Don't let this stop you from mixing and matching colours to make your colour scheme unique!
 
 ### Quantity Required
 

@@ -188,7 +188,7 @@ Fasten the Y-Axis Motor Mount to the 470mm C-Beam using M5x12mm BHCS.
 Fasten the Y-Axis bearing block to the other end of the 470mm C-Beam using M5x12BHCS
 
 !!! tip
-    The Y-Axis Bearing Block is used as a stopper to install the rails - it will be removed later, so there is no need to threadlock it.
+    The Y-Axis Bearing Block will be a reference surface for the ends of the rails. You will remove it in a few steps, so there is no need to threadlock it now.
 
 ![fasten the Y-Axis bearing block to the other end of the 470mm C-Beam aluminium profile using M5x12mm BHCS](../img/y_axis_assembly/y_axis_step_14.png){: .shadow}
 
@@ -260,7 +260,7 @@ Using an 8 to 6.35mm rigid coupler, attach the 550mm lead screw to the NEMA23 mo
 ![couple the NEMA23 motor to the 550mm lead-screw using a 8 to 6.35mm rigid coupler](../img/y_axis_assembly/y_axis_step_11.png){: .shadow}
 
 !!! warning
-    Remember to apply medium-strength threadlock to the coupler grub screws. There's nothing worse than trying to diagnose a stationarY-Axis and noticing that your motor is spinning but nothing else is!
+    Remember to apply medium-strength threadlock to the coupler grub screws. There's nothing worse than trying to diagnose a stationary axis and noticing that your motor is spinning but nothing else is!
 
 ---
 

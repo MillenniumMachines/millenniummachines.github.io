@@ -27,7 +27,7 @@ The toolsetter part has a sacrificial floor to allow unsupported features to be 
 
 **Unless you're willing to experiment and almost certainly waste filament, stick with 0.2mm layers.**
 
-We provide a **Minimum Wall Thickness** for every printable part, that is the minimum **total** thickness of your perimeter lines and top and bottom solid layers. This depends on the size of your nozzle and line width settings in your slicer so it must be calculated.
+We provide a **Minimum Wall Thickness** for every printable part. This value is the minimum **total** thickness of your perimeter lines and top and bottom solid layers. The size of your nozzle and line width settings (in your slicer) contribute to this value, so the number of parameter lines needs to be calculated.
 
 Given a 0.4mm nozzle, 100% perimeter line width, 0.2mm layers, and a minimum wall thickness of 2.4mm, you would set your slicer to generate a _minimum_ of 6 perimeters and 12 top / bottom layers.
 

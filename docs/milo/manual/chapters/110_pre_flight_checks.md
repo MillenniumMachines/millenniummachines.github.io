@@ -58,13 +58,13 @@ If you are using a fixture, of some kind, tram your spindle to that instead.
 First, ensure your VFD is set up correctly according to its manual.
 
 !!! tip
-    If you want to test your spindle make sure you have removed the collet and collet nut or fitted a suitable tool/dowel pin and torqued the nut. 
+    If you want to test your spindle, ensure you have removed the collet and collet nut or that you have fitted a suitable tool or dowel pin and torqued the nut. 
 
 Then ensure to set your max spindle speed in `config.g`. Under the spindle section of your config find
 the line beginning with `M950` and change the value found after `L` to your maximum spindle speed e.g. `L24000`.
 
 !!! note
-    If you are using one of our predefined RRF configurations for a particular hardware specification (e.g. the LDO kit), then this will done for you already. You only need to make sure that enabling the spindle in Duet Web Control and changing the RPM setting does start and stop the spindle, as well as changing the RPM effectively.
+    If you are using one of our predefined RRF configurations for a particular hardware specification (such as the LDO kit), this has been done for you already. You only need to ensure that enabling the spindle in Duet Web Control and changing the RPM setting starts and stops the spindle and controls the RPM effectively.
 
 ---
 

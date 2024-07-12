@@ -4,7 +4,7 @@ While the work that has been put into this project by the Millennium Machines te
 
 <img width="50" align="left" src="../../img/openbuilds.png" alt="Openbuilds Logo" />
 
-To the team at [OpenBuilds](https://openbuilds.com/): As many of you may know, we originally began this journey as a mod for the OpenBuilds MiniMill, and while we've moved beyond being simply a mod, it would be remiss of us to not recognize the work that went into that project.
+To the team at [OpenBuilds](https://openbuilds.com/): As many of you may know, we originally began this journey as a mod for the OpenBuilds MiniMill, and while we've moved beyond being simply a mod, it would be remiss of us to not recognise the work that went into that project.
 
 <img width="50" align="left" src="../../img/voron_logo.png" alt="Voron Logo" />
 

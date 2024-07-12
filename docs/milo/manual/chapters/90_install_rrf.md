@@ -127,10 +127,6 @@ You may have to use your router interface to identify the address that the Milo 
 You can also [connect to the mainboard over USB](https://teamgloomy.github.io/putty.html) using Putty or another terminal emulator depending on your operating system - watching the output of the terminal when the machine connects to the WiFi network will show the IP address that has been assigned.
 
 !!! warning
-    When installing a new release of the RRF configuration as an _upgrade_, your `network.g` file will not be overwritten. _However_ - the WiFi module will be updated, which may wipe all network details from the module itself.
-
-    To avoid making the machine unrecoverable (at least without connecting to USB), RRF will always reboot in Access Point mode after any update cycle. You can then re-enter the network details if necessary, using the `M587` command in [Configure your WiFi network](#configure-your-wifi-network) before rebooting.
-
     When you are prompted by DWC to Install the updates, you should click Yes - but be aware, this will involve flashing your WiFi module twice - once when you click Yes, and once when the board reboots after it is updated. This is unfortunate, but necessary, because we need the flash-on-reboot to enable hands-free configuration when extracting the Zip file to a fresh SD card and inserting it into an unconfigured board.
 
 ---
@@ -138,7 +134,7 @@ You can also [connect to the mainboard over USB](https://teamgloomy.github.io/pu
 At this point, the basic firmware setup is complete and all that remains are some firmware checks which will be covered later in the manual.
 
 !!! warning
-    We only provide bundled firmware configurations for specific machine setups. If your machine is self-built, you have to modify one of these configurations to match the mainboard, wiring, and setup of your machine. Alternatively, you can use the [TeamGloomy Configurator](https://teamgloomy.github.io/Configurator) - but remember that this is aimed at 3D printer configurations so it will need several changes to work effectively on Milo.
+    We only provide bundled firmware configurations for specific machine setups. If your machine is self-built, you can modify one of these configurations to match your mainboard, wiring, and other unique machine features. Alternatively, you can use the [TeamGloomy Configurator](https://teamgloomy.github.io/Configurator) - but remember that the configurator produces 3D printer configurations, so it will need modifying to suit the particular features of your Milo.
 
 It is now safe to perform the physical installation of your board into your mainboard mount.
 
