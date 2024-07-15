@@ -1719,7 +1719,7 @@
 <li><strong>Approximate Centre-Point</strong> - You will be prompted to jog the probe or datum tool over the approximate centre-point of the block.</li>
 <li><strong>Probe Depth</strong> - The depth from the operator-chosen centre-point to descend to, before probing the inner surfaces of the block.</li>
 </ul>
-<p>Rectangle block sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X and Y axes to the centre of the block (protruding feature or a rectangular workpiece itself). This probing cycle is additionally useful for measurement, as it can be used to calibrate touch probes or accurately measure the dimensions of a workpiece, as well as identify its rotation from the machine axes.</p>
+<p>Rectangle block sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X and Y axes to the centre of the block (protruding feature or a rectangular workpiece itself). This probing cycle is also handy for dimensional and rotational measurements and can be used to calibrate touch probes.</p>
 <pre class="mermaid"><code>flowchart TB
     1(Move outside Left X surface) --&gt;
     2(Move down to probe depth)
@@ -1755,11 +1755,6 @@
 <p>It has 2 modes - <strong>Quick</strong> or <code>Q1</code>, which takes a single probe point on each surface, and <strong>Full</strong> (<code>Q0</code> or unset) which takes 2 probe points along each surface forming the corner.</p>
 <p><strong>Quick</strong> mode is useful when you know the workpiece is square and properly aligned with the axes of the machine. The corner location is identified by the X coordinate when probing on the X surface, and the Y coordinate when probing on the Y surface.</p>
 <p><strong>Full</strong> mode is useful when you are unsure that the workpiece is square or properly aligned with the axes of the machine. The corner location is identified by taking 2 measurements along each surface, drawing a line through the points on each axis, and then calculating where those lines cross. This allows us to calculate the angle of the corner, and if it is square we can also calculate the rotation of the workpiece about the machine axes.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Calculating the rotation of the workpiece gives us the information required to compensate for this rotation using <abbr title="RepRapFirmware">RRF</abbr>'s <code>G68</code> code. This is not currently implemented but is planned for a later release of MillenniumOS.</p>
-<p>The rotation value will be printed to the console after running this probe cycle and can be viewed using the <code>M7601</code> command.</p>
-</div>
 <p>For <strong>Full</strong> mode, you will be asked to enter the following information:</p>
 <ul>
 <li><strong>Length of X Corner Surface</strong> - The approximate length of the surface, measured along the X-axis. The surface along the X-axis would be facing directly towards or away from you if you were standing at the front of the machine.</li>
