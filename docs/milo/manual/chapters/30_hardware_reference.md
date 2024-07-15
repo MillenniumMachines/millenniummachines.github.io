@@ -52,7 +52,7 @@ A PC standard fan mounting screw. Exclusively used to hold the system cooling fa
 
 ![Heat-set Insert wireframe](../img/hardware/heat_insert.png){: .shadow}
 
-Heat-set inserts with a soldering tip so that they melt the plastic when installed. As the plastic cools, it solidifies around the knurls and ridges on the insert for excellent resistance to torque and pull-out.
+Used to provide durable threads into plastic parts. To install, press the insert with a heated soldering tip until the heat-set insert is flush with the surface. As the plastic cools, it solidifies around the knurls and ridges on the insert for excellent resistance to torque and pull-out.
 
 ---
 

@@ -385,7 +385,7 @@ You will be asked to enter the following information:
 * **Approximate Centre-Point** - You will be prompted to jog the probe or datum tool over the approximate centre-point of the block.
 * **Probe Depth** - The depth from the operator-chosen centre-point to descend to, before probing the inner surfaces of the block.
 
-Rectangle block sets a WCS origin in X and Y axes to the centre of the block (protruding feature or a rectangular workpiece itself). This probing cycle is additionally useful for measurement, as it can be used to calibrate touch probes or accurately measure the dimensions of a workpiece, as well as identify its rotation from the machine axes.
+Rectangle block sets a WCS origin in X and Y axes to the centre of the block (protruding feature or a rectangular workpiece itself). This probing cycle is also handy for dimensional and rotational measurements and can be used to calibrate touch probes.
 
 ```mermaid
 flowchart TB
@@ -429,11 +429,6 @@ It has 2 modes - **Quick** or `Q1`, which takes a single probe point on each sur
 **Quick** mode is useful when you know the workpiece is square and properly aligned with the axes of the machine. The corner location is identified by the X coordinate when probing on the X surface, and the Y coordinate when probing on the Y surface.
 
 **Full** mode is useful when you are unsure that the workpiece is square or properly aligned with the axes of the machine. The corner location is identified by taking 2 measurements along each surface, drawing a line through the points on each axis, and then calculating where those lines cross. This allows us to calculate the angle of the corner, and if it is square we can also calculate the rotation of the workpiece about the machine axes.
-
-!!! tip
-    Calculating the rotation of the workpiece gives us the information required to compensate for this rotation using RRF's `G68` code. This is not currently implemented but is planned for a later release of MillenniumOS.
-
-    The rotation value will be printed to the console after running this probe cycle and can be viewed using the `M7601` command.
 
 For **Full** mode, you will be asked to enter the following information:
 

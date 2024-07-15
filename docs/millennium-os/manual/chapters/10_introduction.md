@@ -67,7 +67,7 @@ You can do everything required for job setup via this process, but it will take 
 
 ### Only Toolsetter Enabled
 
-You will still be guided through manual work-piece probing until you need to change tools during the machining process. We will use the tool setter to calculate the relative length difference between the tools and compensate for this automatically.
+You will still be guided through manual work-piece probing until you need to change tools during the machining process. We will use the toolsetter to calculate the relative length difference between the tools and compensate for this automatically.
 
 This add-on feature saves time if your job contains multiple operations with tool changes and avoids recalculating the Z-Axis origin after changing tools.
 

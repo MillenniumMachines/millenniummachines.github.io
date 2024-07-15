@@ -218,7 +218,7 @@ Place a locking collar onto the bottom of the lead screw, and lock it in place. 
     ```
 
 !!! note
- If you followed the FMJ installation steps, your rails are already installed. Proceed to fit the lead screw!
+    If you followed the FMJ installation steps, your rails are already installed. Proceed to fit the lead screw!
 
 Install the MGN15 250mm rails with only the lower carriages installed onto the `C` extrusion using M3x10mm SHCS. Make sure the end-most and centre-most bolt holes in each rail are used.
 
