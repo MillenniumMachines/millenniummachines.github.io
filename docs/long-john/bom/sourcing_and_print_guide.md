@@ -2,7 +2,9 @@
 
 ## Kits
 
-Currently, there are no approved kits available, but fear not - the toolsetter uses easily obtainable parts and you can find a full list of them below!
+The toolsetter is available as part of the Milo kit from LDO, but may also be available separately - contact your local LDO reseller for details.
+
+Alternatively, the toolsetter uses easily obtainable parts and you can find a full list of them below!
 
 <!-- Should update that there is in-fact an LDO kit available at several retailers. -->
 

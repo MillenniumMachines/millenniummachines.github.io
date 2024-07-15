@@ -106,7 +106,7 @@ M5011 [Wnn]
 M5011 W2
 ```
 
-Look up stored rotation values from the given workplace number or the current workplace number if none is specified. If a value exists, the operator will prompted to apply rotation compensation using the inbuilt `G68` command.
+Look up stored rotation values from the given workplace number or the current workplace number if none is specified. If a value exists, the operator will be prompted to apply rotation compensation using the inbuilt `G68` command.
 
 ### `M6515` - CHECK CO-ORDINATES ARE WITHIN MACHINE LIMITS
 
@@ -192,7 +192,7 @@ M8004 Knn
 M8004 K0
 ```
 
-Waits for a general-purpose input pin to change state. The state that is changed is unimportant, just that the state changes. This code is used by `M3.9` and `M5.9` when spindle feedback is enabled to wait until the VFD reports that it has reached the target speed.
+Waits for a general-purpose input pin to change state. The level of the pin is unimportant, just that the state changes. This code is used by `M3.9` and `M5.9` when spindle feedback is enabled to wait until the VFD reports that it has reached the target speed.
 
 ### `M9999` - RELOAD MILLENNIUMOS
 
@@ -639,7 +639,7 @@ M9
 M9 R1
 ```
 
-By default, this turns off any enabled coolant outputs. If called with the `R1` parameter, it will restore coolant output states to those saved during the most recent pause. This macro is called during the resume process to re-enable coolant.
+By default, this turns off any enabled coolant outputs. If called with the `R1` parameter, coolant output states will be restored to those saved during the most recent pause. This macro is called during the resume process to re-enable coolant.
 
 ---
 
@@ -663,7 +663,7 @@ If spindle feedback is configured, this command waits for a general-purpose inpu
 
 If spindle feedback is not configured, a static delay is used to make sure the spindle is up to speed before returning. The static speed used for this is timed by the operator during the wizard process, and modified based on the percentage speed change being requested. So if the RPM change is 50% of the maximum RPM of the spindle, then the delay will be 50% of the operator-recorded delay.
 
-Additionally, if Expert Mode is disabled, then this macro will pop up an operator confirmation/warning box when the spindle is going to accelerate from 0 rpm.
+Additionally, if Expert Mode is disabled, then this macro will pop up an operator confirmation when the spindle is going to accelerate from 0 rpm.
 
 #### `M5.9` - STOP SPINDLE AND WAIT
 

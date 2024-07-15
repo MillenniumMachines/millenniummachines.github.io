@@ -72,7 +72,7 @@ When prompted to provide information or perform an action, please read the infor
 If you cancel the wizard or receive an error, you can re-run the wizard using `G8000`. Once the wizard is complete your machine will reboot to reload the new settings, at which point MillenniumOS is ready for use.
 
 !!! note "Resuming the Wizard"
-    MillenniumOS now supports resuming the wizard if it is not completed. Settings are saved to an intermediate file and loaded when the wizard is started, and you will be prompted to continue where you left off or restart.
+    MillenniumOS now supports resuming the wizard if it is not completed. Settings are saved to an intermediate file and loaded when the wizard is started. You will be prompted to continue where you left off or restart.
 
 If you experience connection issues during the wizard, you can typically reload your browser tab to trigger the next dialog.
 
@@ -86,14 +86,14 @@ If you experience connection issues during the wizard, you can typically reload 
     If you realise this during the configuration wizard process, don't worry - you can resume where you left off once fixing the issue.
 
 !!! note
-    If you experience connection issues during the wizard, you can reload your browser tab to trigger the next dialog.
+    If you experience connection issues during the wizard, you can typically reload your browser tab to trigger the next dialog.
 
 You may re-run the wizard anytime to reconfigure one or more features. If you click the **"Update"** button when asked if you want to reset the configuration, you can pick which parts of the configuration you would like to reconfigure. All other parts of the existing configuration will be left as-is.
 
 !!! tip "Touch Probe Deflection"
     If you're using the standard Aliexpress "3D Edge Finder" probes that cost under $100 then it is relatively normal to record a deflection of around 0.2-0.4mm in either axis, even if your backlash is minimised and your machine is properly trammed.
 
-    The deflection on these probes tends to be pretty consistent so the compensation will usually make these accurate enough for our purposes, however, you can re-run the Touch Probe configuration via the Configuration Wizard if you would like to re-calculate the values after making changes to your machine.
+    The deflection on these probes tends to be pretty consistent so the compensation will usually make these accurate enough for our purposes. That said, you can re-run the Touch Probe configuration via the Configuration Wizard if you would like to re-calculate the values after making changes to your machine.
 
 !!! tip "Manual Measurements"
     Even if you have a Touch Probe and a Toolsetter, the Wizard will ask you to take a few manual measurements using a Datum tool. This is necessary to enable tool offset compensation when using the Toolsetter and the Touch Probe together.

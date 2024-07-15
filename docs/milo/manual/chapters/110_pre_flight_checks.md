@@ -49,7 +49,7 @@ If you are not happy with the amount of backlash then you can snug up the Anti-b
 
 Make sure you tram your spindle appropriately to your work table.
 
-If you are using a fixture, of some kind, tram your spindle to that instead.
+If you are using a fixture, tram your spindle to that instead.
 
 ---
 

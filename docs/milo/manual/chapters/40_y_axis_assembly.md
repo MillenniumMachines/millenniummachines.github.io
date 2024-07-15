@@ -65,7 +65,7 @@ Insert the M3 Heat-set inserts into the XY Drag-Chain Transition.
 ![insert the M3 heat-set inserts in the XY Drag Chain Transition](../img/y_axis_assembly/y_axis_step_3.png){: .shadow}
 
 !!! note
-    You may notice that some kits, like LDO’s, come with 2 different lengths of M3 heat insert. The smaller ones are used wherever drag chains attach and the longer ones are used for everything else.
+    You may notice that some kits, like LDO's, come with 2 different lengths of M3 heat insert. The smaller ones are used wherever drag chains attach and the longer ones are used for everything else.
 
 ---
 
@@ -215,7 +215,7 @@ Fasten the MGN15 rails to the Y-Axis, screwing M3x10mm SHCS into every second ho
 
     Use the MGN15 guides to position the first rail in the center of the extrusion before fastening the screws. Use a DTI running along the edge of the extrusion to fine-adjust it into alignment with the extrusion.
 
-    With the first rail aligned, fit the second rail using the MGN15 guides and a DTI to clock it into the first rail. Make sure to check horizontal and vertical alignment and shim if required.
+    With the first rail aligned, fit the second rail using the MGN15 guides and a DTI to align it with the first rail. Make sure to check horizontal and vertical alignment and shim if required.
 
 ---
 

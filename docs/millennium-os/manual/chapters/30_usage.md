@@ -28,7 +28,7 @@ The **"WCS offset"** setting can be used in several ways.
 
 #### Single work-piece, multiple operations on different faces
 
-The below flow chart indicates several machining operations that are performed on different faces of the same workpiece, e.g. machining the top face of a part, and then flipping it over to the machine from the opposite side.
+The below flow chart indicates several machining operations that are performed on different faces of the same workpiece, e.g. machining the top face of a part, and then flipping it over to mill from the opposite side.
 
 ```mermaid
 flowchart TB
@@ -44,10 +44,7 @@ flowchart TB
     end
 ```
 
-!!! warning
-    You can see here the "mismatch" between Fusion360 and RRF / DWC - **Work Offset 0** in Fusion360 corresponds to **WCS 1** in DWC (the offset is *from the first WCS* rather than from *G53, or Machine Co-ordinates*). This is because we do not allow code in machine coordinates to be outputted.
 
-    You must remember this when setting your work offset value in Fusion360 or setting your WCS origins manually.
 
 ---
 

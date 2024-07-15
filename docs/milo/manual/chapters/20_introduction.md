@@ -58,7 +58,7 @@ Milo supports 2 sizes of round spindle - 80mm or 65mm. These cover the 2 most co
 You can then decide how you want to control your spindle - the simplest types are router-style spindles which use a switch and or selector knob for manual control of speed and direction. The most complex but powerful way involves using a Spindle and VFD combination. With this setup, you have more granular control over your settings and can use outputs on your control board to control the spindle.
 
 !!! note
-    There are too many styles of the spindle to account for, so if the spindle mount doesn't support your spindle then design a new one and send it our way and we may include it as an official user mod!
+    There are too many styles of spindles to account for, so if the spindle mount doesn't support your spindle then design a new one and send it our way and we may include it as an official user mod!
 
 ## Parts List and Printing Guidelines
 
