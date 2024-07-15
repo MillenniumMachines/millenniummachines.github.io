@@ -2617,7 +2617,7 @@ G37.1
 <span class="nb">M5010 </span><span class="k">W</span><span class="m">0</span><span class="w"> </span><span class="k">R</span><span class="m">5</span>
 </code></pre></div>
 <p>Reset the stored details for a given WCS, or the current WCS if not specified.</p>
-<p>Not all fields are needed for every probing operation type, and we want to avoid using previously-stored values if the most recent probing operation has failed. To do that, we use this macro to clear the relevant values before starting each probing cycle.</p>
+<p>Not all fields are needed for every probing operation type, and we want to avoid using previously stored values if the most recent probing operation has failed. To do that, we use this macro to clear the relevant values before starting each probing cycle.</p>
 <p><code>M5010</code> uses a bitmask-style integer field to select which WCS detail fields to reset for a particular WCS. These are:</p>
 <div class="highlight"><pre><span></span><code><span class="c">; Center     = 1</span>
 <span class="c">; Corner     = 2</span>
