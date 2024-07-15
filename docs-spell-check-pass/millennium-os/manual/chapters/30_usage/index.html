@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../img/millennium-machines-icon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.76a95c52.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1438,7 +1438,7 @@
 <p><img alt="Post-Process tab of a Fusion360 Setup" class="shadow" src="../../img/mos_usage_step_1.png" /></p>
 <hr />
 <h4 id="single-work-piece-multiple-operations-on-different-faces">Single work-piece, multiple operations on different faces</h4>
-<p>The below flow chart indicates several machining operations that are performed on different faces of the same workpiece, e.g. machining the top face of a part, and then flipping it over to the machine from the opposite side.</p>
+<p>The below flow chart indicates several machining operations that are performed on different faces of the same workpiece, e.g. machining the top face of a part, and then flipping it over to mill from the opposite side.</p>
 <pre class="mermaid"><code>flowchart TB
     WCS1[Switch to Work Offset 0] --&gt; Probe1[Probe work-piece and set origin in WCS 1] --&gt; G54
     subgraph G54
@@ -1450,11 +1450,6 @@
         direction LR
         4(OP4 - Face) --&gt; 5(OP5 - Adaptive Clear) --&gt; 6(OP6 - Profile)
     end</code></pre>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>You can see here the "mismatch" between Fusion360 and <abbr title="RepRapFirmware">RRF</abbr> / <abbr title="Duet Web Control">DWC</abbr> - <strong>Work Offset 0</strong> in Fusion360 corresponds to <strong><abbr title="Work Co-ordinate System">WCS</abbr> 1</strong> in <abbr title="Duet Web Control">DWC</abbr> (the offset is <em>from the first <abbr title="Work Co-ordinate System">WCS</abbr></em> rather than from <em>G53, or Machine Co-ordinates</em>). This is because we do not allow code in machine coordinates to be outputted.</p>
-<p>You must remember this when setting your work offset value in Fusion360 or setting your <abbr title="Work Co-ordinate System">WCS</abbr> origins manually.</p>
-</div>
 <hr />
 <p>The post-processor defaults to this method of output - this is the <strong>"On Change"</strong> value of the <strong>"<abbr title="Work Co-ordinate System">WCS</abbr> Origin Probing Mode"</strong> setting under the <strong>"Probing and inspection"</strong> tab of the <strong>"Post properties"</strong>.</p>
 <p><img alt="MillenniumOS WCS origin probing mode selection" class="shadow" src="../../img/mos_usage_step_2.png" /></p>

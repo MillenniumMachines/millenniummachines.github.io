@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../img/millennium-machines-icon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.76a95c52.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -2634,7 +2634,7 @@ G37.1
 <span class="c">; Apply rotation compensation using workplace number 2 values</span>
 <span class="nb">M5011 </span><span class="k">W</span><span class="m">2</span>
 </code></pre></div>
-<p>Look up stored rotation values from the given workplace number or the current workplace number if none is specified. If a value exists, the operator will prompted to apply rotation compensation using the inbuilt <code>G68</code> command.</p>
+<p>Look up stored rotation values from the given workplace number or the current workplace number if none is specified. If a value exists, the operator will be prompted to apply rotation compensation using the inbuilt <code>G68</code> command.</p>
 <h3 id="m6515-check-co-ordinates-are-within-machine-limits"><code>M6515</code> - CHECK CO-ORDINATES ARE WITHIN MACHINE LIMITS</h3>
 <div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
 <span class="nb">M6515 </span>[Xnnn] [Ynnn] [Znnn]
@@ -2688,7 +2688,7 @@ G37.1
 <span class="c">; Wait for general purpose input 0 to change the state</span>
 <span class="nb">M8004 </span><span class="k">K</span><span class="m">0</span>
 </code></pre></div>
-<p>Waits for a general-purpose input pin to change state. The state that is changed is unimportant, just that the state changes. This code is used by <code>M3.9</code> and <code>M5.9</code> when spindle feedback is enabled to wait until the VFD reports that it has reached the target speed.</p>
+<p>Waits for a general-purpose input pin to change state. The level of the pin is unimportant, just that the state changes. This code is used by <code>M3.9</code> and <code>M5.9</code> when spindle feedback is enabled to wait until the VFD reports that it has reached the target speed.</p>
 <h3 id="m9999-reload-millenniumos"><code>M9999</code> - RELOAD MILLENNIUMOS</h3>
 <div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
 <span class="nb">M999</span>
@@ -2950,7 +2950,7 @@ M7.1
 <span class="c">; Restore all coolants to their previously saved states</span>
 <span class="nb">M9 </span><span class="k">R</span><span class="m">1</span>
 </code></pre></div>
-<p>By default, this turns off any enabled coolant outputs. If called with the <code>R1</code> parameter, it will restore coolant output states to those saved during the most recent pause. This macro is called during the resume process to re-enable coolant.</p>
+<p>By default, this turns off any enabled coolant outputs. If called with the <code>R1</code> parameter, coolant output states will be restored to those saved during the most recent pause. This macro is called during the resume process to re-enable coolant.</p>
 <hr />
 <h2 id="spindle-control">Spindle Control</h2>
 <h3 id="spindle-start-stop">Spindle Start / Stop</h3>
@@ -2964,7 +2964,7 @@ M3.9 S8000
 <p>Wrapping the inbuilt <code>M3</code> command, <code>M3.9</code> starts the spindle in the clockwise direction at a particular speed and waits for it to accelerate to the target speed.</p>
 <p>If spindle feedback is configured, this command waits for a general-purpose input to change state before returning.</p>
 <p>If spindle feedback is not configured, a static delay is used to make sure the spindle is up to speed before returning. The static speed used for this is timed by the operator during the wizard process, and modified based on the percentage speed change being requested. So if the RPM change is 50% of the maximum RPM of the spindle, then the delay will be 50% of the operator-recorded delay.</p>
-<p>Additionally, if Expert Mode is disabled, then this macro will pop up an operator confirmation/warning box when the spindle is going to accelerate from 0 rpm.</p>
+<p>Additionally, if Expert Mode is disabled, then this macro will pop up an operator confirmation when the spindle is going to accelerate from 0 rpm.</p>
 <h4 id="m59-stop-spindle-and-wait"><code>M5.9</code> - STOP SPINDLE AND WAIT</h4>
 <div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
 M5.9 [Dnnn]
