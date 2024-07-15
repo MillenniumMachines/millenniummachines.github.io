@@ -81,7 +81,7 @@ M5010 W0 R5
 
 Reset the stored details for a given WCS, or the current WCS if not specified.
 
-Different fields are used for different types of probing operations, and we want to reset these values before running a probing cycle, so if previous values existed, but the probing cycle failed we would not end up using the previously valid values.
+Not all fields are needed for every probing operation type, and we want to avoid using previously-stored values if the most recent probing operation has failed. To do that, we use this macro to clear the relevant values before starting each probing cycle.
 
 `M5010` uses a bitmask-style integer field to select which WCS detail fields to reset for a particular WCS. These are:
 
