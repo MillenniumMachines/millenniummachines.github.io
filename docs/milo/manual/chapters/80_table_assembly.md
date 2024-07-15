@@ -78,9 +78,10 @@ Use M5x12mm BHCS to attach the table bolt-down brackets to each corner of the el
 
 !!! info annotate "Components Required"
     ```
-    3 x M5x8mm BHCS
+    4 x M5x8mm BHCS
     2 x Angled Corner Connector, 2020
     1 x Openbuilds 2020 Extrusion - 200mm
+    ```
 
 Install the enclosure support extrusion brace using M5x8mm BHCS.
 
