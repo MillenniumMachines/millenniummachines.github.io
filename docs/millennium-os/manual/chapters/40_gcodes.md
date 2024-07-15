@@ -615,7 +615,7 @@ Enables the general-purpose output associated with air-blast, set by the operato
 M7
 ```
 
-Enables the general-purpose output associated with unpressurised coolant, set by the operator during the configuration wizard. If air blast (`M7.1`) is not already activated, it will be before activating the coolant output.
+Enables the general-purpose output associated with unpressurised coolant, set by the operator during the configuration wizard. Air blast (`M7.1`) will be activated before the coolant output, if necessary.
 
 ### `M8` - ENABLE FLOOD
 
