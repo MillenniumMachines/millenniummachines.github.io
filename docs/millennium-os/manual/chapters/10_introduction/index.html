@@ -1227,28 +1227,28 @@
 
 <h1 id="millenniumos">MillenniumOS</h1>
 <h2 id="what-and-why">What and Why?</h2>
-<p>The "OS" stands for "Operations System" rather than "Operat<em>ing</em> System" - because MillenniumOS is an addon that implements a system of high-level CNC operations on top of <a href="https://www.reprapfirmware.org/"><abbr title="RepRapFirmware">RRF</abbr></a> <strong>3.5+</strong>.</p>
+<p>The "OS" stands for "Operations System" rather than "Operat<em>ing</em> System" - because MillenniumOS implements a system of high-level CNC operations on top of <a href="https://www.reprapfirmware.org/"><abbr title="RepRapFirmware">RRF</abbr></a> <strong>3.5+</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><abbr title="RepRapFirmware">RRF</abbr> is the firmware used as standard on all Millennium Machines. If you self-sourced using the reference bill of materials or you bought a kit from LDO, then you already have the hardware required to run <abbr title="RepRapFirmware">RRF</abbr> and MillenniumOS.</p>
-<p>If you are self-sourcing and want to use a different mainboard, then make sure it has support for RepRapFirmware first otherwise you will not be able to run MillenniumOS either.</p>
+<p><abbr title="RepRapFirmware">RRF</abbr> is the firmware used as standard on all Millennium Machines. If you self-sourced using the reference bill of materials or bought a kit from LDO, you already have the hardware required to run <abbr title="RepRapFirmware">RRF</abbr> and MillenniumOS.</p>
+<p>If you are self-sourcing and want to use a different mainboard, ensure it has support for RepRapFirmware first. Otherwise, you will not be able to run MillenniumOS either.</p>
 </div>
-<p>The aim of MillenniumOS is to build on the usability and configurability of <abbr title="RepRapFirmware">RRF</abbr>, adding functionality required for efficient and repeatable machining that you would otherwise have to write yourself if using vanilla <abbr title="RepRapFirmware">RRF</abbr>.</p>
-<p>We hope that MillenniumOS makes Millennium Machines the simplest route for novice machinists to make their first cuts confidently and safely - that said, MillenniumOS <em>is not specific to our machines</em> - it should be possible to use MillenniumOS out-of-the-box on any 3-axis, moving-table CNC machine with a single spindle that runs <abbr title="RepRapFirmware">RRF</abbr> <strong>3.5+</strong>, as long as the axis minima and maxima are in the same directions</p>
+<p>MillenniumOS's objective is to build on the usability and configurability of <abbr title="RepRapFirmware">RRF</abbr>, adding functionality required for efficient and repeatable machining that you would otherwise have to write yourself if using vanilla <abbr title="RepRapFirmware">RRF</abbr>.</p>
+<p>We hope that MillenniumOS provides an intuitive platform for novice machinists to make their first cuts confidently and safely - that said, MillenniumOS <em>is not specific to our machines</em> - it should be possible to use MillenniumOS out-of-the-box on any 3-axis, moving-table CNC machine with a single spindle that runs <abbr title="RepRapFirmware">RRF</abbr> <strong>3.5+</strong>, so long as the machine axes minima and maxima are in matching orientations.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>On machines that do not match the design or layout above, it should still be possible to use MillenniumOS with minimal changes - but corner and surface names may be in the wrong order, since these are specific to the directions of the axes on the machine. These can be changed with minimal impact.</p>
+<p>On machines that do not match the design or layout above, it should still be possible to use MillenniumOS with minimal changes - but corner and surface names may be in the wrong order since these are specific to the directions of the axes on the machine. However, these can be corrected with minimal impact.</p>
 </div>
 <p>MillenniumOS is multiple things:</p>
 <ul>
-<li>A gcode dialect, used to communicate between your CAM package and <abbr title="RepRapFirmware">RRF</abbr>,</li>
-<li>An <abbr title="RepRapFirmware">RRF</abbr> addon, that implements the gcode dialect on your machine, and</li>
-<li>A set of post-processors, which output the gcode dialect from your CAM package, ready to be uploaded into <abbr title="RepRapFirmware">RRF</abbr>.</li>
+<li>A gcode dialect used to communicate between your CAM package and <abbr title="RepRapFirmware">RRF</abbr></li>
+<li>A suite of macros for <abbr title="RepRapFirmware">RRF</abbr> that implements the gcode dialect on your machine</li>
+<li>A set of post-processors, which output the gcode dialect from your CAM package ready to be uploaded into <abbr title="RepRapFirmware">RRF</abbr></li>
 </ul>
 <h2 id="operations">Operations</h2>
 <p>MillenniumOS implements functionality to enable:</p>
 <ul>
-<li>Guided tool changes using tool descriptions, and tool length probing.</li>
+<li>Guided tool changes using tool descriptions and tool length probing.</li>
 <li>Work-piece probing and work offset changes.</li>
 <li>Displaying output from your CAM package as dialogs in <abbr title="RepRapFirmware">RRF</abbr>.</li>
 <li>Configuration via a Wizard process.</li>
@@ -1258,32 +1258,32 @@
 </ul>
 <h2 id="workflow">Workflow</h2>
 <p>MillenniumOS is designed to bring more of a 3D-printer-like workflow to machining. When you run a print job, you generally don't do any setup work before hitting print (except turning the printer on). You hit print, and the gcode file runs through a set of steps to prepare the printer before starting the print.</p>
-<p>MillenniumOS takes the same approach with milling, albeit you will be asked to provide operator input at various points. When you run a MillenniumOS gcode file, you will be walked through setting up and probing the stock for your part, before the job proceeds to cutting moves. You <em>CAN</em> setup things like <abbr title="Work Co-ordinate System">WCS</abbr> origins before hitting go, and MillenniumOS will allow you to continue with existing origins and settings, but it is easier for new operators to simply run the processed gcode files to achieve their first cuts.</p>
+<p>MillenniumOS takes the same approach with milling, albeit with prompts to provide operator input at various points. When you run a MillenniumOS gcode file, you will be walked through setting up and probing the stock for your part before the job proceeds to cutting moves. You <em>CAN</em> set up things like <abbr title="Work Co-ordinate System">WCS</abbr> origins before hitting go, and MillenniumOS will allow you to continue with existing origins and settings. However, it may be easier for new operators to run processed gcode files directly to achieve their first cuts.</p>
 <h2 id="post-processors">Post-Processors</h2>
 <p>MillenniumOS provides post-processors for both <strong>Fusion360</strong> and <strong>FreeCAD</strong>. These post-processors are designed to make working with a Millennium Machine feel a bit more like using a 3D printer - that is, the generated gcode can walk the operator through work-piece probing, both manually and automatically, and tool changes.</p>
 <h2 id="features">Features</h2>
-<p>MillenniumOS uses the concept of features to enable and disable functionality. Some of these features require hardware support, so are disabled by default. The features available as of version <code>0.3.0</code> are the following:</p>
+<p>MillenniumOS uses the concept of features to control additional functionality. Many of these features require extra hardware to function. The features available as of version <code>0.3.0</code> are the following:</p>
 <ul>
 <li><strong>Toolsetter</strong> - disabled by default</li>
 <li><strong>Touch Probe</strong> - disabled by default</li>
 <li><strong>Variable Spindle Speed Control</strong> - enabled by default</li>
 <li><strong>Spindle Feedback</strong> - disabled by default</li>
 </ul>
-<p>If you don't have the hardware for one or more of these features or you disable the feature, MillenniumOS will fall back on other, manual methods to achieve the same goal.</p>
-<p>This allows us to use the same gcode dialect for machines which have any combination of feature support.</p>
-<p>This may be hard to visualise, so here are some examples:</p>
+<p>If you don't have the hardware required for one or more of these features or choose to disable said features, MillenniumOS will fall back on other manual methods to achieve the same goal.</p>
+<p>This allows us to use the same gcode dialect to control machines with any combination of enabled features.</p>
+<p>Understandably, this may be hard to visualise, so here are some examples:</p>
 <h3 id="toolsetter-and-touch-probe-disabled">Toolsetter and Touch Probe Disabled</h3>
-<p>You will be guided through manual work-piece probing when the machine needs to know the origin of a work-piece. Every time a tool is changed, you will be guided through a manual process to re-zero the origin in the Z axis, as the tool length will have changed.</p>
-<p>You will be able to do everything, but it will take a while as this will involve manual probing at every step.</p>
+<p>You will be guided through manual work-piece probing when the machine needs to know the origin of a work-piece. Every time a tool is changed, you will go through a manual process to re-zero the origin in the Z-Axis, as the tool length will have changed.</p>
+<p>You can do everything required for job setup via this process, but it will take a long time as each step will involve manual probing methods.</p>
 <h3 id="only-toolsetter-enabled">Only Toolsetter Enabled</h3>
-<p>You will still be guided through manual work-piece probing, but when you change tools during the actual machining process, we will use the toolsetter to calculate the relative length difference between the tools and compensate for this automatically.</p>
-<p>This will save some time if your code contains multiple operations with tool changes.</p>
+<p>You will still be guided through manual work-piece probing until you need to change tools during the machining process. We will use the toolsetter to calculate the relative length difference between the tools and compensate for this automatically.</p>
+<p>This add-on feature saves time if your job contains multiple operations with tool changes and avoids recalculating the Z-Axis origin after changing tools.</p>
 <h3 id="only-touch-probe-enabled">Only Touch Probe Enabled</h3>
-<p>You will be guided through an automated work-piece probing system, which is very similar to the manual probing system but will use your touch probe for the actual probing moves. This will speed up the probing process <em>considerably</em>.</p>
-<p>You will still have to re-probe the Z-height of the work-piece manually after every tool change as we have no way to calculate the relative length of the tools.</p>
+<p>You will be guided through an automated work-piece probing system, similar to the manual probing system, but you will use your touch probe for the actual probing moves. This speeds up the probing process <em>considerably</em>.</p>
+<p>You will still have to re-probe the Z-Axis origin of the workpiece manually after every tool change because we have no way to calculate the relative length of the tools.</p>
 <h3 id="both-touch-probe-and-toolsetter-enabled">Both Touch Probe and Toolsetter Enabled</h3>
-<p>You will have the best of both worlds - there will no longer be any need for manual probing routines, and aside from the manual steps you take to position the touch probe at the start of a probing procedure, and changing the tools themselves, everything else will be automated.</p>
-<p>This will save you the most amount of time and is the most accurate way of using MillenniumOS.</p>
+<p>You will have the best of both worlds. There will no longer be any need for manual probing routines. Aside from the manual steps you will take to position the touch probe at the start of a probing procedure and the process of changing the tools themselves, everything else will be automatic.</p>
+<p>This saves you the most time and is the most accurate way to use MillenniumOS.</p>
 <p><a href="../20_installation/">Next Chapter: Installing MillenniumOS</a></p>
 
 

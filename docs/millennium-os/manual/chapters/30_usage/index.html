@@ -956,13 +956,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#wcs-offsets-work-co-ordinate-systems" class="md-nav__link">
+  <a href="#wcs-offsets-work-coordinate-systems" class="md-nav__link">
     <span class="md-ellipsis">
-      WCS Offsets / Work Co-ordinate Systems
+      WCS Offsets / Work Coordinate Systems
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="WCS Offsets / Work Co-ordinate Systems">
+    <nav class="md-nav" aria-label="WCS Offsets / Work Coordinate Systems">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1225,13 +1225,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#wcs-offsets-work-co-ordinate-systems" class="md-nav__link">
+  <a href="#wcs-offsets-work-coordinate-systems" class="md-nav__link">
     <span class="md-ellipsis">
-      WCS Offsets / Work Co-ordinate Systems
+      WCS Offsets / Work Coordinate Systems
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="WCS Offsets / Work Co-ordinate Systems">
+    <nav class="md-nav" aria-label="WCS Offsets / Work Coordinate Systems">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1424,20 +1424,21 @@
 
 
 <h1 id="using-millenniumos">Using MillenniumOS</h1>
-<p>At this point, you might have already gained a feeling for how MillenniumOS is designed to work - the Configuration Wizard that starts up after installation <em>uses</em> MillenniumOS tool-change and probing procedures to gather the necessary settings, information and measurements to effectively probe work pieces.</p>
-<p>That said, there are a number of different probing methods, and the post-processor is not used during the configuration process so it is important to explain how the post-processor and MillenniumOS on <abbr title="RepRapFirmware">RRF</abbr> interact.</p>
+<p>At this point, you might have already gained a feeling for how MillenniumOS is designed to work - the Configuration Wizard that starts up after installation <em>uses</em> MillenniumOS tool-change and probing procedures to gather the necessary settings, information, and measurements to effectively probe work pieces.</p>
+<p>That said, there are several different probing methods, and the post-processor is not used during the configuration process, so it is important to explain how the post-processor and MillenniumOS on <abbr title="RepRapFirmware">RRF</abbr> interact.</p>
 <h2 id="post-processor">Post-Processor</h2>
-<p>The MillenniumOS post-processors are relatively simple - rather than outputting any particularly complex gcode sequences to perform tool changes or probing cycles, they rely on the knowledge that the firmware (<abbr title="RepRapFirmware">RRF</abbr>, and therefore MillenniumOS macros running on top of it) are best-placed to implement these in a safe manner. The gcode is designed to be simple to read and well commented, so for those of us of a less-trusting nature, it should be easy enough to open in a text editor and understand what it will command your mill to do.</p>
+<p>The MillenniumOS post-processors are relatively simple - rather than outputting any particularly complex gcode sequences to perform tool changes or probing cycles, they rely on the knowledge that the firmware (<abbr title="RepRapFirmware">RRF</abbr>, and therefore MillenniumOS macros running on top of it) are best placed to implement these safely. The gcode is designed to be simple to read and well commented, so for those with a less-trusting nature, it should be easy enough to open in a text editor and understand what it will command your mill to do.</p>
 <p><img alt="Image showing Post-Process tab of a Fusion360 Setup" class="shadow-dark" src="../../img/mos_usage_step_0.png" /></p>
 <hr />
-<h3 id="wcs-offsets-work-co-ordinate-systems"><abbr title="Work Co-ordinate System">WCS</abbr> Offsets / Work Co-ordinate Systems</h3>
-<p>The <strong>"<abbr title="Work Co-ordinate System">WCS</abbr> offset"</strong> setting of the <strong>"Setup"</strong> selects the <abbr title="Work Co-ordinate System">WCS</abbr> that will be switched into prior to running the tool paths configured in the Setup.</p>
-<p>A value of <code>0</code> in this field corresponds to <code>G54</code>, or the <em>first</em> <abbr title="Work Co-ordinate System">WCS</abbr>. We do not allow output of gcode in machine co-ordinates so this field is zero-indexed. A value of 2 corresponds to <code>G56</code>, or the <em>third</em> <abbr title="Work Co-ordinate System">WCS</abbr>.</p>
-<p>The <strong>"<abbr title="Work Co-ordinate System">WCS</abbr> offset"</strong> setting can be used in a number of ways.</p>
+<h3 id="wcs-offsets-work-coordinate-systems"><abbr title="Work Co-ordinate System">WCS</abbr> Offsets / Work Coordinate Systems</h3>
+<p>The <strong>"<abbr title="Work Co-ordinate System">WCS</abbr> offset"</strong> setting of the <strong>"Setup"</strong> selects the <abbr title="Work Co-ordinate System">WCS</abbr> used while running the tool paths configured in the Setup.</p>
+<p>A value of <code>0</code> or <code>1</code> in this field corresponds to <code>G54</code>, or the <em>first</em> <abbr title="Work Co-ordinate System">WCS</abbr>, as we do not allow the output of gcode in machine coordinates (<code>G53</code>).</p>
+<p>This follows industry standards so that offsets 2 and 3 correspond to <code>G55</code> and <code>G56</code> respectively.</p>
+<p>The <strong>"<abbr title="Work Co-ordinate System">WCS</abbr> offset"</strong> setting can be used in several ways.</p>
 <p><img alt="Post-Process tab of a Fusion360 Setup" class="shadow" src="../../img/mos_usage_step_1.png" /></p>
 <hr />
 <h4 id="single-work-piece-multiple-operations-on-different-faces">Single work-piece, multiple operations on different faces</h4>
-<p>The below flow chart indicates a number of machining operations that are performed on different faces of the same work-piece, e.g. machining the top face of a part, and then flipping it over to machine from the opposite side.</p>
+<p>The below flow chart indicates several machining operations that are performed on different faces of the same workpiece, e.g. machining the top face of a part, and then flipping it over to mill from the opposite side.</p>
 <pre class="mermaid"><code>flowchart TB
     WCS1[Switch to Work Offset 0] --&gt; Probe1[Probe work-piece and set origin in WCS 1] --&gt; G54
     subgraph G54
@@ -1449,19 +1450,14 @@
         direction LR
         4(OP4 - Face) --&gt; 5(OP5 - Adaptive Clear) --&gt; 6(OP6 - Profile)
     end</code></pre>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>You can clearly see here the "mismatch" between Fusion360 and <abbr title="RepRapFirmware">RRF</abbr> / <abbr title="Duet Web Control">DWC</abbr> - <strong>Work Offset 0</strong> in Fusion360 corresponds to <strong><abbr title="Work Co-ordinate System">WCS</abbr> 1</strong> in <abbr title="Duet Web Control">DWC</abbr> (the offset is <em>from the first <abbr title="Work Co-ordinate System">WCS</abbr></em> rather than from <em>G53, or Machine Co-ordinates</em>). This is because we do not allow code in machine co-ordinates to be outputted.</p>
-<p>You need to remember this when setting your work offset value in Fusion360 or setting your <abbr title="Work Co-ordinate System">WCS</abbr> origins manually.</p>
-</div>
 <hr />
 <p>The post-processor defaults to this method of output - this is the <strong>"On Change"</strong> value of the <strong>"<abbr title="Work Co-ordinate System">WCS</abbr> Origin Probing Mode"</strong> setting under the <strong>"Probing and inspection"</strong> tab of the <strong>"Post properties"</strong>.</p>
 <p><img alt="MillenniumOS WCS origin probing mode selection" class="shadow" src="../../img/mos_usage_step_2.png" /></p>
-<p>With this mode selected, the post-processor will request a work-piece probing cycle for the <abbr title="Work Co-ordinate System">WCS</abbr> in question just prior to switching into it.</p>
-<p>This is useful for working on a single part where you must rotate the work-piece to machine on multiple faces in sequence. Use the work offset to indicate when a part rotation is necessary, and you can then perform the rotation and probing of the new origin when necessary.</p>
+<p>With this mode selected, the post-processor will request a work-piece probing cycle for the requested <abbr title="Work Co-ordinate System">WCS</abbr> before switching to it.</p>
+<p>This is useful for working on a single part where you must rotate the workpiece to machine on multiple faces in sequence. Use the work offset to indicate when a part rotation is necessary, and you can then perform the rotation and probing of the new origin when necessary.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There is currently no way to pass "messages" to <abbr title="RepRapFirmware">RRF</abbr> to indicate that a work-piece needs to be rotated. You must bear this in mind when producing your tool-paths. When a probing operation is triggered, the spindle will be parked and you will be asked to probe the new <abbr title="Work Co-ordinate System">WCS</abbr>. At this point, you should rotate the work-piece and then proceed with the probing steps as indicated.</p>
+<p>There is currently no way to pass "messages" to <abbr title="RepRapFirmware">RRF</abbr> to indicate that a workpiece needs to be rotated. You must bear this in mind when producing your tool paths. When a probing operation is triggered, the spindle will be parked and you will be asked to probe the new <abbr title="Work Co-ordinate System">WCS</abbr>. At this point, you should rotate the workpiece and proceed with the probing steps as indicated.</p>
 </div>
 <hr />
 <h4 id="multiple-work-piece-multiple-operations-on-a-single-face-of-each">Multiple work-piece, multiple operations on a single face of each</h4>
@@ -1492,22 +1488,22 @@
 <p>With this mode selected, the post-processor will identify all work offsets used in the Setup, and trigger a probing cycle for each of them at the start of the gcode.</p>
 <p>This is useful where you want to make multiple identical parts - you can select the <strong>"Multiple <abbr title="Work Co-ordinate System">WCS</abbr> Offsets"</strong> tick-box on the <strong>"Setup"</strong>, and indicate how many parts to process - Fusion360 will repeat the operations in each <abbr title="Work Co-ordinate System">WCS</abbr> that is probed at the start of the file.</p>
 <h3 id="low-memory-mode">Low-memory Mode</h3>
-<p>MillenniumOS running on <abbr title="RepRapFirmware">RRF</abbr> is quite memory intensive - the mainboards that <abbr title="RepRapFirmware">RRF</abbr> is designed to run with are relatively low powered, and have a small amount of onboard memory that is used for variable storage.</p>
+<p>Running MillenniumOS on <abbr title="RepRapFirmware">RRF</abbr> is quite memory intensive - the mainboards that <abbr title="RepRapFirmware">RRF</abbr> is designed to run with are relatively low-powered, and have a small amount of onboard memory for variable storage.</p>
 <p>With some chips (in particular the STM32F407, used on the Fly CDYv3 which comes with the LDO kit), we are right at the limits of what is possible based on the complexity of MillenniumOS.</p>
-<p>If you are running a job file and the mainboard reboots unexpectedly, you should run <code>M122</code> and check under the <code>=== Platform ===</code> header - if the <code>Last software reset</code> reason is <code>OutOfMemory</code>, then this indicates that your mainboard chip did not have enough free memory to make an allocation for something during the processing of the file. This is usually an arc move, where an allocation is made to calculate the movements for the arc.</p>
+<p>If you are running a job file and the mainboard reboots unexpectedly, you should run <code>M122</code> and check under the <code>=== Platform ===</code> header - if the <code>Last software reset</code> reason is <code>OutOfMemory</code>, then this indicates that your mainboard chip did not have enough free memory to allocate something during the processing of the file. This is usually an arc move, where an allocation is made to calculate the movements for the arc.</p>
 <p>If you see these errors often, then you can enable <code>Low Memory Mode</code> in the post-processor, if available, and this will help to reduce memory usage during file processing by turning any arc moves into linear moves so that <abbr title="RepRapFirmware">RRF</abbr> does not have to process these internally.</p>
 <div class="highlight"><pre><span></span><code><span class="go">Last reset 00:02:25 ago, cause: software</span>
 <span class="go">Last software reset at 2024-03-22 16:55, reason: OutOfMemory, Gcodes spinning, available RAM 13468, slot 0</span>
 <span class="go">...</span>
 </code></pre></div>
 <h3 id="combining-multiple-operations">Combining Multiple Operations</h3>
-<p>One of the most painful Fusion360 limitations when you don't have a subscription is not being able to export a single file that uses multiple tools.</p>
-<p>You can get around this by exporting each set of operations using the same tool individually, and then combine them after using a text editor or similar. To make this process easier, you should turn off <strong>"Output job setup commands"</strong> for all but the first exported file, which will skip any homing or probing cycles that would occur at the start of each file.</p>
+<p>One of the most painful Fusion360 limitations, when you don't have a subscription, is not being able to export a single file that uses multiple tools.</p>
+<p>You can get around this by exporting each set of operations using the same tool individually, and then combining them after using a text editor or similar. To simplify this process, you should turn off <strong>"Output job setup commands"</strong> for all but the first exported file, which will skip any homing or probing cycles that normally occur at the start of each file.</p>
 <p>Probing will still be triggered before switching into a new <abbr title="Work Co-ordinate System">WCS</abbr>, and the tools will still be outputted before they are needed, but the machine will not re-home or run any probing cycles at the start of each new set of operations.</p>
 <h3 id="freecad">FreeCAD</h3>
 <p>The FreeCAD post-processor supports most of the functionality of the Fusion360 post-processor except low-memory mode (as FreeCAD itself already linearises arc moves), and per-operation support for changing post-processor options (which is a limitation of FreeCAD and can be worked around by using multiple Path Jobs).</p>
 <p>One of the big advantages of using FreeCAD is not having any limitations on the number of tools that can be used in a single exported file, and no modification of your rapid speeds like in Fusion360.</p>
-<p>The FreeCAD post-processor can be configured in the Job using the following command-line options, but defaults to the same settings as the Fusion360 post-processor.</p>
+<p>The FreeCAD post-processor can be configured in the Job using the following command-line options but defaults to the same settings as the Fusion360 post-processor.</p>
 <div class="highlight"><pre><span></span><code><span class="go">usage: MillenniumOS v0.2.1-rc2 [-h] [--show-editor | --no-show-editor]</span>
 <span class="go">                               [--output-job-setup | --no-output-job-setup]</span>
 <span class="go">                               [--output-machine | --no-output-machine]</span>
@@ -1564,10 +1560,10 @@
 </code></pre></div>
 <hr />
 <h2 id="probing">Probing</h2>
-<p>One of the fundamental parts of setting up your job is identifying the origin point of the work co-ordinate system that your job will run in. How this is done depends on the shape of your stock, the design of the item you are planning to machine, and the order of the operations that will be executed on it.</p>
-<p>This is not a decision that MillenniumOS can make for you automatically, but it can help you by automating the process of probing the origin of the <abbr title="Work Co-ordinate System">WCS</abbr> based on information you give it.</p>
-<p>During the execution of a job, and with default post-processor settings, you will be asked just prior to switching into each <abbr title="Work Co-ordinate System">WCS</abbr> to probe the origin of that <abbr title="Work Co-ordinate System">WCS</abbr> if it is not already set. MillenniumOS will give you a choice of probing cycles to choose from, which are described below. You can pick one or more of these options in sequence to probe the origin of your work-piece in all 3 axes.</p>
-<p>For advanced usage, you can switch the <strong>"<abbr title="Work Co-ordinate System">WCS</abbr> Origin Probing Mode"</strong> to <strong>"None"</strong>, and this will not automatically trigger a probing cycle of each <abbr title="Work Co-ordinate System">WCS</abbr>, either at the beginning of the job or just prior to switching into the <abbr title="Work Co-ordinate System">WCS</abbr>. You will need to either set the <abbr title="Work Co-ordinate System">WCS</abbr> origin manually or Use the features of your CAM or post-processor to inject probing cycle calls where necessary.</p>
+<p>One of the fundamental parts of setting up your job is identifying the origin point of the work coordinate system that your job will run in. How this is done depends on the shape of your stock, the design of the item you are planning to machine, and the order of the operations that will be executed on it.</p>
+<p>This is not a decision that MillenniumOS can make for you automatically, however, it can help you by automating the process of probing the origin of the <abbr title="Work Co-ordinate System">WCS</abbr> based on the information you give it.</p>
+<p>During the execution of a job, and with default post-processor settings, you will be asked just before switching into each <abbr title="Work Co-ordinate System">WCS</abbr> to probe the origin of that <abbr title="Work Co-ordinate System">WCS</abbr> if it is not already set. MillenniumOS will give you a choice of probing cycles, which are described below. You can pick one or more of these options in sequence to probe the origin of your workpiece in all 3 axes.</p>
+<p>For advanced usage, you can switch the <strong>"<abbr title="Work Co-ordinate System">WCS</abbr> Origin Probing Mode"</strong> to <strong>"None"</strong>, and this will not automatically trigger a probing cycle of each <abbr title="Work Co-ordinate System">WCS</abbr>, either at the beginning of the job or just before switching to the <abbr title="Work Co-ordinate System">WCS</abbr>. You will need to either set the <abbr title="Work Co-ordinate System">WCS</abbr> origin manually or Use the features of your CAM or post-processor to inject probing cycle calls where necessary.</p>
 <p>When a probe cycle is triggered by the post-processor, you will see the following dialog box, which allows you to select the probing cycle that you would like to use to zero the <abbr title="Work Co-ordinate System">WCS</abbr> in question.</p>
 <p><img alt="MillenniumOS probe cycle selection dialog box" class="shadow-dark" src="../../img/mos_usage_step_5.png" /></p>
 <hr />
@@ -1584,11 +1580,11 @@
 -->
 
 <h3 id="vise-corner">Vise Corner</h3>
-<p>Vise corner is selected by default, as it is likely to be the most-used probing cycle type. With a single probe cycle, it sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X, Y and Z axes to the top surface of an outside corner of a part.</p>
+<p>Vise corner is selected by default, as it is likely to be the most-used probing cycle type. With a single probe cycle, it sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X, Y, and Z axes to the top surface of an outside corner of a part.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When using Quick mode (<code>Q1</code>), Vise Corner cannot calculate the squareness or rotation of the work-piece, so it will not be possible to compensate for a misaligned part.</p>
-<p>The corner of the part is assumed to be at the exact intersection of 2 lines drawn perpendicular to each axis through the probe points. If your work-piece is not square with the axes, or the corner itself is not square, then the calculated location will be inaccurate.</p>
+<p>When using Quick mode (<code>Q1</code>), Vise Corner cannot calculate the squareness or rotation of the workpiece, so it will not be possible to compensate for a misaligned part.</p>
+<p>The corner of the part is assumed to be at the exact intersection of 2 lines drawn perpendicular to each axis through the probe points. If your workpiece is not square with the axes, or the corner itself is not square, then the calculated location will be inaccurate.</p>
 </div>
 <pre class="mermaid"><code>flowchart TB
     subgraph A1[Probe Z]
@@ -1621,15 +1617,15 @@
     14(Move above corner X,Y)
     A1 --&gt; 2 --&gt; 3 --&gt; A2 --&gt; 8 --&gt; A3 --&gt; 13 --&gt; 14</code></pre>
 <h3 id="circular-bore">Circular Bore</h3>
-<p>Circular bore finds the X and Y co-ordinates of the centre of a circular bore (hole) in a work-piece by moving downwards into the bore from an operator-chosen approximate centre-point, then probing outwards in 3 directions to the approximate radius of the bore, plus an overtravel amount. After all of the points have been probed, the probe will move to the calculated centre of the bore and back up to the starting position in Z.</p>
+<p>Circular Bore finds the X and Y coordinates of the centre of a circular bore (hole) in a work-piece by moving downwards into the bore from an operator-chosen approximate centre-point, then probing outwards in 3 directions to the approximate radius of the bore, plus an overtravel amount. After all the points have been probed, the probe will move to the calculated centre of the bore and back up to the starting position in Z.</p>
 <p>You will be asked to enter the following information:</p>
 <ul>
 <li><strong>Bore Diameter</strong> - Approximate diameter of the bore, used to calculate target probe points.</li>
-<li><strong>Overtravel</strong> - Added to the bore diameter, accounting for any innaccuracy in the operator-chosen centre-point of the bore. If the probe is not activated after travelling <code>radius + overtravel</code> from the operator-chosen centre-point of the bore then the probe cycle will return an error.</li>
+<li><strong>Overtravel</strong> - Added to the bore diameter, accounting for any inaccuracy in the operator-chosen centre-point of the bore. If the probe is not activated after travelling <code>radius + overtravel</code> from the operator-chosen centre-point of the bore then the probe cycle will return an error.</li>
 <li><strong>Approximate Centre-Point</strong> - You will be prompted to jog the probe or datum tool over the approximate centre-point of the bore.</li>
 <li><strong>Probe Depth</strong> - The depth from the operator-chosen centre-point to descend to, before moving outwards to detect the bore circumference.</li>
 </ul>
-<p>Circular bore sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X and Y axes to the centre of the bore. This is usually used to zero off a hole in a partly-machined work-piece, or off a similar feature in a fixture plate.</p>
+<p>Circular Bore sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X and Y axes to the centre of the bore. This is usually used to zero off a hole in a partly-machined workpiece, or a similar feature in a fixture plate.</p>
 <pre class="mermaid"><code>flowchart TB
     1(Move down to probe depth)
     subgraph P1[Probe 1]
@@ -1648,17 +1644,17 @@
 
     1 --&gt; P1 --&gt; P2 --&gt; P3 --&gt; 7</code></pre>
 <h3 id="circular-boss">Circular Boss</h3>
-<p>Circular boss finds the X and Y co-ordinates of the centre of a circular boss (protruding feature) on a work-piece by moving outside the expected diameter of the boss by the clearance distance, then descending to a probing depth from the current Z position and probing back towards the approximate centre of the boss until the probe is triggered.</p>
-<p>It then backs off, lifts up above the top surface of the boss and repeats this cycle in another 2 locations around the boss to generate a centre point. The probe will then be moved back to the starting Z position and over the centre-point of the boss.</p>
+<p>Circular Boss finds the X and Y coordinates of the centre of a circular boss (protruding feature) on a work-piece by moving outside the expected diameter of the boss by the clearance distance, then descending to a probing depth from the current Z position and probing back towards the approximate centre of the boss until the probe is triggered.</p>
+<p>It then backs off, lifts above the top surface of the boss, and repeats this cycle in another 2 locations around the boss to generate a centre point. The probe will then be moved back to the starting Z position and over the centre-point of the boss.</p>
 <p>You will be asked to enter the following information:</p>
 <ul>
 <li><strong>Boss Diameter</strong> - Approximate diameter of the boss, used to calculate start and target probe points.</li>
 <li><strong>Clearance</strong> - Added to the boss radius, this is how far the probe cycle will move outside of the expected surface of the boss before probing back towards the surface.</li>
-<li><strong>Overtravel</strong> - Subtracted from the boss radius, accounting for any innaccuracy in the operator-chosen centre-point of the boss. If the probe is not activated after travelling <code>clearance + overtravel</code> towards the operator-chosen centre-point of the boss from the starting location, then the probe cycle will return an error.</li>
+<li><strong>Overtravel</strong> - Subtracted from the boss radius, accounting for any inaccuracy in the operator-chosen centre-point of the boss. If the probe is not activated after travelling <code>clearance + overtravel</code> towards the operator-chosen centre-point of the boss from the starting location, then the probe cycle will return an error.</li>
 <li><strong>Approximate Centre-Point</strong> - You will be prompted to jog the probe or datum tool over the approximate centre-point of the boss.</li>
 <li><strong>Probe Depth</strong> - The depth from the operator-chosen centre-point to descend to, after moving outwards to each boss probe location, before probing back towards the centre-point.</li>
 </ul>
-<p>Circular boss sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X and Y axes to the centre of the boss. This can be used to zero to the centre of a circular work-piece, or a previously-machined circular feature that protrudes from the work-piece surface.</p>
+<p>Circular Boss sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X and Y axes to the centre of the boss. This can be used to zero to the centre of a circular workpiece, or a previously-machined circular feature that protrudes from the workpiece surface.</p>
 <pre class="mermaid"><code>flowchart TB
     subgraph P1[Probe 1]
         1(Move outside boss at 0 degrees) --&gt;
@@ -1682,13 +1678,13 @@
 
     P1 --&gt; 4 --&gt; P2 --&gt; 8 --&gt; P3 --&gt; 12</code></pre>
 <h3 id="rectangle-pocket">Rectangle Pocket</h3>
-<p>Rectangle Pocket finds the X and Y co-ordinates of the centre of a rectangular pocket (recessed feature) on a workpiece by descending into the pocket from an operator-chosen approximate centre-point, and then probing twice along each internal surface of the pocket, at the clearance distance inwards and inside of each expected corner.</p>
+<p>Rectangle Pocket finds the X and Y coordinates of the centre of a rectangular pocket (recessed feature) on a workpiece by descending into the pocket from an operator-chosen approximate centre-point, and then probing twice along each internal surface of the pocket, at the clearance distance inwards and inside of each expected corner.</p>
 <p>You will be asked to enter the following information:</p>
 <ul>
-<li><strong>Width of Pocket</strong> - The approximate width of the pocket, measured along the X axis. The surfaces along the X axis would be facing directly towards or away from you if you were standing at the front of the machine.</li>
-<li><strong>Length of Pocket</strong> - The approximate length of the pocket, measured along the Y axis. The surfaces along the Y axis would be to the left and right of you, if you were standing at the front of the machine.</li>
+<li><strong>Width of Pocket</strong> - The approximate width of the pocket, measured along the X-axis. The surfaces along the X-axis would be facing directly towards or away from you if you were standing at the front of the machine.</li>
+<li><strong>Length of Pocket</strong> - The approximate length of the pocket, measured along the Y-axis. The surfaces along the Y-axis would be to the left and right of you if you were standing at the front of the machine.</li>
 <li><strong>Clearance</strong> - The distance inwards from each corner and inside of each surface that will be used to calculate our starting points to probe. For example, when probing near the front left corner, our starting point would be the approximate location of the corner in X and Y (based on the operator-chosen approximate centre-point of the pocket, width and length) plus the clearance distance, in each (i.e. moving away, inwards, from the expected corner position).</li>
-<li><strong>Overtravel</strong> - The distance 'past' each expected surface to set the probe target location, which accounts for any inaccuracy in the operator-chosen centre-point of the pocket, or rotation of the pocket itself.</li>
+<li><strong>Overtravel</strong> - The distance 'past' each expected surface to set the probe-target location, which accounts for any inaccuracy in the operator-chosen centre-point of the pocket, or rotation of the pocket itself.</li>
 <li><strong>Approximate Centre-Point</strong> - You will be prompted to jog the probe or datum tool over the approximate centre-point of the pocket.</li>
 <li><strong>Probe Depth</strong> - The depth from the operator-chosen centre-point to descend to, before probing the inner surfaces of the pocket.</li>
 </ul>
@@ -1712,18 +1708,18 @@
 
     1 --&gt; A1 --&gt; A2 --&gt; 10</code></pre>
 <h3 id="rectangle-block">Rectangle Block</h3>
-<p>Rectangle Block finds the X and Y co-ordinates of the centre of a rectangular block (the work-piece itself, or a rectangular protruding feature) by moving outside of the block from an operator-chosen approximate centre-point, descending to a probing depth and then probing twice along each surface of the block, at the clearance distance inwards and outside of each expected corner.</p>
-<p>The probe will be lifted back to the starting Z height after the first X surface has been probed, allowing it to move across the block to the second surface. The probe will stay at the probe height to move across to the first Y surface, and then will return to the starting Z height to move to the second Y surface. After the probing cycle is complete, the probe will be lifted back to the starting Z height and moved above the centre of the block.</p>
+<p>Rectangle Block finds the X and Y coordinates of the centre of a rectangular block (the work-piece itself, or a rectangular protruding feature) by moving outside of the block from an operator-chosen approximate centre-point, descending to a probing depth and then probing twice along each surface of the block, at the clearance distance inwards and outside of each expected corner.</p>
+<p>The probe will be lifted back to the starting Z height after the first X surface has been probed, allowing it to move across the block to the second surface. The probe will stay at the probe height to move across to the first Y surface and then return to the starting Z height to move to the second Y surface. After the probing cycle is complete, the probe will be lifted back to the starting Z height and moved above the centre of the block.</p>
 <p>You will be asked to enter the following information:</p>
 <ul>
-<li><strong>Width of Block</strong> - The approximate width of the block, measured along the X axis. The surfaces along the X axis would be facing directly towards or away from you if you were standing at the front of the machine.</li>
-<li><strong>Length of Block</strong> - The approximate length of the block, measured along the Y axis. The surfaces along the Y axis would be to the left and right of you, if you were standing at the front of the machine.</li>
-<li><strong>Clearance</strong> - The distance inwards from each corner and outside of each surface that will be used to calculate our starting points to probe. For example, when probing near the front left corner on the X axis, our starting point would be the approximate location of the corner in X and Y (based on the operator-chosen approximate centre-point of the block, width and length) plus the clearance distance in Y, and minus the clearance distance in X (i.e. outside the surface and inwards from the expected corner position).</li>
-<li><strong>Overtravel</strong> - The distance 'past' each expected surface to set the probe target location, which accounts for any inaccuracy in the operator-chosen centre-point of the block, or rotation of the block itself.</li>
+<li><strong>Width of Block</strong> - The approximate width of the block, measured along the X-axis. The surfaces along the X-axis would be facing directly towards or away from you if you were standing at the front of the machine.</li>
+<li><strong>Length of Block</strong> - The approximate length of the block, measured along the Y-axis. The surfaces along the Y-axis would be to the left and right of you if you were standing at the front of the machine.</li>
+<li><strong>Clearance</strong> - The distance inwards from each corner and outside of each surface that will be used to calculate our starting points to probe. For example, when probing near the front left corner on the X-axis, our starting point would be the approximate location of the corner in X and Y (based on the operator-chosen approximate centre-point of the block, width and length) plus the clearance distance in Y, and minus the clearance distance in X (i.e. outside the surface and inwards from the expected corner position).</li>
+<li><strong>Overtravel</strong> - The distance 'past' each expected surface to set the probe-target location, which accounts for any inaccuracy in the operator-chosen centre-point of the block, or rotation of the block itself.</li>
 <li><strong>Approximate Centre-Point</strong> - You will be prompted to jog the probe or datum tool over the approximate centre-point of the block.</li>
 <li><strong>Probe Depth</strong> - The depth from the operator-chosen centre-point to descend to, before probing the inner surfaces of the block.</li>
 </ul>
-<p>Rectangle block sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X and Y axes to the centre of the block (protruding feature or a rectangular work-piece itself). This probing cycle is additionally useful for measurement, as it can be used to calibrate touch probes or accurately measure the dimensions of a work-piece, as well as identifying its rotation from the machine axes.</p>
+<p>Rectangle block sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X and Y axes to the centre of the block (protruding feature or a rectangular workpiece itself). This probing cycle is also handy for dimensional and rotational measurements and can be used to calibrate touch probes.</p>
 <pre class="mermaid"><code>flowchart TB
     1(Move outside Left X surface) --&gt;
     2(Move down to probe depth)
@@ -1755,30 +1751,25 @@
     2 --&gt; A1 --&gt; 6
     7 --&gt; A2 --&gt; 10 --&gt; A3 --&gt; 14 --&gt; A4 --&gt; 18</code></pre>
 <h3 id="outside-corner">Outside Corner</h3>
-<p>Outside corner finds the X and Y co-ordinates of the corner of a rectangular work-piece by probing along the 2 edges that form the corner.</p>
-<p>It has 2 modes - <strong>Quick</strong> or <code>Q1</code>, which takes a single probe point on each surface, or <strong>Full</strong> (<code>Q0</code> or unset) which takes 2 probe points along each surface forming the corner.</p>
-<p><strong>Quick</strong> mode is useful when you know the work-piece is square and properly aligned with the axes of the machine. The corner location is identified by the X co-ordinate when probing on the X surface, and the Y co-ordinate when probing on the Y surface.</p>
-<p><strong>Full</strong> mode is useful when you are unsure that the work-piece is square or properly aligned with the axes of the machine. The corner location is identified by taking 2 measurements along each surface, drawing a line through the points on each axis and then calculating where those lines cross. This allows us to calculate the angle of the corner, and if it is square we can also calculate the rotation of the work-piece in relation to the machine axes.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Calculating the rotation of the work-piece gives us the information required to compensate for this rotation using <abbr title="RepRapFirmware">RRF</abbr>'s <code>G68</code> code. This is not currently implemented but is planned for a later release of MillenniumOS.</p>
-<p>The rotation value will be printed to the console after running this probe cycle, and can be viewed using the <code>M7600</code> command before running another probe cycle.</p>
-</div>
+<p>Outside Corner finds the X and Y coordinates of the corner of a rectangular workpiece by probing along the 2 edges that form the corner.</p>
+<p>It has 2 modes - <strong>Quick</strong> or <code>Q1</code>, which takes a single probe point on each surface, and <strong>Full</strong> (<code>Q0</code> or unset) which takes 2 probe points along each surface forming the corner.</p>
+<p><strong>Quick</strong> mode is useful when you know the workpiece is square and properly aligned with the axes of the machine. The corner location is identified by the X coordinate when probing on the X surface, and the Y coordinate when probing on the Y surface.</p>
+<p><strong>Full</strong> mode is useful when you are unsure that the workpiece is square or properly aligned with the axes of the machine. The corner location is identified by taking 2 measurements along each surface, drawing a line through the points on each axis, and then calculating where those lines cross. This allows us to calculate the angle of the corner, and if it is square we can also calculate the rotation of the workpiece about the machine axes.</p>
 <p>For <strong>Full</strong> mode, you will be asked to enter the following information:</p>
 <ul>
-<li><strong>Length of X Corner Surface</strong> - The approximate length of the surface, measured along the X axis. The surface along the X axis would be facing directly towards or away from you if you were standing at the front of the machine.</li>
-<li><strong>Length of Y Corner Surface</strong> - The approximate length of the surface, measured along the Y axis. The surface along the Y axis would be to the left and right of you, if you were standing at the front of the machine.</li>
+<li><strong>Length of X Corner Surface</strong> - The approximate length of the surface, measured along the X-axis. The surface along the X-axis would be facing directly towards or away from you if you were standing at the front of the machine.</li>
+<li><strong>Length of Y Corner Surface</strong> - The approximate length of the surface, measured along the Y-axis. The surface along the Y-axis would be to the left and right of you if you were standing at the front of the machine.</li>
 </ul>
 <p>For both modes, you will be asked to enter the following information:</p>
 <ul>
-<li><strong>Clearance</strong> - The distance inwards from the corner and outside of each surface that will be used to calculate our starting points to probe. For example, when probing near the front left corner on the X axis, our starting point would be the approximate location of the corner in X and Y (based on the operator-chosen approximate starting-point above the corner) plus the clearance distance in Y, and minus the clearance distance in X (i.e. outside the surface and inwards from the expected corner position).</li>
-<li><strong>Overtravel</strong> - The distance 'past' each expected surface to set the probe target location, which accounts for any inaccuracy in the operator-chosen centre-point of the block, or rotation of the block itself.</li>
+<li><strong>Clearance</strong> - The distance inwards from the corner and outside of each surface that will be used to calculate our starting points to probe. For example, when probing near the front left corner on the X-Axis, our starting point would be the approximate location of the corner in X and Y (based on the operator-chosen approximate starting point above the corner) plus the clearance distance in Y, and minus the clearance distance in X (i.e. outside the surface and inwards from the expected corner position).</li>
+<li><strong>Overtravel</strong> - The distance 'past' each expected surface to set the probe-target location, which accounts for any inaccuracy in the operator-chosen centre-point of the block, or rotation of the block itself.</li>
 <li><strong>Approximate Starting Point</strong> - You will be prompted to jog the probe or datum tool over the corner.</li>
 <li><strong>Corner to Probe</strong> - The corner that the probe is currently over, allowing us to calculate the correct directions to move in.</li>
 <li><strong>Probe Depth</strong> - The depth from the operator-chosen starting point to descend to, before probing the surfaces that form the corner.</li>
 </ul>
 <p>After probing both surfaces, the probe will be moved back up to the starting Z height and then over the corner.</p>
-<p>Outside corner sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X and Y axes to the corner of a rectangular work-piece. It is already used by the vise-corner probe cycle, so should only be used in isolation when you need to zero the Z axis somewhere other than the top surface of the work-piece.</p>
+<p>Outside Corner sets a <abbr title="Work Co-ordinate System">WCS</abbr> origin in X and Y axes to the corner of a rectangular workpiece. It is already used by the vise-corner probe cycle, so it should only be used in isolation when you need to zero the Z-Axis somewhere other than the top surface of the workpiece.</p>
 <!-- This is essentially a copy-paste from Vise Corner with the Z probe removed -->
 <pre class="mermaid"><code>flowchart TB
     2(Move outside X surface)
@@ -1808,7 +1799,7 @@
     14(Move above corner X,Y)
     2 --&gt; 3 --&gt; A2 --&gt; 8 --&gt; A3 --&gt; 13 --&gt; 14</code></pre>
 <h3 id="single-surface">Single Surface</h3>
-<p>Single surface can either be used 3 times to probe X, Y and Z axes individually as single points, or to "top up" with a Z probe after using one of the X,Y probe cycles above.</p>
+<p>Single Surface can either be used 3 times to probe the X, Y, and Z axes individually as single points, or to "top up" with a Z probe after using one of the XY probe cycles above.</p>
 <pre class="mermaid"><code>flowchart TB
     1(Move outside or above surface)
     2{Z Probe?}
@@ -1819,18 +1810,18 @@
     2 --&gt;|No| 3 --&gt; 4</code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Single surface only probes at a single location. This means it is not possible to estimate the angle of a surface, for example to check if a work-piece is rotated and not aligned with the X or Y axis. It should only be used against surfaces that are known-flat, or surfaces that are <em>going to be made flat</em> (in respect to the mounting of the work-piece against the table).</p>
+<p>Single Surface only probes at a single location. This means it is not possible to estimate the angle of a surface, for example, to check if a workpiece is rotated and not aligned with the X or Y-Axis. It should only be used against known flat surfaces or surfaces that are <em>going to be made flat</em> (with respect to the mounting of the workpiece against the table).</p>
 </div>
 <h2 id="tool-changes">Tool Changes</h2>
-<p>As with probing, you will have already experienced a guided tool-change using MillenniumOS when running through the Configuration Wizard. The post-processors supplied with MillenniumOS use the <code>M4000</code> command to pass details about the tools required to run a job.</p>
+<p>As with probing, you will have already experienced a guided tool change using MillenniumOS when running through the Configuration Wizard. The post-processors supplied with MillenniumOS use the <code>M4000</code> command to pass details about the tools required to run a job.</p>
 <p>This means that your CAD/CAM program becomes the single source of truth for your tool list, and it can vary based on the job being run.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The Datum tool and optional Touch Probe you would have chosen during the Configuration Wizard are created and managed by MillenniumOS on each boot. This is important because we need to track the radius and deflection of the Touch Probe or Datum tool for accurate probing results.</p>
-<p>These probe tools exist as a single entry in the tool table, depending on if the Touch Probe feature is enabled or not. Please do <em>not</em> delete this probe tool, or overwrite its index with another tool.</p>
+<p>These probe tools exist as a single entry in the tool table, depending on whether the Touch Probe feature is enabled. Please do <em>not</em> delete this probe tool, or overwrite its index with another tool.</p>
 <p>Probe tools should always exist in the last index of the <abbr title="RepRapFirmware">RRF</abbr> tool table which is usually ID 49.</p>
 </div>
-<p>At the start of every gcode file, the used tools will be outputted.</p>
+<p>At the start of every gcode file, the tools used will be outputted.</p>
 <p>When <abbr title="RepRapFirmware">RRF</abbr> sees a tool change request (<code>T&lt;N&gt;</code>, where <code>&lt;N&gt;</code> is the tool number), it will trigger the inbuilt <abbr title="RepRapFirmware">RRF</abbr> tool-change process which calls our custom implementations of <code>tfree.g</code>, <code>tpre.g</code> and <code>tpost.g</code>.</p>
 <pre class="mermaid"><code>flowchart TB
     1{Tool currently active?}
@@ -1895,11 +1886,11 @@
     T3 --&gt; 20</code></pre>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Any errors that occur during the tool change will abort the entire job that the tool change ran in. This is important, because a failed tool change leaves the machine in an inconsistent state and further machining could cause damage to your tool, work-piece, yourself or your machine.</p>
-<p>Machining is not like 3D printing in one very important aspect - stopping a job does not automatically make your work-piece unrecoverable. It is better to abort for safety purposes and allow you, the operator, to re-run the job or tool change again.</p>
+<p>Any errors that occur during the tool change will abort the entire job that the tool change ran in. This is important because a failed tool change leaves the machine in an inconsistent state and further machining could cause damage to your tool, workpiece, machine, or <strong>yourself</strong>!</p>
+<p>Machining is unlike 3D printing in one crucial aspect - stopping a job does not automatically make your workpiece unrecoverable. It is better to abort for safety purposes and allow you, the operator, to re-run the job or tool change again.</p>
 </div>
 <h3 id="radius-offset-probing">Radius Offset Probing</h3>
-<p>With tools that have a radius smaller than the toolsetter surface, probing the length of the tool is simple - the tool is centered over the toolsetter surface and driven down until the switch activates. The surface will always be activated by the lowest point on the tool, returning an accurate reading.</p>
+<p>For tools with a radius smaller than the toolsetter surface, probing the length of the tool is simple - the tool is centered over the toolsetter surface and driven down until the switch activates. The surface will always be activated by the lowest point on the tool, returning an accurate reading.</p>
 <p>However - if you're trying to probe a tool that is larger than the toolsetter radius (for example an indexed face-mill), then this can be problematic as there are lots of tools where the center of the tool is <em>not</em> the lowest point (in some cases by over 5mm!).</p>
 <p>When switching to a tool whose radius is greater than the radius of the toolsetter surface, MillenniumOS will perform radius offset probing rather than a simple probe.</p>
 <p>Initially, it will probe the center of the tool once, to find a high point. It will then lift the tool by the dive height set on the toolsetter in <abbr title="RepRapFirmware">RRF</abbr> (<code>M558 H...</code>), and move the tool outwards from the center of the toolsetter by the radius of the tool.</p>
@@ -1908,13 +1899,13 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>As you might have worked out above, your <a href="https://docs.duet3d.com/User_manual/Reference/Gcodes#m558-set-z-probe-type">configured probe dive height</a> is important - if the recess in the center of your tool is more than the dive height from the lowest point, then the tool will not be raised far enough once the center has been probed and may impact your toolsetter. You should check this distance on the tools you use and make sure the dive height on your toolsetter is set high enough to lift the tool over the toolsetter when raising from the center of the tool.</p>
-<p>In <abbr title="RepRapFirmware">RRF</abbr> configs supplied by the Millennium Machines team, this configuration will be in the <code>toolsetter.g</code> file and will need to be hand-edited from Duet Web Control.</p>
+<p>In <abbr title="RepRapFirmware">RRF</abbr> configs supplied by the Millennium Machines team, this configuration will be in the <code>toolsetter.g</code> file and must be hand-edited from Duet Web Control.</p>
 </div>
 <h2 id="variable-spindle-speed-control">Variable Spindle Speed Control</h2>
-<p>This feature is enabled by default, and will adjust the spindle speed up and down within a small range to avoid resonance building up between the work-piece and tool. Disabling this is likely to have a negative impact on machining quality, but the settings can be tweaked through the post-processor properties and it can also be turned on and off and configured for each operation when using the Fusion360 post-processor.</p>
-<p>When <abbr title="Variable Spindle Speed Control">VSSC</abbr> is active, you may be able to hear the spindle speeding up and slowing down on a regular interval. This is intended.</p>
+<p>This feature is enabled by default and will adjust the spindle speed up and down within a small range to avoid resonance building up between the workpiece and tool. Disabling this is likely to hurt machining quality, however, the settings can be tweaked through the post-processor properties and it can also be turned on and off and configured for each operation when using the Fusion360 post-processor.</p>
+<p>When <abbr title="Variable Spindle Speed Control">VSSC</abbr> is active, you may hear the spindle speeding up and slowing down at regular intervals. This is intended.</p>
 <p><abbr title="Variable Spindle Speed Control">VSSC</abbr> has a <code>Period</code> (<code>P...</code>) and a <code>Variance</code> (<code>V...</code>) - the spindle speed is adjusted around the target RPM in a wave, where the peak of the wave is half the Variance above the target RPM and the trough of the wave is half the Variance below the target RPM.</p>
-<p>The Period is the length of one full wavelength, or in other words, a change in speed from the target RPM up to the peak RPM, down to the trough RPM and back to the target RPM will take <code>P...</code> milliseconds.</p>
+<p>The Period is the length of one full wavelength, or in other words, a change in speed from the target RPM up to the peak RPM, down to the trough RPM, and back to the target RPM will take <code>P...</code> milliseconds.</p>
 
 
 

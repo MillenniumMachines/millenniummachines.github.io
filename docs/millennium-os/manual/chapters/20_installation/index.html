@@ -1462,14 +1462,14 @@
 <h2 id="rrf-installation"><abbr title="RepRapFirmware">RRF</abbr> Installation</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you installed one of our <a href="https://github.com/MillenniumMachines/RRF-Configs/releases"><abbr title="RepRapFirmware">RRF</abbr> Configurations</a> that contains MillenniumOS, then you may not need to follow everything in this guide. If you start <abbr title="RepRapFirmware">RRF</abbr> and a MillenniumOS configuration wizard appears, then MillenniumOS is already installed and just needs to be <a href="#configuration">configured</a>!.</p>
+<p>If you installed one of our <a href="https://github.com/MillenniumMachines/RRF-Configs/releases"><abbr title="RepRapFirmware">RRF</abbr> Configurations</a> that contains MillenniumOS, then you may not need to follow everything in this guide. If you start <abbr title="RepRapFirmware">RRF</abbr> and a MillenniumOS configuration wizard appears, then MillenniumOS is already installed. It just needs to be <a href="#configuration">configured</a>!</p>
 </div>
 <h3 id="download-millenniumos-release">Download MillenniumOS Release</h3>
-<p>MillenniumOS releases can be found on the <a href="https://github.com/MillenniumMachines/MillenniumOS/releases">MillenniumOS Releases</a> page. Select the <code>mos-release-vX.X.X...zip</code> file to download the latest release.</p>
+<p>MillenniumOS releases are found on the <a href="https://github.com/MillenniumMachines/MillenniumOS/releases">MillenniumOS Releases</a> page. Select the <code>mos-release-vX.X.X...zip</code> file to download the latest release.</p>
 <p><img alt="Image showing example MillenniumOS release" class="shadow-dark" src="../../img/mos_install_step_0.png" /></p>
 <hr />
 <h3 id="upload-millenniumos-files-to-reprapfirmware">Upload MillenniumOS files to RepRapFirmware</h3>
-<p>Once the Zip file has been downloaded, you can simply upload it to <abbr title="Duet Web Control">DWC</abbr> using the <strong>"Files -&gt; System"</strong> tab. Click <strong>"Upload System Files"</strong> (at the top right of the list of files), select the Zip file you downloaded previously (<code>mos-release-vX.X.X...zip</code>) and click OK.</p>
+<p>Once the Zip file has been downloaded, simply upload it to <abbr title="Duet Web Control">DWC</abbr> using the <strong>"Files -&gt; System"</strong> tab. Click <strong>"Upload System Files"</strong> (at the top right of the list of files), select the Zip file you downloaded previously (<code>mos-release-vX.X.X...zip</code>) and click OK.</p>
 <p><img alt="File selection process for uploading to DWC" class="shadow-dark" src="../../img/mos_install_step_1.png" /></p>
 <hr />
 <p>Each of the files from the Zip will be uploaded individually. You can see the list of files being uploaded and there will be a notification when the whole Zip file has been uploaded. Once the upload is complete, click <strong>"Close"</strong>.</p>
@@ -1481,7 +1481,7 @@
 <p>If you are using a supported <a href="#rrf-installation"><abbr title="RepRapFirmware">RRF</abbr> Configuration</a> then you can skip to <a href="#configuration">Configuration</a> as MillenniumOS will be loaded automatically. All you have to do is reboot after uploading the Zip file.</p>
 </div>
 <p>MillenniumOS needs to be loaded on every bootup of your mainboard.</p>
-<p>To achieve this, we need to add or uncomment a configuration line in your <code>config.g</code> file. Navigate to the <strong>"Files -&gt; System"</strong> tab, and click on the <code>config.g</code> file to edit it.</p>
+<p>To achieve this, we must add or uncomment a configuration line in your <code>config.g</code> file. Navigate to the <strong>"Files -&gt; System"</strong> tab, and click on the <code>config.g</code> file to edit it.</p>
 <p>Scroll to the bottom, and make sure that the last line in the file looks exactly like this:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">M98 </span>P&quot;mos.g&quot;
 </code></pre></div>
@@ -1498,13 +1498,13 @@ MillenniumOS will not load properly until the machine is restarted.</p>
 <p><img alt="Start of MillenniumOS Configuration Wizard" class="shadow-dark" src="../../img/mos_install_step_4.png" /></p>
 <hr />
 <h4 id="configuration-wizard">Configuration Wizard</h4>
-<p>When prompted to provide information or perform an action, please read the information <em>carefully</em> - the configuration wizard will trigger movement of the machine where necessary, but you will <em>always</em> be warned before this happens.</p>
-<p>If you cancel the wizard, or receive an error, you can re-run the wizard using <code>G8000</code>. Once the wizard is complete your machine will reboot to reload the new settings, at which point MillenniumOS is ready for use.</p>
+<p>When prompted to provide information or perform an action, please read the information <em>carefully</em> - the configuration wizard will trigger machine movement where necessary, however, you will <em>always</em> be warned before this happens.</p>
+<p>If you cancel the wizard or receive an error, you can re-run the wizard using <code>G8000</code>. Once the wizard is complete your machine will reboot to reload the new settings, at which point MillenniumOS is ready for use.</p>
 <div class="admonition note">
 <p class="admonition-title">Resuming the Wizard</p>
-<p>MillenniumOS now supports resuming the wizard if it was not completed. Settings are saved to an intermediate file which is loaded when the wizard is started, and you will be prompted to continue where you left off, or restart.</p>
+<p>MillenniumOS now supports resuming the wizard if it is not completed. Settings are saved to an intermediate file and loaded when the wizard is started. You will be prompted to continue where you left off or restart.</p>
 </div>
-<p>If you experience any connection issues during the wizard, you can usually reload your browser tab to trigger the next dialog.</p>
+<p>If you experience connection issues during the wizard, you can typically reload your browser tab to trigger the next dialog.</p>
 <div class="admonition tip">
 <p class="admonition-title">Datum Tools</p>
 <p>You will be asked to select a Datum Tool during the wizard process, which is used to take various manual measurements.</p>
@@ -1514,37 +1514,37 @@ MillenniumOS will not load properly until the machine is restarted.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you experience any connection issues during the wizard, you can usually reload your browser tab to trigger the next dialog.</p>
+<p>If you experience connection issues during the wizard, you can typically reload your browser tab to trigger the next dialog.</p>
 </div>
-<p>You may re-run the wizard at any time to reconfigure one or more features. If you click the <strong>"Update"</strong> button when asked if you want to reset the configuration, then you can pick which sections of the configuration you would like to reconfigure, and all other sections of the existing configuration will be left as-is.</p>
+<p>You may re-run the wizard anytime to reconfigure one or more features. If you click the <strong>"Update"</strong> button when asked if you want to reset the configuration, you can pick which parts of the configuration you would like to reconfigure. All other parts of the existing configuration will be left as-is.</p>
 <div class="admonition tip">
 <p class="admonition-title">Touch Probe Deflection</p>
 <p>If you're using the standard Aliexpress "3D Edge Finder" probes that cost under $100 then it is relatively normal to record a deflection of around 0.2-0.4mm in either axis, even if your backlash is minimised and your machine is properly trammed.</p>
-<p>The deflection on these probes tends to be pretty consistent so the compensation will usually make these accurate enough for our purposes, but you can re-run the Touch Probe configuration via the Configuration Wizard if you would like to re-calculate the values after making changes to your machine.</p>
+<p>The deflection on these probes tends to be pretty consistent so the compensation will usually make these accurate enough for our purposes. That said, you can re-run the Touch Probe configuration via the Configuration Wizard if you would like to re-calculate the values after making changes to your machine.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Manual Measurements</p>
-<p>Even if you have a Touch Probe and a Toolsetter, the Wizard will ask you to take some manual measurements using a Datum tool. This is necessary to enable tool offset compensation when using the Toolsetter and the Touch Probe together.</p>
-<p>In short - we cannot probe the length of the Touch Probe with the Toolsetter (or the other way round for that matter), because the Touch Probe and Toolsetter require different activation pressures - one will always activate before the other, and this will never be accurate enough to correctly offset different length tools.</p>
-<p>The manual measurement calculates a distance between a surface we <em>can</em> probe (using the Touch Probe at the start of every job) and the activation point of the Toolsetter, using a tool whose length does not change between the measurements.</p>
-<p>This gives us a relative distance which can be used to calculate the expected activation point of the Toolsetter - when changing tools, the tool <em>offset</em> is the difference between the expected activation point and the actual point the Toolsetter was activated at.</p>
+<p>Even if you have a Touch Probe and a Toolsetter, the Wizard will ask you to take a few manual measurements using a Datum tool. This is necessary to enable tool offset compensation when using the Toolsetter and the Touch Probe together.</p>
+<p>In short - we cannot probe the length of the Touch Probe with the Toolsetter (or the other way round, for that matter) because the Touch Probe and Toolsetter require different activation pressures - one will activate before the other, and this will never be accurate enough to measure different tool lengths and offsets.</p>
+<p>The manual measurement calculates the distance between a surface we <em>can</em> probe (using the Touch Probe at the start of every job) and the activation point of the Toolsetter, using a tool whose length does not change between the measurements.</p>
+<p>This gives us a relative distance that can be used to calculate the expected activation point of the Toolsetter when changing tools, the tool <em>offset</em> is the difference between the expected activation point and the actual point the Toolsetter was activated at.</p>
 <p>If you'd like to understand more of how this works, the macro files themselves are quite well commented and easy to read - look at <code>G8000</code>, <code>G37</code>, <code>tpre.g</code> and <code>tpost.g</code>.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you receive any syntax errors or other errors during the configuration process, please report these on the <a href="https://github.com/MillenniumMachines/MillenniumOS">MillenniumOS</a> repository as an issue or ask for assistance on our Discord.</p>
+<p>If you receive any syntax or other errors during the configuration process, please report these on the <a href="https://github.com/MillenniumMachines/MillenniumOS">MillenniumOS</a> repository as an issue or ask for assistance on our Discord.</p>
 </div>
 <hr />
 <h4 id="user-variables">User Variables</h4>
-<p>When the configuration wizard is complete, it writes the settings to the <code>mos-user-vars.g</code> file. This file can be edited by hand but remember, it will be overwritten the next time the configuration wizard is run, so your settings will be lost if you choose to <code>Reset</code> these during the wizard.</p>
-<p>If you are comfortable editing the configuration file by hand then this can be used for small changes, but you must remember to reload MillenniumOS after editing (use the <code>Misc/Reload</code> macro or run <code>M9999</code>).</p>
+<p>When the configuration wizard completes, it writes the settings to the <code>mos-user-vars.g</code> file. This file can be edited by hand but remember, it will be overwritten the next time the configuration wizard is run, so your settings will be lost if you choose to <code>Reset</code> these during the wizard.</p>
+<p>If you are comfortable editing the configuration file by hand then this can be used for small changes, however, you must remember to reload MillenniumOS after editing (use the <code>Misc/Reload</code> macro or run <code>M9999</code>).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Editing the <code>mos-user-vars.g</code> file directly is unsupported as it is easy to trigger a syntax error. Only use this method if you are familiar with the <abbr title="RepRapFirmware">RRF</abbr> meta gcode language and are able to debug syntax issues yourself.</p>
+<p>Editing the <code>mos-user-vars.g</code> file directly is unsupported as it is easy to trigger a syntax error. Only use this method if you are familiar with the <abbr title="RepRapFirmware">RRF</abbr> meta gcode language and can debug syntax issues yourself.</p>
 </div>
 <hr />
 <h2 id="post-processor-installation">Post-Processor Installation</h2>
-<p>After configuring MillenniumOS, the final step is to install the correct post-processor for your CAD/CAM software, so it can produce the right gcode for MillenniumOS.</p>
+<p>After configuring MillenniumOS, the final step is to install the correct post-processor for your CAD/CAM software to enable the software to produce the right gcode for MillenniumOS.</p>
 <p>Fusion360 is supported with a <code>.cps</code> post-processor. This may work in other Autodesk products but usage outside of Fusion360 is completely untested and out of scope for this documentation.</p>
 <p>FreeCAD is supported with a <code>.py</code> post-processor.</p>
 <h3 id="fusion360">Fusion360</h3>
@@ -1554,7 +1554,7 @@ MillenniumOS will not load properly until the machine is restarted.</p>
 <hr />
 <h4 id="download-the-machine-definition">Download the Machine Definition</h4>
 <p>You should also download the Fusion360 machine definition as this allows you to configure the post-processor on a per-operation basis for certain settings. These are released alongside the post-processor and <abbr title="RepRapFirmware">RRF</abbr> Zip file.</p>
-<p>You will need to download the file that matches your machine specification - currently these are generated for the following specifications:</p>
+<p>You will need to download the file that matches your machine's specification - currently, these are generated for the following specifications:</p>
 <ul>
 <li>Standard: <code>milo-v1.5-std-v...mch</code><ul>
 <li>X=0 to 335mm</li>
@@ -1586,7 +1586,7 @@ MillenniumOS will not load properly until the machine is restarted.</p>
 <p>Select the <code>millennium-os-...-f360.cps</code> file from your filesystem and click "Open" in the bottom right of the window.</p>
 <p><img alt="Select the CPS file on your filesystem" class="shadow" src="../../img/mos_install_step_9.png" /></p>
 <hr />
-<p>Make sure the newly created "MillenniumOS" post entry is selected in the Post Library and click Select in the bottom right of the window.</p>
+<p>Ensure the newly created "MillenniumOS" post entry is selected in the Post Library and click Select in the bottom right of the window.</p>
 <p><img alt="Select the post-processor entry in the Post Library in F360" class="shadow" src="../../img/mos_install_step_10.png" /></p>
 <hr />
 <p>You may now click "OK" on the "NC Program" window to return to the main view.</p>
@@ -1601,7 +1601,7 @@ MillenniumOS will not load properly until the machine is restarted.</p>
 <p>Click on the <strong>"Import"</strong> button to open the machine definition selection dialog:</p>
 <p><img alt="Import a machine" class="shadow" src="../../img/mos_install_step_13.png" /></p>
 <hr />
-<p>Click <strong>"Select from my computer"</strong> in the bottom left hand corner of the selection window, and then pick the <code>.mch</code> file you downloaded previously.</p>
+<p>Click <strong>"Select from my computer"</strong> in the bottom left-hand corner of the selection window, and then pick the <code>.mch</code> file you downloaded previously.</p>
 <p><img alt="Select from my computer" class="shadow" src="../../img/mos_install_step_14.png" /></p>
 <hr />
 <div class="admonition note">
@@ -1621,7 +1621,7 @@ MillenniumOS will not load properly until the machine is restarted.</p>
 <hr />
 <h4 id="install-the-post-processor">Install the Post-Processor</h4>
 <p>You will need to copy this file into your FreeCAD Macro directory.</p>
-<p>You can find this directory by going to <strong>Macro -&gt; Macros</strong> from the menu bar, and looking at the <em>User macros location</em> in the bottom corner of the window.</p>
+<p>You can find this directory by going to <strong>Macro -&gt; Macros</strong> from the menu bar and looking at the <em>User macros location</em> in the bottom corner of the window.</p>
 <p>Once the file is placed there, it will be selectable as the Processor under every <em>Job</em> instance from the <em>Path</em> workbench.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1629,8 +1629,8 @@ MillenniumOS will not load properly until the machine is restarted.</p>
 <p>You should consider switching to the Realthunder branch of FreeCAD if you haven't already - it is more stable with complex designs thanks to attempting to fix the <a href="https://github.com/realthunder/FreeCAD_assembly3/wiki/Topological-Naming">Topological Naming Problem</a>.</p>
 </div>
 <hr />
-<p>You're now ready to add some toolpaths and then run the post to generate MillenniumOS flavoured output gcode. These steps are not MillenniumOS specific, and are therefore outside of the scope of this documentation.</p>
-<p>If you would like to understand how MillenniumOS works in practice and how best to use it, please proceed to the next chapter.</p>
+<p>You're finally ready to add some toolpaths and then run the post to generate MillenniumOS-flavoured output gcode. These steps are not MillenniumOS specific and are therefore outside of the scope of this documentation.</p>
+<p>If you want to understand how MillenniumOS works and how best to use it, please proceed to the next chapter.</p>
 <p><a href="../30_usage/">Next Chapter: Using MillenniumOS</a></p>
 
 
