@@ -4,7 +4,7 @@
 
 ![Button head cap bolt wireframe](../img/hardware/bhcs.png){: .shadow}
 
-Metric fastener with a dome shaped head and hex drive. Most commonly found in locations where a fastener makes contact directly with a printed part.
+Metric fastener with a dome-shaped head and hex drive. Most commonly found in locations where a fastener makes direct contact with a printed part.
 
 ISO 7380-1
 
@@ -14,7 +14,7 @@ ISO 7380-1
 
 ![Flat head countersunk bolt wireframe](../img/hardware/fhcs.png){: .shadow}
 
-Metric fastener with a flat head and hex drive, designed to sit flush inside a countersunk hole. Most commonly found in locations where a fastener makes contact directly with a printed part.
+Metric fastener with a flat head and hex drive, designed to sit flush inside a countersunk hole. Most commonly found in locations where a fastener makes direct contact with a printed part.
 
 ISO 10642
 
@@ -52,7 +52,7 @@ A PC standard fan mounting screw. Exclusively used to hold the system cooling fa
 
 ![Heat-set Insert wireframe](../img/hardware/heat_insert.png){: .shadow}
 
-Heat-set inserts with a soldering tip so that they melt the plastic when installed. As the plastic cools, it solidifies around the knurls and ridges on the insert for excellent resistance to both torque and pull-out.
+Used to provide durable threads into plastic parts. To install, press the insert with a heated soldering tip until the heat-set insert is flush with the surface. As the plastic cools, it solidifies around the knurls and ridges on the insert for excellent resistance to torque and pull-out.
 
 ---
 
@@ -60,7 +60,7 @@ Heat-set inserts with a soldering tip so that they melt the plastic when install
 
 ![F608ZZ bearing wireframe](../img/hardware/f608.png){: .shadow}
 
-A ball bearing with a flange used to hold lead-screws in place.
+A ball bearing with a flange is used to hold lead screws in place.
 
 ---
 
@@ -68,7 +68,7 @@ A ball bearing with a flange used to hold lead-screws in place.
 
 ![608ZZ bearing wireframe](../img/hardware/608.png){: .shadow}
 
-A ball bearing used to hold lead-screws in place.
+A ball bearing is used to hold lead screws in place.
 
 ---
 
@@ -76,7 +76,7 @@ A ball bearing used to hold lead-screws in place.
 
 ![Locking collar wireframe](../img/hardware/collar.png){: .shadow}
 
-Steel or aluminium loops with a grub-screw in the side used to limit the free travel of a lead-screw.
+Steel or aluminium loops with a grub screw in the side are used to limit the free travel of a lead screw.
 
 ---
 
@@ -84,7 +84,7 @@ Steel or aluminium loops with a grub-screw in the side used to limit the free tr
 
 ![Self Tapping screw wireframe](../img/hardware/self_tapping_screw.png){: .shadow}
 
-Fastener with a pronounced thread profile that is bolted directly into plastic.
+Fastener with a pronounced thread profile that is bolted directly into the plastic.
 
 ---
 
@@ -92,7 +92,7 @@ Fastener with a pronounced thread profile that is bolted directly into plastic.
 
 ![Washer wireframe](../img/hardware/washer.png){: .shadow}
 
-Usually stamped from sheet metal, this type of spacer distributes load over a larger area. Only used in M5 size.
+Usually stamped from sheet metal, this spacer distributes the load over a larger area. Only used in M5 size.
 
 ---
 
@@ -100,7 +100,7 @@ Usually stamped from sheet metal, this type of spacer distributes load over a la
 
 ![Set Screw wireframe](../img/hardware/grub_screw.png){: .shadow}
 
-Small, headless fastener with an internal drive. Used in pulleys and other gears. Also called a grub-screw.
+Small, headless fastener with an internal drive. Used in pulleys and other gears. Also commonly known as a grub-screw.
 
 ISO 4026
 
@@ -110,7 +110,7 @@ ISO 4026
 
 ![Spring T-nut wireframe](../img/hardware/spring_nut.png){: .shadow}
 
-Nut that can be inserted into the slot of an aluminium profile. Used in both M3 and M5 variants throughout this guide.
+A nut that can be inserted into the slot of an aluminium profile. Used in both M3 and M5 variants throughout this guide.
 
 ---
 
@@ -126,7 +126,7 @@ Attached to the Z-Axis motor.
 
 ![40-tooth GT2 pulley wireframe](../img/hardware/40_tooth.png){: .shadow}
 
-Used to drive the Z-Axis lead-screw from the 20-tooth pulley above.
+Used to drive the Z-Axis lead screw from the 20-tooth pulley above.
 
 ---
 
@@ -134,7 +134,7 @@ Used to drive the Z-Axis lead-screw from the 20-tooth pulley above.
 
 ![iBrass Lead-screw Nut](../img/hardware/brass_leadscrew_nut.png){: .shadow}
 
-Used to translate rotational motion of a lead-screw into linear motion of an axis.
+Used to translate the rotational motion of a lead screw into linear motion of an axis.
 
 ---
 

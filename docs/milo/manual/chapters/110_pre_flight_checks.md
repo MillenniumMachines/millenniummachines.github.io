@@ -4,33 +4,34 @@
 
 Axes movements are based on relative spindle movements and not the movement of the work table.
 
-This may be confusing to new users, but to simplify the setup process we've created a diagram based on the
-table movement instead. Use this as a reference to setup your axes direction in your `config.g` file.
+This will likely be confusing for new users, but to simplify the setup process we've created a diagram based on the
+table movement instead. Use this as a reference to set up your axes direction in your `config.g` file.
 
-For your Z axis the spindle should move up for Z+ and down for Z-.
+For your Z-Axis the spindle should move up for Z+ and down for Z-.
 
 ![Axis direction diagram](../img/pre_flight_checks/pre_flight_checks_step_0.png){: .shadow}
+
+<!-- This diagram is plainly wrong given the above context. -->
 
 ---
 
 ## Endstop Query
 
-Ensure that all your endstops are working correctly. To do this, press each endstop individually and enter
-`M119` in the Duet web control console while holding the endstop closed. If it does not return as triggered,
+Ensure that all your endstops are working correctly. To do this, hold each endstop individually and enter
+`M119` in the Duet web control console. If it does not return as triggered,
 then check your wiring and or your endstop setup in config.g.
 
 ---
 
 ## Homing Check
 
-Ensure that all you homing routines in `homeall.g`, `homex.g`, `homey.g` and `homez.g` work appropriately. You should make sure your `Z` routine works first by running `G28 Z` from the console or clicking the 'Home Z' button in Duet Web Control. Once `Z` homes correctly, you can test `X` and `Y`, and then finally use the 'Home All' button or simply `G28` in the console.
+Ensure all your homing routines in `homeall.g`, `homex.g`, `homey.g` and `homez.g` work appropriately. You should ensure your `Z` routine works first by running `G28 Z` from the console or clicking the 'Home Z' button in Duet Web Control. Once `Z` homes correctly, you can test `X` and `Y`, and finally use the 'Home All' button or simply `G28` in the console.
 
 ---
 
 ## Steps-per-mm Calibration
 
-You must ensure that when you move your axes X amount of millimeters it actually moves X amount of
-millimeters.
+You must ensure that when you move your axes X amount of millimeters it moves X amount of millimeters exactly.
 
 If you do not know how to do this you can follow this [guide](https://teachingtechyt.github.io/calibration.html#xyzsteps).
 
@@ -48,7 +49,7 @@ If you are not happy with the amount of backlash then you can snug up the Anti-b
 
 Make sure you tram your spindle appropriately to your work table.
 
-If you are using a fixture of some kind, tram your spindle with reference to that instead.
+If you are using a fixture, tram your spindle to that instead.
 
 ---
 
@@ -57,13 +58,13 @@ If you are using a fixture of some kind, tram your spindle with reference to tha
 First, ensure your VFD is set up correctly according to its manual.
 
 !!! tip
-    If you want to test your spindle make sure you have removed the collet and collet nut or fitted a suitable tool / dowel pin and torqued the nut. 
+    If you want to test your spindle, ensure you have removed the collet and collet nut or that you have fitted a suitable tool or dowel pin and torqued the nut. 
 
-Then make sure to set your max spindle speed in `config.g`. Under the spindle section of your config find
+Then ensure to set your max spindle speed in `config.g`. Under the spindle section of your config find
 the line beginning with `M950` and change the value found after `L` to your maximum spindle speed e.g. `L24000`.
 
 !!! note
-    If you are using one of our predefined RRF configurations for a particular hardware specification (e.g. the LDO kit), then this will have already been done for you. You simply need to make sure that enabling the spindle in Duet Web Control and changing the RPM setting does in fact start and stop the spindle, as well as changing the RPM effectively.
+    If you are using one of our predefined RRF configurations for a particular hardware specification (such as the LDO kit), this has been done for you already. You only need to ensure that enabling the spindle in Duet Web Control and changing the RPM setting starts and stops the spindle and controls the RPM effectively.
 
 ---
 
@@ -76,5 +77,5 @@ A good quality lithium grease (e.g. EP2) is recommended for this job.
 ---
 
 !!! success ":fontawesome-solid-champagne-glasses: Congratulations!"
-    With all of your pre-flight checks completed, you're ready to use your machine.
+    With your pre-flight checks completed, you are now ready to use your machine.
     Record a video of your first cut and submit it on our [Discord](https://discord.gg/ya4UUj7ax2) to receive your serial number!
