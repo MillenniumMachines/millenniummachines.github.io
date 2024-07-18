@@ -48,7 +48,7 @@ The outer frame assembly uses 8 different extrusions labeled A - H. Some extrusi
 
 ---
 
-The 2040 extrusions used here form the backbone of Casa. In this step connect to to only a single side. The other half of the enclosure will connect to the other side.
+The 2040 extrusions used here form the backbone of Casa. In this step, connect only a single side. The other half of the enclosure will connect to the other side.
 
 !!! info annotate "Components Required"
     ```
