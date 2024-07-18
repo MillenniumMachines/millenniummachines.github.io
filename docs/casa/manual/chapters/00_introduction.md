@@ -40,7 +40,7 @@ Remember, these settings are only a guideline, and are open to your own interpre
 
 ## T-Nuts Application
 
-This machine makes use of T-nuts and blind joints. In the interest of simplifying this manual, we have chosen to omit the installation of T-nuts and button head bolts. Wherever a part interfaces with an extrusion in a way that looks like it requires a T-nut or a bolt for a blind joint, then it should be considered a part that requires a T-nut / bolt.
+This enclosure makes use of T-nuts and blind joints. In the interest of simplifying this manual, we have chosen to omit the installation of T-nuts and button head bolts. Wherever a part interfaces with an extrusion in a way that looks like it requires a T-nut or a bolt for a blind joint, then it should be considered a part that requires a T-nut / bolt.
 
 ## Pre-Build Training
 
