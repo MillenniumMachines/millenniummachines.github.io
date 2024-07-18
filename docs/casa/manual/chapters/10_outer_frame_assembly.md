@@ -6,6 +6,9 @@ The outer frame assembly of Casa, designed using 2020 V slot extrusion, is assem
 
 The outer frame assembly uses eight different extrusions labeled A - H. Some extrusions are the same length but feature different cross-drill patterns, so ensure you select the correct extrusion. Extrusions A, C, D, and H are the extrusions that have cross-drilling. If you are self-sourcing, you may find the printable cross-drill guides handy.
 
+!!! tip "Electronics Bay and Door Placement"
+    Casa can be built as shown in these instructions or as a mirror to place the electronics bay on its other side. The door opening side can also be inverted to create a layout that best fits with your space. 
+
 <!-- We really need a way of defining the extrusions here -->
 
 !!! tip "Blind Joints"
