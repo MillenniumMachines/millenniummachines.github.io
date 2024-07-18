@@ -60,7 +60,7 @@ The 2040 extrusions used here form the backbone of Casa. In this step, connect o
 
 ---
 
-Repeat step 1 & 2
+Repeat steps 1 & 2
 !!! info annotate "Components Required"
     ```
         2 x Extrusion A
