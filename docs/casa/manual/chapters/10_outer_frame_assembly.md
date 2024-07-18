@@ -11,7 +11,7 @@ The outer frame assembly uses eight different extrusions labeled A - H. Some ext
 !!! tip "Blind Joints"
     ![](../img/10_blind_joints.jpg)
 
-    The frame of Casa is assembled using blind joints. These are simple and cheap joints that provide excellent strength through metal-to-metal contact. Blind joints require cross drilling the extrusion to allow access to tighten down a button head bolt and also require manual alignment. Make sure that joints are aligned and square when tightening.
+    Casa's frame is assembled using blind joints. These are simple and cheap joints that provide excellent strength through metal-to-metal contact. Blind joints require cross-drilling the extrusion to allow access to tighten down a button head bolt and also require manual alignment. Make sure that joints are aligned and square when tightening.
 
     **All blind joints are secured using an M5 x 10 BHCS screw.** In the interest of simplifying this manual, we have chosen to omit the button head bolts. Wherever a part interfaces with an extrusion in a way that looks like it requires a bolt for a blind joint, then it should be considered a part that requires a bolt.
 
