@@ -2,7 +2,7 @@
 
 ![](../img/10_1.png)
 
-The outer frame assembly of Casa is built from 2020 V slot extrusion in two halves. Each half is joined together by a backbone of 2040 extrusion making the enclosure easy to dissemble for moving. The panels, sliding door, electronics, and basement will attach to this main frame. Throughout this stage remember to check for squareness and adjust accordingly.
+The outer frame assembly of Casa, designed using 2020 V slot extrusion, is assembled in two halves. Each half is joined by a backbone of 2040 extrusion, making the enclosure easy to disassemble for moving. The panels, sliding door, electronics, and basement will attach to this main frame. Throughout this stage, remember to check for squareness and adjust accordingly.
 
 The outer frame assembly uses eight different extrusions labeled A - H. Some extrusions are the same length but feature different cross-drill patterns, so pay attention and select the correct extrusion. Extrusions A, C, D, and H are the extrusions that have cross-drilling. If you are self-sourcing, you may find the printable cross-drill guides handy.
 
