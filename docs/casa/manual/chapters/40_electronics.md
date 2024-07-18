@@ -64,9 +64,12 @@
 
 ---
 
+Make sure to add wether stripping to the panel. 
+
 !!! info annotate "Components Required"
     ```
         1 x Panel 150 x 710
+        Weather Stripping
     ```
 ![](../img/40_PT_s2.png)
 
