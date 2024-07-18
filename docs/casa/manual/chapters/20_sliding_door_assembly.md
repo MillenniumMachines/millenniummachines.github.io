@@ -58,7 +58,7 @@ Repeat previous steps to create a second door panel.
 
 ---
 
-Attach the two door panels together using 2020 hinges. Add a second set of hinges to the right hand edge to be used to attach the door to the machine.
+Attach the two door panels using 2020 hinges. Add a second set of hinges to the right-hand edge to attach the door to the machine.
 !!! info annotate "Components Required"
     ```
         12 x M5 x 10 FHCS
