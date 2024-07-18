@@ -138,7 +138,7 @@ Assemble the two halves together
 ![](../img/10_s11.png)
 
 ---
-Assemble the machine supports to the bottom of the enclosure. Leave the screws loose at this stage to allow repositioning to best fit your machine.
+Assemble the machine supports to the bottom of the enclosure. Leave the screws loose at this stage to allow the supports to reposition, specifically for your machine.
 !!! info annotate "Components Required"
     ```
         4 x M5 x 8 BHCS
