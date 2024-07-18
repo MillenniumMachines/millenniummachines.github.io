@@ -22,7 +22,7 @@ Have fun building your very first Casa!
 
 ## What To Expect
 
-This manual and associated firmware is for the Casa R2 built to the standard BOM. This covers this kit supplied by LDO.
+This manual and associated firmware is for the Casa R2 built to the standard BOM. This also covers the kit supplied by LDO.
 
 <!-- More needed here -->
 
