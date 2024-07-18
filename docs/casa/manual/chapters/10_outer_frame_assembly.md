@@ -13,7 +13,7 @@ The outer frame assembly uses eight different extrusions labeled A - H. Some ext
 
     Casa's frame is assembled using blind joints. These are simple and cheap joints that provide excellent strength through metal-to-metal contact. Blind joints require cross-drilling the extrusion to allow access to tighten down a button head bolt and also require manual alignment. Make sure that joints are aligned and square when tightening.
 
-    **All blind joints are secured using an M5 x 10 BHCS screw.** In the interest of simplifying this manual, we have chosen to omit the button head bolts. Wherever a part interfaces with extrusions in a way that looks like it requires a bolt for a blind joint, then it should be considered a part that requires a bolt.
+    **All blind joints are secured using an M5 x 10 BHCS bolt.** In the interest of simplifying this manual, we have chosen to omit the button head bolts. Wherever a part interfaces with extrusions in a way that looks like it requires a bolt for a blind joint, then it should be considered a part that requires a bolt.
 
 ---
 
@@ -138,7 +138,7 @@ Assemble the two halves together
 ![](../img/10_s11.png)
 
 ---
-Assemble the machine supports to the bottom of the enclosure. Leave the screws loose at this stage to allow the supports to reposition, specifically for your machine.
+Assemble the machine supports to the bottom of the enclosure. Leave the bolts loose at this stage to allow the supports to reposition, specifically for your machine.
 !!! info annotate "Components Required"
     ```
         4 x M5 x 8 BHCS

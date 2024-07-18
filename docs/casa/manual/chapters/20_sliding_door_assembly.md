@@ -32,7 +32,7 @@ Slide the panel into the extrusion grooves. It will fit loosely at this stage.
 
 ---
 
-Affix panel brackets to the door frame using M3 x 10 SHCS screws.
+Affix panel brackets to the door frame using M3 x 10 SHCS bolts.
 !!! info annotate "Components Required"
     ```
         4  x Panel Clip A

@@ -10,7 +10,7 @@ Begin by fitting the static panels to the frame. The panels fit over the extrusi
 
 
 !!! note
-    Each clip is referred to by a letter. The clip's letter is in the STL file name and printed into the part. Make sure to select the correct clip, as many look similar. Always check the letter on the part. Secure with M3 x 10 SHCS screws.
+    Each clip is referred to by a letter. The clip's letter is in the STL file name and printed into the part. Make sure to select the correct clip, as many look similar. Always check the letter on the part. Secure with M3 x 10 SHCS bolts.
 
 !!! info annotate "Clip B"
     ![](../img/30_clip_B.png)
@@ -44,7 +44,7 @@ Begin by fitting the static panels to the frame. The panels fit over the extrusi
 
 ---
 
-Attach the door to the enclosure. To do this, you [pivot](https://imgur.com/pivot-Zei0mk9) the door, on the edge that has the doornuts, into the extrusion track of the door frame. Then, put the door assembly in its "closed" position before attaching the hinges to the frame. Secure the hinge with M5 x 8 FHCS screws.
+Attach the door to the enclosure. To do this, you [pivot](https://imgur.com/pivot-Zei0mk9) the door, on the edge that has the doornuts, into the extrusion track of the door frame. Then, put the door assembly in its "closed" position before attaching the hinges to the frame. Secure the hinge with M5 x 8 FHCS bolts.
 
 ![](../img/30_s2.png)
 
