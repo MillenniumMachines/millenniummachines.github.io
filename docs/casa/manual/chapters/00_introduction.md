@@ -34,7 +34,7 @@ Furthermore, there are options in the guide that are up to you to decide on, suc
 
 ## Parts List and Printing Guidelines
 
-The Millennium Machines team has provided a printing list with settings for you as a guideline for printing the parts necessary for the build. This list can be found [here](../../bom/printing_guide.md.md).
+The Millennium Machines team has provided a printing list with settings for you as a guideline for printing the parts necessary for the build. This list can be found [here](../../bom/printing_guide.md).
 
 Remember, these settings are only a guideline, and are open to your own interpretations - but we do highly recommend following them to achieve the best mechanical properties for each individual part.
 
