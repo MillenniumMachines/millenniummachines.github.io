@@ -10,7 +10,7 @@ Begin by fitting the static panels to the machine. The panels fit over the extru
 
 
 !!! note
-    Each clip is referred to by a letter. That letter is in the STL file name and printed onto the part itself. Make sure to select the correct clip as many look similar. Always check the letter on the part. Secure with M3 x 10 SHCS screws.
+    Each clip is referred to by a letter. The clip's letter is in the STL file name and printed into the part. Make sure to select the correct clip, as many look similar. Always check the letter on the part. Secure with M3 x 10 SHCS screws.
 
 !!! info annotate "Clip B"
     ![](../img/30_clip_B.png)
