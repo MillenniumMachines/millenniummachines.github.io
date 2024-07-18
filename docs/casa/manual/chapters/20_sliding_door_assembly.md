@@ -68,7 +68,7 @@ Attach the two door panels together using 2020 hinges. Add a second set of hinge
 
 ---
 
-Affix the two handles with M5 x 10 BHCS
+Affix the two handles with M5 x 10 BHCS.
 !!! info annotate "Components Required"
     ```
         2 x Door Handles
