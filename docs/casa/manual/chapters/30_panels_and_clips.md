@@ -4,7 +4,7 @@
 
 ---
 
-Begin by fitting the static panels to the machine. The panels fit over the extrusion and are held in place with printed clips. Each panel should have weather stripping applied to all edges.
+Begin by fitting the static panels to the frame. The panels fit over the extrusion and are fixed in place using printed clips. Each panel should have weather stripping applied to all edges.
 
 ![](../img/30_s1.png)
 
