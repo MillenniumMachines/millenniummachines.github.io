@@ -64,7 +64,7 @@
 
 ---
 
-Make sure to add wether stripping to the panel. 
+Make sure to add weather stripping to the panel. 
 
 !!! info annotate "Components Required"
     ```
