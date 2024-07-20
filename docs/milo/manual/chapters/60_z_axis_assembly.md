@@ -414,18 +414,14 @@ Attach the assembled Y and Z-Axes using M5x10mm BHCS through the joining plates.
 
 !!! info annotate "Components Required"
     ```
-     8 x M5x12mm BHCS
+     10 x M5x12mm BHCS
      1 x Assembled Y-Axis
      1 x Assembled Z-Axis with FMJ
     ```
 
-Attach the assembled Y and Z-Axes using M5x12mm BHCS through the bottom row of holes in the FMJ.
+Attach the assembled Y and Z-Axes using M5x12mm BHCS through the bottom row of holes on each FMJ.
 
 ![](../img/fmj_assembly/fmj_step_6.png){: .shadow}
-
----
-
-## Y-Axis Motor Mount
 
 Attach the Y-Axis Motor Mount to the Z-Axis using M5x12mm BHCS.
 
