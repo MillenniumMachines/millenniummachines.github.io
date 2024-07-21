@@ -16,13 +16,13 @@ A machine that can easily electrocute you, cut you, or set fire to your whole ne
     After all, you are special to us and we don't want you to get hurt.
 
 Most importantly from everyone at the Millennium Machines design team,
-Have fun building your very first Milo!
+Have fun building your very first Casa!
 
 ---
 
 ## What To Expect
 
-This manual and associated firmware is for the Casa R2 built to the standard BOM.
+This manual and associated firmware is for the Casa R2 built to the standard BOM. This also covers the kit supplied by LDO.
 
 <!-- More needed here -->
 
@@ -42,7 +42,7 @@ Remember, these settings are only a guideline, and are open to your interpretati
 
 ## T-Nuts Application
 
-This machine requires an immense amount of T-nuts. In the interest of simplifying this manual, we have chosen to omit the installation of T-nuts. Wherever a part interfaces with an extrusion in a way that looks like it requires a T-nut, then it should be considered a part that requires a T-nut.
+This enclosure makes use of T-nuts and blind joints. In the interest of simplifying this manual, we have chosen to omit the installation of T-nuts and button head bolts. Wherever a part interfaces with an extrusion in a way that looks like it requires a T-nut or a bolt for a blind joint, then it should be considered a part that requires a T-nut / bolt.
 
 ## Pre-Build Training
 
@@ -70,5 +70,5 @@ Well, why not join our community here on:
 
 ---
 
-[Next Chapter: Hardware reference]()
+[Next Chapter: Outer Frame Assembly](./10_outer_frame_assembly.md)
 <!-- Next chapter link needed -->
