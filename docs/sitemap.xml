@@ -36,7 +36,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://millenniummachines.github.io/docs/casa/manual/chapters/10_introduction/</loc>
+         <loc>https://millenniummachines.github.io/docs/casa/manual/chapters/00_introduction/</loc>
+         <lastmod>2024-07-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://millenniummachines.github.io/docs/casa/manual/chapters/10_outer_frame_assembly/</loc>
+         <lastmod>2024-07-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://millenniummachines.github.io/docs/casa/manual/chapters/20_sliding_door_assembly/</loc>
+         <lastmod>2024-07-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://millenniummachines.github.io/docs/casa/manual/chapters/30_panels_and_clips/</loc>
+         <lastmod>2024-07-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://millenniummachines.github.io/docs/casa/manual/chapters/40_electronics/</loc>
+         <lastmod>2024-07-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://millenniummachines.github.io/docs/casa/manual/chapters/50_basement/</loc>
          <lastmod>2024-07-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
