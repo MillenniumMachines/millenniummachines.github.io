@@ -1111,7 +1111,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../millennium-os/manual/installation/" class="md-nav__link">
+      <a href="../../../../millennium-os/manual/chapters/10_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../millennium-os/manual/chapters/20_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1132,11 +1153,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../millennium-os/manual/usage/" class="md-nav__link">
+      <a href="../../../../millennium-os/manual/chapters/30_usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../millennium-os/manual/chapters/40_gcodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    G-Codes
   </span>
   
 
@@ -1288,26 +1330,26 @@
 <h1 id="install-rrf">Install <abbr title="RepRapFirmware">RRF</abbr></h1>
 <div class="admonition tip">
 <p class="admonition-title">Sit Back... and Relax!</p>
-<p>For those of you who are less software inclined, don't panic! We've done most of the work for you.</p>
+<p>For those of you who are less software-inclined, don't panic! We've done most of the work for you.</p>
 <p><abbr title="RepRapFirmware">RRF</abbr> requires you to populate an SD card with a specific file structure and files to go with it. To
-make this easier for you, we have gone ahead and built <abbr title="RepRapFirmware">RRF</abbr> configuration releases for common hardware specifications that include mainboard and WiFi card firmware, as well as a known-good configuration for your machine.
+To make this easier for you, we have built <abbr title="RepRapFirmware">RRF</abbr> configuration releases for common hardware specifications that include mainboard and WiFi card firmware, as well as a known good configuration for your machine.
 If you don't wish to install the pre-made firmware and would rather create your own from scratch, then
 please follow <a href="https://www.youtube.com/watch?v=TAT532vIVzU&amp;t=335s">this tutorial</a>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Public Beta</p>
-<p>The <abbr title="RepRapFirmware">RRF</abbr> configurations for the reference design and LDO kit are released as a public beta. As outlined in the repository, we take no responsibility or liability for any loss or damage caused to you or others by your use of this software, which is provided as-is.</p>
+<p>The <abbr title="RepRapFirmware">RRF</abbr> configurations for the reference design and LDO kit are released as a public beta. As outlined in the repository, we take no responsibility or liability for any loss or damage caused to you or others from the use of this software, which is provided as-is.</p>
 <p>That said, this software has been used internally and tested by a small group of external users and has proven to be, in our testing at least, reliable and properly configured.</p>
 </div>
 <h2 id="prepare-your-sd-card">Prepare your SD Card</h2>
 <p>You will need a freshly formatted SD card with a capacity of up to 32GB.</p>
-<p>If the capacity of the card is 4GB or lower, use the FAT16 format - If the capacity is more than 4GB (up to 32GB) then you will have to use the FAT32 format.</p>
+<p>If the card capacity is 4GB or lower, use the FAT16 format - If the capacity is more than 4GB (up to 32GB) then you will have to use the FAT32 format.</p>
 <p>The SD card should also be class 4 or higher.</p>
 <hr />
 <h2 id="download-a-configuration-release">Download a Configuration Release</h2>
-<p>First, you'll need to download a zip release for the hardware configuration of your choice from the <a href="https://github.com/MillenniumMachines/RRF-Configs/releases"><abbr title="RepRapFirmware">RRF</abbr>-Configs</a> repository. These releases bundle the latest version of RepRapFirmware for your mainboard, the latest WiFi firmware, a known-good configuration and (optionally, available soon) <a href="https://github.com/MillenniumMachines/MillenniumOS">MillenniumOS</a>.</p>
-<p>MillenniumOS is an "operations system" for <abbr title="RepRapFirmware">RRF</abbr> that includes a Fusion 360 post-processor and custom g-code dialect to enable easy work-piece probing, tool changes, tool setting and various other quality-of-life / safety features. If you are new to machining, starting with MillenniumOS should help you focus on creating your tool paths and making your first cuts, without focusing too much on the intricacies of edge finding, tool offset calculations and other things.</p>
-<p>The release zip files are named based on the machine hardware specification the configuration was designed for, so if you have a kit with a particular mainboard, click to download the zip file which is named based on the kit manufacturer and mainboard that you have.</p>
+<p>First, you'll need to download a zip release for the hardware configuration of your choice from the <a href="https://github.com/MillenniumMachines/RRF-Configs/releases"><abbr title="RepRapFirmware">RRF</abbr>-Configs</a> repository. These releases bundle the latest version of RepRapFirmware for your mainboard, the latest WiFi firmware, a known-good configuration, and (optionally, available soon) <a href="https://github.com/MillenniumMachines/MillenniumOS">MillenniumOS</a>.</p>
+<p>MillenniumOS is an "operations system" for <abbr title="RepRapFirmware">RRF</abbr> that includes a Fusion 360 post-processor and custom g-code dialect to enable easy work-piece probing, tool changes, toolsetting, and other quality-of-life / safety features. If you are new to machining, starting with MillenniumOS should help you focus on creating your tool paths and making your first cuts, without focusing too much on the intricacies of edge finding, tool offset calculations, and other things.</p>
+<p>The release zip files are named based on the machine hardware specification the configuration was designed for, so if you have a kit with a particular mainboard, click to download the zip file which is named based on the kit manufacturer and mainboard you have.</p>
 <p>If you have a kit that does <em>not</em> conform to any known specification, please open an issue.</p>
 <p>The releases with <code>mos</code> in the zip file name contain the latest compatible release of MillenniumOS.</p>
 <p><img alt="View of GitHub Releases page for RRF Config" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_0.png" /></p>
@@ -1323,11 +1365,11 @@ please follow <a href="https://www.youtube.com/watch?v=TAT532vIVzU&amp;t=335s">t
 <hr />
 <h2 id="initial-setup">Initial Setup</h2>
 <p>At this point, eject the SD card from your computer and insert it into your mainboard.</p>
-<p>Power your board either via USB or via PSU and wait. The board will install a new version of <abbr title="RepRapFirmware">RRF</abbr>, automatically update the WiFi module and then start a WiFi Access Point called <code>Milo</code>. The password for this is <code>millenniummachines</code>.</p>
+<p>Power your board either via USB or via PSU and wait. The board will install a new version of <abbr title="RepRapFirmware">RRF</abbr>, automatically update the WiFi module, and then start a WiFi Access Point called <code>Milo</code>. The password for this is <code>millenniummachines</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Please be patient</p>
-<p>Installing <abbr title="RepRapFirmware">RRF</abbr>, updating the WiFi module and starting a WiFi AP can take some time. After powering the board on for the first time with the SD card installed, you should leave the board for 5-10 minutes to work. If the <code>Milo</code> access point appears then this is a safe indication that the initial update and configuration process is complete, and you are ready to use the machine.</p>
-<p>If the WiFi AP does <em>not</em> appear after 10 minutes, take the SD card back out of the board, plug it back into your computer and check if the <code>firmware.bin</code> file in the root of the SD card has been renamed to <code>FLY.CUR</code>. If it has <em>not</em>, then this indicates the board was not updated properly. Please use our discord or other channels for support.</p>
+<p>Installing <abbr title="RepRapFirmware">RRF</abbr>, updating the WiFi module, and starting a WiFi AP can take some time. After powering the board on for the first time with the SD card installed, you should leave the board for 5-10 minutes to work. If the <code>Milo</code> access point appears then this is a safe indication that the initial update and configuration process is complete, and you are ready to use the machine.</p>
+<p>If the WiFi AP does <em>not</em> appear after 10 minutes, take the SD card back out of the board, plug it back into your computer, and check if the <code>firmware.bin</code> file in the root of the SD card has been renamed to <code>FLY.CUR</code>. If it has <em>not</em>, then the board was not updated properly. Please use our discord or other channels for support.</p>
 </div>
 <hr />
 <h2 id="accessing-duet-web-control">Accessing Duet Web Control</h2>
@@ -1338,41 +1380,39 @@ Password: millenniummachines
 <p>Once connected, open a browser and go to <a href="http://192.168.40.1">http://192.168.40.1</a> - note this is <code>http</code> and <em>not</em> <code>https</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Some browsers may try to force you to connect to <code>https://</code> by default - you may need to specify the full URL, <code>http://192.168.40.1</code> to override this behaviour.</p>
+<p>Some browsers may force you to connect to <code>https://</code> by default - you may need to specify the full URL, <code>http://192.168.40.1</code> to override this behaviour.</p>
 </div>
-<p>Once connected to Duet Web Control, you should see a screen similar to this. This is the interface that you will use to control your new CNC Mill!</p>
+<p>Once connected to Duet Web Control, you should see a screen similar to this. This is the interface you will use to control your new CNC Mill!</p>
 <p><img alt="View of RRFs Duet Web Control interface" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_3.png" /></p>
 <hr />
 <h2 id="configure-your-wifi-network">Configure your WiFi network</h2>
 <p>If you want to connect your Milo to an existing WiFi network rather than using the inbuilt Access Point, you can use the Web Interface to change the machine configuration.</p>
-<p>The first step is to tell <abbr title="RepRapFirmware">RRF</abbr> about your wireless network. Click on the "Console" tab on the left hand side, and type the following into the <code>Send code...</code> box, then press ENTER:</p>
+<p>The first step is to tell <abbr title="RepRapFirmware">RRF</abbr> about your wireless network. Click on the "Console" tab on the left-hand side and type the following into the <code>Send code...</code> box, then press ENTER:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">M587 </span>S&quot;your WiFi SSID&quot; P&quot;your WiFi password&quot;
 </code></pre></div>
 <p>You should see a <em>green</em> highlighted line indicating that the command was successful:</p>
 <p><img alt="View of DWC Console window indicating successful WiFi network configuration" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_4.png" /></p>
 <hr />
-<p>You now need to tell <abbr title="RepRapFirmware">RRF</abbr> to connect as a WiFi client rather than starting its own Access Point.</p>
-<p>We package a <code>network.g.example</code> file which configures <abbr title="RepRapFirmware">RRF</abbr> as a WiFi client, and can be used to set any user-specific settings that should not be overwritten when updating. The file needs to be renamed to <code>network.g</code> for it to load.</p>
-<p>To rename it, browse to the "Files -&gt; System" tab, right click on <code>network.g.example</code>, then click "Rename", and enter <code>network.g</code>:</p>
+<p>You must now instruct <abbr title="RepRapFirmware">RRF</abbr> to connect as a WiFi client rather than starting its own Access Point.</p>
+<p>We package a <code>network.g.example</code> file which configures <abbr title="RepRapFirmware">RRF</abbr> as a WiFi client and can be used to set any user-specific settings that should not be overwritten when updating. The file needs to be renamed to <code>network.g</code> for it to load.</p>
+<p>To rename it, browse to the "Files -&gt; System" tab, right-click on <code>network.g.example</code>, then click "Rename", and enter <code>network.g</code>:</p>
 <p><img alt="Renaming the network.g.example file to network.g" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_5.png" /></p>
 <hr />
-<p>You may need to further configure any network-specific settings in this file, but this is outside the scope of this guide - please refer to the <a href="https://docs.duet3d.com/User_manual/Reference/Gcodes">Duet3D Gcode Documentation</a> for this - specifically codes <code>M553</code>, <code>M554</code> and <code>M586</code>.</p>
+<p>You may need to configure additional network-specific settings in this file, but this is outside the scope of this guide - please refer to the <a href="https://docs.duet3d.com/User_manual/Reference/Gcodes">Duet3D Gcode Documentation</a> for this - specifically codes <code>M553</code>, <code>M554</code> and <code>M586</code>.</p>
 <p>After editing the file to your liking, you can restart the mainboard. Once restarted, it should attempt to connect to your WiFi network.</p>
-<p>You may have to use your router interface to identify the address that the Milo has been given on your network ifd this was not configured statically - this is outside of the scope of this guide.</p>
+<p>You may have to use your router interface to identify the address that the Milo has been given on your network if this was not configured statically - this is outside of the scope of this guide.</p>
 <p>You can also <a href="https://teamgloomy.github.io/putty.html">connect to the mainboard over USB</a> using Putty or another terminal emulator depending on your operating system - watching the output of the terminal when the machine connects to the WiFi network will show the IP address that has been assigned.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>When installing a new release of the <abbr title="RepRapFirmware">RRF</abbr> configuration as an <em>upgrade</em>, your <code>network.g</code> file will not be overwritten. <em>However</em> - the WiFi module will be updated, which may wipe all network details from the module itself.</p>
-<p>To avoid this making the machine unrecoverable (at least without connecting to USB), <abbr title="RepRapFirmware">RRF</abbr> will always reboot in Access Point mode after any update cycle. You can then re-enter the network details if necessary, using the <code>M587</code> command in <a href="#configure-your-wifi-network">Configure your WiFi network</a> before rebooting.</p>
-<p>Additionally, if you are prompted by DWC to Install the updates, you can safely click No - these will be installed when you reboot and clicking Yes will just make the process take longer.</p>
+<p>When you are prompted by DWC to Install the updates, you should click Yes - but be aware, this will involve flashing your WiFi module twice - once when you click Yes, and once when the board reboots after it is updated. This is unfortunate, but necessary, because we need the flash-on-reboot to enable hands-free configuration when extracting the Zip file to a fresh SD card and inserting it into an unconfigured board.</p>
 </div>
 <hr />
-<p>At this point, the basic firmware setup is complete and all that remains are some firmware checks which will be covered later on in the manual.</p>
+<p>At this point, the basic firmware setup is complete and all that remains are some firmware checks which will be covered later in the manual.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>We only provide bundled firmware configurations for specific machine setups. If your machine is self-built, you will have to modify one of these configurations to match the mainboard, wiring and setup of your machine. Alternatively, you can use the <a href="https://teamgloomy.github.io/Configurator">TeamGloomy Configurator</a> - but remember that this is aimed at 3D printer configurations so will need a number of changes to work effectively on Milo.</p>
+<p>We only provide bundled firmware configurations for specific machine setups. If your machine is self-built, you can modify one of these configurations to match your mainboard, wiring, and other unique machine features. Alternatively, you can use the <a href="https://teamgloomy.github.io/Configurator">TeamGloomy Configurator</a> - but remember that the configurator produces 3D printer configurations, so it will need modifying to suit the particular features of your Milo.</p>
 </div>
-<p>It is now safe to perform the physical install of your board into your mainboard mount.</p>
+<p>It is now safe to perform the physical installation of your board into your mainboard mount.</p>
 <hr />
 <p><a href="../100_assemble_electronics/">Next Chapter: Assemble Electronics</a></p>
 

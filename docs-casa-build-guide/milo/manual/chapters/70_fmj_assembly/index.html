@@ -1093,7 +1093,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../millennium-os/manual/installation/" class="md-nav__link">
+      <a href="../../../../millennium-os/manual/chapters/10_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../millennium-os/manual/chapters/20_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1114,11 +1135,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../millennium-os/manual/usage/" class="md-nav__link">
+      <a href="../../../../millennium-os/manual/chapters/30_usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../millennium-os/manual/chapters/40_gcodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    G-Codes
   </span>
   
 
@@ -1257,22 +1299,22 @@
 </div>
 <div class="admonition tip annotate">
 <p class="admonition-title">Standard Assembly</p>
-<p>The following information applies <em>only</em> if you are building your Milo with <abbr title="Full Metal Jacket">FMJ</abbr> plates. If you do not have <abbr title="Full Metal Jacket">FMJ</abbr> plates and are using 3D printed column joining plates, please follow <a href="../60_z_axis_assembly/#installing-the-column-plates">Installing the Column Plates</a> instead.</p>
+<p>The following information applies <em>only</em> if you are building your Milo with <abbr title="Full Metal Jacket">FMJ</abbr> plates. If you do not have <abbr title="Full Metal Jacket">FMJ</abbr> plates and instead use 3D-printed column joining plates, please follow <a href="../60_z_axis_assembly/#installing-the-column-plates">Installing the Column Plates</a> instead.</p>
 </div>
 <h2 id="fmj-sourcing"><abbr title="Full Metal Jacket">FMJ</abbr> Sourcing</h2>
-<p><abbr title="Full Metal Jacket">FMJ</abbr>'s cannot be made on Milo due to their size - so you will need to acquire them by different means.</p>
+<p>FMJs cannot be made on Milo due to their size - so you will need to acquire them via different means.</p>
 <!-- Check the [Sourcing Guide](../../bom/sourcing_guide.md) for FMJ kits. !-->
 
-<p>If self-sourcing, <abbr title="Full Metal Jacket">FMJ</abbr>'s should be laser-cut, ideally from Mild Steel, which will give you the best bang-for-your-buck.</p>
-<p><abbr title="Full Metal Jacket">FMJ</abbr>'s can be used to extend your Z clearance, which is the maximum work-piece and work-holding height that is able to move under the Z-column overhang. The stock clearance is 60mm, and with the maximum size <abbr title="Full Metal Jacket">FMJ</abbr> this can be extended to 120mm.</p>
+<p>If self-sourcing, FMJs should be laser-cut, ideally from Mild Steel, which gives you the best bang for your buck.</p>
+<p>FMJs can extend your Z clearance, the maximum work-piece and work-holding height that can move under the Z-column overhang. The stock clearance is 60mm, and with the maximum size <abbr title="Full Metal Jacket">FMJ</abbr>, this can be extended to 120mm.</p>
 <p>If using the <abbr title="Full Metal Jacket">FMJ</abbr> to extend your clearance, you will need to increase the length of the <code>A</code> and <code>B</code> extrusions (detailed in <a href="#identifying-extrusions">Identifying Extrusions</a>) by the difference from the standard clearance. For 120mm clearance, you will need 320mm C-Beams (<code>120-60 + 260 = 320mm</code>).</p>
-<p>The designs are available in the <a href="https://github.com/MillenniumMachines/UserMods/tree/main/Millennium-Milo-V1.5-MODS/Techmorphic/Techmorphic-FMJ-para-plates">User Mods Repository</a> - the Fusion360 file is parametric, so you will need to check / set your parameters for length and bolt hole sizes before exporting for cutting.</p>
-<p>Services like SendCutSend in the US or Fractory in the EU can produce <abbr title="Full Metal Jacket">FMJ</abbr>'s at a decent price, and they offer discounts for bulk runs.</p>
-<p>Remember that a set of <abbr title="Full Metal Jacket">FMJ</abbr>'s contains <em>two</em> plates, one for either side of the Z column.</p>
-<p>If obtaining these plates with a non-durable surface finish (Mild Steel for example), then you will need to  paint the raw <abbr title="Full Metal Jacket">FMJ</abbr>'s to stop them corroding - we find sprayed truck-bed liner or appliance enamel provides a suitable coating durability, but feel free to experiment with other high-durability coatings.</p>
+<p>The designs are available in the <a href="https://github.com/MillenniumMachines/UserMods/tree/main/Millennium-Milo-V1.5-MODS/Techmorphic/Techmorphic-FMJ-para-plates">User Mods Repository</a> - the Fusion360 file is parametric, so you will need to check and set your parameters for length and bolt hole sizes before exporting for cutting.</p>
+<p>Services like SendCutSend in the US or Fractory in the EU can produce FMJs at a reasonable price, and they offer discounts for bulk runs.</p>
+<p>Remember that a set of FMJs contains <em>two</em> plates, one for either side of the Z column.</p>
+<p>If obtaining these plates with a non-durable surface finish (Mild Steel for example), you must paint the raw FMJs to protect them from corrosion. We find sprayed truck-bed liner or appliance enamel provides suitable coating durability, but feel free to experiment with other high-durability coatings.</p>
 <hr />
 <h2 id="identifying-extrusions">Identifying Extrusions</h2>
-<p>This section of the build contains a number of C-beams that are close together. To help you identify which parts are which, lay out your extrusions like the diagram shown below. The next steps will then highlight which extrusions are used for each step.</p>
+<p>This section of the build contains several C-beams that are close together. To help you identify which parts are which, lay out your extrusions like the diagram below. The next steps will then highlight which extrusions are used for each step.</p>
 <div class="admonition info">
 <p class="admonition-title">Components Required</p>
 <div class="highlight"><pre><span></span><code>A: Openbuilds 4080x260mm C-Beam
@@ -1283,7 +1325,7 @@ D: Openbuilds 4080x120mm C-Beam
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The lengths shown are for a standard 60mm clearance build. A 120mm clearance build will have A &amp; B be +60mm in length.</p>
+<p>The lengths shown are for a standard 60mm clearance build. A 120mm clearance build will have A &amp; B be 60mm longer.</p>
 </div>
 <p><img alt="" class="shadow" src="../../img/z_axis_assembly/y_axis_step_42.png" /></p>
 <hr />
@@ -1306,24 +1348,24 @@ D: Openbuilds 4080x120mm C-Beam
 </div>
 <div class="admonition tip annotate">
 <p class="admonition-title">Aligning the Rails</p>
-<p>Repeat the alignment procedure described for the Y axis to ensure your rails are aligned to each other and the extrusion. </p>
+<p>Repeat the alignment procedure described for the Y-Axis to ensure your rails are aligned with each other and the extrusion. </p>
 </div>
 <h2 id="column-assembly">Column Assembly</h2>
 <p>Place extrusions <code>A</code> and <code>B</code> facing each other, creating an internal channel. This is where the ballast box can be installed (later, calm down cowboy!).</p>
 <p>Select extrusion <code>D</code>.</p>
 <p><img alt="" class="shadow" src="../../img/z_axis_assembly/y_axis_step_45.png" /></p>
 <hr />
-<p>Place  extrusion <code>D</code> at the top of the column with the channel facing <em>outwards</em> (away from extrusions <code>A</code> and <code>B</code>).</p>
+<p>Place extrusion <code>D</code> at the top of the column with the channel facing <em>outwards</em> (away from extrusions <code>A</code> and <code>B</code>).</p>
 <hr />
 <p>Select extrusion <code>C</code>.</p>
 <p><img alt="" class="shadow" src="../../img/z_axis_assembly/y_axis_step_44.png" /></p>
 <hr />
-<p>Place extrusion <code>C</code> on the front of extrusion <code>D</code>, again with the channel (and rails!) facing <em>outwards</em>.</p>
+<p>Place extrusion <code>C</code> on the front of <code>D</code>, again with the channel (and rails!) facing <em>outwards</em>.</p>
 <p><img alt="" class="shadow" src="../../img/fmj_assembly/fmj_step_1.png" /></p>
 <hr />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The lower edge of extrusion <code>C</code> should be <code>18mm</code> above the lower edge of extrusion <code>D</code>, making room for the lower bearing block.</p>
+<p>The lower edge of extrusion <code>C</code> should be <code>18mm</code> above the lower edge of <code>D</code>, making room for the lower bearing block.</p>
 </div>
 <p><img alt="" class="shadow" src="../../img/z_axis_assembly/y_axis_step_51.png" /></p>
 <hr />
@@ -1339,7 +1381,7 @@ D: Openbuilds 4080x120mm C-Beam
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The length of the M5 BHCS bolts used to attach the <abbr title="Full Metal Jacket">FMJ</abbr> to the column depends on the thickness of your <abbr title="Full Metal Jacket">FMJ</abbr>. The bolts specified here are for a plate thickness of 6mm, which is currently the most common choice, and is supplied as standard with the LDO kit.</p>
+<p>The length of the M5 BHCS bolts used to attach the <abbr title="Full Metal Jacket">FMJ</abbr> to the column depends on the thickness of your <abbr title="Full Metal Jacket">FMJ</abbr>. The bolts specified here are for a plate thickness of 6mm, which is currently the most common choice and is supplied as standard with the LDO kit.</p>
 <p>If your <abbr title="Full Metal Jacket">FMJ</abbr> plates are not 6mm thick, you should aim for an M5 BHCS that is 4-6mm longer than your plates are thick.</p>
 </div>
 <p>Take one of your <abbr title="Full Metal Jacket">FMJ</abbr> plates and line up the bottom edge of the <abbr title="Full Metal Jacket">FMJ</abbr> shoulder with the bottom edge of the <code>C</code> extrusion.</p>
@@ -1355,23 +1397,23 @@ D: Openbuilds 4080x120mm C-Beam
 </div>
 <div class="admonition warning">
 <p class="admonition-title">BE SAFE, LOCK IT!</p>
-<p>These machines vibrate an immense amount when in use, and fasteners are bound to back out. Don't be afraid to add a little bit of medium-strength threadlock to all your screws to avoid this problem.</p>
+<p>These machines vibrate intensely when running, and fasteners are bound to back out. Don't be afraid to add a little bit of medium-strength threadlock to all your screws to avoid this problem.</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>If using spring T-nuts for assembly, having a thin, long and semi-flexible tool to help guide the nuts into place is a godsend!</p>
+<p>If using spring T-nuts for assembly, having a thin, long, and semi-flexible tool to help guide the nuts into place is a godsend!</p>
 </div>
 <hr />
 <p>Turn your half-assembled column over and repeat with the other <abbr title="Full Metal Jacket">FMJ</abbr> plate. Take care to line the second <abbr title="Full Metal Jacket">FMJ</abbr> up with the first!</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>Loosely bolt the second <abbr title="Full Metal Jacket">FMJ</abbr> into place, then push the base of the <abbr title="Full Metal Jacket">FMJ</abbr>'s against a known-flat surface so that they are both flush.
+<p>Loosely bolt the second <abbr title="Full Metal Jacket">FMJ</abbr> into place, then push the base of the FMJs against a known flat surface so that they are both flush.
 Tighten the second <abbr title="Full Metal Jacket">FMJ</abbr> while in this position so that the plates stay aligned.</p>
 </div>
 <hr />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The cut-outs in the <abbr title="Full Metal Jacket">FMJ</abbr> are for fitting cable hook and drag-chain mounts. This can be done now, or later when routing cabling and drag-chains.</p>
+<p>The cut-outs in the <abbr title="Full Metal Jacket">FMJ</abbr> are for fitting cable hooks and drag-chain mounts. This can be done now, or later when routing cabling and drag-chains.</p>
 </div>
 <p><img alt="" class="shadow" src="../../img/fmj_assembly/fmj_step_5.png" /></p>
 <p><a href="../60_z_axis_assembly/#lower-bearing-block">Next Chapter: Z-Axis Lower Bearing block</a></p>

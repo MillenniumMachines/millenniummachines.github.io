@@ -1,0 +1,3196 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation Preview for Millennium Machines - Branch: casa-build-guide">
+      
+      
+      
+        <link rel="canonical" href="https://millenniummachines.github.io/docs-casa-build-guide/millennium-os/manual/chapters/40_gcodes/">
+      
+      
+        <link rel="prev" href="../30_usage/">
+      
+      
+        <link rel="next" href="../../../../contact-us/">
+      
+      
+      <link rel="icon" href="../../../../img/millennium-machines-icon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
+    
+    
+      
+        <title>G-Codes - Millennium Machines (Branch: casa-build-guide)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.76a95c52.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m22.61 19-9.08-9.09c.93-2.34.47-5.1-1.44-7C9.79.61 6.21.4 3.66 2.26L7.5 6.11 6.08 7.5 2.25 3.69C.39 6.23.6 9.82 2.9 12.11c1.86 1.86 4.57 2.35 6.89 1.48l9.11 9.11c.39.39 1.02.39 1.41 0l2.3-2.3c.39-.4.39-1.01 0-1.4m-3 1.59-9.46-9.46c-.61.45-1.29.72-2 .82-1.36.2-2.79-.21-3.83-1.25C3.37 9.76 2.93 8.5 3 7.26l3.09 3.09 4.24-4.24L7.24 3c1.26-.05 2.49.39 3.44 1.33a4.469 4.469 0 0 1 1.24 3.96 4.35 4.35 0 0 1-.88 1.96l9.46 9.45-.89.89Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#millennium-machines-gcode-flavour" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Millennium Machines (Branch: casa-build-guide)" class="md-header__button md-logo" aria-label="Millennium Machines (Branch: casa-build-guide)" data-md-component="logo">
+      
+  <img src="../../../../img/millennium-machines-icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Millennium Machines (Branch: casa-build-guide)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              G-Codes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MillenniumMachines/millenniummachines.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Millennium Machines (Branch: casa-build-guide)" class="md-nav__button md-logo" aria-label="Millennium Machines (Branch: casa-build-guide)" data-md-component="logo">
+      
+  <img src="../../../../img/millennium-machines-icon.png" alt="logo">
+
+    </a>
+    Millennium Machines (Branch: casa-build-guide)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MillenniumMachines/millenniummachines.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Milo - Desktop CNC Mill
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Milo - Desktop CNC Mill
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/bom/sourcing_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sourcing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/printing/print_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Printing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently Asked Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Assembly Manual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Assembly Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/manual/chapters/10_acknowledgements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/manual/chapters/20_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/manual/chapters/30_hardware_reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/manual/chapters/40_y_axis_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Y-Axis Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/manual/chapters/50_x_axis_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    X-Axis Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/manual/chapters/60_z_axis_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Z-Axis Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/manual/chapters/70_fmj_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FMJ Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/manual/chapters/80_table_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/manual/chapters/90_install_rrf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install RRF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/manual/chapters/100_assemble_electronics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assemble Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo/manual/chapters/110_pre_flight_checks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pre-Flight Checks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Casa - Desktop CNC Enclosure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Casa - Desktop CNC Enclosure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/bom/sourcing_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sourcing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/bom/printing_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Printing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently Asked Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Assembly Manual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Assembly Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/manual/chapters/00_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/manual/chapters/10_outer_frame_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outer Frame Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/manual/chapters/20_sliding_door_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sliding Door Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/manual/chapters/30_panels_and_clips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Panels and Clips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/manual/chapters/40_electronics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Electronics Bay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Long John Toolsetter
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Long John Toolsetter
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../long-john/bom/sourcing_and_print_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sourcing and Print Guild
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../long-john/assembly_manual/assembly_manual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assembly Manual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MillenniumOS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            MillenniumOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20_installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30_usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    G-Codes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    G-Codes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Misc
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Misc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g27-park" class="md-nav__link">
+    <span class="md-ellipsis">
+      G27 - PARK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g37-probe-tool-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      G37 - PROBE TOOL LENGTH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g371-probe-z-surface-with-current-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      G37.1 - PROBE Z SURFACE WITH CURRENT TOOL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m3000-prompt-operator-with-confirmable-dialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      M3000 - PROMPT OPERATOR WITH CONFIRMABLE DIALOG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m4005-check-millenniumos-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      M4005 - CHECK MILLENNIUMOS VERSION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m5010-reset-stored-wcs-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      M5010 - RESET STORED WCS DETAILS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m5011-apply-rotation-compensation" class="md-nav__link">
+    <span class="md-ellipsis">
+      M5011 - APPLY ROTATION COMPENSATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6515-check-co-ordinates-are-within-machine-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      M6515 - CHECK CO-ORDINATES ARE WITHIN MACHINE LIMITS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6550-protected-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6550 - PROTECTED MOVE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m7601-print-workplace-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7601 - PRINT WORKPLACE DETAILS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g8000-run-configuration-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      G8000 - RUN CONFIGURATION WIZARD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m8001-detect-probe-by-status-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      M8001 - DETECT PROBE BY STATUS CHANGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m8002-wait-for-probe-status-change-by-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      M8002 - WAIT FOR PROBE STATUS CHANGE BY ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m8003-list-changed-gp-input-pins-since-last-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      M8003 - LIST CHANGED GP INPUT PINS SINCE LAST CALL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m8004-wait-for-gp-input-pin-status-change-by-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      M8004 - WAIT FOR GP INPUT PIN STATUS CHANGE BY ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m9999-reload-millenniumos" class="md-nav__link">
+    <span class="md-ellipsis">
+      M9999 - RELOAD MILLENNIUMOS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Probing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      META
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="META">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g6600-probe-workpiece" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6600 - PROBE WORKPIECE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Axis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Axis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g6500-bore" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6500 - BORE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6500 - BORE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65001-bore-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6500.1 - BORE - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6501-boss" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6501 - BOSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6501 - BOSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65011-boss-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6501.1 - BOSS - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6502-rectangle-pocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6502 - RECTANGLE POCKET
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6502 - RECTANGLE POCKET">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65021-rectangle-pocket-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6502.1 - RECTANGLE POCKET - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6503-rectangle-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6503 - RECTANGLE BLOCK
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6503 - RECTANGLE BLOCK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65031-rectangle-block-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6503.1 - RECTANGLE BLOCK - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6504-web-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6504 - WEB X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6505-pocket-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6505 - POCKET X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6506-web-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6506 - WEB Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6507-pocket-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6507 - POCKET Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6508-outside-corner" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6508 - OUTSIDE CORNER
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6508 - OUTSIDE CORNER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65081-outside-corner-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6508.1 - OUTSIDE CORNER - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6509-inside-corner" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6509 - INSIDE CORNER
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Axis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single Axis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g6510-single-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6510 - SINGLE SURFACE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6510 - SINGLE SURFACE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65101-single-surface-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6510.1 - SINGLE SURFACE - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6511-probe-reference-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6511 - PROBE REFERENCE SURFACE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Axis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Three Axis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g6520-vise-corner" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6520 - VISE CORNER
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6520 - VISE CORNER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65201-vise-corner-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6520.1 - VISE CORNER - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g6512-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6512 - PROBE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g65121-automated-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6512.1 - AUTOMATED PROBE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g65122-manual-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6512.2 - MANUAL PROBE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drilling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drilling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Drilling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g73-drill-cycle-peck-drilling-with-partial-retract" class="md-nav__link">
+    <span class="md-ellipsis">
+      G73 - DRILL CYCLE - PECK DRILLING WITH PARTIAL RETRACT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g80-drill-cycle-cancel" class="md-nav__link">
+    <span class="md-ellipsis">
+      G80 - DRILL CYCLE - CANCEL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g81-drill-canned-cycle-full-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      G81 - DRILL CANNED CYCLE - FULL DEPTH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g83-drill-canned-cycle-peck-drilling-with-full-retract" class="md-nav__link">
+    <span class="md-ellipsis">
+      G83 DRILL CANNED CYCLE - PECK DRILLING WITH FULL RETRACT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tool Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m4000-define-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      M4000 - DEFINE TOOL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m4001-forget-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      M4001 - FORGET TOOL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tn-execute-tool-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      T&lt;N&gt; - EXECUTE TOOL CHANGE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coolant-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coolant Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Coolant Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m71-enable-air-blast" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7.1 - ENABLE AIR BLAST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m7-enable-mist" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7 - ENABLE MIST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m8-enable-flood" class="md-nav__link">
+    <span class="md-ellipsis">
+      M8 - ENABLE FLOOD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m9-control-all-coolants" class="md-nav__link">
+    <span class="md-ellipsis">
+      M9 - CONTROL ALL COOLANTS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spindle-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spindle Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spindle Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spindle-start-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spindle Start / Stop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spindle Start / Stop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m39-start-spindle-and-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      M3.9 - START SPINDLE AND WAIT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m59-stop-spindle-and-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      M5.9 - STOP SPINDLE AND WAIT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-spindle-speed-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Spindle Speed Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable Spindle Speed Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m7000-enable-vssc" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7000 - ENABLE VSSC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m7001-disable-vssc" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7001 - DISABLE VSSC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m7600-output-all-known-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7600 - OUTPUT ALL KNOWN VARIABLES
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contact-us/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Misc
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Misc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g27-park" class="md-nav__link">
+    <span class="md-ellipsis">
+      G27 - PARK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g37-probe-tool-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      G37 - PROBE TOOL LENGTH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g371-probe-z-surface-with-current-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      G37.1 - PROBE Z SURFACE WITH CURRENT TOOL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m3000-prompt-operator-with-confirmable-dialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      M3000 - PROMPT OPERATOR WITH CONFIRMABLE DIALOG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m4005-check-millenniumos-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      M4005 - CHECK MILLENNIUMOS VERSION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m5010-reset-stored-wcs-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      M5010 - RESET STORED WCS DETAILS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m5011-apply-rotation-compensation" class="md-nav__link">
+    <span class="md-ellipsis">
+      M5011 - APPLY ROTATION COMPENSATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6515-check-co-ordinates-are-within-machine-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      M6515 - CHECK CO-ORDINATES ARE WITHIN MACHINE LIMITS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6550-protected-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6550 - PROTECTED MOVE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m7601-print-workplace-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7601 - PRINT WORKPLACE DETAILS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g8000-run-configuration-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      G8000 - RUN CONFIGURATION WIZARD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m8001-detect-probe-by-status-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      M8001 - DETECT PROBE BY STATUS CHANGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m8002-wait-for-probe-status-change-by-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      M8002 - WAIT FOR PROBE STATUS CHANGE BY ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m8003-list-changed-gp-input-pins-since-last-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      M8003 - LIST CHANGED GP INPUT PINS SINCE LAST CALL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m8004-wait-for-gp-input-pin-status-change-by-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      M8004 - WAIT FOR GP INPUT PIN STATUS CHANGE BY ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m9999-reload-millenniumos" class="md-nav__link">
+    <span class="md-ellipsis">
+      M9999 - RELOAD MILLENNIUMOS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Probing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      META
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="META">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g6600-probe-workpiece" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6600 - PROBE WORKPIECE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Axis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Axis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g6500-bore" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6500 - BORE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6500 - BORE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65001-bore-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6500.1 - BORE - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6501-boss" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6501 - BOSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6501 - BOSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65011-boss-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6501.1 - BOSS - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6502-rectangle-pocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6502 - RECTANGLE POCKET
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6502 - RECTANGLE POCKET">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65021-rectangle-pocket-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6502.1 - RECTANGLE POCKET - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6503-rectangle-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6503 - RECTANGLE BLOCK
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6503 - RECTANGLE BLOCK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65031-rectangle-block-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6503.1 - RECTANGLE BLOCK - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6504-web-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6504 - WEB X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6505-pocket-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6505 - POCKET X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6506-web-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6506 - WEB Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6507-pocket-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6507 - POCKET Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6508-outside-corner" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6508 - OUTSIDE CORNER
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6508 - OUTSIDE CORNER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65081-outside-corner-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6508.1 - OUTSIDE CORNER - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6509-inside-corner" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6509 - INSIDE CORNER
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Axis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single Axis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g6510-single-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6510 - SINGLE SURFACE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6510 - SINGLE SURFACE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65101-single-surface-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6510.1 - SINGLE SURFACE - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g6511-probe-reference-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6511 - PROBE REFERENCE SURFACE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Axis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Three Axis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g6520-vise-corner" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6520 - VISE CORNER
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G6520 - VISE CORNER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g65201-vise-corner-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6520.1 - VISE CORNER - EXECUTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g6512-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6512 - PROBE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g65121-automated-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6512.1 - AUTOMATED PROBE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g65122-manual-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      G6512.2 - MANUAL PROBE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drilling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drilling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Drilling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g73-drill-cycle-peck-drilling-with-partial-retract" class="md-nav__link">
+    <span class="md-ellipsis">
+      G73 - DRILL CYCLE - PECK DRILLING WITH PARTIAL RETRACT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g80-drill-cycle-cancel" class="md-nav__link">
+    <span class="md-ellipsis">
+      G80 - DRILL CYCLE - CANCEL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g81-drill-canned-cycle-full-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      G81 - DRILL CANNED CYCLE - FULL DEPTH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g83-drill-canned-cycle-peck-drilling-with-full-retract" class="md-nav__link">
+    <span class="md-ellipsis">
+      G83 DRILL CANNED CYCLE - PECK DRILLING WITH FULL RETRACT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tool Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m4000-define-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      M4000 - DEFINE TOOL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m4001-forget-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      M4001 - FORGET TOOL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tn-execute-tool-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      T&lt;N&gt; - EXECUTE TOOL CHANGE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coolant-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coolant Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Coolant Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m71-enable-air-blast" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7.1 - ENABLE AIR BLAST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m7-enable-mist" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7 - ENABLE MIST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m8-enable-flood" class="md-nav__link">
+    <span class="md-ellipsis">
+      M8 - ENABLE FLOOD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m9-control-all-coolants" class="md-nav__link">
+    <span class="md-ellipsis">
+      M9 - CONTROL ALL COOLANTS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spindle-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spindle Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spindle Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spindle-start-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spindle Start / Stop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spindle Start / Stop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m39-start-spindle-and-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      M3.9 - START SPINDLE AND WAIT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m59-stop-spindle-and-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      M5.9 - STOP SPINDLE AND WAIT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-spindle-speed-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Spindle Speed Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable Spindle Speed Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m7000-enable-vssc" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7000 - ENABLE VSSC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m7001-disable-vssc" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7001 - DISABLE VSSC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m7600-output-all-known-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7600 - OUTPUT ALL KNOWN VARIABLES
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/MillenniumMachines/millenniummachines.github.io/edit/casa-build-guide/docs/millennium-os/manual/chapters/40_gcodes.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="millennium-machines-gcode-flavour">Millennium Machines GCode Flavour</h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This document is a work in progress and may lag behind changes made in MillenniumOS itself. To understand the latest available macros and how these should be called when using them directly, please refer to the code in the <a href="https://github.com/MillenniumMachines/MillenniumOS">GitHub Repository</a>.</p>
+</div>
+<h2 id="misc">Misc</h2>
+<h3 id="g27-park"><code>G27</code> - PARK</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G27 </span>[Zn]
+</code></pre></div>
+<p>Used to park the spindle in a safe location, by default it will move the spindle to the top of the Z-Axis, trigger an <code>M5.9</code> (stop the spindle and wait for spin-down), and then move the table to the centre of the X-Axis and at the front of the Y-Axis (towards the operator).</p>
+<p>If called with the <code>Z1</code> argument, it will only raise and stop the spindle - the table location will not be changed.</p>
+<p>Parking is used widely throughout probing and tool changing to move the spindle to a known starting location which is safe for lateral moves. CNC Firmwares do not always provide a generic park function (including RRF), because this can be machine-specific, so we implement our own.</p>
+<h3 id="g37-probe-tool-length"><code>G37</code> - PROBE TOOL LENGTH</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G37</span>
+</code></pre></div>
+<p>When using multiple milling tools, we must compensate for length differences between the tools. G37 can be used to (re-)calculate the length of the current tool relative to a reference surface or the previous tool.</p>
+<p><code>G37</code> is used widely by CNC mills to probe tool lengths but is not implemented by RRF, so again we implement our own.</p>
+<h3 id="g371-probe-z-surface-with-current-tool"><code>G37.1</code> - PROBE Z SURFACE WITH CURRENT TOOL</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G37.1
+</code></pre></div>
+<p>When there is no toolsetter available, it is necessary to re-zero the Z-Axis origin after changing tools - because the new tool will never be installed with the same length as the previous one.</p>
+<p>After a tool change, this command will be called automatically instead of <code>G37</code> if no toolsetter is available, and will walk the operator through manual re-zeroing of the Z-Axis origin.</p>
+<p>This has some caveats, in that if you machine off the surface that is used as your zero point then re-zeroing will be problematic - the operator must account for this in their CAM profile, to make sure that their Z origin makes sense.</p>
+<h3 id="m3000-prompt-operator-with-confirmable-dialog"><code>M3000</code> - PROMPT OPERATOR WITH CONFIRMABLE DIALOG</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M3000 </span>R&quot;...&quot; S&quot;...&quot;
+
+<span class="c">; Example message</span>
+<span class="nb">M3000 </span>R&quot;Operator Action Required&quot; S&quot;Flip the part around the X-Axis and continue!&quot;
+</code></pre></div>
+<p>Takes both <code>R</code> (title) and <code>S</code> (message) string parameters, and will display an RRF dialog box. If the machine is currently processing a file and not paused, the dialog box will contain Continue, Pause, and Cancel options. If M3000 is called while the machine is not processing a file, only the Continue and Cancel options will be shown. This can be used by post-processors to display messages to the operator.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This macro is currently unable to handle pauses and resumes correctly. That means if you click the <strong>Pause</strong> button on a popup created by this macro, and then resume, you will see the same popup again. You need to click Continue to proceed with the job.</p>
+</div>
+<h3 id="m4005-check-millenniumos-version"><code>M4005</code> - CHECK MILLENNIUMOS VERSION</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M4005 </span>V&quot;...&quot;
+
+<span class="c">; Example, abort if the loaded MillenniumOS version is not v0.3.0</span>
+<span class="nb">M4005 </span>V&quot;...&quot;
+</code></pre></div>
+<p>The MillenniumOS post-processor and macros are tightly coupled across versions. This command aborts an active job if the version of MillenniumOS running in RRF does not match the version of the post-processor that generated the job.</p>
+<h3 id="m5010-reset-stored-wcs-details"><code>M5010</code> - RESET STORED WCS DETAILS</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M5010 </span>[Wnn] [Rnn]
+
+<span class="c">; Reset Work Offset 0 centre position and radius.</span>
+<span class="nb">M5010 </span><span class="k">W</span><span class="m">0</span><span class="w"> </span><span class="k">R</span><span class="m">5</span>
+</code></pre></div>
+<p>Reset the stored details for a given WCS, or the current WCS if not specified.</p>
+<p>Not all fields are needed for every probing operation type, and we want to avoid using previously stored values if the most recent probing operation has failed. To do that, we use this macro to clear the relevant values before starting each probing cycle.</p>
+<p><code>M5010</code> uses a bitmask-style integer field to select which WCS detail fields to reset for a particular WCS. These are:</p>
+<div class="highlight"><pre><span></span><code><span class="c">; Center     = 1</span>
+<span class="c">; Corner     = 2</span>
+<span class="c">; Radius     = 4</span>
+<span class="c">; Surface    = 8</span>
+<span class="c">; Dimensions = 16</span>
+<span class="c">; Rotation   = 32</span>
+</code></pre></div>
+<p>You can add the number of each field type together and pass it to the <code>R</code> parameter to reset multiple fields - the default value is <code>63</code>, which resets all fields.</p>
+<h3 id="m5011-apply-rotation-compensation"><code>M5011</code> - APPLY ROTATION COMPENSATION</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M5011 </span>[Wnn]
+
+<span class="c">; Apply rotation compensation using workplace number 2 values</span>
+<span class="nb">M5011 </span><span class="k">W</span><span class="m">2</span>
+</code></pre></div>
+<p>Look up stored rotation values from the given workplace number or the current workplace number if none is specified. If a value exists, the operator will be prompted to apply rotation compensation using the inbuilt <code>G68</code> command.</p>
+<h3 id="m6515-check-co-ordinates-are-within-machine-limits"><code>M6515</code> - CHECK CO-ORDINATES ARE WITHIN MACHINE LIMITS</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M6515 </span>[Xnnn] [Ynnn] [Znnn]
+</code></pre></div>
+<p>Accepts at least one of X, Y, and Z coordinates to check that they are within the axes limits of the machine and will trigger an abort if they are outside the work envelope. This macro is also internally used to ensure we do not try to move outside the machine's limits.</p>
+<h3 id="g6550-protected-move"><code>G6550</code> - PROTECTED MOVE</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6550 </span>[Innn|Inull] [Xnnn] [Ynnn] [Znnn]
+</code></pre></div>
+<p>Takes at least one of X, Y, and Z coordinates as the target location, and an optional probe ID (I). If the probe ID is given, it will attempt to move to the target location while watching the specified probe for activation due to collision. If a probe ID is not provided, this move acts like a G1 move to the target, implementing an unprotected move at the manual probing speed. This macro is called by probing macros to avoid damaging any probe due to accidental collisions.</p>
+<h3 id="m7601-print-workplace-details"><code>M7601</code> - PRINT WORKPLACE DETAILS</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M7601 </span>[Wnn]
+</code></pre></div>
+<p>Output any stored probing details for the current workplace or the workplace given by offset <code>W</code>. It will only output probed values that are not null.</p>
+<h3 id="g8000-run-configuration-wizard"><code>G8000</code> - RUN CONFIGURATION WIZARD</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G8000</span>
+</code></pre></div>
+<p>Triggered when installing MillenniumOS for the first time, and can be called later to reconfigure MillenniumOS. This macro runs through a modal-driven configuration wizard that prompts the user for all settings required to run MillenniumOS properly.</p>
+<h3 id="m8001-detect-probe-by-status-change"><code>M8001</code> - DETECT PROBE BY STATUS CHANGE</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M8001 </span>[Dnnn] [Wnnn]
+</code></pre></div>
+<p>Iterates through all configured probes every <code>D</code> milliseconds (default 100) checking to see if their values have changed. This can be used to identify the right probe via user input when configuring MillenniumOS. Will wait for a maximum of <code>W</code> seconds (default 30).</p>
+<h3 id="m8002-wait-for-probe-status-change-by-id"><code>M8002</code> - WAIT FOR PROBE STATUS CHANGE BY ID</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M8002 </span>Knn
+
+<span class="c">; Wait for probe with ID 1 to change state</span>
+<span class="nb">M8002 </span><span class="k">K</span><span class="m">1</span>
+</code></pre></div>
+<p>Wait for the probe given by ID <code>K</code> to change state. This is used to detect the installation of a touch probe or similar where the circuit or device may not be NC, to avert situations where the operator has installed the probe but forgotten to plug it in.</p>
+<h3 id="m8003-list-changed-gp-input-pins-since-last-call"><code>M8003</code> - LIST CHANGED GP INPUT PINS SINCE LAST CALL</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M8003</span>
+
+<span class="c">; Save the current state of GP input pins</span>
+<span class="nb">M8003</span>
+
+<span class="c">; Store list of changed pins in global.mosGPV</span>
+<span class="nb">M8003</span>
+
+<span class="c">; Update list of changed pins</span>
+<span class="nb">M8003</span>
+</code></pre></div>
+<p>Stores a list of the general purpose input pins whose states have changed since the last call to <code>M8003</code>. This is used to identify Spindle Feedback pins during the configuration wizard process.</p>
+<h3 id="m8004-wait-for-gp-input-pin-status-change-by-id"><code>M8004</code> - WAIT FOR GP INPUT PIN STATUS CHANGE BY ID</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">M8004 </span>Knn
+
+<span class="c">; Wait for general purpose input 0 to change the state</span>
+<span class="nb">M8004 </span><span class="k">K</span><span class="m">0</span>
+</code></pre></div>
+<p>Waits for a general-purpose input pin to change state. The level of the pin is unimportant, just that the state changes. This code is used by <code>M3.9</code> and <code>M5.9</code> when spindle feedback is enabled to wait until the VFD reports that it has reached the target speed.</p>
+<h3 id="m9999-reload-millenniumos"><code>M9999</code> - RELOAD MILLENNIUMOS</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M999</span>
+</code></pre></div>
+<p>Triggers a reload of MillenniumOS using <code>daemon.g</code>. This can be used when developing or updating values from <code>mos-user-vars.g</code> but is <em>not</em> suitable for use when a new version of MillenniumOS has been installed - you <em>MUST</em> restart!</p>
+<hr />
+<h2 id="probing">Probing</h2>
+<h3 id="meta">META</h3>
+<h4 id="g6600-probe-workpiece"><code>G6600</code> - PROBE WORKPIECE</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6600 </span>[Wnn]
+</code></pre></div>
+<p>Called by the post-processor to indicate that the workpiece should be probed to set WCS origin, if the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed, rather than asking the operator.</p>
+<p>If the post knows what <em>type</em> of workpiece probe should be executed, it can call the specific probing operation directly (e.g. <code>G6500</code>, <code>G6501</code> etc) and then set the WCS using <code>G10</code>. Calling <code>G6600</code> will prompt the operator to select a probing methodology based on their knowledge of the workpiece.</p>
+<h3 id="two-axis">Two Axis</h3>
+<h4 id="g6500-bore"><code>G6500</code> - BORE</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6500 </span>[Wnn]
+</code></pre></div>
+<p>The <strong>Bore</strong> probing macro prompts the user for approximate diameter, overtravel, approximate center position, and probe depth.
+Executes <code>G6500.1</code> with the relevant parameters to run the actual probe.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
+<h5 id="g65001-bore-execute"><code>G6500.1</code> - BORE - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6500.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Onnn] [R0]
+</code></pre></div>
+<p>Calculates the center of a bore and its radius, by running 3 probes outwards from the chosen starting position towards the edge of the bore. The overtravel is added to the radius of the bore and this sets the distance moved from the
+center point in each of the 3 directions before the probe cycle will error if it does not trigger.</p>
+<p>Parameters <code>J</code>, <code>K</code>, and <code>L</code> represent the starting point of the probe in the <code>X</code>, <code>Y</code>, and <code>Z</code> axes. <code>H</code> specifies the approximate diameter of the bore, <code>O</code> specifies the overtravel distance, and when specified, <code>R0</code> suppresses reporting of the probe results.</p>
+<p><code>W</code> represents the WCS offset to set the origin on if passed.</p>
+<h4 id="g6501-boss"><code>G6501</code> - BOSS</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6501 </span>[Wnn]
+</code></pre></div>
+<p>The <strong>Boss</strong> probing macro prompts the user for approximate diameter, clearance, overtravel, approximate center position, and probe depth.
+Executes <code>G6501.1</code> with the relevant parameters to run the actual probe.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
+<h5 id="g65011-boss-execute"><code>G6501.1</code> - BOSS - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6501.1 [Wnn] Jnnn Knnn Lnnn Hnnn [Tnnn] [Onnn] [R0]
+</code></pre></div>
+<p>Calculates the center of a boss and its radius, by running 3 probes inwards towards the operator-chosen center of the bore. The overtravel is subtracted from the radius of the boss to identify the target location of each probe, and the clearance is added to the radius of the boss to identify the starting locations.</p>
+<p>Parameters <code>J</code>, <code>K</code>, and <code>L</code> represent the starting point of the probe in the <code>X</code>, <code>Y</code>, and <code>Z</code> axes. <code>H</code> specifies the approximate diameter of the bore, <code>O</code> specifies the overtravel distance, <code>T</code> the clearance distance, and when specified, <code>R0</code> suppresses reporting of the probe results.</p>
+<p><code>W</code> represents the WCS offset to set the origin on if passed.</p>
+<h4 id="g6502-rectangle-pocket"><code>G6502</code> - RECTANGLE POCKET</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6502 </span>[Wnn]
+</code></pre></div>
+<p>The <strong>Rectangle Pocket</strong> probing macro prompts the user for an approximate width (X), length (Y), overtravel and clearance, an approximate center position, and probe depth. Executes <code>G6502.1</code> with the relevant parameters to run the actual probe.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
+<h5 id="g65021-rectangle-pocket-execute"><code>G6502.1</code> - RECTANGLE POCKET - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6502.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
+</code></pre></div>
+<p>Calculates the center of a rectangle pocket, its surface angles, rotation angle (about the X-axis), and its dimensions based on 8 different probes.
+Using the provided width, height, clearance, and starting location, we probe outwards from inside the expected edges of each surface by the clearance distance. We probe each surface twice to get a surface angle and validate that the pocket itself is both rectangular and how far it is rotated from the X-axis.</p>
+<p>Parameters <code>J</code>, <code>K</code>, and <code>L</code> represent the starting point of the probe in the <code>X</code>, <code>Y</code>, and <code>Z</code> axes. <code>H</code> and <code>I</code> specify the approximate X and Y dimensions of the pocket, <code>O</code> specifies the overtravel distance, <code>T</code> the clearance distance, and when specified, <code>R0</code> suppresses reporting of the probe results.</p>
+<p><code>W</code> represents the WCS offset to set the origin on if passed.</p>
+<h4 id="g6503-rectangle-block"><code>G6503</code> - RECTANGLE BLOCK</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6503 </span>[Wnn]
+</code></pre></div>
+<p>The <strong>Rectangle Block</strong> probing macro prompts the user for an approximate width (X), length (Y), overtravel and clearance, approximate center position, and probe depth. Executes <code>G6503.1</code> with the relevant parameters to run the actual probe.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
+<h5 id="g65031-rectangle-block-execute"><code>G6503.1</code> - RECTANGLE BLOCK - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6503.1 [Wnn] Jnnn Knnn Lnnn Hnnn Innn [Tnnn] [Onnn] [R0]
+</code></pre></div>
+<p>Calculates the center of a rectangle block, its surface angles, rotation angle (about the X-axis), and its dimensions based on 8 different probes.
+Using the provided width, height, clearance, and starting location, we probe inwards from the expected edges of each surface by the clearance distance. We probe each surface twice to get a surface angle and validate that the block itself is both rectangular and how far it is rotated from the X-axis.</p>
+<p>Parameters <code>J</code>, <code>K</code>, and <code>L</code> represent the starting point of the probe in the <code>X</code>, <code>Y</code>, and <code>Z</code> axes. <code>H</code> and <code>I</code> specify the approximate X and Y dimensions of the block, <code>O</code> specifies the overtravel distance, <code>T</code> the clearance distance, and when specified, <code>R0</code> suppresses reporting of the probe results.</p>
+<p><code>W</code> represents the WCS offset to set the origin on if passed.</p>
+<h4 id="g6504-web-x"><code>G6504</code> - WEB X</h4>
+<p>Not implemented.</p>
+<h4 id="g6505-pocket-x"><code>G6505</code> - POCKET X</h4>
+<p>Not implemented.</p>
+<h4 id="g6506-web-y"><code>G6506</code> - WEB Y</h4>
+<p>Not implemented.</p>
+<h4 id="g6507-pocket-y"><code>G6507</code> - POCKET Y</h4>
+<p>Not implemented.</p>
+<h4 id="g6508-outside-corner"><code>G6508</code> - OUTSIDE CORNER</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6508 </span>[Wnn]
+</code></pre></div>
+<p>The <strong>Outside Corner</strong> probing macro prompts the user for an approximate width (X) and length (Y) of the 2 surfaces that make up the corner, a clearance and overtravel distance, a probing depth, a starting location, and the corner that we want to probe (front left, back right, etc). Executes <code>G6508.1</code> with the relevant parameters to run the actual probe.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
+<h5 id="g65081-outside-corner-execute"><code>G6508.1</code> - OUTSIDE CORNER - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6508.1 [Wnn] Jnnn Knnn Lnnn Nn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
+</code></pre></div>
+<p>Calculates the corner position of a square corner on a workpiece in X and Y, as well as calculating the rotation angle and corner angle of the item. Using the provided width, height, clearance, overtravel, and starting location, we move outwards along each surface forming the corner, probing at 2 locations on each surface to find their angles, and then calculating where these surfaces intersect at the relevant corner.</p>
+<p>Parameters <code>J</code>, <code>K</code>, and <code>L</code> represent the starting point of the probe in the <code>X</code>, <code>Y</code>, and <code>Z</code> axes. <code>N</code> indicates the corner number to probe, where the Front Left corner is <code>0</code> and the number increases anti-clockwise, with the Back Left corner at <code>3</code>.</p>
+<p><code>Q</code> identifies the mode - with <code>Q1</code>, quick mode is enabled, and no <code>H</code> or <code>I</code> parameter needs to be passed. Only a single probe point will be taken on each surface of the corner.</p>
+<p>With <code>Q0</code> (the default), you must also pass <code>H</code> and <code>I</code> - which specify the approximate X and Y dimensions of the block in millimeters.</p>
+<p>In both modes, you can specify <code>O</code>, the overtravel distance, and <code>T</code>, the clearance distance.</p>
+<p><code>R0</code> suppresses reporting of the probe results, and <code>W</code> represents the WCS offset to set the origin on if passed.</p>
+<h4 id="g6509-inside-corner"><code>G6509</code> - INSIDE CORNER</h4>
+<p>Not implemented.</p>
+<h3 id="single-axis">Single Axis</h3>
+<h4 id="g6510-single-surface"><code>G6510</code> - SINGLE SURFACE</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6510 </span>[Wnn]
+</code></pre></div>
+<p>The <strong>Single Surface</strong> probing macro prompts the user for a starting location, overtravel distance, which surface to probe, a maximum probing distance, and for X and Y surfaces, a probing depth below the starting location. It can probe the Z height of a workpiece, or a single surface on X or Y if the operator knows these are aligned with the machine axes. This macro only probes a single point so it cannot calculate surface angles.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
+<h5 id="g65101-single-surface-execute"><code>G6510.1</code> - SINGLE SURFACE - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6510.1 [Wnn] Jnnn Knnn Lnnn Hn Innn [Onnn]
+</code></pre></div>
+<p>Calculate the X, Y, or Z coordinates of a surface using the provided starting location, surface number, probing distance, and depth.</p>
+<p>Parameters <code>J</code>, <code>K</code>, and <code>L</code> represent the starting point of the probe in the <code>X</code>, <code>Y</code>, and <code>Z</code> axes. <code>H</code> specifies the axis to probe on, starting at 0 for Left, 1 for Right, 2 for Front, 3 for Back, and 4 for Top. <code>I</code> specifies the distance to probe toward the surface, and <code>O</code> specifies the overtravel distance. <code>R0</code> suppresses the reporting of the probe results.</p>
+<p><code>W</code> represents the WCS offset to set the origin on if passed.</p>
+<h4 id="g6511-probe-reference-surface"><code>G6511</code> - PROBE REFERENCE SURFACE</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6511</span>
+</code></pre></div>
+<p>Probes the touch probe reference surface in Z, and sets the touch probe activation point. This will be called automatically when changing to the touch probe with the feature enabled.</p>
+<h3 id="three-axis">Three Axis</h3>
+<h4 id="g6520-vise-corner"><code>G6520</code> - VISE CORNER</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6520 </span>[Wnn]
+</code></pre></div>
+<p>The <strong>Vice Corner</strong> probing macro combines <strong>Outside Corner</strong> and <strong>Single Surface (Z)</strong> macros to zero all 3 axes of a WCS in a single probing operation. This macro prompts the user for the required parameters for the <strong>Outside Corner</strong> macro, as well as a starting location. It calls the macros in sequence, probing the Z surface first before moving outwards and probing each X and Y surface that forms the corner.</p>
+<p>If the <code>W</code> parameter is set then this will be the WCS offset that will be zeroed. If no parameter is set then no WCS will be zeroed.</p>
+<h5 id="g65201-vise-corner-execute"><code>G6520.1</code> - VISE CORNER - EXECUTE</h5>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6520.1 [Wnn] Jnnn Knnn Lnnn Nn Pnnn [Qn] [Hnnn] [Innn] [Tnnn] [Onnn] [R0]
+</code></pre></div>
+<p>Executes a Vise Corner probe using the parameters gathered by the operator. Runs a Z probe first, then each corner probe after, and sets the WCS origin of all 3 axes at once.</p>
+<p>Parameters <code>J</code>, <code>K</code>, and <code>L</code> represent the starting point of the probe in the <code>X</code>, <code>Y</code>, and <code>Z</code> axes. <code>N</code> indicates the corner number to probe, where the Front Left corner is <code>0</code> and the number increases anti-clockwise, with the Back Left corner at <code>3</code>.</p>
+<p><code>P</code> indicates the depth to probe the corner surfaces relative to the probed top surface.</p>
+<p><code>Q</code> identifies the mode - with <code>Q1</code>, quick mode is enabled, and no <code>H</code> or <code>I</code> parameter needs to be passed. Only a single probe point will be taken on each surface of the corner.</p>
+<p>With <code>Q0</code> (the default), you must also pass <code>H</code> and <code>I</code> - which specify the approximate X and Y dimensions of the block in millimeters.</p>
+<p>In both modes, you can specify <code>O</code>, the overtravel distance, and <code>T</code>, the clearance distance.</p>
+<p><code>R0</code> suppresses reporting of the probe results, and <code>W</code> represents the WCS offset to set the origin on if passed.</p>
+<h3 id="base">Base</h3>
+<h4 id="g6512-probe"><code>G6512</code> - PROBE</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G6512 </span>Lnnn [Inn] [Xnnn] [Ynnn] [Znnn] [Jnnn] [Knnn]
+</code></pre></div>
+<p><code>G6512</code> is the underlying probing macro called by the higher-level probing cycle macros. It must be passed a target position in at least one axis (<code>X</code>, <code>Y</code>, and <code>Z</code>), and a start position in at least the <code>Z</code> axes (<code>L</code>). It may also be passed a start position in the <code>X</code> or <code>Y</code> axes. The unspecified axes for start and target positions will default to the current machine coordinates.</p>
+<p>If <code>I</code> is not specified, the macro will trigger a guided manual probing cycle similar to the RRF jogging window, but only move towards or away from the target position. When complete, <code>G6512</code> will update the probe position in the <code>mosPCX</code>, <code>mosPCY</code>, and <code>mosPCZ</code> global variables, adjusting for tool radius and deflection.</p>
+<h4 id="g65121-automated-probe"><code>G6512.1</code> - AUTOMATED PROBE</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6512.1 Inn [Xnnn] [Ynnn] [Znnn] [Rnn]
+</code></pre></div>
+<p>Probe a single point using an installed and connected touch probe. Target coordinates are specified using <code>X</code>, <code>Y</code>, <code>Z</code>, and <code>R</code> and can be used to override the number of retries rather than using the default value for the probe.</p>
+<p>Probe position will be reported in the <code>mosPCX</code>, <code>mosPCY</code>, and <code>mosPCZ</code> global variables without compensation for tool radius or deflection. Probe variance will be stored in the <code>mosPVX</code>, <code>mosPVY</code>, and <code>mosPVZ</code> variables.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DO NOT</strong> call this macro directly - use <code>G6512</code>.</p>
+</div>
+<h4 id="g65122-manual-probe"><code>G6512.2</code> - MANUAL PROBE</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+G6512.1 [Xnnn] [Ynnn] [Znnn]
+</code></pre></div>
+<p>Probe a single point using a manual jogging process. Target coordinates are specified using <code>X</code>, <code>Y</code>, and <code>Z</code>.</p>
+<p>Probe position will be reported in the <code>mosPCX</code>, <code>mosPCY</code>, and <code>mosPCZ</code> global variables without compensation for tool radius or deflection. The probe variance will be zero.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DO NOT</strong> call this macro directly - use <code>G6512</code>.</p>
+</div>
+<hr />
+<h2 id="drilling">Drilling</h2>
+<h3 id="g73-drill-cycle-peck-drilling-with-partial-retract"><code>G73</code> - DRILL CYCLE - PECK DRILLING WITH PARTIAL RETRACT</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G73 </span>[Fnnn] [Rnnn] [Qnnn] [Xnnn] [Ynnn] [Znnn]
+
+<span class="c">; At X=10 and Y=10, peck 1mm at a time at 500mm/min,</span>
+<span class="c">; from Z=-5 to Z=-10, retracting by 1mm after each peck.</span>
+<span class="c">; We then retract to Z=-5.</span>
+<span class="nb">G73 </span><span class="k">F</span><span class="m">500</span><span class="w"> </span><span class="k">R</span><span class="m">-5</span><span class="w"> </span><span class="k">Q</span><span class="m">1</span><span class="w"> </span><span class="k">Z</span><span class="m">-10</span><span class="w"> </span><span class="k">X</span><span class="m">10</span><span class="w"> </span><span class="k">Y</span><span class="m">10</span>
+</code></pre></div>
+<p>Runs a <strong>Peck Drilling with Partial Retract</strong> cycle. <strong>WARNING</strong>: - this may not clear enough chips. You are likely better off using a drill cycle that retracts fully.</p>
+<p>The cycle will move to the <code>R</code> height at the current location, then to the <code>XY</code> location if given.</p>
+<p>It will then move downwards towards <code>Z</code> at the given feed rate (or the previously used rate) by the peck distance <code>Q</code>.</p>
+<p>It will then retract by the <code>Q</code> distance, then proceed downwards by <code>2xQ</code>, drilling a successively deeper hole with short retraction moves.</p>
+<p>After it has reached the target depth <code>Z</code> it will retract back to the given <code>R</code> height and return.</p>
+<h3 id="g80-drill-cycle-cancel"><code>G80</code> - DRILL CYCLE - CANCEL</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G80</span>
+</code></pre></div>
+<p>Resets all variables stored about the current canned cycle. After the first call to a canned cycle macro containing drilling details, subsequent calls only need the XY location of the holes. By calling <code>G80</code>, these stored details can be reset so that stored details <em>MUST</em> be provided by the next canned drilling cycle call.</p>
+<h3 id="g81-drill-canned-cycle-full-depth"><code>G81</code> - DRILL CANNED CYCLE - FULL DEPTH</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G80 </span>[Fnnn] [Rnnn] [Xnnn] [Ynnn] [Znnn]
+
+<span class="c">; At X=10 and Y=10, drill down at 500mm/min,</span>
+<span class="c">; from Z=-5 to Z=-10, in one movement.</span>
+<span class="c">; We then retract to Z=-5.</span>
+<span class="nb">G81 </span><span class="k">F</span><span class="m">500</span><span class="w"> </span><span class="k">R</span><span class="m">-5</span><span class="w"> </span><span class="k">Z</span><span class="m">-10</span><span class="w"> </span><span class="k">X</span><span class="m">10</span><span class="w"> </span><span class="k">Y</span><span class="m">10</span>
+</code></pre></div>
+<p>Runs a <strong>Full-Depth</strong> drilling cycle with <em>NO</em> retraction. <strong>WARNING</strong>: - unless drilling very shallow holes, use a drilling cycle with retraction.</p>
+<p>The cycle will move to the <code>R</code> height at the current location, then to the <code>XY</code> location if given.</p>
+<p>It will then move downwards towards <code>Z</code> at the given feed rate (or the previously used rate), reaching the <code>Z</code> location in one move. It will then retract to the <code>R</code> height and return.</p>
+<h3 id="g83-drill-canned-cycle-peck-drilling-with-full-retract"><code>G83</code> DRILL CANNED CYCLE - PECK DRILLING WITH FULL RETRACT</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">G83 </span>[Fnnn] [Rnnn] [Qnnn] [Xnnn] [Ynnn] [Znnn]
+
+<span class="c">; At X=10 and Y=10, peck 1mm at a time at 500mm/min,</span>
+<span class="c">; from Z=-5 to Z=-10, retracting to Z=-5 after each peck.</span>
+<span class="nb">G83 </span><span class="k">F</span><span class="m">500</span><span class="w"> </span><span class="k">R</span><span class="m">-5</span><span class="w"> </span><span class="k">Q</span><span class="m">1</span><span class="w"> </span><span class="k">Z</span><span class="m">-10</span><span class="w"> </span><span class="k">X</span><span class="m">10</span><span class="w"> </span><span class="k">Y</span><span class="m">10</span>
+</code></pre></div>
+<p>Working in the same manner as <code>G73</code>, this cycle retracts to the initial Z position after each peck rather than retracting by the peck distance.</p>
+<p>This allows for easier chip clearing during the drilling cycle. If in doubt, use this cycle type for canned drilling as it is the least likely to break your drill if chip clearing is an issue.</p>
+<hr />
+<h2 id="tool-management">Tool Management</h2>
+<h3 id="m4000-define-tool"><code>M4000</code> - DEFINE TOOL</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M4000 </span>Pnn Rnn S&quot;...&quot; [Xnn] [Ynn]
+
+<span class="c">; Define tool index 5 as a 30mm diameter Face Mill</span>
+<span class="nb">M4000 </span><span class="k">P</span><span class="m">5</span><span class="w"> </span><span class="k">R</span><span class="m">15.0</span><span class="w"> </span>S&quot;30mm Face Mill 3 flute&quot;
+
+<span class="c">; Define tool index 49 as a probe with a 1mm tip radius and deflection values for X and Y</span>
+<span class="nb">M4000 </span><span class="k">P</span><span class="m">49</span><span class="w"> </span><span class="k">R</span><span class="m">1</span><span class="w"> </span>S&quot;Touch Probe&quot; X0.05 Y0.01
+</code></pre></div>
+<p>We need to store additional details about tools that RRF is not currently able to accommodate natively - this includes tool radius (<code>R</code>) and deflection values for probes (<code>X</code> and <code>Y</code>). Tool index is set using <code>P</code> and description is set using <code>S".."</code>. M4000<code>stores these custom values that allow us to use them while configuring RRF with the relevant tool details using</code>M563`.</p>
+<h3 id="m4001-forget-tool"><code>M4001</code> - FORGET TOOL</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M4001 </span>Pnn
+
+<span class="c">; Forget tool 19</span>
+<span class="nb">M4001 </span><span class="k">P</span><span class="m">19</span>
+</code></pre></div>
+<p>Reset the tool at index <code>Pnn</code> to defaults.</p>
+<h3 id="tn-execute-tool-change"><code>T&lt;N&gt;</code> - EXECUTE TOOL CHANGE</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+Tnn
+
+<span class="c">; Change to tool 41</span>
+<span class="k">T</span><span class="m">41</span>
+</code></pre></div>
+<p>This macro is built into RRF, using the <code>t{free,pre,post}.g</code> files. If the target tool number is specified, these files are executed in order. The operator is prompted to change to the correct tool and if this tool is a probe tool, will be asked to verify that the tool is connected by triggering it manually before proceeding.</p>
+<hr />
+<h2 id="coolant-control">Coolant Control</h2>
+<h3 id="m71-enable-air-blast"><code>M7.1</code> - ENABLE AIR BLAST</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+M7.1
+</code></pre></div>
+<p>Enables the general-purpose output associated with air-blast, set by the operator during the configuration wizard.</p>
+<h3 id="m7-enable-mist"><code>M7</code> - ENABLE MIST</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M7</span>
+</code></pre></div>
+<p>Enables the general-purpose output associated with unpressurised coolant, set by the operator during the configuration wizard. Air blast (<code>M7.1</code>) will be activated before the coolant output, if necessary.</p>
+<h3 id="m8-enable-flood"><code>M8</code> - ENABLE FLOOD</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M8</span>
+</code></pre></div>
+<p>For those mad enough to build flood coolant into a DIY CNC machine, <code>M8</code> enables pressurised flood coolant on the general-purpose output set by the operator during the configuration wizard.</p>
+<h3 id="m9-control-all-coolants"><code>M9</code> - CONTROL ALL COOLANTS</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M9 </span>[Rnn]
+
+<span class="c">; Stop all coolants</span>
+<span class="nb">M9</span>
+
+<span class="c">; Restore all coolants to their previously saved states</span>
+<span class="nb">M9 </span><span class="k">R</span><span class="m">1</span>
+</code></pre></div>
+<p>By default, this turns off any enabled coolant outputs. If called with the <code>R1</code> parameter, coolant output states will be restored to those saved during the most recent pause. This macro is called during the resume process to re-enable coolant.</p>
+<hr />
+<h2 id="spindle-control">Spindle Control</h2>
+<h3 id="spindle-start-stop">Spindle Start / Stop</h3>
+<h4 id="m39-start-spindle-and-wait"><code>M3.9</code> - START SPINDLE AND WAIT</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+M3.9 [Snnnnn] [Pnn] [Dnnn]
+
+<span class="c">; Start spindle assigned to the current tool at 8000 RPM</span>
+M3.9 S8000
+</code></pre></div>
+<p>Wrapping the inbuilt <code>M3</code> command, <code>M3.9</code> starts the spindle in the clockwise direction at a particular speed and waits for it to accelerate to the target speed.</p>
+<p>If spindle feedback is configured, this command waits for a general-purpose input to change state before returning.</p>
+<p>If spindle feedback is not configured, a static delay is used to make sure the spindle is up to speed before returning. The static speed used for this is timed by the operator during the wizard process, and modified based on the percentage speed change being requested. So if the RPM change is 50% of the maximum RPM of the spindle, then the delay will be 50% of the operator-recorded delay.</p>
+<p>Additionally, if Expert Mode is disabled, then this macro will pop up an operator confirmation when the spindle is going to accelerate from 0 rpm.</p>
+<h4 id="m59-stop-spindle-and-wait"><code>M5.9</code> - STOP SPINDLE AND WAIT</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+M5.9 [Dnnn]
+</code></pre></div>
+<p>Wrapping the inbuilt <code>M5</code> command, <code>M5.9</code> stops all spindles and waits for them to decelerate. Like <code>M3.9</code>, this either uses a pin state-change if spindle feedback is configured, or a static delay if not, to make sure we do not proceed until the spindle is stationary.</p>
+<h3 id="variable-spindle-speed-control">Variable Spindle Speed Control</h3>
+<p>Variable Spindle Speed Control (VSSC) constantly adjusts the rotational speed of the spindle up and down over a set range to avoid resonance between the tool and the workpiece building up at constant RPMs. It can provide a quality boost in situations where resonances would otherwise occur.</p>
+<h4 id="m7000-enable-vssc"><code>M7000</code> - ENABLE VSSC</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M7000 </span>Pnn Vnn
+
+<span class="c">; Enable VSSC with a period of 2000 ms and a variance of 100 RPM</span>
+<span class="nb">M7000 </span><span class="k">P</span><span class="m">2000</span><span class="w"> </span><span class="k">V</span><span class="m">100</span>
+</code></pre></div>
+<p>Enable Variable Spindle Speed Control. The <code>P</code> and <code>V</code> parameters must be specified, and these control the period (in milliseconds) and variance (in RPM) of the VSSC function.</p>
+<h4 id="m7001-disable-vssc"><code>M7001</code> - DISABLE VSSC</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M7001</span>
+</code></pre></div>
+<p>Disable Variable Spindle Speed Control</p>
+<hr />
+<h2 id="debugging">Debugging</h2>
+<h3 id="m7600-output-all-known-variables"><code>M7600</code> - OUTPUT ALL KNOWN VARIABLES</h3>
+<div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
+<span class="nb">M7600 </span>[Dnn]
+</code></pre></div>
+<p>Sometimes it is necessary to debug MillenniumOS or RRF, and this macro allows outputting the macro variables that MillenniumOS uses in a manner that can be attached to tickets or discord messages to aid debugging. Call it with the <code>D1</code> parameter to enable additional RRF object model output that can help to debug the odder issues.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.action.edit", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
