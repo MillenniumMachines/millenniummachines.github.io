@@ -311,7 +311,7 @@ To avoid the Y-Axis endstop getting damaged during the rest of the assembly, it 
 
 !!! info annotate "Components Required"
     ```
-     6 x M3x6mm FHCS
+     5 x M3x6mm FHCS
      3 x M3 Heat-set Insert
      1 x 10mm x 11mm Drag Chain
      1 x Y Drag Chain Mount (1)
