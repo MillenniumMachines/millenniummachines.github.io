@@ -2,7 +2,11 @@
 
 ## Kits
 
-Currently there are no approved kits available, but fear not - the toolsetter uses easily obtainable parts and you can find a full list of them below!
+The toolsetter is available as part of the Milo kit from LDO, but may also be available separately - contact your local LDO reseller for details.
+
+Alternatively, the toolsetter uses easily obtainable parts and you can find a full list of them below!
+
+<!-- Should update that there is in-fact an LDO kit available at several retailers. -->
 
 ## Individual Parts
 
@@ -17,7 +21,7 @@ Currently there are no approved kits available, but fear not - the toolsetter us
 | Cables        | JST Connector 2 Position | JST-XH             | 1   |
 
 !!! info annotate "Return Spring"
-    The Long John Toolsetter can be fitted with a compression spring to help the contact return. You may choose to fit this, however it isn't required. Any appropriately sized low force compression spring should be suitable.
+    The Long John Toolsetter can be fitted with a compression spring to help the contact return. You may choose to fit this, however it isn't required. Any appropriately sized low-force compression spring should be suitable.
 
 # Printing Guide
 
@@ -25,11 +29,11 @@ The toolsetter part has a sacrificial floor to allow unsupported features to be 
 
 **Unless you're willing to experiment and almost certainly waste filament, stick with 0.2mm layers.**
 
-We provide a **Minimum Wall Thickness** for every printable part, which is the minimum **total** thickness of your perimeter lines and top and bottom solid layers. This depends on the size of your nozzle and line width settings in your slicer so must be calculated.
+We provide a **Minimum Wall Thickness** for every printable part. This value is the minimum **total** thickness of your perimeter lines and top and bottom solid layers. The size of your nozzle and line width settings (in your slicer) contribute to this value, so the number of parameter lines needs to be calculated.
 
-Given a 0.4mm nozzle, 100% perimeter line width, 0.2mm layers and a minimum wall thickness of 2.4mm, you would set your slicer to generate a _minimum_ of 6 perimeters and 12 top / bottom layers.
+Given a 0.4mm nozzle, 100% perimeter line width, 0.2mm layers, and a minimum wall thickness of 2.4mm, you would set your slicer to generate a _minimum_ of 6 perimeters and 12 top / bottom layers.
 
 ## The Long John Toolsetter
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** |
 |----------|------------|-------------------------|--------------|--------:|----------------------|
-| [Housing](https://github.com/MillenniumMachines/Long-John-Toolsetter/blob/main/stls/Housing.stl)               | 40%  | 1.6mm  | ABS/ASA | 4 | :material-close: No |
+| [Housing](https://github.com/MillenniumMachines/Long-John-Toolsetter/blob/main/stls/Housing.stl)               | 40%  | 1.6mm  | ABS/ASA | 1 | :material-close: No |

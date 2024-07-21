@@ -20,16 +20,16 @@ Casa uses 3 different print profiles. Each profile is designed around a 0.4 mm n
 
 ## File Naming
 
-With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colors? Have no fear, we've got your back - each file is labelled.
+With your STL files downloaded and your printer warmed up, you may be wondering which parts to print in your favorite colours. Have no fear, we've got your back - each file is labelled.
 
-### Color
+### Colour
 
-All Casa parts are designed to be printed in a single primary colour. Don't let this stop you from mixing and matching colours to make you own colour scheme though!
+All Casa parts are designed to be printed in a single primary colour. Don't let this stop you from mixing and matching colours to make your colour scheme unique!
 
 ### Quantity Required
 
 Example: `Panel-Clip-A x8.stl`
-If any file ends with `x#`, that is telling you the quantity of that part required to build the enclosure.
+If any file ends with `x#`, that tells you the quantity of that part required to build the enclosure.
 
 ## Printed Parts
 
@@ -44,9 +44,10 @@ If any file ends with `x#`, that is telling you the quantity of that part requir
 | Panel-Clip-F                | SS             |          2 | ABS/ASA/PETG/PLA |
 | Panel-Clip-G                | SS             |          7 | ABS/ASA/PETG/PLA |
 | Panel-Clip-H                | SS             |          2 | ABS/ASA/PETG/PLA |
-| Panel-Clip-I                | SS             |          2 | ABS/ASA/PETG/PLA |
+| Panel-Clip-I                | SS             |          1 | ABS/ASA/PETG/PLA |
 | Panel-Clip-J                | SS             |          4 | ABS/ASA/PETG/PLA |
 | Panel-Clip-K                | SS             |          8 | ABS/ASA/PETG/PLA |
+| Panel-Clip-L                | SS             |          1 | ABS/ASA/PETG/PLA |
 | Front-Vent-Cover            | SS             |          1 | ABS/ASA/PETG/PLA |
 | Front-Mid-Cover             | SS             |          1 | ABS/ASA/PETG/PLA |
 | Front-Switch-Cover          | SS             |          1 | ABS/ASA/PETG/PLA |
