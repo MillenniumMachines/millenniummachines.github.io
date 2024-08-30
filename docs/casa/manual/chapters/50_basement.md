@@ -12,10 +12,10 @@
 
 !!! info annotate "Components Required"
     ```
-        2x Leg A
-        2x Leg B
-        4x M3x3mm Heat Insert
-        4x Rubber Foot
+        4 x M3x3mm Heat-set Insert
+        4 x Rubber Foot
+        2 x Leg A
+        2 x Leg B
     ```
 ![](../img/50_F_1.png)
 
@@ -26,8 +26,8 @@
 E-Skirt
 !!! info annotate "Components Required"
     ```
-        2x Skirt E
-        4x M3x3mm Heat Insert
+        4 x M3x3mm Heat-set Insert
+        2 x Skirt E
 
     ```
 ![](../img/50_S_1.png)
@@ -39,8 +39,8 @@ E-Skirt
 Chip Canal B
 !!! info annotate "Components Required"
     ```
-        Chip Canal B
-        2x M3x3mm Heat Insert
+        2 x M3x3mm Heat-set Insert
+        1 x Chip Canal B
 
     ```
 ![](../img/50_CC_1.png)
@@ -50,8 +50,8 @@ Chip Canal B
 Chip Canal C
 !!! info annotate "Components Required"
     ```
-        Chip Canal C
-        4x M3x3mm Heat Insert
+        4 x M3x3mm Heat-set Insert
+        1 x Chip Canal C
 
     ```
 ![](../img/50_CC_2.png)
@@ -61,11 +61,11 @@ Chip Canal C
 Chip Canal Assembly
 !!! info annotate "Components Required"
     ```
-        Chip Canal A
-        Chip Canal B
-        Chip Canal C
-        Chip Canal D
-        10x M3x10mm-SHCS
+       10 x M3x10mm SHCS
+        1 x Chip Canal A
+        1 x Chip Canal B
+        1 x Chip Canal C
+        1 x Chip Canal D
 
     ```
 ![](../img/50_CC_3.png)
@@ -79,22 +79,22 @@ Chip Canal Assembly
 
 !!! info annotate "Components Required"
     ```
-        4x Skirt-K
-        4x Skirt-J
-        4x Skirt-L
-        Leg A
-        Leg B
-        Skirt-A
-        Skirt-B
-        Skirt-C
-        Skirt-D
-        Skirt-E
-        Skirt-F
-        Skirt-G
-        Skirt-H
-        Skirt-I
-        44x M3x12mm-SHCS
-        2x M5x10mm-BHCS
+       44 x M3x12mm SHCS
+        4 x Skirt K
+        4 x Skirt J
+        4 x Skirt L
+        2 x M5x10mm BHCS
+        1 x Leg A
+        1 x Leg B
+        1 x Skirt A
+        1 x Skirt B
+        1 x Skirt C
+        1 x Skirt D
+        1 x Skirt E
+        1 x Skirt F
+        1 x Skirt G
+        1 x Skirt H
+        1 x Skirt I
 
     ```
 
@@ -121,18 +121,18 @@ Chip Canal Assembly
 
 !!! info annotate "Components Required"
     ```
-        Leg A
-        Leg B
-        Skirt-A
-        Skirt-B
-        Skirt-C
-        Skirt-D
-        Skirt-E
-        Skirt-G
-        Skirt-H
-        Skirt-I
-        18x M3x12mm-SHCS
-        2x M5x10mm-BHCS
+        18 x M3x12mm SHCS
+         2 x M5x10mm BHCS
+         1 x Leg A
+         1 x Leg B
+         1 x Skirt A
+         1 x Skirt B
+         1 x Skirt C
+         1 x Skirt D
+         1 x Skirt E
+         1 x Skirt G
+         1 x Skirt H
+         1 x Skirt I
 
     ```
 
