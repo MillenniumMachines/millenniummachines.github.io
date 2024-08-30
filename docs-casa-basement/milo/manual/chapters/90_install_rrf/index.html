@@ -1,0 +1,1492 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation Preview for Millennium Machines - Branch: casa-basement">
+      
+      
+      
+        <link rel="canonical" href="https://millenniummachines.github.io/docs-casa-basement/milo/manual/chapters/90_install_rrf/">
+      
+      
+        <link rel="prev" href="../80_table_assembly/">
+      
+      
+        <link rel="next" href="../100_assemble_electronics/">
+      
+      
+      <link rel="icon" href="../../../../img/millennium-machines-icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Install RRF - Millennium Machines (Branch: casa-basement)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m22.61 19-9.08-9.09c.93-2.34.47-5.1-1.44-7C9.79.61 6.21.4 3.66 2.26L7.5 6.11 6.08 7.5 2.25 3.69C.39 6.23.6 9.82 2.9 12.11c1.86 1.86 4.57 2.35 6.89 1.48l9.11 9.11c.39.39 1.02.39 1.41 0l2.3-2.3c.39-.4.39-1.01 0-1.4m-3 1.59-9.46-9.46c-.61.45-1.29.72-2 .82-1.36.2-2.79-.21-3.83-1.25C3.37 9.76 2.93 8.5 3 7.26l3.09 3.09 4.24-4.24L7.24 3c1.26-.05 2.49.39 3.44 1.33a4.469 4.469 0 0 1 1.24 3.96 4.35 4.35 0 0 1-.88 1.96l9.46 9.45-.89.89Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#install-rrf" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Millennium Machines (Branch: casa-basement)" class="md-header__button md-logo" aria-label="Millennium Machines (Branch: casa-basement)" data-md-component="logo">
+      
+  <img src="../../../../img/millennium-machines-icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Millennium Machines (Branch: casa-basement)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Install RRF
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MillenniumMachines/millenniummachines.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Millennium Machines (Branch: casa-basement)" class="md-nav__button md-logo" aria-label="Millennium Machines (Branch: casa-basement)" data-md-component="logo">
+      
+  <img src="../../../../img/millennium-machines-icon.png" alt="logo">
+
+    </a>
+    Millennium Machines (Branch: casa-basement)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MillenniumMachines/millenniummachines.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Milo - Desktop CNC Mill
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Milo - Desktop CNC Mill
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bom/sourcing_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sourcing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../printing/print_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Printing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently Asked Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Assembly Manual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Assembly Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_acknowledgements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30_hardware_reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../40_y_axis_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Y-Axis Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../50_x_axis_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    X-Axis Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../60_z_axis_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Z-Axis Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../70_fmj_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FMJ Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../80_table_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Install RRF
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Install RRF
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-your-sd-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare your SD Card
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-a-configuration-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download a Configuration Release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extract-configuration-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extract Configuration Release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#board-specific-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Board specific setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-duet-web-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing Duet Web Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-your-wifi-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure your WiFi network
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../100_assemble_electronics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assemble Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../110_pre_flight_checks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pre-Flight Checks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Casa - Desktop CNC Enclosure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Casa - Desktop CNC Enclosure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/bom/sourcing_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sourcing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/bom/printing_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Printing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently Asked Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Assembly Manual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Assembly Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/manual/chapters/00_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/manual/chapters/10_outer_frame_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outer Frame Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/manual/chapters/20_sliding_door_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sliding Door Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/manual/chapters/30_panels_and_clips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Panels and Clips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/manual/chapters/40_electronics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Electronics Bay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../casa/manual/chapters/50_basement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Long John Toolsetter
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Long John Toolsetter
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../long-john/bom/sourcing_and_print_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sourcing and Print Guild
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../long-john/assembly_manual/assembly_manual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assembly Manual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MillenniumOS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            MillenniumOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../millennium-os/manual/chapters/10_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../millennium-os/manual/chapters/20_installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../millennium-os/manual/chapters/30_usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../millennium-os/manual/chapters/40_gcodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    G-Codes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contact-us/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-your-sd-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare your SD Card
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-a-configuration-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download a Configuration Release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extract-configuration-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extract Configuration Release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#board-specific-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Board specific setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-duet-web-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing Duet Web Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-your-wifi-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure your WiFi network
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/MillenniumMachines/millenniummachines.github.io/edit/casa-basement/docs/milo/manual/chapters/90_install_rrf.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="install-rrf">Install <abbr title="RepRapFirmware">RRF</abbr></h1>
+<div class="admonition tip">
+<p class="admonition-title">Sit Back... and Relax!</p>
+<p>For those of you who are less software-inclined, don't panic! We've done most of the work for you.</p>
+<p><abbr title="RepRapFirmware">RRF</abbr> requires you to populate an SD card with a specific file structure and files to go with it. To
+To make this easier for you, we have built <abbr title="RepRapFirmware">RRF</abbr> configuration releases for common hardware specifications that include mainboard and WiFi card firmware, as well as a known good configuration for your machine.
+If you don't wish to install the pre-made firmware and would rather create your own from scratch, then
+please follow <a href="https://www.youtube.com/watch?v=TAT532vIVzU&amp;t=335s">this tutorial</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Public Beta</p>
+<p>The <abbr title="RepRapFirmware">RRF</abbr> configurations for the reference design and LDO kit are released as a public beta. As outlined in the repository, we take no responsibility or liability for any loss or damage caused to you or others from the use of this software, which is provided as-is.</p>
+<p>That said, this software has been used internally and tested by a small group of external users and has proven to be, in our testing at least, reliable and properly configured.</p>
+</div>
+<h2 id="prepare-your-sd-card">Prepare your SD Card</h2>
+<p>You will need a freshly formatted SD card with a capacity of up to 32GB.</p>
+<p>If the card capacity is 4GB or lower, use the FAT16 format - If the capacity is more than 4GB (up to 32GB) then you will have to use the FAT32 format.</p>
+<p>The SD card should also be class 4 or higher.</p>
+<hr />
+<h2 id="download-a-configuration-release">Download a Configuration Release</h2>
+<p>First, you'll need to download a zip release for the hardware configuration of your choice from the <a href="https://github.com/MillenniumMachines/RRF-Configs/releases"><abbr title="RepRapFirmware">RRF</abbr>-Configs</a> repository. These releases bundle the latest version of RepRapFirmware for your mainboard, the latest WiFi firmware, a known-good configuration, and (optionally, available soon) <a href="https://github.com/MillenniumMachines/MillenniumOS">MillenniumOS</a>.</p>
+<p>MillenniumOS is an "operations system" for <abbr title="RepRapFirmware">RRF</abbr> that includes a Fusion 360 post-processor and custom g-code dialect to enable easy work-piece probing, tool changes, toolsetting, and other quality-of-life / safety features. If you are new to machining, starting with MillenniumOS should help you focus on creating your tool paths and making your first cuts, without focusing too much on the intricacies of edge finding, tool offset calculations, and other things.</p>
+<p>The release zip files are named based on the machine hardware specification the configuration was designed for, so if you have a kit with a particular mainboard, click to download the zip file which is named based on the kit manufacturer and mainboard you have.</p>
+<p>If you have a kit that does <em>not</em> conform to any known specification, please open an issue.</p>
+<p>The releases with <code>mos</code> in the zip file name contain the latest compatible release of MillenniumOS.</p>
+<p><img alt="View of GitHub Releases page for RRF Config" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_0.png" /></p>
+<h2 id="extract-configuration-release">Extract Configuration Release</h2>
+<p>Once you have the <abbr title="RepRapFirmware">RRF</abbr> configuration release downloaded, you need to extract it to the root of your formatted SD card.</p>
+<p>Make sure the tool you use to extract the files does not create a subdirectory based on the name of the Zip file. The layout of your SD card should look like the following image:</p>
+<p><img alt="View of SD Card Layout after extracting RRF Config" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_1.png" /></p>
+<hr />
+<h2 id="board-specific-setup">Board specific setup</h2>
+<p>Some boards require jumpers to be set to allow mainboard or WiFi updates to be applied. You should check if this applies to you by reading your mainboard documentation.</p>
+<p>For example - if you are using the Mellow FLY CDYv3, then you need to add 2 jumpers as shown below to enable on-board WiFi updates.</p>
+<p><img alt="View of Fly CDYv3 jumpers required for WiFi flashing" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_2.png" /></p>
+<hr />
+<h2 id="initial-setup">Initial Setup</h2>
+<p>At this point, eject the SD card from your computer and insert it into your mainboard.</p>
+<p>Power your board either via USB or via PSU and wait. The board will install a new version of <abbr title="RepRapFirmware">RRF</abbr>, automatically update the WiFi module, and then start a WiFi Access Point called <code>Milo</code>. The password for this is <code>millenniummachines</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Please be patient</p>
+<p>Installing <abbr title="RepRapFirmware">RRF</abbr>, updating the WiFi module, and starting a WiFi AP can take some time. After powering the board on for the first time with the SD card installed, you should leave the board for 5-10 minutes to work. If the <code>Milo</code> access point appears then this is a safe indication that the initial update and configuration process is complete, and you are ready to use the machine.</p>
+<p>If the WiFi AP does <em>not</em> appear after 10 minutes, take the SD card back out of the board, plug it back into your computer, and check if the <code>firmware.bin</code> file in the root of the SD card has been renamed to <code>FLY.CUR</code>. If it has <em>not</em>, then the board was not updated properly. Please use our discord or other channels for support.</p>
+</div>
+<hr />
+<h2 id="accessing-duet-web-control">Accessing Duet Web Control</h2>
+<p>Once the <code>Milo</code> WiFi Access Point is visible, you can connect to it with the following details:</p>
+<div class="highlight"><pre><span></span><code>SSID:     Milo
+Password: millenniummachines
+</code></pre></div>
+<p>Once connected, open a browser and go to <a href="http://192.168.40.1">http://192.168.40.1</a> - note this is <code>http</code> and <em>not</em> <code>https</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Some browsers may force you to connect to <code>https://</code> by default - you may need to specify the full URL, <code>http://192.168.40.1</code> to override this behaviour.</p>
+</div>
+<p>Once connected to Duet Web Control, you should see a screen similar to this. This is the interface you will use to control your new CNC Mill!</p>
+<p><img alt="View of RRFs Duet Web Control interface" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_3.png" /></p>
+<hr />
+<h2 id="configure-your-wifi-network">Configure your WiFi network</h2>
+<p>If you want to connect your Milo to an existing WiFi network rather than using the inbuilt Access Point, you can use the Web Interface to change the machine configuration.</p>
+<p>The first step is to tell <abbr title="RepRapFirmware">RRF</abbr> about your wireless network. Click on the "Console" tab on the left-hand side and type the following into the <code>Send code...</code> box, then press ENTER:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">M587 </span>S&quot;your WiFi SSID&quot; P&quot;your WiFi password&quot;
+</code></pre></div>
+<p>You should see a <em>green</em> highlighted line indicating that the command was successful:</p>
+<p><img alt="View of DWC Console window indicating successful WiFi network configuration" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_4.png" /></p>
+<hr />
+<p>You must now instruct <abbr title="RepRapFirmware">RRF</abbr> to connect as a WiFi client rather than starting its own Access Point.</p>
+<p>We package a <code>network.g.example</code> file which configures <abbr title="RepRapFirmware">RRF</abbr> as a WiFi client and can be used to set any user-specific settings that should not be overwritten when updating. The file needs to be renamed to <code>network.g</code> for it to load.</p>
+<p>To rename it, browse to the "Files -&gt; System" tab, right-click on <code>network.g.example</code>, then click "Rename", and enter <code>network.g</code>:</p>
+<p><img alt="Renaming the network.g.example file to network.g" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_5.png" /></p>
+<hr />
+<p>You may need to configure additional network-specific settings in this file, but this is outside the scope of this guide - please refer to the <a href="https://docs.duet3d.com/User_manual/Reference/Gcodes">Duet3D Gcode Documentation</a> for this - specifically codes <code>M553</code>, <code>M554</code> and <code>M586</code>.</p>
+<p>After editing the file to your liking, you can restart the mainboard. Once restarted, it should attempt to connect to your WiFi network.</p>
+<p>You may have to use your router interface to identify the address that the Milo has been given on your network if this was not configured statically - this is outside of the scope of this guide.</p>
+<p>You can also <a href="https://teamgloomy.github.io/putty.html">connect to the mainboard over USB</a> using Putty or another terminal emulator depending on your operating system - watching the output of the terminal when the machine connects to the WiFi network will show the IP address that has been assigned.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When you are prompted by DWC to Install the updates, you should click Yes - but be aware, this will involve flashing your WiFi module twice - once when you click Yes, and once when the board reboots after it is updated. This is unfortunate, but necessary, because we need the flash-on-reboot to enable hands-free configuration when extracting the Zip file to a fresh SD card and inserting it into an unconfigured board.</p>
+</div>
+<hr />
+<p>At this point, the basic firmware setup is complete and all that remains are some firmware checks which will be covered later in the manual.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We only provide bundled firmware configurations for specific machine setups. If your machine is self-built, you can modify one of these configurations to match your mainboard, wiring, and other unique machine features. Alternatively, you can use the <a href="https://teamgloomy.github.io/Configurator">TeamGloomy Configurator</a> - but remember that the configurator produces 3D printer configurations, so it will need modifying to suit the particular features of your Milo.</p>
+</div>
+<p>It is now safe to perform the physical installation of your board into your mainboard mount.</p>
+<hr />
+<p><a href="../100_assemble_electronics/">Next Chapter: Assemble Electronics</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.action.edit", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>
