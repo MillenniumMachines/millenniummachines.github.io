@@ -204,12 +204,12 @@ When a probe cycle is triggered by the post-processor, you will see the followin
 
 ---
 
-!!! note
-    You can also run individual probe cycles directly from the **"Macros"** menu of DWC when a job is not running. These macros do **NOT** set the origin of a WCS - this is only done by the `G6600` macro, which can be run manually using the **"Probe Workpiece"** entry in the **"Macros"** list.
+!!! warning
+    You can also use the `Set Work XYZ` or `Set X`, `Set Y` and `Set Z` buttons in Duet Web Control to manually set your origin if you do not have a touch probe installed.
 
-    If you want to set the origin of a WCS, use the **"Probe Workpiece"** macro and select the cycle you want to use from there.
+    However - you _MUST_ select your datum tool first, by entering `T49` in the console and allowing its length to be probed. If you do not do this, the height of your probed workpiece will be undefined and this _WILL_ have unintended consequences.
 
-    When you run the probing cycle macros directly, the information that these generate is saved to global variables that can be used by custom code, or to manually set the origin. These details can be viewed by running `M7600` in the console. The variable names are shortened to save memory so you will need to refer to their descriptions in `mos-vars.g` to understand what information these variables contain.
+    **ALWAYS SWITCH TO TOOL 49 BEFORE SETTING WORK ORIGIN MANUALLY!**
 
 <!--
     NOTE: Headings in this section at depth 3 create anchors that are linked to by
