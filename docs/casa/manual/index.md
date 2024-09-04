@@ -6,3 +6,4 @@
 - [Sliding Door](./chapters/20_sliding_door_assembly.md)
 - [Panels and Clips](./chapters/30_panels_and_clips.md)
 - [Electronics](./chapters/40_electronics.md)
+- [Basement](./chapters/50_basement.md)

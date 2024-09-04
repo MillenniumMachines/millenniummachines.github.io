@@ -141,4 +141,4 @@ Make sure to add weather stripping to the panel.
 
     We would love to see your finished build! Please share it on [Discord](https://discord.gg/ya4UUj7ax2) or [Reddit](https://www.reddit.com/r/MilleniumMachines/)!
 
-<!-- [Next Chapter: Basement](./50_basement.md) -->
+[Next Chapter: Basement](./50_basement.md)
