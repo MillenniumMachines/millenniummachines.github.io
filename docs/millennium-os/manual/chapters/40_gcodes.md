@@ -273,7 +273,6 @@ Parameters `J`, `K`, and `L` represent the starting point of the probe in the `X
 
 `W` represents the WCS offset to set the origin on if passed.
 
-
 #### `G6502` - RECTANGLE POCKET
 
 ```gcode
