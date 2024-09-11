@@ -649,6 +649,12 @@ By default, this turns off any enabled coolant outputs. If called with the `R1` 
 
 #### `M3.9` - START SPINDLE AND WAIT
 
+Parameters:
+
+* **Dnnn** Dwell time override in seconds
+* **Pnn** Spindle ID
+* **Snnnnn** RPM Requested
+
 ```gcode
 ; Usage
 M3.9 [Snnnnn] [Pnn] [Dnnn]
