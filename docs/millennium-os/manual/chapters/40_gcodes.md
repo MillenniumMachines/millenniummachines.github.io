@@ -273,7 +273,6 @@ Parameters `J`, `K`, and `L` represent the starting point of the probe in the `X
 
 `W` represents the WCS offset to set the origin on if passed.
 
-
 #### `G6502` - RECTANGLE POCKET
 
 ```gcode
@@ -648,6 +647,12 @@ By default, this turns off any enabled coolant outputs. If called with the `R1` 
 ### Spindle Start / Stop
 
 #### `M3.9` - START SPINDLE AND WAIT
+
+Parameters:
+
+* **Dnnn** Dwell time override in seconds
+* **Pnn** Spindle ID
+* **Snnnnn** RPM Requested
 
 ```gcode
 ; Usage
