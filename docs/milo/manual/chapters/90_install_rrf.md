@@ -27,7 +27,7 @@ The SD card should also be class 4 or higher.
 
 ## Download a Configuration Release
 
-First, you'll need to download a zip release for the hardware configuration of your choice from the [RRF-Configs](https://github.com/MillenniumMachines/RRF-Configs/releases) repository. These releases bundle the latest version of RepRapFirmware for your mainboard, the latest WiFi firmware, a known-good configuration, and (optionally, available soon) [MillenniumOS](https://github.com/MillenniumMachines/MillenniumOS).
+First, you'll need to download a zip release for the hardware configuration of your choice from the [RRF-Configs](https://github.com/MillenniumMachines/RRF-Configs/releases) repository. These releases bundle the latest version of RepRapFirmware for your mainboard, the latest WiFi firmware, a known-good configuration, and (optionally) [MillenniumOS](https://github.com/MillenniumMachines/MillenniumOS).
 
 MillenniumOS is an "operations system" for RRF that includes a Fusion 360 post-processor and custom g-code dialect to enable easy work-piece probing, tool changes, toolsetting, and other quality-of-life / safety features. If you are new to machining, starting with MillenniumOS should help you focus on creating your tool paths and making your first cuts, without focusing too much on the intricacies of edge finding, tool offset calculations, and other things.
 
