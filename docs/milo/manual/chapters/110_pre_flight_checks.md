@@ -72,7 +72,7 @@ the line beginning with `M950` and change the value found after `L` to your maxi
 
 Before you can start cutting material, you need to make sure that the spindle is wired correctly and is rotating in the proper direction.
 
-Using a 6mm gauge pin (there should be one included in the LDO kit) draw adraw a stright line ~10mm down the side of the gauge pin and insert it into a 6mm collet in your spindle. 
+Using a 6mm gauge pin (included in most LDO kits) draw a stright line ~10mm down the side of the gauge pin and insert it into a 6mm collet in your spindle. 
 
 !!! note
     Make sure to snugly tighten the gauge pin in the spindle before processing to the next step
