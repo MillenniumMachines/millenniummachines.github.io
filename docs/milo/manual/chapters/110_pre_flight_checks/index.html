@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../img/millennium-machines-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
@@ -709,6 +709,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verifying-spindle-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifying Spindle Rotation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#grease-everything" class="md-nav__link">
     <span class="md-ellipsis">
       Grease EVERYTHING
@@ -1335,6 +1344,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verifying-spindle-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifying Spindle Rotation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#grease-everything" class="md-nav__link">
     <span class="md-ellipsis">
       Grease EVERYTHING
@@ -1408,6 +1426,19 @@ the line beginning with <code>M950</code> and change the value found after <code
 <p class="admonition-title">Note</p>
 <p>If you are using one of our predefined RRF configurations for a particular hardware specification (such as the LDO kit), this has been done for you already. You only need to ensure that enabling the spindle in Duet Web Control and changing the RPM setting starts and stops the spindle and controls the RPM effectively.</p>
 </div>
+<hr />
+<h2 id="verifying-spindle-rotation">Verifying Spindle Rotation</h2>
+<p>Before you can start cutting material, you need to make sure that the spindle is wired correctly and is rotating in the proper direction.</p>
+<p>Using a 6mm gauge pin (included in most LDO kits) draw a stright line ~10mm down the side of the gauge pin and insert it into a 6mm collet in your spindle. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure to snugly tighten the gauge pin in the spindle before proceeding to the next step!</p>
+</div>
+<p>Start your spindle at the lowest speed and then turn it off and watch the rotation of the line on the gauge pin as the spindle slows down.  </p>
+<ul>
+<li>If the line on the gauge pin is going from right to left ( &lt;-- ), your spindle is rotating in the right direction.  </li>
+<li>If the line is going from left to right ( --&gt; ), the spindle is rotating in the wrong direction. Swap any two spindle phase wires (UVW) at the VFD terminals (Swap UV, UW or VW).</li>
+</ul>
 <hr />
 <h2 id="grease-everything">Grease EVERYTHING</h2>
 <p>If you have not done so yet make sure that all lead-screws and rails are appropriately greased and or oiled.</p>
