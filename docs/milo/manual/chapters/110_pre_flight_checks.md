@@ -79,8 +79,8 @@ Using a 6mm gauge pin (there should be one included in the LDO kit) draw adraw a
 
 Set your spindle to 10k RPM and then turn it off and watch the rotation of the line as the spindle slows down.  
 
-- If the line on the gauge pin is going from right to left (:leftwards_arrow_with_hook:), your spindle is rotating in the right direction.  
-- If the line is going from left to right (:arrow_right_hook:), the spindle is rotating in the wrong direction and you will need to flip two wires in the UVW set coming from the spindle.
+- If the line on the gauge pin is going from right to left ( <-- ), your spindle is rotating in the right direction.  
+- If the line is going from left to right ( --> ), the spindle is rotating in the wrong direction and you will need to flip two wires in the UVW set coming from the spindle.
 
 ---
 
