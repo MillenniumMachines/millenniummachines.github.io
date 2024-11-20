@@ -75,7 +75,7 @@ Before you can start cutting material, you need to make sure that the spindle is
 Using a 6mm gauge pin (included in most LDO kits) draw a stright line ~10mm down the side of the gauge pin and insert it into a 6mm collet in your spindle. 
 
 !!! note
-    Make sure to snugly tighten the gauge pin in the spindle before processing to the next step
+    Make sure to snugly tighten the gauge pin in the spindle before proceeding to the next step!
 
 Start your spindle at the lowest speed and then turn it off and watch the rotation of the line on the gauge pin as the spindle slows down.  
 
