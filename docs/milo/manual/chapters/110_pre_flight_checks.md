@@ -68,6 +68,22 @@ the line beginning with `M950` and change the value found after `L` to your maxi
 
 ---
 
+## Verifying Spindle Rotation
+
+Before you can start cutting material, you need to make sure that the spindle is wired correctly and is rotating in the proper direction.
+
+Using a 6mm gauge pin (there should be one included in the LDO kit) draw adraw a stright line ~10mm down the side of the gauge pin and insert it into a 6mm collet in your spindle. 
+
+!!! note
+    Make sure to snugly tighten the gauge pin in the spindle before processing to the next step
+
+Set your spindle to 10k RPM and then turn it off and watch the rotation of the line as the spindle slows down.  
+
+- If the line on the gauge pin is going from right to left (:leftwards_arrow_with_hook:), your spindle is rotating in the right direction.  
+- If the line is going from left to right (:arrow_right_hook:), the spindle is rotating in the wrong direction and you will need to flip two wires in the UVW set coming from the spindle.
+
+---
+
 ## Grease EVERYTHING
 
 If you have not done so yet make sure that all lead-screws and rails are appropriately greased and or oiled.
