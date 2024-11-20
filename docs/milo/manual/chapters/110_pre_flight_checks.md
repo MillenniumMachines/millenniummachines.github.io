@@ -77,7 +77,7 @@ Using a 6mm gauge pin (included in most LDO kits) draw a stright line ~10mm down
 !!! note
     Make sure to snugly tighten the gauge pin in the spindle before processing to the next step
 
-Set your spindle to 10k RPM and then turn it off and watch the rotation of the line as the spindle slows down.  
+Start your spindle at the lowest speed and then turn it off and watch the rotation of the line on the gauge pin as the spindle slows down.  
 
 - If the line on the gauge pin is going from right to left ( <-- ), your spindle is rotating in the right direction.  
 - If the line is going from left to right ( --> ), the spindle is rotating in the wrong direction and you will need to flip two wires in the UVW set coming from the spindle.
