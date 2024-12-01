@@ -30,6 +30,9 @@ Fasten the MGN15 500mm rails to the extrusion by screwing M3x10mm SHCS into spri
 !!! tip annotate "Aligning the Rails"
     Repeat the alignment procedure described for the Y-Axis to ensure your rails are aligned with each other and the extrusion.
 
+!!! tip annotate "Lubricating the Rails"
+    If you didn't lubricate all of the rails when assembling the Y-Axis, ensure these rails are also lubricated as described in the Y-Axis section.
+
 ---
 
 Insert a 608ZZ bearing in the hole in the outer face of the X-Axis Bearing Block, then an F608ZZ bearing on either side. The flanged bearings must sit flush inside the bearing block on both sides.
@@ -116,6 +119,9 @@ Remember to use medium-strength threadlock on the grub screws in the couplers!
 
 <!-- This image is reused from the y-axis assembly on purpose -->
 ![couple the NEMA23 motor to the 550mm lead-screw using an 8 to 6.35mm rigid coupler](../img/y_axis_assembly/y_axis_step_11.png){: .shadow}
+
+!!! tip annotate "Lubricating the Leadscrews"
+    If you didn't lubricate all of the leadscrews when assembling the Y-Axis, ensure this leadscrew are also lubricated as described in the Y-Axis section.
 
 ---
 

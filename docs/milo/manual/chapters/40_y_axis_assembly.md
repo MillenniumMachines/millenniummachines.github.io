@@ -131,7 +131,7 @@ Fasten the Y-Axis Anti-Backlash Nut to the bottom of the XY plate using M5x16mm 
 !!! note "Anti-Backlash Nut Accessibility"
     When the machine is fully assembled, the rear of the Y-Axis Anti-Backlash Nut is almost impossible to access due to its proximity to the main column. To aid in making preload adjustments to the Y-Axis once the machine is assembled, you should fully tighten the brass lead-screw nut that faces the main column - this is the one installed on the 'square' face of the Anti-Backlash nut rather than the round face which will point towards the operator.
 
-    Once fully assembled, moving the table to Y=0 (so the rear of the table is against the main column) will allow you to access the front screws to adjust the Y-Axis preload using a long, ball-end hex wrench.
+    Once fully assembled, moving the table to Y=0 (so the rear of the table is against the main column) will allow you to access the front screws to adjust the Y-Axis preload using a long, ball-end hex wrench. 
 
 ---
 
@@ -139,6 +139,14 @@ Fasten the X-Axis Anti-Backlash Nut to the top of the XY plate using M5x16mm BHC
 
 ![fasten the X-Axis Anti-Backlash Nut to the top of the XY plate using M5x16mm BHCS](../img/y_axis_assembly/y_axis_step_10.png){: .shadow}
 
+!!! warning "Linear rail and Leadscrew Lubrication"
+    Now is the perfect time to lubricate your linear rail carriages and leadscrews. To grease the leadscrews, simply apply grease directly to the threads and move the brass nut back and forth to distribute it evenly.
+    
+    Most linear rails come coated with shipping oil, which must be removed before applying the appropriate grease. Using the right grease is crucial for ensuring smooth motion and extending the service life of your rails. For optimal results, it is recommended to use a good quality lithium grease (e.g. EP2).
+
+    Ensure that your rails are lubricated before attaching the rails to the aluminum extrusion, as you need to access the backside of the rail to lubricate properly.
+    
+    LDO has a linear rail greasing guide to get you started <https://docs.ldomotors.com/guides/rail_grease_guide>
 ---
 
 ## Y-Axis Motor Mount and Bearing Block
