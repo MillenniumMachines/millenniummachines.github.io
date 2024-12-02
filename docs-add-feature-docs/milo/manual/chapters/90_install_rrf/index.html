@@ -1428,6 +1428,14 @@ Password: millenniummachines
 <p>When you are prompted by DWC to Install the updates, you should click Yes - but be aware, this will involve flashing your WiFi module twice - once when you click Yes, and once when the board reboots after it is updated. This is unfortunate, but necessary, because we need the flash-on-reboot to enable hands-free configuration when extracting the Zip file to a fresh SD card and inserting it into an unconfigured board.</p>
 </div>
 <hr />
+<p>You can now also configure optional accessories like a touch probe.</p>
+<p>For the touchprobe you can modify and then rename the existing <code>touchprobe.g.example</code> file.
+You will need to set which pin you connected your probe to.
+For example if you connected your probe to the <code>Y-MAX</code> connector, your touch probe configuration should look like this:</p>
+<div class="highlight"><pre><span></span><code>M558 K0 P5 C&quot;!ystopmax&quot; H2 A10 S0.01 T1200 F300:50
+</code></pre></div>
+<p>(The "!" before <code>ystopmax</code> innverts the pin to trigger when the circuit is closed rather than a normally closed sensor.)</p>
+<hr />
 <p>At this point, the basic firmware setup is complete and all that remains are some firmware checks which will be covered later in the manual.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
