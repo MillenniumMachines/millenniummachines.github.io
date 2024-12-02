@@ -135,7 +135,7 @@ You can now also configure optional accessories like a touch probe.
 
 For the touchprobe you can modify and then rename the existing `touchprobe.g.example` file.
 You will need to set which pin you connected your probe to.
-For example if you connected your probe to the Y-MAX connector, your touch probe configuration should look like this:
+For example if you connected your probe to the `Y-MAX` connector, your touch probe configuration should look like this:
 
 ```
 M558 K0 P5 C"!ystopmax" H2 A10 S0.01 T1200 F300:50
