@@ -181,6 +181,8 @@ Insert the M3 and M5 heat-set inserts in the Z-Axis Anti-Backlash Nut.
 ![Insert the M3 and M5 heat-set inserts in the Z-Axis Anti Backlash Nut](../img/y_axis_assembly/y_axis_step_5.png){: .shadow}
 
 ---
+!!! tip annotate "Lubricating the Leadscrews"
+    If you didn't lubricate all of the leadscrews when assembling the Y-Axis, ensure this leadscrew is also lubricated as described in the Y-Axis section.
 
 Fasten the Brass lead-screw nuts on either side of the Z-Axis Anti Backlash Nut using M3x8mm SHCS. Remember to apply medium-strength threadlock here, sparingly!
 
@@ -229,6 +231,9 @@ Install the MGN15 250mm rails with only the lower carriages installed onto the `
 
 !!! tip annotate "Aligning the Rails"
     Repeat the alignment procedure described for the Y-Axis to ensure your rails are aligned with each other and the extrusion.
+
+!!! tip annotate "Lubricating the Rails"
+    If you didn't lubricate all of the rails when assembling the Y-Axis, ensure these rails are also lubricated as described in the Y-Axis section.
 
 ---
 

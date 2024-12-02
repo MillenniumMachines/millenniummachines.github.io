@@ -76,6 +76,9 @@ Make sure the end-most and centre-most bolt holes in each rail are used.
 !!! tip annotate "Aligning the Rails"
     Repeat the alignment procedure described for the Y-Axis to ensure your rails are aligned with each other and the extrusion. 
 
+!!! tip annotate "Lubricating the Rails"
+    If you didn't lubricate all of the rails when assembling the Y-Axis, ensure these rails are also lubricated as described in the Y-Axis section.
+
 ## Column Assembly
 
 Place extrusions `A` and `B` facing each other, creating an internal channel. This is where the ballast box can be installed (later, calm down cowboy!).

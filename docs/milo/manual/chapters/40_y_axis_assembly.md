@@ -139,6 +139,14 @@ Fasten the X-Axis Anti-Backlash Nut to the top of the XY plate using M5x16mm BHC
 
 ![fasten the X-Axis Anti-Backlash Nut to the top of the XY plate using M5x16mm BHCS](../img/y_axis_assembly/y_axis_step_10.png){: .shadow}
 
+!!! warning "Linear rail and Leadscrew Lubrication"
+    Now is the perfect time to lubricate your linear rail carriages and leadscrews. To grease the leadscrews, simply apply grease directly to the threads and move the brass nut back and forth to distribute it evenly.
+    
+    Most linear rails come coated with shipping oil, which must be removed before applying the appropriate grease. Using the right grease is crucial for ensuring smooth motion and extending the service life of your rails. For optimal results, it is recommended to use a good quality lithium grease (e.g. EP2).
+
+    Ensure that your rails are lubricated before attaching the rails to the aluminum extrusion, as you need to access the backside of the rail to lubricate properly.
+    
+    LDO has a [linear rail greasing guide](https://docs.ldomotors.com/guides/rail_grease_guide) to get you started.
 ---
 
 ## Y-Axis Motor Mount and Bearing Block
