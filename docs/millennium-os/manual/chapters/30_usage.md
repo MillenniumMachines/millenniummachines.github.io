@@ -616,3 +616,50 @@ The Period is the length of one full wavelength, or in other words, a change in 
 *[RRF]: RepRapFirmware
 *[DWC]: Duet Web Control
 *[VSSC]: Variable Spindle Speed Control
+
+## Spindle Feedback
+
+This feature is disabled by default, as it requires additional configuration, cabling and hardware support.
+
+Spindle Feedback allows a discrete digital signal from your VFD or spindle controller to tell MillenniumOS when the spindle has finished accelerating or decelerating. This can be used rather than the static wait times that are recorded during the wizard. It can protect from failures such as forgetting to turn the VFD on before starting a job.
+
+If you want to use the spindle feedback feature, you will need to make a circuit between a free general purpose input on your mainboard and a spindle status output on your VFD or spindle controller. In the below VFD connection diagram (for the Shihlin SL-3), you can see the highlighted area shows a relay-controlled circuit between the `A` and `C` terminals.
+
+![Shihlin SL-3 Relay Output](../img/mos_usage_step_6.png){: .shadow }
+
+You should also configure the VFD itself to switch the relay / circuit state based on the relevant VFD status. For the SL3, you would set register `P.85` (`03-11`) to 1, or `SU(Output when reach target frequency)`.
+
+Once wired up, you would need to configure the relevant general purpose input port on your mainboard using [M950](https://docs.duet3d.com/User_manual/Reference/Gcodes#m950-create-heater-fan-spindle-led-strip-or-gpioservo-pin), for example:
+
+```gcode
+M950 J0 C"astopmax" ; Use the astopmax pin as spindle feedback input
+```
+
+!!! note
+    Outputs on VFDs are generally unpowered, using a relay between 2 ports rather than generating a high or low voltage. You will probably need to connect a circuit to the VFD that allows the VFD relay to either pull the circuit high or low. How you configure this is up to you and the mainboard you have. Remember to check voltage and current limits on the VFD and mainboard side to make sure these are compatible first!
+
+## Coolant Control
+
+This feature is disabled by default, as it requires additional configuration, cabling and hardware support.
+
+Coolant Control allows MillenniumOS to enable and disable general purpose output pins, usually connected to solenoids or relays, in response to `M7`, `M7.1`, `M8` and `M9` codes. These codes will be output automatically by the post-processor when a tool or operation has a coolant type enabled that matches those available.
+
+* `M7.1`: Enables a single output for compressed air control.
+* `M7`: Enables air using `M7.1`, then enables an additional output for mist coolant.
+* `M8`: Enables a separate output for flood coolant (no link to air or mist).
+* `M9`: Disables all configured coolant output pins
+
+You may configure coolant control with one or more of these coolant types.
+
+Cable up your coolant trigger systems to free general purpose output ports on your mainboard and then configure them using [M950](https://docs.duet3d.com/User_manual/Reference/Gcodes#m950-create-heater-fan-spindle-led-strip-or-gpioservo-pin), for example:
+
+```gcode
+M950 J0 C"air"   ; Use the air pin for air
+M950 J1 C"mist"  ; Use the mist pin for mist
+M950 J2 C"flood" ; Use the flood pin for flood
+```
+
+!!! warning
+    Coolant control can require relatively high currents to activate and deactivate solenoids, pumps and motor systems. Make sure you check the current and voltage capacity of the ports you decide to use, and make sure these are suitable for controlling your coolant systems.
+
+    If in doubt, use your mainboard to activate a relay or contactor that then activates the high power side of the control circuitry!
