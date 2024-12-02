@@ -174,6 +174,9 @@ You may also require a relay to send an enable signal to your VFD. If you wish t
 
     ![VFD Wiring diagram](../img/assemble_electronics/assemble_electronics_step_12_5.jpg)
 
+!!! note
+    If you have a touchprobe you can connect it to one of the unused endstop connectors. Make sure to configure the endstop pin in RepRapFirmware.
+
 ---
 
 ## Final Installation
