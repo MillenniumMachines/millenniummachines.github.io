@@ -121,7 +121,7 @@ Remember to use medium-strength threadlock on the grub screws in the couplers!
 ![couple the NEMA23 motor to the 550mm lead-screw using an 8 to 6.35mm rigid coupler](../img/y_axis_assembly/y_axis_step_11.png){: .shadow}
 
 !!! tip annotate "Lubricating the Leadscrews"
-    If you didn't lubricate all of the leadscrews when assembling the Y-Axis, ensure this leadscrew are also lubricated as described in the Y-Axis section.
+    If you didn't lubricate all of the leadscrews when assembling the Y-Axis, ensure this leadscrew is also lubricated as described in the Y-Axis section.
 
 ---
 

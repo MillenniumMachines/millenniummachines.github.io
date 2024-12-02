@@ -182,7 +182,7 @@ Insert the M3 and M5 heat-set inserts in the Z-Axis Anti-Backlash Nut.
 
 ---
 !!! tip annotate "Lubricating the Leadscrews"
-    If you didn't lubricate all of the leadscrews when assembling the Y-Axis, ensure this leadscrew are also lubricated as described in the Y-Axis section.
+    If you didn't lubricate all of the leadscrews when assembling the Y-Axis, ensure this leadscrew is also lubricated as described in the Y-Axis section.
 
 Fasten the Brass lead-screw nuts on either side of the Z-Axis Anti Backlash Nut using M3x8mm SHCS. Remember to apply medium-strength threadlock here, sparingly!
 
