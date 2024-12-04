@@ -9,9 +9,7 @@ table movement instead. Use this as a reference to set up your axes direction in
 
 For your Z-Axis the spindle should move up for Z+ and down for Z-.
 
-![Axis direction diagram](../img/pre_flight_checks/pre_flight_checks_step_0.png){: .shadow}
-
-<!-- This diagram is plainly wrong given the above context. -->
+![Axis direction diagram](../img/pre_flight_checks/pre_flight_checks_step_0.png)
 
 ---
 
