@@ -105,7 +105,7 @@ To make some features printable without support, some features are printed with 
 | [Z Drag Chain Mount A           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Cable%20Chain%20Mounts/%5Ba%5D%20Z%20Drag%20Chain%20Mount%20A%20x1.stl)      | 40%  | 1.2mm   | ABS/ASA | 1 | :material-check: Yes |
 | [Z Drag Chain Mount B           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Cable%20Chain%20Mounts/%5Ba%5D%20Z%20Drag%20Chain%20Mount%20B%20x1.stl)      | 40%  | 1.2mm   | ABS/ASA | 1 | :material-check: Yes |
 | [Z Cable Redirect Hook          ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Cable%20Chain%20Mounts/%5Ba%5D%20Z%20Cable%20Redirect%20Hook%20x1.stl)       | 40%  | 1.2mm   | ABS/ASA | 1 | :material-check: Yes |
-| [Z-Axis Drag Chain Backer      ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Cable%20Chain%20Mounts/%5Ba%7D%20Z%20Axis%20Cable%20Chain%20Backer%20x1.stl) | 40%  | 1.2mm   | ABS/ASA | 1 | :material-check: Yes |
+| [Z-Axis Drag Chain Backer      ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Cable%20Chain%20Mounts/%5Ba%5D%20Z%20Axis%20Cable%20Chain%20Backer%20x1.stl) | 40%  | 1.2mm   | ABS/ASA | 1 | :material-check: Yes |
 
 ## Electronics Table
 | **Name** | **Infill** | **Min. Wall Thickness** | **Material** | **Qty** | **Accent Color** | **Note** |
