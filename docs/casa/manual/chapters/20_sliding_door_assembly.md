@@ -36,8 +36,8 @@ Affix panel brackets to the door frame using M3 x 10 SHCS bolts.
 !!! info annotate "Components Required"
     ```
         4  x Panel Clip A
-        2  x Panel Clip K
-        20 x M3 x 10 SHCS
+        4  x Panel Clip K
+        24 x M3 x 10 SHCS
     ```
 ![](../img/20_s4.png)
 
@@ -50,9 +50,9 @@ Repeat previous steps to create a second door panel.
         2  x Extrusion J
         1  x Panel 390 x 725
         4  x Panel Clip A
-        2  x Panel Clip K
+        4  x Panel Clip K
         4  x M5 x 10 BHCS
-        20 x M3 x 10 SHCS
+        24 x M3 x 10 SHCS
     ```
 ![](../img/20_s5.png)
 
