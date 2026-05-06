@@ -1,7 +1,7 @@
 # Introduction
 
 !!! note
-    Text adapted from the Milo V2 assembly manual export. Diagrams from the official PDF will be added under `manual/img/` when assets are available.
+    Text extracted with `pdftotext -layout` from **MiloV2-Manual.pdf** (bundled with the Milo V2 repository). Diagrams from the PDF will be added under `manual/img/` when assets are available.
 
 You are building a machine that can cut metal, cause serious injury, and start fires if it is misused or wired incorrectly.
 
@@ -12,94 +12,53 @@ Milo and Miley V2 use a **moving-table** or **fixed-X** layout respectively; bot
 
 ## Printing and machine configuration (from manual)
 
-Unless you're willing to experiment and almost certainly waste filament, stick with 0.2mm
-layers. Some parts contain overhangs that will become more difficult to print with thicker layers
-due to the overhang angle.
-We provide a Minimum Wall Thickness for every printable part based on a 0.4 mm nozzle. If
-you are planning to use a different size of nozzle you must recalculate the required wall counts.
+!!! tip
+    Several pages in the [official PDF](https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf) use **two columns**. In the extract below, both columns sometimes appear on a single line with a large space between them. When something reads oddly, check the PDF layout.
 
-File Naming
 
-With your STL files downloaded and your printer warmed up, you
-may be wondering which parts to print in your favorite colors.
-Have no fear, we've got your back - each file is labeled with [a] in
-the name to indicate the print in your accent color.
+Unless you're willing to experiment and almost certainly waste filament, stick with 0.2mm           File Naming
+layers. Some parts contain overhangs that will become more difficult to print with thicker layers   With your STL files downloaded and your printer warmed up, you
+due to the overhang angle.                                                                          may be wondering which parts to print in your favorite colors.
+We provide a Minimum Wall Thickness for every printable part based on a 0.4 mm nozzle. If           Have no fear, we've got your back - each file is labeled with [a] in
+you are planning to use a different size of nozzle you must recalculate the required wall counts.   the name to indicate the print in your accent color.
+
 
 Quantity Required
 Example: Panel-Clip-A x8.stl If any file ends with x#, that tells
 you the quantity of that part required to build the mill.
 
-Profile Name
 
-Structural
+Profile Name                                Structural                             Semi Structural                              Aesthetic
 
-Semi Structural
+Profile Code                                    S                                       SS                                          A
 
-Aesthetic
 
-Profile Code
+Infill Density [%]                                45                                      25                                         20
 
-S
 
-SS
+Wall Count                                     6                                        4                                          3
 
-A
 
-Infill Density [%]
+Top/Bottom Layers                                  6                                        5                                          5
 
-45
 
-25
-
-20
-
-Wall Count
-
-6
-
-4
-
-3
-
-Top/Bottom Layers
-
-6
-
-5
-
-5
-
-Nozzle Size [mm]
-
-0..4
-
-0.4
-
-0.4
+Nozzle Size [mm]                                 0..4                                     0.4                                        0.4
 
 
 All 3D-printed parts that use M3 heat-set inserts are supplied in two
 versions: one for CNC-Kitchen inserts and one for Voron inserts. Make sure
 to select the STL that matches the style of insert you’re using.
 
-CNC-Kitchen Specification
 
-Voron Specification
-5
+CNC-Kitchen Specification                        Voron Specification
 
-4.600
-
+4.600                                             5
 Leadscrew or Ballscrew?
 Both Milo and Miley are designed to work with TR8×8 leadscrews or SFK0802 ballscrews.
 That said, the standard—and the configuration we recommend—is the TR8×8 leadscrew.
-
-3
-
-Cost aside, there are a few reasons why leadscrews tend to make more sense for small,
+Cost aside, there are a few reasons why leadscrews tend to make more sense for small,                                                                4
 desktop-sized CNC machines. With their 8 mm pitch, the motors don’t need to spin as fast to
 reach practical feed rates, especially when running multi-flute end mills.
-
-4
 
 Ballscrews, like the SFK0802, have clear advantages in efficiency and backlash reduction,
 which is why they’re popular in larger or industrial machines. However, with only a 2 mm
@@ -118,45 +77,30 @@ Both Milo & Miley have the same Y and Z travel
 
 660.4
 
-119
-210
 
 698.2
 
 
-Milo
+Milo            Miley
 
-Miley
 
-348
-
-308
-658
-
-1026
+348             308
+1026             658
 
 
 QTY 3
 
-6
 
-
-4
-5
-1
-
-5
-2
-3
-
-1
-2
-3
-4
-5
-6
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | INTERNAL AXIS FLOATING BEARING BLOCK | 1 |
+| 2 | FLOATING BEARING BLOCK FACEPLATE A | 1 |
+| 3 | M3X3MM HEATSET INSERT | 2 |
+| 4 | FLOATING BEARING BLOCK FACEPLATE B | 1 |
+| 5 | 608ZZ BALL BEARING | 2 |
+| 6 | ISO-4762-M3X40-SHCS | 2 |
 
 
 ---
 
-[Previous: Acknowledgements](10_acknowledgements.md) | [Next: Hardware reference](30_hardware_reference.md)
+[Previous: Acknowledgements](10_acknowledgements.md) | [Next: 30 hardware reference](30_hardware_reference.md)

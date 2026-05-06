@@ -1,7 +1,7 @@
 # Spindle mount and final sub-assemblies
 
 !!! note
-    Text adapted from the Milo V2 assembly manual export. Diagrams from the official PDF will be added under `manual/img/` when assets are available.
+    Text extracted with `pdftotext -layout` from **MiloV2-Manual.pdf** (bundled with the Milo V2 repository). Diagrams from the PDF will be added under `manual/img/` when assets are available.
 
 
 ## Table supports
@@ -9,320 +9,138 @@
 Table support steps for Milo and Miley appear earlier in [X Axis and XY Joiner](90_x_axis_and_xy_joiner.md) (search for “TABLE SUPPORT” in that chapter).
 
 Spindle Mount Options
-1
+
 
 80mm Printed Spindle Mount
-3
-4
 
-80mm HOI Spindle Mount
 
-2
+2                     80mm HOI Spindle Mount
 
-6
-5
 
 80mm Half Plate Spindle Mount
 
+
 65mm Printed Spindle Mount
 
-1
-2
-3
-4
-5
-6
-7
 
-80mm-HOI-SPINDLE-MOUNT-BACK-PRINTED
-80mm-HOI-SPINDLE-MOUNT-FRONT-PRINTED
-80mm-HOI-SPINDLE-MOUNT-BACK
-80mm-HOI-SPINDLE-MOUNT-FRONT
-ISO-4762-M5X15-SHCS
-ISO-7089-M5-WASHER
-LOGO INSERT
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | 80mm-HOI-SPINDLE-MOUNT-BACK-PRINTED | 1 |
+| 2 | 80mm-HOI-SPINDLE-MOUNT-FRONT-PRINTED | 1 |
+| 3 | 80mm-HOI-SPINDLE-MOUNT-BACK | 2 |
+| 4 | 80mm-HOI-SPINDLE-MOUNT-FRONT | 2 |
+| 5 | ISO-4762-M5X15-SHCS | 4 |
+
+65mm Half Plate Spindle Mount
+6            ISO-7089-M5-WASHER                4
+7                 LOGO INSERT                  1
 
 MILO SUBASSEMBLY D
 SPINDLE MOUNT REFERENCE
 
-PART NUMBER
-
-
-QTY.
-1
-1
-2
-2
-4
-4
-1
-
-65mm HOI Spindle Mount
-
-65mm Half Plate Spindle Mount
-
-1
-2
-3
-4
-5
-6
-7
-
-
-4
-
-PART NUMBER
-
-MILO-SUBASSEMBLY-D
-TRAM-PLATE-FINAL
-ISO-7380-M5X12 BHCS
-ISO-7379-M5X6MM-THREAD-M6X4MM-SHOULDER
-SPINDLE-MOUNT-ASSEMBLY-HOI-80mm
-TRAM-AID-ASSEMBLY
-ISO-7380-M5X10 BHCS
-
-2
-3
-5
-
-7
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | MILO-SUBASSEMBLY-D | 1 |
+| 2 | TRAM-PLATE-FINAL | 1 |
+| 3 | ISO-7380-M5X12 BHCS | 3 |
+| 4 | ISO-7379-M5X6MM-THREAD-M6X4MM-SHOULDER | 1 |
+| 5 | SPINDLE-MOUNT-ASSEMBLY-HOI-80mm | 1 |
+| 6 | TRAM-AID-ASSEMBLY | 1 |
+| 7 | ISO-7380-M5X10 BHCS | 2 |
 
 MILO SUBASSEMBLY D
 SPINDLE MOUNT MOUNTING
 
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | REAR-COLUMN-CHAIN-ANCHOR-PRE-ASSEMBLY | 1 |
+| 2 | REAR-COLUMN-CHAIN -ANCHOR-FACEPLATE | 1 |
+| 3 | ISO-4762-M3X10-SHCS | 4 |
 
-QTY.
-1
-1
-3
-1
-1
-1
-2
 
-PART NUMBER
-
-1
-2
-3
-
-REAR-COLUMN-CHAIN-ANCHOR-PRE-ASSEMBLY
-REAR-COLUMN-CHAIN -ANCHOR-FACEPLATE
-ISO-4762-M3X10-SHCS
-
-1
-
-1
-
-2
-
-3
-
-2
-
-1
-2
-
-2
-
-1
-2
-
-PART NUMBER
-
-QTY.
-
-REAR-COLUMN-CHAIN-ANCHOR
-M3X3MM HEATSET INSERT
-
-1
-10
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | REAR-COLUMN-CHAIN-ANCHOR | 1 |
+| 2 | M3X3MM HEATSET INSERT | 10 |
 
 MILO SUB-ASSEMBLY E
-
 REAR COLUMN CHAIN ANCHOR PRE-ASSEMBLY
 
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | MILO-SUBASSEMBLY-E | 1 |
+| 2 | M5 DROP IN NUT | 2 |
+| 3 | REAR-COLUMN-CHAIN-ANCHOR-SUBASSEMBLY | 1 |
 
-QTY.
-1
-1
-4
+4 ISO-7380-M5X10 BHCS 2
 
-1
-2
-3
-4
-
-
-3
-
-2
-
-4
 
 MILO SUB-ASSEMBLY E
 ASSEMBLY STEP 1
-
-
-PART NUMBER
-
-MILO-SUBASSEMBLY-E
-M5 DROP IN NUT
-REAR-COLUMN-CHAIN-ANCHOR-SUBASSEMBLY
-ISO-7380-M5X10 BHCS
-
-QTY.
-1
-2
-1
-2
-
 QTY 2
 
-
-1
-2
-3
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | 10X11-CABLE-CHAIN-FIXED | 1 |
+| 2 | 10X11-CABLE-CHAIN-LINK | 31 |
+| 3 | 10X11-CABLE-CHAIN-END | 1 |
 
 MILO SUB-ASSEMBLY E
 CABLE CHAIN ASSEMBLY PRE-ASSEMBLY
 
-PART NUMBER
 
-10X11-CABLE-CHAIN-FIXED
-10X11-CABLE-CHAIN-LINK
-10X11-CABLE-CHAIN-END
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | MILO-SUBASSEMBLY-E | 1 |
+| 2 | M5 DROP IN NUT | 2 |
+| 3 | REAR-COLUMN-CHAIN-ANCHOR-SUBASSEMBLY | 1 |
 
+4            CABLE-CHAIN-ASSEMBLY           2     6
+6   5             ISO-7380-M5X10 BHCS           2
+6           ISO-10642-M3X6MM-FHCS           12
 
-QTY.
-1
-31
-1
-
-
-6
-
-4
-
-6
-
-4
-
-6
-
-1
-2
-3
-4
-5
-6
 
 MILO SUB-ASSEMBLY E
 ASSEMBLY STEP 2
 
-PART NUMBER
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | MILO-SUBASSEMBLY-E | 1 |
+| 5 | LJ8A3-2-Z/AY | 2 |
+| 6 | ISO-4026-M3X10-SET SCREW | 3 |
 
-MILO-SUBASSEMBLY-E
-M5 DROP IN NUT
-REAR-COLUMN-CHAIN-ANCHOR-SUBASSEMBLY
-CABLE-CHAIN-ASSEMBLY
-ISO-7380-M5X10 BHCS
-ISO-10642-M3X6MM-FHCS
-
-
-QTY.
-1
-2
-1
-2
-2
-12
-
-6
-
-1
-5
-6
-
-PART NUMBER
-
-MILO-SUBASSEMBLY-E
-LJ8A3-2-Z/AY
-ISO-4026-M3X10-SET SCREW
-
-QTY.
-1
-2
-3
-
-
-5
-
-6
 Do not use a lot of
 pressure when tightening
 these set screws.
+
 Do not use a lot of
 pressure when tightening
 the set screw.
 
-5
-6
+
+6                      Milo Only
+
 
 MILO SUB-ASSEMBLY E
 ASSEMBLY STEP 3
 
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | MILO-SUBASSEMBLY-E | 1 |
+| 2 | M5 DROP IN NUT | 6 |
+| 6 | FIXATED-V2-ASSEMBLY | 1 |
+| 7 | ISO-7380-M5X10 BHCS | 6 |
 
-#### Milo only
+9 FIXATED-MOUNTING-SLOT-COVER 3
 
-O
-CK
-ER
-EA
-DL
-TH
-R
-
-
-PART NUMBER
-
-MILO-SUBASSEMBLY-E
-M5 DROP IN NUT
-FIXATED-V2-ASSEMBLY
-ISO-7380-M5X10 BHCS
-FIXATED-MOUNTING-SLOT-COVER
-
-1
-2
-6
-7
-9
 
 USE PROVIDED 3D
 PRINTED FIXATED
 CENTERING TOOL
 
-9
-
-7
-
-6
-9
-
-7
 
 MILO SUB-ASSEMBLY E
 ASSEMBLY STEP 4
-
-2
-
-QTY.
-1
-6
-1
-6
-3
 
 
 ---

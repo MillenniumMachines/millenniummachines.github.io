@@ -1,583 +1,170 @@
 # Y-Axis Frame
 
 !!! note
-    Text adapted from the Milo V2 assembly manual export. Diagrams from the official PDF will be added under `manual/img/` when assets are available.
+    Text extracted with `pdftotext -layout` from **MiloV2-Manual.pdf** (bundled with the Milo V2 repository). Diagrams from the PDF will be added under `manual/img/` when assets are available.
 
 Y-AXIS FRAME
 
-
-PART NUMBER
-
-ISO-7380-M5X8-BHCS
-M5 DROP IN NUT
-ANGLE CORNER CONNECTOR
-C-BEAM-540mm
-V-SLOT-2080X440MM
-V-SLOT 2080X120MM
-ISO-7380-M5X30-BHCS
-V-SLOT 2080X40MM
-ISO-7380-M5X12 BHCS
-ISO-7380-M3x10-BHCS
-M3 DROP IN NUT
-INTERNAL AXIS FLOATING BEARING BLOCK
-FLOATING BEARING BLOCK FACE-PLATE A
-M3X3MM HEATSET INSERT
-FLOATING BEARING BLOCK FACE-PLATE B
-608ZZ BALL BEARING
-ISO-4762-M3X40-SHCS
-Y-BEARING-BLOCK
-8X3MM NEODYMIUM MAGNET
-Y-BEARING-BLOCK-INSERT
-ISO-7380-M5X10 BHCS
-
-QTY.
-36
-40
-26
-1
-1
-2
-4
-2
-18
-2
-22
-1
-1
-6
-1
-3
-6
-1
-1
-1
-2
-
-1
-2
-3
-4
-5
-6
-
-
-3
-
-QTY.
-
-PART NUMBER
-
-Y-BEARING-BLOCK
-M3X3MM HEATSET INSERT
-8X3MM NEODYMIUM MAGNET
-Y-BEARING-BLOCK-INSERT
-608ZZ BALL BEARING
-ISO-4762-M3X40-SHCS
-
-1
-4
-1
-1
-1
-4
-
-1
-
-1
-
-2
-
-5
-4
-
-6
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | Y-BEARING-BLOCK | 1 |
+| 2 | M3X3MM HEATSET INSERT | 4 |
+| 3 | 8X3MM NEODYMIUM MAGNET | 1 |
+| 4 | Y-BEARING-BLOCK-INSERT | 1 |
+| 5 | 608ZZ BALL BEARING | 1 |
+| 6 | ISO-4762-M3X40-SHCS | 4 |
 
 Y AXIS FRAME
-
 BEARING BLOCK PRE-ASSEMBLY
 
 
-O
-CK
-ER
-EA
-DL
-TH
-R
+3                          4
+4                                                        3
 
 
-1
-
-1
-2
-2
-3
-3
-
-4
-2
-
-3
-
-4
-3
-
-4
-
-3
-
-3
-
-1
-2
-3
-4
-
-PART NUMBER
-
-V-SLOT 2080X120MM
-ANGLE CORNER CONNECTOR
-ISO-7380-M5X8-BHCS
-M5 DROP IN NUT
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | V-SLOT 2080X120MM | 1 |
+| 2 | ANGLE CORNER CONNECTOR | 4 |
+| 3 | ISO-7380-M5X8-BHCS | 4 |
+| 4 | M5 DROP IN NUT | 4 |
 
 Y-AXIS FRAME
-
 120mm EXTRUSION A SUB-ASSEMBLY
 
-QTY.
-1
-2
-2
-2
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | V-SLOT-2080X440MM | 1 |
+| 2 | ISO-7380-M5X8-BHCS | 2 |
+| 3 | M5 DROP IN NUT | 2 |
 
-1
-2
-3
-4
+4 V-SLOT-2080X120MM-ASSEMBLY 1
 
-
-PART NUMBER
-
-V-SLOT 2080X120MM
-ANGLE CORNER CONNECTOR
-ISO-7380-M5X8-BHCS
-M5 DROP IN NUT
-
-QTY.
-1
-4
-4
-4
-
-
-4
-
-2
-
-1
-
-2
 
 Y-AXIS FRAME
 2080 SUB-ASSEMBLY
 
-3
-
-
-O
-CK
-ER
-
-1
-2
-2
-1
-
-EA
-DL
-
-V-SLOT-2080X440MM
-ISO-7380-M5X8-BHCS
-M5 DROP IN NUT
-V-SLOT-2080X120MM-ASSEMBLY
-
-QTY.
-TH
-R
-
-1
-2
-3
-4
-
-PART NUMBER
-
-
-540
-20
-
-10
 
 Y-AXIS FRAME
 2080-SUB-ASSEMBLY
 
-
-2
-3
-
-4
-
-5
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | ISO-7380-M5X8-BHCS | 2 |
+| 2 | ANGLE CORNER CONNECTOR | 2 |
+| 3 | M5 DROP IN NUT | 2 |
+| 4 | OPENBUILDS-C-BEAM-540mm | 1 |
+| 5 | Y-AXIS-2080-SUB-ASSEMBLY | 1 |
 
 Y-AXIS FRAME
 C-BEAM SUB-ASSEMBLY
-
-
-2
-2
-2
-1
-1
-
-O
-CK
-ER
-
-ISO-7380-M5X8-BHCS
-ANGLE CORNER CONNECTOR
-M5 DROP IN NUT
-OPENBUILDS-C-BEAM-540mm
-Y-AXIS-2080-SUB-ASSEMBLY
-
-QTY.
-EA
-DL
-
-1
-2
-3
-4
-5
-
-PART NUMBER
-
-TH
-R
-
-1
-
-TH
-R
-
-EA
-DL
-
-O
-CK
-ER
-
 QTY 2
 
 
-1
-2
-3
-4
-5
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | V-SLOT 2080X40MM | 1 |
+| 2 | ANGLE CORNER CONNECTOR | 4 |
+| 3 | ISO-7380-M5X8-BHCS | 4 |
+| 4 | M5 DROP IN NUT | 4 |
+| 5 | ISO-7380-M5X12 BHCS | 6 |
 
-2
+3                2
 
-3
-
-PART NUMBER
-
-V-SLOT 2080X40MM
-ANGLE CORNER CONNECTOR
-ISO-7380-M5X8-BHCS
-M5 DROP IN NUT
-ISO-7380-M5X12 BHCS
-
-QTY.
-1
-4
-4
-4
-6
-
-5
-
-3
-
-4
-2
-
-1
-
-3
-
-5
 
 Y-AXIS FRAME
-
 40mm EXTRUSION SUB-ASSEMBLY
 
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | V-SLOT 2080X120MM | 1 |
+| 2 | ANGLE CORNER CONNECTOR | 2 |
+| 3 | M5 DROP IN NUT | 4 |
+| 4 | ISO-7380-M5X8-BHCS | 2 |
 
-O
-CK
-ER
-
-V-SLOT 2080X120MM
-ANGLE CORNER CONNECTOR
-M5 DROP IN NUT
-ISO-7380-M5X8-BHCS
-
-EA
-DL
-
-1
-2
-4
-2
-
-TH
-R
-
-1
-2
-3
-4
+30                        30
 
 
-QTY.
+80                             3
 
-PART NUMBER
 
-40
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | V-SLOT 2080X120MM | 1 |
 
-120
+2   ANGLE CORNER CONNECTOR         4                                                  1
+3     ISO-7380-M5X8-BHCS           4
+4        M5 DROP IN NUT            4        4
 
-30
-
-30
-
-1
-
-2
-2
-
-4
-
-80
-
-3
-
-3
-
-1
-2
-3
-4
 
 Y-AXIS FRAME
-
 120mm EXTRUSION B SUB-ASSEMBLY
 
-PART NUMBER
-
-V-SLOT 2080X120MM
-ANGLE CORNER CONNECTOR
-ISO-7380-M5X8-BHCS
-M5 DROP IN NUT
-
-QTY.
-1
-4
-4
-4
-
-
-1
-4
-
-
-2
-3
-
-2
-3
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | Y-AXIS-540mm-CBEAM-ASSEMBLY | 1 |
+| 2 | Y-AXIS-40mm-EXTRUSION-ASSEMBLY | 2 |
+| 3 | ISO-7380-M5X8-BHCS | 8 |
 
 Y AXIS FRAME
 ASSEMBLY STEP 1A
 
 
-O
-CK
-ER
-
-1
-2
-8
-
-EA
-DL
-
-Y-AXIS-540mm-CBEAM-ASSEMBLY
-Y-AXIS-40mm-EXTRUSION-ASSEMBLY
-ISO-7380-M5X8-BHCS
-
-QTY.
-TH
-R
-
-1
-2
-3
-
-PART NUMBER
-
-6
-5
-
-
 TEMPORARILY REMOVE
 AND THEN REPLACE
 
-2
 
-1
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | Y-AXIS-540mm-CBEAM-ASSEMBLY | 1 |
+| 5 | ANGLE CORNER CONNECTOR | 4 |
+| 6 | ISO-7380-M5X30-BHCS | 4 |
 
-Y-AXIS-540mm-CBEAM-ASSEMBLY
-Y-AXIS-120mm-EXTRUSION-A-ASSEMBLY
 
-1
-1
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | Y-AXIS-540mm-CBEAM-ASSEMBLY | 1 |
+| 2 | Y-AXIS-120mm-EXTRUSION-A-ASSEMBLY | 1 |
 
 Y AXIS FRAME
 ASSEMBLY STEP 1B
 
-EA
-DL
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | Y-AXIS-FRAME - STEP1 | 1 |
+| 2 | ISO-7380-M3X10-BHCS | 2 |
+| 3 | M3 DROP IN NUT | 2 |
+| 4 | Y-AXIS-BEARING-BLOCK-ASSY | 1 |
 
-QTY.
+5 ISO-7380-M5X12 BHCS 6
 
-TH
-R
-
-1
-2
-
-PART NUMBER
-
-O
-CK
-ER
-
-1
-5
-6
-
-
-PART NUMBER
-
-Y-AXIS-540mm-CBEAM-ASSEMBLY
-ANGLE CORNER CONNECTOR
-ISO-7380-M5X30-BHCS
-
-QTY.
-1
-4
-4
-
-1
-2
-3
-4
-5
-
-
-PART NUMBER
-
-Y-AXIS-FRAME - STEP1
-ISO-7380-M3X10-BHCS
-M3 DROP IN NUT
-Y-AXIS-BEARING-BLOCK-ASSY
-ISO-7380-M5X12 BHCS
-
-3
-2
-4
-
-5
-
-1
 
 Y AXIS FRAME
 ASSEMBLY STEP 2A
 
 
-QTY.
-1
-2
-2
-1
-6
-
-4
-
-
-8
-4
-5
-
-1
-4
-5
-8
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | Y-AXIS-FRAME - STEP1 | 1 |
+| 4 | FLOATING-BEARING-BLOCK-ASSEMBLY | 1 |
+| 5 | M5 DROP IN NUT | 2 |
+| 8 | ISO-7380-M5X10 BHCS | 2 |
 
 Y AXIS FRAME
 ASSEMBLY STEP 2B
 
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | Y-AXIS-FRAME | 1 |
+| 2 | Z-AXIS-FRAME | 1 |
 
-PART NUMBER
-
-Y-AXIS-FRAME - STEP1
-FLOATING-BEARING-BLOCK-ASSEMBLY
-M5 DROP IN NUT
-ISO-7380-M5X10 BHCS
-
-QTY.
-1
-1
-2
-2
+3 ISO-7380-M5X12 BHCS 8
 
 
-1
-2
-3
+1                              1
 
-PART NUMBER
 
-Y-AXIS-FRAME
-Z-AXIS-FRAME
-ISO-7380-M5X12 BHCS
-
-QTY.
-1
-1
-8
-
-2
-
-2
-
-1
-
-1
-
-3
-
-3
+3                                             3
 
 
 ---

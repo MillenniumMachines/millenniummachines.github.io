@@ -1,78 +1,30 @@
 # ZY Assembly
 
 !!! note
-    Text adapted from the Milo V2 assembly manual export. Diagrams from the official PDF will be added under `manual/img/` when assets are available.
+    Text extracted with `pdftotext -layout` from **MiloV2-Manual.pdf** (bundled with the Milo V2 repository). Diagrams from the PDF will be added under `manual/img/` when assets are available.
 
 ZY ASSEMBLY
 ASSEMBLY STEP 1A
 
-
-1
-2
-4
-
-
-2
-
-1
-
-4
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | Y-AXIS-FRAME | 1 |
+| 2 | Z-AXIS-FRAME | 1 |
+| 4 | ISO-7380-M5X8-BHCS | 2 |
 
 ZY ASSEMBLY
 ASSEMBLY STEP 1B
 
-
-PART NUMBER
-
-Y-AXIS-FRAME
-Z-AXIS-FRAME
-ISO-7380-M5X8-BHCS
-
-QTY.
-1
-1
-2
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | Y-AXIS-BELLOW-PLATE-MAG-MOUNT | 1 |
+| 2 | 8X3MM NEODYMIUM MAGNET | 3 |
 
 
-PART NUMBER
-
-QTY.
-
-1
-
-Y-AXIS-BELLOW-PLATE-MAG-MOUNT
-
-1
-
-2
-
-8X3MM NEODYMIUM MAGNET
-
-3
-
-1
-
-1
-
-2
-
-2
-
-PART NUMBER
-
-QTY.
-
-1
-
-WAY-COVER-MAGNET-LOCK
-
-1
-
-2
-
-8X3MM NEODYMIUM MAGNET
-
-3
+| # | Part | Qty |
+| --- | --- | --- |
+| 1 | WAY-COVER-MAGNET-LOCK | 1 |
+| 2 | 8X3MM NEODYMIUM MAGNET | 3 |
 
 
 ---
