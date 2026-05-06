@@ -4,13 +4,21 @@
 
 ## Guides
 
-### [Milo](./milo/index.md) - Desktop CNC Mill
+### [Milo 1.5](./milo_1.5/index.md) - Desktop CNC Mill
 
 - [Github Page](https://github.com/MillenniumMachines/Milo-v1.5)
-- [Sourcing Guide](./milo/bom/sourcing_guide.md)
-- [Printing Guide](./milo/printing/print_guide.md)
-- [Frequently Asked Questions](./milo/faq.md)
-- [Assembly Manual](./milo/manual/index.md)
+- [Sourcing Guide](./milo_1.5/bom/sourcing_guide.md)
+- [Printing Guide](./milo_1.5/printing/print_guide.md)
+- [Frequently Asked Questions](./milo_1.5/faq.md)
+- [Assembly Manual](./milo_1.5/manual/index.md)
+
+### [Milo 2.0](./milo_2.0/index.md) - Desktop CNC Mill
+
+- [Github Page](https://github.com/MillenniumMachines/Milo-V2.0)
+- [Sourcing Guide](./milo_2.0/bom/sourcing_guide.md)
+- [Printing Guide](./milo_2.0/printing/print_guide.md)
+- [Frequently Asked Questions](./milo_2.0/faq.md)
+- [Assembly Manual](./milo_2.0/manual/index.md)
 
 #### Fixated - Fixture plate for Milo
 

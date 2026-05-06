@@ -1,0 +1,330 @@
+# Spindle mount and final sub-assemblies
+
+!!! note
+    Text adapted from the Milo V2 assembly manual export. Diagrams from the official PDF will be added under `manual/img/` when assets are available.
+
+
+## Table supports
+
+Table support steps for Milo and Miley appear earlier in [X Axis and XY Joiner](90_x_axis_and_xy_joiner.md) (search for “TABLE SUPPORT” in that chapter).
+
+Spindle Mount Options
+1
+
+80mm Printed Spindle Mount
+3
+4
+
+80mm HOI Spindle Mount
+
+2
+
+6
+5
+
+80mm Half Plate Spindle Mount
+
+65mm Printed Spindle Mount
+
+1
+2
+3
+4
+5
+6
+7
+
+80mm-HOI-SPINDLE-MOUNT-BACK-PRINTED
+80mm-HOI-SPINDLE-MOUNT-FRONT-PRINTED
+80mm-HOI-SPINDLE-MOUNT-BACK
+80mm-HOI-SPINDLE-MOUNT-FRONT
+ISO-4762-M5X15-SHCS
+ISO-7089-M5-WASHER
+LOGO INSERT
+
+MILO SUBASSEMBLY D
+SPINDLE MOUNT REFERENCE
+
+PART NUMBER
+
+
+QTY.
+1
+1
+2
+2
+4
+4
+1
+
+65mm HOI Spindle Mount
+
+65mm Half Plate Spindle Mount
+
+1
+2
+3
+4
+5
+6
+7
+
+
+4
+
+PART NUMBER
+
+MILO-SUBASSEMBLY-D
+TRAM-PLATE-FINAL
+ISO-7380-M5X12 BHCS
+ISO-7379-M5X6MM-THREAD-M6X4MM-SHOULDER
+SPINDLE-MOUNT-ASSEMBLY-HOI-80mm
+TRAM-AID-ASSEMBLY
+ISO-7380-M5X10 BHCS
+
+2
+3
+5
+
+7
+
+MILO SUBASSEMBLY D
+SPINDLE MOUNT MOUNTING
+
+
+QTY.
+1
+1
+3
+1
+1
+1
+2
+
+PART NUMBER
+
+1
+2
+3
+
+REAR-COLUMN-CHAIN-ANCHOR-PRE-ASSEMBLY
+REAR-COLUMN-CHAIN -ANCHOR-FACEPLATE
+ISO-4762-M3X10-SHCS
+
+1
+
+1
+
+2
+
+3
+
+2
+
+1
+2
+
+2
+
+1
+2
+
+PART NUMBER
+
+QTY.
+
+REAR-COLUMN-CHAIN-ANCHOR
+M3X3MM HEATSET INSERT
+
+1
+10
+
+MILO SUB-ASSEMBLY E
+
+REAR COLUMN CHAIN ANCHOR PRE-ASSEMBLY
+
+
+QTY.
+1
+1
+4
+
+1
+2
+3
+4
+
+
+3
+
+2
+
+4
+
+MILO SUB-ASSEMBLY E
+ASSEMBLY STEP 1
+
+
+PART NUMBER
+
+MILO-SUBASSEMBLY-E
+M5 DROP IN NUT
+REAR-COLUMN-CHAIN-ANCHOR-SUBASSEMBLY
+ISO-7380-M5X10 BHCS
+
+QTY.
+1
+2
+1
+2
+
+QTY 2
+
+
+1
+2
+3
+
+MILO SUB-ASSEMBLY E
+CABLE CHAIN ASSEMBLY PRE-ASSEMBLY
+
+PART NUMBER
+
+10X11-CABLE-CHAIN-FIXED
+10X11-CABLE-CHAIN-LINK
+10X11-CABLE-CHAIN-END
+
+
+QTY.
+1
+31
+1
+
+
+6
+
+4
+
+6
+
+4
+
+6
+
+1
+2
+3
+4
+5
+6
+
+MILO SUB-ASSEMBLY E
+ASSEMBLY STEP 2
+
+PART NUMBER
+
+MILO-SUBASSEMBLY-E
+M5 DROP IN NUT
+REAR-COLUMN-CHAIN-ANCHOR-SUBASSEMBLY
+CABLE-CHAIN-ASSEMBLY
+ISO-7380-M5X10 BHCS
+ISO-10642-M3X6MM-FHCS
+
+
+QTY.
+1
+2
+1
+2
+2
+12
+
+6
+
+1
+5
+6
+
+PART NUMBER
+
+MILO-SUBASSEMBLY-E
+LJ8A3-2-Z/AY
+ISO-4026-M3X10-SET SCREW
+
+QTY.
+1
+2
+3
+
+
+5
+
+6
+Do not use a lot of
+pressure when tightening
+these set screws.
+Do not use a lot of
+pressure when tightening
+the set screw.
+
+5
+6
+
+MILO SUB-ASSEMBLY E
+ASSEMBLY STEP 3
+
+
+#### Milo only
+
+O
+CK
+ER
+EA
+DL
+TH
+R
+
+
+PART NUMBER
+
+MILO-SUBASSEMBLY-E
+M5 DROP IN NUT
+FIXATED-V2-ASSEMBLY
+ISO-7380-M5X10 BHCS
+FIXATED-MOUNTING-SLOT-COVER
+
+1
+2
+6
+7
+9
+
+USE PROVIDED 3D
+PRINTED FIXATED
+CENTERING TOOL
+
+9
+
+7
+
+6
+9
+
+7
+
+MILO SUB-ASSEMBLY E
+ASSEMBLY STEP 4
+
+2
+
+QTY.
+1
+6
+1
+6
+3
+
+
+---
+
+[Previous: Z mount and Y accessories](100_z_mount_y_accessories.md) | [Next: FMJ (V2)](120_fmj_assembly.md)

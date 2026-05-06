@@ -6,22 +6,43 @@ edit_uri: !ENV [EDIT_URL, 'edit/main/docs/']
 
 nav:
   - Home: index.md
-  - "Milo - Desktop CNC Mill":
-    - Sourcing Guide: milo/bom/sourcing_guide.md
-    - Printing Guide: milo/printing/print_guide.md
-    - Frequently Asked Questions: milo/faq.md
+  - "Milo 1.5 - Desktop CNC Mill":
+    - Sourcing Guide: milo_1.5/bom/sourcing_guide.md
+    - Printing Guide: milo_1.5/printing/print_guide.md
+    - Frequently Asked Questions: milo_1.5/faq.md
     - Assembly Manual:
-        - Acknowledgements: milo/manual/chapters/10_acknowledgements.md
-        - Introduction: milo/manual/chapters/20_introduction.md
-        - Hardware Reference: milo/manual/chapters/30_hardware_reference.md
-        - Y-Axis Assembly: milo/manual/chapters/40_y_axis_assembly.md
-        - X-Axis Assembly: milo/manual/chapters/50_x_axis_assembly.md
-        - Z-Axis Assembly: milo/manual/chapters/60_z_axis_assembly.md
-        - FMJ Assembly: milo/manual/chapters/70_fmj_assembly.md
-        - Table Assembly: milo/manual/chapters/80_table_assembly.md
-        - Install RRF: milo/manual/chapters/90_install_rrf.md
-        - Assemble Electronics: milo/manual/chapters/100_assemble_electronics.md
-        - Pre-Flight Checks: milo/manual/chapters/110_pre_flight_checks.md
+        - Acknowledgements: milo_1.5/manual/chapters/10_acknowledgements.md
+        - Introduction: milo_1.5/manual/chapters/20_introduction.md
+        - Hardware Reference: milo_1.5/manual/chapters/30_hardware_reference.md
+        - Y-Axis Assembly: milo_1.5/manual/chapters/40_y_axis_assembly.md
+        - X-Axis Assembly: milo_1.5/manual/chapters/50_x_axis_assembly.md
+        - Z-Axis Assembly: milo_1.5/manual/chapters/60_z_axis_assembly.md
+        - FMJ Assembly: milo_1.5/manual/chapters/70_fmj_assembly.md
+        - Table Assembly: milo_1.5/manual/chapters/80_table_assembly.md
+        - Install RRF: milo_1.5/manual/chapters/90_install_rrf.md
+        - Assemble Electronics: milo_1.5/manual/chapters/100_assemble_electronics.md
+        - Pre-Flight Checks: milo_1.5/manual/chapters/110_pre_flight_checks.md
+
+  - "Milo 2.0 - Desktop CNC Mill":
+    - Sourcing Guide: milo_2.0/bom/sourcing_guide.md
+    - Printing Guide: milo_2.0/printing/print_guide.md
+    - Frequently Asked Questions: milo_2.0/faq.md
+    - Assembly Manual:
+        - Acknowledgements: milo_2.0/manual/chapters/10_acknowledgements.md
+        - Introduction: milo_2.0/manual/chapters/20_introduction.md
+        - Hardware Reference: milo_2.0/manual/chapters/30_hardware_reference.md
+        - Pre-Assembly: milo_2.0/manual/chapters/40_pre_assembly.md
+        - Z Axis Frame: milo_2.0/manual/chapters/50_z_axis_frame.md
+        - Y-Axis Frame: milo_2.0/manual/chapters/60_y_axis_frame.md
+        - ZY Assembly: milo_2.0/manual/chapters/70_zy_assembly.md
+        - XY Joiner Pre-Assembly: milo_2.0/manual/chapters/80_xy_joiner_pre_assembly.md
+        - X Axis and XY Joiner (Milo / Miley): milo_2.0/manual/chapters/90_x_axis_and_xy_joiner.md
+        - Z Mount and Y Accessories: milo_2.0/manual/chapters/100_z_mount_y_accessories.md
+        - Spindle mount and final sub-assemblies: milo_2.0/manual/chapters/110_table_and_spindle.md
+        - FMJ (V2): milo_2.0/manual/chapters/120_fmj_assembly.md
+        - Install RRF: milo_2.0/manual/chapters/130_install_rrf.md
+        - Assemble Electronics: milo_2.0/manual/chapters/140_assemble_electronics.md
+        - Pre-Flight Checks: milo_2.0/manual/chapters/150_pre_flight_checks.md
 
   - "Casa - Desktop CNC Enclosure":
     - Sourcing Guide: casa/bom/sourcing_guide.md
