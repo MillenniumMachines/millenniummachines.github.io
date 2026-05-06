@@ -21,7 +21,7 @@ Locations
 219        56             56
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | C BEAM 550mm | 1 |
 | 2 | M5 DROP IN NUT | 26 |
@@ -30,7 +30,7 @@ MILO X AXIS FRAME
 C BEAM PRE-ASSEMBLY
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO X AXIS C-BEAM PRE-ASSEMBLY | 1 |
 | 2 | ISO-7380-M5X10 BHCS | 8 |
@@ -46,7 +46,7 @@ MILO X AXIS FRAME
 ASSEMBLY STEP 1
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO X AXIS C-BEAM PRE-ASSEMBLY | 1 |
 | 2 | V-SLOT-2080X120MM | 2 |
@@ -55,7 +55,7 @@ ASSEMBLY STEP 1
 MILO X AXIS FRAME
 ASSEMBLY STEP 2
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 3 | M5 DROP IN NUT | 18 |
 
@@ -70,7 +70,7 @@ INLINE WITH EACH OTHER
 MILO X AXIS FRAME
 ASSEMBLY STEP 3
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | X AXIS MOTOR MOUNT | 1 |
 | 2 | M3X3MM HEATSET INSERT | 4 |
@@ -80,13 +80,13 @@ MILO X AXIS FRAME
 MOTOR MOUNT PRE-ASSEMBLY
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | X AXIS BEARING BLOCK | 1 |
 | 2 | M3X3MM HEATSET INSERT | 7 |
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | X AXIS BEARING BLOCK | 1 |
 | 3 | X-BEARING-BLOCK-INSERT | 1 |
@@ -97,7 +97,7 @@ MILO X AXIS FRAME
 BEARING BLOCK PRE-ASSEMBLY
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-X-AXIS-EXTRUSION-ASSEMBLY | 1 |
 | 2 | MILO-X-AXIS-MOTOR-MOUNT-SUBASSEMBLY | 1 |
@@ -107,13 +107,12 @@ BEARING BLOCK PRE-ASSEMBLY
 MILO X AXIS FRAME
 ASSEMBLY STEP 1
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-X-AXIS-EXTRUSION-ASSEMBLY | 1 |
 | 4 | MILO TABLE SUPPORT B | 2 |
-
-5 MILO TABLE SUPPORT A 4
-7         ISO-7380-M5X10 BHCS         18
+| 5 | MILO TABLE SUPPORT A | 4 |
+| 7 | ISO-7380-M5X10 BHCS | 18 |
 
 5                 1
 
@@ -122,7 +121,7 @@ MILO X AXIS FRAME
 ASSEMBLY STEP 2
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-X-AXIS-EXTRUSION-ASSEMBLY | 1 |
 | 7 | ISO-7380-M5X10 BHCS | 18 |
@@ -130,49 +129,47 @@ ASSEMBLY STEP 2
 MILO X AXIS FRAME
 ASSEMBLY STEP 3
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | X-Y JOINER-PLATE | 1 |
 | 2 | AB-BLOCK-MAIN-ASSEMBLY | 2 |
-
-ThrED-AB-BLOCK-ASSY                 1
-ThrED-AB-BLOCK                  1
-M3X3MM HEATSET INSERT                10
-M5X5.8mm HEATSET INSERT 1
-TR8X8 BRASS LEADSCREW NUT               1
-ISO-4762-M3X30-SHCS                2
-ISO-2338 M3-20mm PIN               2
-DIN-71412 GREASE-NIPPLE              1
-ThrED-COMPRESSION-PLATE-ASSEMBLY             1
-ThrED-COMPRESSION-PLATE                1
-M3X3MM HEATSET INSERT                2
-TR8X8 BRASS LEADSCREW NUT               1
-ISO-4762-M3X10-SHCS                2
-ISO-4762-M3X40-SHCS                4
-DIN-2093 10.2mm ID - 20mm OD BELLEVILLE WASHER    2
-3                ISO-2338-M5-15mm-PIN                2
-4                 ISO-4762-M3X40-SHCS                8
-5            X-AXIS-LINEAR-RAIL-ASSEMBLY             2
-MGN15 RAIL 550mm                 1
-MGN15C RAIL CARRIAGE                2
-6            Y-AXIS-LINEAR-RAIL-ASSEMBLY             2
-MGN15-RAIL-400mm                 1
-MGN15C RAIL CARRIAGE                2
-7       WAY-COVER-MAGNET-LOCK-ASSEMBLY               1
-WAY-COVER-MAGNET-LOCK                 1
-8X3MM NEODYMIUM MAGNET                 3
-8       BELLOW PLATE MAG MOUNT ASSEMBLY              1
-Y-AXIS-BELLOW-PLATE-MAG-MOUNT              1
-8X3MM NEODYMIUM MAGNET                 3
-9              ISO-10642-M5X12MM-FHCS                4
-10                ISO-4762-M3X10-SHCS                28
-11                ISO-4762-M3X20-SHCS                4
-12                 ISO-7089 M3 WASHER                4
-
+|  | ThrED-AB-BLOCK-ASSY | 1 |
+|  | ThrED-AB-BLOCK | 1 |
+|  | M3X3MM HEATSET INSERT | 10 |
+|  | M5X5.8mm HEATSET INSERT | 1 |
+|  | TR8X8 BRASS LEADSCREW NUT | 1 |
+|  | ISO-4762-M3X30-SHCS | 2 |
+|  | ISO-2338 M3-20mm PIN | 2 |
+|  | DIN-71412 GREASE-NIPPLE | 1 |
+|  | ThrED-COMPRESSION-PLATE-ASSEMBLY | 1 |
+|  | ThrED-COMPRESSION-PLATE | 1 |
+|  | M3X3MM HEATSET INSERT | 2 |
+|  | TR8X8 BRASS LEADSCREW NUT | 1 |
+|  | ISO-4762-M3X10-SHCS | 2 |
+|  | ISO-4762-M3X40-SHCS | 4 |
+|  | DIN-2093 10.2mm ID - 20mm OD BELLEVILLE WASHER | 2 |
+| 3 | ISO-2338-M5-15mm-PIN | 2 |
+| 4 | ISO-4762-M3X40-SHCS | 8 |
+| 5 | X-AXIS-LINEAR-RAIL-ASSEMBLY | 2 |
+|  | MGN15 RAIL 550mm | 1 |
+|  | MGN15C RAIL CARRIAGE | 2 |
+| 6 | Y-AXIS-LINEAR-RAIL-ASSEMBLY | 2 |
+|  | MGN15-RAIL-400mm | 1 |
+|  | MGN15C RAIL CARRIAGE | 2 |
+| 7 | WAY-COVER-MAGNET-LOCK-ASSEMBLY | 1 |
+|  | WAY-COVER-MAGNET-LOCK | 1 |
+|  | 8X3MM NEODYMIUM MAGNET | 3 |
+| 8 | BELLOW PLATE MAG MOUNT ASSEMBLY | 1 |
+|  | Y-AXIS-BELLOW-PLATE-MAG-MOUNT | 1 |
+|  | 8X3MM NEODYMIUM MAGNET | 3 |
+| 9 | ISO-10642-M5X12MM-FHCS | 4 |
+| 10 | ISO-4762-M3X10-SHCS | 28 |
+| 11 | ISO-4762-M3X20-SHCS | 4 |
+| 12 | ISO-7089 M3 WASHER | 4 |
 
 MILO XY JOINER PLATE
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | X-Y JOINER-PLATE | 1 |
 | 2 | ISO-7379-M5X6MM-THREAD-M6X4MM-SHOULDER | 2 |
@@ -180,8 +177,8 @@ MILO XY JOINER PLATE
 | 4 | ISO-10642-M5X12MM-FHCS | 2 |
 | 5 | CARRIAGE RETAINER & BEARING ASSEMBLY | 1 |
 | 6 | ISO-4762-M3X10-SHCS | 4 |
+|  | SHOULDER BOLTS          2                                                                                             2 | 4 |
 
-SHOULDER BOLTS          2                                                                                             2                4
 GO ON THE SIDE CLOSER
 TO THE OUTSIDE OF THE
 PLATE
@@ -208,7 +205,7 @@ BOLT UP
 MILO XY JOINER PLATE
 ASSEMBLY STEP 1
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | X-Y JOINER-PLATE | 1 |
 | 2 | CARRIAGE RETAINER & BEARING ASSEMBLY | 4 |
@@ -228,7 +225,7 @@ THE OTHER 2 WHEN WE MOUNT THE BELLOW
 MAG MOUNT ASSEMBLY
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 2 | CARRIAGE RETAINER & BEARING ASSEMBLY | 4 |
 | 3 | ISO-4762-M3X10-SHCS | 12 |
@@ -236,14 +233,12 @@ MAG MOUNT ASSEMBLY
 MILO XY JOINER PLATE
 ASSEMBLY STEP 3
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | X-Y JOINER-PLATE | 1 |
 | 2 | AB-BLOCK-MAIN-ASSEMBLY | 2 |
 | 3 | ISO-2338-M5-15mm-PIN | 2 |
-
-4 ISO-4762-M3X40-SHCS 8
-
+| 4 | ISO-4762-M3X40-SHCS | 8 |
 
 2                 2
 
@@ -258,8 +253,9 @@ TOWARDS X-LH
 MILO XY JOINER PLATE
 ASSEMBLY STEP 4
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
+| 7 | ISO-10642-M5X12MM-FHCS | 4 |
 | 10 | ISO-4762-M3X20-SHCS | 4 |
 | 11 | ISO-7089 M3 WASHER | 4 |
 
@@ -290,7 +286,7 @@ TILT XY-JOINER PLATE ASSEMBLY
 INTO THE TABLE ASSEMBLY
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-XY-JOINER-PLATE-ASSEMBLY | 1 |
 | 2 | FLOATING-BEARING-BLOCK-ASSEMBLY | 1 |
@@ -311,7 +307,7 @@ PLACE RAIL ALIGNMENT GUIDES
 ON OPPOSITE ENDS
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-XY-JOINER-PLATE-ASSEMBLY | 1 |
 | 2 | MILO-X-AXIS-ASSEMBLY | 1 |
@@ -323,7 +319,7 @@ ON OPPOSITE ENDS
 MILO X AXIS FRAME
 ASSEMBLY STEP 5
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-XY-JOINER-PLATE-ASSEMBLY | 1 |
 | 2 | MILO-X-AXIS-ASSEMBLY | 1 |
@@ -346,7 +342,7 @@ APPLY PRESSURE
 WHEN TIGHTENING
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-XY-JOINER-PLATE-ASSEMBLY | 1 |
 | 2 | MILO-X-AXIS-ASSEMBLY | 1 |
@@ -357,7 +353,7 @@ MILO X AXIS FRAME
 ASSEMBLY STEP 7
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-XY-JOINER-PLATE-ASSEMBLY | 1 |
 | 2 | MILO-X-AXIS-ASSEMBLY | 1 |
@@ -372,16 +368,15 @@ TO THIS SIDE
 MILO X AXIS FRAME
 ASSEMBLY STEP 8
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | ZY-ASSEMBLY | 1 |
 | 2 | MILO-XY-SUBASSEMBLY | 1 |
+| 3 | F8-16M THRUST BEARING | 1 |
+| 4 | DOUBLE SPLIT SHAFT COLLAR 8X18X9MM | 1 |
 
-3 F8-16M THRUST BEARING 1
-4   DOUBLE SPLIT SHAFT COLLAR 8X18X9MM    1
 
-
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | ZY-ASSEMBLY | 1 |
 | 2 | MILO-XY-SUBASSEMBLY | 1 |
@@ -390,7 +385,7 @@ ASSEMBLY STEP 8
 MILO SUB-ASSEMBLY-A
 STEP 1
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | ZY-ASSEMBLY | 1 |
 | 2 | MILO-XY-SUBASSEMBLY | 1 |
@@ -416,7 +411,7 @@ If you building Miley, follow the
 instructions on pages 70-95.
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY-X-AXIS-ASSEMBLY-A | 1 |
 | 2 | X-AXIS-LINEAR-RAIL-ASSEMBLY | 2 |
@@ -453,7 +448,7 @@ Locations
 219    56   56
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | C BEAM 550mm | 1 |
 | 2 | M5 DROP IN NUT | 26 |
@@ -473,7 +468,7 @@ MILEY X AXIS
 ASSEMBLY STEP 1
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | C BEAM 550mm | 1 |
 | 2 | V-SLOT-2080X120MM | 2 |
@@ -481,8 +476,9 @@ ASSEMBLY STEP 1
 MILEY X AXIS
 ASSEMBLY STEP 2
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
+| 1 | C BEAM 550mm                     1 | 3 |
 | 2 | V-SLOT-2080X120MM | 2 |
 | 3 | M5 DROP IN NUT | 36 |
 
@@ -498,7 +494,7 @@ MILEY X AXIS
 ASSEMBLY STEP 3
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY-X-AXIS-MOTOR-MOUNT | 1 |
 | 2 | M5X5.8mm HEATSET INSERT | 4 |
@@ -509,12 +505,12 @@ MILEY X AXIS
 MOTOR MOUNT PRE-ASSEMBLY
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY X-AXIS-BEARING-BLOCK | 1 |
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 3 | X-BEARING-BLOCK-INSERT | 1 |
 | 1 | MILEY X-AXIS-BEARING-BLOCK | 1 |
@@ -526,7 +522,7 @@ MILEY X AXIS
 BEARING BLOCK PRE-ASSEMBLY
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY-X-AXIS-EXTRUSION-ASSEMBLY | 1 |
 | 2 | MILEY-X-AXIS-BEARING-MOUNT-SUBASSEMBLY | 1 |
@@ -537,15 +533,15 @@ MILEY X AXIS
 ASSEMBLY STEP 4
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
+| 1 | FIXATED V2                1 | 4 |
 | 2 | AB-BLOCK-MAIN-ASSEMBLY | 1 |
+| 3 | ISO-2338-M5-15mm-PIN            1 | 5 |
+| 4 | TR8X8 LEADSCREW 600mm            1 | 1 |
 
-3                 ISO-2338-M5-15mm-PIN            1                                   5
-4                TR8X8 LEADSCREW 600mm            1                             1
 
-
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | FIXATED V2 | 1 |
 | 5 | ISO-4762-M3X40-SHCS | 4 |
@@ -553,14 +549,12 @@ ASSEMBLY STEP 4
 MILEY X AXIS
 FIXATED ASSEMBLY
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | FIXATED V2 | 1 |
 | 2 | FLOATING-BEARING-BLOCK-ASSEMBLY | 1 |
 | 3 | F8-16M THRUST BEARING | 1 |
-
-4 DOUBLE SPLIT SHAFT COLLAR 8X18X9MM         1
-
+| 4 | DOUBLE SPLIT SHAFT COLLAR 8X18X9MM | 1 |
 
 JUST SLIP THESE ON IN
 PREPARATION FOR
@@ -576,13 +570,12 @@ MILEY X AXIS
 FIXATED ASSEMBLY
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
+| 1 | MILEY-X-AXIS-ASSEMBLY-A    1 | 1 |
 | 2 | ISO-7380-M5X10 BHCS | 18 |
 | 3 | MILEY TABLE SUPPORT B | 2 |
-
-4          MILEY TABLE SUPPORT A     4     3
-
+| 4 | MILEY TABLE SUPPORT A     4 | 3 |
 
 MILEY X AXIS
 ASSEMBLY STEP 5
@@ -591,7 +584,7 @@ ASSEMBLY STEP 5
 41.500            5
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY-X-AXIS-ASSEMBLY-A | 1 |
 | 5 | M5 DROP IN NUT | 2 |
@@ -599,7 +592,7 @@ ASSEMBLY STEP 5
 MILEY X AXIS
 ASSEMBLY STEP 6
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY-X-AXIS-ASSEMBLY-A | 1 |
 | 2 | X-AXIS-LINEAR-RAIL-ASSEMBLY | 2 |
@@ -619,7 +612,7 @@ US IDE
 MILEY X AXIS
 ASSEMBLY STEP 7
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY-X-AXIS-ASSEMBLY-A | 1 |
 | 3 | ISO-4762-M3X10-SHCS | 16 |
@@ -628,15 +621,13 @@ ASSEMBLY STEP 7
 MILEY X AXIS
 ASSEMBLY STEP 8
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY-X-AXIS-ASSEMBLY-A | 1 |
 | 5 | MILEY-X-AXIS-FIXATED-ASSEMBLY | 1 |
 | 8 | ISO-7380-M5X10 BHCS | 2 |
 | 10 | F8-16M THRUST BEARING | 1 |
-
-11 DOUBLE SPLIT SHAFT COLLAR 8X18X9MM 1
-
+| 11 | DOUBLE SPLIT SHAFT COLLAR 8X18X9MM | 1 |
 
 TIGHTEN BOTH
 
@@ -650,14 +641,14 @@ Shaft Collar Bolts    WHEN TIGHTENING
 MILEY X AXIS
 ASSEMBLY STEP 9
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY-X-AXIS-ASSEMBLY-A | 1 |
 | 7 | NEMA 23 - 56mm | 1 |
 | 8 | GT2-40T-ID-6.35mm | 1 |
 | 9 | 120mm-GATE-GT2-CLOSED-LOOP-BELT | 1 |
+| 10 | ISO-4026-M3X10-SET SCREW | 2 |
 
-10 ISO-4026-M3X10-SET SCREW 2
 17                 GT2-40T-ID-8mm            1       On the Set Screws
 
 
@@ -672,7 +663,7 @@ TO THIS SIDE
 MILEY X AXIS
 ASSEMBLY STEP 10
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY-X-AXIS-ASSEMBLY-A | 1 |
 | 7 | NEMA 23 - 56mm | 1 |
@@ -700,7 +691,7 @@ pressure when tightening
 the set screw.
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY-X-AXIS-ASSEMBLY-A | 1 |
 | 10 | ISO-4026-M3X10-SET SCREW | 1 |
@@ -710,7 +701,7 @@ MILEY X AXIS
 ASSEMBLY STEP 12
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | X-Y JOINER-PLATE | 1 |
 | 2 | AB-BLOCK-MAIN-ASSEMBLY | 1 |
@@ -727,16 +718,14 @@ ASSEMBLY STEP 12
 
 MILEY XY JOINER PLATE
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | X-Y JOINER-PLATE | 1 |
 | 2 | ISO-7379-M5X6MM-THREAD-M6X4MM-SHOULDER | 2 |
 | 3 | ISO-2338-M6-30mm-PIN | 2 |
-
-4 ISO-10642-M5X12MM-FHCS 2
-5          CARRIAGE RETAINER & BEARING ASSEMBLY        1
-6                    ISO-4762-M3X10-SHCS               4
-
+| 4 | ISO-10642-M5X12MM-FHCS | 2 |
+| 5 | CARRIAGE RETAINER & BEARING ASSEMBLY | 1 |
+| 6 | ISO-4762-M3X10-SHCS | 4 |
 
 A                      A     On Part #6 Only
 1                                  4
@@ -780,7 +769,7 @@ CLOSER TO THE OUTSIDE OF
 THE PLATE
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | X-Y JOINER-PLATE | 1 |
 | 2 | CARRIAGE RETAINER & BEARING ASSEMBLY | 4 |
@@ -790,7 +779,7 @@ MILEY XY JOINER PLATE
 ASSEMBLY STEP 2
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | X-Y JOINER-PLATE | 1 |
 | 3 | BELLOW PLATE MAG MOUNT ASSEMBLY | 1 |
@@ -802,14 +791,12 @@ ASSEMBLY STEP 3
 Linear Rail Carriage Safety
 If your rails came with rubber stoppers, stick
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 2 | AB-BLOCK-MAIN-ASSEMBLY | 1 |
-
-3 ISO-2338-M5-15mm-PIN 1
-4          ISO-4762-M3X40-SHCS     4
-12       TR8X8 LEADSCREW 600mm     1
-
+| 3 | ISO-2338-M5-15mm-PIN | 1 |
+| 4 | ISO-4762-M3X40-SHCS | 4 |
+| 12 | TR8X8 LEADSCREW 600mm | 1 |
 
 1. Loosen the bolts in the carriage retainer and slide the
 rails back onto the carriages
@@ -820,14 +807,14 @@ Y axis leadscrew
 MILEY XY JOINER PLATE
 ASSEMBLY STEP 4
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY-XY-JOINER-PLATE-ASSEMBLY | 1 |
 | 2 | MILEY-X-AXIS-ASSEMBLY | 1 |
 | 4 | ISO-7380-M5X10 BHCS | 4 |
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILEY-X-AXIS-ASSEMBLY | 1 |
 | 2 | M5 DROP IN NUT | 4 |
@@ -840,7 +827,7 @@ ASSEMBLY STEP 4
 
 MILEY XY SUB-ASSEMBLY
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | ZY-ASSEMBLY | 1 |
 | 2 | MILEY-XY-SUBASSEMBLY | 1 |
@@ -848,7 +835,7 @@ MILEY XY SUB-ASSEMBLY
 | 4 | DOUBLE SPLIT SHAFT COLLAR 8X18X9MM | 1 |
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | ZY-ASSEMBLY | 1 |
 | 2 | MILEY-XY-SUBASSEMBLY | 1 |
@@ -859,14 +846,12 @@ REMOVE
 
 MILEY SUB-ASSEMBLY A
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | ZY-ASSEMBLY | 1 |
 | 2 | MILEY-XY-SUBASSEMBLY | 1 |
 | 4 | F8-16M THRUST BEARING | 1 |
-
-5 DOUBLE SPLIT SHAFT COLLAR 8X18X9MM 1
-
+| 5 | DOUBLE SPLIT SHAFT COLLAR 8X18X9MM | 1 |
 
 Shaft Collar Bolts
 
@@ -887,7 +872,7 @@ mount and tram the Z Axis Carriages to the
 Z Axis Mount Plate
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | Z MOUNTING PLATE | 1 |
 | 2 | Z-AXIS-LINEAR-RAIL-ASSEMBLY | 2 |

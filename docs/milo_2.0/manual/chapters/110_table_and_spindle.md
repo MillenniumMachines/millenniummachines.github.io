@@ -23,7 +23,7 @@ Spindle Mount Options
 65mm Printed Spindle Mount
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | 80mm-HOI-SPINDLE-MOUNT-BACK-PRINTED | 1 |
 | 2 | 80mm-HOI-SPINDLE-MOUNT-FRONT-PRINTED | 1 |
@@ -38,7 +38,7 @@ Spindle Mount Options
 MILO SUBASSEMBLY D
 SPINDLE MOUNT REFERENCE
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-SUBASSEMBLY-D | 1 |
 | 2 | TRAM-PLATE-FINAL | 1 |
@@ -51,14 +51,14 @@ SPINDLE MOUNT REFERENCE
 MILO SUBASSEMBLY D
 SPINDLE MOUNT MOUNTING
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | REAR-COLUMN-CHAIN-ANCHOR-PRE-ASSEMBLY | 1 |
 | 2 | REAR-COLUMN-CHAIN -ANCHOR-FACEPLATE | 1 |
 | 3 | ISO-4762-M3X10-SHCS | 4 |
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | REAR-COLUMN-CHAIN-ANCHOR | 1 |
 | 2 | M3X3MM HEATSET INSERT | 10 |
@@ -66,20 +66,17 @@ SPINDLE MOUNT MOUNTING
 MILO SUB-ASSEMBLY E
 REAR COLUMN CHAIN ANCHOR PRE-ASSEMBLY
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-SUBASSEMBLY-E | 1 |
 | 2 | M5 DROP IN NUT | 2 |
 | 3 | REAR-COLUMN-CHAIN-ANCHOR-SUBASSEMBLY | 1 |
-
-4 ISO-7380-M5X10 BHCS 2
-
+| 4 | ISO-7380-M5X10 BHCS | 2 |
 
 MILO SUB-ASSEMBLY E
 ASSEMBLY STEP 1
-QTY 2
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | 10X11-CABLE-CHAIN-FIXED | 1 |
 | 2 | 10X11-CABLE-CHAIN-LINK | 31 |
@@ -89,21 +86,19 @@ MILO SUB-ASSEMBLY E
 CABLE CHAIN ASSEMBLY PRE-ASSEMBLY
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-SUBASSEMBLY-E | 1 |
 | 2 | M5 DROP IN NUT | 2 |
 | 3 | REAR-COLUMN-CHAIN-ANCHOR-SUBASSEMBLY | 1 |
-
-4            CABLE-CHAIN-ASSEMBLY           2     6
-6   5             ISO-7380-M5X10 BHCS           2
-6           ISO-10642-M3X6MM-FHCS           12
-
+| 4 | CABLE-CHAIN-ASSEMBLY           2 | 6 |
+| 5 | ISO-7380-M5X10 BHCS | 2 |
+| 6 | ISO-10642-M3X6MM-FHCS | 12 |
 
 MILO SUB-ASSEMBLY E
 ASSEMBLY STEP 2
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-SUBASSEMBLY-E | 1 |
 | 5 | LJ8A3-2-Z/AY | 2 |
@@ -124,15 +119,13 @@ the set screw.
 MILO SUB-ASSEMBLY E
 ASSEMBLY STEP 3
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-SUBASSEMBLY-E | 1 |
 | 2 | M5 DROP IN NUT | 6 |
 | 6 | FIXATED-V2-ASSEMBLY | 1 |
 | 7 | ISO-7380-M5X10 BHCS | 6 |
-
-9 FIXATED-MOUNTING-SLOT-COVER 3
-
+| 9 | FIXATED-MOUNTING-SLOT-COVER | 3 |
 
 USE PROVIDED 3D
 PRINTED FIXATED

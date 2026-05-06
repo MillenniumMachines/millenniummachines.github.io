@@ -6,7 +6,7 @@
 ZY ASSEMBLY
 ASSEMBLY STEP 1A
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | Y-AXIS-FRAME | 1 |
 | 2 | Z-AXIS-FRAME | 1 |
@@ -15,13 +15,13 @@ ASSEMBLY STEP 1A
 ZY ASSEMBLY
 ASSEMBLY STEP 1B
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | Y-AXIS-BELLOW-PLATE-MAG-MOUNT | 1 |
 | 2 | 8X3MM NEODYMIUM MAGNET | 3 |
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | WAY-COVER-MAGNET-LOCK | 1 |
 | 2 | 8X3MM NEODYMIUM MAGNET | 3 |

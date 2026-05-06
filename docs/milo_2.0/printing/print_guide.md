@@ -18,15 +18,19 @@ Minimum wall thickness values in the repository assume a **0.4 mm** nozzle. If y
 
 Parts that take M3 heat-set inserts are provided in variants for **CNC-Kitchen**-style inserts and **Voron**-style inserts. Print the STLs that match the inserts you purchased.
 
+| | CNC-Kitchen style | Voron style |
+| --- | --- | --- |
+| Reference depth / callout (mm) | 4.600 | 5 |
+
 ## Structural profiles (from manual)
 
-| Profile Name   | Structural | Semi structural | Aesthetic |
-|----------------|------------|-----------------|-----------|
-| Profile code   | S          | SS              | A         |
-| Infill %       | 45         | 25              | 20        |
-| Wall count     | 6          | 4               | 3         |
-| Top/bottom layers | 6       | 5               | 5         |
-| Nozzle (mm)    | 0.4        | 0.4             | 0.4       |
+| Parameter | Structural (S) | Semi structural (SS) | Aesthetic (A) |
+| --- | --- | --- | --- |
+| Profile code | S | SS | A |
+| Infill density [%] | 45 | 25 | 20 |
+| Wall count | 6 | 4 | 3 |
+| Top/bottom layers | 6 | 5 | 5 |
+| Nozzle size [mm] | 0.4 | 0.4 | 0.4 |
 
 Lead- and ballscrew options are called out in the [Introduction](../manual/chapters/20_introduction.md).
 

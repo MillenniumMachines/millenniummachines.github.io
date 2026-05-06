@@ -24,7 +24,7 @@ Slide the Z Axis Linear Rails back into their
 carriages.
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | Z MOUNTING PLATE | 1 |
 | 7 | TR8X8 LEADSCREW 600mm | 1 |
@@ -32,14 +32,13 @@ carriages.
 Z MOUNT PLATE ASSEMBLY
 ASSEMBLY STEP 2
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | ZY-ASSEMBLY | 1 |
 | 4 | Z-AXIS-SUBASSEMBLY-A | 1 |
 | 5 | FLOATING-BEARING-BLOCK-ASSEMBLY | 1 |
-
-6 F8-16M THRUST BEARING 1
-7     DOUBLE SPLIT SHAFT COLLAR 8X18X9MM    1
+| 6 | F8-16M THRUST BEARING | 1 |
+| 7 | DOUBLE SPLIT SHAFT COLLAR 8X18X9MM | 1 |
 
 REMOVE
 
@@ -53,7 +52,7 @@ Remove the Z Axis Motor Mount
 from the ZY-Assembly.
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | ZY-ASSEMBLY | 1 |
 | 3 | ISO-4762-M3X10-SHCS | 12 |
@@ -70,15 +69,13 @@ AND MOUNT FLOATING BEARING
 MILO SUB-ASSEMBLY A
 Z AXIS
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | ZY-ASSEMBLY | 1 |
 | 2 | MILO-XY-SUBASSEMBLY | 1 |
 | 4 | Z-AXIS-SUBASSEMBLY-A | 1 |
-
-6 F8-16M THRUST BEARING 1
-7   DOUBLE SPLIT SHAFT COLLAR 8X18X9MM        1
-
+| 6 | F8-16M THRUST BEARING | 1 |
+| 7 | DOUBLE SPLIT SHAFT COLLAR 8X18X9MM | 1 |
 
 Apply inward pressure to the shaft
 4                                collars and tighten.
@@ -87,7 +84,7 @@ Apply inward pressure to the shaft
 MILO SUB-ASSEMBLY A
 Z AXIS
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | ZY-ASSEMBLY | 1 |
 | 2 | MILO-XY-SUBASSEMBLY | 1 |
@@ -108,7 +105,7 @@ printer isn’t big enough to print the mono-body
 version, print the split version
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | Y-AXIS-MOTOR-MOUNT-A | 1 |
 | 2 | Y-AXIS-MOTOR-MOUNT-B | 1 |
@@ -125,7 +122,7 @@ enclosure is
 3             2
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-SUBASSEMBLY-A | 1 |
 | 5 | NEMA23-76mm | 1 |
@@ -152,7 +149,7 @@ Y AXIS - ASSEMBLY STEP 2
 3              3
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | Y-AXIS-HOLD-DOWN-D2 | 1 |
 | 2 | 8X3MM NEODYMIUM MAGNET | 1 |
@@ -162,7 +159,7 @@ Y AXIS HOLD DOWNS
 D1/D2 PRE-ASSEMBLY
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | DUST-COVER B | 1 |
 | 2 | 8X3MM NEODYMIUM MAGNET | 1 |
@@ -177,7 +174,7 @@ above 1000mm/min, use
 Axis.
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MICRO-SWITCH-MOUNT-Y | 1 |
 | 2 | M3X3MM HEATSET INSERT | 2 |
@@ -190,7 +187,7 @@ MICROSWITCH OR
 INDUCTIVE
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | Y-AXIS-HOLD-DOWN-C2 | 1 |
 | 2 | Y-AXIS-INDUCTIVE-SWITCH-ASSEMBLY | 1 |
@@ -200,7 +197,7 @@ INDUCTIVE
 Y AXIS HOLD DOWNS
 C2 PRE-ASSEMBLY
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | D2-HOLD-DOWN-SUBASSEMBLY | 1 |
 | 2 | D1-HOLD-DOWN-SUBASSEMBLY | 1 |
@@ -215,29 +212,25 @@ Y AXIS HOLD DOWNS
 ASSEMBLY
 Z & X AXIS HIDDEN FOR CLARITY
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-SUBASSEMBLY-B | 1 |
 | 2 | M5 DROP IN NUT | 12 |
 | 3 | HOLD-DOWN-ASSEMBLY | 1 |
 | 4 | ISO-7380-M5X12 BHCS | 2 |
-
-5 DUST-COVER-A-SUBASSEMBLY 1
-6   DUST-COVER-B-SUBASSEMBLY    1
-
+| 5 | DUST-COVER-A-SUBASSEMBLY | 1 |
+| 6 | DUST-COVER-B-SUBASSEMBLY | 1 |
 
 3                                                              6
 
 
 MILO SUB-ASSEMBLY B
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | Y-AXIS-BELLOW-COLUMN-MAG-MOUNT | 1 |
 | 2 | 8X3MM NEODYMIUM MAGNET | 3 |
-
-3 ISO-4762-M3X6-SHCS 2
-
+| 3 | ISO-4762-M3X6-SHCS | 2 |
 
 Super glue or use
 
@@ -260,10 +253,7 @@ tight, you can apply a
 dab of super glue.
 
 
-QTY 2
-
-
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | BELLOW-ATTACHMENT-PLATE-ASSEMBLY | 2 |
 | 2 | BELLOWS | 1 |
@@ -281,7 +271,7 @@ tight, you can apply a
 dab of super glue.
 
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | WAY-COVER-Y-FRONT-G | 1 |
 | 2 | 8X3MM NEODYMIUM MAGNET | 3 |
@@ -289,17 +279,15 @@ dab of super glue.
 YY AXIS BELLOWS/WAYCOVER
 WAYCOVER PRE-ASSEMBLY
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | WAY-COVER-A-SUBASSEMBLY | 1 |
 | 2 | WAY-COVER-Y-FRONT-B | 1 |
-
-3 WAY-COVER-Y-FRONT-C 1
-4     WAY-COVER-Y-FRONT-D          1
-5     WAY-COVER-Y-FRONT-E          1
-6     WAY-COVER-Y-FRONT-F          1
-7   WAY-COVER-G-SUBASSEMBLY        1
-
+| 3 | WAY-COVER-Y-FRONT-C | 1 |
+| 4 | WAY-COVER-Y-FRONT-D | 1 |
+| 5 | WAY-COVER-Y-FRONT-E | 1 |
+| 6 | WAY-COVER-Y-FRONT-F | 1 |
+| 7 | WAY-COVER-G-SUBASSEMBLY | 1 |
 
 If the magnet isn’t tight,
 
@@ -315,7 +303,7 @@ A                                                   A
 YY AXIS BELLOWS/WAYCOVER
 WAYCOVER ASSEMBLY
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | MILO-SUBASSEMBLY-C | 1 |
 | 2 | Y-AXIS-WAY-COVER-ASSEMBLY | 1 |
@@ -326,7 +314,7 @@ WAYCOVER ASSEMBLY
 MILO SUBASSEMBLY C
 WAY COVER INSTALL
 
-| # | Part | Qty |
+| Item | Part | Qty |
 | --- | --- | --- |
 | 1 | TRAM-AID | 1 |
 | 2 | M5X5.8mm HEATSET INSERT | 1 |

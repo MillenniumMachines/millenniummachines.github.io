@@ -28,21 +28,16 @@ Example: Panel-Clip-A x8.stl If any file ends with x#, that tells
 you the quantity of that part required to build the mill.
 
 
-Profile Name                                Structural                             Semi Structural                              Aesthetic
+### Print profile (structural / semi-structural / aesthetic)
 
-Profile Code                                    S                                       SS                                          A
+| Parameter | Structural (S) | Semi structural (SS) | Aesthetic (A) |
+| --- | --- | --- | --- |
+| Profile code | S | SS | A |
+| Infill density [%] | 45 | 25 | 20 |
+| Wall count | 6 | 4 | 3 |
+| Top/bottom layers | 6 | 5 | 5 |
+| Nozzle size [mm] | 0.4 | 0.4 | 0.4 |
 
-
-Infill Density [%]                                45                                      25                                         20
-
-
-Wall Count                                     6                                        4                                          3
-
-
-Top/Bottom Layers                                  6                                        5                                          5
-
-
-Nozzle Size [mm]                                 0..4                                     0.4                                        0.4
 
 
 All 3D-printed parts that use M3 heat-set inserts are supplied in two
@@ -50,13 +45,16 @@ versions: one for CNC-Kitchen inserts and one for Voron inserts. Make sure
 to select the STL that matches the style of insert you’re using.
 
 
-CNC-Kitchen Specification                        Voron Specification
+### Heat-set insert variants (per manual drawing)
 
-4.600                                             5
+| | CNC-Kitchen style | Voron style |
+| --- | --- | --- |
+| Reference depth / callout (mm) | 4.600 | 5 |
+
 Leadscrew or Ballscrew?
 Both Milo and Miley are designed to work with TR8×8 leadscrews or SFK0802 ballscrews.
 That said, the standard—and the configuration we recommend—is the TR8×8 leadscrew.
-Cost aside, there are a few reasons why leadscrews tend to make more sense for small,                                                                4
+Cost aside, there are a few reasons why leadscrews tend to make more sense for small,
 desktop-sized CNC machines. With their 8 mm pitch, the motors don’t need to spin as fast to
 reach practical feed rates, especially when running multi-flute end mills.
 
@@ -72,33 +70,14 @@ recommend ballscrews if you plan to run servos or don’t mind being limited to 
 tooling.
 
 
-Both Milo & Miley have the same Y and Z travel
+### Machine travel references (see PDF diagrams)
 
+The manual lists **660.4 mm** and **698.2 mm** as shared Y/Z travel references for both variants.
 
-660.4
-
-
-698.2
-
-
-Milo            Miley
-
-
-348             308
-1026             658
-
-
-QTY 3
-
-
-| # | Part | Qty |
+| Diagram grid | Milo (mm) | Miley (mm) |
 | --- | --- | --- |
-| 1 | INTERNAL AXIS FLOATING BEARING BLOCK | 1 |
-| 2 | FLOATING BEARING BLOCK FACEPLATE A | 1 |
-| 3 | M3X3MM HEATSET INSERT | 2 |
-| 4 | FLOATING BEARING BLOCK FACEPLATE B | 1 |
-| 5 | 608ZZ BALL BEARING | 2 |
-| 6 | ISO-4762-M3X40-SHCS | 2 |
+| Row 1 | 348 | 308 |
+| Row 2 | 1026 | 658 |
 
 
 ---
