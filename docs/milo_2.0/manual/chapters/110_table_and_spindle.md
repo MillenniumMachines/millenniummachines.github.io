@@ -31,9 +31,14 @@ Spindle Mount Options
 | 4 | 80mm-HOI-SPINDLE-MOUNT-FRONT | 2 |
 | 5 | ISO-4762-M5X15-SHCS | 4 |
 
+### 65mm HOI Spindle Mount
+
 65mm Half Plate Spindle Mount
-6            ISO-7089-M5-WASHER                4
-7                 LOGO INSERT                  1
+
+| Item | Part | Qty |
+| --- | --- | --- |
+| 6 | ISO-7089-M5-WASHER | 4 |
+| 7 | LOGO INSERT | 1 |
 
 MILO SUBASSEMBLY D
 SPINDLE MOUNT REFERENCE
@@ -91,7 +96,7 @@ CABLE CHAIN ASSEMBLY PRE-ASSEMBLY
 | 1 | MILO-SUBASSEMBLY-E | 1 |
 | 2 | M5 DROP IN NUT | 2 |
 | 3 | REAR-COLUMN-CHAIN-ANCHOR-SUBASSEMBLY | 1 |
-| 4 | CABLE-CHAIN-ASSEMBLY           2 | 6 |
+| 4 | CABLE-CHAIN-ASSEMBLY | 2 |
 | 5 | ISO-7380-M5X10 BHCS | 2 |
 | 6 | ISO-10642-M3X6MM-FHCS | 12 |
 
@@ -104,13 +109,9 @@ ASSEMBLY STEP 2
 | 5 | LJ8A3-2-Z/AY | 2 |
 | 6 | ISO-4026-M3X10-SET SCREW | 3 |
 
-Do not use a lot of
-pressure when tightening
-these set screws.
+Do not use a lot of pressure when tightening these set screws.
 
-Do not use a lot of
-pressure when tightening
-the set screw.
+Do not use a lot of pressure when tightening the set screw.
 
 
 6                      Milo Only

@@ -5,23 +5,26 @@
 
 Z MOUNT PLATE ASSEMBLY
 ASSEMBLY STEP 1
-QTY.                          Linear Rail Carriage Safety
-PART NUMBER                                                          If your rails came with rubber stoppers,
-1               Z MOUNTING PLATE                        1                            stick them in after sliding the rails back
-onto the carriages. This will prevent your
-4            ISO-2338-M5-15mm-PIN                       1                            rails from sliding out of the carriages
-5             ISO-4762-M3X40-SHCS                       4                            during the rest of the assembly.
-6 AB-BLOCK-MAIN-ASSEMBLY 1
+### Linear Rail Carriage Safety
+
+| Item | Part | Qty |
+| --- | --- | --- |
+| 1 | Z MOUNTING PLATE | 1 |
+| 4 | ISO-2338-M5-15mm-PIN | 1 |
+| 5 | ISO-4762-M3X40-SHCS | 4 |
+| 6 | AB-BLOCK-MAIN-ASSEMBLY | 1 |
+
+!!! note
+    If your rails came with rubber stoppers,
+    stick them in after sliding the rails back
+    onto the carriages. This will prevent your
+    rails from sliding out of the carriages
+    during the rest of the assembly.
+
+Z Axis Leadscrew Follow the instructions from earlier to assemble and mount the Z Axis Leadscrew
 
 
-Z Axis Leadscrew
-Follow the instructions from earlier to
-assemble and mount the Z Axis Leadscrew
-
-
-Z Axis Linear Rails
-Slide the Z Axis Linear Rails back into their
-carriages.
+Z Axis Linear Rails Slide the Z Axis Linear Rails back into their carriages.
 
 
 | Item | Part | Qty |
@@ -46,10 +49,10 @@ REMOVE
 Remove the Z Axis Motor Mount
 
 
-& the Floating Bearing Block
+CK & the Floating Bearing Block
 
 
-from the ZY-Assembly.
+EA from the ZY-Assembly.
 
 
 | Item | Part | Qty |
@@ -99,10 +102,7 @@ TO THE BACK OF MILO
 
 MILO SUB-ASSEMBLY A
 Z AXIS
-Y Axis Motor Mount
-Two different versions are provided. If your 3D
-printer isn’t big enough to print the mono-body
-version, print the split version
+Y Axis Motor Mount Two different versions are provided. If your 3D printer isn’t big enough to print the mono-body version, print the split version
 
 
 | Item | Part | Qty |
@@ -115,11 +115,7 @@ MILO SUB-ASSEMBLY A
 Y AXIS MOTOR MOUNT PRE-ASSEMBLY
 
 
-Motor cable orientation should
-be determined based on the
-where your main electrical
-enclosure is
-3             2
+Motor cable orientation should be determined based on the where your main electrical enclosure is
 
 
 | Item | Part | Qty |
@@ -135,18 +131,11 @@ MILO SUB-ASSEMBLY A
 Y AXIS - ASSEMBLY STEP 1
 
 
-Loctite and Tighten
-Spider Coupler
+Loctite and Tighten Spider Coupler
 
 
 MILO SUB-ASSEMBLY A
 Y AXIS - ASSEMBLY STEP 2
-
-
-1                                                                      1
-
-
-3              3
 
 
 | Item | Part | Qty |
@@ -168,10 +157,8 @@ Y AXIS HOLD DOWNS
 DUST COVER PRE-ASSEMBLY
 
 
-If you want to home
-above 1000mm/min, use
-2                                                                 the micro switch for the Y
-Axis.
+If you want to home above 1000mm/min, use
+2                                                                 the micro switch for the Y Axis.
 
 
 | Item | Part | Qty |
@@ -221,8 +208,6 @@ Z & X AXIS HIDDEN FOR CLARITY
 | 5 | DUST-COVER-A-SUBASSEMBLY | 1 |
 | 6 | DUST-COVER-B-SUBASSEMBLY | 1 |
 
-3                                                              6
-
 
 MILO SUB-ASSEMBLY B
 
@@ -232,25 +217,10 @@ MILO SUB-ASSEMBLY B
 | 2 | 8X3MM NEODYMIUM MAGNET | 3 |
 | 3 | ISO-4762-M3X6-SHCS | 2 |
 
-Super glue or use
+Super glue or use double sided tape for attaching the bellows to the mag mount.
 
 
-double sided tape for
-
-
-attaching the bellows
-
-
-to the mag mount.
-
-
-If the magnets aren’t
-
-
-tight, you can apply a
-
-
-dab of super glue.
+If the magnets aren’t tight, you can apply a dab of super glue.
 
 
 | Item | Part | Qty |
@@ -262,13 +232,7 @@ Y AXIS BELLOWS/WAYCOVER
 PRE-ASSEMBLY
 
 
-If the magnets aren’t
-
-
-tight, you can apply a
-
-
-dab of super glue.
+If the magnets aren’t tight, you can apply a dab of super glue.
 
 
 | Item | Part | Qty |
@@ -276,7 +240,7 @@ dab of super glue.
 | 1 | WAY-COVER-Y-FRONT-G | 1 |
 | 2 | 8X3MM NEODYMIUM MAGNET | 3 |
 
-YY AXIS BELLOWS/WAYCOVER
+Y AXIS BELLOWS/WAYCOVER
 WAYCOVER PRE-ASSEMBLY
 
 | Item | Part | Qty |
@@ -289,18 +253,10 @@ WAYCOVER PRE-ASSEMBLY
 | 6 | WAY-COVER-Y-FRONT-F | 1 |
 | 7 | WAY-COVER-G-SUBASSEMBLY | 1 |
 
-If the magnet isn’t tight,
+If the magnet isn’t tight, you can apply a dab of super glue.
 
 
-you can apply a dab of
-
-
-super glue.
-
-A                                                   A
-
-
-YY AXIS BELLOWS/WAYCOVER
+Y AXIS BELLOWS/WAYCOVER
 WAYCOVER ASSEMBLY
 
 | Item | Part | Qty |

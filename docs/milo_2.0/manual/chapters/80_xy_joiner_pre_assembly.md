@@ -3,27 +3,21 @@
 !!! note
     Text extracted with `pdftotext -layout` from **MiloV2-Manual.pdf** (bundled with the Milo V2 repository). Diagrams from the PDF will be added under `manual/img/` when assets are available.
 
-XY JOINER PLATE PRE-ASSEMBLY
-WAY COVER / BELLOWS
+### XY joiner plate pre-assembly — way cover / bellows
 
+Corner labels for marking the plate (see PDF diagram):
 
-Y-B    X-RH
-
-
-X-LH
-Y-F
+| Y-B | X-RH |
+| --- | --- |
+| X-LH | Y-F |
 
 Take your mechanical marking tool and mark your XY Joiner Plate like shown below.
 
+### Reference
 
-XY JOINER PLATE PRE-ASSEMBLY
-REFERENCE
-If you are building Milo, follow the
-instructions on pages 47-69 and then
-proceed to page 96.
+If you are building Milo, follow the instructions on pages 47-69 and then proceed to page 96.
 
-If you building Miley, follow the
-instructions on pages 70-95.
+If you are building Miley, follow the instructions on pages 70-95.
 
 
 | Item | Part | Qty |

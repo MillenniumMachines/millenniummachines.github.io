@@ -39,16 +39,11 @@ FMJ PLATES
 
 Z AXIS FRAME
 REAR CABLE RUN
-Ensure your material sits just
-below the top lip of the
-column ballast
+Ensure your material sits just below the top lip of the column ballast
 
 
 COLUMN BALLAST
-The column ballast is designed to house a damping load such
-as sand or epoxy granite. It is not a requirement but is
-recommended. Optimal material is granite mixed with just
-enough epoxy to make it wet. It should not flow.
+The column ballast is designed to house a damping load such as sand or epoxy granite. It is not a requirement but is recommended. Optimal material is granite mixed with just enough epoxy to make it wet. It should not flow.
 
 
 If you decide to use just sand, you should take extra caution.
@@ -108,9 +103,6 @@ MOTOR MOUNT PRE-ASSEMBLY
 | 2 | Z-AXIS-MOTOR-MOUNT-ASSY | 1 |
 | 3 | ISO-7380-M5X12 BHCS | 6 |
 
-3           3
-
-
 Z AXIS FRAME
 STEP 2A MOTOR MOUNT
 
@@ -129,13 +121,8 @@ STEP 2B BEARING BLOCK
 | 6 | FLOATING-BEARING-BLOCK-ASSEMBLY | 1 |
 | 7 | ISO-7380-M5X10 BHCS | 2 |
 
-0.7
 
-
-Don’t worry about making this
-perfect, the floating bearing will be
-removed in a later step before being
-installed in it’s final position
+Don’t worry about making this perfect, the floating bearing will be removed in a later step before being installed in it’s final position
 
 
 Z AXIS FRAME
