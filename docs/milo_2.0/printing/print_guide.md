@@ -1,7 +1,7 @@
 # Milo V2 - Printing guide
 
 !!! note
-    See also the [Introduction](../manual/chapters/20_introduction.md) chapter for the full print profile table. Below is a summary aligned with the official manual.
+    Values below match the official **[MiloV2-Manual.pdf](https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf)** (Introduction). Use the PDF for full context and diagrams.
 
 ## Layer height and nozzle
 
@@ -32,6 +32,6 @@ Parts that take M3 heat-set inserts are provided in variants for **CNC-Kitchen**
 | Top/bottom layers | 6 | 5 | 5 |
 | Nozzle size [mm] | 0.4 | 0.4 | 0.4 |
 
-Lead- and ballscrew options are called out in the [Introduction](../manual/chapters/20_introduction.md).
+Lead- and ballscrew tradeoffs are explained in the same PDF (Introduction). **TR8×8 leadscrews** are the recommended default; **SFK0802 ballscrews** need much higher motor RPM for the same feed rate.
 
 For hole finishing and other practical tips, the [Milo 1.5 printing guide](../../milo_1.5/printing/print_guide.md) is still a useful reference for techniques (drilling holes, skirts, etc.) even where part names differ.

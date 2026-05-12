@@ -27,22 +27,7 @@ nav:
     - Sourcing Guide: milo_2.0/bom/sourcing_guide.md
     - Printing Guide: milo_2.0/printing/print_guide.md
     - Frequently Asked Questions: milo_2.0/faq.md
-    - Assembly Manual:
-        - Acknowledgements: milo_2.0/manual/chapters/10_acknowledgements.md
-        - Introduction: milo_2.0/manual/chapters/20_introduction.md
-        - Hardware Reference: milo_2.0/manual/chapters/30_hardware_reference.md
-        - Pre-Assembly: milo_2.0/manual/chapters/40_pre_assembly.md
-        - Z Axis Frame: milo_2.0/manual/chapters/50_z_axis_frame.md
-        - Y-Axis Frame: milo_2.0/manual/chapters/60_y_axis_frame.md
-        - ZY Assembly: milo_2.0/manual/chapters/70_zy_assembly.md
-        - XY Joiner Pre-Assembly: milo_2.0/manual/chapters/80_xy_joiner_pre_assembly.md
-        - X Axis and XY Joiner (Milo / Miley): milo_2.0/manual/chapters/90_x_axis_and_xy_joiner.md
-        - Z Mount and Y Accessories: milo_2.0/manual/chapters/100_z_mount_y_accessories.md
-        - Spindle mount and final sub-assemblies: milo_2.0/manual/chapters/110_table_and_spindle.md
-        - FMJ (V2): milo_2.0/manual/chapters/120_fmj_assembly.md
-        - Install RRF: milo_2.0/manual/chapters/130_install_rrf.md
-        - Assemble Electronics: milo_2.0/manual/chapters/140_assemble_electronics.md
-        - Pre-Flight Checks: milo_2.0/manual/chapters/150_pre_flight_checks.md
+    - "Assembly manual (PDF)": https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf
 
   - "Casa - Desktop CNC Enclosure":
     - Sourcing Guide: casa/bom/sourcing_guide.md

@@ -18,7 +18,7 @@
 - [Sourcing Guide](./milo_2.0/bom/sourcing_guide.md)
 - [Printing Guide](./milo_2.0/printing/print_guide.md)
 - [Frequently Asked Questions](./milo_2.0/faq.md)
-- [Assembly Manual](./milo_2.0/manual/index.md)
+- [Assembly manual (PDF)](https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf)
 
 #### Fixated - Fixture plate for Milo
 

@@ -1,20 +1,29 @@
 # Milo / Miley V2 – Frequently asked questions
 
+Official mechanical build, RRF, electronics, and pre-flight steps: **[MiloV2-Manual.pdf](https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf)** in the [Milo-V2.0](https://github.com/MillenniumMachines/Milo-V2.0) repository.
+
 ### What is the difference between Milo V2 and Miley V2?
 
-Both share the same **Y** and **Z** assembly. **Milo** uses a **moving table** in **X**; **Miley** keeps the **X axis fixed** and moves the work differently on that axis (see machine travel diagrams in the [Introduction](./manual/chapters/20_introduction.md)). The same mechanical manual covers both, with **Milo only** / **Miley only** callouts where steps diverge.
+Both share the same **Y** and **Z** assembly. **Milo** uses a **moving table** in **X**; **Miley** keeps the **X axis fixed** and moves the work differently on that axis. See machine travel diagrams in the PDF **Introduction**. The same manual covers both, with **Milo only** / **Miley only** callouts where steps diverge.
 
 ### What are the machine travels?
 
-Approximate travel numbers from the assembly manual export are summarized under **Machine travels** in the [Introduction](./manual/chapters/20_introduction.md). Always verify against your CAD configuration and any options (leadscrew vs ballscrew, table length, etc.).
+The manual lists **660.4 mm** and **698.2 mm** as shared Y/Z travel references for both variants. **Diagram grid (mm):**
+
+| Row | Milo | Miley |
+| --- | --- | --- |
+| 1 | 348 | 308 |
+| 2 | 1026 | 658 |
+
+Travel diagrams and full context are in the PDF **Introduction**. Always verify against your CAD configuration and any options (leadscrew vs ballscrew, table length, etc.).
 
 ### Leadscrew or ballscrew?
 
-TR8×8 leadscrews are the **recommended** default for desktop-class builds. Ballscrews (e.g. SFK0802) are supported but demand much higher motor RPM for the same feed rate; see the discussion in the [Introduction](./manual/chapters/20_introduction.md).
+Both Milo and Miley work with **TR8×8 leadscrews** or **SFK0802 ballscrews**. **TR8×8 is the recommended default** for desktop builds: with 8 mm pitch the motors do not need to spin as fast for practical feed rates. Ballscrews improve efficiency and backlash but their shorter lead forces much higher stepper RPM for the same speed, which can limit torque and acceleration unless you use servos or accept lighter cuts. See the **Introduction** in the PDF for the full discussion.
 
 ### Where are the electronics documented?
 
-The [Milo V2 repository](https://github.com/MillenniumMachines/Milo-V2.0) does **not** bundle electronics. Follow the [Universal Electronics Box](https://github.com/MillenniumMachines/Universal-Electronics-Box) project for boards, wiring, and enclosure layout, then return here for [RRF](./manual/chapters/130_install_rrf.md) and [pre-flight](./manual/chapters/150_pre_flight_checks.md) guidance framed for V2.
+The [Milo V2 repository](https://github.com/MillenniumMachines/Milo-V2.0) does **not** bundle electronics. Follow the [Universal Electronics Box](https://github.com/MillenniumMachines/Universal-Electronics-Box) project for boards, wiring, and enclosure layout. **Install RRF**, **assemble electronics**, and **pre-flight checks** for V2 are in **MiloV2-Manual.pdf** after the mechanical sections.
 
 ### What materials can I machine?
 
@@ -22,7 +31,7 @@ As with any desktop CNC, this depends on tooling, feeds and speeds, and how care
 
 ### What about the Full Metal Jacket (FMJ) V2?
 
-Optional **FMJ V2** plates appear in the Z-axis sections of the manual. See [FMJ (V2)](./manual/chapters/120_fmj_assembly.md) for a concise pointer into those steps.
+Optional **FMJ V2** plates appear in the Z-axis sections of the manual. Follow the **FMJ (V2)** chapter in **MiloV2-Manual.pdf**.
 
 ### I found a mistake in the docs — how do I report it?
 
