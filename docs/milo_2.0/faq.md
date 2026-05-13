@@ -8,14 +8,16 @@ Both share the same **Y** and **Z** assembly. **Milo** uses a **moving table** i
 
 ### What are the machine travels?
 
-The manual lists **660.4 mm** and **698.2 mm** as shared Y/Z travel references for both variants. **Diagram grid (mm):**
+Y and Z travels are shared between Milo and Miley; X travel differs because Milo uses a moving table while Miley keeps the X axis fixed. All values in millimetres.
 
-| Row | Milo | Miley |
+| Axis | Travel (mm) | Machine envelope / required clearance (mm) |
 | --- | --- | --- |
-| 1 | 348 | 308 |
-| 2 | 1026 | 658 |
+| X (Milo) | 348 | 1026 |
+| X (Miley) | 308 | 658 |
+| Y (both) | 210 | 660.4 |
+| Z (both) | 120 | 698.2 |
 
-Travel diagrams and full context are in the PDF **Introduction**. Always verify against your CAD configuration and any options (leadscrew vs ballscrew, table length, etc.).
+Travel values for X are quoted minus endstop. Travel diagrams and full context are in the PDF **Introduction**. Always verify against your CAD configuration and any options (leadscrew vs ballscrew, table length, etc.).
 
 ### Leadscrew or ballscrew?
 
