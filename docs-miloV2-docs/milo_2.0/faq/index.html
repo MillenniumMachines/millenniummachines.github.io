@@ -1848,29 +1848,39 @@
 <h3 id="what-is-the-difference-between-milo-v2-and-miley-v2">What is the difference between Milo V2 and Miley V2?</h3>
 <p>Both share the same <strong>Y</strong> and <strong>Z</strong> assembly. <strong>Milo</strong> uses a <strong>moving table</strong> in <strong>X</strong>; <strong>Miley</strong> keeps the <strong>X axis fixed</strong> and moves the work differently on that axis. See machine travel diagrams in the PDF <strong>Introduction</strong>. The same manual covers both, with <strong>Milo only</strong> / <strong>Miley only</strong> callouts where steps diverge.</p>
 <h3 id="what-are-the-machine-travels">What are the machine travels?</h3>
-<p>The manual lists <strong>660.4 mm</strong> and <strong>698.2 mm</strong> as shared Y/Z travel references for both variants. <strong>Diagram grid (mm):</strong></p>
+<p>Y and Z travels are shared between Milo and Miley; X travel differs because Milo uses a moving table while Miley keeps the X axis fixed. All values in millimetres.</p>
 <table>
 <thead>
 <tr>
-<th>Row</th>
-<th>Milo</th>
-<th>Miley</th>
+<th>Axis</th>
+<th>Travel (mm)</th>
+<th>Machine envelope / required clearance (mm)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>X (Milo)</td>
 <td>348</td>
-<td>308</td>
+<td>1026</td>
 </tr>
 <tr>
-<td>2</td>
-<td>1026</td>
+<td>X (Miley)</td>
+<td>308</td>
 <td>658</td>
+</tr>
+<tr>
+<td>Y (both)</td>
+<td>210</td>
+<td>660.4</td>
+</tr>
+<tr>
+<td>Z (both)</td>
+<td>120</td>
+<td>698.2</td>
 </tr>
 </tbody>
 </table>
-<p>Travel diagrams and full context are in the PDF <strong>Introduction</strong>. Always verify against your CAD configuration and any options (leadscrew vs ballscrew, table length, etc.).</p>
+<p>Travel values for X are quoted minus endstop. Travel diagrams and full context are in the PDF <strong>Introduction</strong>. Always verify against your CAD configuration and any options (leadscrew vs ballscrew, table length, etc.).</p>
 <h3 id="leadscrew-or-ballscrew">Leadscrew or ballscrew?</h3>
 <p>Both Milo and Miley work with <strong>TR8×8 leadscrews</strong> or <strong>SFK0802 ballscrews</strong>. <strong>TR8×8 is the recommended default</strong> for desktop builds: with 8 mm pitch the motors do not need to spin as fast for practical feed rates. Ballscrews improve efficiency and backlash but their shorter lead forces much higher stepper RPM for the same speed, which can limit torque and acceleration unless you use servos or accept lighter cuts. See the <strong>Introduction</strong> in the PDF for the full discussion.</p>
 <h3 id="where-are-the-electronics-documented">Where are the electronics documented?</h3>
