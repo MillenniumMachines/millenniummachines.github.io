@@ -1,0 +1,37 @@
+# Milo V2 - Printing guide
+
+!!! note
+    Values below match the official **[MiloV2-Manual.pdf](https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf)** (Introduction). Use the PDF for full context and diagrams.
+
+## Layer height and nozzle
+
+Unless you are willing to experiment (and likely waste filament), use **0.2 mm** layers. Thicker layers make overhangs on several parts significantly harder.
+
+Minimum wall thickness values in the repository assume a **0.4 mm** nozzle. If you use a different nozzle diameter, recalculate wall counts.
+
+## File naming
+
+- **Accent colour:** filenames prefixed with `[a]` are intended for your accent filament.
+- **Quantity:** if a filename ends with `x#` (for example `x8`), that is how many copies you need of that part for one machine.
+
+## Heat-set inserts
+
+Parts that take M3 heat-set inserts are provided in variants for **CNC-Kitchen**-style inserts and **Voron**-style inserts. Print the STLs that match the inserts you purchased.
+
+| | CNC-Kitchen style | Voron style |
+| --- | --- | --- |
+| Reference depth / callout (mm) | 4.600 | 5 |
+
+## Structural profiles (from manual)
+
+| Parameter | Structural (S) | Semi structural (SS) | Aesthetic (A) |
+| --- | --- | --- | --- |
+| Profile code | S | SS | A |
+| Infill density [%] | 45 | 25 | 20 |
+| Wall count | 6 | 4 | 3 |
+| Top/bottom layers | 6 | 5 | 5 |
+| Nozzle size [mm] | 0.4 | 0.4 | 0.4 |
+
+Lead- and ballscrew tradeoffs are explained in the same PDF (Introduction). **TR8×8 leadscrews** are the recommended default; **SFK0802 ballscrews** need much higher motor RPM for the same feed rate.
+
+For hole finishing and other practical tips, the [Milo 1.5 printing guide](../../milo_1.5/printing/print_guide.md) is still a useful reference for techniques (drilling holes, skirts, etc.) even where part names differ.
