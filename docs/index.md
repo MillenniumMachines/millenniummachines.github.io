@@ -20,6 +20,13 @@
 - [Frequently Asked Questions](./milo_2.0/faq.md)
 - [Assembly manual (PDF)](https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf)
 
+### [Universal Electronics Box](./ueb/index.md) - Electronics enclosure for Milo V2
+
+- [Github Page](https://github.com/MillenniumMachines/Universal-Electronics-Box)
+- [Sourcing Guide](./ueb/bom/sourcing_guide.md)
+- [Printing Guide](./ueb/printing/print_guide.md)
+- [Wiring reference (PDF)](https://github.com/MillenniumMachines/Universal-Electronics-Box/blob/main/Millennium%20Universal%20CNC%20wiring%20.pdf)
+
 #### Fixated - Fixture plate for Milo
 
 Docs coming soon! For now, please use the PDF manual.

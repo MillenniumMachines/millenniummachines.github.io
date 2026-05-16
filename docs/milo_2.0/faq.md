@@ -25,7 +25,7 @@ Both Milo and Miley work with **TR8×8 leadscrews** or **SFK0802 ballscrews**. *
 
 ### Where are the electronics documented?
 
-The [Milo V2 repository](https://github.com/MillenniumMachines/Milo-V2.0) does **not** bundle electronics. Follow the [Universal Electronics Box](https://github.com/MillenniumMachines/Universal-Electronics-Box) project for boards, wiring, and enclosure layout. **Install RRF**, **assemble electronics**, and **pre-flight checks** for V2 are in **MiloV2-Manual.pdf** after the mechanical sections.
+The [Milo V2 repository](https://github.com/MillenniumMachines/Milo-V2.0) does **not** bundle electronics. Follow the [Universal Electronics Box](../ueb/index.md) documentation for the enclosure BOM, printing, and [wiring reference (PDF)](https://github.com/MillenniumMachines/Universal-Electronics-Box/blob/main/Millennium%20Universal%20CNC%20wiring%20.pdf). **Install RRF**, **assemble electronics**, and **pre-flight checks** for V2 are in **MiloV2-Manual.pdf** after the mechanical sections.
 
 ### What materials can I machine?
 

@@ -29,6 +29,12 @@ nav:
     - Frequently Asked Questions: milo_2.0/faq.md
     - "Assembly manual (PDF)": https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf
 
+  - "Universal Electronics Box":
+    - Overview: ueb/index.md
+    - Sourcing Guide: ueb/bom/sourcing_guide.md
+    - Printing Guide: ueb/printing/print_guide.md
+    - "Wiring reference (PDF)": https://github.com/MillenniumMachines/Universal-Electronics-Box/blob/main/Millennium%20Universal%20CNC%20wiring%20.pdf
+
   - "Casa - Desktop CNC Enclosure":
     - Sourcing Guide: casa/bom/sourcing_guide.md
     - Printing Guide: casa/bom/printing_guide.md
