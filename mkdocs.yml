@@ -50,7 +50,8 @@ nav:
   - "Long John Toolsetter":
     - Sourcing and Print Guild: long-john/bom/sourcing_and_print_guide.md
     - Assembly Manual: long-john/assembly_manual/assembly_manual.md
-  - MillenniumOS:
+  - "MillenniumOS / NeXT":
+    - "NeXT (in progress)": millennium-os/manual/chapters/00_next_wip.md
     - Introduction: millennium-os/manual/chapters/10_introduction.md
     - Installation: millennium-os/manual/chapters/20_installation.md
     - Usage: millennium-os/manual/chapters/30_usage.md
