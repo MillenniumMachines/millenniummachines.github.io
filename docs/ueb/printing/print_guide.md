@@ -60,6 +60,7 @@ Parts that take M3 heat-set inserts are provided in variants for **CNC-Kitchen**
 | Scylla-Din-Adapter-Right-x1-SS | SS | 1 | ABS | N |  |
 | Scylla-Din-Adapter-Right-Voron-Inserts-x1-SS | SS | 1 | ABS | N |  |
 | Scylla-Din-Mount-x2-SS | SS | 2 | ABS | N |  |
+| LDO-AMF-350-Mount-x2-SS | SS | 2 | ABS | N |  |
 
 ### Cable Channels
 
