@@ -1,0 +1,4 @@
+# Match .github/workflows/generate-github-pages.yml (pip install mkdocs-macros-plugin mkdocs-material).
+# Pin versions here when you want Docker and CI to share exact dependency versions.
+mkdocs-material
+mkdocs-macros-plugin
