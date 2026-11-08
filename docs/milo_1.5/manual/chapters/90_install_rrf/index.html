@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../img/millennium-machines-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -2072,7 +2072,7 @@ Password: millenniummachines
 <h2 id="configure-your-wifi-network">Configure your WiFi network</h2>
 <p>If you want to connect your Milo to an existing WiFi network rather than using the inbuilt Access Point, you can use the Web Interface to change the machine configuration.</p>
 <p>The first step is to tell <abbr title="RepRapFirmware">RRF</abbr> about your wireless network. Click on the "Console" tab on the left-hand side and type the following into the <code>Send code...</code> box, then press ENTER:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">M587 </span>S&quot;your WiFi SSID&quot; P&quot;your WiFi password&quot;
+<div class="highlight"><pre><span></span><code><span class="nb">M587 </span>S"your WiFi SSID" P"your WiFi password"
 </code></pre></div>
 <p>You should see a <em>green</em> highlighted line indicating that the command was successful:</p>
 <p><img alt="View of DWC Console window indicating successful WiFi network configuration" class="shadow-dark" src="../../img/install_rrf/install_rrf_step_4.png" /></p>
@@ -2095,7 +2095,7 @@ Password: millenniummachines
 <p>For the touchprobe you can modify and then rename the existing <code>touchprobe.g.example</code> file.
 You will need to set which pin you connected your probe to.
 For example if you connected your probe to the <code>Y-MAX</code> connector, your touch probe configuration should look like this:</p>
-<div class="highlight"><pre><span></span><code>M558 K0 P5 C&quot;!ystopmax&quot; H2 A10 S0.01 T1200 F300:50
+<div class="highlight"><pre><span></span><code>M558 K0 P5 C"!ystopmax" H2 A10 S0.01 T1200 F300:50
 </code></pre></div>
 <p>(The "!" before <code>ystopmax</code> innverts the pin to trigger when the circuit is closed rather than a normally closed sensor.)</p>
 <hr />
@@ -2156,10 +2156,10 @@ For example if you connected your probe to the <code>Y-MAX</code> connector, you
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.annotate", "content.action.edit", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.annotate", "content.action.edit", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../img/millennium-machines-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3675,10 +3675,10 @@ G37.1
 <p>This has some caveats, in that if you machine off the surface that is used as your zero point then re-zeroing will be problematic - the operator must account for this in their CAM profile, to make sure that their Z origin makes sense.</p>
 <h3 id="m3000-prompt-operator-with-confirmable-dialog"><code>M3000</code> - PROMPT OPERATOR WITH CONFIRMABLE DIALOG</h3>
 <div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
-<span class="nb">M3000 </span>R&quot;...&quot; S&quot;...&quot;
+<span class="nb">M3000 </span>R"..." S"..."
 
 <span class="c">; Example message</span>
-<span class="nb">M3000 </span>R&quot;Operator Action Required&quot; S&quot;Flip the part around the X-Axis and continue!&quot;
+<span class="nb">M3000 </span>R"Operator Action Required" S"Flip the part around the X-Axis and continue!"
 </code></pre></div>
 <p>Takes both <code>R</code> (title) and <code>S</code> (message) string parameters, and will display an RRF dialog box. If the machine is currently processing a file and not paused, the dialog box will contain Continue, Pause, and Cancel options. If M3000 is called while the machine is not processing a file, only the Continue and Cancel options will be shown. This can be used by post-processors to display messages to the operator.</p>
 <div class="admonition warning">
@@ -3687,10 +3687,10 @@ G37.1
 </div>
 <h3 id="m4005-check-millenniumos-version"><code>M4005</code> - CHECK MILLENNIUMOS VERSION</h3>
 <div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
-<span class="nb">M4005 </span>V&quot;...&quot;
+<span class="nb">M4005 </span>V"..."
 
 <span class="c">; Example, abort if the loaded MillenniumOS version is not v0.3.0</span>
-<span class="nb">M4005 </span>V&quot;...&quot;
+<span class="nb">M4005 </span>V"..."
 </code></pre></div>
 <p>The MillenniumOS post-processor and macros are tightly coupled across versions. This command aborts an active job if the version of MillenniumOS running in RRF does not match the version of the post-processor that generated the job.</p>
 <h3 id="m5010-reset-stored-wcs-details"><code>M5010</code> - RESET STORED WCS DETAILS</h3>
@@ -3982,13 +3982,13 @@ G6512.1 [Xnnn] [Ynnn] [Znnn]
 <h2 id="tool-management">Tool Management</h2>
 <h3 id="m4000-define-tool"><code>M4000</code> - DEFINE TOOL</h3>
 <div class="highlight"><pre><span></span><code><span class="c">; Usage</span>
-<span class="nb">M4000 </span>Pnn Rnn S&quot;...&quot; [Xnn] [Ynn]
+<span class="nb">M4000 </span>Pnn Rnn S"..." [Xnn] [Ynn]
 
 <span class="c">; Define tool index 5 as a 30mm diameter Face Mill</span>
-<span class="nb">M4000 </span><span class="k">P</span><span class="m">5</span><span class="w"> </span><span class="k">R</span><span class="m">15.0</span><span class="w"> </span>S&quot;30mm Face Mill 3 flute&quot;
+<span class="nb">M4000 </span><span class="k">P</span><span class="m">5</span><span class="w"> </span><span class="k">R</span><span class="m">15.0</span><span class="w"> </span>S"30mm Face Mill 3 flute"
 
 <span class="c">; Define tool index 49 as a probe with a 1mm tip radius and deflection values for X and Y</span>
-<span class="nb">M4000 </span><span class="k">P</span><span class="m">49</span><span class="w"> </span><span class="k">R</span><span class="m">1</span><span class="w"> </span>S&quot;Touch Probe&quot; X0.05 Y0.01
+<span class="nb">M4000 </span><span class="k">P</span><span class="m">49</span><span class="w"> </span><span class="k">R</span><span class="m">1</span><span class="w"> </span>S"Touch Probe" X0.05 Y0.01
 </code></pre></div>
 <p>We need to store additional details about tools that RRF is not currently able to accommodate natively - this includes tool radius (<code>R</code>) and deflection values for probes (<code>X</code> and <code>Y</code>). Tool index is set using <code>P</code> and description is set using <code>S".."</code>. M4000<code>stores these custom values that allow us to use them while configuring RRF with the relevant tool details using</code>M563`.</p>
 <h3 id="m4001-forget-tool"><code>M4001</code> - FORGET TOOL</h3>
@@ -4131,10 +4131,10 @@ M5.9 [Dnnn]
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.annotate", "content.action.edit", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.annotate", "content.action.edit", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

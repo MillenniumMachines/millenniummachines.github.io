@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../img/millennium-machines-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -2833,7 +2833,7 @@
 <p><img alt="Shihlin SL-3 Relay Output" class="shadow" src="../../img/mos_usage_step_6.png" /></p>
 <p>You should also configure the VFD itself to switch the relay / circuit state based on the relevant VFD status. For the SL3, you would set register <code>P.85</code> (<code>03-11</code>) to 1, or <code>SU(Output when reach target frequency)</code>.</p>
 <p>Once wired up, you would need to configure the relevant general purpose input port on your mainboard using <a href="https://docs.duet3d.com/User_manual/Reference/Gcodes#m950-create-heater-fan-spindle-led-strip-or-gpioservo-pin">M950</a>, for example:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">M950 </span><span class="k">J</span><span class="m">0</span><span class="w"> </span>C&quot;astopmax&quot; ; Use the astopmax pin as spindle feedback input
+<div class="highlight"><pre><span></span><code><span class="nb">M950 </span><span class="k">J</span><span class="m">0</span><span class="w"> </span>C"astopmax" ; Use the astopmax pin as spindle feedback input
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2850,9 +2850,9 @@
 </ul>
 <p>You may configure coolant control with one or more of these coolant types.</p>
 <p>Cable up your coolant trigger systems to free general purpose output ports on your mainboard and then configure them using <a href="https://docs.duet3d.com/User_manual/Reference/Gcodes#m950-create-heater-fan-spindle-led-strip-or-gpioservo-pin">M950</a>, for example:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">M950 </span><span class="k">J</span><span class="m">0</span><span class="w"> </span>C&quot;air&quot;   ; Use the air pin for air
-<span class="nb">M950 </span><span class="k">J</span><span class="m">1</span><span class="w"> </span>C&quot;mist&quot;  ; Use the mist pin for mist
-<span class="nb">M950 </span><span class="k">J</span><span class="m">2</span><span class="w"> </span>C&quot;flood&quot; ; Use the flood pin for flood
+<div class="highlight"><pre><span></span><code><span class="nb">M950 </span><span class="k">J</span><span class="m">0</span><span class="w"> </span>C"air"   ; Use the air pin for air
+<span class="nb">M950 </span><span class="k">J</span><span class="m">1</span><span class="w"> </span>C"mist"  ; Use the mist pin for mist
+<span class="nb">M950 </span><span class="k">J</span><span class="m">2</span><span class="w"> </span>C"flood" ; Use the flood pin for flood
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2908,10 +2908,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.annotate", "content.action.edit", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.annotate", "content.action.edit", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>
