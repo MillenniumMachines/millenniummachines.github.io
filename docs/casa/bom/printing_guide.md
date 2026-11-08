@@ -48,7 +48,7 @@ If any file ends with `x#`, that tells you the quantity of that part required to
 | Panel-Clip-J                | SS             |          4 | ABS/ASA/PETG/PLA |
 | Panel-Clip-K                | SS             |          8 | ABS/ASA/PETG/PLA |
 | Panel-Clip-L                | SS             |          1 | ABS/ASA/PETG/PLA |
-| Front-Vent-Cover            | SS             |          1 | ABS/ASA/PETG/PLA |
+| Front-Inlet-Cover           | SS             |          1 | ABS/ASA/PETG/PLA |
 | Front-Mid-Cover             | SS             |          1 | ABS/ASA/PETG/PLA |
 | Front-Switch-Cover          | SS             |          1 | ABS/ASA/PETG/PLA |
 | Rear-Inlet-Cover            | SS             |          1 | ABS/ASA/PETG/PLA |
