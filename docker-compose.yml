@@ -1,0 +1,19 @@
+services:
+  serve:
+    build: .
+    image: millenniummachines-mkdocs:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+
+  build:
+    build: .
+    image: millenniummachines-mkdocs:latest
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: ["mkdocs", "build"]
+    profiles:
+      - validation
