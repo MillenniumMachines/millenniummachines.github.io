@@ -189,6 +189,9 @@ Insert a bearing stack (1 x F608ZZ and 2 x 608ZZ bearings) on either side of the
 
 Fasten the Y-Axis Motor Mount to the 470mm C-Beam using M5x12mm BHCS.
 
+!!! info annotate "Are you building an LDO kit?"
+    The 470mm C-Beam in the LDO kit is tapped differently at each end: one end has 2 threaded holes and the other has 4. Fit the Y-Axis Motor Mount to the end with 2 threaded holes. The end with 4 threaded holes is for the Y-Axis Bearing Block, which can't be fitted to the other end.
+
 ![fasten the Y-Axis motor mount to the 470mm C-Beam aluminium profile using M5x12mm BHCS](../img/y_axis_assembly/y_axis_step_13.png){: .shadow}
 
 ---
@@ -253,7 +256,7 @@ Carefully, slide the XY Gantry Plate assembly onto the rails.
     4 x M5x30mm SHCS
     4 x M5x12mm BHCS
     2 x Locking Collar
-    1 x 550mm Lead-Screw
+    1 x 535mm Lead-Screw
     1 x NEMA23 Motor
     1 x 8 to 6.35mm Rigid Coupler
     ```
@@ -263,9 +266,12 @@ Install the Y-Axis Bearing Block for the final time using M5x12mm BHCS. Be sure 
 
 ---
 
-Using an 8 to 6.35mm rigid coupler, attach the 550mm lead screw to the NEMA23 motor.
+Using an 8 to 6.35mm rigid coupler, attach the 535mm lead screw to the NEMA23 motor.
 
-![couple the NEMA23 motor to the 550mm lead-screw using a 8 to 6.35mm rigid coupler](../img/y_axis_assembly/y_axis_step_11.png){: .shadow}
+!!! warning "Use the shorter lead screw"
+    The Y-Axis uses the 535mm lead screw. Keep the 550mm lead screw for the X-Axis: if you use it here, the remaining lead screw will be too short for the X-Axis.
+
+![couple the NEMA23 motor to the 535mm lead-screw using a 8 to 6.35mm rigid coupler](../img/y_axis_assembly/y_axis_step_11.png){: .shadow}
 
 !!! warning
     Remember to apply medium-strength threadlock to the coupler grub screws. There's nothing worse than trying to diagnose a stationary axis and noticing that your motor is spinning but nothing else is!

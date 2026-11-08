@@ -10,7 +10,7 @@
 ## Electronics Assembly
 
 !!! info annotate "Are you building an LDO kit?"
-    LDO has written a fantastic supplementary guide for the wiring included with their kit, which is pre-cut, pre-crimped, and pre-soldered! If you're building an LDO kit then check out their guide [here!](https://www.ldomotion.com/#/guide/Milo-CNC-V15-Wiring-Guide)
+    LDO has written a fantastic supplementary guide for the wiring included with their kit, which is pre-cut, pre-crimped, and pre-soldered! If you're building an LDO kit then check out their guide [here!](https://ldomotion.com/guides/milo-cnc-v15-wiring-guide)
 
 Plug the toolsetter into the `Z_MAX` endstop connector. Note that your wire colours may be different than those shown in the images.
 
