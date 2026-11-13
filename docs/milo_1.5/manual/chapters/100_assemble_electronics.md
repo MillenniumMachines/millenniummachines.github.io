@@ -210,5 +210,23 @@ Fix the table to the Y-Axis of the mill using 3 corner brackets placed equispace
 ![](../img/table_assembly/table_assembly_attachment_bracket_locations.jpg){: .shadow}
 
 ---
+
+## Install the Spindle
+
+!!! info "Components Required"
+    ```
+    1 x Spindle (65mm or 80mm)
+    ```
+
+Slide the spindle into the spindle mount from the top. Loosen the M5 nyloc nuts on the back of the Z-Axis Mounting Plate as needed to let it pass.
+
+The right height depends on your spindle. Set it so that the shortest tool you plan to use can reach the lowest point you intend to cut above your fixture plate.
+
+Tighten the M5 nyloc nuts to clamp the spindle in place.
+
+!!! tip "Upgrade to a machined spindle mount"
+    The printed spindle mount will get you started, but we recommend replacing it with the machined [Hearts of Iron (HOI)](https://github.com/MillenniumMachines/UserMods/tree/main/Milo-V1.5/TheDeeperGrain/Hearts%20of%20Iron%20(HOI)) mount from the User Mods repository as soon as possible. It should be one of the first parts you mill on your Milo.
+
+---
 !!! success ":fontawesome-solid-champagne-glasses: Congratulations!"
     Your mill is complete! You're ready to move onto the [Pre-Flight Checks!](./110_pre_flight_checks.md) to get started!

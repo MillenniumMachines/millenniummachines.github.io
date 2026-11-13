@@ -94,7 +94,7 @@ To make some features printable without support, some features are printed with 
 | [80mm Spindle Mount Part A      ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Spindle%20Mount/%5Ba%5D%20Spindle%20Mount%2080mm%20Part%20A%20x1.stl)        | 40%  | 2.4mm | ABS/ASA | 1 | :material-check: Yes |
 | [80mm Spindle Mount Part B      ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Spindle%20Mount/Spindle%20Mount%2080mm%20Part%20B%20x1.stl)                  | 40%  | 2.4mm | ABS/ASA | 1 | :material-close: No |
 | [65mm Spindle Mount Part A      ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Spindle%20Mount/%5Ba%5D%20Spindle%20Mount%2065mm%20Part%20A%20x1.stl)        | 40%  | 2.4mm | ABS/ASA | 1 | :material-check: Yes |
-| [65mm Spindle Mount Part B      ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Spindle%20Mount/%5Ba%5D%20Spindle%20Mount%2080mm%20Part%20A%20x1.stl)        | 40%  | 2.4mm | ABS/ASA | 1 | :material-close: No |
+| [65mm Spindle Mount Part B      ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Spindle%20Mount/Spindle%20Mount%2065mm%20Part%20B%20x1.stl)                  | 40%  | 2.4mm | ABS/ASA | 1 | :material-close: No |
 | [Logo Insert                    ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/Spindle%20Mount/Logo%20Insert%20x1.stl)                                      | 40%  | 2.4mm | ABS/ASA | 1 | :material-close: No |
 
 ## Drag Chain Mounts
