@@ -467,7 +467,7 @@ Pass the M5x100mm BHCS through the M5 washers into Spindle Mount Part A and B.
      4 x M5 Nyloc Nuts
     ```
 
-It has come time to install your spindle mount - but do not install your spindle at this point.
+It has come time to install your spindle mount - but do not install your spindle at this point. You'll [install the spindle](./100_assemble_electronics.md#install-the-spindle) at the end of the build, just before the pre-flight checks.
 
 Bolt the M5x100mm BHCS through the Z-Axis Mounting Plate
 
