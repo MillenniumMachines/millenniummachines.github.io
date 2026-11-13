@@ -48,7 +48,7 @@
 | M3 Washer                            | ISO 7089 / DIN 125          | 4       | [ACCU](https://www.accu.co.uk/flat-washers/72482-HPW-M3-A2)                                                                      |                                                                                     |
 | M5 Washer                            | ISO 7089 / DIN 125          | 12      | [ACCU](https://www.accu.co.uk/flat-washers/72492-HPW-M5-A2)                                                                      |                                                                                     |
 | M5 Heat-set insert                   |                             | 27      | [CNC Kitchen](https://www.cnckitchen.com/shop#!/Gewindeeinsatz-threaded-insert-M5-Standard-50Stk-pcs/p/431146833/category=0)     | [Mouser](https://www.mouser.co.uk/ProductDetail/?qs=7MVldsJ5Uazn74BhhX2WQw%3D%3D)   |
-| M3 Heat-set insert                   |                             | 33      | [CNC Kitchen](https://www.cnckitchen.com/shop#!/Gewindeeinsatz-threaded-insert-M3-Standard-100-Stk-pcs/p/431146823/category=0)   | [Mouser](https://www.mouser.co.uk/ProductDetail/153-IUTB-M3-343)                    |
+| M3 Heat-set insert ([see note][m3])  |                             | 33      | [CNC Kitchen](https://www.cnckitchen.com/shop#!/Gewindeeinsatz-threaded-insert-M3-Standard-100-Stk-pcs/p/431146823/category=0)   | [Mouser](https://www.mouser.co.uk/ProductDetail/153-IUTB-M3-343)                    |
 | M2.5 Heat-set insert                 |                             | 6       | [CNC Kitchen](https://www.cnckitchen.com/shop#!/Gewindeeinsatz-threaded-insert-M2-5-Standard-100-Stk-pcs/p/431146818/category=0) |                                                                                     |
 | M5 Nyloc Hexnut                      | ISO 10511 / DIN 985         | 8       | [ACCU](https://www.accu.co.uk/hexagon-nylon-locking-nuts/7947-HNN-M5-A2)                                                         |                                                                                     |
 | M3x6 Self-tapping screw for plastics |                             | 8       | [ACCU](https://www.accu.co.uk/plastite-45-pozi-pan-head-screws/24139-SPP45-3-6-A2)                                               |                                                                                     |
@@ -56,6 +56,8 @@
 | M5 Spring T-Nut                      |                             | 120      | [Amazon](https://amzn.to/384J5cQ)                                                                                                |                                                                                     |
 | M3 Spring T-Nut                      |                             | 36      | [Amazon](https://amzn.to/3Pt8VIj)                                                                                                |                                                                                     |
 | Fan screws                           | Mechatronics fan group CS-1 | 8       | [Amazon](https://amzn.to/37ZV9vT)                                                                                                | [ACCU](https://www.accu.co.uk/plastite-45-pozi-pan-head-screws/24153-SPP45-4-10-A2) |
+
+[m3]: #m3-heat-set-inserts
 
 ### Frame
 
@@ -135,6 +137,15 @@
 | Granite Sand                               | 1       |
 
 ## Notes
+
+### M3 Heat-set Inserts
+
+The M3 heat-set inserts come in 2 lengths:
+
+- **Short:** wherever a drag chain attaches. These are the XY Drag-Chain Transition, the Y-Axis Drag-Chain Mount, Z Drag-Chain Mounts A and B, and the drag-chain mount on the X-Axis Motor Mount (17 in total).
+- **Long:** the X, Y and Z Anti-Backlash Nuts and the optional handwheels (16 in total, or 12 without the handwheels).
+
+LDO kits include 21 short and 16 long inserts.
 
 ### TPU Filament
 
