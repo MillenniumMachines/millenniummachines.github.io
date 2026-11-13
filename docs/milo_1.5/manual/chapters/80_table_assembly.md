@@ -87,6 +87,9 @@ Install the enclosure support extrusion brace using M5x8mm BHCS.
 
 ![Add enclosure support brace](../img/assemble_electronics/assemble_electronics_step_0.png){: .shadow}
 
+!!! tip
+    Position the brace so its front face is roughly `230mm` from the front end of the 2040 extrusions, which sit flush with the front skirts. The exact position isn't critical.
+
 ---
 
 ## TPU Feet
