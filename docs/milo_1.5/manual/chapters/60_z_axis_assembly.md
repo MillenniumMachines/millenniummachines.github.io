@@ -21,6 +21,9 @@ This section of the build contains several C-beams that are close together. To h
 
 ![](../img/z_axis_assembly/y_axis_step_42.png){: .shadow}
 
+!!! tip
+    If the orientation of the C-beams is hard to see in the images in this chapter, open the full Milo CAD model and view the column from any angle. It's a STEP file inside [CAD/Milo.zip](https://github.com/MillenniumMachines/Milo-v1.5/blob/main/CAD/Milo.zip) in the Milo-v1.5 repository, and it opens in FreeCAD, Fusion and most other CAD software. Hide the parts you don't need to see the C-beams clearly.
+
 ---
 
 Extrusions `A` and `B` are the main Z-column extrusions.
