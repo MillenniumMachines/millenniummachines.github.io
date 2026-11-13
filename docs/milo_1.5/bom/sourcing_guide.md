@@ -142,8 +142,8 @@
 
 The M3 heat-set inserts come in 2 lengths:
 
-- **Short:** wherever a drag chain attaches. These are the XY Drag-Chain Transition, the Y-Axis Drag-Chain Mount, Z Drag-Chain Mounts A and B, and the drag-chain mount on the X-Axis Motor Mount (17 in total).
-- **Long:** the X, Y and Z Anti-Backlash Nuts and the optional handwheels (16 in total, or 12 without the handwheels).
+- **Short (M3x3.85):** wherever a drag chain attaches. These are the XY Drag-Chain Transition, the Y-Axis Drag-Chain Mount, Z Drag-Chain Mounts A and B, and the drag-chain mount on the X-Axis Motor Mount (17 in total).
+- **Long (M3x6.23):** the X, Y and Z Anti-Backlash Nuts and the optional handwheels (16 in total, or 12 without the handwheels).
 
 LDO kits include 21 short and 16 long inserts.
 
