@@ -10,11 +10,12 @@ It takes you from a blank SD card to:
 
 - RepRapFirmware (RRF) installed on the Scylla
 - Duet Web Control (DWC), the machine's web interface, on your WiFi network
-- a configuration adapted to your Milo 2.0 or Miley 2.0
+- the Milo 2.0 or Miley 2.0 configuration
 - the emergency stop, touch probe and toolsetter set up
 - endstops, homing and travel limits checked before first use
 
-There is no dedicated 2.0 configuration release yet. This page starts from the Milo 1.5 Scylla release and shows the changes it needs for 2.0.
+!!! warning "Prerelease for testing"
+    The Milo 2.0 and Miley 2.0 configurations are a prerelease for testing, and not yet tested on every machine. If something doesn't work, or you have a suggestion, open an issue in [RRF-Configs](https://github.com/MillenniumMachines/RRF-Configs/issues).
 
 !!! note "Public Beta"
     The RRF configurations are released as a public beta. As outlined in the repository, we take no responsibility or liability for any loss or damage caused to you or others from the use of this software, which is provided as-is.
@@ -35,14 +36,18 @@ You need a freshly formatted SD card of up to 32GB, class 4 or higher.
 
 ## Download the configuration release
 
-Open the [RRF-Configs releases](https://github.com/MillenniumMachines/RRF-Configs/releases) page. Under **Assets** of the latest release, download the Scylla zip that matches your motor power supply:
+Open the [`v15.11.26-prerelease`](https://github.com/MillenniumMachines/RRF-Configs/releases/tag/v15.11.26-prerelease) release of RRF-Configs. Under **Assets**, download the Scylla zip that matches your machine and your motor power supply:
 
-- 48V: `rrf-milo-v1.5-ldo-kit-scylla-v1.0-48v-<version>.zip`
-- 24V: `rrf-milo-v1.5-ldo-kit-scylla-v1.0-24v-<version>.zip`
+- Milo 2.0:
+    - 24V: `rrf-milo-v2.0-milo-scylla-v1.0-24v-v15.11.26-prerelease.zip`
+    - 48V: `rrf-milo-v2.0-milo-scylla-v1.0-48v-v15.11.26-prerelease.zip`
+- Miley 2.0:
+    - 24V: `rrf-milo-v2.0-miley-scylla-v1.0-24v-v15.11.26-prerelease.zip`
+    - 48V: `rrf-milo-v2.0-miley-scylla-v1.0-48v-v15.11.26-prerelease.zip`
 
 Don't download **Source code**. It isn't laid out for an SD card.
 
-The zip contains RRF 3.6.1 for the Scylla, firmware for its WiFi module, a known-good Milo 1.5 configuration, and MillenniumOS.
+The zip contains RRF 3.6.1 for the Scylla, firmware for its WiFi module, a Milo 2.0 or Miley 2.0 configuration, and MillenniumOS.
 
 ---
 
@@ -70,8 +75,6 @@ Eject the SD card, put it in the Scylla, and power the board. It installs RRF, u
 
     If it hasn't appeared after 10 minutes, take the SD card out and look at it on your computer. If `firmware.bin` has **not** been renamed to `firmware.cur`, the board wasn't updated. Either way, ask for help on our [Discord](https://discord.gg/ya4UUj7ax2) and say whether the file was renamed.
 
-<!-- HW-CHECK 3: confirm firmware.bin is renamed to firmware.cur on the Scylla after a fresh flash. -->
-
 ---
 
 ## Connect to Duet Web Control
@@ -93,7 +96,7 @@ You should see a screen like this. DWC is where you will control the machine fro
 ![Duet Web Control](./img/install_rrf/install_rrf_step_3.png){: .shadow-dark}
 
 !!! warning "Cancel the MillenniumOS wizard for now"
-    When DWC connects, the MillenniumOS configuration wizard opens. **Cancel it.** The configuration is still set up for a Milo 1.5, so you'll run the wizard later, in [Installing MillenniumOS](../millennium-os/manual/chapters/20_installation.md). It may open again after a restart. Cancel it each time until then.
+    When DWC connects, the MillenniumOS configuration wizard opens. **Cancel it.** You'll run the wizard later, after updating MillenniumOS, in [Installing MillenniumOS](../millennium-os/manual/chapters/20_installation.md). It may open again after a restart. Cancel it each time until then.
 
 ---
 
@@ -122,224 +125,24 @@ Restart the board (send `M999`). It now joins your network. To find its address,
 
 ---
 
-## Adapt the configuration to your machine
+## What the configuration sets up
 
-!!! warning "Do this before homing or moving anything"
-    The release is configured for a **Milo 1.5**. Its travel limits, Z drive and homing don't match a 2.0. Make every change in this section before you home or move any axis.
+Each zip is set up for its machine. The travel limits and endstops are in `limits.g`:
+
+| Axis | Milo 2.0 | Miley 2.0 | Endstop |
+|---|---|---|---|
+| X | 0 to 348 mm, homes to min | 0 to 308 mm, homes to max | X-MIN, `!PD_11` |
+| Y | 0 to 210 mm, homes to min | 0 to 210 mm, homes to min | Y-MAX, `!PD_14` |
+| Z | -120 to 0 mm, homes up to max | -120 to 0 mm, homes up to max | Z-MAX, `!PD_12` |
 
 !!! note "Endstop connectors"
     These settings expect the endstops on the Scylla's **X-MIN**, **Y-MAX** and **Z-MAX** connectors, as on page 8 of the [UEB wiring reference (PDF)](https://github.com/MillenniumMachines/Universal-Electronics-Box/blob/main/Millennium%20Universal%20CNC%20wiring%20.pdf). Page 4 of the PDF shows different connectors. Follow page 8.
 
-To edit a file, go to **Files → System** in DWC and click the file. Make the change and click **Save**. When you've made all the changes, restart the board by sending `M999`.
-
 These settings are for the standard TR8×8 leadscrews. Ballscrew (SFK0802) builds need different steps per mm and speeds, which this page doesn't cover. Ask on [Discord](https://discord.gg/ya4UUj7ax2).
 
-### Both machines
+The [checks below](#check-inputs-and-motion-before-first-use) confirm these settings on your machine. Do them before you home or move any axis.
 
-**`drives.g`**: change the Z direction and the Z steps per mm. The 2.0 Z motor drives the lead screw directly through a coupler, instead of through the 1.5's 2:1 belt reduction, and it turns the other way. Change these two lines:
-
-```gcode
-; was: M569 P2 S0
-M569 P2 S1
-```
-
-```gcode
-; was: M92 X800 Y800 Z1600
-M92 X800 Y800 Z800
-```
-
-**`fans.g`**: the UEB wiring reference connects the electronics cabinet fan to **AUX1**, but the release drives **AUX0**. Change the fan pin line:
-
-```gcode
-; was: M950 F0 C"PA_4" Q500
-M950 F0 C"PA_5" Q500
-```
-
-!!! note
-    The fan works on either AUX0 or AUX1. The pin in `fans.g` must match the output it's plugged into: AUX0 is `PA_4`, AUX1 is `PA_5`. If your fan is on AUX0, leave `fans.g` as it is.
-
-**`user-config.g.example`**: you don't need this file now. If you enable it later, change its steps line to `M92 X800 Y800 Z800` to match `drives.g`.
-
-**`homey.g`**: the 2.0 Y sensor is at the back, so Y homes to **min**, not to max like the 1.5. Replace the whole file with:
-
-```gcode
-; homey.g - Lifts Z, then homes Y towards Y0 (min) using existing machine limits.
-
-; Relative positioning in mm and mm/min
-G91
-G21
-G94
-
-; Raise Z towards machine limit as it is already homed
-G53 G0 Z{move.axes[2].max}
-
-; Move to Y axis endstop and stop there (first pass).
-; Max 1000mm/min with an inductive Y sensor.
-G53 G1 H1 Y{-(move.axes[1].max - move.axes[1].min + 5)} F{1000}
-
-; Endstop should now be triggered, verify
-if { ! sensors.endstops[1].triggered }
-    abort {"Y endstop not triggered after full axis travel. Check that your Y motor is connected and the endstop is working!"}
-
-; Move away from Y endstop
-G53 G1 H2 Y{5}
-
-; Repeat Y home at low speed. Do not move further than
-; 2 * 5 further than the expected endstop location.
-G53 G1 H1 Y{-5*2} F{180}
-```
-
-`homez.g` stays as it is. Z still homes upwards.
-
-### Milo 2.0
-
-Milo homes X to **min**, like the 1.5.
-
-**`limits.g`**: replace the whole file with:
-
-```gcode
-; limits.g - Configure machine limits and endstops (Milo 2.0)
-
-; Set axis limits - minima
-M208 X0 Y0 Z-120 S1
-
-; Set axis limits - maxima
-M208 X348 Y210 Z0 S0
-
-; Endstops. LJ8A3-2-Z/AY inductive sensors, so the pins are inverted (!).
-; X homes to MIN, Y homes to MIN (Y0), Z homes upwards to MAX (zero).
-
-; X endstop on X-MIN connector, homes to min
-M574 X1 S1 P"!PD_11"
-
-; Y endstop on Y-MAX connector, homes to min
-M574 Y1 S1 P"!PD_14"
-
-; Z endstop on Z-MAX connector, homes to max
-M574 Z2 S1 P"!PD_12"
-```
-
-**`homeall.g`**: replace the whole file with:
-
-```gcode
-; homeall.g - Homes Z, then homes X and Y (both to min) together using existing machine limits.
-
-; Relative positioning in mm and mm/min
-G91
-G21
-G94
-
-; Home Z first to move spindle out of the way
-M98 P"homez.g"
-
-; Move to X and Y axis endstops and stop there (first pass).
-; Max 1000mm/min with an inductive Y sensor.
-G53 G1 H1 X{-(move.axes[0].max - move.axes[0].min + 5)} Y{-(move.axes[1].max - move.axes[1].min + 5)} F{1000}
-
-; Endstops should now be triggered, verify
-if { ! sensors.endstops[0].triggered }
-    abort {"X endstop not triggered after full axis travel. Check that your X motor is connected and the endstop is working!"}
-if { ! sensors.endstops[1].triggered }
-    abort {"Y endstop not triggered after full axis travel. Check that your Y motor is connected and the endstop is working!"}
-
-; Move away from X and Y endstops
-G53 G1 H2 X{5} Y{5}
-
-; Repeat X and Y home at low speed. Do not move further than
-; 2 * 5 further than the expected endstop locations.
-G53 G1 H1 X{-5*2} Y{-5*2} F{180}
-```
-
-`homex.g` stays as it is.
-
-### Miley 2.0
-
-Miley's X axis is stationary, so X homes to **max**.
-
-**`limits.g`**: replace the whole file with:
-
-```gcode
-; limits.g - Configure machine limits and endstops (Miley 2.0)
-
-; Set axis limits - minima
-M208 X0 Y0 Z-120 S1
-
-; Set axis limits - maxima
-M208 X308 Y210 Z0 S0
-
-; Endstops. LJ8A3-2-Z/AY inductive sensors, so the pins are inverted (!).
-; X homes to MAX, Y homes to MIN (Y0), Z homes upwards to MAX (zero).
-
-; X endstop on X-MIN connector, homes to max
-M574 X2 S1 P"!PD_11"
-
-; Y endstop on Y-MAX connector, homes to min
-M574 Y1 S1 P"!PD_14"
-
-; Z endstop on Z-MAX connector, homes to max
-M574 Z2 S1 P"!PD_12"
-```
-
-**`homex.g`**: replace the whole file with:
-
-```gcode
-; homex.g - Lifts Z, then homes X towards MAX using existing machine limits.
-
-; Relative positioning in mm and mm/min
-G91
-G21
-G94
-
-; Raise Z towards machine limit as it is already homed
-G53 G0 Z{move.axes[2].max}
-
-; Move quickly to X axis endstop and stop there (first pass)
-G53 G1 H1 X{move.axes[0].max - move.axes[0].min + 5} F{1800}
-
-; Endstop should now be triggered, verify
-if { ! sensors.endstops[0].triggered }
-    abort {"X endstop not triggered after full axis travel. Check that your X motor is connected and the endstop is working!"}
-
-; Move away from X endstop
-G53 G1 H2 X{-5}
-
-; Repeat X home at low speed. Do not move further than
-; 2 * 5 further than the expected endstop location.
-G53 G1 H1 X{5*2} F{180}
-```
-
-**`homeall.g`**: replace the whole file with:
-
-```gcode
-; homeall.g - Homes Z, then homes X (to max) and Y (to min) together using existing machine limits.
-
-; Relative positioning in mm and mm/min
-G91
-G21
-G94
-
-; Home Z first to move spindle out of the way
-M98 P"homez.g"
-
-; Move to X and Y axis endstops and stop there (first pass).
-; Max 1000mm/min with an inductive Y sensor.
-G53 G1 H1 X{move.axes[0].max - move.axes[0].min + 5} Y{-(move.axes[1].max - move.axes[1].min + 5)} F{1000}
-
-; Endstops should now be triggered, verify
-if { ! sensors.endstops[0].triggered }
-    abort {"X endstop not triggered after full axis travel. Check that your X motor is connected and the endstop is working!"}
-if { ! sensors.endstops[1].triggered }
-    abort {"Y endstop not triggered after full axis travel. Check that your Y motor is connected and the endstop is working!"}
-
-; Move away from X and Y endstops
-G53 G1 H2 X{-5} Y{5}
-
-; Repeat X and Y home at low speed. Do not move further than
-; 2 * 5 further than the expected endstop locations.
-G53 G1 H1 X{5*2} Y{-5*2} F{180}
-```
-
-When you've finished editing, restart the board by sending `M999`.
+To edit a file, go to **Files → System** in DWC and click the file. Make the change and click **Save**.
 
 ---
 
@@ -356,14 +159,7 @@ The release includes Safety Net, a software emergency stop. When the E-stop is p
 To turn it on:
 
 1. In **Files → System**, rename `estop.g.example` to `estop.g`, and `trigger2.g.example` to `trigger2.g`.
-2. In `estop.g`, change the E-stop input pin line to:
-
-    ```gcode
-    ; was: M950 J1 C"extin0"
-    M950 J1 C"PC_6"
-    ```
-
-3. Restart the board (send `M999`).
+2. Restart the board (send `M999`).
 
 With Safety Net on, machine power is **off** after every boot. To turn it on, send `M80.9`, check the machine is safe, and press **Activate**. Once MillenniumOS is configured, it asks you this at every boot.
 
@@ -382,14 +178,14 @@ If step 1 never shows the message, check the E-stop wiring against the wiring re
 
 The release already uses the pins from the wiring reference (page 9):
 
-- **Toolsetter**: `toolsetter.g` is already active, on the toolsetter input (PE7).
-- **Touch probe**: rename `touchprobe.g.example` to `touchprobe.g`. It already uses the probe input (PE15).
+- **Toolsetter**: `toolsetter.g` is already active, on the toolsetter input (PE7), set for a normally open (NO) toolsetter.
+- **Touch probe**: rename `touchprobe.g.example` to `touchprobe.g`. It uses the probe input (PE15), set for a normally closed (NC) probe.
 
 A 2-pin toolsetter connects to the toolsetter input (PE7) and GND, not to PE15.
 
-The Scylla has jumpers that select PNP or NPN mode and the voltage for the probe and toolsetter inputs (wiring reference, page 5). Set them for your probe and toolsetter. You'll check that both read correctly in the next section.
+We recommend an NPN NC touch probe. The Scylla has jumpers that select PNP or NPN mode and the voltage for the probe and toolsetter inputs (wiring reference, page 5). Set them for your probe and toolsetter. NPN mode matches the recommended probe. You'll check that both read correctly in the next section.
 
-There are a wide variety of touch probes and toolsetters. Whether a pin needs a `!` depends on whether yours is normally open (NO) or normally closed (NC). If your probe or toolsetter does not work at first it may need the pin inverted, for example, in `touchprobe.g` change `C"PE_15"` to `C"!PE_15"`.
+There are a wide variety of touch probes and toolsetters. Whether a pin needs a `!` depends on whether yours is NO or NC: NO needs the `!`, NC doesn't. For an NO probe, change `C"PE_15"` to `C"!PE_15"` in `touchprobe.g`. For an NC toolsetter, change `C"!PE_7"` to `C"PE_7"` in `toolsetter.g`.
 
 ---
 
@@ -411,7 +207,7 @@ echo sensors.probes[0].value[0], sensors.probes[1].value[0]
 
 The first value is the touch probe and the second is the toolsetter. Each should read `0` at rest and `1000` while you trigger it by hand. If one reads the wrong way round, add or remove the `!` in the `M558` pin in `touchprobe.g` or `toolsetter.g`, then restart.
 
-**Fan**: check that the cabinet fan runs. If it doesn't, check that the pin in `fans.g` matches the AUX output it's plugged into.
+**Fan**: check that the cabinet fan runs. If it doesn't, check that the pin in `fans.g` matches the AUX output it's plugged into: AUX1 is `PA_5`, AUX0 is `PA_4`.
 
 ### Homing
 
