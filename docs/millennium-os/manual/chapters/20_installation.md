@@ -7,6 +7,9 @@ MillenniumOS for RRF is distributed as a **single Zip file** that contains every
 
 ## RRF Installation
 
+!!! note "Milo 2.0 and Miley 2.0"
+    If RRF isn't installed on your Milo 2.0 or Miley 2.0 yet, follow [Installing RRF](../../../milo_2.0/install_rrf.md) first. It installs RRF with MillenniumOS included and adapts the configuration for 2.0.
+
 !!! note
     If you installed one of our [RRF Configurations](https://github.com/MillenniumMachines/RRF-Configs/releases) that contains MillenniumOS, then you may not need to follow everything in this guide. If you start RRF and a MillenniumOS configuration wizard appears, then MillenniumOS is already installed. It just needs to be [configured](#configuration)!
 

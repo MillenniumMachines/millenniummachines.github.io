@@ -15,13 +15,14 @@ This site hosts the **bill of materials**, **printing settings and part list**, 
 
 ## What to expect
 
-The wiring reference is titled **V2 / V1.6 wiring reference** and is intended alongside [Milo V2 / Miley V2](https://github.com/MillenniumMachines/Milo-V2.0). **Mechanical assembly, RRF install, and pre-flight checks** for the mill remain in **[MiloV2-Manual.pdf](https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf)**. Use UEB docs for enclosure parts, printing, sourcing, and cabinet wiring.
+The wiring reference is titled **V2 / V1.6 wiring reference** and is intended alongside [Milo V2 / Miley V2](https://github.com/MillenniumMachines/Milo-V2.0). **Mechanical assembly** of the mill is in **[MiloV2-Manual.pdf](https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf)**. **RRF install, E-stop setup, and checks before first use** are on [Installing RRF](../milo_2.0/install_rrf.md). Use UEB docs for enclosure parts, printing, sourcing, and cabinet wiring.
 
 | Topic | Where to look |
 | --- | --- |
 | BOM and contactor options | [Sourcing Guide](./bom/sourcing_guide.md) |
 | Print profiles and STL quantities | [Printing Guide](./printing/print_guide.md) |
 | Mains, E-stop, PSU, and signal wiring | [Wiring reference (PDF)](https://github.com/MillenniumMachines/Universal-Electronics-Box/blob/main/Millennium%20Universal%20CNC%20wiring%20.pdf) |
+| RRF install, WiFi, E-stop and probe configuration | [Installing RRF](../milo_2.0/install_rrf.md) |
 | STLs, DXFs, master assembly | [GitHub repository](https://github.com/MillenniumMachines/Universal-Electronics-Box) |
 
 ## Repository layout
