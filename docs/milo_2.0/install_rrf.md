@@ -96,7 +96,7 @@ You should see a screen like this. DWC is where you will control the machine fro
 ![Duet Web Control](./img/install_rrf/install_rrf_step_3.png){: .shadow-dark}
 
 !!! warning "Cancel the MillenniumOS wizard for now"
-    When DWC connects, the MillenniumOS configuration wizard opens. **Cancel it.** You'll run the wizard later, after updating MillenniumOS, in [Installing MillenniumOS](../millennium-os/manual/chapters/20_installation.md). It may open again after a restart. Cancel it each time until then.
+    When DWC connects, the MillenniumOS configuration wizard opens. **Cancel it.** You'll run it after the checks on this page, in [Installing MillenniumOS](../millennium-os/manual/chapters/20_installation.md#configuration-wizard). It may open again after a restart. Cancel it each time until then.
 
 ---
 
@@ -140,7 +140,9 @@ Each zip is set up for its machine. The travel limits and endstops are in `limit
 
 These settings are for the standard TR8×8 leadscrews. Ballscrew (SFK0802) builds need different steps per mm and speeds, which this page doesn't cover. Ask on [Discord](https://discord.gg/ya4UUj7ax2).
 
-The [checks below](#check-inputs-and-motion-before-first-use) confirm these settings on your machine. Do them before you home or move any axis.
+The [checks below](#check-inputs-and-motion-before-first-use) confirm these settings on your machine. Don't home or move any axis until you reach those checks.
+
+Machine power stays off until you turn on Safety Net ([Emergency stop (Safety Net)](#emergency-stop-safety-net)).
 
 To edit a file, go to **Files → System** in DWC and click the file. Make the change and click **Save**.
 
@@ -148,15 +150,18 @@ To edit a file, go to **Files → System** in DWC and click the file. Make the c
 
 ## Emergency stop (Safety Net)
 
+!!! warning "Machine power needs Safety Net"
+    With the UEB wiring, the Scylla's relay switches the contactor. The release ships Safety Net turned off (`estop.g.example`), so the motors and spindle get **no power** until you turn Safety Net on below and send `M80.9`.
+
 !!! note
     This section assumes the E-stop is wired as in the current [wiring reference (PDF)](https://github.com/MillenniumMachines/Universal-Electronics-Box/blob/main/Millennium%20Universal%20CNC%20wiring%20.pdf): the E-stop signal goes to the Scylla's **X-MAX** connector (PC6) and GND.
 
-The release includes Safety Net, a software emergency stop. When the E-stop is pressed, the Scylla opens its onboard relay and halts. In the wiring reference, that relay is in the contactor circuit (page 3), so the motors and spindle lose power.
+Safety Net is the release's software emergency stop, and it switches machine power. When the E-stop is pressed, the Scylla opens its onboard relay and halts. In the wiring reference, that relay is in the contactor circuit (page 3), so the motors and spindle lose power.
 
 !!! warning
     A software emergency stop is **not** a replacement for a hardware emergency stop. Use it **in addition to** the hardware E-stop circuit.
 
-To turn it on:
+Turn it on:
 
 1. In **Files → System**, rename `estop.g.example` to `estop.g`, and `trigger2.g.example` to `trigger2.g`.
 2. Restart the board (send `M999`).
@@ -172,6 +177,8 @@ Then test it:
 
 If step 1 never shows the message, check the E-stop wiring against the wiring reference before changing anything in `estop.g`.
 
+If the board halts at every boot after you turn on Safety Net (DWC never connects, or the `Milo` network doesn't appear), take out the SD card and, on your computer, rename `sys/estop.g` back to `sys/estop.g.example`. Then check the E-stop wiring against the wiring reference.
+
 ---
 
 ## Touch probe and toolsetter
@@ -179,13 +186,13 @@ If step 1 never shows the message, check the E-stop wiring against the wiring re
 The release already uses the pins from the wiring reference (page 9):
 
 - **Toolsetter**: `toolsetter.g` is already active, on the toolsetter input (PE7), set for a normally open (NO) toolsetter.
-- **Touch probe**: rename `touchprobe.g.example` to `touchprobe.g`. It uses the probe input (PE15), set for a normally closed (NC) probe.
+- **Touch probe**: rename `touchprobe.g.example` to `touchprobe.g`, then restart the board (send `M999`) to load it. It uses the probe input (PE15), set for a normally closed (NC) probe.
 
 A 2-pin toolsetter connects to the toolsetter input (PE7) and GND, not to PE15.
 
 We recommend an NPN NC touch probe. The Scylla has jumpers that select PNP or NPN mode and the voltage for the probe and toolsetter inputs (wiring reference, page 5). Set them for your probe and toolsetter. NPN mode matches the recommended probe. You'll check that both read correctly in the next section.
 
-There are a wide variety of touch probes and toolsetters. Whether a pin needs a `!` depends on whether yours is NO or NC: NO needs the `!`, NC doesn't. For an NO probe, change `C"PE_15"` to `C"!PE_15"` in `touchprobe.g`. For an NC toolsetter, change `C"!PE_7"` to `C"PE_7"` in `toolsetter.g`.
+There's a wide variety of touch probes and toolsetters. Whether a pin needs a `!` depends on whether yours is NO or NC: NO needs the `!`, NC doesn't. For an NO probe, change `C"PE_15"` to `C"!PE_15"` in `touchprobe.g`. For an NC toolsetter, change `C"!PE_7"` to `C"PE_7"` in `toolsetter.g`.
 
 ---
 
@@ -197,13 +204,15 @@ Do these checks in order, with nothing in the spindle and the table clear.
 
 Check every input before you home anything.
 
-**Endstops**: send `M119` in the console. Each axis should show `not stopped`. Then trigger each sensor by hand and send `M119` again: hold a metal object in front of an inductive sensor, or press a microswitch. That axis should now show `at min stop` or `at max stop`. If an axis reads the wrong way round, add or remove the `!` in that axis's `M574` pin in `limits.g`, then restart. A microswitch on Y (instead of an inductive sensor) may need the `!` removed.
+**Endstops**: Move each axis away from its sensor first. Then send `M119` in the console. Each axis should show `not stopped`. Then trigger each sensor by hand and send `M119` again: hold a metal object in front of an inductive sensor, or press a microswitch. That axis should now show `at min stop` or `at max stop`. If an axis reads the wrong way round, add or remove the `!` in that axis's `M574` pin in `limits.g`, then restart. A microswitch on Y (instead of an inductive sensor) may need the `!` removed.
 
 **Probe and toolsetter**: send this in the console:
 
 ```gcode
 echo sensors.probes[0].value[0], sensors.probes[1].value[0]
 ```
+
+Without a touch probe, send `echo sensors.probes[1].value[0]` to check only the toolsetter.
 
 The first value is the touch probe and the second is the toolsetter. Each should read `0` at rest and `1000` while you trigger it by hand. If one reads the wrong way round, add or remove the `!` in the `M558` pin in `touchprobe.g` or `toolsetter.g`, then restart.
 
@@ -213,13 +222,13 @@ The first value is the touch probe and the second is the toolsetter. Each should
 
 Home one axis at a time, Z first, with a hand on the E-stop. Each axis must move **towards its endstop sensor**. If it moves away from the sensor, press the E-stop and check the motor wiring against the wiring reference.
 
+Turn machine power on first: send `M80.9` and press **Activate**.
+
 1. Home Z: `G28 Z`. Z moves up.
 2. Home X: `G28 X`.
 3. Home Y: `G28 Y`.
 
 When all three home correctly, try **Home All** (`G28`).
-
-If you turned on Safety Net, turn machine power on first: send `M80.9` and press **Activate**.
 
 ### Travel limits
 
@@ -240,12 +249,12 @@ If an axis hits a hard stop or anything else before it gets there (you'll hear t
 - **X or Y**: lower its maximum in the `M208 ... S0` line, for example `X348` to `X343`.
 - **Z**: raise its minimum in the `M208 ... S1` line, for example `Z-120` to `Z-115`.
 
-Restart, home again, and repeat the check until every axis reaches both ends cleanly.
+Restart, send `M80.9` and press **Activate**, home again, and repeat the check until every axis reaches both ends cleanly.
 
 ---
 
 ## Next: Installing MillenniumOS
 
-Your machine is now running RRF with a 2.0 configuration. The release includes MillenniumOS, but not the newest version. Go to [Installing MillenniumOS](../millennium-os/manual/chapters/20_installation.md) to update it and run the configuration wizard.
+Your machine is now running RRF with a 2.0 configuration. The release includes MillenniumOS 0.5.1, the current release, so you don't need to install it again. Run the [configuration wizard](../millennium-os/manual/chapters/20_installation.md#configuration-wizard) next.
 
 MillenniumOS 0.5.x is the current release. Its successor, [nxt](https://github.com/MillenniumMachines/MOS-nxt), is not released yet. When it is, this page will gain an nxt path.
