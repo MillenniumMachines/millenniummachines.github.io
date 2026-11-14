@@ -1053,52 +1053,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adapt-the-configuration-to-your-machine" class="md-nav__link">
+  <a href="#what-the-configuration-sets-up" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adapt the configuration to your machine
+        What the configuration sets up
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Adapt the configuration to your machine">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#both-machines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Both machines
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#milo-20" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Milo 2.0
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#miley-20" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Miley 2.0
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2124,52 +2085,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adapt-the-configuration-to-your-machine" class="md-nav__link">
+  <a href="#what-the-configuration-sets-up" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adapt the configuration to your machine
+        What the configuration sets up
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Adapt the configuration to your machine">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#both-machines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Both machines
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#milo-20" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Milo 2.0
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#miley-20" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Miley 2.0
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2287,11 +2209,14 @@
 <ul>
 <li>RepRapFirmware (<abbr title="RepRapFirmware">RRF</abbr>) installed on the Scylla</li>
 <li>Duet Web Control (<abbr title="Duet Web Control">DWC</abbr>), the machine's web interface, on your WiFi network</li>
-<li>a configuration adapted to your Milo 2.0 or Miley 2.0</li>
+<li>the Milo 2.0 or Miley 2.0 configuration</li>
 <li>the emergency stop, touch probe and toolsetter set up</li>
 <li>endstops, homing and travel limits checked before first use</li>
 </ul>
-<p>There is no dedicated 2.0 configuration release yet. This page starts from the Milo 1.5 Scylla release and shows the changes it needs for 2.0.</p>
+<div class="admonition warning">
+<p class="admonition-title">Prerelease for testing</p>
+<p>The Milo 2.0 and Miley 2.0 configurations are a prerelease for testing, and not yet tested on every machine. If something doesn't work, or you have a suggestion, open an issue in <a href="https://github.com/MillenniumMachines/RRF-Configs/issues"><abbr title="RepRapFirmware">RRF</abbr>-Configs</a>.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Public Beta</p>
 <p>The <abbr title="RepRapFirmware">RRF</abbr> configurations are released as a public beta. As outlined in the repository, we take no responsibility or liability for any loss or damage caused to you or others from the use of this software, which is provided as-is.</p>
@@ -2309,13 +2234,21 @@
 </ul>
 <hr />
 <h2 id="download-the-configuration-release">Download the configuration release</h2>
-<p>Open the <a href="https://github.com/MillenniumMachines/RRF-Configs/releases"><abbr title="RepRapFirmware">RRF</abbr>-Configs releases</a> page. Under <strong>Assets</strong> of the latest release, download the Scylla zip that matches your motor power supply:</p>
+<p>Open the <a href="https://github.com/MillenniumMachines/RRF-Configs/releases/tag/v15.11.26-prerelease"><code>v15.11.26-prerelease</code></a> release of <abbr title="RepRapFirmware">RRF</abbr>-Configs. Under <strong>Assets</strong>, download the Scylla zip that matches your machine and your motor power supply:</p>
 <ul>
-<li>48V: <code>rrf-milo-v1.5-ldo-kit-scylla-v1.0-48v-&lt;version&gt;.zip</code></li>
-<li>24V: <code>rrf-milo-v1.5-ldo-kit-scylla-v1.0-24v-&lt;version&gt;.zip</code></li>
+<li>Milo 2.0:<ul>
+<li>24V: <code>rrf-milo-v2.0-milo-scylla-v1.0-24v-v15.11.26-prerelease.zip</code></li>
+<li>48V: <code>rrf-milo-v2.0-milo-scylla-v1.0-48v-v15.11.26-prerelease.zip</code></li>
+</ul>
+</li>
+<li>Miley 2.0:<ul>
+<li>24V: <code>rrf-milo-v2.0-miley-scylla-v1.0-24v-v15.11.26-prerelease.zip</code></li>
+<li>48V: <code>rrf-milo-v2.0-miley-scylla-v1.0-48v-v15.11.26-prerelease.zip</code></li>
+</ul>
+</li>
 </ul>
 <p>Don't download <strong>Source code</strong>. It isn't laid out for an SD card.</p>
-<p>The zip contains <abbr title="RepRapFirmware">RRF</abbr> 3.6.1 for the Scylla, firmware for its WiFi module, a known-good Milo 1.5 configuration, and MillenniumOS.</p>
+<p>The zip contains <abbr title="RepRapFirmware">RRF</abbr> 3.6.1 for the Scylla, firmware for its WiFi module, a Milo 2.0 or Miley 2.0 configuration, and MillenniumOS.</p>
 <hr />
 <h2 id="extract-it-to-the-sd-card">Extract it to the SD card</h2>
 <p>Extract the zip to the root of the SD card. Check that your unzip tool didn't put everything in a folder named after the zip. The root of the card should look like this:</p>
@@ -2334,8 +2267,6 @@ www/
 <p>The first boot can take 5–10 minutes. When the <code>Milo</code> network appears, it's done.</p>
 <p>If it hasn't appeared after 10 minutes, take the SD card out and look at it on your computer. If <code>firmware.bin</code> has <strong>not</strong> been renamed to <code>firmware.cur</code>, the board wasn't updated. Either way, ask for help on our <a href="https://discord.gg/ya4UUj7ax2">Discord</a> and say whether the file was renamed.</p>
 </div>
-<!-- HW-CHECK 3: confirm firmware.bin is renamed to firmware.cur on the Scylla after a fresh flash. -->
-
 <hr />
 <h2 id="connect-to-duet-web-control">Connect to Duet Web Control</h2>
 <p>When the <code>Milo</code> network appears, connect to it:</p>
@@ -2351,7 +2282,7 @@ Password: millenniummachines
 <p><img alt="Duet Web Control" class="shadow-dark" src="../img/install_rrf/install_rrf_step_3.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Cancel the MillenniumOS wizard for now</p>
-<p>When <abbr title="Duet Web Control">DWC</abbr> connects, the MillenniumOS configuration wizard opens. <strong>Cancel it.</strong> The configuration is still set up for a Milo 1.5, so you'll run the wizard later, in <a href="../../millennium-os/manual/chapters/20_installation/">Installing MillenniumOS</a>. It may open again after a restart. Cancel it each time until then.</p>
+<p>When <abbr title="Duet Web Control">DWC</abbr> connects, the MillenniumOS configuration wizard opens. <strong>Cancel it.</strong> You'll run the wizard later, after updating MillenniumOS, in <a href="../../millennium-os/manual/chapters/20_installation/">Installing MillenniumOS</a>. It may open again after a restart. Cancel it each time until then.</p>
 </div>
 <hr />
 <h2 id="join-your-wifi-network-optional">Join your WiFi network (optional)</h2>
@@ -2369,190 +2300,45 @@ Password: millenniummachines
 <p>If <abbr title="Duet Web Control">DWC</abbr> asks to install updates, click <strong>Yes</strong>. This flashes the WiFi module twice: once when you click Yes, and again when the board restarts.</p>
 </div>
 <hr />
-<h2 id="adapt-the-configuration-to-your-machine">Adapt the configuration to your machine</h2>
-<div class="admonition warning">
-<p class="admonition-title">Do this before homing or moving anything</p>
-<p>The release is configured for a <strong>Milo 1.5</strong>. Its travel limits, Z drive and homing don't match a 2.0. Make every change in this section before you home or move any axis.</p>
-</div>
+<h2 id="what-the-configuration-sets-up">What the configuration sets up</h2>
+<p>Each zip is set up for its machine. The travel limits and endstops are in <code>limits.g</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>Milo 2.0</th>
+<th>Miley 2.0</th>
+<th>Endstop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td>0 to 348 mm, homes to min</td>
+<td>0 to 308 mm, homes to max</td>
+<td>X-MIN, <code>!PD_11</code></td>
+</tr>
+<tr>
+<td>Y</td>
+<td>0 to 210 mm, homes to min</td>
+<td>0 to 210 mm, homes to min</td>
+<td>Y-MAX, <code>!PD_14</code></td>
+</tr>
+<tr>
+<td>Z</td>
+<td>-120 to 0 mm, homes up to max</td>
+<td>-120 to 0 mm, homes up to max</td>
+<td>Z-MAX, <code>!PD_12</code></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">Endstop connectors</p>
 <p>These settings expect the endstops on the Scylla's <strong>X-MIN</strong>, <strong>Y-MAX</strong> and <strong>Z-MAX</strong> connectors, as on page 8 of the <a href="https://github.com/MillenniumMachines/Universal-Electronics-Box/blob/main/Millennium%20Universal%20CNC%20wiring%20.pdf"><abbr title="Universal Electronics Box">UEB</abbr> wiring reference (PDF)</a>. Page 4 of the PDF shows different connectors. Follow page 8.</p>
 </div>
-<p>To edit a file, go to <strong>Files → System</strong> in <abbr title="Duet Web Control">DWC</abbr> and click the file. Make the change and click <strong>Save</strong>. When you've made all the changes, restart the board by sending <code>M999</code>.</p>
 <p>These settings are for the standard TR8×8 leadscrews. Ballscrew (SFK0802) builds need different steps per mm and speeds, which this page doesn't cover. Ask on <a href="https://discord.gg/ya4UUj7ax2">Discord</a>.</p>
-<h3 id="both-machines">Both machines</h3>
-<p><strong><code>drives.g</code></strong>: change the Z direction and the Z steps per mm. The 2.0 Z motor drives the lead screw directly through a coupler, instead of through the 1.5's 2:1 belt reduction, and it turns the other way. Change these two lines:</p>
-<div class="highlight"><pre><span></span><code><span class="c">; was: M569 P2 S0</span>
-<span class="nb">M569 </span><span class="k">P</span><span class="m">2</span><span class="w"> </span><span class="k">S</span><span class="m">1</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c">; was: M92 X800 Y800 Z1600</span>
-<span class="nb">M92 </span><span class="k">X</span><span class="m">800</span><span class="w"> </span><span class="k">Y</span><span class="m">800</span><span class="w"> </span><span class="k">Z</span><span class="m">800</span>
-</code></pre></div>
-<p><strong><code>fans.g</code></strong>: the <abbr title="Universal Electronics Box">UEB</abbr> wiring reference connects the electronics cabinet fan to <strong>AUX1</strong>, but the release drives <strong>AUX0</strong>. Change the fan pin line:</p>
-<div class="highlight"><pre><span></span><code><span class="c">; was: M950 F0 C"PA_4" Q500</span>
-<span class="nb">M950 </span><span class="k">F</span><span class="m">0</span><span class="w"> </span>C"PA_5" Q500
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The fan works on either AUX0 or AUX1. The pin in <code>fans.g</code> must match the output it's plugged into: AUX0 is <code>PA_4</code>, AUX1 is <code>PA_5</code>. If your fan is on AUX0, leave <code>fans.g</code> as it is.</p>
-</div>
-<p><strong><code>user-config.g.example</code></strong>: you don't need this file now. If you enable it later, change its steps line to <code>M92 X800 Y800 Z800</code> to match <code>drives.g</code>.</p>
-<p><strong><code>homey.g</code></strong>: the 2.0 Y sensor is at the back, so Y homes to <strong>min</strong>, not to max like the 1.5. Replace the whole file with:</p>
-<div class="highlight"><pre><span></span><code><span class="c">; homey.g - Lifts Z, then homes Y towards Y0 (min) using existing machine limits.</span>
-
-<span class="c">; Relative positioning in mm and mm/min</span>
-<span class="nb">G91</span>
-<span class="nb">G21</span>
-<span class="nb">G94</span>
-
-<span class="c">; Raise Z towards machine limit as it is already homed</span>
-<span class="nb">G53 </span>G0 Z{move.axes[2].max}
-
-<span class="c">; Move to Y axis endstop and stop there (first pass).</span>
-<span class="c">; Max 1000mm/min with an inductive Y sensor.</span>
-<span class="nb">G53 </span>G1 H1 Y{-(move.axes[1].max - move.axes[1].min + 5)} F{1000}
-
-<span class="c">; Endstop should now be triggered, verify</span>
-if { ! sensors.endstops[1].triggered }
-<span class="w">    </span>abort {"Y endstop not triggered after full axis travel. Check that your Y motor is connected and the endstop is working!"}
-
-<span class="c">; Move away from Y endstop</span>
-<span class="nb">G53 </span>G1 H2 Y{5}
-
-<span class="c">; Repeat Y home at low speed. Do not move further than</span>
-<span class="c">; 2 * 5 further than the expected endstop location.</span>
-<span class="nb">G53 </span>G1 H1 Y{-5*2} F{180}
-</code></pre></div>
-<p><code>homez.g</code> stays as it is. Z still homes upwards.</p>
-<h3 id="milo-20">Milo 2.0</h3>
-<p>Milo homes X to <strong>min</strong>, like the 1.5.</p>
-<p><strong><code>limits.g</code></strong>: replace the whole file with:</p>
-<div class="highlight"><pre><span></span><code><span class="c">; limits.g - Configure machine limits and endstops (Milo 2.0)</span>
-
-<span class="c">; Set axis limits - minima</span>
-<span class="nb">M208 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Y</span><span class="m">0</span><span class="w"> </span><span class="k">Z</span><span class="m">-120</span><span class="w"> </span><span class="k">S</span><span class="m">1</span>
-
-<span class="c">; Set axis limits - maxima</span>
-<span class="nb">M208 </span><span class="k">X</span><span class="m">348</span><span class="w"> </span><span class="k">Y</span><span class="m">210</span><span class="w"> </span><span class="k">Z</span><span class="m">0</span><span class="w"> </span><span class="k">S</span><span class="m">0</span>
-
-<span class="c">; Endstops. LJ8A3-2-Z/AY inductive sensors, so the pins are inverted (!).</span>
-<span class="c">; X homes to MIN, Y homes to MIN (Y0), Z homes upwards to MAX (zero).</span>
-
-<span class="c">; X endstop on X-MIN connector, homes to min</span>
-<span class="nb">M574 </span><span class="k">X</span><span class="m">1</span><span class="w"> </span><span class="k">S</span><span class="m">1</span><span class="w"> </span>P"!PD_11"
-
-<span class="c">; Y endstop on Y-MAX connector, homes to min</span>
-<span class="nb">M574 </span><span class="k">Y</span><span class="m">1</span><span class="w"> </span><span class="k">S</span><span class="m">1</span><span class="w"> </span>P"!PD_14"
-
-<span class="c">; Z endstop on Z-MAX connector, homes to max</span>
-<span class="nb">M574 </span><span class="k">Z</span><span class="m">2</span><span class="w"> </span><span class="k">S</span><span class="m">1</span><span class="w"> </span>P"!PD_12"
-</code></pre></div>
-<p><strong><code>homeall.g</code></strong>: replace the whole file with:</p>
-<div class="highlight"><pre><span></span><code><span class="c">; homeall.g - Homes Z, then homes X and Y (both to min) together using existing machine limits.</span>
-
-<span class="c">; Relative positioning in mm and mm/min</span>
-<span class="nb">G91</span>
-<span class="nb">G21</span>
-<span class="nb">G94</span>
-
-<span class="c">; Home Z first to move spindle out of the way</span>
-<span class="nb">M98 </span>P"homez.g"
-
-<span class="c">; Move to X and Y axis endstops and stop there (first pass).</span>
-<span class="c">; Max 1000mm/min with an inductive Y sensor.</span>
-<span class="nb">G53 </span>G1 H1 X{-(move.axes[0].max - move.axes[0].min + 5)} Y{-(move.axes[1].max - move.axes[1].min + 5)} F{1000}
-
-<span class="c">; Endstops should now be triggered, verify</span>
-if { ! sensors.endstops[0].triggered }
-<span class="w">    </span>abort {"X endstop not triggered after full axis travel. Check that your X motor is connected and the endstop is working!"}
-if { ! sensors.endstops[1].triggered }
-<span class="w">    </span>abort {"Y endstop not triggered after full axis travel. Check that your Y motor is connected and the endstop is working!"}
-
-<span class="c">; Move away from X and Y endstops</span>
-<span class="nb">G53 </span>G1 H2 X{5} Y{5}
-
-<span class="c">; Repeat X and Y home at low speed. Do not move further than</span>
-<span class="c">; 2 * 5 further than the expected endstop locations.</span>
-<span class="nb">G53 </span>G1 H1 X{-5*2} Y{-5*2} F{180}
-</code></pre></div>
-<p><code>homex.g</code> stays as it is.</p>
-<h3 id="miley-20">Miley 2.0</h3>
-<p>Miley's X axis is stationary, so X homes to <strong>max</strong>.</p>
-<p><strong><code>limits.g</code></strong>: replace the whole file with:</p>
-<div class="highlight"><pre><span></span><code><span class="c">; limits.g - Configure machine limits and endstops (Miley 2.0)</span>
-
-<span class="c">; Set axis limits - minima</span>
-<span class="nb">M208 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Y</span><span class="m">0</span><span class="w"> </span><span class="k">Z</span><span class="m">-120</span><span class="w"> </span><span class="k">S</span><span class="m">1</span>
-
-<span class="c">; Set axis limits - maxima</span>
-<span class="nb">M208 </span><span class="k">X</span><span class="m">308</span><span class="w"> </span><span class="k">Y</span><span class="m">210</span><span class="w"> </span><span class="k">Z</span><span class="m">0</span><span class="w"> </span><span class="k">S</span><span class="m">0</span>
-
-<span class="c">; Endstops. LJ8A3-2-Z/AY inductive sensors, so the pins are inverted (!).</span>
-<span class="c">; X homes to MAX, Y homes to MIN (Y0), Z homes upwards to MAX (zero).</span>
-
-<span class="c">; X endstop on X-MIN connector, homes to max</span>
-<span class="nb">M574 </span><span class="k">X</span><span class="m">2</span><span class="w"> </span><span class="k">S</span><span class="m">1</span><span class="w"> </span>P"!PD_11"
-
-<span class="c">; Y endstop on Y-MAX connector, homes to min</span>
-<span class="nb">M574 </span><span class="k">Y</span><span class="m">1</span><span class="w"> </span><span class="k">S</span><span class="m">1</span><span class="w"> </span>P"!PD_14"
-
-<span class="c">; Z endstop on Z-MAX connector, homes to max</span>
-<span class="nb">M574 </span><span class="k">Z</span><span class="m">2</span><span class="w"> </span><span class="k">S</span><span class="m">1</span><span class="w"> </span>P"!PD_12"
-</code></pre></div>
-<p><strong><code>homex.g</code></strong>: replace the whole file with:</p>
-<div class="highlight"><pre><span></span><code><span class="c">; homex.g - Lifts Z, then homes X towards MAX using existing machine limits.</span>
-
-<span class="c">; Relative positioning in mm and mm/min</span>
-<span class="nb">G91</span>
-<span class="nb">G21</span>
-<span class="nb">G94</span>
-
-<span class="c">; Raise Z towards machine limit as it is already homed</span>
-<span class="nb">G53 </span>G0 Z{move.axes[2].max}
-
-<span class="c">; Move quickly to X axis endstop and stop there (first pass)</span>
-<span class="nb">G53 </span>G1 H1 X{move.axes[0].max - move.axes[0].min + 5} F{1800}
-
-<span class="c">; Endstop should now be triggered, verify</span>
-if { ! sensors.endstops[0].triggered }
-<span class="w">    </span>abort {"X endstop not triggered after full axis travel. Check that your X motor is connected and the endstop is working!"}
-
-<span class="c">; Move away from X endstop</span>
-<span class="nb">G53 </span>G1 H2 X{-5}
-
-<span class="c">; Repeat X home at low speed. Do not move further than</span>
-<span class="c">; 2 * 5 further than the expected endstop location.</span>
-<span class="nb">G53 </span>G1 H1 X{5*2} F{180}
-</code></pre></div>
-<p><strong><code>homeall.g</code></strong>: replace the whole file with:</p>
-<div class="highlight"><pre><span></span><code><span class="c">; homeall.g - Homes Z, then homes X (to max) and Y (to min) together using existing machine limits.</span>
-
-<span class="c">; Relative positioning in mm and mm/min</span>
-<span class="nb">G91</span>
-<span class="nb">G21</span>
-<span class="nb">G94</span>
-
-<span class="c">; Home Z first to move spindle out of the way</span>
-<span class="nb">M98 </span>P"homez.g"
-
-<span class="c">; Move to X and Y axis endstops and stop there (first pass).</span>
-<span class="c">; Max 1000mm/min with an inductive Y sensor.</span>
-<span class="nb">G53 </span>G1 H1 X{move.axes[0].max - move.axes[0].min + 5} Y{-(move.axes[1].max - move.axes[1].min + 5)} F{1000}
-
-<span class="c">; Endstops should now be triggered, verify</span>
-if { ! sensors.endstops[0].triggered }
-<span class="w">    </span>abort {"X endstop not triggered after full axis travel. Check that your X motor is connected and the endstop is working!"}
-if { ! sensors.endstops[1].triggered }
-<span class="w">    </span>abort {"Y endstop not triggered after full axis travel. Check that your Y motor is connected and the endstop is working!"}
-
-<span class="c">; Move away from X and Y endstops</span>
-<span class="nb">G53 </span>G1 H2 X{-5} Y{5}
-
-<span class="c">; Repeat X and Y home at low speed. Do not move further than</span>
-<span class="c">; 2 * 5 further than the expected endstop locations.</span>
-<span class="nb">G53 </span>G1 H1 X{5*2} Y{-5*2} F{180}
-</code></pre></div>
-<p>When you've finished editing, restart the board by sending <code>M999</code>.</p>
+<p>The <a href="#check-inputs-and-motion-before-first-use">checks below</a> confirm these settings on your machine. Do them before you home or move any axis.</p>
+<p>To edit a file, go to <strong>Files → System</strong> in <abbr title="Duet Web Control">DWC</abbr> and click the file. Make the change and click <strong>Save</strong>.</p>
 <hr />
 <h2 id="emergency-stop-safety-net">Emergency stop (Safety Net)</h2>
 <div class="admonition note">
@@ -2567,15 +2353,7 @@ if { ! sensors.endstops[1].triggered }
 <p>To turn it on:</p>
 <ol>
 <li>In <strong>Files → System</strong>, rename <code>estop.g.example</code> to <code>estop.g</code>, and <code>trigger2.g.example</code> to <code>trigger2.g</code>.</li>
-<li>
-<p>In <code>estop.g</code>, change the E-stop input pin line to:</p>
-<div class="highlight"><pre><span></span><code><span class="c">; was: M950 J1 C"extin0"</span>
-<span class="nb">M950 </span><span class="k">J</span><span class="m">1</span><span class="w"> </span>C"PC_6"
-</code></pre></div>
-</li>
-<li>
-<p>Restart the board (send <code>M999</code>).</p>
-</li>
+<li>Restart the board (send <code>M999</code>).</li>
 </ol>
 <p>With Safety Net on, machine power is <strong>off</strong> after every boot. To turn it on, send <code>M80.9</code>, check the machine is safe, and press <strong>Activate</strong>. Once MillenniumOS is configured, it asks you this at every boot.</p>
 <p>Then test it:</p>
@@ -2590,12 +2368,12 @@ if { ! sensors.endstops[1].triggered }
 <h2 id="touch-probe-and-toolsetter">Touch probe and toolsetter</h2>
 <p>The release already uses the pins from the wiring reference (page 9):</p>
 <ul>
-<li><strong>Toolsetter</strong>: <code>toolsetter.g</code> is already active, on the toolsetter input (PE7).</li>
-<li><strong>Touch probe</strong>: rename <code>touchprobe.g.example</code> to <code>touchprobe.g</code>. It already uses the probe input (PE15).</li>
+<li><strong>Toolsetter</strong>: <code>toolsetter.g</code> is already active, on the toolsetter input (PE7), set for a normally open (NO) toolsetter.</li>
+<li><strong>Touch probe</strong>: rename <code>touchprobe.g.example</code> to <code>touchprobe.g</code>. It uses the probe input (PE15), set for a normally closed (NC) probe.</li>
 </ul>
 <p>A 2-pin toolsetter connects to the toolsetter input (PE7) and GND, not to PE15.</p>
-<p>The Scylla has jumpers that select PNP or NPN mode and the voltage for the probe and toolsetter inputs (wiring reference, page 5). Set them for your probe and toolsetter. You'll check that both read correctly in the next section.</p>
-<p>There are a wide variety of touch probes and toolsetters. Whether a pin needs a <code>!</code> depends on whether yours is normally open (NO) or normally closed (NC). If your probe or toolsetter does not work at first it may need the pin inverted, for example, in <code>touchprobe.g</code> change <code>C"PE_15"</code> to <code>C"!PE_15"</code>.</p>
+<p>We recommend an NPN NC touch probe. The Scylla has jumpers that select PNP or NPN mode and the voltage for the probe and toolsetter inputs (wiring reference, page 5). Set them for your probe and toolsetter. NPN mode matches the recommended probe. You'll check that both read correctly in the next section.</p>
+<p>There are a wide variety of touch probes and toolsetters. Whether a pin needs a <code>!</code> depends on whether yours is NO or NC: NO needs the <code>!</code>, NC doesn't. For an NO probe, change <code>C"PE_15"</code> to <code>C"!PE_15"</code> in <code>touchprobe.g</code>. For an NC toolsetter, change <code>C"!PE_7"</code> to <code>C"PE_7"</code> in <code>toolsetter.g</code>.</p>
 <hr />
 <h2 id="check-inputs-and-motion-before-first-use">Check inputs and motion before first use</h2>
 <p>Do these checks in order, with nothing in the spindle and the table clear.</p>
@@ -2606,7 +2384,7 @@ if { ! sensors.endstops[1].triggered }
 <div class="highlight"><pre><span></span><code>echo sensors.probes[0].value[0], sensors.probes[1].value[0]
 </code></pre></div>
 <p>The first value is the touch probe and the second is the toolsetter. Each should read <code>0</code> at rest and <code>1000</code> while you trigger it by hand. If one reads the wrong way round, add or remove the <code>!</code> in the <code>M558</code> pin in <code>touchprobe.g</code> or <code>toolsetter.g</code>, then restart.</p>
-<p><strong>Fan</strong>: check that the cabinet fan runs. If it doesn't, check that the pin in <code>fans.g</code> matches the AUX output it's plugged into.</p>
+<p><strong>Fan</strong>: check that the cabinet fan runs. If it doesn't, check that the pin in <code>fans.g</code> matches the AUX output it's plugged into: AUX1 is <code>PA_5</code>, AUX0 is <code>PA_4</code>.</p>
 <h3 id="homing">Homing</h3>
 <p>Home one axis at a time, Z first, with a hand on the E-stop. Each axis must move <strong>towards its endstop sensor</strong>. If it moves away from the sensor, press the E-stop and check the motor wiring against the wiring reference.</p>
 <ol>
