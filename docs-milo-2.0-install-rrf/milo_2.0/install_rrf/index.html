@@ -2282,7 +2282,7 @@ Password: millenniummachines
 <p><img alt="Duet Web Control" class="shadow-dark" src="../img/install_rrf/install_rrf_step_3.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Cancel the MillenniumOS wizard for now</p>
-<p>When <abbr title="Duet Web Control">DWC</abbr> connects, the MillenniumOS configuration wizard opens. <strong>Cancel it.</strong> You'll run the wizard later, after updating MillenniumOS, in <a href="../../millennium-os/manual/chapters/20_installation/">Installing MillenniumOS</a>. It may open again after a restart. Cancel it each time until then.</p>
+<p>When <abbr title="Duet Web Control">DWC</abbr> connects, the MillenniumOS configuration wizard opens. <strong>Cancel it.</strong> You'll run it after the checks on this page, in <a href="../../millennium-os/manual/chapters/20_installation/#configuration-wizard">Installing MillenniumOS</a>. It may open again after a restart. Cancel it each time until then.</p>
 </div>
 <hr />
 <h2 id="join-your-wifi-network-optional">Join your WiFi network (optional)</h2>
@@ -2337,20 +2337,25 @@ Password: millenniummachines
 <p>These settings expect the endstops on the Scylla's <strong>X-MIN</strong>, <strong>Y-MAX</strong> and <strong>Z-MAX</strong> connectors, as on page 8 of the <a href="https://github.com/MillenniumMachines/Universal-Electronics-Box/blob/main/Millennium%20Universal%20CNC%20wiring%20.pdf"><abbr title="Universal Electronics Box">UEB</abbr> wiring reference (PDF)</a>. Page 4 of the PDF shows different connectors. Follow page 8.</p>
 </div>
 <p>These settings are for the standard TR8×8 leadscrews. Ballscrew (SFK0802) builds need different steps per mm and speeds, which this page doesn't cover. Ask on <a href="https://discord.gg/ya4UUj7ax2">Discord</a>.</p>
-<p>The <a href="#check-inputs-and-motion-before-first-use">checks below</a> confirm these settings on your machine. Do them before you home or move any axis.</p>
+<p>The <a href="#check-inputs-and-motion-before-first-use">checks below</a> confirm these settings on your machine. Don't home or move any axis until you reach those checks.</p>
+<p>Machine power stays off until you turn on Safety Net (<a href="#emergency-stop-safety-net">Emergency stop (Safety Net)</a>).</p>
 <p>To edit a file, go to <strong>Files → System</strong> in <abbr title="Duet Web Control">DWC</abbr> and click the file. Make the change and click <strong>Save</strong>.</p>
 <hr />
 <h2 id="emergency-stop-safety-net">Emergency stop (Safety Net)</h2>
+<div class="admonition warning">
+<p class="admonition-title">Machine power needs Safety Net</p>
+<p>With the <abbr title="Universal Electronics Box">UEB</abbr> wiring, the Scylla's relay switches the contactor. The release ships Safety Net turned off (<code>estop.g.example</code>), so the motors and spindle get <strong>no power</strong> until you turn Safety Net on below and send <code>M80.9</code>.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This section assumes the E-stop is wired as in the current <a href="https://github.com/MillenniumMachines/Universal-Electronics-Box/blob/main/Millennium%20Universal%20CNC%20wiring%20.pdf">wiring reference (PDF)</a>: the E-stop signal goes to the Scylla's <strong>X-MAX</strong> connector (PC6) and GND.</p>
 </div>
-<p>The release includes Safety Net, a software emergency stop. When the E-stop is pressed, the Scylla opens its onboard relay and halts. In the wiring reference, that relay is in the contactor circuit (page 3), so the motors and spindle lose power.</p>
+<p>Safety Net is the release's software emergency stop, and it switches machine power. When the E-stop is pressed, the Scylla opens its onboard relay and halts. In the wiring reference, that relay is in the contactor circuit (page 3), so the motors and spindle lose power.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>A software emergency stop is <strong>not</strong> a replacement for a hardware emergency stop. Use it <strong>in addition to</strong> the hardware E-stop circuit.</p>
 </div>
-<p>To turn it on:</p>
+<p>Turn it on:</p>
 <ol>
 <li>In <strong>Files → System</strong>, rename <code>estop.g.example</code> to <code>estop.g</code>, and <code>trigger2.g.example</code> to <code>trigger2.g</code>.</li>
 <li>Restart the board (send <code>M999</code>).</li>
@@ -2364,36 +2369,38 @@ Password: millenniummachines
 <li>Release the E-stop. Machine power must <strong>not</strong> come back on by itself.</li>
 </ol>
 <p>If step 1 never shows the message, check the E-stop wiring against the wiring reference before changing anything in <code>estop.g</code>.</p>
+<p>If the board halts at every boot after you turn on Safety Net (<abbr title="Duet Web Control">DWC</abbr> never connects, or the <code>Milo</code> network doesn't appear), take out the SD card and, on your computer, rename <code>sys/estop.g</code> back to <code>sys/estop.g.example</code>. Then check the E-stop wiring against the wiring reference.</p>
 <hr />
 <h2 id="touch-probe-and-toolsetter">Touch probe and toolsetter</h2>
 <p>The release already uses the pins from the wiring reference (page 9):</p>
 <ul>
 <li><strong>Toolsetter</strong>: <code>toolsetter.g</code> is already active, on the toolsetter input (PE7), set for a normally open (NO) toolsetter.</li>
-<li><strong>Touch probe</strong>: rename <code>touchprobe.g.example</code> to <code>touchprobe.g</code>. It uses the probe input (PE15), set for a normally closed (NC) probe.</li>
+<li><strong>Touch probe</strong>: rename <code>touchprobe.g.example</code> to <code>touchprobe.g</code>, then restart the board (send <code>M999</code>) to load it. It uses the probe input (PE15), set for a normally closed (NC) probe.</li>
 </ul>
 <p>A 2-pin toolsetter connects to the toolsetter input (PE7) and GND, not to PE15.</p>
 <p>We recommend an NPN NC touch probe. The Scylla has jumpers that select PNP or NPN mode and the voltage for the probe and toolsetter inputs (wiring reference, page 5). Set them for your probe and toolsetter. NPN mode matches the recommended probe. You'll check that both read correctly in the next section.</p>
-<p>There are a wide variety of touch probes and toolsetters. Whether a pin needs a <code>!</code> depends on whether yours is NO or NC: NO needs the <code>!</code>, NC doesn't. For an NO probe, change <code>C"PE_15"</code> to <code>C"!PE_15"</code> in <code>touchprobe.g</code>. For an NC toolsetter, change <code>C"!PE_7"</code> to <code>C"PE_7"</code> in <code>toolsetter.g</code>.</p>
+<p>There's a wide variety of touch probes and toolsetters. Whether a pin needs a <code>!</code> depends on whether yours is NO or NC: NO needs the <code>!</code>, NC doesn't. For an NO probe, change <code>C"PE_15"</code> to <code>C"!PE_15"</code> in <code>touchprobe.g</code>. For an NC toolsetter, change <code>C"!PE_7"</code> to <code>C"PE_7"</code> in <code>toolsetter.g</code>.</p>
 <hr />
 <h2 id="check-inputs-and-motion-before-first-use">Check inputs and motion before first use</h2>
 <p>Do these checks in order, with nothing in the spindle and the table clear.</p>
 <h3 id="inputs">Inputs</h3>
 <p>Check every input before you home anything.</p>
-<p><strong>Endstops</strong>: send <code>M119</code> in the console. Each axis should show <code>not stopped</code>. Then trigger each sensor by hand and send <code>M119</code> again: hold a metal object in front of an inductive sensor, or press a microswitch. That axis should now show <code>at min stop</code> or <code>at max stop</code>. If an axis reads the wrong way round, add or remove the <code>!</code> in that axis's <code>M574</code> pin in <code>limits.g</code>, then restart. A microswitch on Y (instead of an inductive sensor) may need the <code>!</code> removed.</p>
+<p><strong>Endstops</strong>: Move each axis away from its sensor first. Then send <code>M119</code> in the console. Each axis should show <code>not stopped</code>. Then trigger each sensor by hand and send <code>M119</code> again: hold a metal object in front of an inductive sensor, or press a microswitch. That axis should now show <code>at min stop</code> or <code>at max stop</code>. If an axis reads the wrong way round, add or remove the <code>!</code> in that axis's <code>M574</code> pin in <code>limits.g</code>, then restart. A microswitch on Y (instead of an inductive sensor) may need the <code>!</code> removed.</p>
 <p><strong>Probe and toolsetter</strong>: send this in the console:</p>
 <div class="highlight"><pre><span></span><code>echo sensors.probes[0].value[0], sensors.probes[1].value[0]
 </code></pre></div>
+<p>Without a touch probe, send <code>echo sensors.probes[1].value[0]</code> to check only the toolsetter.</p>
 <p>The first value is the touch probe and the second is the toolsetter. Each should read <code>0</code> at rest and <code>1000</code> while you trigger it by hand. If one reads the wrong way round, add or remove the <code>!</code> in the <code>M558</code> pin in <code>touchprobe.g</code> or <code>toolsetter.g</code>, then restart.</p>
 <p><strong>Fan</strong>: check that the cabinet fan runs. If it doesn't, check that the pin in <code>fans.g</code> matches the AUX output it's plugged into: AUX1 is <code>PA_5</code>, AUX0 is <code>PA_4</code>.</p>
 <h3 id="homing">Homing</h3>
 <p>Home one axis at a time, Z first, with a hand on the E-stop. Each axis must move <strong>towards its endstop sensor</strong>. If it moves away from the sensor, press the E-stop and check the motor wiring against the wiring reference.</p>
+<p>Turn machine power on first: send <code>M80.9</code> and press <strong>Activate</strong>.</p>
 <ol>
 <li>Home Z: <code>G28 Z</code>. Z moves up.</li>
 <li>Home X: <code>G28 X</code>.</li>
 <li>Home Y: <code>G28 Y</code>.</li>
 </ol>
 <p>When all three home correctly, try <strong>Home All</strong> (<code>G28</code>).</p>
-<p>If you turned on Safety Net, turn machine power on first: send <code>M80.9</code> and press <strong>Activate</strong>.</p>
 <h3 id="travel-limits">Travel limits</h3>
 <p>After homing, check that each axis can reach both ends of its travel without hitting anything. Keep a hand on the E-stop and send these lines one at a time. Each one moves a single axis slowly to one end of its travel. If the axis is already at that end, it doesn't move.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">G90</span>
@@ -2409,10 +2416,10 @@ Password: millenniummachines
 <li><strong>X or Y</strong>: lower its maximum in the <code>M208 ... S0</code> line, for example <code>X348</code> to <code>X343</code>.</li>
 <li><strong>Z</strong>: raise its minimum in the <code>M208 ... S1</code> line, for example <code>Z-120</code> to <code>Z-115</code>.</li>
 </ul>
-<p>Restart, home again, and repeat the check until every axis reaches both ends cleanly.</p>
+<p>Restart, send <code>M80.9</code> and press <strong>Activate</strong>, home again, and repeat the check until every axis reaches both ends cleanly.</p>
 <hr />
 <h2 id="next-installing-millenniumos">Next: Installing MillenniumOS</h2>
-<p>Your machine is now running <abbr title="RepRapFirmware">RRF</abbr> with a 2.0 configuration. The release includes MillenniumOS, but not the newest version. Go to <a href="../../millennium-os/manual/chapters/20_installation/">Installing MillenniumOS</a> to update it and run the configuration wizard.</p>
+<p>Your machine is now running <abbr title="RepRapFirmware">RRF</abbr> with a 2.0 configuration. The release includes MillenniumOS 0.5.1, the current release, so you don't need to install it again. Run the <a href="../../millennium-os/manual/chapters/20_installation/#configuration-wizard">configuration wizard</a> next.</p>
 <p>MillenniumOS 0.5.x is the current release. Its successor, <a href="https://github.com/MillenniumMachines/MOS-nxt">nxt</a>, is not released yet. When it is, this page will gain an nxt path.</p>
 
 
