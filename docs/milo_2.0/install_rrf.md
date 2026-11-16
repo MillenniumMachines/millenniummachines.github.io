@@ -253,8 +253,9 @@ Restart, send `M80.9` and press **Activate**, home again, and repeat the check u
 
 ---
 
-## Next: Installing MillenniumOS
+## Next: Configuring MillenniumOS
 
-Your machine is now running RRF with a 2.0 configuration. The release includes MillenniumOS 0.5.1, the current release, so you don't need to install it again. Run the [configuration wizard](../millennium-os/manual/chapters/20_installation.md#configuration-wizard) next.
+Your machine is now running RRF with a 2.0 configuration. The release includes MillenniumOS 0.5.1. Run the [configuration wizard](../millennium-os/manual/chapters/20_installation.md#configuration-wizard) next.
 
-MillenniumOS 0.5.x is the current release. Its successor, [nxt](https://github.com/MillenniumMachines/MOS-nxt), is not released yet. When it is, this page will gain an nxt path.
+!!! note
+    MillenniumOS 0.5.x is the current release. Its successor, [MOS-nxt](https://github.com/MillenniumMachines/MOS-nxt), is not released yet. When it is, this page will gain a MOS-nxt path.
