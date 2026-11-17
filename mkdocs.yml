@@ -28,6 +28,7 @@ nav:
     - Printing Guide: milo_2.0/printing/print_guide.md
     - Frequently Asked Questions: milo_2.0/faq.md
     - "Assembly manual (PDF)": https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf
+    - Installing RRF: milo_2.0/install_rrf.md
 
   - "Universal Electronics Box":
     - Overview: ueb/index.md

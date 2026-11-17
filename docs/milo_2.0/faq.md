@@ -1,6 +1,6 @@
 # Milo / Miley V2 – Frequently asked questions
 
-Official mechanical build, RRF, electronics, and pre-flight steps: **[MiloV2-Manual.pdf](https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf)** in the [Milo-V2.0](https://github.com/MillenniumMachines/Milo-V2.0) repository.
+Official mechanical build steps: **[MiloV2-Manual.pdf](https://github.com/MillenniumMachines/Milo-V2.0/blob/main/Manual/MiloV2-Manual.pdf)** in the [Milo-V2.0](https://github.com/MillenniumMachines/Milo-V2.0) repository. RRF install, configuration and first checks: [Installing RRF](./install_rrf.md).
 
 ### What is the difference between Milo V2 and Miley V2?
 
@@ -25,7 +25,7 @@ Both Milo and Miley work with **TR8×8 leadscrews** or **SFK0802 ballscrews**. *
 
 ### Where are the electronics documented?
 
-The [Milo V2 repository](https://github.com/MillenniumMachines/Milo-V2.0) does **not** bundle electronics. Follow the [Universal Electronics Box](../ueb/index.md) documentation for the enclosure BOM, printing, and [wiring reference (PDF)](https://github.com/MillenniumMachines/Universal-Electronics-Box/blob/main/Millennium%20Universal%20CNC%20wiring%20.pdf). **Install RRF**, **assemble electronics**, and **pre-flight checks** for V2 are in **MiloV2-Manual.pdf** after the mechanical sections.
+The [Milo V2 repository](https://github.com/MillenniumMachines/Milo-V2.0) does **not** bundle electronics. Follow the [Universal Electronics Box](../ueb/index.md) documentation for the enclosure BOM, printing, and [wiring reference (PDF)](https://github.com/MillenniumMachines/Universal-Electronics-Box/blob/main/Millennium%20Universal%20CNC%20wiring%20.pdf). To install RRF, configure the machine, and run the checks before first use, follow [Installing RRF](./install_rrf.md).
 
 ### What materials can I machine?
 
